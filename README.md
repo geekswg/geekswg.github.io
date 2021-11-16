@@ -1,7 +1,7 @@
 ### Hi there 👋
-<center>
+
 [![My Github HomePage](https://github-readme-stats.vercel.app/api?username=geekswg)](https://geekswg.github.io/)
-</center>
+
 
 <!--
 **geekswg/geekswg** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
