@@ -1,0 +1,1714 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>主题配置 - Geekswgの博客 - 在阅读中遇见自己</title><meta name="Description" content="早起的年轻人做的网站"><meta property="og:title" content="主题配置" />
+<meta property="og:description" content="安装GO 安装Hugo windows 下载 huto 直接解压 配置环境变量 测试 在cmd中输入 hugo version 查看 hugo 是否安装完成 下载Hugo主题LoveIt 在 windows 下 1 2 3 hugo new site blog cd themes" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/" /><meta property="og:image" content="/images/avatar.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-11-14T23:04:08+08:00" />
+<meta property="article:modified_time" content="2021-11-14T23:04:08+08:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="/images/avatar.png"/>
+
+<meta name="twitter:title" content="主题配置"/>
+<meta name="twitter:description" content="安装GO 安装Hugo windows 下载 huto 直接解压 配置环境变量 测试 在cmd中输入 hugo version 查看 hugo 是否安装完成 下载Hugo主题LoveIt 在 windows 下 1 2 3 hugo new site blog cd themes"/>
+<meta name="application-name" content="LoveIt">
+<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/images/avatar.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="/%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/" /><link rel="prev" href="/demo/" /><link rel="next" href="/dos%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "主题配置",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "\/%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE\/"
+        },"image": [{
+                            "@type": "ImageObject",
+                            "url": "\/images\/Apple-Devices-Preview.png",
+                            "width":  3200 ,
+                            "height":  2048 
+                        }],"genre": "posts","keywords": "主题","wordcount":  4895 ,
+        "url": "\/%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE\/","datePublished": "2021-11-14T23:04:08+08:00","dateModified": "2021-11-14T23:04:08+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "xxxx","logo": {
+                    "@type": "ImageObject",
+                    "url": "\/images\/avatar.png",
+                    "width":  528 ,
+                    "height":  560 
+                }},"author": {
+                "@type": "Person",
+                "name": "毕少侠"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Geekswgの博客 - 在阅读中遇见自己"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/images/avatar.png"
+        data-srcset="/images/avatar.png, /images/avatar.png 1.5x, /images/avatar.png 2x"
+        data-sizes="auto"
+        alt="/images/avatar.png"
+        title="/images/avatar.png" /><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span><span id="id-1" class="typeit"></span></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 所有文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/categories/documentation/"> 文档 </a><a class="menu-item" href="/about/"> 关于 </a><a class="menu-item" href="/https:/github.com/geekswg" title="GitHub"><i class='fab fa-github fa-fw'></i> Github </a><a class="menu-item" href="/friend/"><i class='fas fa-user-friends'></i> 友链 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Geekswgの博客 - 在阅读中遇见自己"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/images/avatar.png"
+        data-srcset="/images/avatar.png, /images/avatar.png 1.5x, /images/avatar.png 2x"
+        data-sizes="auto"
+        alt="/images/avatar.png"
+        title="/images/avatar.png" /><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span><span id="id-2" class="typeit"></span></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">所有文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/categories/documentation/" title="">文档</a><a class="menu-item" href="/about/" title="">关于</a><a class="menu-item" href="/https:/github.com/geekswg" title="GitHub"><i class='fab fa-github fa-fw'></i>Github</a><a class="menu-item" href="/friend/" title=""><i class='fas fa-user-friends'></i>友链</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">主题配置</h1><h2 class="single-subtitle">主题配置-笔记</h2><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="http://geekswg.cnblogs.com/" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>毕少侠</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E4%B8%BB%E9%A2%98/"><i class="far fa-folder fa-fw"></i>主题</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-11-14">2021-11-14</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 4895 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 10 分钟&nbsp;<span id="/%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/" class="leancloud_visitors" data-flag-title="主题配置">
+                        <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
+                    </span>&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#安装go">安装GO</a></li>
+    <li><a href="#安装hugo">安装Hugo</a></li>
+    <li><a href="#下载hugo主题loveit">下载Hugo主题LoveIt</a></li>
+    <li><a href="#配置主题">配置主题</a></li>
+    <li><a href="#上传github-pages">上传GitHub Pages</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h1 id="安装go">安装GO</h1>
+<h1 id="安装hugo">安装Hugo</h1>
+<blockquote>
+<p>windows 下载 <a href="https://github.com/gohugoio/hugo/releases" target="_blank" rel="noopener noreffer">huto</a> 直接解压
+配置环境变量
+测试 在cmd中输入 hugo version 查看 hugo 是否安装完成</p>
+</blockquote>
+<h1 id="下载hugo主题loveit">下载Hugo主题LoveIt</h1>
+<p>在 windows 下</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">hugo new site blog
+cd themes
+git clone 
+</code></pre></td></tr></table>
+</div>
+</div><h1 id="配置主题">配置主题</h1>
+<blockquote>
+<p>在blog根目录下修改 config.toml 文件</p>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span><span class="lnt">103
+</span><span class="lnt">104
+</span><span class="lnt">105
+</span><span class="lnt">106
+</span><span class="lnt">107
+</span><span class="lnt">108
+</span><span class="lnt">109
+</span><span class="lnt">110
+</span><span class="lnt">111
+</span><span class="lnt">112
+</span><span class="lnt">113
+</span><span class="lnt">114
+</span><span class="lnt">115
+</span><span class="lnt">116
+</span><span class="lnt">117
+</span><span class="lnt">118
+</span><span class="lnt">119
+</span><span class="lnt">120
+</span><span class="lnt">121
+</span><span class="lnt">122
+</span><span class="lnt">123
+</span><span class="lnt">124
+</span><span class="lnt">125
+</span><span class="lnt">126
+</span><span class="lnt">127
+</span><span class="lnt">128
+</span><span class="lnt">129
+</span><span class="lnt">130
+</span><span class="lnt">131
+</span><span class="lnt">132
+</span><span class="lnt">133
+</span><span class="lnt">134
+</span><span class="lnt">135
+</span><span class="lnt">136
+</span><span class="lnt">137
+</span><span class="lnt">138
+</span><span class="lnt">139
+</span><span class="lnt">140
+</span><span class="lnt">141
+</span><span class="lnt">142
+</span><span class="lnt">143
+</span><span class="lnt">144
+</span><span class="lnt">145
+</span><span class="lnt">146
+</span><span class="lnt">147
+</span><span class="lnt">148
+</span><span class="lnt">149
+</span><span class="lnt">150
+</span><span class="lnt">151
+</span><span class="lnt">152
+</span><span class="lnt">153
+</span><span class="lnt">154
+</span><span class="lnt">155
+</span><span class="lnt">156
+</span><span class="lnt">157
+</span><span class="lnt">158
+</span><span class="lnt">159
+</span><span class="lnt">160
+</span><span class="lnt">161
+</span><span class="lnt">162
+</span><span class="lnt">163
+</span><span class="lnt">164
+</span><span class="lnt">165
+</span><span class="lnt">166
+</span><span class="lnt">167
+</span><span class="lnt">168
+</span><span class="lnt">169
+</span><span class="lnt">170
+</span><span class="lnt">171
+</span><span class="lnt">172
+</span><span class="lnt">173
+</span><span class="lnt">174
+</span><span class="lnt">175
+</span><span class="lnt">176
+</span><span class="lnt">177
+</span><span class="lnt">178
+</span><span class="lnt">179
+</span><span class="lnt">180
+</span><span class="lnt">181
+</span><span class="lnt">182
+</span><span class="lnt">183
+</span><span class="lnt">184
+</span><span class="lnt">185
+</span><span class="lnt">186
+</span><span class="lnt">187
+</span><span class="lnt">188
+</span><span class="lnt">189
+</span><span class="lnt">190
+</span><span class="lnt">191
+</span><span class="lnt">192
+</span><span class="lnt">193
+</span><span class="lnt">194
+</span><span class="lnt">195
+</span><span class="lnt">196
+</span><span class="lnt">197
+</span><span class="lnt">198
+</span><span class="lnt">199
+</span><span class="lnt">200
+</span><span class="lnt">201
+</span><span class="lnt">202
+</span><span class="lnt">203
+</span><span class="lnt">204
+</span><span class="lnt">205
+</span><span class="lnt">206
+</span><span class="lnt">207
+</span><span class="lnt">208
+</span><span class="lnt">209
+</span><span class="lnt">210
+</span><span class="lnt">211
+</span><span class="lnt">212
+</span><span class="lnt">213
+</span><span class="lnt">214
+</span><span class="lnt">215
+</span><span class="lnt">216
+</span><span class="lnt">217
+</span><span class="lnt">218
+</span><span class="lnt">219
+</span><span class="lnt">220
+</span><span class="lnt">221
+</span><span class="lnt">222
+</span><span class="lnt">223
+</span><span class="lnt">224
+</span><span class="lnt">225
+</span><span class="lnt">226
+</span><span class="lnt">227
+</span><span class="lnt">228
+</span><span class="lnt">229
+</span><span class="lnt">230
+</span><span class="lnt">231
+</span><span class="lnt">232
+</span><span class="lnt">233
+</span><span class="lnt">234
+</span><span class="lnt">235
+</span><span class="lnt">236
+</span><span class="lnt">237
+</span><span class="lnt">238
+</span><span class="lnt">239
+</span><span class="lnt">240
+</span><span class="lnt">241
+</span><span class="lnt">242
+</span><span class="lnt">243
+</span><span class="lnt">244
+</span><span class="lnt">245
+</span><span class="lnt">246
+</span><span class="lnt">247
+</span><span class="lnt">248
+</span><span class="lnt">249
+</span><span class="lnt">250
+</span><span class="lnt">251
+</span><span class="lnt">252
+</span><span class="lnt">253
+</span><span class="lnt">254
+</span><span class="lnt">255
+</span><span class="lnt">256
+</span><span class="lnt">257
+</span><span class="lnt">258
+</span><span class="lnt">259
+</span><span class="lnt">260
+</span><span class="lnt">261
+</span><span class="lnt">262
+</span><span class="lnt">263
+</span><span class="lnt">264
+</span><span class="lnt">265
+</span><span class="lnt">266
+</span><span class="lnt">267
+</span><span class="lnt">268
+</span><span class="lnt">269
+</span><span class="lnt">270
+</span><span class="lnt">271
+</span><span class="lnt">272
+</span><span class="lnt">273
+</span><span class="lnt">274
+</span><span class="lnt">275
+</span><span class="lnt">276
+</span><span class="lnt">277
+</span><span class="lnt">278
+</span><span class="lnt">279
+</span><span class="lnt">280
+</span><span class="lnt">281
+</span><span class="lnt">282
+</span><span class="lnt">283
+</span><span class="lnt">284
+</span><span class="lnt">285
+</span><span class="lnt">286
+</span><span class="lnt">287
+</span><span class="lnt">288
+</span><span class="lnt">289
+</span><span class="lnt">290
+</span><span class="lnt">291
+</span><span class="lnt">292
+</span><span class="lnt">293
+</span><span class="lnt">294
+</span><span class="lnt">295
+</span><span class="lnt">296
+</span><span class="lnt">297
+</span><span class="lnt">298
+</span><span class="lnt">299
+</span><span class="lnt">300
+</span><span class="lnt">301
+</span><span class="lnt">302
+</span><span class="lnt">303
+</span><span class="lnt">304
+</span><span class="lnt">305
+</span><span class="lnt">306
+</span><span class="lnt">307
+</span><span class="lnt">308
+</span><span class="lnt">309
+</span><span class="lnt">310
+</span><span class="lnt">311
+</span><span class="lnt">312
+</span><span class="lnt">313
+</span><span class="lnt">314
+</span><span class="lnt">315
+</span><span class="lnt">316
+</span><span class="lnt">317
+</span><span class="lnt">318
+</span><span class="lnt">319
+</span><span class="lnt">320
+</span><span class="lnt">321
+</span><span class="lnt">322
+</span><span class="lnt">323
+</span><span class="lnt">324
+</span><span class="lnt">325
+</span><span class="lnt">326
+</span><span class="lnt">327
+</span><span class="lnt">328
+</span><span class="lnt">329
+</span><span class="lnt">330
+</span><span class="lnt">331
+</span><span class="lnt">332
+</span><span class="lnt">333
+</span><span class="lnt">334
+</span><span class="lnt">335
+</span><span class="lnt">336
+</span><span class="lnt">337
+</span><span class="lnt">338
+</span><span class="lnt">339
+</span><span class="lnt">340
+</span><span class="lnt">341
+</span><span class="lnt">342
+</span><span class="lnt">343
+</span><span class="lnt">344
+</span><span class="lnt">345
+</span><span class="lnt">346
+</span><span class="lnt">347
+</span><span class="lnt">348
+</span><span class="lnt">349
+</span><span class="lnt">350
+</span><span class="lnt">351
+</span><span class="lnt">352
+</span><span class="lnt">353
+</span><span class="lnt">354
+</span><span class="lnt">355
+</span><span class="lnt">356
+</span><span class="lnt">357
+</span><span class="lnt">358
+</span><span class="lnt">359
+</span><span class="lnt">360
+</span><span class="lnt">361
+</span><span class="lnt">362
+</span><span class="lnt">363
+</span><span class="lnt">364
+</span><span class="lnt">365
+</span><span class="lnt">366
+</span><span class="lnt">367
+</span><span class="lnt">368
+</span><span class="lnt">369
+</span><span class="lnt">370
+</span><span class="lnt">371
+</span><span class="lnt">372
+</span><span class="lnt">373
+</span><span class="lnt">374
+</span><span class="lnt">375
+</span><span class="lnt">376
+</span><span class="lnt">377
+</span><span class="lnt">378
+</span><span class="lnt">379
+</span><span class="lnt">380
+</span><span class="lnt">381
+</span><span class="lnt">382
+</span><span class="lnt">383
+</span><span class="lnt">384
+</span><span class="lnt">385
+</span><span class="lnt">386
+</span><span class="lnt">387
+</span><span class="lnt">388
+</span><span class="lnt">389
+</span><span class="lnt">390
+</span><span class="lnt">391
+</span><span class="lnt">392
+</span><span class="lnt">393
+</span><span class="lnt">394
+</span><span class="lnt">395
+</span><span class="lnt">396
+</span><span class="lnt">397
+</span><span class="lnt">398
+</span><span class="lnt">399
+</span><span class="lnt">400
+</span><span class="lnt">401
+</span><span class="lnt">402
+</span><span class="lnt">403
+</span><span class="lnt">404
+</span><span class="lnt">405
+</span><span class="lnt">406
+</span><span class="lnt">407
+</span><span class="lnt">408
+</span><span class="lnt">409
+</span><span class="lnt">410
+</span><span class="lnt">411
+</span><span class="lnt">412
+</span><span class="lnt">413
+</span><span class="lnt">414
+</span><span class="lnt">415
+</span><span class="lnt">416
+</span><span class="lnt">417
+</span><span class="lnt">418
+</span><span class="lnt">419
+</span><span class="lnt">420
+</span><span class="lnt">421
+</span><span class="lnt">422
+</span><span class="lnt">423
+</span><span class="lnt">424
+</span><span class="lnt">425
+</span><span class="lnt">426
+</span><span class="lnt">427
+</span><span class="lnt">428
+</span><span class="lnt">429
+</span><span class="lnt">430
+</span><span class="lnt">431
+</span><span class="lnt">432
+</span><span class="lnt">433
+</span><span class="lnt">434
+</span><span class="lnt">435
+</span><span class="lnt">436
+</span><span class="lnt">437
+</span><span class="lnt">438
+</span><span class="lnt">439
+</span><span class="lnt">440
+</span><span class="lnt">441
+</span><span class="lnt">442
+</span><span class="lnt">443
+</span><span class="lnt">444
+</span><span class="lnt">445
+</span><span class="lnt">446
+</span><span class="lnt">447
+</span><span class="lnt">448
+</span><span class="lnt">449
+</span><span class="lnt">450
+</span><span class="lnt">451
+</span><span class="lnt">452
+</span><span class="lnt">453
+</span><span class="lnt">454
+</span><span class="lnt">455
+</span><span class="lnt">456
+</span><span class="lnt">457
+</span><span class="lnt">458
+</span><span class="lnt">459
+</span><span class="lnt">460
+</span><span class="lnt">461
+</span><span class="lnt">462
+</span><span class="lnt">463
+</span><span class="lnt">464
+</span><span class="lnt">465
+</span><span class="lnt">466
+</span><span class="lnt">467
+</span><span class="lnt">468
+</span><span class="lnt">469
+</span><span class="lnt">470
+</span><span class="lnt">471
+</span><span class="lnt">472
+</span><span class="lnt">473
+</span><span class="lnt">474
+</span><span class="lnt">475
+</span><span class="lnt">476
+</span><span class="lnt">477
+</span><span class="lnt">478
+</span><span class="lnt">479
+</span><span class="lnt">480
+</span><span class="lnt">481
+</span><span class="lnt">482
+</span><span class="lnt">483
+</span><span class="lnt">484
+</span><span class="lnt">485
+</span><span class="lnt">486
+</span><span class="lnt">487
+</span><span class="lnt">488
+</span><span class="lnt">489
+</span><span class="lnt">490
+</span><span class="lnt">491
+</span><span class="lnt">492
+</span><span class="lnt">493
+</span><span class="lnt">494
+</span><span class="lnt">495
+</span><span class="lnt">496
+</span><span class="lnt">497
+</span><span class="lnt">498
+</span><span class="lnt">499
+</span><span class="lnt">500
+</span><span class="lnt">501
+</span><span class="lnt">502
+</span><span class="lnt">503
+</span><span class="lnt">504
+</span><span class="lnt">505
+</span><span class="lnt">506
+</span><span class="lnt">507
+</span><span class="lnt">508
+</span><span class="lnt">509
+</span><span class="lnt">510
+</span><span class="lnt">511
+</span><span class="lnt">512
+</span><span class="lnt">513
+</span><span class="lnt">514
+</span><span class="lnt">515
+</span><span class="lnt">516
+</span><span class="lnt">517
+</span><span class="lnt">518
+</span><span class="lnt">519
+</span><span class="lnt">520
+</span><span class="lnt">521
+</span><span class="lnt">522
+</span><span class="lnt">523
+</span><span class="lnt">524
+</span><span class="lnt">525
+</span><span class="lnt">526
+</span><span class="lnt">527
+</span><span class="lnt">528
+</span><span class="lnt">529
+</span><span class="lnt">530
+</span><span class="lnt">531
+</span><span class="lnt">532
+</span><span class="lnt">533
+</span><span class="lnt">534
+</span><span class="lnt">535
+</span><span class="lnt">536
+</span><span class="lnt">537
+</span><span class="lnt">538
+</span><span class="lnt">539
+</span><span class="lnt">540
+</span><span class="lnt">541
+</span><span class="lnt">542
+</span><span class="lnt">543
+</span><span class="lnt">544
+</span><span class="lnt">545
+</span><span class="lnt">546
+</span><span class="lnt">547
+</span><span class="lnt">548
+</span><span class="lnt">549
+</span><span class="lnt">550
+</span><span class="lnt">551
+</span><span class="lnt">552
+</span><span class="lnt">553
+</span><span class="lnt">554
+</span><span class="lnt">555
+</span><span class="lnt">556
+</span><span class="lnt">557
+</span><span class="lnt">558
+</span><span class="lnt">559
+</span><span class="lnt">560
+</span><span class="lnt">561
+</span><span class="lnt">562
+</span><span class="lnt">563
+</span><span class="lnt">564
+</span><span class="lnt">565
+</span><span class="lnt">566
+</span><span class="lnt">567
+</span><span class="lnt">568
+</span><span class="lnt">569
+</span><span class="lnt">570
+</span><span class="lnt">571
+</span><span class="lnt">572
+</span><span class="lnt">573
+</span><span class="lnt">574
+</span><span class="lnt">575
+</span><span class="lnt">576
+</span><span class="lnt">577
+</span><span class="lnt">578
+</span><span class="lnt">579
+</span><span class="lnt">580
+</span><span class="lnt">581
+</span><span class="lnt">582
+</span><span class="lnt">583
+</span><span class="lnt">584
+</span><span class="lnt">585
+</span><span class="lnt">586
+</span><span class="lnt">587
+</span><span class="lnt">588
+</span><span class="lnt">589
+</span><span class="lnt">590
+</span><span class="lnt">591
+</span><span class="lnt">592
+</span><span class="lnt">593
+</span><span class="lnt">594
+</span><span class="lnt">595
+</span><span class="lnt">596
+</span><span class="lnt">597
+</span><span class="lnt">598
+</span><span class="lnt">599
+</span><span class="lnt">600
+</span><span class="lnt">601
+</span><span class="lnt">602
+</span><span class="lnt">603
+</span><span class="lnt">604
+</span><span class="lnt">605
+</span><span class="lnt">606
+</span><span class="lnt">607
+</span><span class="lnt">608
+</span><span class="lnt">609
+</span><span class="lnt">610
+</span><span class="lnt">611
+</span><span class="lnt">612
+</span><span class="lnt">613
+</span><span class="lnt">614
+</span><span class="lnt">615
+</span><span class="lnt">616
+</span><span class="lnt">617
+</span><span class="lnt">618
+</span><span class="lnt">619
+</span><span class="lnt">620
+</span><span class="lnt">621
+</span><span class="lnt">622
+</span><span class="lnt">623
+</span><span class="lnt">624
+</span><span class="lnt">625
+</span><span class="lnt">626
+</span><span class="lnt">627
+</span><span class="lnt">628
+</span><span class="lnt">629
+</span><span class="lnt">630
+</span><span class="lnt">631
+</span><span class="lnt">632
+</span><span class="lnt">633
+</span><span class="lnt">634
+</span><span class="lnt">635
+</span><span class="lnt">636
+</span><span class="lnt">637
+</span><span class="lnt">638
+</span><span class="lnt">639
+</span><span class="lnt">640
+</span><span class="lnt">641
+</span><span class="lnt">642
+</span><span class="lnt">643
+</span><span class="lnt">644
+</span><span class="lnt">645
+</span><span class="lnt">646
+</span><span class="lnt">647
+</span><span class="lnt">648
+</span><span class="lnt">649
+</span><span class="lnt">650
+</span><span class="lnt">651
+</span><span class="lnt">652
+</span><span class="lnt">653
+</span><span class="lnt">654
+</span><span class="lnt">655
+</span><span class="lnt">656
+</span><span class="lnt">657
+</span><span class="lnt">658
+</span><span class="lnt">659
+</span><span class="lnt">660
+</span><span class="lnt">661
+</span><span class="lnt">662
+</span><span class="lnt">663
+</span><span class="lnt">664
+</span><span class="lnt">665
+</span><span class="lnt">666
+</span><span class="lnt">667
+</span><span class="lnt">668
+</span><span class="lnt">669
+</span><span class="lnt">670
+</span><span class="lnt">671
+</span><span class="lnt">672
+</span><span class="lnt">673
+</span><span class="lnt">674
+</span><span class="lnt">675
+</span><span class="lnt">676
+</span><span class="lnt">677
+</span><span class="lnt">678
+</span><span class="lnt">679
+</span><span class="lnt">680
+</span><span class="lnt">681
+</span><span class="lnt">682
+</span><span class="lnt">683
+</span><span class="lnt">684
+</span><span class="lnt">685
+</span><span class="lnt">686
+</span><span class="lnt">687
+</span><span class="lnt">688
+</span><span class="lnt">689
+</span><span class="lnt">690
+</span><span class="lnt">691
+</span><span class="lnt">692
+</span><span class="lnt">693
+</span><span class="lnt">694
+</span><span class="lnt">695
+</span><span class="lnt">696
+</span><span class="lnt">697
+</span><span class="lnt">698
+</span><span class="lnt">699
+</span><span class="lnt">700
+</span><span class="lnt">701
+</span><span class="lnt">702
+</span><span class="lnt">703
+</span><span class="lnt">704
+</span><span class="lnt">705
+</span><span class="lnt">706
+</span><span class="lnt">707
+</span><span class="lnt">708
+</span><span class="lnt">709
+</span><span class="lnt">710
+</span><span class="lnt">711
+</span><span class="lnt">712
+</span><span class="lnt">713
+</span><span class="lnt">714
+</span><span class="lnt">715
+</span><span class="lnt">716
+</span><span class="lnt">717
+</span><span class="lnt">718
+</span><span class="lnt">719
+</span><span class="lnt">720
+</span><span class="lnt">721
+</span><span class="lnt">722
+</span><span class="lnt">723
+</span><span class="lnt">724
+</span><span class="lnt">725
+</span><span class="lnt">726
+</span><span class="lnt">727
+</span><span class="lnt">728
+</span><span class="lnt">729
+</span><span class="lnt">730
+</span><span class="lnt">731
+</span><span class="lnt">732
+</span><span class="lnt">733
+</span><span class="lnt">734
+</span><span class="lnt">735
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">#baseURL = &#34;https://geekswg.github.io/&#34;
+# [en, zh-cn, fr, pl, ...] determines default content language
+# [en, zh-cn, fr, pl, ...] 设置默认的语言
+defaultContentLanguage = &#34;zh-cn&#34;
+# 网站语言, 仅在这里 CN大写
+languageCode = &#34;zh-CN&#34;
+# 是否包括中日韩文字
+hasCJKLanguage = true
+# 主题
+theme = &#34;LoveIt&#34;
+# 网站标题
+title = &#34;Geekswgの博客 - 在阅读中遇见自己&#34;
+# 是否使用 robots.txt
+enableRobotsTXT = true
+# 是否使用 git 信息
+enableGitInfo = true
+# 是否使用 emoji 代码
+enableEmoji = true
+[languages]
+
+  [languages.zh-cn]
+    weight = 2
+    # 网站语言, 仅在这里 CN 大写
+    languageCode = &#34;zh-CN&#34;
+    # 语言名称
+    languageName = &#34;简体中文&#34;
+    # 是否包括中日韩文字
+    hasCJKLanguage = true
+    # 默认每页列表显示的文章数目
+    paginate = 12
+    # [UA-XXXXXXXX-X] 谷歌分析代号
+    googleAnalytics = &#34;&#34;
+    # 版权描述，仅仅用于 SEO
+    copyright = &#34;This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.&#34;
+    # 菜单配置
+    [languages.zh-cn.menu]
+      [[languages.zh-cn.menu.main]]
+        identifier = &#34;posts&#34;
+        # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
+        pre = &#34;&#34;
+        # 你可以在名称 (允许 HTML 格式) 之后添加其他信息, 例如图标
+        post = &#34;&#34;
+        name = &#34;所有文章&#34;
+        url = &#34;/posts/&#34;
+        title = &#34;&#34;
+        weight = 1
+      [[languages.zh-cn.menu.main]]
+        identifier = &#34;tags&#34;
+        pre = &#34;&#34;
+        post = &#34;&#34;
+        name = &#34;标签&#34;
+        url = &#34;/tags/&#34;
+        title = &#34;&#34;
+        weight = 2
+      [[languages.zh-cn.menu.main]]
+        identifier = &#34;categories&#34;
+        pre = &#34;&#34;
+        post = &#34;&#34;
+        name = &#34;分类&#34;
+        url = &#34;/categories/&#34;
+        title = &#34;&#34;
+        weight = 3
+      [[languages.zh-cn.menu.main]]
+        identifier = &#34;documentation&#34;
+        pre = &#34;&#34;
+        name = &#34;文档&#34;
+        url = &#34;/categories/documentation/&#34;
+        title = &#34;&#34;
+        weight = 4
+      [[languages.zh-cn.menu.main]]
+        identifier = &#34;about&#34;
+        pre = &#34;&#34;
+        post = &#34;&#34;
+        name = &#34;关于&#34;
+        url = &#34;/about/&#34;
+        title = &#34;&#34;
+        weight = 5
+      [[languages.zh-cn.menu.main]]
+        identifier = &#34;github&#34;
+        pre = &#34;&lt;i class=&#39;fab fa-github fa-fw&#39;&gt;&lt;/i&gt;&#34;
+        post = &#34;&#34;
+        name = &#34;Github&#34;
+        url = &#34;https://github.com/geekswg&#34;
+        title = &#34;GitHub&#34;
+        weight = 6
+      [[languages.zh-cn.menu.main]]
+        identifier = &#34;friend&#34;
+        pre = &#34;&lt;i class=&#39;fas fa-user-friends&#39;&gt;&lt;/i&gt;&#34;
+        post = &#34;&#34;
+        name = &#34;友链&#34;
+        url = &#34;/friend/&#34;
+        title = &#34;&#34;
+        weight = 7      
+    [languages.zh-cn.params]
+      # 网站描述
+      description = &#34;早起的年轻人做的网站&#34;
+      # 网站关键词
+      keywords = [&#34;Theme&#34;, &#34;Hugo&#34;,&#34;geekswg&#34;]
+      # 应用图标配置
+      [languages.zh-cn.params.app]
+        # 当添加到 iOS 主屏幕或者 Android 启动器时的标题, 覆盖默认标题
+        title = &#34;LoveIt&#34;
+        # 是否隐藏网站图标资源链接
+        noFavicon = false
+        # 更现代的 SVG 网站图标, 可替代旧的 .png 和 .ico 文件
+        svgFavicon = &#34;/images/avatar.png&#34;
+        # Android 浏览器主题色
+        themeColor = &#34;#ffffff&#34;
+        # Safari 图标颜色
+        iconColor = &#34;#5bbad5&#34;
+        # Windows v8-10 磁贴颜色
+        tileColor = &#34;#da532c&#34;
+      # 搜索配置
+      [languages.zh-cn.params.search]
+        enable = true
+        # 搜索引擎的类型 (&#34;lunr&#34;, &#34;algolia&#34;)
+        type = &#34;algolia&#34;
+        # 文章内容最长索引长度
+        contentLength = 4000
+        # 搜索框的占位提示语
+        placeholder = &#34;&#34;
+        # 最大结果数目
+        maxResultLength = 10
+        # 结果内容片段长度
+        snippetLength = 50
+        # 搜索结果中高亮部分的 HTML 标签
+        highlightTag = &#34;em&#34;
+        # 是否在搜索索引中使用基于 baseURL 的绝对路径
+        absoluteURL = false
+        [languages.zh-cn.params.search.algolia]
+          index = &#34;index.zh-cn&#34;
+          appID = &#34;PASDMWALPK&#34;
+          searchKey = &#34;b42948e51daaa93df92381c8e2ac0f93&#34;
+      # 主页信息设置
+      [languages.zh-cn.params.home]
+        # RSS 文章数目
+        rss = 10
+        # 主页个人信息
+        [languages.zh-cn.params.home.profile]
+          enable = true
+          # Gravatar 邮箱，用于优先在主页显示的头像
+          gravatarEmail = &#34;&#34;
+          # 主页显示头像的 URL
+          avatarURL = &#34;/images/avatar.png&#34;
+          # 主页显示的网站标题 (支持 HTML 格式)
+          title = &#34;&#34;
+          # 主页显示的网站副标题
+          subtitle = &#34;一个记录学习过程的网站&#34;
+          # 是否为副标题显示打字机动画
+          typeit = true
+          # 是否显示社交账号
+          social = true
+          # 免责声明 (支持 HTML 格式)
+          disclaimer = &#34;&#34;
+        # 主页文章列表
+        [languages.zh-cn.params.home.posts]
+          enable = true
+          # 主页每页显示文章数量
+          paginate = 6
+      # 主页的社交信息设置
+      [languages.zh-cn.params.social]
+        Gitee = &#34;geekswg&#34;
+        Email = &#34;geekswg@qq.com&#34;
+        GitHub = &#34;geekswg&#34;
+        Bilibili = &#34;39865904&#34;
+        Zhihu = &#34;&#34;
+        Linkedin = &#34;&#34;
+        Twitter = &#34;&#34;
+        Instagram = &#34;&#34;
+        Facebook = &#34;&#34;
+        Telegram = &#34;&#34;
+        Medium = &#34;&#34;
+        Gitlab = &#34;&#34;
+        Youtubelegacy = &#34;&#34;
+        Youtubecustom = &#34;&#34;
+        Youtubechannel = &#34;&#34;
+        Tumblr = &#34;&#34;
+        Quora = &#34;&#34;
+        Keybase = &#34;&#34;
+        Pinterest = &#34;&#34;
+        Reddit = &#34;&#34;
+        Codepen = &#34;&#34;
+        FreeCodeCamp = &#34;&#34;
+        Bitbucket = &#34;&#34;
+        Stackoverflow = &#34;&#34;
+        # Weibo = &#34;xxxx&#34;
+        Odnoklassniki = &#34;&#34;
+        VK = &#34;&#34;
+        Flickr = &#34;&#34;
+        Xing = &#34;&#34;
+        Snapchat = &#34;&#34;
+        Soundcloud = &#34;&#34;
+        Spotify = &#34;&#34;
+        Bandcamp = &#34;&#34;
+        Paypal = &#34;&#34;
+        Fivehundredpx = &#34;&#34;
+        Mix = &#34;&#34;
+        Goodreads = &#34;&#34;
+        Lastfm = &#34;&#34;
+        Foursquare = &#34;&#34;
+        Hackernews = &#34;&#34;
+        Kickstarter = &#34;&#34;
+        Patreon = &#34;&#34;
+        # Steam = &#34;xxxx&#34;
+        Twitch = &#34;&#34;
+        Strava = &#34;&#34;
+        Skype = &#34;&#34;
+        Whatsapp = &#34;&#34;
+        # Juejin =&#34;user/3843548384077192&#34;
+        # Douban = &#34;xxxx&#34;
+        Angellist = &#34;&#34;
+        Slidershare = &#34;&#34;
+        Jsfiddle = &#34;&#34;
+        Deviantart = &#34;&#34;
+        Behance = &#34;&#34;
+        Dribbble = &#34;&#34;
+        Wordpress = &#34;&#34;
+        Vine = &#34;&#34;
+        Googlescholar = &#34;&#34;
+        Researchgate = &#34;&#34;
+        Mastodon = &#34;&#34;
+        Thingiverse = &#34;&#34;
+        Devto = &#34;&#34;
+        Gitea = &#34;&#34;
+        XMPP = &#34;&#34;
+        Matrix = &#34;&#34;
+        # Email = &#34;852851198@qq.com&#34;
+        # RSS = true
+
+[params]
+  # LoveIt theme version
+  # LoveIt 主题版本
+  version = &#34;0.2.X&#34;
+  # site default theme (&#34;light&#34;, &#34;dark&#34;, &#34;auto&#34;)
+  # 网站默认主题 (&#34;light&#34;, &#34;dark&#34;, &#34;auto&#34;)
+  defaultTheme = &#34;auto&#34;
+  # public git repo url only then enableGitInfo is true
+  # 公共 git 仓库路径，仅在 enableGitInfo 设为 true 时有效
+  gitRepo = &#34;https://github.com/dillonzq/LoveIt&#34;
+  # which hash function used for SRI, when empty, no SRI is used (&#34;sha256&#34;, &#34;sha384&#34;, &#34;sha512&#34;, &#34;md5&#34;)
+  # 哪种哈希函数用来 SRI, 为空时表示不使用 SRI (&#34;sha256&#34;, &#34;sha384&#34;, &#34;sha512&#34;, &#34;md5&#34;)
+  fingerprint = &#34;&#34;
+  # date format
+  # 日期格式
+  dateFormat = &#34;2006-01-02&#34;
+  # website images for Open Graph and Twitter Cards
+  # 网站图片, 用于 Open Graph 和 Twitter Cards
+  images = [&#34;/logo.png&#34;]
+  #来自之前
+  archivePaginate = 50
+
+  # show &#39;xx Posts In Total&#39; in archive page ?            # 是否在归档页显示文章的总数
+  showArchiveCount = true
+  # Header config
+  # 页面头部导航栏配置
+  [params.header]
+    # desktop header mode (&#34;fixed&#34;, &#34;normal&#34;, &#34;auto&#34;)
+    # 桌面端导航栏模式 (&#34;fixed&#34;, &#34;normal&#34;, &#34;auto&#34;)
+    desktopMode = &#34;fixed&#34;
+    # mobile header mode (&#34;fixed&#34;, &#34;normal&#34;, &#34;auto&#34;)
+    # 移动端导航栏模式 (&#34;fixed&#34;, &#34;normal&#34;, &#34;auto&#34;)
+    mobileMode = &#34;auto&#34;
+    # Header title config
+    # 页面头部导航栏标题配置
+    [params.header.title]
+      # URL of the LOGO
+      # LOGO 的 URL
+      logo = &#34;&#34;
+      # title name
+      # 标题名称
+      name = &#34;早起的年轻人&#34;
+      # you can add extra information before the name (HTML format is supported), such as icons
+      # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
+      pre = &#34;&lt;i class=&#39;far fa-kiss-wink-heart fa-fw&#39;&gt;&lt;/i&gt;&#34;
+      # you can add extra information after the name (HTML format is supported), such as icons
+      # 你可以在名称 (允许 HTML 格式) 之后添加其他信息, 例如图标
+      post = &#34;&#34;
+      # whether to use typeit animation for title name
+      # 是否为标题显示打字机动画
+      typeit = true
+
+  [params.busuanzi]         # count web traffic by busuanzi                             # 是否使用不蒜子统计站点访问量
+    enable = true
+    siteUV = true
+    sitePV = true
+    pagePV = true
+
+  [params.reward]                                         # 文章打赏
+    enable = true
+    wechat = &#34;/path/to/your/wechat-qr-code.png&#34;           # 微信二维码
+    alipay = &#34;/path/to/your/alipay-qr-code.png&#34;    
+  # Footer config
+  # 页面底部信息配置
+  [params.footer]
+    enable = true
+    # Custom content (HTML format is supported)
+    # 自定义内容 (支持 HTML 格式)
+    custom = &#39;&#39;
+    # whether to show Hugo and theme info
+    # 是否显示 Hugo 和主题信息
+    hugo = true
+    # whether to show copyright info
+    # 是否显示版权信息
+    copyright = true
+    # whether to show the author
+    # 是否显示作者
+    author = true
+    # site creation time
+    # 网站创立年份
+    since = 2021
+    # ICP info only in China (HTML format is supported)
+    # ICP 备案信息，仅在中国使用 (支持 HTML 格式)
+    icp = &#34;&#34;
+    # license info (HTML format is supported)
+    # 许可协议信息 (支持 HTML 格式)
+    license= &#39;&lt;a rel=&#34;license external nofollow noopener noreffer&#34; href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34;&gt;CC BY-NC 4.0&lt;/a&gt;&#39;
+
+  # Section (all posts) page config
+  # Section (所有文章) 页面配置
+  [params.section]
+    # special amount of posts in each section page
+    # section 页面每页显示文章数量
+    paginate = 20
+    # date format (month and day)
+    # 日期格式 (月和日)
+    dateFormat = &#34;01-02&#34;
+    # amount of RSS pages
+    # RSS 文章数目
+    rss = 10
+
+  # List (category or tag) page config
+  # List (目录或标签) 页面配置
+  [params.list]
+    # special amount of posts in each list page
+    # list 页面每页显示文章数量
+    paginate = 20
+    # date format (month and day)
+    # 日期格式 (月和日)
+    dateFormat = &#34;01-02&#34;
+    # amount of RSS pages
+    # RSS 文章数目
+    rss = 10
+
+  # Page config
+  # 文章页面配置
+  [params.page]
+    # whether to hide a page from home page
+    # 是否在主页隐藏一篇文章
+    hiddenFromHomePage = false
+    # whether to hide a page from search results
+    # 是否在搜索结果中隐藏一篇文章
+    hiddenFromSearch = false
+    # whether to enable twemoji
+    # 是否使用 twemoji
+    twemoji = false
+    # whether to enable lightgallery
+    # 是否使用 lightgallery
+    lightgallery = false
+    # whether to enable the ruby extended syntax
+    # 是否使用 ruby 扩展语法
+    ruby = true
+    # whether to enable the fraction extended syntax
+    # 是否使用 fraction 扩展语法
+    fraction = true
+    # whether to enable the fontawesome extended syntax
+    # 是否使用 fontawesome 扩展语法
+    fontawesome = true
+    # whether to show link to Raw Markdown content of the content
+    # 是否显示原始 Markdown 文档内容的链接
+    linkToMarkdown = true
+    # whether to show the full text content in RSS
+    # 是否在 RSS 中显示全文内容
+    rssFullText = false
+    # Table of the contents config
+    # 目录配置
+    [params.page.toc]
+      # whether to enable the table of the contents
+      # 是否使用目录
+      enable = true
+      # whether to keep the static table of the contents in front of the post
+      # 是否保持使用文章前面的静态目录
+      keepStatic = false
+      # whether to make the table of the contents in the sidebar automatically collapsed
+      # 是否使侧边目录自动折叠展开
+      auto = true
+    # Code config
+    # 代码配置
+    [params.page.code]
+      # whether to show the copy button of the code block
+      # 是否显示代码块的复制按钮
+      copy = true
+      # the maximum number of lines of displayed code by default
+      # 默认展开显示的代码行数
+      maxShownLines = 10
+    # KaTeX mathematical formulas config (KaTeX https://katex.org/)
+    # KaTeX 数学公式配置 (KaTeX https://katex.org/)
+    [params.page.math]
+      enable = true
+      # default block delimiter is $$ ... $$ and \\[ ... \\]
+      # 默认块定界符是 $$ ... $$ 和 \\[ ... \\]
+      blockLeftDelimiter = &#34;&#34;
+      blockRightDelimiter = &#34;&#34;
+      # default inline delimiter is $ ... $ and \\( ... \\)
+      # 默认行内定界符是 $ ... $ 和 \\( ... \\)
+      inlineLeftDelimiter = &#34;&#34;
+      inlineRightDelimiter = &#34;&#34;
+      # KaTeX extension copy_tex
+      # KaTeX 插件 copy_tex
+      copyTex = true
+      # KaTeX extension mhchem
+      # KaTeX 插件 mhchem
+      mhchem = true
+    # Mapbox GL JS config (Mapbox GL JS https://docs.mapbox.com/mapbox-gl-js)
+    # Mapbox GL JS 配置 (Mapbox GL JS https://docs.mapbox.com/mapbox-gl-js)
+    [params.page.mapbox]
+      # access token of Mapbox GL JS
+      # Mapbox GL JS 的 access token
+      accessToken = &#34;pk.eyJ1IjoiZGlsbG9uenEiLCJhIjoiY2s2czd2M2x3MDA0NjNmcGxmcjVrZmc2cyJ9.aSjv2BNuZUfARvxRYjSVZQ&#34;
+      # style for the light theme
+      # 浅色主题的地图样式
+      lightStyle = &#34;mapbox://styles/mapbox/light-v10?optimize=true&#34;
+      # style for the dark theme
+      # 深色主题的地图样式
+      darkStyle = &#34;mapbox://styles/mapbox/dark-v10?optimize=true&#34;
+      # whether to add NavigationControl (https://docs.mapbox.com/mapbox-gl-js/api/#navigationcontrol)
+      # 是否添加 NavigationControl (https://docs.mapbox.com/mapbox-gl-js/api/#navigationcontrol)
+      navigation = true
+      # whether to add GeolocateControl (https://docs.mapbox.com/mapbox-gl-js/api/#geolocatecontrol)
+      # 是否添加 GeolocateControl (https://docs.mapbox.com/mapbox-gl-js/api/#geolocatecontrol)
+      geolocate = true
+      # whether to add ScaleControl (https://docs.mapbox.com/mapbox-gl-js/api/#scalecontrol)
+      # 是否添加 ScaleControl (https://docs.mapbox.com/mapbox-gl-js/api/#scalecontrol)
+      scale = true
+      # whether to add FullscreenControl (https://docs.mapbox.com/mapbox-gl-js/api/#fullscreencontrol)
+      # 是否添加 FullscreenControl (https://docs.mapbox.com/mapbox-gl-js/api/#fullscreencontrol)
+      fullscreen = true
+    # Social share links in post page
+    # 文章页面的分享信息设置
+    [params.page.share]
+      enable = true
+      Twitter = true
+      Facebook = true
+      Linkedin = false
+      Whatsapp = false
+      Pinterest = false
+      Tumblr = false
+      HackerNews = true
+      Reddit = false
+      VK = false
+      Buffer = false
+      Xing = false
+      Line = true
+      Instapaper = false
+      Pocket = false
+      Digg = false
+      Stumbleupon = false
+      Flipboard = false
+      Weibo = true
+      Renren = false
+      Myspace = false
+      Blogger = false
+      Baidu = false
+      Odnoklassniki = false
+      Evernote = false
+      Skype = false
+      Trello = false
+      Mix = false
+    # Comment config
+    # 评论系统设置
+    [params.page.comment]
+      enable = true
+      # Disqus comment config (https://disqus.com/)
+      # Disqus 评论系统设置 (https://disqus.com/)
+      [params.page.comment.disqus]
+        enable = false
+        # Disqus shortname to use Disqus in posts
+        # Disqus 的 shortname，用来在文章中启用 Disqus 评论系统
+        shortname = &#34;&#34;
+      # Gitalk comment config (https://github.com/gitalk/gitalk)
+      # Gitalk 评论系统设置 (https://github.com/gitalk/gitalk)
+      [params.page.comment.gitalk]
+        enable = false
+        owner = &#34;&#34;
+        repo = &#34;&#34;
+        clientId = &#34;&#34;
+        clientSecret = &#34;&#34;
+      # Valine comment config (https://github.com/xCss/Valine)
+      # Valine 评论系统设置 (https://github.com/xCss/Valine)
+      [params.page.comment.valine]
+        enable = true
+        appId = &#39;cIRpq8figzQxyGz5LyAdUahJ-gzGzoHsz&#39;
+        appKey = &#39;T9YWfgGhznKaXXx7TCLxzS3C&#39;
+        notify = true  # mail notifier , https://github.com/xCss/Valine/wiki
+        verify = false # Verification code
+        avatar = &#39;robohash&#39;
+        placeholder = &#39;说点什么吧...&#39;
+        visitor = true
+        path = true
+        meta = true
+        pageSize = true
+        lang = true
+        enableQQ = true
+        # Facebook comment config (https://developers.facebook.com/docs/plugins/comments)
+        # Facebook 评论系统设置 (https://developers.facebook.com/docs/plugins/comments)
+      [params.page.comment.facebook]
+        enable = false
+        width = &#34;100%&#34;
+        numPosts = 10
+        appId = &#34;&#34;
+        languageCode = &#34;&#34;
+      # Telegram comments config (https://comments.app/)
+      # Telegram comments 评论系统设置 (https://comments.app/)
+      [params.page.comment.telegram]
+        enable = false
+        siteID = &#34;&#34;
+        limit = 5
+        height = &#34;&#34;
+        color = &#34;&#34;
+        colorful = true
+        dislikes = false
+        outlined = false
+      # Commento comment config (https://commento.io/)
+      # Commento comment 评论系统设置 (https://commento.io/)
+      [params.page.comment.commento]
+        enable = false
+      # Utterances comment config (https://utteranc.es/)
+      # Utterances comment 评论系统设置 (https://utteranc.es/)
+      [params.page.comment.utterances]
+        enable = false
+        # owner/repo
+        repo = &#34;&#34;
+        issueTerm = &#34;pathname&#34;
+        label = &#34;&#34;
+        lightTheme = &#34;github-light&#34;
+        darkTheme = &#34;github-dark&#34;
+    # Third-party library config
+    # 第三方库配置
+    [params.page.library]
+      [params.page.library.css]
+        # someCSS = &#34;some.css&#34;
+        # located in &#34;assets/&#34; 位于 &#34;assets/&#34;
+        # Or 或者
+        # someCSS = &#34;https://cdn.example.com/some.css&#34;
+      [params.page.library.js]
+        # someJavascript = &#34;some.js&#34;
+        # located in &#34;assets/&#34; 位于 &#34;assets/&#34;
+        # Or 或者
+        # someJavascript = &#34;https://cdn.example.com/some.js&#34;
+    # Page SEO config
+    # 页面 SEO 配置
+    [params.page.seo]
+      # image URL
+      # 图片 URL
+      images = []
+      # Publisher info
+      # 出版者信息
+      [params.page.seo.publisher]
+        name = &#34;xxxx&#34;
+        logoUrl = &#34;/images/avatar.png&#34;
+
+  # TypeIt config
+  # TypeIt 配置
+  [params.typeit]
+    # typing speed between each step (measured in milliseconds)
+    # 每一步的打字速度 (单位是毫秒)
+    speed = 100
+    # blinking speed of the cursor (measured in milliseconds)
+    # 光标的闪烁速度 (单位是毫秒)
+    cursorSpeed = 1000
+    # character used for the cursor (HTML format is supported)
+    # 光标的字符 (支持 HTML 格式)
+    cursorChar = &#34;|&#34;
+    # cursor duration after typing finishing (measured in milliseconds, &#34;-1&#34; means unlimited)
+    # 打字结束之后光标的持续时间 (单位是毫秒, &#34;-1&#34; 代表无限大)
+    duration = -1
+
+  # Site verification code for Google/Bing/Yandex/Pinterest/Baidu
+  # 网站验证代码，用于 Google/Bing/Yandex/Pinterest/Baidu
+  [params.verification]
+    google = &#34;&#34;
+    bing = &#34;&#34;
+    yandex = &#34;&#34;
+    pinterest = &#34;&#34;
+    baidu = &#34;&#34;
+
+  # Site SEO config
+  # 网站 SEO 配置
+  [params.seo]
+    # image URL
+    # 图片 URL
+    image = &#34;/images/Apple-Devices-Preview.png&#34;
+    # thumbnail URL
+    # 缩略图 URL
+    thumbnailUrl = &#34;/images/screenshot.png&#34;
+
+  # Analytics config
+  # 网站分析配置
+  [params.analytics]
+    enable = false
+    # Google Analytics
+    [params.analytics.google]
+      id = &#34;&#34;
+      # whether to anonymize IP
+      # 是否匿名化用户 IP
+      anonymizeIP = true
+    # Fathom Analytics
+    [params.analytics.fathom]
+      id = &#34;&#34;
+      # server url for your tracker if you&#39;re self hosting
+      # 自行托管追踪器时的主机路径
+      server = &#34;&#34;
+
+  # Cookie consent config
+  # Cookie 许可配置
+  [params.cookieconsent]
+    enable = false
+    # text strings used for Cookie consent banner
+    # 用于 Cookie 许可横幅的文本字符串
+    [params.cookieconsent.content]
+      message = &#34;&#34;
+      dismiss = &#34;&#34;
+      link = &#34;&#34;
+
+  # CDN config for third-party library files
+  # 第三方库文件的 CDN 设置
+  [params.cdn]
+    # CDN data file name, disabled by default
+    # (&#34;jsdelivr.yml&#34;)
+    # located in &#34;themes/LoveIt/assets/data/cdn/&#34; directory
+    # you can store your own data files in the same path under your project:
+    # &#34;assets/data/cdn/&#34;
+    # CDN 数据文件名称, 默认不启用
+    # (&#34;jsdelivr.yml&#34;)
+    # 位于 &#34;themes/LoveIt/assets/data/cdn/&#34; 目录
+    # 可以在你的项目下相同路径存放你自己的数据文件:
+    # &#34;assets/data/cdn/&#34;
+    data = &#34;jsdelivr.yml&#34;
+
+  # Compatibility config
+  # 兼容性设置
+  [params.compatibility]
+    # whether to use Polyfill.io to be compatible with older browsers
+    # 是否使用 Polyfill.io 来兼容旧式浏览器
+    polyfill = false
+    # whether to use object-fit-images to be compatible with older browsers
+    # 是否使用 object-fit-images 来兼容旧式浏览器
+    objectFit = false
+
+# Markup related configuration in Hugo
+# Hugo 解析文档的配置
+[markup]
+  # Syntax Highlighting (https://gohugo.io/content-management/syntax-highlighting)
+  # 语法高亮设置 (https://gohugo.io/content-management/syntax-highlighting)
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = true
+    lineNos = true
+    lineNumbersInTable = true
+    # false is a necessary configuration (https://github.com/dillonzq/LoveIt/issues/158)
+    # false 是必要的设置 (https://github.com/dillonzq/LoveIt/issues/158)
+    noClasses = false
+  # Goldmark is from Hugo 0.60 the default library used for Markdown
+  # Goldmark 是 Hugo 0.60 以来的默认 Markdown 解析库
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      definitionList = true
+      footnote = true
+      linkify = true
+      strikethrough = true
+      table = true
+      taskList = true
+      typographer = true
+    [markup.goldmark.renderer]
+      # whether to use HTML tags directly in the document
+      # 是否在文档中直接使用 HTML 标签
+      unsafe = true
+  # Table Of Contents settings
+  # 目录设置
+  [markup.tableOfContents]
+    startLevel = 1
+    endLevel = 6
+
+# Author config
+# 作者配置
+[author]
+  name = &#34;早起的年轻人&#34;
+  email = &#34;geekswg@qq.com&#34;
+  link = &#34;&#34;
+
+# Sitemap config
+# 网站地图配置
+[sitemap]
+  changefreq = &#34;weekly&#34;
+  filename = &#34;sitemap.xml&#34;
+  priority = 0.5
+
+# Permalinks config (https://gohugo.io/content-management/urls/#permalinks)
+# Permalinks 配置 (https://gohugo.io/content-management/urls/#permalinks)
+[Permalinks]
+  # posts = &#34;:year/:month/:filename&#34;
+  posts = &#34;:filename&#34;
+
+# Privacy config (https://gohugo.io/about/hugo-and-gdpr/)
+# 隐私信息配置 (https://gohugo.io/about/hugo-and-gdpr/)
+[privacy]
+  # privacy of the Google Analytics (replaced by params.analytics.google)
+  # Google Analytics 相关隐私 (被 params.analytics.google 替代)
+  [privacy.googleAnalytics]
+    # ...
+  [privacy.twitter]
+    enableDNT = true
+  [privacy.youtube]
+    privacyEnhanced = true
+
+# Options to make output .md files
+# 用于输出 Markdown 格式文档的设置
+# [mediaTypes]
+#   [mediaTypes.&#34;text/plain&#34;]
+#     suffixes = [&#34;md&#34;]
+
+# # Options to make output .md files
+# # 用于输出 Markdown 格式文档的设置
+# [outputFormats.MarkDown]
+#   mediaType = &#34;text/plain&#34;
+#   isPlainText = false
+#   isHTML = true
+
+# # Options to make hugo output files
+# # 用于 Hugo 输出文档的设置
+# [outputs]
+#   home = [&#34;HTML&#34;, &#34;RSS&#34;, &#34;JSON&#34;]
+#   page = [&#34;HTML&#34;, &#34;MarkDown&#34;]
+#   section = [&#34;HTML&#34;, &#34;RSS&#34;]
+#   taxonomy = [&#34;HTML&#34;, &#34;RSS&#34;]
+#   taxonomyTerm = [&#34;HTML&#34;]
+</code></pre></td></tr></table>
+</div>
+</div><h1 id="上传github-pages">上传GitHub Pages</h1>
+<blockquote>
+<p>在vscode 终端上 输入 hugo 后回车，会编译public文件下面<br>
+按照以下命令 将public目录下所有文件上传到github</p>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">git init
+git add .
+git commit -m &#34;我的博客第一次提交&#34;
+git remote add origin https://github.com/geekswg/geekswg.github.io.git
+git push origin master
+</code></pre></td></tr></table>
+</div>
+</div></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2021-11-14</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="/%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/" data-title="主题配置" data-hashtags="主题"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="/%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/" data-hashtag="主题"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Linkedin" data-sharer="linkedin" data-url="/%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/"><i class="fab fa-linkedin fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="/%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/" data-title="主题配置"><i class="fab fa-hacker-news fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="/%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/" data-title="主题配置"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@2.14.0/icons/line.svg"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="/%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/" data-title="主题配置"><i class="fab fa-weibo fa-fw"></i></a><a href="javascript:void(0);" title="分享到 百度" data-sharer="baidu" data-url="/%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/" data-title="主题配置"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@2.14.0/icons/baidu.svg"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E4%B8%BB%E9%A2%98/">主题</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/demo/" class="prev" rel="prev" title="Demo"><i class="fas fa-angle-left fa-fw"></i>Demo</a>
+            <a href="/dos%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" class="next" rel="next" title="DOS常用命令">DOS常用命令<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="disqus_thread" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
+            </noscript><div id="valine" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">但行好事 ♥ 莫问前程</div><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.89.2">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="http://geekswg.cnblogs.com/" target="_blank">毕少侠</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/valine/valine.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/copy-tex.min.css"><script type="text/javascript" src="https://.disqus.com/embed.js" defer></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.37.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/algoliasearch@4.2.0/dist/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.2.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.4.0/sharer.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/copy-tex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"valine":{"appId":"qd9ROyoJU406IejzwIJ9kKC2-gzGzoHsz","appKey":"lbGcdwUR0W4riEkBse20yHan","avatar":"robohash","el":"#valine","emojiCDN":"https://cdn.jsdelivr.net/npm/emoji-datasource-google@5.0.1/img/google/64/","emojiMaps":{"100":"1f4af.png","alien":"1f47d.png","anger":"1f4a2.png","angry":"1f620.png","anguished":"1f627.png","astonished":"1f632.png","black_heart":"1f5a4.png","blue_heart":"1f499.png","blush":"1f60a.png","bomb":"1f4a3.png","boom":"1f4a5.png","broken_heart":"1f494.png","brown_heart":"1f90e.png","clown_face":"1f921.png","cold_face":"1f976.png","cold_sweat":"1f630.png","confounded":"1f616.png","confused":"1f615.png","cry":"1f622.png","crying_cat_face":"1f63f.png","cupid":"1f498.png","dash":"1f4a8.png","disappointed":"1f61e.png","disappointed_relieved":"1f625.png","dizzy":"1f4ab.png","dizzy_face":"1f635.png","drooling_face":"1f924.png","exploding_head":"1f92f.png","expressionless":"1f611.png","face_vomiting":"1f92e.png","face_with_cowboy_hat":"1f920.png","face_with_hand_over_mouth":"1f92d.png","face_with_head_bandage":"1f915.png","face_with_monocle":"1f9d0.png","face_with_raised_eyebrow":"1f928.png","face_with_rolling_eyes":"1f644.png","face_with_symbols_on_mouth":"1f92c.png","face_with_thermometer":"1f912.png","fearful":"1f628.png","flushed":"1f633.png","frowning":"1f626.png","ghost":"1f47b.png","gift_heart":"1f49d.png","green_heart":"1f49a.png","grimacing":"1f62c.png","grin":"1f601.png","grinning":"1f600.png","hankey":"1f4a9.png","hear_no_evil":"1f649.png","heart":"2764-fe0f.png","heart_decoration":"1f49f.png","heart_eyes":"1f60d.png","heart_eyes_cat":"1f63b.png","heartbeat":"1f493.png","heartpulse":"1f497.png","heavy_heart_exclamation_mark_ornament":"2763-fe0f.png","hole":"1f573-fe0f.png","hot_face":"1f975.png","hugging_face":"1f917.png","hushed":"1f62f.png","imp":"1f47f.png","innocent":"1f607.png","japanese_goblin":"1f47a.png","japanese_ogre":"1f479.png","joy":"1f602.png","joy_cat":"1f639.png","kiss":"1f48b.png","kissing":"1f617.png","kissing_cat":"1f63d.png","kissing_closed_eyes":"1f61a.png","kissing_heart":"1f618.png","kissing_smiling_eyes":"1f619.png","laughing":"1f606.png","left_speech_bubble":"1f5e8-fe0f.png","love_letter":"1f48c.png","lying_face":"1f925.png","mask":"1f637.png","money_mouth_face":"1f911.png","nauseated_face":"1f922.png","nerd_face":"1f913.png","neutral_face":"1f610.png","no_mouth":"1f636.png","open_mouth":"1f62e.png","orange_heart":"1f9e1.png","partying_face":"1f973.png","pensive":"1f614.png","persevere":"1f623.png","pleading_face":"1f97a.png","pouting_cat":"1f63e.png","purple_heart":"1f49c.png","rage":"1f621.png","relaxed":"263a-fe0f.png","relieved":"1f60c.png","revolving_hearts":"1f49e.png","right_anger_bubble":"1f5ef-fe0f.png","robot_face":"1f916.png","rolling_on_the_floor_laughing":"1f923.png","scream":"1f631.png","scream_cat":"1f640.png","see_no_evil":"1f648.png","shushing_face":"1f92b.png","skull":"1f480.png","skull_and_crossbones":"2620-fe0f.png","sleeping":"1f634.png","sleepy":"1f62a.png","slightly_frowning_face":"1f641.png","slightly_smiling_face":"1f642.png","smile":"1f604.png","smile_cat":"1f638.png","smiley":"1f603.png","smiley_cat":"1f63a.png","smiling_face_with_3_hearts":"1f970.png","smiling_imp":"1f608.png","smirk":"1f60f.png","smirk_cat":"1f63c.png","sneezing_face":"1f927.png","sob":"1f62d.png","space_invader":"1f47e.png","sparkling_heart":"1f496.png","speak_no_evil":"1f64a.png","speech_balloon":"1f4ac.png","star-struck":"1f929.png","stuck_out_tongue":"1f61b.png","stuck_out_tongue_closed_eyes":"1f61d.png","stuck_out_tongue_winking_eye":"1f61c.png","sunglasses":"1f60e.png","sweat":"1f613.png","sweat_drops":"1f4a6.png","sweat_smile":"1f605.png","thinking_face":"1f914.png","thought_balloon":"1f4ad.png","tired_face":"1f62b.png","triumph":"1f624.png","two_hearts":"1f495.png","unamused":"1f612.png","upside_down_face":"1f643.png","weary":"1f629.png","white_frowning_face":"2639-fe0f.png","white_heart":"1f90d.png","wink":"1f609.png","woozy_face":"1f974.png","worried":"1f61f.png","yawning_face":"1f971.png","yellow_heart":"1f49b.png","yum":"1f60b.png","zany_face":"1f92a.png","zipper_mouth_face":"1f910.png","zzz":"1f4a4.png"},"enableQQ":true,"highlight":true,"lang":true,"meta":true,"pageSize":true,"placeholder":"说点什么吧...","recordIP":null,"visitor":true}},"data":{"id-1":"毕少侠也在江湖","id-2":"毕少侠也在江湖"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"algoliaAppID":"IY4PI7E54X","algoliaIndex":"geekswg","algoliaSearchKey":"06908f0d5cec03baf665e5667c77b586","highlightTag":"em","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"},"typeit":{"cursorChar":"|","cursorSpeed":1000,"data":{"id-1":["id-1"],"id-2":["id-2"]},"duration":-1,"speed":100}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
