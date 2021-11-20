@@ -134,13 +134,13 @@ window.onload = function() {
     var titleTime;
     document.addEventListener('visibilitychange', function() {
       if(document.hidden) {
-        $('[rel="icon"]').attr('href', "/failure.ico");
-        $('[rel="shortcut icon"]').attr('href', "/failure.ico");
+        $('[rel="icon"]').attr('href', "favicon.ico");
+        $('[rel="shortcut icon"]').attr('href', "favicon.ico");
         document.title = '宝，我想你了！';
         clearTimeout(titleTime);
       } else {
-        $('[rel="icon"]').attr('href', "/favicon-32x32.ico");
-        $('[rel="shortcut icon"]').attr('href', "/favicon-32x32.ico");
+        $('[rel="icon"]').attr('href', "favicon.ico");
+        $('[rel="shortcut icon"]').attr('href', "favicon.ico");
         document.title = '欢迎回来！';
         titleTime = setTimeout(function() {
           document.title = OriginTitile;
