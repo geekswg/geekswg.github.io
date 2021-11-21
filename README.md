@@ -3,11 +3,11 @@
 [![My Github HomePage](https://github-readme-stats.vercel.app/api?username=geekswg)](https://geekswg.github.io/)
 
 ## 提交代码
-> git init
-> git add .
-> git commit -m '更新'
-> git remote add origin https://github.com/geekswg/geekswg.github.io.git
-> git push -f origin main
+> git init   
+> git add .  
+> git commit -m '更新'   
+> git remote add origin https://github.com/geekswg/geekswg.github.io.git   
+> git push -f origin main  
 
 ## 拉取代码
 >  git pull origin
