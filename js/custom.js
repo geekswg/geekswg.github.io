@@ -94,7 +94,7 @@ $(function() {
 
 	/* 评论框加载背景图片 */
 	//$(".v[data-class=v] .veditor").attr('style', "background-image: url("  + "/images/common/valinebg.webp) !important;");
-	$(".v[data-class=v] .veditor").attr('style',"background-color:rgba(255,255,255,0.5)");
+	$(".v[data-class=v] .veditor").attr('style',"background-color: black");
 });
 
 function getCurrentDateString() {
