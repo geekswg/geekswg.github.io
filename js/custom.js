@@ -69,10 +69,10 @@ jQuery(document).ready(function($) {
 /* 轮播背景图片 */
 $(function () {
 	$.backstretch([
-		  $cdnPrefix + "/images/background/saber1.jpg",
-		  $cdnPrefix + "/images/background/saber2.jpg",
-		  $cdnPrefix + "/images/background/wlop.jpg"
-	], { duration: 60000, fade: 1500 });
+		  "/images/background/bg1.jpg",
+		  "/images/background/bg2.jpg",
+		  "/images/background/bg3.jpg"
+	], { duration: 15000, fade: 1500 });
 });
 
 /* 拉姆蕾姆回到顶部或底部按钮 */
@@ -90,10 +90,11 @@ $(function() {
 /* 后置加载页面组件的背景图片 */
 $(function() {
 	/* 首页头像div加载GitHub Chart作为背景图片 */
-	$("div.home-avatar").attr('style', "background: url(https://ghchart.rshah.org/FFA500/lewky);background-repeat: no-repeat;background-position: center;background-size: auto 7.5rem;");
+	$("div.home-avatar").attr('style', "background: url(https://ghchart.rshah.org/FFA500/geekswg);background-repeat: no-repeat;background-position: center;background-size: auto 7.5rem;");
 
 	/* 评论框加载背景图片 */
-	$(".v[data-class=v] .veditor").attr('style', "background-image: url(" + $cdnPrefix + "/images/common/valinebg.webp) !important;");
+	//$(".v[data-class=v] .veditor").attr('style', "background-image: url("  + "/images/common/valinebg.webp) !important;");
+	$(".v[data-class=v] .veditor").attr('style',"background-color:rgba(255,255,255,0.5)");
 });
 
 function getCurrentDateString() {
