@@ -1,145 +1,27 @@
-<!doctype html><html lang=zh-cn>
-<head>
-<meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1">
-<meta name=robots content="noodp">
-<meta http-equiv=x-ua-compatible content="IE=edge, chrome=1">
-<title>主题配置 - Geekswgの博客 - 在阅读中遇见自己</title><meta name=keywords content="[Theme Hugo geekswg]">
-<meta name=Description content="早起的年轻人做的网站"><meta property="og:title" content="主题配置">
-<meta property="og:description" content="安装GO 安装Hugo windows 下载 huto 直接解压 配置环境变量 测试 在cmd中输入 hugo version 查看 hugo 是否安装完成 下载Hugo主题LoveIt 在 windows 下 1 2 3 hugo new site blog cd themes">
-<meta property="og:type" content="article">
-<meta property="og:url" content="https://geekswg.github.io/%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/"><meta property="og:image" content="https://geekswg.github.io/images/avatar.png"><meta property="article:section" content="posts">
-<meta property="article:published_time" content="2021-11-14T23:04:08+08:00">
-<meta property="article:modified_time" content="2021-11-14T23:04:08+08:00">
-<meta name=twitter:card content="summary_large_image">
-<meta name=twitter:image content="https://geekswg.github.io/images/avatar.png">
-<meta name=twitter:title content="主题配置">
-<meta name=twitter:description content="安装GO 安装Hugo windows 下载 huto 直接解压 配置环境变量 测试 在cmd中输入 hugo version 查看 hugo 是否安装完成 下载Hugo主题LoveIt 在 windows 下 1 2 3 hugo new site blog cd themes">
-<meta name=application-name content="LoveIt">
-<meta name=apple-mobile-web-app-title content="LoveIt"><meta name=theme-color content="#ffffff"><meta name=msapplication-TileColor content="#da532c"><link rel=icon href=/images/avatar.png><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><link rel=manifest href=/site.webmanifest><link rel=canonical href=https://geekswg.github.io/%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/><link rel=prev href=https://geekswg.github.io/demo/><link rel=next href=https://geekswg.github.io/dos%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css><link rel=stylesheet href=/css/style.min.css><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"主题配置","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/geekswg.github.io\/%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE\/"},"image":[{"@type":"ImageObject","url":"https:\/\/geekswg.github.io\/images\/Apple-Devices-Preview.png","width":3200,"height":2048}],"genre":"posts","keywords":"主题","wordcount":4895,"url":"https:\/\/geekswg.github.io\/%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE\/","datePublished":"2021-11-14T23:04:08+08:00","dateModified":"2021-11-14T23:04:08+08:00","license":"This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher":{"@type":"Organization","name":"xxxx","logo":{"@type":"ImageObject","url":"https:\/\/geekswg.github.io\/images\/avatar.png","width":528,"height":560}},"author":{"@type":"Person","name":"毕少侠"},"description":""}</script></head>
-<body header-desktop=fixed header-mobile=auto><script type=text/javascript>(window.localStorage&&localStorage.getItem('theme')?localStorage.getItem('theme')==='dark':'auto'==='auto'?window.matchMedia('(prefers-color-scheme: dark)').matches:'auto'==='dark')&&document.body.setAttribute('theme','dark')</script>
-<div id=mask></div><div class=wrapper><header class=desktop id=header-desktop>
-<div class=header-wrapper>
-<a href=https://github.com/geekswg class=github-corner target=_blank title="Follow me on GitHub" aria-label="Follow me on GitHub"><svg width="3.5rem" height="3.5rem" viewBox="0 0 250 250" style="fill:#70b7fd;color:#fff;position:absolute;top:0;border:0;left:0;transform:scale(-1,1)" aria-hidden="true"><path d="M0 0 115 115h15l12 27L250 250V0z"/><path d="M128.3 109C113.8 99.7 119 89.6 119 89.6 122 82.7 120.5 78.6 120.5 78.6 119.2 72 123.4 76.3 123.4 76.3 127.3 80.9 125.5 87.3 125.5 87.3 122.9 97.6 130.6 101.9 134.4 103.2" fill="currentcolor" style="transform-origin:130px 106px" class="octo-arm"/><path d="M115 115C114.9 115.1 118.7 116.5 119.8 115.4l13.9-13.8C136.9 99.2 139.9 98.4 142.2 98.6 133.8 88 127.5 74.4 143.8 58 148.5 53.4 154 51.2 159.7 51 160.3 49.4 163.2 43.6 171.4 40.1 171.4 40.1 176.1 42.5 178.8 56.2 183.1 58.6 187.2 61.8 190.9 65.4 194.5 69 197.7 73.2 200.1 77.6 213.8 80.2 216.3 84.9 216.3 84.9 212.7 93.1 206.9 96 205.4 96.6 205.1 102.4 203 107.8 198.3 112.5 181.9 128.9 168.3 122.5 157.7 114.1 157.9 116.9 156.7 120.9 152.7 124.9L141 136.5C139.8 137.7 141.6 141.9 141.8 141.8z" fill="currentcolor" class="octo-body"/></svg></a>
-<div class=header-title>
-<a href=/ title="Geekswgの博客 - 在阅读中遇见自己"><img class="lazyload logo" src=/svg/loading.min.svg data-src=/images/avatar.png data-srcset="/images/avatar.png, /images/avatar.png 1.5x, /images/avatar.png 2x" data-sizes=auto alt=/images/avatar.png title=/images/avatar.png><span class=header-title-pre><i class="far fa-kiss-wink-heart fa-fw"></i></span><span id=id-1 class=typeit></span></a>
-</div>
-<div class=menu>
-<div class=menu-inner>
-<div class=dropdown>
-<a href=/posts/ class="menu-item menu-more dropbtn" title><i class="fas fa-fw fa-archive"></i> 归档
-</a>
-<div class="menu-more-content dropdown-content"><a href=/categories/ title><i class="fas fa-fw fa-th"></i> 分类 </a><a href=/tags/ title target=_blank rel=noopener><i class="fas fa-fw fa-tag"></i> 标签 </a></div>
-</div>
-<a class=menu-item href=/categories/documentation/> 文档
-</a><a class=menu-item href=/about/> 关于
-</a><a class=menu-item href=https://github.com/geekswg title=GitHub rel="noopener noreffer" target=_blank><i class="fab fa-github fa-fw"></i>
-</a><a class=menu-item href="http://wpa.qq.com/msgrd?v=3&uin=1101303970&site=qq&menu=yes" title=QQ联系我 rel="noopener noreffer" target=_blank><i class="fab fa-qq fa-spin"></i>
-</a><a class=menu-item href=/friends/><i class="fas fa-user-friends"></i> 友链
-</a><a class=menu-item href=/search/><i class="fas fa-fw fa-search"></i> 搜索
-</a>
-<div class=dropdown>
-<a href=/website class="menu-item menu-more dropbtn" title target=_blank rel=noopener><i class="fa fa-cog fa-spin fa-fw"></i> 网站
-</a>
-<div class="menu-more-content dropdown-content"><a href=https://www.baidu.com/ title target=_blank rel=noopener><i class="fas fa-fw fa-atom fa-spin"></i> 百度 </a></div>
-</div>
-<span class="menu-item delimiter"></span><a href=javascript:void(0); class="menu-item theme-switch" title>
-<i class="fas fa-adjust fa-fw"></i>
-</a>
-</div>
-</div>
-</div>
-</header><header class=mobile id=header-mobile>
-<div class=header-container>
-<div class=header-wrapper>
-<div class=header-title>
-<a href=/ title="Geekswgの博客 - 在阅读中遇见自己"><img class="lazyload logo" src=/svg/loading.min.svg data-src=/images/avatar.png data-srcset="/images/avatar.png, /images/avatar.png 1.5x, /images/avatar.png 2x" data-sizes=auto alt=/images/avatar.png title=/images/avatar.png><span class=header-title-pre><i class="far fa-kiss-wink-heart fa-fw"></i></span><span id=id-2 class=typeit></span></a>
-</div>
-<div class=menu-toggle id=menu-toggle-mobile>
-<span></span><span></span><span></span>
-</div>
-</div>
-<div class=menu id=menu-mobile>
-<div class=dropdown>
-<a href=/posts/ class="menu-item menu-more dropbtn" title><i class="fas fa-fw fa-archive"></i> 归档
-</a>
-<div class="menu-more-content dropdown-content"><a href=/categories/ title><i class="fas fa-fw fa-th"></i> 分类 </a><a href=/tags/ title target=_blank rel=noopener><i class="fas fa-fw fa-tag"></i> 标签 </a></div>
-</div>
-<a class=menu-item href=/categories/documentation/> 文档
-</a><a class=menu-item href=/about/> 关于
-</a><a class=menu-item href=https://github.com/geekswg title=GitHub rel="noopener noreffer" target=_blank><i class="fab fa-github fa-fw"></i>
-</a><a class=menu-item href="http://wpa.qq.com/msgrd?v=3&uin=1101303970&site=qq&menu=yes" title=QQ联系我 rel="noopener noreffer" target=_blank><i class="fab fa-qq fa-spin"></i>
-</a><a class=menu-item href=/friends/><i class="fas fa-user-friends"></i> 友链
-</a><a class=menu-item href=/search/><i class="fas fa-fw fa-search"></i> 搜索
-</a>
-<div class=dropdown>
-<a href=/website class="menu-item menu-more dropbtn" title target=_blank rel=noopener><i class="fa fa-cog fa-spin fa-fw"></i> 网站
-</a>
-<div class="menu-more-content dropdown-content"><a href=https://www.baidu.com/ title target=_blank rel=noopener><i class="fas fa-fw fa-atom fa-spin"></i> 百度 </a></div>
-</div>
-<a href=javascript:void(0); class="menu-item theme-switch" title>
-<i class="fas fa-adjust fa-fw"></i>
-</a></div>
-</div>
-</header>
-<div class="search-dropdown desktop">
-<div id=search-dropdown-desktop></div>
-</div>
-<div class="search-dropdown mobile">
-<div id=search-dropdown-mobile></div>
-</div><main class=main>
-<div class=container>
-<div class=toc id=toc-auto>
-<h2 class=toc-title>目录</h2>
-<div class=toc-content id=toc-content-auto></div>
-</div><article class="page single"><h1 class="single-title animated flipInX">主题配置</h1><h2 class=single-subtitle>主题配置-笔记</h2><div class=post-meta>
-<div class=post-meta-line><span class=post-author><a href=http://geekswg.cnblogs.com/ title=Author target=_blank rel="noopener noreffer author" class=author><i class="fas fa-user-circle fa-fw"></i>毕少侠</a></span>&nbsp;<span class=post-category>收录于 <a href=/categories/%E4%B8%BB%E9%A2%98/><i class="far fa-folder fa-fw"></i>主题</a></span></div>
-<div class=post-meta-line><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime=2021-11-14>2021-11-14</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 4895 字&nbsp;
+<!doctype html><html lang=zh-cn><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="noodp"><meta http-equiv=x-ua-compatible content="IE=edge, chrome=1"><title>主题配置 - Geekswgの博客 - 在阅读中遇见自己</title><meta name=keywords content="[Theme Hugo geekswg]"><meta name=Description content="早起的年轻人做的网站"><meta property="og:title" content="主题配置"><meta property="og:description" content="安装GO 安装Hugo windows 下载 huto 直接解压 配置环境变量 测试 在cmd中输入 hugo version 查看 hugo 是否安装完成 下载Hugo主题LoveIt 在 windows 下 1 2 3 hugo new site blog cd themes"><meta property="og:type" content="article"><meta property="og:url" content="https://geekswg.github.io/%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/"><meta property="og:image" content="https://geekswg.github.io/images/avatar.png"><meta property="article:section" content="posts"><meta property="article:published_time" content="2021-11-14T23:04:08+08:00"><meta property="article:modified_time" content="2021-11-14T23:04:08+08:00"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://geekswg.github.io/images/avatar.png"><meta name=twitter:title content="主题配置"><meta name=twitter:description content="安装GO 安装Hugo windows 下载 huto 直接解压 配置环境变量 测试 在cmd中输入 hugo version 查看 hugo 是否安装完成 下载Hugo主题LoveIt 在 windows 下 1 2 3 hugo new site blog cd themes"><meta name=application-name content="LoveIt"><meta name=apple-mobile-web-app-title content="LoveIt"><meta name=theme-color content="#ffffff"><meta name=msapplication-TileColor content="#da532c"><link rel=icon href=/images/avatar.png><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><link rel=manifest href=/site.webmanifest><link rel=canonical href=https://geekswg.github.io/%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/><link rel=prev href=https://geekswg.github.io/demo/><link rel=next href=https://geekswg.github.io/dos%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css><link rel=stylesheet href=/css/style.min.css><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"主题配置","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/geekswg.github.io\/%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE\/"},"image":[{"@type":"ImageObject","url":"https:\/\/geekswg.github.io\/images\/Apple-Devices-Preview.png","width":3200,"height":2048}],"genre":"posts","keywords":"主题","wordcount":4895,"url":"https:\/\/geekswg.github.io\/%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE\/","datePublished":"2021-11-14T23:04:08+08:00","dateModified":"2021-11-14T23:04:08+08:00","license":"This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher":{"@type":"Organization","name":"xxxx","logo":{"@type":"ImageObject","url":"https:\/\/geekswg.github.io\/images\/avatar.png","width":528,"height":560}},"author":{"@type":"Person","name":"毕少侠"},"description":""}</script></head><body header-desktop=fixed header-mobile=auto><script type=text/javascript>(window.localStorage&&localStorage.getItem("theme")?localStorage.getItem("theme")==="dark":"auto"==="auto"?window.matchMedia("(prefers-color-scheme: dark)").matches:"auto"==="dark")&&document.body.setAttribute("theme","dark")</script><div id=mask></div><div class=wrapper><header class=desktop id=header-desktop><div class=header-wrapper><a href=https://github.com/geekswg class=github-corner target=_blank title="Follow me on GitHub" aria-label="Follow me on GitHub"><svg width="3.5rem" height="3.5rem" viewBox="0 0 250 250" style="fill:#70b7fd;color:#fff;position:absolute;top:0;border:0;left:0;transform:scale(-1,1)" aria-hidden="true"><path d="M0 0 115 115h15l12 27L250 250V0z"/><path d="M128.3 109C113.8 99.7 119 89.6 119 89.6 122 82.7 120.5 78.6 120.5 78.6 119.2 72 123.4 76.3 123.4 76.3 127.3 80.9 125.5 87.3 125.5 87.3 122.9 97.6 130.6 101.9 134.4 103.2" fill="currentcolor" style="transform-origin:130px 106px" class="octo-arm"/><path d="M115 115C114.9 115.1 118.7 116.5 119.8 115.4l13.9-13.8C136.9 99.2 139.9 98.4 142.2 98.6 133.8 88 127.5 74.4 143.8 58 148.5 53.4 154 51.2 159.7 51 160.3 49.4 163.2 43.6 171.4 40.1 171.4 40.1 176.1 42.5 178.8 56.2 183.1 58.6 187.2 61.8 190.9 65.4 194.5 69 197.7 73.2 200.1 77.6 213.8 80.2 216.3 84.9 216.3 84.9 212.7 93.1 206.9 96 205.4 96.6 205.1 102.4 203 107.8 198.3 112.5 181.9 128.9 168.3 122.5 157.7 114.1 157.9 116.9 156.7 120.9 152.7 124.9L141 136.5C139.8 137.7 141.6 141.9 141.8 141.8z" fill="currentcolor" class="octo-body"/></svg></a><div class=header-title><a href=/ title="Geekswgの博客 - 在阅读中遇见自己"><img class="lazyload logo" src=/svg/loading.min.svg data-src=/images/avatar.png data-srcset="/images/avatar.png, /images/avatar.png 1.5x, /images/avatar.png 2x" data-sizes=auto alt=/images/avatar.png title=/images/avatar.png><span class=header-title-pre><i class='far fa-kiss-wink-heart fa-fw'></i></span><span id=id-1 class=typeit></span></a></div><div class=menu><div class=menu-inner><div class=dropdown><a href=/posts/ class="menu-item menu-more dropbtn" title><i class='fas fa-fw fa-archive'></i> 归档</a><div class="menu-more-content dropdown-content"><a href=/categories/ title><i class='fas fa-fw fa-th'></i> 分类 </a><a href=/tags/ title target=_blank rel=noopener><i class='fas fa-fw fa-tag'></i> 标签</a></div></div><a class=menu-item href=/categories/documentation/>文档
+</a><a class=menu-item href=/about/>关于
+</a><a class=menu-item href=https://github.com/geekswg title=GitHub rel="noopener noreffer" target=_blank><i class='fab fa-github fa-fw'></i>
+</a><a class=menu-item href="http://wpa.qq.com/msgrd?v=3&uin=1101303970&site=qq&menu=yes" title=QQ联系我 rel="noopener noreffer" target=_blank><i class='fab fa-qq fa-spin'></i>
+</a><a class=menu-item href=/friends/><i class='fas fa-user-friends'></i> 友链
+</a><a class=menu-item href=/search/><i class='fas fa-fw fa-search'></i> 搜索</a><div class=dropdown><a href=/website class="menu-item menu-more dropbtn" title target=_blank rel=noopener><i class='fa fa-cog fa-spin fa-fw'></i> 网站</a><div class="menu-more-content dropdown-content"><a href=https://www.baidu.com/ title target=_blank rel=noopener><i class='fas fa-fw fa-atom fa-spin'></i> 百度</a></div></div><span class="menu-item delimiter"></span><a href=javascript:void(0); class="menu-item theme-switch" title>
+<i class="fas fa-adjust fa-fw"></i></a></div></div></div></header><header class=mobile id=header-mobile><div class=header-container><div class=header-wrapper><div class=header-title><a href=/ title="Geekswgの博客 - 在阅读中遇见自己"><img class="lazyload logo" src=/svg/loading.min.svg data-src=/images/avatar.png data-srcset="/images/avatar.png, /images/avatar.png 1.5x, /images/avatar.png 2x" data-sizes=auto alt=/images/avatar.png title=/images/avatar.png><span class=header-title-pre><i class='far fa-kiss-wink-heart fa-fw'></i></span><span id=id-2 class=typeit></span></a></div><div class=menu-toggle id=menu-toggle-mobile><span></span><span></span><span></span></div></div><div class=menu id=menu-mobile><div class=dropdown><a href=/posts/ class="menu-item menu-more dropbtn" title><i class='fas fa-fw fa-archive'></i> 归档</a><div class="menu-more-content dropdown-content"><a href=/categories/ title><i class='fas fa-fw fa-th'></i> 分类 </a><a href=/tags/ title target=_blank rel=noopener><i class='fas fa-fw fa-tag'></i> 标签</a></div></div><a class=menu-item href=/categories/documentation/>文档
+</a><a class=menu-item href=/about/>关于
+</a><a class=menu-item href=https://github.com/geekswg title=GitHub rel="noopener noreffer" target=_blank><i class='fab fa-github fa-fw'></i>
+</a><a class=menu-item href="http://wpa.qq.com/msgrd?v=3&uin=1101303970&site=qq&menu=yes" title=QQ联系我 rel="noopener noreffer" target=_blank><i class='fab fa-qq fa-spin'></i>
+</a><a class=menu-item href=/friends/><i class='fas fa-user-friends'></i> 友链
+</a><a class=menu-item href=/search/><i class='fas fa-fw fa-search'></i> 搜索</a><div class=dropdown><a href=/website class="menu-item menu-more dropbtn" title target=_blank rel=noopener><i class='fa fa-cog fa-spin fa-fw'></i> 网站</a><div class="menu-more-content dropdown-content"><a href=https://www.baidu.com/ title target=_blank rel=noopener><i class='fas fa-fw fa-atom fa-spin'></i> 百度</a></div></div><a href=javascript:void(0); class="menu-item theme-switch" title><i class="fas fa-adjust fa-fw"></i></a></div></div></header><div class="search-dropdown desktop"><div id=search-dropdown-desktop></div></div><div class="search-dropdown mobile"><div id=search-dropdown-mobile></div></div><main class=main><div class=container><div class=toc id=toc-auto><h2 class=toc-title>目录</h2><div class=toc-content id=toc-content-auto></div></div><article class="page single"><h1 class="single-title animated flipInX">主题配置</h1><h2 class=single-subtitle>主题配置-笔记</h2><div class=post-meta><div class=post-meta-line><span class=post-author><a href=http://geekswg.cnblogs.com/ title=Author target=_blank rel="noopener noreffer author" class=author><i class="fas fa-user-circle fa-fw"></i>毕少侠</a></span>&nbsp;<span class=post-category>收录于 <a href=/categories/%E4%B8%BB%E9%A2%98/><i class="far fa-folder fa-fw"></i>主题</a></span></div><div class=post-meta-line><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime=2021-11-14>2021-11-14</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 4895 字&nbsp;
 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 10 分钟&nbsp;<span id=/%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/ class=leancloud_visitors data-flag-title=主题配置>
 <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
-</span>&nbsp;</div>
-</div><div class="details toc" id=toc-static kept>
-<div class="details-summary toc-title">
-<span>目录</span>
-<span><i class="details-icon fas fa-angle-right"></i></span>
-</div>
-<div class="details-content toc-content" id=toc-content-static><nav id=TableOfContents>
-<ul>
-<li><a href=#安装go>安装GO</a></li>
-<li><a href=#安装hugo>安装Hugo</a></li>
-<li><a href=#下载hugo主题loveit>下载Hugo主题LoveIt</a></li>
-<li><a href=#配置主题>配置主题</a></li>
-<li><a href=#上传github-pages>上传GitHub Pages</a></li>
-</ul>
-</nav></div>
-</div><div class=content id=content><h1 id=安装go>安装GO</h1>
-<h1 id=安装hugo>安装Hugo</h1>
-<blockquote>
-<p>windows 下载 <a href=https://github.com/gohugoio/hugo/releases target=_blank rel="noopener noreffer">huto</a> 直接解压
+</span>&nbsp;</div></div><div class="details toc" id=toc-static kept><div class="details-summary toc-title"><span>目录</span>
+<span><i class="details-icon fas fa-angle-right"></i></span></div><div class="details-content toc-content" id=toc-content-static><nav id=TableOfContents><ul><li><a href=#安装go>安装GO</a></li><li><a href=#安装hugo>安装Hugo</a></li><li><a href=#下载hugo主题loveit>下载Hugo主题LoveIt</a></li><li><a href=#配置主题>配置主题</a></li><li><a href=#上传github-pages>上传GitHub Pages</a></li></ul></nav></div></div><div class=content id=content><h1 id=安装go>安装GO</h1><h1 id=安装hugo>安装Hugo</h1><blockquote><p>windows 下载 <a href=https://github.com/gohugoio/hugo/releases target=_blank rel="noopener noreffer">huto</a> 直接解压
 配置环境变量
-测试 在cmd中输入 hugo version 查看 hugo 是否安装完成</p>
-</blockquote>
-<h1 id=下载hugo主题loveit>下载Hugo主题LoveIt</h1>
-<p>在 windows 下</p>
-<div class=highlight><div class=chroma>
-<table class=lntable><tr><td class=lntd>
-<pre tabindex=0 class=chroma><code><span class=lnt>1
+测试 在cmd中输入 hugo version 查看 hugo 是否安装完成</p></blockquote><h1 id=下载hugo主题loveit>下载Hugo主题LoveIt</h1><p>在 windows 下</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
 </span><span class=lnt>2
 </span><span class=lnt>3
-</span></code></pre></td>
-<td class=lntd>
-<pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>hugo new site blog
-cd themes
-git clone 
-</code></pre></td></tr></table>
-</div>
-</div><h1 id=配置主题>配置主题</h1>
-<blockquote>
-<p>在blog根目录下修改 config.toml 文件</p>
-</blockquote>
-<div class=highlight><div class=chroma>
-<table class=lntable><tr><td class=lntd>
-<pre tabindex=0 class=chroma><code><span class=lnt>  1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>hugo new site blog
+</span></span><span class=line><span class=cl>cd themes
+</span></span><span class=line><span class=cl>git clone 
+</span></span></code></pre></td></tr></table></div></div><h1 id=配置主题>配置主题</h1><blockquote><p>在blog根目录下修改 config.toml 文件</p></blockquote><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>  1
 </span><span class=lnt>  2
 </span><span class=lnt>  3
 </span><span class=lnt>  4
@@ -874,815 +756,753 @@ git clone
 </span><span class=lnt>733
 </span><span class=lnt>734
 </span><span class=lnt>735
-</span></code></pre></td>
-<td class=lntd>
-<pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>#baseURL = &#34;https://geekswg.github.io/&#34;
-# [en, zh-cn, fr, pl, ...] determines default content language
-# [en, zh-cn, fr, pl, ...] 设置默认的语言
-defaultContentLanguage = &#34;zh-cn&#34;
-# 网站语言, 仅在这里 CN大写
-languageCode = &#34;zh-CN&#34;
-# 是否包括中日韩文字
-hasCJKLanguage = true
-# 主题
-theme = &#34;LoveIt&#34;
-# 网站标题
-title = &#34;Geekswgの博客 - 在阅读中遇见自己&#34;
-# 是否使用 robots.txt
-enableRobotsTXT = true
-# 是否使用 git 信息
-enableGitInfo = true
-# 是否使用 emoji 代码
-enableEmoji = true
-[languages]
-
-  [languages.zh-cn]
-    weight = 2
-    # 网站语言, 仅在这里 CN 大写
-    languageCode = &#34;zh-CN&#34;
-    # 语言名称
-    languageName = &#34;简体中文&#34;
-    # 是否包括中日韩文字
-    hasCJKLanguage = true
-    # 默认每页列表显示的文章数目
-    paginate = 12
-    # [UA-XXXXXXXX-X] 谷歌分析代号
-    googleAnalytics = &#34;&#34;
-    # 版权描述，仅仅用于 SEO
-    copyright = &#34;This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.&#34;
-    # 菜单配置
-    [languages.zh-cn.menu]
-      [[languages.zh-cn.menu.main]]
-        identifier = &#34;posts&#34;
-        # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
-        pre = &#34;&#34;
-        # 你可以在名称 (允许 HTML 格式) 之后添加其他信息, 例如图标
-        post = &#34;&#34;
-        name = &#34;所有文章&#34;
-        url = &#34;/posts/&#34;
-        title = &#34;&#34;
-        weight = 1
-      [[languages.zh-cn.menu.main]]
-        identifier = &#34;tags&#34;
-        pre = &#34;&#34;
-        post = &#34;&#34;
-        name = &#34;标签&#34;
-        url = &#34;/tags/&#34;
-        title = &#34;&#34;
-        weight = 2
-      [[languages.zh-cn.menu.main]]
-        identifier = &#34;categories&#34;
-        pre = &#34;&#34;
-        post = &#34;&#34;
-        name = &#34;分类&#34;
-        url = &#34;/categories/&#34;
-        title = &#34;&#34;
-        weight = 3
-      [[languages.zh-cn.menu.main]]
-        identifier = &#34;documentation&#34;
-        pre = &#34;&#34;
-        name = &#34;文档&#34;
-        url = &#34;/categories/documentation/&#34;
-        title = &#34;&#34;
-        weight = 4
-      [[languages.zh-cn.menu.main]]
-        identifier = &#34;about&#34;
-        pre = &#34;&#34;
-        post = &#34;&#34;
-        name = &#34;关于&#34;
-        url = &#34;/about/&#34;
-        title = &#34;&#34;
-        weight = 5
-      [[languages.zh-cn.menu.main]]
-        identifier = &#34;github&#34;
-        pre = &#34;&lt;i class=&#39;fab fa-github fa-fw&#39;&gt;&lt;/i&gt;&#34;
-        post = &#34;&#34;
-        name = &#34;Github&#34;
-        url = &#34;https://github.com/geekswg&#34;
-        title = &#34;GitHub&#34;
-        weight = 6
-      [[languages.zh-cn.menu.main]]
-        identifier = &#34;friend&#34;
-        pre = &#34;&lt;i class=&#39;fas fa-user-friends&#39;&gt;&lt;/i&gt;&#34;
-        post = &#34;&#34;
-        name = &#34;友链&#34;
-        url = &#34;/friend/&#34;
-        title = &#34;&#34;
-        weight = 7      
-    [languages.zh-cn.params]
-      # 网站描述
-      description = &#34;早起的年轻人做的网站&#34;
-      # 网站关键词
-      keywords = [&#34;Theme&#34;, &#34;Hugo&#34;,&#34;geekswg&#34;]
-      # 应用图标配置
-      [languages.zh-cn.params.app]
-        # 当添加到 iOS 主屏幕或者 Android 启动器时的标题, 覆盖默认标题
-        title = &#34;LoveIt&#34;
-        # 是否隐藏网站图标资源链接
-        noFavicon = false
-        # 更现代的 SVG 网站图标, 可替代旧的 .png 和 .ico 文件
-        svgFavicon = &#34;/images/avatar.png&#34;
-        # Android 浏览器主题色
-        themeColor = &#34;#ffffff&#34;
-        # Safari 图标颜色
-        iconColor = &#34;#5bbad5&#34;
-        # Windows v8-10 磁贴颜色
-        tileColor = &#34;#da532c&#34;
-      # 搜索配置
-      [languages.zh-cn.params.search]
-        enable = true
-        # 搜索引擎的类型 (&#34;lunr&#34;, &#34;algolia&#34;)
-        type = &#34;algolia&#34;
-        # 文章内容最长索引长度
-        contentLength = 4000
-        # 搜索框的占位提示语
-        placeholder = &#34;&#34;
-        # 最大结果数目
-        maxResultLength = 10
-        # 结果内容片段长度
-        snippetLength = 50
-        # 搜索结果中高亮部分的 HTML 标签
-        highlightTag = &#34;em&#34;
-        # 是否在搜索索引中使用基于 baseURL 的绝对路径
-        absoluteURL = false
-        [languages.zh-cn.params.search.algolia]
-          index = &#34;index.zh-cn&#34;
-          appID = &#34;PASDMWALPK&#34;
-          searchKey = &#34;b42948e51daaa93df92381c8e2ac0f93&#34;
-      # 主页信息设置
-      [languages.zh-cn.params.home]
-        # RSS 文章数目
-        rss = 10
-        # 主页个人信息
-        [languages.zh-cn.params.home.profile]
-          enable = true
-          # Gravatar 邮箱，用于优先在主页显示的头像
-          gravatarEmail = &#34;&#34;
-          # 主页显示头像的 URL
-          avatarURL = &#34;/images/avatar.png&#34;
-          # 主页显示的网站标题 (支持 HTML 格式)
-          title = &#34;&#34;
-          # 主页显示的网站副标题
-          subtitle = &#34;一个记录学习过程的网站&#34;
-          # 是否为副标题显示打字机动画
-          typeit = true
-          # 是否显示社交账号
-          social = true
-          # 免责声明 (支持 HTML 格式)
-          disclaimer = &#34;&#34;
-        # 主页文章列表
-        [languages.zh-cn.params.home.posts]
-          enable = true
-          # 主页每页显示文章数量
-          paginate = 6
-      # 主页的社交信息设置
-      [languages.zh-cn.params.social]
-        Gitee = &#34;geekswg&#34;
-        Email = &#34;geekswg@qq.com&#34;
-        GitHub = &#34;geekswg&#34;
-        Bilibili = &#34;39865904&#34;
-        Zhihu = &#34;&#34;
-        Linkedin = &#34;&#34;
-        Twitter = &#34;&#34;
-        Instagram = &#34;&#34;
-        Facebook = &#34;&#34;
-        Telegram = &#34;&#34;
-        Medium = &#34;&#34;
-        Gitlab = &#34;&#34;
-        Youtubelegacy = &#34;&#34;
-        Youtubecustom = &#34;&#34;
-        Youtubechannel = &#34;&#34;
-        Tumblr = &#34;&#34;
-        Quora = &#34;&#34;
-        Keybase = &#34;&#34;
-        Pinterest = &#34;&#34;
-        Reddit = &#34;&#34;
-        Codepen = &#34;&#34;
-        FreeCodeCamp = &#34;&#34;
-        Bitbucket = &#34;&#34;
-        Stackoverflow = &#34;&#34;
-        # Weibo = &#34;xxxx&#34;
-        Odnoklassniki = &#34;&#34;
-        VK = &#34;&#34;
-        Flickr = &#34;&#34;
-        Xing = &#34;&#34;
-        Snapchat = &#34;&#34;
-        Soundcloud = &#34;&#34;
-        Spotify = &#34;&#34;
-        Bandcamp = &#34;&#34;
-        Paypal = &#34;&#34;
-        Fivehundredpx = &#34;&#34;
-        Mix = &#34;&#34;
-        Goodreads = &#34;&#34;
-        Lastfm = &#34;&#34;
-        Foursquare = &#34;&#34;
-        Hackernews = &#34;&#34;
-        Kickstarter = &#34;&#34;
-        Patreon = &#34;&#34;
-        # Steam = &#34;xxxx&#34;
-        Twitch = &#34;&#34;
-        Strava = &#34;&#34;
-        Skype = &#34;&#34;
-        Whatsapp = &#34;&#34;
-        # Juejin =&#34;user/3843548384077192&#34;
-        # Douban = &#34;xxxx&#34;
-        Angellist = &#34;&#34;
-        Slidershare = &#34;&#34;
-        Jsfiddle = &#34;&#34;
-        Deviantart = &#34;&#34;
-        Behance = &#34;&#34;
-        Dribbble = &#34;&#34;
-        Wordpress = &#34;&#34;
-        Vine = &#34;&#34;
-        Googlescholar = &#34;&#34;
-        Researchgate = &#34;&#34;
-        Mastodon = &#34;&#34;
-        Thingiverse = &#34;&#34;
-        Devto = &#34;&#34;
-        Gitea = &#34;&#34;
-        XMPP = &#34;&#34;
-        Matrix = &#34;&#34;
-        # Email = &#34;852851198@qq.com&#34;
-        # RSS = true
-
-[params]
-  # LoveIt theme version
-  # LoveIt 主题版本
-  version = &#34;0.2.X&#34;
-  # site default theme (&#34;light&#34;, &#34;dark&#34;, &#34;auto&#34;)
-  # 网站默认主题 (&#34;light&#34;, &#34;dark&#34;, &#34;auto&#34;)
-  defaultTheme = &#34;auto&#34;
-  # public git repo url only then enableGitInfo is true
-  # 公共 git 仓库路径，仅在 enableGitInfo 设为 true 时有效
-  gitRepo = &#34;https://github.com/dillonzq/LoveIt&#34;
-  # which hash function used for SRI, when empty, no SRI is used (&#34;sha256&#34;, &#34;sha384&#34;, &#34;sha512&#34;, &#34;md5&#34;)
-  # 哪种哈希函数用来 SRI, 为空时表示不使用 SRI (&#34;sha256&#34;, &#34;sha384&#34;, &#34;sha512&#34;, &#34;md5&#34;)
-  fingerprint = &#34;&#34;
-  # date format
-  # 日期格式
-  dateFormat = &#34;2006-01-02&#34;
-  # website images for Open Graph and Twitter Cards
-  # 网站图片, 用于 Open Graph 和 Twitter Cards
-  images = [&#34;/logo.png&#34;]
-  #来自之前
-  archivePaginate = 50
-
-  # show &#39;xx Posts In Total&#39; in archive page ?            # 是否在归档页显示文章的总数
-  showArchiveCount = true
-  # Header config
-  # 页面头部导航栏配置
-  [params.header]
-    # desktop header mode (&#34;fixed&#34;, &#34;normal&#34;, &#34;auto&#34;)
-    # 桌面端导航栏模式 (&#34;fixed&#34;, &#34;normal&#34;, &#34;auto&#34;)
-    desktopMode = &#34;fixed&#34;
-    # mobile header mode (&#34;fixed&#34;, &#34;normal&#34;, &#34;auto&#34;)
-    # 移动端导航栏模式 (&#34;fixed&#34;, &#34;normal&#34;, &#34;auto&#34;)
-    mobileMode = &#34;auto&#34;
-    # Header title config
-    # 页面头部导航栏标题配置
-    [params.header.title]
-      # URL of the LOGO
-      # LOGO 的 URL
-      logo = &#34;&#34;
-      # title name
-      # 标题名称
-      name = &#34;早起的年轻人&#34;
-      # you can add extra information before the name (HTML format is supported), such as icons
-      # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
-      pre = &#34;&lt;i class=&#39;far fa-kiss-wink-heart fa-fw&#39;&gt;&lt;/i&gt;&#34;
-      # you can add extra information after the name (HTML format is supported), such as icons
-      # 你可以在名称 (允许 HTML 格式) 之后添加其他信息, 例如图标
-      post = &#34;&#34;
-      # whether to use typeit animation for title name
-      # 是否为标题显示打字机动画
-      typeit = true
-
-  [params.busuanzi]         # count web traffic by busuanzi                             # 是否使用不蒜子统计站点访问量
-    enable = true
-    siteUV = true
-    sitePV = true
-    pagePV = true
-
-  [params.reward]                                         # 文章打赏
-    enable = true
-    wechat = &#34;/path/to/your/wechat-qr-code.png&#34;           # 微信二维码
-    alipay = &#34;/path/to/your/alipay-qr-code.png&#34;    
-  # Footer config
-  # 页面底部信息配置
-  [params.footer]
-    enable = true
-    # Custom content (HTML format is supported)
-    # 自定义内容 (支持 HTML 格式)
-    custom = &#39;&#39;
-    # whether to show Hugo and theme info
-    # 是否显示 Hugo 和主题信息
-    hugo = true
-    # whether to show copyright info
-    # 是否显示版权信息
-    copyright = true
-    # whether to show the author
-    # 是否显示作者
-    author = true
-    # site creation time
-    # 网站创立年份
-    since = 2021
-    # ICP info only in China (HTML format is supported)
-    # ICP 备案信息，仅在中国使用 (支持 HTML 格式)
-    icp = &#34;&#34;
-    # license info (HTML format is supported)
-    # 许可协议信息 (支持 HTML 格式)
-    license= &#39;&lt;a rel=&#34;license external nofollow noopener noreffer&#34; href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34;&gt;CC BY-NC 4.0&lt;/a&gt;&#39;
-
-  # Section (all posts) page config
-  # Section (所有文章) 页面配置
-  [params.section]
-    # special amount of posts in each section page
-    # section 页面每页显示文章数量
-    paginate = 20
-    # date format (month and day)
-    # 日期格式 (月和日)
-    dateFormat = &#34;01-02&#34;
-    # amount of RSS pages
-    # RSS 文章数目
-    rss = 10
-
-  # List (category or tag) page config
-  # List (目录或标签) 页面配置
-  [params.list]
-    # special amount of posts in each list page
-    # list 页面每页显示文章数量
-    paginate = 20
-    # date format (month and day)
-    # 日期格式 (月和日)
-    dateFormat = &#34;01-02&#34;
-    # amount of RSS pages
-    # RSS 文章数目
-    rss = 10
-
-  # Page config
-  # 文章页面配置
-  [params.page]
-    # whether to hide a page from home page
-    # 是否在主页隐藏一篇文章
-    hiddenFromHomePage = false
-    # whether to hide a page from search results
-    # 是否在搜索结果中隐藏一篇文章
-    hiddenFromSearch = false
-    # whether to enable twemoji
-    # 是否使用 twemoji
-    twemoji = false
-    # whether to enable lightgallery
-    # 是否使用 lightgallery
-    lightgallery = false
-    # whether to enable the ruby extended syntax
-    # 是否使用 ruby 扩展语法
-    ruby = true
-    # whether to enable the fraction extended syntax
-    # 是否使用 fraction 扩展语法
-    fraction = true
-    # whether to enable the fontawesome extended syntax
-    # 是否使用 fontawesome 扩展语法
-    fontawesome = true
-    # whether to show link to Raw Markdown content of the content
-    # 是否显示原始 Markdown 文档内容的链接
-    linkToMarkdown = true
-    # whether to show the full text content in RSS
-    # 是否在 RSS 中显示全文内容
-    rssFullText = false
-    # Table of the contents config
-    # 目录配置
-    [params.page.toc]
-      # whether to enable the table of the contents
-      # 是否使用目录
-      enable = true
-      # whether to keep the static table of the contents in front of the post
-      # 是否保持使用文章前面的静态目录
-      keepStatic = false
-      # whether to make the table of the contents in the sidebar automatically collapsed
-      # 是否使侧边目录自动折叠展开
-      auto = true
-    # Code config
-    # 代码配置
-    [params.page.code]
-      # whether to show the copy button of the code block
-      # 是否显示代码块的复制按钮
-      copy = true
-      # the maximum number of lines of displayed code by default
-      # 默认展开显示的代码行数
-      maxShownLines = 10
-    # KaTeX mathematical formulas config (KaTeX https://katex.org/)
-    # KaTeX 数学公式配置 (KaTeX https://katex.org/)
-    [params.page.math]
-      enable = true
-      # default block delimiter is $$ ... $$ and \\[ ... \\]
-      # 默认块定界符是 $$ ... $$ 和 \\[ ... \\]
-      blockLeftDelimiter = &#34;&#34;
-      blockRightDelimiter = &#34;&#34;
-      # default inline delimiter is $ ... $ and \\( ... \\)
-      # 默认行内定界符是 $ ... $ 和 \\( ... \\)
-      inlineLeftDelimiter = &#34;&#34;
-      inlineRightDelimiter = &#34;&#34;
-      # KaTeX extension copy_tex
-      # KaTeX 插件 copy_tex
-      copyTex = true
-      # KaTeX extension mhchem
-      # KaTeX 插件 mhchem
-      mhchem = true
-    # Mapbox GL JS config (Mapbox GL JS https://docs.mapbox.com/mapbox-gl-js)
-    # Mapbox GL JS 配置 (Mapbox GL JS https://docs.mapbox.com/mapbox-gl-js)
-    [params.page.mapbox]
-      # access token of Mapbox GL JS
-      # Mapbox GL JS 的 access token
-      accessToken = &#34;pk.eyJ1IjoiZGlsbG9uenEiLCJhIjoiY2s2czd2M2x3MDA0NjNmcGxmcjVrZmc2cyJ9.aSjv2BNuZUfARvxRYjSVZQ&#34;
-      # style for the light theme
-      # 浅色主题的地图样式
-      lightStyle = &#34;mapbox://styles/mapbox/light-v10?optimize=true&#34;
-      # style for the dark theme
-      # 深色主题的地图样式
-      darkStyle = &#34;mapbox://styles/mapbox/dark-v10?optimize=true&#34;
-      # whether to add NavigationControl (https://docs.mapbox.com/mapbox-gl-js/api/#navigationcontrol)
-      # 是否添加 NavigationControl (https://docs.mapbox.com/mapbox-gl-js/api/#navigationcontrol)
-      navigation = true
-      # whether to add GeolocateControl (https://docs.mapbox.com/mapbox-gl-js/api/#geolocatecontrol)
-      # 是否添加 GeolocateControl (https://docs.mapbox.com/mapbox-gl-js/api/#geolocatecontrol)
-      geolocate = true
-      # whether to add ScaleControl (https://docs.mapbox.com/mapbox-gl-js/api/#scalecontrol)
-      # 是否添加 ScaleControl (https://docs.mapbox.com/mapbox-gl-js/api/#scalecontrol)
-      scale = true
-      # whether to add FullscreenControl (https://docs.mapbox.com/mapbox-gl-js/api/#fullscreencontrol)
-      # 是否添加 FullscreenControl (https://docs.mapbox.com/mapbox-gl-js/api/#fullscreencontrol)
-      fullscreen = true
-    # Social share links in post page
-    # 文章页面的分享信息设置
-    [params.page.share]
-      enable = true
-      Twitter = true
-      Facebook = true
-      Linkedin = false
-      Whatsapp = false
-      Pinterest = false
-      Tumblr = false
-      HackerNews = true
-      Reddit = false
-      VK = false
-      Buffer = false
-      Xing = false
-      Line = true
-      Instapaper = false
-      Pocket = false
-      Digg = false
-      Stumbleupon = false
-      Flipboard = false
-      Weibo = true
-      Renren = false
-      Myspace = false
-      Blogger = false
-      Baidu = false
-      Odnoklassniki = false
-      Evernote = false
-      Skype = false
-      Trello = false
-      Mix = false
-    # Comment config
-    # 评论系统设置
-    [params.page.comment]
-      enable = true
-      # Disqus comment config (https://disqus.com/)
-      # Disqus 评论系统设置 (https://disqus.com/)
-      [params.page.comment.disqus]
-        enable = false
-        # Disqus shortname to use Disqus in posts
-        # Disqus 的 shortname，用来在文章中启用 Disqus 评论系统
-        shortname = &#34;&#34;
-      # Gitalk comment config (https://github.com/gitalk/gitalk)
-      # Gitalk 评论系统设置 (https://github.com/gitalk/gitalk)
-      [params.page.comment.gitalk]
-        enable = false
-        owner = &#34;&#34;
-        repo = &#34;&#34;
-        clientId = &#34;&#34;
-        clientSecret = &#34;&#34;
-      # Valine comment config (https://github.com/xCss/Valine)
-      # Valine 评论系统设置 (https://github.com/xCss/Valine)
-      [params.page.comment.valine]
-        enable = true
-        appId = &#39;cIRpq8figzQxyGz5LyAdUahJ-gzGzoHsz&#39;
-        appKey = &#39;T9YWfgGhznKaXXx7TCLxzS3C&#39;
-        notify = true  # mail notifier , https://github.com/xCss/Valine/wiki
-        verify = false # Verification code
-        avatar = &#39;robohash&#39;
-        placeholder = &#39;说点什么吧...&#39;
-        visitor = true
-        path = true
-        meta = true
-        pageSize = true
-        lang = true
-        enableQQ = true
-        # Facebook comment config (https://developers.facebook.com/docs/plugins/comments)
-        # Facebook 评论系统设置 (https://developers.facebook.com/docs/plugins/comments)
-      [params.page.comment.facebook]
-        enable = false
-        width = &#34;100%&#34;
-        numPosts = 10
-        appId = &#34;&#34;
-        languageCode = &#34;&#34;
-      # Telegram comments config (https://comments.app/)
-      # Telegram comments 评论系统设置 (https://comments.app/)
-      [params.page.comment.telegram]
-        enable = false
-        siteID = &#34;&#34;
-        limit = 5
-        height = &#34;&#34;
-        color = &#34;&#34;
-        colorful = true
-        dislikes = false
-        outlined = false
-      # Commento comment config (https://commento.io/)
-      # Commento comment 评论系统设置 (https://commento.io/)
-      [params.page.comment.commento]
-        enable = false
-      # Utterances comment config (https://utteranc.es/)
-      # Utterances comment 评论系统设置 (https://utteranc.es/)
-      [params.page.comment.utterances]
-        enable = false
-        # owner/repo
-        repo = &#34;&#34;
-        issueTerm = &#34;pathname&#34;
-        label = &#34;&#34;
-        lightTheme = &#34;github-light&#34;
-        darkTheme = &#34;github-dark&#34;
-    # Third-party library config
-    # 第三方库配置
-    [params.page.library]
-      [params.page.library.css]
-        # someCSS = &#34;some.css&#34;
-        # located in &#34;assets/&#34; 位于 &#34;assets/&#34;
-        # Or 或者
-        # someCSS = &#34;https://cdn.example.com/some.css&#34;
-      [params.page.library.js]
-        # someJavascript = &#34;some.js&#34;
-        # located in &#34;assets/&#34; 位于 &#34;assets/&#34;
-        # Or 或者
-        # someJavascript = &#34;https://cdn.example.com/some.js&#34;
-    # Page SEO config
-    # 页面 SEO 配置
-    [params.page.seo]
-      # image URL
-      # 图片 URL
-      images = []
-      # Publisher info
-      # 出版者信息
-      [params.page.seo.publisher]
-        name = &#34;xxxx&#34;
-        logoUrl = &#34;/images/avatar.png&#34;
-
-  # TypeIt config
-  # TypeIt 配置
-  [params.typeit]
-    # typing speed between each step (measured in milliseconds)
-    # 每一步的打字速度 (单位是毫秒)
-    speed = 100
-    # blinking speed of the cursor (measured in milliseconds)
-    # 光标的闪烁速度 (单位是毫秒)
-    cursorSpeed = 1000
-    # character used for the cursor (HTML format is supported)
-    # 光标的字符 (支持 HTML 格式)
-    cursorChar = &#34;|&#34;
-    # cursor duration after typing finishing (measured in milliseconds, &#34;-1&#34; means unlimited)
-    # 打字结束之后光标的持续时间 (单位是毫秒, &#34;-1&#34; 代表无限大)
-    duration = -1
-
-  # Site verification code for Google/Bing/Yandex/Pinterest/Baidu
-  # 网站验证代码，用于 Google/Bing/Yandex/Pinterest/Baidu
-  [params.verification]
-    google = &#34;&#34;
-    bing = &#34;&#34;
-    yandex = &#34;&#34;
-    pinterest = &#34;&#34;
-    baidu = &#34;&#34;
-
-  # Site SEO config
-  # 网站 SEO 配置
-  [params.seo]
-    # image URL
-    # 图片 URL
-    image = &#34;/images/Apple-Devices-Preview.png&#34;
-    # thumbnail URL
-    # 缩略图 URL
-    thumbnailUrl = &#34;/images/screenshot.png&#34;
-
-  # Analytics config
-  # 网站分析配置
-  [params.analytics]
-    enable = false
-    # Google Analytics
-    [params.analytics.google]
-      id = &#34;&#34;
-      # whether to anonymize IP
-      # 是否匿名化用户 IP
-      anonymizeIP = true
-    # Fathom Analytics
-    [params.analytics.fathom]
-      id = &#34;&#34;
-      # server url for your tracker if you&#39;re self hosting
-      # 自行托管追踪器时的主机路径
-      server = &#34;&#34;
-
-  # Cookie consent config
-  # Cookie 许可配置
-  [params.cookieconsent]
-    enable = false
-    # text strings used for Cookie consent banner
-    # 用于 Cookie 许可横幅的文本字符串
-    [params.cookieconsent.content]
-      message = &#34;&#34;
-      dismiss = &#34;&#34;
-      link = &#34;&#34;
-
-  # CDN config for third-party library files
-  # 第三方库文件的 CDN 设置
-  [params.cdn]
-    # CDN data file name, disabled by default
-    # (&#34;jsdelivr.yml&#34;)
-    # located in &#34;themes/LoveIt/assets/data/cdn/&#34; directory
-    # you can store your own data files in the same path under your project:
-    # &#34;assets/data/cdn/&#34;
-    # CDN 数据文件名称, 默认不启用
-    # (&#34;jsdelivr.yml&#34;)
-    # 位于 &#34;themes/LoveIt/assets/data/cdn/&#34; 目录
-    # 可以在你的项目下相同路径存放你自己的数据文件:
-    # &#34;assets/data/cdn/&#34;
-    data = &#34;jsdelivr.yml&#34;
-
-  # Compatibility config
-  # 兼容性设置
-  [params.compatibility]
-    # whether to use Polyfill.io to be compatible with older browsers
-    # 是否使用 Polyfill.io 来兼容旧式浏览器
-    polyfill = false
-    # whether to use object-fit-images to be compatible with older browsers
-    # 是否使用 object-fit-images 来兼容旧式浏览器
-    objectFit = false
-
-# Markup related configuration in Hugo
-# Hugo 解析文档的配置
-[markup]
-  # Syntax Highlighting (https://gohugo.io/content-management/syntax-highlighting)
-  # 语法高亮设置 (https://gohugo.io/content-management/syntax-highlighting)
-  [markup.highlight]
-    codeFences = true
-    guessSyntax = true
-    lineNos = true
-    lineNumbersInTable = true
-    # false is a necessary configuration (https://github.com/dillonzq/LoveIt/issues/158)
-    # false 是必要的设置 (https://github.com/dillonzq/LoveIt/issues/158)
-    noClasses = false
-  # Goldmark is from Hugo 0.60 the default library used for Markdown
-  # Goldmark 是 Hugo 0.60 以来的默认 Markdown 解析库
-  [markup.goldmark]
-    [markup.goldmark.extensions]
-      definitionList = true
-      footnote = true
-      linkify = true
-      strikethrough = true
-      table = true
-      taskList = true
-      typographer = true
-    [markup.goldmark.renderer]
-      # whether to use HTML tags directly in the document
-      # 是否在文档中直接使用 HTML 标签
-      unsafe = true
-  # Table Of Contents settings
-  # 目录设置
-  [markup.tableOfContents]
-    startLevel = 1
-    endLevel = 6
-
-# Author config
-# 作者配置
-[author]
-  name = &#34;早起的年轻人&#34;
-  email = &#34;geekswg@qq.com&#34;
-  link = &#34;&#34;
-
-# Sitemap config
-# 网站地图配置
-[sitemap]
-  changefreq = &#34;weekly&#34;
-  filename = &#34;sitemap.xml&#34;
-  priority = 0.5
-
-# Permalinks config (https://gohugo.io/content-management/urls/#permalinks)
-# Permalinks 配置 (https://gohugo.io/content-management/urls/#permalinks)
-[Permalinks]
-  # posts = &#34;:year/:month/:filename&#34;
-  posts = &#34;:filename&#34;
-
-# Privacy config (https://gohugo.io/about/hugo-and-gdpr/)
-# 隐私信息配置 (https://gohugo.io/about/hugo-and-gdpr/)
-[privacy]
-  # privacy of the Google Analytics (replaced by params.analytics.google)
-  # Google Analytics 相关隐私 (被 params.analytics.google 替代)
-  [privacy.googleAnalytics]
-    # ...
-  [privacy.twitter]
-    enableDNT = true
-  [privacy.youtube]
-    privacyEnhanced = true
-
-# Options to make output .md files
-# 用于输出 Markdown 格式文档的设置
-# [mediaTypes]
-#   [mediaTypes.&#34;text/plain&#34;]
-#     suffixes = [&#34;md&#34;]
-
-# # Options to make output .md files
-# # 用于输出 Markdown 格式文档的设置
-# [outputFormats.MarkDown]
-#   mediaType = &#34;text/plain&#34;
-#   isPlainText = false
-#   isHTML = true
-
-# # Options to make hugo output files
-# # 用于 Hugo 输出文档的设置
-# [outputs]
-#   home = [&#34;HTML&#34;, &#34;RSS&#34;, &#34;JSON&#34;]
-#   page = [&#34;HTML&#34;, &#34;MarkDown&#34;]
-#   section = [&#34;HTML&#34;, &#34;RSS&#34;]
-#   taxonomy = [&#34;HTML&#34;, &#34;RSS&#34;]
-#   taxonomyTerm = [&#34;HTML&#34;]
-</code></pre></td></tr></table>
-</div>
-</div><h1 id=上传github-pages>上传GitHub Pages</h1>
-<blockquote>
-<p>在vscode 终端上 输入 hugo 后回车，会编译public文件下面<br>
-按照以下命令 将public目录下所有文件上传到github</p>
-</blockquote>
-<div class=highlight><div class=chroma>
-<table class=lntable><tr><td class=lntd>
-<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>#baseURL = &#34;https://geekswg.github.io/&#34;
+</span></span><span class=line><span class=cl># [en, zh-cn, fr, pl, ...] determines default content language
+</span></span><span class=line><span class=cl># [en, zh-cn, fr, pl, ...] 设置默认的语言
+</span></span><span class=line><span class=cl>defaultContentLanguage = &#34;zh-cn&#34;
+</span></span><span class=line><span class=cl># 网站语言, 仅在这里 CN大写
+</span></span><span class=line><span class=cl>languageCode = &#34;zh-CN&#34;
+</span></span><span class=line><span class=cl># 是否包括中日韩文字
+</span></span><span class=line><span class=cl>hasCJKLanguage = true
+</span></span><span class=line><span class=cl># 主题
+</span></span><span class=line><span class=cl>theme = &#34;LoveIt&#34;
+</span></span><span class=line><span class=cl># 网站标题
+</span></span><span class=line><span class=cl>title = &#34;Geekswgの博客 - 在阅读中遇见自己&#34;
+</span></span><span class=line><span class=cl># 是否使用 robots.txt
+</span></span><span class=line><span class=cl>enableRobotsTXT = true
+</span></span><span class=line><span class=cl># 是否使用 git 信息
+</span></span><span class=line><span class=cl>enableGitInfo = true
+</span></span><span class=line><span class=cl># 是否使用 emoji 代码
+</span></span><span class=line><span class=cl>enableEmoji = true
+</span></span><span class=line><span class=cl>[languages]
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  [languages.zh-cn]
+</span></span><span class=line><span class=cl>    weight = 2
+</span></span><span class=line><span class=cl>    # 网站语言, 仅在这里 CN 大写
+</span></span><span class=line><span class=cl>    languageCode = &#34;zh-CN&#34;
+</span></span><span class=line><span class=cl>    # 语言名称
+</span></span><span class=line><span class=cl>    languageName = &#34;简体中文&#34;
+</span></span><span class=line><span class=cl>    # 是否包括中日韩文字
+</span></span><span class=line><span class=cl>    hasCJKLanguage = true
+</span></span><span class=line><span class=cl>    # 默认每页列表显示的文章数目
+</span></span><span class=line><span class=cl>    paginate = 12
+</span></span><span class=line><span class=cl>    # [UA-XXXXXXXX-X] 谷歌分析代号
+</span></span><span class=line><span class=cl>    googleAnalytics = &#34;&#34;
+</span></span><span class=line><span class=cl>    # 版权描述，仅仅用于 SEO
+</span></span><span class=line><span class=cl>    copyright = &#34;This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.&#34;
+</span></span><span class=line><span class=cl>    # 菜单配置
+</span></span><span class=line><span class=cl>    [languages.zh-cn.menu]
+</span></span><span class=line><span class=cl>      [[languages.zh-cn.menu.main]]
+</span></span><span class=line><span class=cl>        identifier = &#34;posts&#34;
+</span></span><span class=line><span class=cl>        # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
+</span></span><span class=line><span class=cl>        pre = &#34;&#34;
+</span></span><span class=line><span class=cl>        # 你可以在名称 (允许 HTML 格式) 之后添加其他信息, 例如图标
+</span></span><span class=line><span class=cl>        post = &#34;&#34;
+</span></span><span class=line><span class=cl>        name = &#34;所有文章&#34;
+</span></span><span class=line><span class=cl>        url = &#34;/posts/&#34;
+</span></span><span class=line><span class=cl>        title = &#34;&#34;
+</span></span><span class=line><span class=cl>        weight = 1
+</span></span><span class=line><span class=cl>      [[languages.zh-cn.menu.main]]
+</span></span><span class=line><span class=cl>        identifier = &#34;tags&#34;
+</span></span><span class=line><span class=cl>        pre = &#34;&#34;
+</span></span><span class=line><span class=cl>        post = &#34;&#34;
+</span></span><span class=line><span class=cl>        name = &#34;标签&#34;
+</span></span><span class=line><span class=cl>        url = &#34;/tags/&#34;
+</span></span><span class=line><span class=cl>        title = &#34;&#34;
+</span></span><span class=line><span class=cl>        weight = 2
+</span></span><span class=line><span class=cl>      [[languages.zh-cn.menu.main]]
+</span></span><span class=line><span class=cl>        identifier = &#34;categories&#34;
+</span></span><span class=line><span class=cl>        pre = &#34;&#34;
+</span></span><span class=line><span class=cl>        post = &#34;&#34;
+</span></span><span class=line><span class=cl>        name = &#34;分类&#34;
+</span></span><span class=line><span class=cl>        url = &#34;/categories/&#34;
+</span></span><span class=line><span class=cl>        title = &#34;&#34;
+</span></span><span class=line><span class=cl>        weight = 3
+</span></span><span class=line><span class=cl>      [[languages.zh-cn.menu.main]]
+</span></span><span class=line><span class=cl>        identifier = &#34;documentation&#34;
+</span></span><span class=line><span class=cl>        pre = &#34;&#34;
+</span></span><span class=line><span class=cl>        name = &#34;文档&#34;
+</span></span><span class=line><span class=cl>        url = &#34;/categories/documentation/&#34;
+</span></span><span class=line><span class=cl>        title = &#34;&#34;
+</span></span><span class=line><span class=cl>        weight = 4
+</span></span><span class=line><span class=cl>      [[languages.zh-cn.menu.main]]
+</span></span><span class=line><span class=cl>        identifier = &#34;about&#34;
+</span></span><span class=line><span class=cl>        pre = &#34;&#34;
+</span></span><span class=line><span class=cl>        post = &#34;&#34;
+</span></span><span class=line><span class=cl>        name = &#34;关于&#34;
+</span></span><span class=line><span class=cl>        url = &#34;/about/&#34;
+</span></span><span class=line><span class=cl>        title = &#34;&#34;
+</span></span><span class=line><span class=cl>        weight = 5
+</span></span><span class=line><span class=cl>      [[languages.zh-cn.menu.main]]
+</span></span><span class=line><span class=cl>        identifier = &#34;github&#34;
+</span></span><span class=line><span class=cl>        pre = &#34;&lt;i class=&#39;fab fa-github fa-fw&#39;&gt;&lt;/i&gt;&#34;
+</span></span><span class=line><span class=cl>        post = &#34;&#34;
+</span></span><span class=line><span class=cl>        name = &#34;Github&#34;
+</span></span><span class=line><span class=cl>        url = &#34;https://github.com/geekswg&#34;
+</span></span><span class=line><span class=cl>        title = &#34;GitHub&#34;
+</span></span><span class=line><span class=cl>        weight = 6
+</span></span><span class=line><span class=cl>      [[languages.zh-cn.menu.main]]
+</span></span><span class=line><span class=cl>        identifier = &#34;friend&#34;
+</span></span><span class=line><span class=cl>        pre = &#34;&lt;i class=&#39;fas fa-user-friends&#39;&gt;&lt;/i&gt;&#34;
+</span></span><span class=line><span class=cl>        post = &#34;&#34;
+</span></span><span class=line><span class=cl>        name = &#34;友链&#34;
+</span></span><span class=line><span class=cl>        url = &#34;/friend/&#34;
+</span></span><span class=line><span class=cl>        title = &#34;&#34;
+</span></span><span class=line><span class=cl>        weight = 7      
+</span></span><span class=line><span class=cl>    [languages.zh-cn.params]
+</span></span><span class=line><span class=cl>      # 网站描述
+</span></span><span class=line><span class=cl>      description = &#34;早起的年轻人做的网站&#34;
+</span></span><span class=line><span class=cl>      # 网站关键词
+</span></span><span class=line><span class=cl>      keywords = [&#34;Theme&#34;, &#34;Hugo&#34;,&#34;geekswg&#34;]
+</span></span><span class=line><span class=cl>      # 应用图标配置
+</span></span><span class=line><span class=cl>      [languages.zh-cn.params.app]
+</span></span><span class=line><span class=cl>        # 当添加到 iOS 主屏幕或者 Android 启动器时的标题, 覆盖默认标题
+</span></span><span class=line><span class=cl>        title = &#34;LoveIt&#34;
+</span></span><span class=line><span class=cl>        # 是否隐藏网站图标资源链接
+</span></span><span class=line><span class=cl>        noFavicon = false
+</span></span><span class=line><span class=cl>        # 更现代的 SVG 网站图标, 可替代旧的 .png 和 .ico 文件
+</span></span><span class=line><span class=cl>        svgFavicon = &#34;/images/avatar.png&#34;
+</span></span><span class=line><span class=cl>        # Android 浏览器主题色
+</span></span><span class=line><span class=cl>        themeColor = &#34;#ffffff&#34;
+</span></span><span class=line><span class=cl>        # Safari 图标颜色
+</span></span><span class=line><span class=cl>        iconColor = &#34;#5bbad5&#34;
+</span></span><span class=line><span class=cl>        # Windows v8-10 磁贴颜色
+</span></span><span class=line><span class=cl>        tileColor = &#34;#da532c&#34;
+</span></span><span class=line><span class=cl>      # 搜索配置
+</span></span><span class=line><span class=cl>      [languages.zh-cn.params.search]
+</span></span><span class=line><span class=cl>        enable = true
+</span></span><span class=line><span class=cl>        # 搜索引擎的类型 (&#34;lunr&#34;, &#34;algolia&#34;)
+</span></span><span class=line><span class=cl>        type = &#34;algolia&#34;
+</span></span><span class=line><span class=cl>        # 文章内容最长索引长度
+</span></span><span class=line><span class=cl>        contentLength = 4000
+</span></span><span class=line><span class=cl>        # 搜索框的占位提示语
+</span></span><span class=line><span class=cl>        placeholder = &#34;&#34;
+</span></span><span class=line><span class=cl>        # 最大结果数目
+</span></span><span class=line><span class=cl>        maxResultLength = 10
+</span></span><span class=line><span class=cl>        # 结果内容片段长度
+</span></span><span class=line><span class=cl>        snippetLength = 50
+</span></span><span class=line><span class=cl>        # 搜索结果中高亮部分的 HTML 标签
+</span></span><span class=line><span class=cl>        highlightTag = &#34;em&#34;
+</span></span><span class=line><span class=cl>        # 是否在搜索索引中使用基于 baseURL 的绝对路径
+</span></span><span class=line><span class=cl>        absoluteURL = false
+</span></span><span class=line><span class=cl>        [languages.zh-cn.params.search.algolia]
+</span></span><span class=line><span class=cl>          index = &#34;index.zh-cn&#34;
+</span></span><span class=line><span class=cl>          appID = &#34;PASDMWALPK&#34;
+</span></span><span class=line><span class=cl>          searchKey = &#34;b42948e51daaa93df92381c8e2ac0f93&#34;
+</span></span><span class=line><span class=cl>      # 主页信息设置
+</span></span><span class=line><span class=cl>      [languages.zh-cn.params.home]
+</span></span><span class=line><span class=cl>        # RSS 文章数目
+</span></span><span class=line><span class=cl>        rss = 10
+</span></span><span class=line><span class=cl>        # 主页个人信息
+</span></span><span class=line><span class=cl>        [languages.zh-cn.params.home.profile]
+</span></span><span class=line><span class=cl>          enable = true
+</span></span><span class=line><span class=cl>          # Gravatar 邮箱，用于优先在主页显示的头像
+</span></span><span class=line><span class=cl>          gravatarEmail = &#34;&#34;
+</span></span><span class=line><span class=cl>          # 主页显示头像的 URL
+</span></span><span class=line><span class=cl>          avatarURL = &#34;/images/avatar.png&#34;
+</span></span><span class=line><span class=cl>          # 主页显示的网站标题 (支持 HTML 格式)
+</span></span><span class=line><span class=cl>          title = &#34;&#34;
+</span></span><span class=line><span class=cl>          # 主页显示的网站副标题
+</span></span><span class=line><span class=cl>          subtitle = &#34;一个记录学习过程的网站&#34;
+</span></span><span class=line><span class=cl>          # 是否为副标题显示打字机动画
+</span></span><span class=line><span class=cl>          typeit = true
+</span></span><span class=line><span class=cl>          # 是否显示社交账号
+</span></span><span class=line><span class=cl>          social = true
+</span></span><span class=line><span class=cl>          # 免责声明 (支持 HTML 格式)
+</span></span><span class=line><span class=cl>          disclaimer = &#34;&#34;
+</span></span><span class=line><span class=cl>        # 主页文章列表
+</span></span><span class=line><span class=cl>        [languages.zh-cn.params.home.posts]
+</span></span><span class=line><span class=cl>          enable = true
+</span></span><span class=line><span class=cl>          # 主页每页显示文章数量
+</span></span><span class=line><span class=cl>          paginate = 6
+</span></span><span class=line><span class=cl>      # 主页的社交信息设置
+</span></span><span class=line><span class=cl>      [languages.zh-cn.params.social]
+</span></span><span class=line><span class=cl>        Gitee = &#34;geekswg&#34;
+</span></span><span class=line><span class=cl>        Email = &#34;geekswg@qq.com&#34;
+</span></span><span class=line><span class=cl>        GitHub = &#34;geekswg&#34;
+</span></span><span class=line><span class=cl>        Bilibili = &#34;39865904&#34;
+</span></span><span class=line><span class=cl>        Zhihu = &#34;&#34;
+</span></span><span class=line><span class=cl>        Linkedin = &#34;&#34;
+</span></span><span class=line><span class=cl>        Twitter = &#34;&#34;
+</span></span><span class=line><span class=cl>        Instagram = &#34;&#34;
+</span></span><span class=line><span class=cl>        Facebook = &#34;&#34;
+</span></span><span class=line><span class=cl>        Telegram = &#34;&#34;
+</span></span><span class=line><span class=cl>        Medium = &#34;&#34;
+</span></span><span class=line><span class=cl>        Gitlab = &#34;&#34;
+</span></span><span class=line><span class=cl>        Youtubelegacy = &#34;&#34;
+</span></span><span class=line><span class=cl>        Youtubecustom = &#34;&#34;
+</span></span><span class=line><span class=cl>        Youtubechannel = &#34;&#34;
+</span></span><span class=line><span class=cl>        Tumblr = &#34;&#34;
+</span></span><span class=line><span class=cl>        Quora = &#34;&#34;
+</span></span><span class=line><span class=cl>        Keybase = &#34;&#34;
+</span></span><span class=line><span class=cl>        Pinterest = &#34;&#34;
+</span></span><span class=line><span class=cl>        Reddit = &#34;&#34;
+</span></span><span class=line><span class=cl>        Codepen = &#34;&#34;
+</span></span><span class=line><span class=cl>        FreeCodeCamp = &#34;&#34;
+</span></span><span class=line><span class=cl>        Bitbucket = &#34;&#34;
+</span></span><span class=line><span class=cl>        Stackoverflow = &#34;&#34;
+</span></span><span class=line><span class=cl>        # Weibo = &#34;xxxx&#34;
+</span></span><span class=line><span class=cl>        Odnoklassniki = &#34;&#34;
+</span></span><span class=line><span class=cl>        VK = &#34;&#34;
+</span></span><span class=line><span class=cl>        Flickr = &#34;&#34;
+</span></span><span class=line><span class=cl>        Xing = &#34;&#34;
+</span></span><span class=line><span class=cl>        Snapchat = &#34;&#34;
+</span></span><span class=line><span class=cl>        Soundcloud = &#34;&#34;
+</span></span><span class=line><span class=cl>        Spotify = &#34;&#34;
+</span></span><span class=line><span class=cl>        Bandcamp = &#34;&#34;
+</span></span><span class=line><span class=cl>        Paypal = &#34;&#34;
+</span></span><span class=line><span class=cl>        Fivehundredpx = &#34;&#34;
+</span></span><span class=line><span class=cl>        Mix = &#34;&#34;
+</span></span><span class=line><span class=cl>        Goodreads = &#34;&#34;
+</span></span><span class=line><span class=cl>        Lastfm = &#34;&#34;
+</span></span><span class=line><span class=cl>        Foursquare = &#34;&#34;
+</span></span><span class=line><span class=cl>        Hackernews = &#34;&#34;
+</span></span><span class=line><span class=cl>        Kickstarter = &#34;&#34;
+</span></span><span class=line><span class=cl>        Patreon = &#34;&#34;
+</span></span><span class=line><span class=cl>        # Steam = &#34;xxxx&#34;
+</span></span><span class=line><span class=cl>        Twitch = &#34;&#34;
+</span></span><span class=line><span class=cl>        Strava = &#34;&#34;
+</span></span><span class=line><span class=cl>        Skype = &#34;&#34;
+</span></span><span class=line><span class=cl>        Whatsapp = &#34;&#34;
+</span></span><span class=line><span class=cl>        # Juejin =&#34;user/3843548384077192&#34;
+</span></span><span class=line><span class=cl>        # Douban = &#34;xxxx&#34;
+</span></span><span class=line><span class=cl>        Angellist = &#34;&#34;
+</span></span><span class=line><span class=cl>        Slidershare = &#34;&#34;
+</span></span><span class=line><span class=cl>        Jsfiddle = &#34;&#34;
+</span></span><span class=line><span class=cl>        Deviantart = &#34;&#34;
+</span></span><span class=line><span class=cl>        Behance = &#34;&#34;
+</span></span><span class=line><span class=cl>        Dribbble = &#34;&#34;
+</span></span><span class=line><span class=cl>        Wordpress = &#34;&#34;
+</span></span><span class=line><span class=cl>        Vine = &#34;&#34;
+</span></span><span class=line><span class=cl>        Googlescholar = &#34;&#34;
+</span></span><span class=line><span class=cl>        Researchgate = &#34;&#34;
+</span></span><span class=line><span class=cl>        Mastodon = &#34;&#34;
+</span></span><span class=line><span class=cl>        Thingiverse = &#34;&#34;
+</span></span><span class=line><span class=cl>        Devto = &#34;&#34;
+</span></span><span class=line><span class=cl>        Gitea = &#34;&#34;
+</span></span><span class=line><span class=cl>        XMPP = &#34;&#34;
+</span></span><span class=line><span class=cl>        Matrix = &#34;&#34;
+</span></span><span class=line><span class=cl>        # Email = &#34;852851198@qq.com&#34;
+</span></span><span class=line><span class=cl>        # RSS = true
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>[params]
+</span></span><span class=line><span class=cl>  # LoveIt theme version
+</span></span><span class=line><span class=cl>  # LoveIt 主题版本
+</span></span><span class=line><span class=cl>  version = &#34;0.2.X&#34;
+</span></span><span class=line><span class=cl>  # site default theme (&#34;light&#34;, &#34;dark&#34;, &#34;auto&#34;)
+</span></span><span class=line><span class=cl>  # 网站默认主题 (&#34;light&#34;, &#34;dark&#34;, &#34;auto&#34;)
+</span></span><span class=line><span class=cl>  defaultTheme = &#34;auto&#34;
+</span></span><span class=line><span class=cl>  # public git repo url only then enableGitInfo is true
+</span></span><span class=line><span class=cl>  # 公共 git 仓库路径，仅在 enableGitInfo 设为 true 时有效
+</span></span><span class=line><span class=cl>  gitRepo = &#34;https://github.com/dillonzq/LoveIt&#34;
+</span></span><span class=line><span class=cl>  # which hash function used for SRI, when empty, no SRI is used (&#34;sha256&#34;, &#34;sha384&#34;, &#34;sha512&#34;, &#34;md5&#34;)
+</span></span><span class=line><span class=cl>  # 哪种哈希函数用来 SRI, 为空时表示不使用 SRI (&#34;sha256&#34;, &#34;sha384&#34;, &#34;sha512&#34;, &#34;md5&#34;)
+</span></span><span class=line><span class=cl>  fingerprint = &#34;&#34;
+</span></span><span class=line><span class=cl>  # date format
+</span></span><span class=line><span class=cl>  # 日期格式
+</span></span><span class=line><span class=cl>  dateFormat = &#34;2006-01-02&#34;
+</span></span><span class=line><span class=cl>  # website images for Open Graph and Twitter Cards
+</span></span><span class=line><span class=cl>  # 网站图片, 用于 Open Graph 和 Twitter Cards
+</span></span><span class=line><span class=cl>  images = [&#34;/logo.png&#34;]
+</span></span><span class=line><span class=cl>  #来自之前
+</span></span><span class=line><span class=cl>  archivePaginate = 50
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  # show &#39;xx Posts In Total&#39; in archive page ?            # 是否在归档页显示文章的总数
+</span></span><span class=line><span class=cl>  showArchiveCount = true
+</span></span><span class=line><span class=cl>  # Header config
+</span></span><span class=line><span class=cl>  # 页面头部导航栏配置
+</span></span><span class=line><span class=cl>  [params.header]
+</span></span><span class=line><span class=cl>    # desktop header mode (&#34;fixed&#34;, &#34;normal&#34;, &#34;auto&#34;)
+</span></span><span class=line><span class=cl>    # 桌面端导航栏模式 (&#34;fixed&#34;, &#34;normal&#34;, &#34;auto&#34;)
+</span></span><span class=line><span class=cl>    desktopMode = &#34;fixed&#34;
+</span></span><span class=line><span class=cl>    # mobile header mode (&#34;fixed&#34;, &#34;normal&#34;, &#34;auto&#34;)
+</span></span><span class=line><span class=cl>    # 移动端导航栏模式 (&#34;fixed&#34;, &#34;normal&#34;, &#34;auto&#34;)
+</span></span><span class=line><span class=cl>    mobileMode = &#34;auto&#34;
+</span></span><span class=line><span class=cl>    # Header title config
+</span></span><span class=line><span class=cl>    # 页面头部导航栏标题配置
+</span></span><span class=line><span class=cl>    [params.header.title]
+</span></span><span class=line><span class=cl>      # URL of the LOGO
+</span></span><span class=line><span class=cl>      # LOGO 的 URL
+</span></span><span class=line><span class=cl>      logo = &#34;&#34;
+</span></span><span class=line><span class=cl>      # title name
+</span></span><span class=line><span class=cl>      # 标题名称
+</span></span><span class=line><span class=cl>      name = &#34;早起的年轻人&#34;
+</span></span><span class=line><span class=cl>      # you can add extra information before the name (HTML format is supported), such as icons
+</span></span><span class=line><span class=cl>      # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
+</span></span><span class=line><span class=cl>      pre = &#34;&lt;i class=&#39;far fa-kiss-wink-heart fa-fw&#39;&gt;&lt;/i&gt;&#34;
+</span></span><span class=line><span class=cl>      # you can add extra information after the name (HTML format is supported), such as icons
+</span></span><span class=line><span class=cl>      # 你可以在名称 (允许 HTML 格式) 之后添加其他信息, 例如图标
+</span></span><span class=line><span class=cl>      post = &#34;&#34;
+</span></span><span class=line><span class=cl>      # whether to use typeit animation for title name
+</span></span><span class=line><span class=cl>      # 是否为标题显示打字机动画
+</span></span><span class=line><span class=cl>      typeit = true
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  [params.busuanzi]         # count web traffic by busuanzi                             # 是否使用不蒜子统计站点访问量
+</span></span><span class=line><span class=cl>    enable = true
+</span></span><span class=line><span class=cl>    siteUV = true
+</span></span><span class=line><span class=cl>    sitePV = true
+</span></span><span class=line><span class=cl>    pagePV = true
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  [params.reward]                                         # 文章打赏
+</span></span><span class=line><span class=cl>    enable = true
+</span></span><span class=line><span class=cl>    wechat = &#34;/path/to/your/wechat-qr-code.png&#34;           # 微信二维码
+</span></span><span class=line><span class=cl>    alipay = &#34;/path/to/your/alipay-qr-code.png&#34;    
+</span></span><span class=line><span class=cl>  # Footer config
+</span></span><span class=line><span class=cl>  # 页面底部信息配置
+</span></span><span class=line><span class=cl>  [params.footer]
+</span></span><span class=line><span class=cl>    enable = true
+</span></span><span class=line><span class=cl>    # Custom content (HTML format is supported)
+</span></span><span class=line><span class=cl>    # 自定义内容 (支持 HTML 格式)
+</span></span><span class=line><span class=cl>    custom = &#39;&#39;
+</span></span><span class=line><span class=cl>    # whether to show Hugo and theme info
+</span></span><span class=line><span class=cl>    # 是否显示 Hugo 和主题信息
+</span></span><span class=line><span class=cl>    hugo = true
+</span></span><span class=line><span class=cl>    # whether to show copyright info
+</span></span><span class=line><span class=cl>    # 是否显示版权信息
+</span></span><span class=line><span class=cl>    copyright = true
+</span></span><span class=line><span class=cl>    # whether to show the author
+</span></span><span class=line><span class=cl>    # 是否显示作者
+</span></span><span class=line><span class=cl>    author = true
+</span></span><span class=line><span class=cl>    # site creation time
+</span></span><span class=line><span class=cl>    # 网站创立年份
+</span></span><span class=line><span class=cl>    since = 2021
+</span></span><span class=line><span class=cl>    # ICP info only in China (HTML format is supported)
+</span></span><span class=line><span class=cl>    # ICP 备案信息，仅在中国使用 (支持 HTML 格式)
+</span></span><span class=line><span class=cl>    icp = &#34;&#34;
+</span></span><span class=line><span class=cl>    # license info (HTML format is supported)
+</span></span><span class=line><span class=cl>    # 许可协议信息 (支持 HTML 格式)
+</span></span><span class=line><span class=cl>    license= &#39;&lt;a rel=&#34;license external nofollow noopener noreffer&#34; href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34;&gt;CC BY-NC 4.0&lt;/a&gt;&#39;
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  # Section (all posts) page config
+</span></span><span class=line><span class=cl>  # Section (所有文章) 页面配置
+</span></span><span class=line><span class=cl>  [params.section]
+</span></span><span class=line><span class=cl>    # special amount of posts in each section page
+</span></span><span class=line><span class=cl>    # section 页面每页显示文章数量
+</span></span><span class=line><span class=cl>    paginate = 20
+</span></span><span class=line><span class=cl>    # date format (month and day)
+</span></span><span class=line><span class=cl>    # 日期格式 (月和日)
+</span></span><span class=line><span class=cl>    dateFormat = &#34;01-02&#34;
+</span></span><span class=line><span class=cl>    # amount of RSS pages
+</span></span><span class=line><span class=cl>    # RSS 文章数目
+</span></span><span class=line><span class=cl>    rss = 10
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  # List (category or tag) page config
+</span></span><span class=line><span class=cl>  # List (目录或标签) 页面配置
+</span></span><span class=line><span class=cl>  [params.list]
+</span></span><span class=line><span class=cl>    # special amount of posts in each list page
+</span></span><span class=line><span class=cl>    # list 页面每页显示文章数量
+</span></span><span class=line><span class=cl>    paginate = 20
+</span></span><span class=line><span class=cl>    # date format (month and day)
+</span></span><span class=line><span class=cl>    # 日期格式 (月和日)
+</span></span><span class=line><span class=cl>    dateFormat = &#34;01-02&#34;
+</span></span><span class=line><span class=cl>    # amount of RSS pages
+</span></span><span class=line><span class=cl>    # RSS 文章数目
+</span></span><span class=line><span class=cl>    rss = 10
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  # Page config
+</span></span><span class=line><span class=cl>  # 文章页面配置
+</span></span><span class=line><span class=cl>  [params.page]
+</span></span><span class=line><span class=cl>    # whether to hide a page from home page
+</span></span><span class=line><span class=cl>    # 是否在主页隐藏一篇文章
+</span></span><span class=line><span class=cl>    hiddenFromHomePage = false
+</span></span><span class=line><span class=cl>    # whether to hide a page from search results
+</span></span><span class=line><span class=cl>    # 是否在搜索结果中隐藏一篇文章
+</span></span><span class=line><span class=cl>    hiddenFromSearch = false
+</span></span><span class=line><span class=cl>    # whether to enable twemoji
+</span></span><span class=line><span class=cl>    # 是否使用 twemoji
+</span></span><span class=line><span class=cl>    twemoji = false
+</span></span><span class=line><span class=cl>    # whether to enable lightgallery
+</span></span><span class=line><span class=cl>    # 是否使用 lightgallery
+</span></span><span class=line><span class=cl>    lightgallery = false
+</span></span><span class=line><span class=cl>    # whether to enable the ruby extended syntax
+</span></span><span class=line><span class=cl>    # 是否使用 ruby 扩展语法
+</span></span><span class=line><span class=cl>    ruby = true
+</span></span><span class=line><span class=cl>    # whether to enable the fraction extended syntax
+</span></span><span class=line><span class=cl>    # 是否使用 fraction 扩展语法
+</span></span><span class=line><span class=cl>    fraction = true
+</span></span><span class=line><span class=cl>    # whether to enable the fontawesome extended syntax
+</span></span><span class=line><span class=cl>    # 是否使用 fontawesome 扩展语法
+</span></span><span class=line><span class=cl>    fontawesome = true
+</span></span><span class=line><span class=cl>    # whether to show link to Raw Markdown content of the content
+</span></span><span class=line><span class=cl>    # 是否显示原始 Markdown 文档内容的链接
+</span></span><span class=line><span class=cl>    linkToMarkdown = true
+</span></span><span class=line><span class=cl>    # whether to show the full text content in RSS
+</span></span><span class=line><span class=cl>    # 是否在 RSS 中显示全文内容
+</span></span><span class=line><span class=cl>    rssFullText = false
+</span></span><span class=line><span class=cl>    # Table of the contents config
+</span></span><span class=line><span class=cl>    # 目录配置
+</span></span><span class=line><span class=cl>    [params.page.toc]
+</span></span><span class=line><span class=cl>      # whether to enable the table of the contents
+</span></span><span class=line><span class=cl>      # 是否使用目录
+</span></span><span class=line><span class=cl>      enable = true
+</span></span><span class=line><span class=cl>      # whether to keep the static table of the contents in front of the post
+</span></span><span class=line><span class=cl>      # 是否保持使用文章前面的静态目录
+</span></span><span class=line><span class=cl>      keepStatic = false
+</span></span><span class=line><span class=cl>      # whether to make the table of the contents in the sidebar automatically collapsed
+</span></span><span class=line><span class=cl>      # 是否使侧边目录自动折叠展开
+</span></span><span class=line><span class=cl>      auto = true
+</span></span><span class=line><span class=cl>    # Code config
+</span></span><span class=line><span class=cl>    # 代码配置
+</span></span><span class=line><span class=cl>    [params.page.code]
+</span></span><span class=line><span class=cl>      # whether to show the copy button of the code block
+</span></span><span class=line><span class=cl>      # 是否显示代码块的复制按钮
+</span></span><span class=line><span class=cl>      copy = true
+</span></span><span class=line><span class=cl>      # the maximum number of lines of displayed code by default
+</span></span><span class=line><span class=cl>      # 默认展开显示的代码行数
+</span></span><span class=line><span class=cl>      maxShownLines = 10
+</span></span><span class=line><span class=cl>    # KaTeX mathematical formulas config (KaTeX https://katex.org/)
+</span></span><span class=line><span class=cl>    # KaTeX 数学公式配置 (KaTeX https://katex.org/)
+</span></span><span class=line><span class=cl>    [params.page.math]
+</span></span><span class=line><span class=cl>      enable = true
+</span></span><span class=line><span class=cl>      # default block delimiter is $$ ... $$ and \\[ ... \\]
+</span></span><span class=line><span class=cl>      # 默认块定界符是 $$ ... $$ 和 \\[ ... \\]
+</span></span><span class=line><span class=cl>      blockLeftDelimiter = &#34;&#34;
+</span></span><span class=line><span class=cl>      blockRightDelimiter = &#34;&#34;
+</span></span><span class=line><span class=cl>      # default inline delimiter is $ ... $ and \\( ... \\)
+</span></span><span class=line><span class=cl>      # 默认行内定界符是 $ ... $ 和 \\( ... \\)
+</span></span><span class=line><span class=cl>      inlineLeftDelimiter = &#34;&#34;
+</span></span><span class=line><span class=cl>      inlineRightDelimiter = &#34;&#34;
+</span></span><span class=line><span class=cl>      # KaTeX extension copy_tex
+</span></span><span class=line><span class=cl>      # KaTeX 插件 copy_tex
+</span></span><span class=line><span class=cl>      copyTex = true
+</span></span><span class=line><span class=cl>      # KaTeX extension mhchem
+</span></span><span class=line><span class=cl>      # KaTeX 插件 mhchem
+</span></span><span class=line><span class=cl>      mhchem = true
+</span></span><span class=line><span class=cl>    # Mapbox GL JS config (Mapbox GL JS https://docs.mapbox.com/mapbox-gl-js)
+</span></span><span class=line><span class=cl>    # Mapbox GL JS 配置 (Mapbox GL JS https://docs.mapbox.com/mapbox-gl-js)
+</span></span><span class=line><span class=cl>    [params.page.mapbox]
+</span></span><span class=line><span class=cl>      # access token of Mapbox GL JS
+</span></span><span class=line><span class=cl>      # Mapbox GL JS 的 access token
+</span></span><span class=line><span class=cl>      accessToken = &#34;pk.eyJ1IjoiZGlsbG9uenEiLCJhIjoiY2s2czd2M2x3MDA0NjNmcGxmcjVrZmc2cyJ9.aSjv2BNuZUfARvxRYjSVZQ&#34;
+</span></span><span class=line><span class=cl>      # style for the light theme
+</span></span><span class=line><span class=cl>      # 浅色主题的地图样式
+</span></span><span class=line><span class=cl>      lightStyle = &#34;mapbox://styles/mapbox/light-v10?optimize=true&#34;
+</span></span><span class=line><span class=cl>      # style for the dark theme
+</span></span><span class=line><span class=cl>      # 深色主题的地图样式
+</span></span><span class=line><span class=cl>      darkStyle = &#34;mapbox://styles/mapbox/dark-v10?optimize=true&#34;
+</span></span><span class=line><span class=cl>      # whether to add NavigationControl (https://docs.mapbox.com/mapbox-gl-js/api/#navigationcontrol)
+</span></span><span class=line><span class=cl>      # 是否添加 NavigationControl (https://docs.mapbox.com/mapbox-gl-js/api/#navigationcontrol)
+</span></span><span class=line><span class=cl>      navigation = true
+</span></span><span class=line><span class=cl>      # whether to add GeolocateControl (https://docs.mapbox.com/mapbox-gl-js/api/#geolocatecontrol)
+</span></span><span class=line><span class=cl>      # 是否添加 GeolocateControl (https://docs.mapbox.com/mapbox-gl-js/api/#geolocatecontrol)
+</span></span><span class=line><span class=cl>      geolocate = true
+</span></span><span class=line><span class=cl>      # whether to add ScaleControl (https://docs.mapbox.com/mapbox-gl-js/api/#scalecontrol)
+</span></span><span class=line><span class=cl>      # 是否添加 ScaleControl (https://docs.mapbox.com/mapbox-gl-js/api/#scalecontrol)
+</span></span><span class=line><span class=cl>      scale = true
+</span></span><span class=line><span class=cl>      # whether to add FullscreenControl (https://docs.mapbox.com/mapbox-gl-js/api/#fullscreencontrol)
+</span></span><span class=line><span class=cl>      # 是否添加 FullscreenControl (https://docs.mapbox.com/mapbox-gl-js/api/#fullscreencontrol)
+</span></span><span class=line><span class=cl>      fullscreen = true
+</span></span><span class=line><span class=cl>    # Social share links in post page
+</span></span><span class=line><span class=cl>    # 文章页面的分享信息设置
+</span></span><span class=line><span class=cl>    [params.page.share]
+</span></span><span class=line><span class=cl>      enable = true
+</span></span><span class=line><span class=cl>      Twitter = true
+</span></span><span class=line><span class=cl>      Facebook = true
+</span></span><span class=line><span class=cl>      Linkedin = false
+</span></span><span class=line><span class=cl>      Whatsapp = false
+</span></span><span class=line><span class=cl>      Pinterest = false
+</span></span><span class=line><span class=cl>      Tumblr = false
+</span></span><span class=line><span class=cl>      HackerNews = true
+</span></span><span class=line><span class=cl>      Reddit = false
+</span></span><span class=line><span class=cl>      VK = false
+</span></span><span class=line><span class=cl>      Buffer = false
+</span></span><span class=line><span class=cl>      Xing = false
+</span></span><span class=line><span class=cl>      Line = true
+</span></span><span class=line><span class=cl>      Instapaper = false
+</span></span><span class=line><span class=cl>      Pocket = false
+</span></span><span class=line><span class=cl>      Digg = false
+</span></span><span class=line><span class=cl>      Stumbleupon = false
+</span></span><span class=line><span class=cl>      Flipboard = false
+</span></span><span class=line><span class=cl>      Weibo = true
+</span></span><span class=line><span class=cl>      Renren = false
+</span></span><span class=line><span class=cl>      Myspace = false
+</span></span><span class=line><span class=cl>      Blogger = false
+</span></span><span class=line><span class=cl>      Baidu = false
+</span></span><span class=line><span class=cl>      Odnoklassniki = false
+</span></span><span class=line><span class=cl>      Evernote = false
+</span></span><span class=line><span class=cl>      Skype = false
+</span></span><span class=line><span class=cl>      Trello = false
+</span></span><span class=line><span class=cl>      Mix = false
+</span></span><span class=line><span class=cl>    # Comment config
+</span></span><span class=line><span class=cl>    # 评论系统设置
+</span></span><span class=line><span class=cl>    [params.page.comment]
+</span></span><span class=line><span class=cl>      enable = true
+</span></span><span class=line><span class=cl>      # Disqus comment config (https://disqus.com/)
+</span></span><span class=line><span class=cl>      # Disqus 评论系统设置 (https://disqus.com/)
+</span></span><span class=line><span class=cl>      [params.page.comment.disqus]
+</span></span><span class=line><span class=cl>        enable = false
+</span></span><span class=line><span class=cl>        # Disqus shortname to use Disqus in posts
+</span></span><span class=line><span class=cl>        # Disqus 的 shortname，用来在文章中启用 Disqus 评论系统
+</span></span><span class=line><span class=cl>        shortname = &#34;&#34;
+</span></span><span class=line><span class=cl>      # Gitalk comment config (https://github.com/gitalk/gitalk)
+</span></span><span class=line><span class=cl>      # Gitalk 评论系统设置 (https://github.com/gitalk/gitalk)
+</span></span><span class=line><span class=cl>      [params.page.comment.gitalk]
+</span></span><span class=line><span class=cl>        enable = false
+</span></span><span class=line><span class=cl>        owner = &#34;&#34;
+</span></span><span class=line><span class=cl>        repo = &#34;&#34;
+</span></span><span class=line><span class=cl>        clientId = &#34;&#34;
+</span></span><span class=line><span class=cl>        clientSecret = &#34;&#34;
+</span></span><span class=line><span class=cl>      # Valine comment config (https://github.com/xCss/Valine)
+</span></span><span class=line><span class=cl>      # Valine 评论系统设置 (https://github.com/xCss/Valine)
+</span></span><span class=line><span class=cl>      [params.page.comment.valine]
+</span></span><span class=line><span class=cl>        enable = true
+</span></span><span class=line><span class=cl>        appId = &#39;cIRpq8figzQxyGz5LyAdUahJ-gzGzoHsz&#39;
+</span></span><span class=line><span class=cl>        appKey = &#39;T9YWfgGhznKaXXx7TCLxzS3C&#39;
+</span></span><span class=line><span class=cl>        notify = true  # mail notifier , https://github.com/xCss/Valine/wiki
+</span></span><span class=line><span class=cl>        verify = false # Verification code
+</span></span><span class=line><span class=cl>        avatar = &#39;robohash&#39;
+</span></span><span class=line><span class=cl>        placeholder = &#39;说点什么吧...&#39;
+</span></span><span class=line><span class=cl>        visitor = true
+</span></span><span class=line><span class=cl>        path = true
+</span></span><span class=line><span class=cl>        meta = true
+</span></span><span class=line><span class=cl>        pageSize = true
+</span></span><span class=line><span class=cl>        lang = true
+</span></span><span class=line><span class=cl>        enableQQ = true
+</span></span><span class=line><span class=cl>        # Facebook comment config (https://developers.facebook.com/docs/plugins/comments)
+</span></span><span class=line><span class=cl>        # Facebook 评论系统设置 (https://developers.facebook.com/docs/plugins/comments)
+</span></span><span class=line><span class=cl>      [params.page.comment.facebook]
+</span></span><span class=line><span class=cl>        enable = false
+</span></span><span class=line><span class=cl>        width = &#34;100%&#34;
+</span></span><span class=line><span class=cl>        numPosts = 10
+</span></span><span class=line><span class=cl>        appId = &#34;&#34;
+</span></span><span class=line><span class=cl>        languageCode = &#34;&#34;
+</span></span><span class=line><span class=cl>      # Telegram comments config (https://comments.app/)
+</span></span><span class=line><span class=cl>      # Telegram comments 评论系统设置 (https://comments.app/)
+</span></span><span class=line><span class=cl>      [params.page.comment.telegram]
+</span></span><span class=line><span class=cl>        enable = false
+</span></span><span class=line><span class=cl>        siteID = &#34;&#34;
+</span></span><span class=line><span class=cl>        limit = 5
+</span></span><span class=line><span class=cl>        height = &#34;&#34;
+</span></span><span class=line><span class=cl>        color = &#34;&#34;
+</span></span><span class=line><span class=cl>        colorful = true
+</span></span><span class=line><span class=cl>        dislikes = false
+</span></span><span class=line><span class=cl>        outlined = false
+</span></span><span class=line><span class=cl>      # Commento comment config (https://commento.io/)
+</span></span><span class=line><span class=cl>      # Commento comment 评论系统设置 (https://commento.io/)
+</span></span><span class=line><span class=cl>      [params.page.comment.commento]
+</span></span><span class=line><span class=cl>        enable = false
+</span></span><span class=line><span class=cl>      # Utterances comment config (https://utteranc.es/)
+</span></span><span class=line><span class=cl>      # Utterances comment 评论系统设置 (https://utteranc.es/)
+</span></span><span class=line><span class=cl>      [params.page.comment.utterances]
+</span></span><span class=line><span class=cl>        enable = false
+</span></span><span class=line><span class=cl>        # owner/repo
+</span></span><span class=line><span class=cl>        repo = &#34;&#34;
+</span></span><span class=line><span class=cl>        issueTerm = &#34;pathname&#34;
+</span></span><span class=line><span class=cl>        label = &#34;&#34;
+</span></span><span class=line><span class=cl>        lightTheme = &#34;github-light&#34;
+</span></span><span class=line><span class=cl>        darkTheme = &#34;github-dark&#34;
+</span></span><span class=line><span class=cl>    # Third-party library config
+</span></span><span class=line><span class=cl>    # 第三方库配置
+</span></span><span class=line><span class=cl>    [params.page.library]
+</span></span><span class=line><span class=cl>      [params.page.library.css]
+</span></span><span class=line><span class=cl>        # someCSS = &#34;some.css&#34;
+</span></span><span class=line><span class=cl>        # located in &#34;assets/&#34; 位于 &#34;assets/&#34;
+</span></span><span class=line><span class=cl>        # Or 或者
+</span></span><span class=line><span class=cl>        # someCSS = &#34;https://cdn.example.com/some.css&#34;
+</span></span><span class=line><span class=cl>      [params.page.library.js]
+</span></span><span class=line><span class=cl>        # someJavascript = &#34;some.js&#34;
+</span></span><span class=line><span class=cl>        # located in &#34;assets/&#34; 位于 &#34;assets/&#34;
+</span></span><span class=line><span class=cl>        # Or 或者
+</span></span><span class=line><span class=cl>        # someJavascript = &#34;https://cdn.example.com/some.js&#34;
+</span></span><span class=line><span class=cl>    # Page SEO config
+</span></span><span class=line><span class=cl>    # 页面 SEO 配置
+</span></span><span class=line><span class=cl>    [params.page.seo]
+</span></span><span class=line><span class=cl>      # image URL
+</span></span><span class=line><span class=cl>      # 图片 URL
+</span></span><span class=line><span class=cl>      images = []
+</span></span><span class=line><span class=cl>      # Publisher info
+</span></span><span class=line><span class=cl>      # 出版者信息
+</span></span><span class=line><span class=cl>      [params.page.seo.publisher]
+</span></span><span class=line><span class=cl>        name = &#34;xxxx&#34;
+</span></span><span class=line><span class=cl>        logoUrl = &#34;/images/avatar.png&#34;
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  # TypeIt config
+</span></span><span class=line><span class=cl>  # TypeIt 配置
+</span></span><span class=line><span class=cl>  [params.typeit]
+</span></span><span class=line><span class=cl>    # typing speed between each step (measured in milliseconds)
+</span></span><span class=line><span class=cl>    # 每一步的打字速度 (单位是毫秒)
+</span></span><span class=line><span class=cl>    speed = 100
+</span></span><span class=line><span class=cl>    # blinking speed of the cursor (measured in milliseconds)
+</span></span><span class=line><span class=cl>    # 光标的闪烁速度 (单位是毫秒)
+</span></span><span class=line><span class=cl>    cursorSpeed = 1000
+</span></span><span class=line><span class=cl>    # character used for the cursor (HTML format is supported)
+</span></span><span class=line><span class=cl>    # 光标的字符 (支持 HTML 格式)
+</span></span><span class=line><span class=cl>    cursorChar = &#34;|&#34;
+</span></span><span class=line><span class=cl>    # cursor duration after typing finishing (measured in milliseconds, &#34;-1&#34; means unlimited)
+</span></span><span class=line><span class=cl>    # 打字结束之后光标的持续时间 (单位是毫秒, &#34;-1&#34; 代表无限大)
+</span></span><span class=line><span class=cl>    duration = -1
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  # Site verification code for Google/Bing/Yandex/Pinterest/Baidu
+</span></span><span class=line><span class=cl>  # 网站验证代码，用于 Google/Bing/Yandex/Pinterest/Baidu
+</span></span><span class=line><span class=cl>  [params.verification]
+</span></span><span class=line><span class=cl>    google = &#34;&#34;
+</span></span><span class=line><span class=cl>    bing = &#34;&#34;
+</span></span><span class=line><span class=cl>    yandex = &#34;&#34;
+</span></span><span class=line><span class=cl>    pinterest = &#34;&#34;
+</span></span><span class=line><span class=cl>    baidu = &#34;&#34;
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  # Site SEO config
+</span></span><span class=line><span class=cl>  # 网站 SEO 配置
+</span></span><span class=line><span class=cl>  [params.seo]
+</span></span><span class=line><span class=cl>    # image URL
+</span></span><span class=line><span class=cl>    # 图片 URL
+</span></span><span class=line><span class=cl>    image = &#34;/images/Apple-Devices-Preview.png&#34;
+</span></span><span class=line><span class=cl>    # thumbnail URL
+</span></span><span class=line><span class=cl>    # 缩略图 URL
+</span></span><span class=line><span class=cl>    thumbnailUrl = &#34;/images/screenshot.png&#34;
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  # Analytics config
+</span></span><span class=line><span class=cl>  # 网站分析配置
+</span></span><span class=line><span class=cl>  [params.analytics]
+</span></span><span class=line><span class=cl>    enable = false
+</span></span><span class=line><span class=cl>    # Google Analytics
+</span></span><span class=line><span class=cl>    [params.analytics.google]
+</span></span><span class=line><span class=cl>      id = &#34;&#34;
+</span></span><span class=line><span class=cl>      # whether to anonymize IP
+</span></span><span class=line><span class=cl>      # 是否匿名化用户 IP
+</span></span><span class=line><span class=cl>      anonymizeIP = true
+</span></span><span class=line><span class=cl>    # Fathom Analytics
+</span></span><span class=line><span class=cl>    [params.analytics.fathom]
+</span></span><span class=line><span class=cl>      id = &#34;&#34;
+</span></span><span class=line><span class=cl>      # server url for your tracker if you&#39;re self hosting
+</span></span><span class=line><span class=cl>      # 自行托管追踪器时的主机路径
+</span></span><span class=line><span class=cl>      server = &#34;&#34;
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  # Cookie consent config
+</span></span><span class=line><span class=cl>  # Cookie 许可配置
+</span></span><span class=line><span class=cl>  [params.cookieconsent]
+</span></span><span class=line><span class=cl>    enable = false
+</span></span><span class=line><span class=cl>    # text strings used for Cookie consent banner
+</span></span><span class=line><span class=cl>    # 用于 Cookie 许可横幅的文本字符串
+</span></span><span class=line><span class=cl>    [params.cookieconsent.content]
+</span></span><span class=line><span class=cl>      message = &#34;&#34;
+</span></span><span class=line><span class=cl>      dismiss = &#34;&#34;
+</span></span><span class=line><span class=cl>      link = &#34;&#34;
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  # CDN config for third-party library files
+</span></span><span class=line><span class=cl>  # 第三方库文件的 CDN 设置
+</span></span><span class=line><span class=cl>  [params.cdn]
+</span></span><span class=line><span class=cl>    # CDN data file name, disabled by default
+</span></span><span class=line><span class=cl>    # (&#34;jsdelivr.yml&#34;)
+</span></span><span class=line><span class=cl>    # located in &#34;themes/LoveIt/assets/data/cdn/&#34; directory
+</span></span><span class=line><span class=cl>    # you can store your own data files in the same path under your project:
+</span></span><span class=line><span class=cl>    # &#34;assets/data/cdn/&#34;
+</span></span><span class=line><span class=cl>    # CDN 数据文件名称, 默认不启用
+</span></span><span class=line><span class=cl>    # (&#34;jsdelivr.yml&#34;)
+</span></span><span class=line><span class=cl>    # 位于 &#34;themes/LoveIt/assets/data/cdn/&#34; 目录
+</span></span><span class=line><span class=cl>    # 可以在你的项目下相同路径存放你自己的数据文件:
+</span></span><span class=line><span class=cl>    # &#34;assets/data/cdn/&#34;
+</span></span><span class=line><span class=cl>    data = &#34;jsdelivr.yml&#34;
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  # Compatibility config
+</span></span><span class=line><span class=cl>  # 兼容性设置
+</span></span><span class=line><span class=cl>  [params.compatibility]
+</span></span><span class=line><span class=cl>    # whether to use Polyfill.io to be compatible with older browsers
+</span></span><span class=line><span class=cl>    # 是否使用 Polyfill.io 来兼容旧式浏览器
+</span></span><span class=line><span class=cl>    polyfill = false
+</span></span><span class=line><span class=cl>    # whether to use object-fit-images to be compatible with older browsers
+</span></span><span class=line><span class=cl>    # 是否使用 object-fit-images 来兼容旧式浏览器
+</span></span><span class=line><span class=cl>    objectFit = false
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl># Markup related configuration in Hugo
+</span></span><span class=line><span class=cl># Hugo 解析文档的配置
+</span></span><span class=line><span class=cl>[markup]
+</span></span><span class=line><span class=cl>  # Syntax Highlighting (https://gohugo.io/content-management/syntax-highlighting)
+</span></span><span class=line><span class=cl>  # 语法高亮设置 (https://gohugo.io/content-management/syntax-highlighting)
+</span></span><span class=line><span class=cl>  [markup.highlight]
+</span></span><span class=line><span class=cl>    codeFences = true
+</span></span><span class=line><span class=cl>    guessSyntax = true
+</span></span><span class=line><span class=cl>    lineNos = true
+</span></span><span class=line><span class=cl>    lineNumbersInTable = true
+</span></span><span class=line><span class=cl>    # false is a necessary configuration (https://github.com/dillonzq/LoveIt/issues/158)
+</span></span><span class=line><span class=cl>    # false 是必要的设置 (https://github.com/dillonzq/LoveIt/issues/158)
+</span></span><span class=line><span class=cl>    noClasses = false
+</span></span><span class=line><span class=cl>  # Goldmark is from Hugo 0.60 the default library used for Markdown
+</span></span><span class=line><span class=cl>  # Goldmark 是 Hugo 0.60 以来的默认 Markdown 解析库
+</span></span><span class=line><span class=cl>  [markup.goldmark]
+</span></span><span class=line><span class=cl>    [markup.goldmark.extensions]
+</span></span><span class=line><span class=cl>      definitionList = true
+</span></span><span class=line><span class=cl>      footnote = true
+</span></span><span class=line><span class=cl>      linkify = true
+</span></span><span class=line><span class=cl>      strikethrough = true
+</span></span><span class=line><span class=cl>      table = true
+</span></span><span class=line><span class=cl>      taskList = true
+</span></span><span class=line><span class=cl>      typographer = true
+</span></span><span class=line><span class=cl>    [markup.goldmark.renderer]
+</span></span><span class=line><span class=cl>      # whether to use HTML tags directly in the document
+</span></span><span class=line><span class=cl>      # 是否在文档中直接使用 HTML 标签
+</span></span><span class=line><span class=cl>      unsafe = true
+</span></span><span class=line><span class=cl>  # Table Of Contents settings
+</span></span><span class=line><span class=cl>  # 目录设置
+</span></span><span class=line><span class=cl>  [markup.tableOfContents]
+</span></span><span class=line><span class=cl>    startLevel = 1
+</span></span><span class=line><span class=cl>    endLevel = 6
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl># Author config
+</span></span><span class=line><span class=cl># 作者配置
+</span></span><span class=line><span class=cl>[author]
+</span></span><span class=line><span class=cl>  name = &#34;早起的年轻人&#34;
+</span></span><span class=line><span class=cl>  email = &#34;geekswg@qq.com&#34;
+</span></span><span class=line><span class=cl>  link = &#34;&#34;
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl># Sitemap config
+</span></span><span class=line><span class=cl># 网站地图配置
+</span></span><span class=line><span class=cl>[sitemap]
+</span></span><span class=line><span class=cl>  changefreq = &#34;weekly&#34;
+</span></span><span class=line><span class=cl>  filename = &#34;sitemap.xml&#34;
+</span></span><span class=line><span class=cl>  priority = 0.5
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl># Permalinks config (https://gohugo.io/content-management/urls/#permalinks)
+</span></span><span class=line><span class=cl># Permalinks 配置 (https://gohugo.io/content-management/urls/#permalinks)
+</span></span><span class=line><span class=cl>[Permalinks]
+</span></span><span class=line><span class=cl>  # posts = &#34;:year/:month/:filename&#34;
+</span></span><span class=line><span class=cl>  posts = &#34;:filename&#34;
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl># Privacy config (https://gohugo.io/about/hugo-and-gdpr/)
+</span></span><span class=line><span class=cl># 隐私信息配置 (https://gohugo.io/about/hugo-and-gdpr/)
+</span></span><span class=line><span class=cl>[privacy]
+</span></span><span class=line><span class=cl>  # privacy of the Google Analytics (replaced by params.analytics.google)
+</span></span><span class=line><span class=cl>  # Google Analytics 相关隐私 (被 params.analytics.google 替代)
+</span></span><span class=line><span class=cl>  [privacy.googleAnalytics]
+</span></span><span class=line><span class=cl>    # ...
+</span></span><span class=line><span class=cl>  [privacy.twitter]
+</span></span><span class=line><span class=cl>    enableDNT = true
+</span></span><span class=line><span class=cl>  [privacy.youtube]
+</span></span><span class=line><span class=cl>    privacyEnhanced = true
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl># Options to make output .md files
+</span></span><span class=line><span class=cl># 用于输出 Markdown 格式文档的设置
+</span></span><span class=line><span class=cl># [mediaTypes]
+</span></span><span class=line><span class=cl>#   [mediaTypes.&#34;text/plain&#34;]
+</span></span><span class=line><span class=cl>#     suffixes = [&#34;md&#34;]
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl># # Options to make output .md files
+</span></span><span class=line><span class=cl># # 用于输出 Markdown 格式文档的设置
+</span></span><span class=line><span class=cl># [outputFormats.MarkDown]
+</span></span><span class=line><span class=cl>#   mediaType = &#34;text/plain&#34;
+</span></span><span class=line><span class=cl>#   isPlainText = false
+</span></span><span class=line><span class=cl>#   isHTML = true
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl># # Options to make hugo output files
+</span></span><span class=line><span class=cl># # 用于 Hugo 输出文档的设置
+</span></span><span class=line><span class=cl># [outputs]
+</span></span><span class=line><span class=cl>#   home = [&#34;HTML&#34;, &#34;RSS&#34;, &#34;JSON&#34;]
+</span></span><span class=line><span class=cl>#   page = [&#34;HTML&#34;, &#34;MarkDown&#34;]
+</span></span><span class=line><span class=cl>#   section = [&#34;HTML&#34;, &#34;RSS&#34;]
+</span></span><span class=line><span class=cl>#   taxonomy = [&#34;HTML&#34;, &#34;RSS&#34;]
+</span></span><span class=line><span class=cl>#   taxonomyTerm = [&#34;HTML&#34;]
+</span></span></code></pre></td></tr></table></div></div><h1 id=上传github-pages>上传GitHub Pages</h1><blockquote><p>在vscode 终端上 输入 hugo 后回车，会编译public文件下面<br>按照以下命令 将public目录下所有文件上传到github</p></blockquote><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
 </span><span class=lnt>2
 </span><span class=lnt>3
 </span><span class=lnt>4
 </span><span class=lnt>5
-</span></code></pre></td>
-<td class=lntd>
-<pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>git init
-git add .
-git commit -m &#34;我的博客第一次提交&#34;
-git remote add origin https://github.com/geekswg/geekswg.github.io.git
-git push origin master
-</code></pre></td></tr></table>
-</div>
-</div></div><div class=post-footer id=post-footer>
-<div class=post-info>
-<div class=post-info-line>
-<div class=post-info-mod>
-<span>更新于 2021-11-14</span>
-</div>
-<div class=post-info-license></div>
-</div>
-<div class=post-info-line>
-<div class=post-info-md></div>
-<div class=post-info-share>
-<span><a href=javascript:void(0); title="分享到 Twitter" data-sharer=twitter data-url=https://geekswg.github.io/%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/ data-title=主题配置 data-hashtags=主题><i class="fab fa-twitter fa-fw"></i></a><a href=javascript:void(0); title="分享到 Facebook" data-sharer=facebook data-url=https://geekswg.github.io/%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/ data-hashtag=主题><i class="fab fa-facebook-square fa-fw"></i></a><a href=javascript:void(0); title="分享到 Linkedin" data-sharer=linkedin data-url=https://geekswg.github.io/%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/><i class="fab fa-linkedin fa-fw"></i></a><a href=javascript:void(0); title="分享到 Hacker News" data-sharer=hackernews data-url=https://geekswg.github.io/%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/ data-title=主题配置><i class="fab fa-hacker-news fa-fw"></i></a><a href=javascript:void(0); title="分享到 Line" data-sharer=line data-url=https://geekswg.github.io/%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/ data-title=主题配置><i data-svg-src=https://cdn.jsdelivr.net/npm/simple-icons@2.14.0/icons/line.svg></i></a><a href=javascript:void(0); title="分享到 微博" data-sharer=weibo data-url=https://geekswg.github.io/%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/ data-title=主题配置><i class="fab fa-weibo fa-fw"></i></a><a href=javascript:void(0); title="分享到 百度" data-sharer=baidu data-url=https://geekswg.github.io/%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/ data-title=主题配置><i data-svg-src=https://cdn.jsdelivr.net/npm/simple-icons@2.14.0/icons/baidu.svg></i></a></span>
-</div>
-</div>
-</div>
-<div class=post-info-more>
-<section class=post-tags><i class="fas fa-tags fa-fw"></i>&nbsp;<a href=/tags/%E4%B8%BB%E9%A2%98/>主题</a></section>
-<section>
-<span><a href=javascript:void(0); onclick=window.history.back()>返回</a></span>&nbsp;|&nbsp;<span><a href=/>主页</a></span>
-</section>
-</div>
-<div class=post-nav><a href=/demo/ class=prev rel=prev title=Demo><i class="fas fa-angle-left fa-fw"></i>Demo</a>
-<a href=/dos%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/ class=next rel=next title=DOS常用命令>DOS常用命令<i class="fas fa-angle-right fa-fw"></i></a></div>
-</div>
-<div id=comments><div id=disqus_thread class=comment></div><noscript>
-Please enable JavaScript to view the comments powered by <a href=https://disqus.com/?ref_noscript>Disqus</a>.
-</noscript><div id=valine class=comment></div>
-<script src=//cdn1.lncld.net/static/js/3.0.4/av-min.js></script>
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>git init
+</span></span><span class=line><span class=cl>git add .
+</span></span><span class=line><span class=cl>git commit -m &#34;我的博客第一次提交&#34;
+</span></span><span class=line><span class=cl>git remote add origin https://github.com/geekswg/geekswg.github.io.git
+</span></span><span class=line><span class=cl>git push origin master
+</span></span></code></pre></td></tr></table></div></div></div><div class=post-footer id=post-footer><div class=post-info><div class=post-info-line><div class=post-info-mod><span>更新于 2021-11-14</span></div><div class=post-info-license></div></div><div class=post-info-line><div class=post-info-md></div><div class=post-info-share><span><a href=javascript:void(0); title="分享到 Twitter" data-sharer=twitter data-url=https://geekswg.github.io/%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/ data-title=主题配置 data-hashtags=主题><i class="fab fa-twitter fa-fw"></i></a><a href=javascript:void(0); title="分享到 Facebook" data-sharer=facebook data-url=https://geekswg.github.io/%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/ data-hashtag=主题><i class="fab fa-facebook-square fa-fw"></i></a><a href=javascript:void(0); title="分享到 Linkedin" data-sharer=linkedin data-url=https://geekswg.github.io/%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/><i class="fab fa-linkedin fa-fw"></i></a><a href=javascript:void(0); title="分享到 Hacker News" data-sharer=hackernews data-url=https://geekswg.github.io/%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/ data-title=主题配置><i class="fab fa-hacker-news fa-fw"></i></a><a href=javascript:void(0); title="分享到 Line" data-sharer=line data-url=https://geekswg.github.io/%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/ data-title=主题配置><i data-svg-src=https://cdn.jsdelivr.net/npm/simple-icons@2.14.0/icons/line.svg></i></a><a href=javascript:void(0); title="分享到 微博" data-sharer=weibo data-url=https://geekswg.github.io/%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/ data-title=主题配置><i class="fab fa-weibo fa-fw"></i></a><a href=javascript:void(0); title="分享到 百度" data-sharer=baidu data-url=https://geekswg.github.io/%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/ data-title=主题配置><i data-svg-src=https://cdn.jsdelivr.net/npm/simple-icons@2.14.0/icons/baidu.svg></i></a></span></div></div></div><div class=post-info-more><section class=post-tags><i class="fas fa-tags fa-fw"></i>&nbsp;<a href=/tags/%E4%B8%BB%E9%A2%98/>主题</a></section><section><span><a href=javascript:void(0); onclick=window.history.back()>返回</a></span>&nbsp;|&nbsp;<span><a href=/>主页</a></span></section></div><div class=post-nav><a href=/demo/ class=prev rel=prev title=Demo><i class="fas fa-angle-left fa-fw"></i>Demo</a>
+<a href=/dos%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/ class=next rel=next title=DOS常用命令>DOS常用命令<i class="fas fa-angle-right fa-fw"></i></a></div></div><div id=comments><div id=disqus_thread class=comment></div><noscript>Please enable JavaScript to view the comments powered by <a href=https://disqus.com/?ref_noscript>Disqus</a>.</noscript><div id=valine class=comment></div><script src=//cdn1.lncld.net/static/js/3.0.4/av-min.js></script>
 <script src=https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js></script>
-<script type=text/javascript>new Valine({el:'#valine',appId:'qd9ROyoJU406IejzwIJ9kKC2-gzGzoHsz',appKey:'lbGcdwUR0W4riEkBse20yHan',notify:'true',verify:'false',avatar:'',placeholder:'说点什么吧...',visitor:'true'})</script></div></article></div>
-</main><footer class=footer>
-<div class=footer-container><div class=footer-line>但行好事 ♥ 莫问前程</div><div class=footer-line>由 <a href=https://gohugo.io/ target=_blank rel="noopener noreffer" title="Hugo 0.89.4">Hugo</a> 强力驱动 | 主题 - <a href=https://github.com/dillonzq/LoveIt target=_blank rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
-</div><div class=footer-line>
-<span id=run-time></span><i class="far fa-copyright fa-fw"></i><span itemprop=copyrightYear>2021</span><span class=author itemprop=copyrightHolder>&nbsp;<a href=http://geekswg.cnblogs.com/ target=_blank>毕少侠</a></span>&nbsp;|&nbsp;<span class=license><a rel="license external nofollow noopener noreffer" href=https://creativecommons.org/licenses/by-nc/4.0/ target=_blank>CC BY-NC 4.0</a></span></div>
-</div>
-</footer>
-</div>
-<div id=fixed-buttons><a href=# id=back-to-top class=fixed-button title=回到顶部>
-<i class="fas fa-arrow-up fa-fw"></i>
-</a><a href=# id=view-comments class=fixed-button title=查看评论>
-<i class="fas fa-comment fa-fw"></i>
-</a>
-</div>
-<div class=sidebar_wo>
-<div id=leimu>
-<img src=https://cdn.jsdelivr.net/gh/lewky/lewky.github.io@master/images/b2t/leimuA.png alt=雷姆 onmouseover="this.src='https://cdn.jsdelivr.net/gh/lewky/lewky.github.io@master/images/b2t/leimuB.png'" onmouseout="this.src='https://cdn.jsdelivr.net/gh/lewky/lewky.github.io@master/images/b2t/leimuA.png'" title=回到顶部>
-</div>
-<div class=sidebar_wo id=lamu>
-<img src=https://cdn.jsdelivr.net/gh/lewky/lewky.github.io@master/images/b2t/lamuA.png alt=雷姆 onmouseover="this.src='https://cdn.jsdelivr.net/gh/lewky/lewky.github.io@master/images/b2t/lamuB.png'" onmouseout="this.src='https://cdn.jsdelivr.net/gh/lewky/lewky.github.io@master/images/b2t/lamuA.png'" title=回到底部>
-</div>
-</div><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/copy-tex.min.css><script type=text/javascript src=https://.disqus.com/embed.js defer></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/lazysizes@5.2.2/lazysizes.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/sharer.js@0.4.0/sharer.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/copy-tex.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/mhchem.min.js></script><script type=text/javascript>window.config={code:{copyTitle:"复制到剪贴板",maxShownLines:10},comment:{},data:{"id-1":"毕少侠也在江湖","id-2":"毕少侠也在江湖"},math:{delimiters:[{display:!0,left:"$$",right:"$$"},{display:!0,left:"\\[",right:"\\]"},{display:!1,left:"$",right:"$"},{display:!1,left:"\\(",right:"\\)"}],strict:!1},typeit:{cursorChar:"|",cursorSpeed:1e3,data:{"id-1":["id-1"],"id-2":["id-2"]},duration:-1,speed:100}}</script><script type=text/javascript src=/js/theme.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/jquery@2.1.3/dist/jquery.min.js></script><script type=text/javascript src=/js/custom.js></script></body>
-</html>
+<script type=text/javascript>new Valine({el:"#valine",appId:"qd9ROyoJU406IejzwIJ9kKC2-gzGzoHsz",appKey:"lbGcdwUR0W4riEkBse20yHan",notify:"true",verify:"false",avatar:"",placeholder:"说点什么吧...",visitor:"true"})</script></div></article></div></main><footer class=footer><div class=footer-container><div class=footer-line>但行好事 ♥ 莫问前程</div><div class=footer-line>由 <a href=https://gohugo.io/ target=_blank rel="noopener noreffer" title="Hugo 0.110.0">Hugo</a> 强力驱动 | 主题 - <a href=https://github.com/dillonzq/LoveIt target=_blank rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a></div><div class=footer-line><span id=run-time></span><i class="far fa-copyright fa-fw"></i><span itemprop=copyrightYear>2021 - 2023</span><span class=author itemprop=copyrightHolder>&nbsp;<a href=http://geekswg.cnblogs.com/ target=_blank>毕少侠</a></span>&nbsp;|&nbsp;<span class=license><a rel="license external nofollow noopener noreffer" href=https://creativecommons.org/licenses/by-nc/4.0/ target=_blank>CC BY-NC 4.0</a></span></div></div></footer></div><div id=fixed-buttons><a href=# id=back-to-top class=fixed-button title=回到顶部><i class="fas fa-arrow-up fa-fw"></i>
+</a><a href=# id=view-comments class=fixed-button title=查看评论><i class="fas fa-comment fa-fw"></i></a></div><div class=sidebar_wo><div id=leimu><img src=https://cdn.jsdelivr.net/gh/lewky/lewky.github.io@master/images/b2t/leimuA.png alt=雷姆 onmouseover='this.src="https://cdn.jsdelivr.net/gh/lewky/lewky.github.io@master/images/b2t/leimuB.png"' onmouseout='this.src="https://cdn.jsdelivr.net/gh/lewky/lewky.github.io@master/images/b2t/leimuA.png"' title=回到顶部></div><div class=sidebar_wo id=lamu><img src=https://cdn.jsdelivr.net/gh/lewky/lewky.github.io@master/images/b2t/lamuA.png alt=雷姆 onmouseover='this.src="https://cdn.jsdelivr.net/gh/lewky/lewky.github.io@master/images/b2t/lamuB.png"' onmouseout='this.src="https://cdn.jsdelivr.net/gh/lewky/lewky.github.io@master/images/b2t/lamuA.png"' title=回到底部></div></div><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/copy-tex.min.css><script type=text/javascript src=https://.disqus.com/embed.js defer></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/lazysizes@5.2.2/lazysizes.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/sharer.js@0.4.0/sharer.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/copy-tex.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/mhchem.min.js></script><script type=text/javascript>window.config={code:{copyTitle:"复制到剪贴板",maxShownLines:10},comment:{},data:{"id-1":"毕少侠也在江湖","id-2":"毕少侠也在江湖"},math:{delimiters:[{display:!0,left:"$$",right:"$$"},{display:!0,left:"\\[",right:"\\]"},{display:!1,left:"$",right:"$"},{display:!1,left:"\\(",right:"\\)"}],strict:!1},typeit:{cursorChar:"|",cursorSpeed:1e3,data:{"id-1":["id-1"],"id-2":["id-2"]},duration:-1,speed:100}}</script><script type=text/javascript src=/js/theme.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/jquery@2.1.3/dist/jquery.min.js></script><script type=text/javascript src=/js/custom.js></script></body></html>
