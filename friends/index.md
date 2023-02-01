@@ -12,15 +12,30 @@
   url: https://lruihao.cn
   description: Lruihao's Note
 ```
+> 提示
+
+{{< admonition info "FixIt主题 添加友链方法" >}}
+在项目 /data/friends.yml 添加如下格式
+```yaml
+- nickname: Lruihao
+  avatar: https://lruihao.cn/images/avatar.jpg
+  url: https://lruihao.cn
+  description: Lruihao's Note
+```
+{{< /admonition >}}
 
 
+{{< admonition tip "添加您的 FixIt 网站" >}}
+您可以通过 [创建 PR :(fa-solid fa-code-branch fa-fw):](https://github.com/geekswg/blogFixit/pulls) 或 [编辑数据 :(fa-regular fa-pen-to-square fa-fw):](https://github.com/geekswg/blogFixit/edit/master/data/friends.yml)  按 **nickname** 以字典顺序将您的 FixIt 网站添加到此页面，格式如下：
 
-## Friendly Reminder
+```yml
+- nickname: <your nickname>
+  avatar: <your avatar>
+  url: <your site link>
+  description: <description of your site>
+```
 
-{{< admonition info "Notice 注意" true >}}
-1. If you want to exchange link, please leave a comment in the above format. (personal non-commercial blogs / websites only)
-2. :(fa-solid fa-exclamation-triangle): Website failure, stop maintenance and improper content may be unlinked!
-3. Those websites that do not respect other people's labor achievements, reprint without source, or malicious acts, please do not come to exchange.
+> :(fa-solid fa-exclamation-triangle): *网站失效、停止维护、不当内容都可能被取消链接！*
 {{< /admonition >}}
 
 
