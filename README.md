@@ -3,7 +3,7 @@
 <div align="center">
 
 
-[预览](https://geekswg.github.io/) | [源码](https://github.com/geekswg/blogFixit)
+[预览](https://geekswg.github.io/) | [源码](https://github.com/geekswg/geekswg.github.io)
 </div>
 
 ## Content management
