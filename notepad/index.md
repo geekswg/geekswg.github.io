@@ -6,8 +6,8 @@
 {{< /admonition >}}
 
 ---
-
-![我的图片](/images/posts/featured-image-preview.jpg)
+<!-- 插入图片 -->
+{{< figure src="/images/posts/featured-image-preview.jpg" title="Gavin Wells 欢迎你的留言" >}}
 
 {{< music auto="https://y.qq.com/n/yqq/playlist/8138088068.html" autoplay=true >}}
 
