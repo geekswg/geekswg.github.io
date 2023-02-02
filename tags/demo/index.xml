@@ -1,3 +1,14 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>demo - 标签 - 毕少侠</title><link>https://geekswg.github.io/tags/demo/</link><description>demo - 标签 - 毕少侠</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>geekswg@qq.com (geekswg)</managingEditor><webMaster>geekswg@qq.com (geekswg)</webMaster><copyright>geekswg</copyright><lastBuildDate>Sat, 01 Jan 2022 12:15:22 +0800</lastBuildDate><atom:link href="https://geekswg.github.io/tags/demo/" rel="self" type="application/rss+xml"/><item><title>A 我的第一个 Hugo 博客</title><link>https://geekswg.github.io/demo/</link><pubDate>Sat, 01 Jan 2022 12:15:22 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/demo/</guid><description>&lt;div class="featured-image">
-&lt;img src="/images/posts/featured-image.jpg" referrerpolicy="no-referrer">
-&lt;/div></description></item></channel></rss>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>demo - 标签 - 毕少侠</title><link>https://geekswg.github.io/tags/demo/</link><description>demo - 标签 - 毕少侠</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>geekswg@qq.com (geekswg)</managingEditor><webMaster>geekswg@qq.com (geekswg)</webMaster><copyright>geekswg</copyright><lastBuildDate>Sat, 01 Jan 2022 12:15:22 +0800</lastBuildDate><atom:link href="https://geekswg.github.io/tags/demo/" rel="self" type="application/rss+xml"/><item><title>A 我的第一个 Hugo 博客</title><link>https://geekswg.github.io/demo/</link><pubDate>Sat, 01 Jan 2022 12:15:22 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/demo/</guid><description><![CDATA[<div class="featured-image">
+        <img src="/images/posts/featured-image.jpg" referrerpolicy="no-referrer">
+      </div><h2 id="我的hugo博客">我的Hugo博客</h2>
+<p>我的博客摘要11134343从大苏打撒旦撒大苏打撒法大使发大水发大水范德萨</p>
+<blockquote>
+<p>hello Hugo<br>
+<a href="https://geekswg.github.io/"target="_blank" rel="external nofollow noopener noreferrer">我的博客发布地址<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a></p>
+</blockquote>
+<h3 id="fixit-hugo主题">FixIt Hugo主题</h3>
+<p><a href="https://github.com/hugo-fixit/FixIt"target="_blank" rel="external nofollow noopener noreferrer">FixIt 主题仓库地址<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a><br>
+<a href="https://fixit.lruihao.cn/zh-cn/"target="_blank" rel="external nofollow noopener noreferrer">FixIt 主题Demo地址<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a></p>
+<h2 id="主题">主题</h2>
+<h2 id="语法">语法</h2>
+<p>markdown 语法</p>]]></description></item></channel></rss>
