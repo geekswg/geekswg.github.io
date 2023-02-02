@@ -1,6 +1,6 @@
-# 关于
+# 关于-About
 
-
+<!--more-->
 {{< typeit >}}
 <center>
 <font face="楷体" size=4.6 color=#009966 >

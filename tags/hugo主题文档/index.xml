@@ -322,7 +322,44 @@
       <div class="admonition-content">一个 <strong>技巧</strong> 横幅</div>
     </div>
   </div>
-<h2 id="markdown语法">markdown语法</h2>
+<h3 id="typeit打字动画">typeit打字动画</h3>
+<p><a href="https://typeitjs.com/"target="_blank" rel="external nofollow noopener noreferrer">TypeIt<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a></p>
+<blockquote>
+<p>示例效果</p>
+</blockquote>
+<div class="typeit"><div id="id-1"></div></div>
+<blockquote>
+<p>示例代码</p>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">{{<span class="p">&lt;</span> <span class="nt">typeit</span> <span class="p">&gt;</span>}}
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">center</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">font</span> <span class="na">face</span><span class="o">=</span><span class="s">&#34;楷体&#34;</span> <span class="na">size</span><span class="o">=</span><span class="s">4.6</span> <span class="na">color</span><span class="o">=</span><span class="s">#009966</span> <span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">莫笑少年江湖梦，谁不少年梦江湖。曾经年少立志三千里，如今踌躇百步无寸功。
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">懵懂半生，庸碌尘世中，转眼高堂皆白发，儿女蹒跚学堂中。碎银几两催人老。
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">心仍少，皱纹却上眉目中，浮生醉酒回梦里。青春人依旧，只叹时光太匆匆！
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">font</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">center</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">{{<span class="p">&lt;</span> <span class="p">/</span><span class="nt">typeit</span> <span class="p">&gt;</span>}}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="markdown语法">markdown语法</h2>
 <p>Markdown 官方教程访问：<a href="https://markdown.com.cn/"target="_blank" rel="external nofollow noopener noreferrer">https://markdown.com.cn/<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a></p>
 <blockquote>
 <p>可快速学习查看markdown语法。</p>

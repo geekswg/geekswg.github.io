@@ -172,6 +172,39 @@ music添加音乐，music示例代码
 一个 **技巧** 横幅
 {{< /admonition >}}
 
+### typeit打字动画
+
+[TypeIt](https://typeitjs.com/)
+> 示例效果
+
+{{< typeit loop=true >}}
+<center>
+<font face="楷体" size=4.6 color=#009966 >
+莫笑少年江湖梦，谁不少年梦江湖。曾经年少立志三千里，如今踌躇百步无寸功。
+
+懵懂半生，庸碌尘世中，转眼高堂皆白发，儿女蹒跚学堂中。碎银几两催人老。
+
+心仍少，皱纹却上眉目中，浮生醉酒回梦里。青春人依旧，只叹时光太匆匆！
+</font>
+</center>
+{{< /typeit >}}
+
+> 示例代码
+
+```markdown
+{{</* typeit */>}}
+<center>
+<font face="楷体" size=4.6 color=#009966 >
+莫笑少年江湖梦，谁不少年梦江湖。曾经年少立志三千里，如今踌躇百步无寸功。
+
+懵懂半生，庸碌尘世中，转眼高堂皆白发，儿女蹒跚学堂中。碎银几两催人老。
+
+心仍少，皱纹却上眉目中，浮生醉酒回梦里。青春人依旧，只叹时光太匆匆！
+</font>
+</center>
+{{</* /typeit */>}}
+```
+
 ## markdown语法
 
 Markdown 官方教程访问：<https://markdown.com.cn/>

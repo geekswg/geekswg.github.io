@@ -327,7 +327,44 @@ title="FixIt 0.2.0 | 更改"/>&lt;/a>&lt;/p>
 &lt;div class="admonition-content">一个 &lt;strong>技巧&lt;/strong> 横幅&lt;/div>
 &lt;/div>
 &lt;/div>
-&lt;h2 id="markdown语法">markdown语法&lt;/h2>
+&lt;h3 id="typeit打字动画">typeit打字动画&lt;/h3>
+&lt;p>&lt;a href="https://typeitjs.com/"target="_blank" rel="external nofollow noopener noreferrer">TypeIt&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a>&lt;/p>
+&lt;blockquote>
+&lt;p>示例效果&lt;/p>
+&lt;/blockquote>
+&lt;div class="typeit">&lt;div id="id-1">&lt;/div>&lt;/div>
+&lt;blockquote>
+&lt;p>示例代码&lt;/p>
+&lt;/blockquote>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">{{&lt;span class="p">&amp;lt;&lt;/span> &lt;span class="nt">typeit&lt;/span> &lt;span class="p">&amp;gt;&lt;/span>}}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">center&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">font&lt;/span> &lt;span class="na">face&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;楷体&amp;#34;&lt;/span> &lt;span class="na">size&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">4.6&lt;/span> &lt;span class="na">color&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">#009966&lt;/span> &lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">莫笑少年江湖梦，谁不少年梦江湖。曾经年少立志三千里，如今踌躇百步无寸功。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">懵懂半生，庸碌尘世中，转眼高堂皆白发，儿女蹒跚学堂中。碎银几两催人老。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">心仍少，皱纹却上眉目中，浮生醉酒回梦里。青春人依旧，只叹时光太匆匆！
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">font&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">center&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">{{&lt;span class="p">&amp;lt;&lt;/span> &lt;span class="p">/&lt;/span>&lt;span class="nt">typeit&lt;/span> &lt;span class="p">&amp;gt;&lt;/span>}}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="markdown语法">markdown语法&lt;/h2>
 &lt;p>Markdown 官方教程访问：&lt;a href="https://markdown.com.cn/"target="_blank" rel="external nofollow noopener noreferrer">https://markdown.com.cn/&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a>&lt;/p>
 &lt;blockquote>
 &lt;p>可快速学习查看markdown语法。&lt;/p>
