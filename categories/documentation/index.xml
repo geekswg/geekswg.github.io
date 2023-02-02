@@ -177,7 +177,107 @@
       <div class="admonition-content">一个 <strong>引用</strong> 横幅</div>
     </div>
   </div>
-<p><code>admonition</code> shortcode 有以下命名参数:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">{{<span class="p">&lt;</span> <span class="nt">admonition</span> <span class="p">&gt;</span>}}
+</span></span><span class="line"><span class="cl">一个 <span class="ge">**</span>注意** 横幅
+</span></span><span class="line"><span class="cl">{{<span class="p">&lt;</span> <span class="p">/</span><span class="nt">admonition</span> <span class="p">&gt;</span>}}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">{{<span class="p">&lt;</span> <span class="nt">admonition</span> <span class="na">abstract</span> <span class="p">&gt;</span>}}
+</span></span><span class="line"><span class="cl">一个 <span class="ge">**</span>摘要** 横幅
+</span></span><span class="line"><span class="cl">{{<span class="p">&lt;</span> <span class="p">/</span><span class="nt">admonition</span> <span class="p">&gt;</span>}}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">{{<span class="p">&lt;</span> <span class="nt">admonition</span> <span class="na">info</span> <span class="p">&gt;</span>}}
+</span></span><span class="line"><span class="cl">一个 <span class="ge">**</span>信息** 横幅
+</span></span><span class="line"><span class="cl">{{<span class="p">&lt;</span> <span class="p">/</span><span class="nt">admonition</span> <span class="p">&gt;</span>}}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">{{<span class="p">&lt;</span> <span class="nt">admonition</span> <span class="na">tip</span> <span class="p">&gt;</span>}}
+</span></span><span class="line"><span class="cl">一个 <span class="ge">**</span>技巧** 横幅
+</span></span><span class="line"><span class="cl">{{<span class="p">&lt;</span> <span class="p">/</span><span class="nt">admonition</span> <span class="p">&gt;</span>}}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">{{<span class="p">&lt;</span> <span class="nt">admonition</span> <span class="na">success</span> <span class="p">&gt;</span>}}
+</span></span><span class="line"><span class="cl">一个 <span class="ge">**</span>成功** 横幅
+</span></span><span class="line"><span class="cl">{{<span class="p">&lt;</span> <span class="p">/</span><span class="nt">admonition</span> <span class="p">&gt;</span>}}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">{{<span class="p">&lt;</span> <span class="nt">admonition</span> <span class="na">question</span> <span class="p">&gt;</span>}}
+</span></span><span class="line"><span class="cl">一个 <span class="ge">**</span>问题** 横幅
+</span></span><span class="line"><span class="cl">{{<span class="p">&lt;</span> <span class="p">/</span><span class="nt">admonition</span> <span class="p">&gt;</span>}}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">{{<span class="p">&lt;</span> <span class="nt">admonition</span> <span class="na">warning</span> <span class="p">&gt;</span>}}
+</span></span><span class="line"><span class="cl">一个 <span class="ge">**</span>警告** 横幅
+</span></span><span class="line"><span class="cl">{{<span class="p">&lt;</span> <span class="p">/</span><span class="nt">admonition</span> <span class="p">&gt;</span>}}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">{{<span class="p">&lt;</span> <span class="nt">admonition</span> <span class="na">failure</span> <span class="p">&gt;</span>}}
+</span></span><span class="line"><span class="cl">一个 <span class="ge">**</span>失败** 横幅
+</span></span><span class="line"><span class="cl">{{<span class="p">&lt;</span> <span class="p">/</span><span class="nt">admonition</span> <span class="p">&gt;</span>}}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">{{<span class="p">&lt;</span> <span class="nt">admonition</span> <span class="na">danger</span> <span class="p">&gt;</span>}}
+</span></span><span class="line"><span class="cl">一个 <span class="ge">**</span>危险** 横幅
+</span></span><span class="line"><span class="cl">{{<span class="p">&lt;</span> <span class="p">/</span><span class="nt">admonition</span> <span class="p">&gt;</span>}}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">{{<span class="p">&lt;</span> <span class="nt">admonition</span> <span class="na">bug</span> <span class="p">&gt;</span>}}
+</span></span><span class="line"><span class="cl">一个 <span class="gs">**Bug**</span> 横幅
+</span></span><span class="line"><span class="cl">{{<span class="p">&lt;</span> <span class="p">/</span><span class="nt">admonition</span> <span class="p">&gt;</span>}}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">{{<span class="p">&lt;</span> <span class="nt">admonition</span> <span class="na">example</span> <span class="p">&gt;</span>}}
+</span></span><span class="line"><span class="cl">一个 <span class="ge">**</span>示例** 横幅
+</span></span><span class="line"><span class="cl">{{<span class="p">&lt;</span> <span class="p">/</span><span class="nt">admonition</span> <span class="p">&gt;</span>}}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">{{<span class="p">&lt;</span> <span class="nt">admonition</span> <span class="na">quote</span> <span class="p">&gt;</span>}}
+</span></span><span class="line"><span class="cl">一个 <span class="ge">**</span>引用** 横幅
+</span></span><span class="line"><span class="cl">{{<span class="p">&lt;</span> <span class="p">/</span><span class="nt">admonition</span> <span class="p">&gt;</span>}}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><code>admonition</code> shortcode 有以下命名参数:</p>
 <ul>
 <li>
 <p><strong>type</strong> <em>[可选]</em> (<strong>第一个</strong>位置参数)</p>
