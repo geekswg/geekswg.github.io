@@ -1,9 +1,15 @@
 # 留言板
 
 
+{{< admonition info "这里是我的留言板" >}}
+欢迎各位的留言
+{{< /admonition >}}
 
-> 这里是我的留言板
+---
 
+![我的图片](/images/posts/featured-image-preview.jpg)
+
+{{< music auto="https://y.qq.com/n/yqq/playlist/8138088068.html" autoplay=true >}}
 
 
 ---
