@@ -205,6 +205,26 @@ music添加音乐，music示例代码
 {{</* /typeit */>}}
 ```
 
+### figure插入图片
+
+> 示例效果
+
+{{< figure src="/images/posts/featured-image-preview.jpg" title="Gavin Wells 欢迎你的留言" >}}
+
+> 示例代码
+
+```markdown
+{{</* figure src="/images/posts/featured-image-preview.jpg" title="Gavin Wells 欢迎你的留言" */>}}
+```
+
+### 功能描述
+
+> 示例效果
+> 示例代码
+
+```markdown
+```
+
 ## markdown语法
 
 Markdown 官方教程访问：<https://markdown.com.cn/>

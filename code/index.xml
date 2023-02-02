@@ -364,6 +364,36 @@ title="FixIt 0.2.0 | 更改"/>&lt;/a>&lt;/p>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">{{&lt;span class="p">&amp;lt;&lt;/span> &lt;span class="p">/&lt;/span>&lt;span class="nt">typeit&lt;/span> &lt;span class="p">&amp;gt;&lt;/span>}}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
+&lt;/div>&lt;h3 id="figure插入图片">figure插入图片&lt;/h3>
+&lt;blockquote>
+&lt;p>示例效果&lt;/p>
+&lt;/blockquote>
+&lt;figure>&lt;img src="https://geekswg.github.io/images/posts/featured-image-preview.jpg"/>&lt;figcaption>
+&lt;h4>Gavin Wells 欢迎你的留言&lt;/h4>
+&lt;/figcaption>
+&lt;/figure>
+&lt;blockquote>
+&lt;p>示例代码&lt;/p>
+&lt;/blockquote>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">{{&lt;span class="p">&amp;lt;&lt;/span> &lt;span class="nt">figure&lt;/span> &lt;span class="na">src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;/images/posts/featured-image-preview.jpg&amp;#34;&lt;/span> &lt;span class="na">title&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;Gavin Wells 欢迎你的留言&amp;#34;&lt;/span> &lt;span class="p">&amp;gt;&lt;/span>}}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="功能描述">功能描述&lt;/h3>
+&lt;blockquote>
+&lt;p>示例效果&lt;br>
+示例代码&lt;/p>
+&lt;/blockquote>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
 &lt;/div>&lt;h2 id="markdown语法">markdown语法&lt;/h2>
 &lt;p>Markdown 官方教程访问：&lt;a href="https://markdown.com.cn/"target="_blank" rel="external nofollow noopener noreferrer">https://markdown.com.cn/&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a>&lt;/p>
 &lt;blockquote>
