@@ -21,9 +21,7 @@
 {{</* /typeit */>}}
 ```
 
----
-
-{{< music url="/music/Take-Me-To-Your-Heart.mp3"  name="Take-Me-To-Your-Heart" artist="Michael Learns To Rock" cover="/logo.png" volume="0.2" autoplay=false loop=all >}}
+{{< music url="/music/Take-Me-To-Your-Heart.mp3"  name="Take-Me-To-Your-Heart" artist="Michael Learns To Rock" cover="/logo.png" volume="0.2" autoplay=true loop=all >}}
 
 ```markdown
 {{</* music url="/music/Take-Me-To-Your-Heart.mp3"  name="Take-Me-To-Your-Heart" artist="Michael Learns To Rock" cover="/logo.png" volume="0.2" autoplay=true loop=all */>}}
