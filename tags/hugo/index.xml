@@ -1,8 +1,0 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Hugo - 标签 - 毕少侠</title><link>https://geekswg.github.io/tags/hugo/</link><description>Hugo - 标签 - 毕少侠</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>geekswg@qq.com (geekswg)</managingEditor><webMaster>geekswg@qq.com (geekswg)</webMaster><lastBuildDate>Thu, 01 Oct 2020 14:37:37 +0800</lastBuildDate><atom:link href="https://geekswg.github.io/tags/hugo/" rel="self" type="application/rss+xml"/><item><title>我的第一个Hugo博客</title><link>https://geekswg.github.io/posts/demo/</link><pubDate>Thu, 01 Oct 2020 14:37:37 +0800</pubDate><author>作者</author><guid>https://geekswg.github.io/posts/demo/</guid><description><![CDATA[<h1 id="我的hugo博客">我的Hugo博客</h1>
-<blockquote>
-<p>hello Hugo<br>
-<a href="https://geekswg.github.io/"target="_blank" rel="external nofollow noopener noreferrer">我的博客发布地址<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a></p>
-</blockquote>
-<h2 id="主题">主题</h2>
-<h2 id="语法">语法</h2>
-<p>markdown 语法</p>]]></description></item></channel></rss>

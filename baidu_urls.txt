@@ -1,6 +1,7 @@
+https://geekswg.github.io/code/demo/
 https://geekswg.github.io/notepad/
 https://geekswg.github.io/friends/
-https://geekswg.github.io/posts/demo2/
-https://geekswg.github.io/posts/demo3/
-https://geekswg.github.io/posts/demo/
+https://geekswg.github.io/demo2/
+https://geekswg.github.io/demo3/
+https://geekswg.github.io/demo/
 https://geekswg.github.io/about/

@@ -1,4 +1,24 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>主题 - 分类 - 毕少侠</title><link>https://geekswg.github.io/categories/%E4%B8%BB%E9%A2%98/</link><description>主题 - 分类 - 毕少侠</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>geekswg@qq.com (geekswg)</managingEditor><webMaster>geekswg@qq.com (geekswg)</webMaster><lastBuildDate>Wed, 01 Feb 2023 15:52:43 +0800</lastBuildDate><atom:link href="https://geekswg.github.io/categories/%E4%B8%BB%E9%A2%98/" rel="self" type="application/rss+xml"/><item><title>加密测试</title><link>https://geekswg.github.io/posts/demo2/</link><pubDate>Wed, 01 Feb 2023 15:52:43 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/posts/demo2/</guid><description><![CDATA[<h2 id="部分加密测试">部分加密测试</h2>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>主题 - 分类 - 毕少侠</title><link>https://geekswg.github.io/categories/%E4%B8%BB%E9%A2%98/</link><description>主题 - 分类 - 毕少侠</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>geekswg@qq.com (geekswg)</managingEditor><webMaster>geekswg@qq.com (geekswg)</webMaster><copyright>geekswg</copyright><lastBuildDate>Wed, 01 Feb 2023 15:52:43 +0800</lastBuildDate><atom:link href="https://geekswg.github.io/categories/%E4%B8%BB%E9%A2%98/" rel="self" type="application/rss+xml"/><item><title>加密测试</title><link>https://geekswg.github.io/demo2/</link><pubDate>Wed, 01 Feb 2023 15:52:43 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/demo2/</guid><description><![CDATA[<h2 id="部分加密测试">部分加密测试</h2>
+<div class="details admonition info open">
+    <div class="details-summary admonition-title">
+      <i class="icon fa-solid fa-info-circle fa-fw" aria-hidden="true"></i>FixIt主题 全文加密示例<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i>
+    </div>
+    <div class="details-content">
+      <div class="admonition-content">示例代码,在 md 头部中添加<br>
+<code>fixit-encryptor</code> shortcode 在版本 <a href="https://github.com/hugo-fixit/FixIt/releases/tag/v0.2.15" rel="external nofollow noopener noreferrer" target="_blank"></a> 得到支持。</div>
+    </div>
+  </div>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="line"><span class="cl"><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="m">123</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">message</span><span class="p">:</span><span class="w"> </span><span class="l">测试全文加密密码123</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="部分加密测试-1">部分加密测试</h2>
 <p>部分加密内容 demo<br>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -33,10 +53,10 @@
       </label>
     </div>
     <div data-password="a01610228fe998f515a72dd730294d87" data-content="6L&#43;Z602f9ed2a8d1e08d8f74f5303e9eb93637d47f82ab6f1c15871cf8dd0481YeM5pi&#43;56S655qE5piv6YOo5YiG5Yqg5a&#43;G55qE5YaF5a65PGJyPgo8Y29kZT5maXhpdC1lbmNyeXB0b3I8L2NvZGU&#43;IHNob3J0Y29kZSDlnKjniYjmnKwgPGEgaHJlZj0iaHR0cHM6Ly9naXRodWIuY29tL2h1Z28tZml4aXQvRml4SXQvcmVsZWFzZXMvdGFnL3YwLjIuMTUiIHJlbD0iZXh0ZXJuYWwgbm9mb2xsb3cgbm9vcGVuZXIgbm9yZWZlcnJlciIgdGFyZ2V0PSJfYmxhbmsiPjxpbWcKY2xhc3M9Imxhenlsb2FkIHZlcnNpb24iCnNyYz0iL3N2Zy9sb2FkaW5nLm1pbi5zdmciCmRhdGEtc3JjPSIvc3ZnL3ZlcnNpb24vMC4yLjE1LW5ldy5taW4uc3ZnIgpkYXRhLXNyY3NldD0iL3N2Zy92ZXJzaW9uLzAuMi4xNS1uZXcubWluLnN2ZywgL3N2Zy92ZXJzaW9uLzAuMi4xNS1uZXcubWluLnN2ZyAxLjV4LCAvc3ZnL3ZlcnNpb24vMC4yLjE1LW5ldy5taW4uc3ZnIDJ4IgpkYXRhLXNpemVzPSJhdXRvIgphbHQ9IkZpeEl0IDAuMi4xNSB8IOaWsOWiniIKdGl0bGU9IkZpeEl0IDAuMi4xNSB8IOaWsOWiniIvPjwvYT4g5b6X5Yiw5pSv5oyB44CC"></div>
-  </fixit-encryptor>]]></description></item><item><title>测试评论</title><link>https://geekswg.github.io/posts/demo3/</link><pubDate>Tue, 01 Feb 2022 23:02:55 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/posts/demo3/</guid><description><![CDATA[<h2 id="评论">评论</h2>
+  </fixit-encryptor>]]></description></item><item><title>测试评论</title><link>https://geekswg.github.io/demo3/</link><pubDate>Tue, 01 Feb 2022 23:02:55 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/demo3/</guid><description><![CDATA[<h2 id="评论">评论</h2>
 <p>测试时间 评论时间</p>
 <h2 id="主题">主题</h2>
-<h2 id="hugo">hugo</h2>]]></description></item><item><title>我的第一个Hugo博客</title><link>https://geekswg.github.io/posts/demo/</link><pubDate>Thu, 01 Oct 2020 14:37:37 +0800</pubDate><author>作者</author><guid>https://geekswg.github.io/posts/demo/</guid><description><![CDATA[<h1 id="我的hugo博客">我的Hugo博客</h1>
+<h2 id="hugo">hugo</h2>]]></description></item><item><title>我的第一个Hugo博客</title><link>https://geekswg.github.io/demo/</link><pubDate>Thu, 01 Oct 2020 14:37:37 +0800</pubDate><author>Gavin Wells</author><guid>https://geekswg.github.io/demo/</guid><description><![CDATA[<h2 id="我的hugo博客">我的Hugo博客</h2>
 <blockquote>
 <p>hello Hugo<br>
 <a href="https://geekswg.github.io/"target="_blank" rel="external nofollow noopener noreferrer">我的博客发布地址<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a></p>

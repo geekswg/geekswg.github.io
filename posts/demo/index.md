@@ -3,7 +3,8 @@
 
 <!--more-->
 
-# 我的Hugo博客
+## 我的Hugo博客
+
 > hello Hugo
 [我的博客发布地址](https://geekswg.github.io/)
 
@@ -16,6 +17,6 @@ markdown 语法
 
 ---
 
-> 作者:   
+> 作者: [geekswg](https://geekswg.github.io)  
 > URL: https://geekswg.github.io/posts/demo/  
 

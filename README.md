@@ -1,9 +1,9 @@
-<h1 align="center">Gavin Wells</h1>
+<h1 align="center">菠菜眾長</h1>
 
 <div align="center">
+博採眾長—取“兼收并蓄，博采众长。”之意。
 
-
-[预览](https://geekswg.github.io/) | [源码](https://github.com/geekswg/geekswg.github.io)
+[预览](https://lruihao.github.io/) | [源码](https://github.com/Lruihao/hugo-blog)
 </div>
 
 ## Content management
@@ -14,8 +14,8 @@
 
 ## Copyright
 
-:copyright: 2018 - 2023 [geekswg](https://github.com/geekswg)
+:copyright: 2018 - 2022 [Lruihao](https://github.com/Lruihao)
 
 ## Stargazers over time
 
-[![Stargazers over time](https://starchart.cc/geekswg/geekswg.github.io.svg)](https://starchart.cc/geekswg/geekswg.github.io)
+[![Stargazers over time](https://starchart.cc/Lruihao/lruihao.github.io.svg)](https://starchart.cc/Lruihao/lruihao.github.io)
