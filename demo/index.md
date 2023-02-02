@@ -1,8 +1,5 @@
 # A 我的第一个 Hugo 博客
 
-
-
-
 ## 我的Hugo博客
 
 我的博客摘要11134343从大苏打撒旦撒大苏打撒法大使发大水发大水范德萨
@@ -25,4 +22,4 @@ markdown 语法
 
 > 作者: [geekswg](https://geekswg.github.io)  
 > URL: https://geekswg.github.io/demo/  
-
+> 转载 URL: https://geekswg.github.io/
