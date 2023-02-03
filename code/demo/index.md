@@ -1,5 +1,6 @@
 # 示例代码使用
 
+<!--more-->
 ## 主题文档
 
 {{< link "https://github.com/dillonzq/LoveIt" "LoveIt 主题源码" "" true >}}
@@ -18,6 +19,7 @@ link添加链接，link示例代码
 ```html
 {{</* link "https://github.com/hugo-fixit/FixIt" "FixIt 主题源码" "" true */>}}
 ```
+
 > link效果
 
 {{< link "https://github.com/hugo-fixit/FixIt" "FixIt 主题源码" "" true >}}
@@ -248,7 +250,7 @@ Markdown 官方教程访问：<https://markdown.com.cn/>
 
 呈现的输出效果如下：
 
-<!--more-->
+
 
 ---
 
