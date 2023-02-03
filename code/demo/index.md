@@ -35,6 +35,8 @@ music添加音乐，music示例代码
 添加音乐部分效果后，页面导航就有问题了
 {{< /admonition >}}
 
+
+
 ### admonition语法
 
 使用admonition，会使得博客页面更加好看。
@@ -217,9 +219,12 @@ music添加音乐，music示例代码
 {{</* figure src="/images/posts/featured-image-preview.jpg" title="Gavin Wells 欢迎你的留言" */>}}
 ```
 
+![markdown语法添加](/images/posts/featured-image-preview.jpg "markdown语法添加-title")
+
 ### 功能描述
 
 > 示例效果
+
 > 示例代码
 
 ```markdown
@@ -232,7 +237,8 @@ Markdown 官方教程访问：<https://markdown.com.cn/>
 
 ## 目录4
 
-4
+呈现的输出效果如下：
+
 <!--more-->
 
 ---

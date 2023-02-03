@@ -383,10 +383,23 @@ title="FixIt 0.2.0 | 更改"/>&lt;/a>&lt;/p>
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">{{&lt;span class="p">&amp;lt;&lt;/span> &lt;span class="nt">figure&lt;/span> &lt;span class="na">src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;/images/posts/featured-image-preview.jpg&amp;#34;&lt;/span> &lt;span class="na">title&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;Gavin Wells 欢迎你的留言&amp;#34;&lt;/span> &lt;span class="p">&amp;gt;&lt;/span>}}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h3 id="功能描述">功能描述&lt;/h3>
+&lt;/div>&lt;p>&lt;figure>&lt;a class="lightgallery" href="https://geekswg.github.io/images/posts/featured-image-preview.jpg" data-thumbnail="/images/posts/featured-image-preview.jpg" data-sub-html="&lt;h2>markdown语法添加&lt;/h2>&lt;p>markdown语法添加-title&lt;/p>">
+&lt;img
+class="lazyload"
+src="https://geekswg.github.io/svg/loading.min.svg"
+data-src="https://geekswg.github.io/images/posts/featured-image-preview.jpg"
+data-srcset="https://geekswg.github.io/images/posts/featured-image-preview.jpg, https://geekswg.github.io/images/posts/featured-image-preview.jpg 1.5x, https://geekswg.github.io/images/posts/featured-image-preview.jpg 2x"
+data-sizes="auto"
+alt="markdown语法添加"
+title="markdown语法添加-title"/>
+&lt;/a>&lt;figcaption class="image-caption">markdown语法添加&lt;/figcaption>
+&lt;/figure>&lt;/p>
+&lt;h3 id="功能描述">功能描述&lt;/h3>
 &lt;blockquote>
-&lt;p>示例效果&lt;br>
-示例代码&lt;/p>
+&lt;p>示例效果&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>示例代码&lt;/p>
 &lt;/blockquote>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -400,4 +413,4 @@ title="FixIt 0.2.0 | 更改"/>&lt;/a>&lt;/p>
 &lt;p>可快速学习查看markdown语法。&lt;/p>
 &lt;/blockquote>
 &lt;h2 id="目录4">目录4&lt;/h2>
-&lt;p>4&lt;/p></description></item></channel></rss>
+&lt;p>呈现的输出效果如下：&lt;/p></description></item></channel></rss>

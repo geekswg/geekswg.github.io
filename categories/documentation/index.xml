@@ -379,10 +379,16 @@
 <pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">{{<span class="p">&lt;</span> <span class="nt">figure</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;/images/posts/featured-image-preview.jpg&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Gavin Wells 欢迎你的留言&#34;</span> <span class="p">&gt;</span>}}
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="功能描述">功能描述</h3>
+</div><p><figure><a class="lightgallery" href="/images/posts/featured-image-preview.jpg" data-thumbnail="/images/posts/featured-image-preview.jpg" data-sub-html="<h2>markdown语法添加</h2><p>markdown语法添加-title</p>">
+    
+  </a><figcaption class="image-caption">markdown语法添加</figcaption>
+  </figure></p>
+<h3 id="功能描述">功能描述</h3>
 <blockquote>
-<p>示例效果<br>
-示例代码</p>
+<p>示例效果</p>
+</blockquote>
+<blockquote>
+<p>示例代码</p>
 </blockquote>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -396,4 +402,4 @@
 <p>可快速学习查看markdown语法。</p>
 </blockquote>
 <h2 id="目录4">目录4</h2>
-<p>4</p>]]></description></item></channel></rss>
+<p>呈现的输出效果如下：</p>]]></description></item></channel></rss>
