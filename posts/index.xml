@@ -1,4 +1,102 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>所有文章 - 毕少侠</title><link>https://geekswg.github.io/posts/</link><description>所有文章 | 毕少侠</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>geekswg@qq.com (geekswg)</managingEditor><webMaster>geekswg@qq.com (geekswg)</webMaster><copyright>geekswg</copyright><lastBuildDate>Thu, 02 Feb 2023 14:51:53 +0800</lastBuildDate><atom:link href="https://geekswg.github.io/posts/" rel="self" type="application/rss+xml"/><item><title>测试 featured-image 文章标题</title><link>https://geekswg.github.io/t/</link><pubDate>Thu, 02 Feb 2023 14:51:53 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/t/</guid><description><![CDATA[<div class="featured-image">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>所有文章 - 毕少侠</title><link>https://geekswg.github.io/posts/</link><description>所有文章 | 毕少侠</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>geekswg@qq.com (geekswg)</managingEditor><webMaster>geekswg@qq.com (geekswg)</webMaster><copyright>geekswg</copyright><lastBuildDate>Thu, 02 Feb 2023 14:51:53 +0800</lastBuildDate><atom:link href="https://geekswg.github.io/posts/" rel="self" type="application/rss+xml"/><item><title>DOS命令总结</title><link>https://geekswg.github.io/dos/</link><pubDate>Thu, 02 Feb 2023 14:51:53 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/dos/</guid><description><![CDATA[<div class="featured-image">
+        <img src="/images/posts/featured-image.jpg" referrerpolicy="no-referrer">
+      </div><p>总结一些用到dos命令，方便查用</p>
+<h2 id="快捷打开控制面板">快捷打开控制面板</h2>
+<div class="details admonition note open">
+    <div class="details-summary admonition-title">
+      <i class="icon fa-solid fa-pencil-alt fa-fw" aria-hidden="true"></i>注意<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i>
+    </div>
+    <div class="details-content">
+      <div class="admonition-content">我们在安装开发工具，和一些SDK，经常要 <strong>配置环境变量</strong> ，新建一个bat文件，使用DOS命令快速打开，windows环境变量配置页面.</div>
+    </div>
+  </div>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bat" data-lang="bat"><span class="line"><span class="cl"><span class="p">@</span><span class="k">echo</span> off
+</span></span><span class="line"><span class="cl"><span class="k">start</span> rundll32 sysdm.cpl,EditEnvironmentVariables
+</span></span><span class="line"><span class="cl"><span class="k">exit</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="下载">下载</h3>
+<a href="oepenENV.bat" class="card-link" download="打开环境变量.bat"><span class="cl-backdrop" style="--cl-bg-url: url(/fixit.min.svg);"></span>
+    <span class="cl-content">
+      <span class="cl-text">
+        <span class="cl-title">下载批处理文件</span>
+        <span class="cl-meta">
+          <svg class="cl-icon-link" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" width="16" height="16"><path d="M574 665.4c-3.1-3.1-8.2-3.1-11.3 0L446.5 781.6c-53.8 53.8-144.6 59.5-204 0-59.5-59.5-53.8-150.2 0-204l116.2-116.2c3.1-3.1 3.1-8.2 0-11.3l-39.8-39.8c-3.1-3.1-8.2-3.1-11.3 0L191.4 526.5c-84.6 84.6-84.6 221.5 0 306s221.5 84.6 306 0l116.2-116.2c3.1-3.1 3.1-8.2 0-11.3L574 665.4zM832.6 191.4c-84.6-84.6-221.5-84.6-306 0L410.3 307.6c-3.1 3.1-3.1 8.2 0 11.3l39.7 39.7c3.1 3.1 8.2 3.1 11.3 0l116.2-116.2c53.8-53.8 144.6-59.5 204 0 59.5 59.5 53.8 150.2 0 204L665.3 562.6c-3.1 3.1-3.1 8.2 0 11.3l39.8 39.8c3.1 3.1 8.2 3.1 11.3 0l116.2-116.2c84.5-84.6 84.5-221.5 0-306.1z" fill="#a9a9b3"></path><path d="M610.1 372.3c-3.1-3.1-8.2-3.1-11.3 0L372.3 598.7c-3.1 3.1-3.1 8.2 0 11.3l39.6 39.6c3.1 3.1 8.2 3.1 11.3 0l226.4-226.4c3.1-3.1 3.1-8.2 0-11.3l-39.5-39.6z" fill="#a9a9b3"></path></svg>
+          <span class="cl-url">oepenENV.bat</span>
+        </span>
+      </span><svg class="cl-icon-download" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" width="64" height="64"><path d="M824.32 473.6c-15.36-2.56-25.6-15.36-25.6-30.72 0-112.64-71.68-217.6-179.2-250.88-148.48-46.08-289.28 38.4-332.8 166.4-2.56 10.24-12.8 17.92-23.04 20.48C143.36 401.92 51.2 509.44 51.2 637.44v2.56c0 115.2 97.28 204.8 209.92 204.8h524.8c102.4-2.56 184.32-84.48 184.32-186.88 2.56-89.6-61.44-163.84-145.92-184.32z m-273.92 225.28c-12.8 12.8-30.72 15.36-46.08 10.24H501.76c-5.12-2.56-10.24-5.12-15.36-10.24L366.08 578.56c-15.36-15.36-15.36-43.52 0-58.88 15.36-15.36 43.52-15.36 58.88 0l51.2 51.2V352.4608c0-23.04 17.92-40.96 40.96-40.96 23.04 0 40.96 17.92 40.96 40.96v218.4192l51.2-51.2c17.92-17.92 43.52-17.92 61.44 0 17.92 15.36 17.92 40.96 0 58.88l-120.32 120.32z" fill="#4FC089"></path></svg></span></a>
+<h2 id="dos命令demo">DOS命令Demo</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bat" data-lang="bat"><span class="line"><span class="cl"><span class="p">@</span><span class="k">echo</span> off
+</span></span><span class="line"><span class="cl"><span class="k">set</span> <span class="nv">exitStr</span><span class="p">=</span>q
+</span></span><span class="line"><span class="cl"><span class="k">set</span> <span class="nv">excuteStr</span><span class="p">=</span>dydl.exe -up 
+</span></span><span class="line"><span class="cl"><span class="k">set</span> <span class="nv">paramStr</span><span class="p">=</span>?relation<span class="se">^=</span>1
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">:</span><span class="nl">loop</span>
+</span></span><span class="line"><span class="cl"><span class="k">set</span> <span class="nv">excuteStr</span><span class="p">=</span>dydl.exe -up 
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> 输入q回车退出程序
+</span></span><span class="line"><span class="cl"><span class="c1">rem set 用来设置变量，/p 表示暂停，等待用户输入，  var= 就是用户的输入.</span>
+</span></span><span class="line"><span class="cl"><span class="k">set</span> <span class="k">/p</span> <span class="nv">inputStr</span><span class="p">=</span>请输入需要下载的抖音主页的网址（q）:
+</span></span><span class="line"><span class="cl"><span class="k">set</span> <span class="nv">excuteStr</span><span class="p">=</span><span class="nv">%excuteStr%%inputStr%%paramStr%</span>
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> 正在执行 <span class="nv">%excuteStr%</span>
+</span></span><span class="line"><span class="cl"><span class="c1">rem 将echo内容保存到文件</span>
+</span></span><span class="line"><span class="cl"><span class="p">@</span><span class="k">echo</span> <span class="nv">%excuteStr%</span> <span class="p">&gt;&gt;</span> executeLog.txt
+</span></span><span class="line"><span class="cl"><span class="c1">rem start cmd 新开一个窗口执行命令异步操作</span>
+</span></span><span class="line"><span class="cl"><span class="c1">rem cmd 当前窗口执行命令 同步阻塞操作</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="s2">&#34;</span><span class="nv">%inputStr%</span><span class="s2">&#34;</span> <span class="o">==</span> <span class="s2">&#34;</span><span class="nv">%exitStr%</span><span class="s2">&#34;</span> <span class="k">goto</span> <span class="nl">end_loop</span>
+</span></span><span class="line"><span class="cl"><span class="k">pause</span>
+</span></span><span class="line"><span class="cl"><span class="nv">%excuteStr%</span>
+</span></span><span class="line"><span class="cl"><span class="k">goto</span> <span class="nl">loop</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">:</span><span class="nl">end_loop</span>
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> 正在退出程序，按任意建退出！
+</span></span><span class="line"><span class="cl"><span class="k">pause</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="批处理文件下载demo">批处理文件下载Demo</h3>
+<a href="/dos/dydownload.zip" class="card-link" download="下载抖音无水印视频.zip"><span class="cl-backdrop" style="--cl-bg-url: url(/fixit.min.svg);"></span>
+    <span class="cl-content">
+      <span class="cl-text">
+        <span class="cl-title">下载抖音无水印视频</span>
+        <span class="cl-meta">
+          <svg class="cl-icon-link" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" width="16" height="16"><path d="M574 665.4c-3.1-3.1-8.2-3.1-11.3 0L446.5 781.6c-53.8 53.8-144.6 59.5-204 0-59.5-59.5-53.8-150.2 0-204l116.2-116.2c3.1-3.1 3.1-8.2 0-11.3l-39.8-39.8c-3.1-3.1-8.2-3.1-11.3 0L191.4 526.5c-84.6 84.6-84.6 221.5 0 306s221.5 84.6 306 0l116.2-116.2c3.1-3.1 3.1-8.2 0-11.3L574 665.4zM832.6 191.4c-84.6-84.6-221.5-84.6-306 0L410.3 307.6c-3.1 3.1-3.1 8.2 0 11.3l39.7 39.7c3.1 3.1 8.2 3.1 11.3 0l116.2-116.2c53.8-53.8 144.6-59.5 204 0 59.5 59.5 53.8 150.2 0 204L665.3 562.6c-3.1 3.1-3.1 8.2 0 11.3l39.8 39.8c3.1 3.1 8.2 3.1 11.3 0l116.2-116.2c84.5-84.6 84.5-221.5 0-306.1z" fill="#a9a9b3"></path><path d="M610.1 372.3c-3.1-3.1-8.2-3.1-11.3 0L372.3 598.7c-3.1 3.1-3.1 8.2 0 11.3l39.6 39.6c3.1 3.1 8.2 3.1 11.3 0l226.4-226.4c3.1-3.1 3.1-8.2 0-11.3l-39.5-39.6z" fill="#a9a9b3"></path></svg>
+          <span class="cl-url">/dos/dydownload.zip</span>
+        </span>
+      </span><svg class="cl-icon-download" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" width="64" height="64"><path d="M824.32 473.6c-15.36-2.56-25.6-15.36-25.6-30.72 0-112.64-71.68-217.6-179.2-250.88-148.48-46.08-289.28 38.4-332.8 166.4-2.56 10.24-12.8 17.92-23.04 20.48C143.36 401.92 51.2 509.44 51.2 637.44v2.56c0 115.2 97.28 204.8 209.92 204.8h524.8c102.4-2.56 184.32-84.48 184.32-186.88 2.56-89.6-61.44-163.84-145.92-184.32z m-273.92 225.28c-12.8 12.8-30.72 15.36-46.08 10.24H501.76c-5.12-2.56-10.24-5.12-15.36-10.24L366.08 578.56c-15.36-15.36-15.36-43.52 0-58.88 15.36-15.36 43.52-15.36 58.88 0l51.2 51.2V352.4608c0-23.04 17.92-40.96 40.96-40.96 23.04 0 40.96 17.92 40.96 40.96v218.4192l51.2-51.2c17.92-17.92 43.52-17.92 61.44 0 17.92 15.36 17.92 40.96 0 58.88l-120.32 120.32z" fill="#4FC089"></path></svg></span></a>]]></description></item><item><title>测试 featured-image 文章标题</title><link>https://geekswg.github.io/t/</link><pubDate>Thu, 02 Feb 2023 14:51:53 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/t/</guid><description><![CDATA[<div class="featured-image">
         <img src="/images/posts/featured-image.jpg" referrerpolicy="no-referrer">
       </div><p>文章demo - 这里使用md语法编写文章。<br>
 使用文章描述作为摘要<br>
@@ -78,7 +176,105 @@
       </label>
     </div>
     <div data-password="a01610228fe998f515a72dd730294d87" data-content="6L&#43;Z602f9ed2a8d1e08d8f74f5303e9eb93637d47f82ab6f1c15871cf8dd0481YeM5pi&#43;56S655qE5piv6YOo5YiG5Yqg5a&#43;G55qE5YaF5a65PGJyPgo8Y29kZT5maXhpdC1lbmNyeXB0b3I8L2NvZGU&#43;IHNob3J0Y29kZSDlnKjniYjmnKwgPGEgaHJlZj0iaHR0cHM6Ly9naXRodWIuY29tL2h1Z28tZml4aXQvRml4SXQvcmVsZWFzZXMvdGFnL3YwLjIuMTUiIHJlbD0iZXh0ZXJuYWwgbm9mb2xsb3cgbm9vcGVuZXIgbm9yZWZlcnJlciIgdGFyZ2V0PSJfYmxhbmsiPjxpbWcKY2xhc3M9Imxhenlsb2FkIHZlcnNpb24iCnNyYz0iL3N2Zy9sb2FkaW5nLm1pbi5zdmciCmRhdGEtc3JjPSIvc3ZnL3ZlcnNpb24vMC4yLjE1LW5ldy5taW4uc3ZnIgpkYXRhLXNyY3NldD0iL3N2Zy92ZXJzaW9uLzAuMi4xNS1uZXcubWluLnN2ZywgL3N2Zy92ZXJzaW9uLzAuMi4xNS1uZXcubWluLnN2ZyAxLjV4LCAvc3ZnL3ZlcnNpb24vMC4yLjE1LW5ldy5taW4uc3ZnIDJ4IgpkYXRhLXNpemVzPSJhdXRvIgphbHQ9IkZpeEl0IDAuMi4xNSB8IOaWsOWiniIKdGl0bGU9IkZpeEl0IDAuMi4xNSB8IOaWsOWiniIvPjwvYT4g5b6X5Yiw5pSv5oyB44CC"></div>
-  </fixit-encryptor>]]></description></item><item><title>测试评论</title><link>https://geekswg.github.io/demo3/</link><pubDate>Tue, 01 Feb 2022 23:02:55 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/demo3/</guid><description></description></item><item><title>测试 featured-image 文章标题</title><link>https://geekswg.github.io/t/</link><pubDate>Thu, 02 Feb 2023 14:51:53 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/t/</guid><description><![CDATA[<div class="featured-image">
+  </fixit-encryptor>]]></description></item><item><title>测试评论</title><link>https://geekswg.github.io/demo3/</link><pubDate>Tue, 01 Feb 2022 23:02:55 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/demo3/</guid><description></description></item><item><title>DOS命令总结</title><link>https://geekswg.github.io/dos/</link><pubDate>Thu, 02 Feb 2023 14:51:53 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/dos/</guid><description><![CDATA[<div class="featured-image">
+        <img src="/images/posts/featured-image.jpg" referrerpolicy="no-referrer">
+      </div><p>总结一些用到dos命令，方便查用</p>
+<h2 id="快捷打开控制面板">快捷打开控制面板</h2>
+<div class="details admonition note open">
+    <div class="details-summary admonition-title">
+      <i class="icon fa-solid fa-pencil-alt fa-fw" aria-hidden="true"></i>注意<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i>
+    </div>
+    <div class="details-content">
+      <div class="admonition-content">我们在安装开发工具，和一些SDK，经常要 <strong>配置环境变量</strong> ，新建一个bat文件，使用DOS命令快速打开，windows环境变量配置页面.</div>
+    </div>
+  </div>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bat" data-lang="bat"><span class="line"><span class="cl"><span class="p">@</span><span class="k">echo</span> off
+</span></span><span class="line"><span class="cl"><span class="k">start</span> rundll32 sysdm.cpl,EditEnvironmentVariables
+</span></span><span class="line"><span class="cl"><span class="k">exit</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="下载">下载</h3>
+<a href="oepenENV.bat" class="card-link" download="打开环境变量.bat"><span class="cl-backdrop" style="--cl-bg-url: url(/fixit.min.svg);"></span>
+    <span class="cl-content">
+      <span class="cl-text">
+        <span class="cl-title">下载批处理文件</span>
+        <span class="cl-meta">
+          <svg class="cl-icon-link" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" width="16" height="16"><path d="M574 665.4c-3.1-3.1-8.2-3.1-11.3 0L446.5 781.6c-53.8 53.8-144.6 59.5-204 0-59.5-59.5-53.8-150.2 0-204l116.2-116.2c3.1-3.1 3.1-8.2 0-11.3l-39.8-39.8c-3.1-3.1-8.2-3.1-11.3 0L191.4 526.5c-84.6 84.6-84.6 221.5 0 306s221.5 84.6 306 0l116.2-116.2c3.1-3.1 3.1-8.2 0-11.3L574 665.4zM832.6 191.4c-84.6-84.6-221.5-84.6-306 0L410.3 307.6c-3.1 3.1-3.1 8.2 0 11.3l39.7 39.7c3.1 3.1 8.2 3.1 11.3 0l116.2-116.2c53.8-53.8 144.6-59.5 204 0 59.5 59.5 53.8 150.2 0 204L665.3 562.6c-3.1 3.1-3.1 8.2 0 11.3l39.8 39.8c3.1 3.1 8.2 3.1 11.3 0l116.2-116.2c84.5-84.6 84.5-221.5 0-306.1z" fill="#a9a9b3"></path><path d="M610.1 372.3c-3.1-3.1-8.2-3.1-11.3 0L372.3 598.7c-3.1 3.1-3.1 8.2 0 11.3l39.6 39.6c3.1 3.1 8.2 3.1 11.3 0l226.4-226.4c3.1-3.1 3.1-8.2 0-11.3l-39.5-39.6z" fill="#a9a9b3"></path></svg>
+          <span class="cl-url">oepenENV.bat</span>
+        </span>
+      </span><svg class="cl-icon-download" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" width="64" height="64"><path d="M824.32 473.6c-15.36-2.56-25.6-15.36-25.6-30.72 0-112.64-71.68-217.6-179.2-250.88-148.48-46.08-289.28 38.4-332.8 166.4-2.56 10.24-12.8 17.92-23.04 20.48C143.36 401.92 51.2 509.44 51.2 637.44v2.56c0 115.2 97.28 204.8 209.92 204.8h524.8c102.4-2.56 184.32-84.48 184.32-186.88 2.56-89.6-61.44-163.84-145.92-184.32z m-273.92 225.28c-12.8 12.8-30.72 15.36-46.08 10.24H501.76c-5.12-2.56-10.24-5.12-15.36-10.24L366.08 578.56c-15.36-15.36-15.36-43.52 0-58.88 15.36-15.36 43.52-15.36 58.88 0l51.2 51.2V352.4608c0-23.04 17.92-40.96 40.96-40.96 23.04 0 40.96 17.92 40.96 40.96v218.4192l51.2-51.2c17.92-17.92 43.52-17.92 61.44 0 17.92 15.36 17.92 40.96 0 58.88l-120.32 120.32z" fill="#4FC089"></path></svg></span></a>
+<h2 id="dos命令demo">DOS命令Demo</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bat" data-lang="bat"><span class="line"><span class="cl"><span class="p">@</span><span class="k">echo</span> off
+</span></span><span class="line"><span class="cl"><span class="k">set</span> <span class="nv">exitStr</span><span class="p">=</span>q
+</span></span><span class="line"><span class="cl"><span class="k">set</span> <span class="nv">excuteStr</span><span class="p">=</span>dydl.exe -up 
+</span></span><span class="line"><span class="cl"><span class="k">set</span> <span class="nv">paramStr</span><span class="p">=</span>?relation<span class="se">^=</span>1
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">:</span><span class="nl">loop</span>
+</span></span><span class="line"><span class="cl"><span class="k">set</span> <span class="nv">excuteStr</span><span class="p">=</span>dydl.exe -up 
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> 输入q回车退出程序
+</span></span><span class="line"><span class="cl"><span class="c1">rem set 用来设置变量，/p 表示暂停，等待用户输入，  var= 就是用户的输入.</span>
+</span></span><span class="line"><span class="cl"><span class="k">set</span> <span class="k">/p</span> <span class="nv">inputStr</span><span class="p">=</span>请输入需要下载的抖音主页的网址（q）:
+</span></span><span class="line"><span class="cl"><span class="k">set</span> <span class="nv">excuteStr</span><span class="p">=</span><span class="nv">%excuteStr%%inputStr%%paramStr%</span>
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> 正在执行 <span class="nv">%excuteStr%</span>
+</span></span><span class="line"><span class="cl"><span class="c1">rem 将echo内容保存到文件</span>
+</span></span><span class="line"><span class="cl"><span class="p">@</span><span class="k">echo</span> <span class="nv">%excuteStr%</span> <span class="p">&gt;&gt;</span> executeLog.txt
+</span></span><span class="line"><span class="cl"><span class="c1">rem start cmd 新开一个窗口执行命令异步操作</span>
+</span></span><span class="line"><span class="cl"><span class="c1">rem cmd 当前窗口执行命令 同步阻塞操作</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="s2">&#34;</span><span class="nv">%inputStr%</span><span class="s2">&#34;</span> <span class="o">==</span> <span class="s2">&#34;</span><span class="nv">%exitStr%</span><span class="s2">&#34;</span> <span class="k">goto</span> <span class="nl">end_loop</span>
+</span></span><span class="line"><span class="cl"><span class="k">pause</span>
+</span></span><span class="line"><span class="cl"><span class="nv">%excuteStr%</span>
+</span></span><span class="line"><span class="cl"><span class="k">goto</span> <span class="nl">loop</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">:</span><span class="nl">end_loop</span>
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> 正在退出程序，按任意建退出！
+</span></span><span class="line"><span class="cl"><span class="k">pause</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="批处理文件下载demo">批处理文件下载Demo</h3>
+<a href="/dos/dydownload.zip" class="card-link" download="下载抖音无水印视频.zip"><span class="cl-backdrop" style="--cl-bg-url: url(/fixit.min.svg);"></span>
+    <span class="cl-content">
+      <span class="cl-text">
+        <span class="cl-title">下载抖音无水印视频</span>
+        <span class="cl-meta">
+          <svg class="cl-icon-link" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" width="16" height="16"><path d="M574 665.4c-3.1-3.1-8.2-3.1-11.3 0L446.5 781.6c-53.8 53.8-144.6 59.5-204 0-59.5-59.5-53.8-150.2 0-204l116.2-116.2c3.1-3.1 3.1-8.2 0-11.3l-39.8-39.8c-3.1-3.1-8.2-3.1-11.3 0L191.4 526.5c-84.6 84.6-84.6 221.5 0 306s221.5 84.6 306 0l116.2-116.2c3.1-3.1 3.1-8.2 0-11.3L574 665.4zM832.6 191.4c-84.6-84.6-221.5-84.6-306 0L410.3 307.6c-3.1 3.1-3.1 8.2 0 11.3l39.7 39.7c3.1 3.1 8.2 3.1 11.3 0l116.2-116.2c53.8-53.8 144.6-59.5 204 0 59.5 59.5 53.8 150.2 0 204L665.3 562.6c-3.1 3.1-3.1 8.2 0 11.3l39.8 39.8c3.1 3.1 8.2 3.1 11.3 0l116.2-116.2c84.5-84.6 84.5-221.5 0-306.1z" fill="#a9a9b3"></path><path d="M610.1 372.3c-3.1-3.1-8.2-3.1-11.3 0L372.3 598.7c-3.1 3.1-3.1 8.2 0 11.3l39.6 39.6c3.1 3.1 8.2 3.1 11.3 0l226.4-226.4c3.1-3.1 3.1-8.2 0-11.3l-39.5-39.6z" fill="#a9a9b3"></path></svg>
+          <span class="cl-url">/dos/dydownload.zip</span>
+        </span>
+      </span><svg class="cl-icon-download" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" width="64" height="64"><path d="M824.32 473.6c-15.36-2.56-25.6-15.36-25.6-30.72 0-112.64-71.68-217.6-179.2-250.88-148.48-46.08-289.28 38.4-332.8 166.4-2.56 10.24-12.8 17.92-23.04 20.48C143.36 401.92 51.2 509.44 51.2 637.44v2.56c0 115.2 97.28 204.8 209.92 204.8h524.8c102.4-2.56 184.32-84.48 184.32-186.88 2.56-89.6-61.44-163.84-145.92-184.32z m-273.92 225.28c-12.8 12.8-30.72 15.36-46.08 10.24H501.76c-5.12-2.56-10.24-5.12-15.36-10.24L366.08 578.56c-15.36-15.36-15.36-43.52 0-58.88 15.36-15.36 43.52-15.36 58.88 0l51.2 51.2V352.4608c0-23.04 17.92-40.96 40.96-40.96 23.04 0 40.96 17.92 40.96 40.96v218.4192l51.2-51.2c17.92-17.92 43.52-17.92 61.44 0 17.92 15.36 17.92 40.96 0 58.88l-120.32 120.32z" fill="#4FC089"></path></svg></span></a>]]></description></item><item><title>测试 featured-image 文章标题</title><link>https://geekswg.github.io/t/</link><pubDate>Thu, 02 Feb 2023 14:51:53 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/t/</guid><description><![CDATA[<div class="featured-image">
         <img src="/images/posts/featured-image.jpg" referrerpolicy="no-referrer">
       </div><p>文章demo - 这里使用md语法编写文章。<br>
 使用文章描述作为摘要<br>

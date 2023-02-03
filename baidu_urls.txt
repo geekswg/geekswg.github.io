@@ -1,4 +1,6 @@
 https://geekswg.github.io/about/
+https://geekswg.github.io/code/hugo-admonition/
+https://geekswg.github.io/dos/
 https://geekswg.github.io/t/
 https://geekswg.github.io/code/demo/
 https://geekswg.github.io/notepad/

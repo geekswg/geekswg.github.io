@@ -18,10 +18,21 @@ link添加链接，link示例代码
 ```html
 {{</* link "https://github.com/hugo-fixit/FixIt" "FixIt 主题源码" "" true */>}}
 ```
-
-link效果
+> link效果
 
 {{< link "https://github.com/hugo-fixit/FixIt" "FixIt 主题源码" "" true >}}
+
+{{< admonition tip "技巧">}}
+link添加下载链接
+{{< /admonition >}}
+{{< link href="/logo.png" content=":(far fa-star fa-fw): 下载图片" download="网站logo" card=true >}}
+{{< link href="/logo.png" content=":(far fa-star fa-fw): 下载图片" download="下载后的名称" card=false >}}
+
+```html
+{{</* link href="/logo.png" content=":(far fa-star fa-fw): 下载图片" download="网站logo" card=true */>}}
+或者
+{{</* link href="/logo.png" content=":(far fa-star fa-fw): 下载图片" download="下载后的名称" card=false */>}}
+```
 
 ### music添加音乐
 
@@ -34,8 +45,6 @@ music添加音乐，music示例代码
 {{< admonition bug music效果 >}}
 添加音乐部分效果后，页面导航就有问题了
 {{< /admonition >}}
-
-
 
 ### admonition语法
 
