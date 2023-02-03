@@ -2,7 +2,7 @@
 
 `admonition` shortcode 支持 **12** 种 帮助你在页面中插入提示的横幅.
 *支持 Markdown 或者 HTML 格式.*
-
+<!--more-->
 ## 参数说明
 
 `admonition` shortcode 有以下命名参数:
@@ -240,7 +240,7 @@
 ```
 
 ---
-<!--more-->
+
 
 ---
 
