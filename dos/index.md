@@ -16,7 +16,7 @@ exit
 
 ### 下载
 
-{{< link href="oepenENV.bat" content="下载批处理文件" download="打开环境变量.bat" card=true >}}
+{{< link href="oepenENV.bat" content="下载批处理文件-快速打开环境变量" download="打开环境变量.bat" card=true >}}
 
 ## DOS命令Demo
 
