@@ -3,7 +3,7 @@
 <!--more-->
 {{< typeit >}}
 <center>
-<span  style="font-family:楷体;font-size:18px;color:#009966;" >
+<span  style='font-family: MMT,"沐目体";font-size:18px;color:#009966;' >
 莫笑少年江湖梦，谁不少年梦江湖。曾经年少立志三千里，如今踌躇百步无寸功。
 
 懵懂半生，庸碌尘世中，转眼高堂皆白发，儿女蹒跚学堂中。碎银几两催人老。
@@ -27,6 +27,13 @@
 {{</* music url="/music/Take-Me-To-Your-Heart.mp3"  name="Take-Me-To-Your-Heart" artist="Michael Learns To Rock" cover="/logo.png" volume="0.2" autoplay=true loop=all */>}}
 ```
 
+{{< random-comment >}}
+
+{{< details "来自 [网易云歌单](https://music.163.com/#/playlist?id=2280569152)" >}}
+{{< music server="netease" type="playlist" id="2280569152" loop="all" list-folded="true" >}}
+{{< /details >}}
+
+---
 
 ---
 
