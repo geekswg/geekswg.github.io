@@ -16,7 +16,7 @@ exit
 
 ### 下载
 
-{{< link href="oepenENV.bat" content="下载批处理文件-快速打开环境变量" download="打开环境变量.bat" card=true >}}
+{{< link href="openENV.bat" content="下载批处理文件-快速打开环境变量" download="打开环境变量.bat" card=true >}}
 
 ## DOS命令Demo
 
@@ -52,6 +52,7 @@ pause
 {{< link href="dydownload.zip" content="下载抖音无水印视频" download="下载抖音无水印视频.zip" card=true >}}
 
 <!--more-->
+
 
 ---
 
