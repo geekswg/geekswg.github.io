@@ -1,15 +1,19 @@
 # 留言板
 
+{{< admonition tip "Welcome" >}}
+{{< typeit >}}
+  互联网的广大朋友们，欢迎光临我的小博客！欢迎留言！
+{{< /typeit >}}
 
-{{< admonition info "这里是我的留言板" >}}
-欢迎各位的留言
+<small>*关于 [FixIt 主题](https://github.com/hugo-fixit/FixIt) 的问题，请移步 [FixIt 官网](https://fixit.lruihao.cn) 相关文章哦～*</small>
 {{< /admonition >}}
 
----
-<!-- 插入图片 -->
-{{< figure src="/images/posts/featured-image-preview.jpg" title="Gavin Wells 欢迎你的留言" >}}
+{{< details "来自 [网易云歌单](https://music.163.com/#/playlist?id=2280569152)" >}}
+{{< music server="netease" type="playlist" id="2280569152" loop="all" list-folded="true" fixed=true >}}
+{{< /details >}}
+{{< random-comment >}}
 
-{{< music auto="https://y.qq.com/n/yqq/playlist/8138088068.html" autoplay=true >}}
+
 
 
 ---
