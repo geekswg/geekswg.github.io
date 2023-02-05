@@ -1,6 +1,6 @@
 # ChatGPT-Web
 
-
+<!--more-->
 <!DOCTYPE html>
 <html lang="zh">
 
