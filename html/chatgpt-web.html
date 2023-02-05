@@ -110,7 +110,7 @@
             <h2>Params 参数配置</h2>
             <el-form>
               <h4 v-show="false">API Key</h4>
-              <el-input v-show="false" v-model="key" placeholder="API秘钥" show-password type="password" value="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"></el-input>
+              <el-input v-show="false" v-model="key" placeholder="API秘钥" show-password type="password" value=""></el-input>
               <h4>Prompt 请输入你的问题</h4>
               <el-input type="textarea" v-model="prompt" placeholder="输入内容" rows="10"></el-input>
 
@@ -172,7 +172,7 @@
       data() {
         return {
           loading: false,
-          key: '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',
+          key: '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',
           prompt: '',
           temperature: 1,
           top_p: 1,
@@ -230,9 +230,11 @@
             stop: this.stop
           }
           this.loading = true
+          let myKey = "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";
           axios.post('https://api.openai.com/v1/completions', data, {
             headers: {
               'Content-Type': 'application/json',
+              //'Authorization': `Bearer ` + myKey,
               'Authorization': `Bearer ` + this.key,
             }
           })
