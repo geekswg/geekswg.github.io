@@ -172,7 +172,7 @@
       data() {
         return {
           loading: false,
-          key: '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',
+          key: '',
           prompt: '',
           temperature: 1,
           top_p: 1,
@@ -230,12 +230,12 @@
             stop: this.stop
           }
           this.loading = true
-          let myKey = "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";
+          let myKey = "c2stQjZUcnhwUW40cnFmM3BNRTFZQWZUM0JsYmtGSnY2OEp3NGZ4ZkhYYWp3dmlXdUVr";
           axios.post('https://api.openai.com/v1/completions', data, {
             headers: {
               'Content-Type': 'application/json',
-              //'Authorization': `Bearer ` + myKey,
-              'Authorization': `Bearer ` + this.key,
+              'Authorization': `Bearer ` + atob(myKey),
+              //'Authorization': `Bearer ` + this.key,
             }
           })
             .then(response => {
