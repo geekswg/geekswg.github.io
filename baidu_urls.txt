@@ -1,4 +1,5 @@
 https://geekswg.github.io/about/
+https://geekswg.github.io/chatgpt-web/
 https://geekswg.github.io/code/hugo-admonition/
 https://geekswg.github.io/dos/
 https://geekswg.github.io/t/
