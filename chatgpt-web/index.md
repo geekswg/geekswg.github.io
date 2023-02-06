@@ -109,7 +109,7 @@
           <el-col :span="8" class="col-params" v-loading="loading" element-loading-text="Loading..."
             :element-loading-spinner="svg" element-loading-svg-view-box="-10, -10, 50, 50"
             element-loading-background="rgba(122, 122, 122, 0.8)">
-            <el-button size="large" type="success" @click="submitForm">Confirm 发送</el-button>
+            <el-button size="large" type="success" @click="submitForm">Send发送</el-button>
             <h2>Params 参数配置</h2>
             <el-form>
               <h4 v-show="false">API Key</h4>
@@ -157,9 +157,9 @@
 
           </el-col>
           <el-col :span="16">
-            <el-button size="large" type="warning" @click="downloadTxt" :disabled="download_disable">save 保存</el-button>
+            <el-button size="large" type="warning" @click="downloadTxt" :disabled="download_disable">save保存</el-button>
               
-            <el-button size="large" type="warning" @click="copyTxt" >copy 复制</el-button>
+            <el-button size="large" type="warning" @click="copyTxt" >copy复制</el-button>
               
             <h2>Repsonse 结果 ChatGPT的回答</h2>
 
@@ -264,4 +264,4 @@
 
 > 作者: [geekswg](https://geekswg.github.io)  
 > URL: https://geekswg.github.io/chatgpt-web/  
-> 转载 URL: https://geekswg.github.io/
+
