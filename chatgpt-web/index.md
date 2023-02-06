@@ -117,35 +117,7 @@
               <h4>Prompt 请输入你的问题</h4>
               <el-input type="textarea" v-model="prompt" placeholder="输入内容" rows="10"></el-input>
 
-              <h4>Max_tokens</h4>
-
-              <el-input-number type="number" v-model="max_tokens"></el-input-number>
-              <h4>Temperature</h4>
-              <div class="slider-block">
-                <span class="slider-laber">Temperature</span>
-                <el-slider v-model="temperature" :step="0.1" :min="0" :max="1" show-input />
-              </div>
-              <h4>Top_p</h4>
-              <div class="slider-block">
-                <span class="slider-laber">Top_p</span>
-                <el-slider v-model="top_p" :step="0.1" :min="0" :max="1" show-input />
-              </div>
-              <h4>Frequency_penalty</h4>
-              <div class="slider-block">
-                <span class="slider-laber">Frequency_penalty</span>
-                <el-slider v-model="frequency_penalty" :step="0.1" :min="-2" :max="2" show-input />
-              </div>
-              <h4>Presence_penalty</h4>
-              <div class="slider-block">
-                <span class="slider-laber">Presence_penalty</span>
-                <el-slider v-model="presence_penalty" :step="0.1" :min="-2" :max="2" show-input />
-              </div>
-              <h4>Model</h4>
-              <el-select v-model="model" class="m-2" placeholder="Model" size="large">
-                <el-option v-for="item in models" :key="item.value" :label="item.label" :value="item.value">{{
-                  item
-                  }}</el-option>
-              </el-select>
+              
             </el-form>
 
 
@@ -166,6 +138,43 @@
             <p id="result" style="color:red;white-space: pre-wrap;">{{ response }}</p>
           </el-col>
         </el-row>
+
+
+        <el-row>
+          <el-form>
+          <h4>API 参数</h4>
+          <h4>Max_tokens</h4>
+          <el-input-number type="number" v-model="max_tokens"></el-input-number>
+          <h4>Temperature</h4>
+          <div class="slider-block">
+            <span class="slider-laber">Temperature</span>
+            <el-slider v-model="temperature" :step="0.1" :min="0" :max="1" show-input />
+          </div>
+          <h4>Top_p</h4>
+          <div class="slider-block">
+            <span class="slider-laber">Top_p</span>
+            <el-slider v-model="top_p" :step="0.1" :min="0" :max="1" show-input />
+          </div>
+          <h4>Frequency_penalty</h4>
+          <div class="slider-block">
+            <span class="slider-laber">Frequency_penalty</span>
+            <el-slider v-model="frequency_penalty" :step="0.1" :min="-2" :max="2" show-input />
+          </div>
+          <h4>Presence_penalty</h4>
+          <div class="slider-block">
+            <span class="slider-laber">Presence_penalty</span>
+            <el-slider v-model="presence_penalty" :step="0.1" :min="-2" :max="2" show-input />
+          </div>
+          <h4>Model</h4>
+          <el-select v-model="model" class="m-2" placeholder="Model" size="large">
+            <el-option v-for="item in models" :key="item.value" :label="item.label" :value="item.value">{{
+              item
+              }}</el-option>
+          </el-select>
+          
+          </el-form>
+        </el-row>
+
       </el-main>
     </el-container>
   </div>
