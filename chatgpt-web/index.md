@@ -111,11 +111,13 @@
             element-loading-background="rgba(122, 122, 122, 0.8)">
             <el-button size="large" type="success" @click="submitForm">Send发送</el-button>
             
-            <el-form>
+            <el-form ref="requsetForm">
               <h4 v-show="false">API Key</h4>
               <el-input v-show="false" v-model="key" placeholder="API秘钥" show-password type="password" value=""></el-input>
               <h4>Prompt 请输入你的问题</h4>
-              <el-input type="textarea" v-model="prompt" placeholder="输入内容" rows="10"></el-input>
+              <el-input type="textarea" v-model="prompt" placeholder="输入内容" rows="10" @keyup.enter.native="submitForm" ></el-input>
+              <br/><br/>
+              <el-button size="large" type="danger" @click="resetForm" >clear清空</el-button>
             </el-form>
 
             <el-link href="https://beta.openai.com/docs/api-reference/completions/create#completions/create-model"
@@ -206,6 +208,10 @@
         }
       },
       methods: {
+        resetForm(){
+          this.$refs.requsetForm.resetFields();
+          this.prompt = '';
+        },
         startTimer(){
           this.timeCounter = 0;
           this.timer = setInterval(() => {
