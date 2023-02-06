@@ -159,7 +159,7 @@
           <el-col :span="16">
             <el-button size="large" type="warning" @click="downloadTxt" :disabled="download_disable">save保存</el-button>
               
-            <el-button size="large" type="warning" @click="copyTxt" >copy复制</el-button>
+            <el-button size="large" type="warning" @click="copyTxt" >复制</el-button>
               
             <h2>Repsonse 结果 ChatGPT的回答</h2>
 
