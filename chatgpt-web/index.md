@@ -102,7 +102,7 @@
 
     <el-container>
       <el-header>
-        <h1>ChatGPT-Web v0.2.2 </h1>
+        <h2>ChatGPT-Web v0.2.2 </h2>
       </el-header>
       <el-main>
         <el-row :gutter="40">
