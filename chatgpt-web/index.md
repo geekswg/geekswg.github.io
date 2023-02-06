@@ -116,16 +116,10 @@
               <el-input v-show="false" v-model="key" placeholder="API秘钥" show-password type="password" value=""></el-input>
               <h4>Prompt 请输入你的问题</h4>
               <el-input type="textarea" v-model="prompt" placeholder="输入内容" rows="10"></el-input>
-
-              
             </el-form>
-
-
 
             <el-link href="https://beta.openai.com/docs/api-reference/completions/create#completions/create-model"
               target="_blank" type="danger">param info (参数说明)</el-link>
-
-
 
           </el-col>
           <el-col :span="16">
@@ -140,7 +134,8 @@
         </el-row>
 
 
-        <el-row>
+        <el-row >
+          <el-col  class="col-params">
           <el-form>
           <h4>API 参数</h4>
           <h4>Max_tokens</h4>
@@ -171,7 +166,7 @@
               item
               }}</el-option>
           </el-select>
-          
+          </el-col>
           </el-form>
         </el-row>
 
