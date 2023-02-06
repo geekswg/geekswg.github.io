@@ -246,4 +246,4 @@
 
 > 作者: [geekswg](https://geekswg.github.io)  
 > URL: https://geekswg.github.io/code/hugo-admonition/  
-
+> 转载 URL: https://fixit.lruihao.cn/zh-cn/theme-documentation-built-in-shortcodes/
