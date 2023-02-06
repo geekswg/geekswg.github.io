@@ -115,7 +115,7 @@
               <h4 v-show="false">API Key</h4>
               <el-input v-show="false" v-model="key" placeholder="API秘钥" show-password type="password" value=""></el-input>
               <h4>Prompt 请输入你的问题</h4>
-              <el-input type="textarea" v-model="prompt" placeholder="输入内容" rows="10" @keyup.enter.native="submitForm" ></el-input>
+              <el-input ref="promptTextarea" type="textarea" v-model="prompt" placeholder="输入内容" rows="10" @keyup.enter.native="submitForm" ></el-input>
               <br/><br/>
               <el-button size="large" type="danger" @click="resetForm" >clear清空</el-button>
             </el-form>
@@ -211,6 +211,7 @@
         resetForm(){
           this.$refs.requsetForm.resetFields();
           this.prompt = '';
+          this.$refs.promptTextarea.focus()
         },
         startTimer(){
           this.timeCounter = 0;
