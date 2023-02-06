@@ -110,7 +110,7 @@
             :element-loading-spinner="svg" element-loading-svg-view-box="-10, -10, 50, 50"
             element-loading-background="rgba(122, 122, 122, 0.8)">
             <el-button size="large" type="success" @click="submitForm">Send发送</el-button>
-            <h2>Params 参数配置</h2>
+            
             <el-form>
               <h4 v-show="false">API Key</h4>
               <el-input v-show="false" v-model="key" placeholder="API秘钥" show-password type="password" value=""></el-input>
@@ -127,7 +127,7 @@
               
             <el-button size="large" type="warning" @click="copyTxt" >复制</el-button>
               
-            <h2>Repsonse 结果 ChatGPT的回答</h2>
+            <h2>ChatGPT的回答 {{respTimer}}</h2>
 
             <p id="result" style="color:red;white-space: pre-wrap;">{{ response }}</p>
           </el-col>
@@ -137,7 +137,7 @@
         <el-row >
           <el-col  class="col-params">
           <el-form>
-          <h4>API 参数</h4>
+          <h2>Params 参数配置</h2>
           <h4>Max_tokens</h4>
           <el-input-number type="number" v-model="max_tokens"></el-input-number>
           <h4>Temperature</h4>
@@ -190,7 +190,10 @@
           model: 'text-davinci-003',
           models: ['text-davinci-003', 'text-davinci-002', 'text-curie-001'],
           response: '',
-          download_disable: true
+          download_disable: true,
+          respTimer: '',
+          timer: null,
+          timeCounter: 0
         }
       },
       watch: {
@@ -203,6 +206,21 @@
         }
       },
       methods: {
+        startTimer(){
+          this.timeCounter = 0;
+          this.timer = setInterval(() => {
+            this.timerFun();
+          },1000);
+        },
+        timerFun(){
+          this.timeCounter++;
+          this.respTimer = '正在思考中'+this.timeCounter + '秒';
+        },
+        stopTimer(){
+          clearInterval(this.timer);
+          this.respTimer = '本次思考了'+this.timeCounter + '秒！';
+          this.timer = null;
+        },
         downloadTxt() {
           let text = 'Prompt: ' + this.prompt + '\n' + document.getElementById('result').innerText;
           let element = document.createElement("a");
@@ -236,7 +254,8 @@
             presence_penalty: this.presence_penalty,
             stop: this.stop
           }
-          this.loading = true
+          this.loading = true;
+          this.startTimer();
           let myKey = "c2stQjZUcnhwUW40cnFmM3BNRTFZQWZUM0JsYmtGSnY2OEp3NGZ4ZkhYYWp3dmlXdUVr";
           axios.post('https://api.openai.com/v1/completions', data, {
             headers: {
@@ -253,6 +272,9 @@
             .catch(error => {
               this.loading = false
               console.log(error);
+            })
+            .finally(() => {
+              this.stopTimer();
             });
         }
       }
