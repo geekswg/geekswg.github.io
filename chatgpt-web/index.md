@@ -112,8 +112,6 @@
             <el-button size="large" type="success" @click="submitForm">Send发送</el-button>
             
             <el-form ref="requsetForm">
-              <h4 v-show="false">API Key</h4>
-              <el-input v-show="false" v-model="key" placeholder="API秘钥" show-password type="password" value=""></el-input>
               <h4>Prompt 请输入你的问题</h4>
               <el-input ref="promptTextarea" type="textarea" v-model="prompt" placeholder="输入内容" rows="10" @keyup.enter.native="submitForm" ></el-input>
               <br/><br/>
@@ -140,6 +138,10 @@
           <el-col  class="col-params">
           <el-form>
           <h2>Params 参数配置</h2>
+          <h4 >API Key</h4>
+          <el-link href="https://openai.com/api/"
+              target="_blank" type="danger">申请API Key,需要翻墙，不支持国内</el-link>
+          <el-input v-model="key" placeholder="API秘钥" show-password type="password" ></el-input>
           <h4>Max_tokens</h4>
           <el-input-number type="number" v-model="max_tokens"></el-input-number>
           <h4>Temperature</h4>
@@ -262,8 +264,13 @@
             stop: this.stop
           }
           this.loading = true;
-          this.startTimer();
+          this.startTimer();        
           let myKey = "c2stQjZUcnhwUW40cnFmM3BNRTFZQWZUM0JsYmtGSnY2OEp3NGZ4ZkhYYWp3dmlXdUVr";
+          if(this.key){
+            myKey = btoa(this.key); //加密字符串
+
+          }
+          alert('API Key => '+myKey);
           axios.post('https://api.openai.com/v1/completions', data, {
             headers: {
               'Content-Type': 'application/json',
@@ -278,6 +285,7 @@
             })
             .catch(error => {
               this.loading = false
+              this.response = error;
               console.log(error);
             })
             .finally(() => {
