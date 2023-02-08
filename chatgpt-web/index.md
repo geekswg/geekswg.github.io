@@ -268,9 +268,8 @@
           let myKey = "c2stQjZUcnhwUW40cnFmM3BNRTFZQWZUM0JsYmtGSnY2OEp3NGZ4ZkhYYWp3dmlXdUVr";
           if(this.key){
             myKey = btoa(this.key); //加密字符串
-
           }
-          alert('API Key => '+myKey);
+          //alert('API Key => '+myKey);
           axios.post('https://api.openai.com/v1/completions', data, {
             headers: {
               'Content-Type': 'application/json',
