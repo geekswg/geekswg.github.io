@@ -1,4 +1,5 @@
 https://geekswg.github.io/about/
+https://geekswg.github.io/funs/3d-carousel/
 https://geekswg.github.io/funs/game/
 https://geekswg.github.io/funs/chatgpt-web/
 https://geekswg.github.io/code/hugo-admonition/
