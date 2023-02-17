@@ -1,4 +1,4 @@
-# Index
+# 网址收藏
 
 
 <!-- When you set data `friends.yml` in `yourProject/data/` directory, it will be automatically loaded here. -->
@@ -8,8 +8,8 @@
 
 ```yaml
 - nickname: 网站名称
-  avatar: https://lruihao.cn/images/avatar.jpg
-  url: geekswg.github.io
+  avatar: /avatar.jpg # 头像地址
+  url: geekswg.github.io #网址地址
   description: 网站描述
 ```
 
