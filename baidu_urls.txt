@@ -1,4 +1,5 @@
 https://geekswg.github.io/about/
+https://geekswg.github.io/new-bing/
 https://geekswg.github.io/website/
 https://geekswg.github.io/funs/3d-carousel/
 https://geekswg.github.io/funs/game/
