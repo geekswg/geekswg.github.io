@@ -7,6 +7,25 @@ note abstract info tip success question warning failure danger bug example quote
 <!--more-->
 
 ## 申请New Bing
+> 申请地址 ： https://bing.com/new
+
+由于某些原因，国内无法直接访问 new bing 。
+1. 通过科学上网方式直接访问
+2. 使用 HeaderEditor 插件 下载链接：[点击下载](https://microsoftedge.microsoft.com/addons/detail/header-editor/afopnekiinpekooejpchnkgfffaeceko)
+   启用插件
+   配置插件
+   ![配置截图](newbing-header-editor.png "配置截图")
+   配置参数
+```
+// 匹配规则
+^http(s?)://(.*).bing\.com/(.*)
+
+// 头名称
+x-forwarded-for
+
+// 头内容
+8.8.8.8   或者  4.2.2.2
+```
 
 ## 老账户无法加入waitlist
 {{< admonition failure "错误提示"  >}}
@@ -20,12 +39,14 @@ note abstract info tip success question warning failure danger bug example quote
 {{< admonition bug "错误提示"  >}}
 1. 出错了，请重试
 2. Something went wrong, please try again later.
-
-原因就是 Microsoft rewards 已经在国内使用过了，被禁用了。
-
-真正的解决方案：
-最终跟专家确认，new bing 的体验确实受 Microsoft rewards 影响，但是清理全部 rewards 没什么用，可以通过：rewards.bing.com/optout 退出rewards计划，之后再通过：rewards.bing.com/加入rewards； 之后再点击加入waitling list 候补就可以了。
 {{< /admonition >}}
+原因就是 Microsoft rewards 已经在国内使用过了，账户被禁用了。
+
+解决方案如下：
+1. 退出Bing Rewards计划: https://rewards.bing.com/optout ,请注意退出计划会清除积分
+2. 重新加入Bing Rewards计划: https://rewards.bing.com
+3. 清除cookie后，再次申请加入新版必应( https://www.bing.com/new )，即可正常加入候补列表
+
 
 ## New Bing 上手体验
 
