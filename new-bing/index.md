@@ -30,7 +30,7 @@ x-forwarded-for
 ## 老账户无法加入waitlist
 {{< admonition failure "错误提示"  >}}
 老的微软账户是不是提示
-![new bing 申请waitlist错误](newbing.gif "new bing 申请waitlist错误")
+![new bing 申请waitlist错误](newbing.png "new bing 申请waitlist错误")
 {{< /admonition >}}
 
 1. 使用科学上网地址非国内地址，申请一个新的微软账户加入 new bing [waitlist](https://www.bing.com/new)
