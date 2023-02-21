@@ -1,8 +1,7 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>所有文章 - 毕少侠</title><link>https://geekswg.github.io/posts/</link><description>所有文章 | 毕少侠</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>geekswg@qq.com (geekswg)</managingEditor><webMaster>geekswg@qq.com (geekswg)</webMaster><copyright>geekswg</copyright><lastBuildDate>Mon, 20 Feb 2023 14:51:53 +0800</lastBuildDate><atom:link href="https://geekswg.github.io/posts/" rel="self" type="application/rss+xml"/><item><title>New Bing 申请教程</title><link>https://geekswg.github.io/new-bing/</link><pubDate>Mon, 20 Feb 2023 14:51:53 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/new-bing/</guid><description><![CDATA[<div class="featured-image">
         <img src="/featured-img.png" referrerpolicy="no-referrer">
-      </div><pre><code>最近除了有很红的ChatGPT AI 聊天机器人之外，还有很多人跃跃欲试新版Bing（New Bing），因为微软将新版Bing 结合了比ChatGPT 更强大的新一代OpenAI 语言模型，不仅能询问复杂问题、提供建议与解决方法，Bing 也会查看网路搜寻结果，迅速为我们提供摘要。
-</code></pre>
-<p>记录申请过程中遇到各种问题以及解决办法。</p>]]></description></item><item><title>各种 Links 汇总</title><link>https://geekswg.github.io/links/</link><pubDate>Thu, 07 Jun 2018 00:06:05 +0000</pubDate><author>geekswg</author><guid>https://geekswg.github.io/links/</guid><description><![CDATA[<blockquote>
+      </div><p>最近除了有很红的ChatGPT AI 聊天机器人之外，还有很多人跃跃欲试新版Bing（New Bing），因为微软将新版Bing 结合了比ChatGPT 更强大的新一代OpenAI 语言模型，不仅能询问复杂问题、提供建议与解决方法，Bing 也会查看网路搜寻结果，迅速为我们提供摘要。<br>
+记录申请过程中遇到各种问题以及解决办法。</p>]]></description></item><item><title>各种 Links 汇总</title><link>https://geekswg.github.io/links/</link><pubDate>Thu, 07 Jun 2018 00:06:05 +0000</pubDate><author>geekswg</author><guid>https://geekswg.github.io/links/</guid><description><![CDATA[<blockquote>
 <p>2021/10/1 更新<br>
 使用 Chrome 等浏览器管理书签是更好更方便的方式，登陆 google 账号，或者导出 html 书签文件都挺方便。</p>
 </blockquote>
@@ -86,9 +85,8 @@
 <h2 id="内容摘要">内容摘要</h2>
 <p><strong>LoveIt</strong> 主题使用内容摘要在主页中显示大致文章信息。Hugo 支持生成文章的摘要.</p>]]></description></item><item><title>New Bing 申请教程</title><link>https://geekswg.github.io/new-bing/</link><pubDate>Mon, 20 Feb 2023 14:51:53 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/new-bing/</guid><description><![CDATA[<div class="featured-image">
         <img src="/featured-img.png" referrerpolicy="no-referrer">
-      </div><pre><code>最近除了有很红的ChatGPT AI 聊天机器人之外，还有很多人跃跃欲试新版Bing（New Bing），因为微软将新版Bing 结合了比ChatGPT 更强大的新一代OpenAI 语言模型，不仅能询问复杂问题、提供建议与解决方法，Bing 也会查看网路搜寻结果，迅速为我们提供摘要。
-</code></pre>
-<p>记录申请过程中遇到各种问题以及解决办法。</p>]]></description></item><item><title>DOS命令总结</title><link>https://geekswg.github.io/dos/</link><pubDate>Thu, 02 Feb 2023 14:51:53 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/dos/</guid><description><![CDATA[<div class="featured-image">
+      </div><p>最近除了有很红的ChatGPT AI 聊天机器人之外，还有很多人跃跃欲试新版Bing（New Bing），因为微软将新版Bing 结合了比ChatGPT 更强大的新一代OpenAI 语言模型，不仅能询问复杂问题、提供建议与解决方法，Bing 也会查看网路搜寻结果，迅速为我们提供摘要。<br>
+记录申请过程中遇到各种问题以及解决办法。</p>]]></description></item><item><title>DOS命令总结</title><link>https://geekswg.github.io/dos/</link><pubDate>Thu, 02 Feb 2023 14:51:53 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/dos/</guid><description><![CDATA[<div class="featured-image">
         <img src="/images/posts/featured-image.jpg" referrerpolicy="no-referrer">
       </div><p>总结一些用到dos命令，方便查用</p>]]></description></item><item><title>测试 featured-image 文章标题</title><link>https://geekswg.github.io/t/</link><pubDate>Thu, 02 Feb 2023 14:51:53 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/t/</guid><description><![CDATA[<div class="featured-image">
         <img src="/images/posts/featured-image.jpg" referrerpolicy="no-referrer">
