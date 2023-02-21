@@ -1,9 +1,7 @@
 # New Bing 申请教程
 
-{{< admonition quote "quote"  >}}
-note abstract info tip success question warning failure danger bug example quote
-{{< /admonition >}}
-这里使用MD语法编写你的文章
+    最近除了有很红的ChatGPT AI 聊天机器人之外，还有很多人跃跃欲试新版Bing（New Bing），因为微软将新版Bing 结合了比ChatGPT 更强大的新一代OpenAI 语言模型，不仅能询问复杂问题、提供建议与解决方法，Bing 也会查看网路搜寻结果，迅速为我们提供摘要。
+记录申请过程中遇到各种问题以及解决办法。
 <!--more-->
 
 ## 申请New Bing
@@ -60,6 +58,7 @@ x-forwarded-for
 https://www.bing.com/search?q=Bing+AI&showconv=1&FORM=hpcodx
 
 ![web new bing 使用预览](newbing.png "web new bing 使用预览")
+
 
 ---
 
