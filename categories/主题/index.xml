@@ -65,11 +65,12 @@
   </fixit-encryptor>]]></description></item><item><title>测试评论</title><link>https://geekswg.github.io/demo3/</link><pubDate>Tue, 01 Feb 2022 23:02:55 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/demo3/</guid><description></description></item><item><title>我的第一个 Hugo 博客</title><link>https://geekswg.github.io/demo/</link><pubDate>Sat, 01 Jan 2022 12:15:22 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/demo/</guid><description><![CDATA[<div class="featured-image">
         <img src="/images/posts/featured-image.jpg" referrerpolicy="no-referrer">
       </div><h2 id="我的hugo博客">我的Hugo博客</h2>
-<p>我的博客摘要11134343从大苏打撒旦撒大苏打撒法大使发大水发大水范德萨</p>
+<pre><code>我的第一个Hugo博客。
+</code></pre>
 <blockquote>
-<p>hello Hugo<br>
-<a href="https://geekswg.github.io/"target="_blank" rel="external nofollow noopener noreferrer">我的博客发布地址<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a></p>
+<p>hello Hugo</p>
 </blockquote>
+<p><a href="https://geekswg.github.io/"target="_blank" rel="external nofollow noopener noreferrer">我的博客发布地址<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a></p>
 <h3 id="fixit-hugo主题">FixIt Hugo主题</h3>
 <p><a href="https://github.com/hugo-fixit/FixIt"target="_blank" rel="external nofollow noopener noreferrer">FixIt 主题仓库地址<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a><br>
 <a href="https://fixit.lruihao.cn/zh-cn/"target="_blank" rel="external nofollow noopener noreferrer">FixIt 主题Demo地址<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a></p>
