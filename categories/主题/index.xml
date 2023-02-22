@@ -7,7 +7,9 @@
 使用文章描述作为摘要<br>
 你可能希望将文章前置参数中的 description 变量的内容作为摘要.</p>
 <h2 id="内容摘要">内容摘要</h2>
-<p><strong>LoveIt</strong> 主题使用内容摘要在主页中显示大致文章信息。Hugo 支持生成文章的摘要.</p>]]></description></item><item><title>加密测试</title><link>https://geekswg.github.io/demo2/</link><pubDate>Wed, 01 Feb 2023 15:52:43 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/demo2/</guid><description></description></item><item><title>测试评论</title><link>https://geekswg.github.io/demo3/</link><pubDate>Tue, 01 Feb 2022 23:02:55 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/demo3/</guid><description></description></item><item><title>我的第一个 Hugo 博客</title><link>https://geekswg.github.io/demo/</link><pubDate>Sat, 01 Jan 2022 12:15:22 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/demo/</guid><description><![CDATA[<div class="featured-image">
+<p><strong>LoveIt</strong> 主题使用内容摘要在主页中显示大致文章信息。Hugo 支持生成文章的摘要.</p>]]></description></item><item><title>加密测试</title><link>https://geekswg.github.io/demo2/</link><pubDate>Wed, 01 Feb 2023 15:52:43 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/demo2/</guid><description><![CDATA[<pre><code>测试全文加密密码123
+</code></pre>
+<p>全文加密时无法在搜索中收索</p>]]></description></item><item><title>测试评论</title><link>https://geekswg.github.io/demo3/</link><pubDate>Tue, 01 Feb 2022 23:02:55 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/demo3/</guid><description></description></item><item><title>我的第一个 Hugo 博客</title><link>https://geekswg.github.io/demo/</link><pubDate>Sat, 01 Jan 2022 12:15:22 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/demo/</guid><description><![CDATA[<div class="featured-image">
         <img src="/images/posts/featured-image.jpg" referrerpolicy="no-referrer">
       </div><h2 id="我的hugo博客">我的Hugo博客</h2>
 <pre><code>我的第一个Hugo博客。
