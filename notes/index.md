@@ -3,10 +3,11 @@
 {{< admonition quote "quote" false >}}
 note abstract info tip success question warning failure danger bug example quote
 {{< /admonition >}}
-记录常用命令
+    记录常用命令，方便查阅。
 <!--more-->
 
-> 
+## Hugo相关命令
+
 ```
 // 新建一个hugo站点
 hugo new site yourSiteName
@@ -21,8 +22,14 @@ hugo serve -e production -D
 
 ```
 
+## git相关命令
 
+> git clone 自动下载子模块
 
+```
+//在执行 git clone 时加上 --recursive 参数
+git clone --recursive https://github.com/example/example.git
+```
 
 ---
 
