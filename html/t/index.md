@@ -9,7 +9,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,user-scalable=no" />
   <title>3D Carousel</title>
-  <link type="text/css" rel="styleSheet"  href="../3d-carousel.css" />
+  <link type="text/css" rel="styleSheet"  href="3d-carousel.css" />
 </head>
 
 <body>
