@@ -16,4 +16,4 @@ https://geekswg.github.io/demo3/
 https://geekswg.github.io/demo/
 https://geekswg.github.io/about/
 https://geekswg.github.io/links/
-https://geekswg.github.io/notes/
+https://geekswg.github.io/daily-notes/
