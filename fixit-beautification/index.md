@@ -28,6 +28,20 @@ src="//tianqi.2345.com/plugin/widget/index.htm?s=2&z=3&t=1&v=1&d=3&bd=0&k=&f=&lt
 </iframe>  
 ```
 
+### 添加
+
+> 插件地址 [一言](https://v1.hitokoto.cn/)
+
+```html
+{{/*  添加 一言 https://v1.hitokoto.cn/  */}}
+<!-- 本例不能添加链接内容，放在此处只是因为此接口比较方便，也许能够解决大部分的需求 -->
+<script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
+<!-- 请注意，以下的示例包含超链接，您可能需要手动配置样式使其不变色。如果您嫌麻烦，可以移除。 -->
+<p id="hitokoto" style='color:red;font-family: MMT,"沐目体";font-size:20px;'>
+    <a href="#" id="hitokoto_text">:D 获取中...</a>
+</p>
+```
+
 ## 头部自定义
 
 > layouts/partials/header.html 主要修改文件，如果文件不存在，则去你使用的主题目录下找到该文件，复制到自己的site对应的路径下。
@@ -43,6 +57,8 @@ src="//tianqi.2345.com/plugin/widget/index.htm?s=2&z=3&t=1&v=1&d=3&bd=0&k=&f=&lt
 ### 添加版娘
 
 > 在项目 layouts/partials/header.html 最底部 中添加
+
+:point_down: 点击下方查看代码
 
 ```html
 <!-- 板娘 https://github.com/stevenjoezhang/live2d-widget --> 
