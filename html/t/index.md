@@ -42,7 +42,7 @@
       </video>
 
       <!-- Text at center of ground -->
-      <p>田婵婵-3D</p>
+      <p style="width:100px;">田婵婵-3D</p>
     </div>
     <div id="ground"></div>
   </div>
