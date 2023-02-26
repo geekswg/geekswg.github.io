@@ -39,11 +39,11 @@
 
       <!-- Example add video  -->
       <video controls autoplay="autoplay" loop title="mv-刘德华-今天">
-        <source src="7144295491784707358.mp4" type="video/mp4" />
+        <source src="/video/7144295491784707358.mp4" type="video/mp4" />
       </video>
 
       <!-- Text at center of ground -->
-      <p>田婵婵田婵婵</p>
+      <p>田婵婵-田婵婵</p>
     </div>
     <div id="ground"></div>
   </div>
