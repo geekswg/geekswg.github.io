@@ -13,7 +13,10 @@
 </center>
 {{< /typeit >}}
 
-> typeit 示例
+<!-- metingJs 音乐插件 -->
+{{< music auto="https://y.qq.com/n/yqq/playlist/8138088068.html" fixed=false list-folded=false autoplay=true volume="0.2" order="random" >}}
+
+<!-- > typeit 示例
 
 ```markdown
 {{</* typeit */>}}
@@ -21,13 +24,13 @@
 {{</* /typeit */>}}
 ```
 
-{{< music auto="https://y.qq.com/n/yqq/playlist/8138088068.html" fixed=true list-folded=false autoplay=true volume="0.2" >}}
+{{< music auto="https://y.qq.com/n/yqq/playlist/8138088068.html" fixed=true list-folded=false autoplay=true volume="0.2" >}} -->
 
 <!-- {{< music url="/music/Take-Me-To-Your-Heart.mp3"  name="Take-Me-To-Your-Heart" artist="Michael Learns To Rock" cover="/logo.png" volume="0.2" autoplay=true loop=all fixed=true >}} -->
 
-```markdown
+<!-- ```markdown
 {{</* music url="/music/Take-Me-To-Your-Heart.mp3"  name="Take-Me-To-Your-Heart" artist="Michael Learns To Rock" cover="/logo.png" volume="0.2" autoplay=true loop=all */>}}
-```
+``` -->
 
 
 ---
