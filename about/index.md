@@ -14,7 +14,7 @@
 {{< /typeit >}}
 
 <!-- metingJs 音乐插件 -->
-{{< music auto="https://y.qq.com/n/yqq/playlist/8138088068.html" fixed=false list-folded=false autoplay=true volume="0.2" order="random" >}}
+{{< music auto="https://y.qq.com/n/yqq/playlist/8138088068.html" fixed=false list-folded=true autoplay=true volume="0.2" order="random"  >}}
 
 <!-- > typeit 示例
 
