@@ -1,4 +1,14 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>所有文章 - 毕少侠</title><link>https://geekswg.github.io/posts/</link><description>所有文章 | 毕少侠</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>geekswg@qq.com (geekswg)</managingEditor><webMaster>geekswg@qq.com (geekswg)</webMaster><copyright>geekswg</copyright><lastBuildDate>Wed, 22 Feb 2023 20:15:48 +0800</lastBuildDate><atom:link href="https://geekswg.github.io/posts/" rel="self" type="application/rss+xml"/><item><title>各种 Links 汇总</title><link>https://geekswg.github.io/links/</link><pubDate>Thu, 07 Jun 2018 00:06:05 +0000</pubDate><author>geekswg</author><guid>https://geekswg.github.io/links/</guid><description><![CDATA[<blockquote>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>所有文章 - 毕少侠</title><link>https://geekswg.github.io/posts/</link><description>所有文章 | 毕少侠</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>geekswg@qq.com (geekswg)</managingEditor><webMaster>geekswg@qq.com (geekswg)</webMaster><copyright>geekswg</copyright><lastBuildDate>Sun, 26 Feb 2023 14:21:02 +0800</lastBuildDate><atom:link href="https://geekswg.github.io/posts/" rel="self" type="application/rss+xml"/><item><title>基于Fixit主题美化记录</title><link>https://geekswg.github.io/fixit-beautification/</link><pubDate>Sun, 26 Feb 2023 14:21:02 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/fixit-beautification/</guid><description><![CDATA[<div class="featured-image">
+        <img src="/images/posts/featured-image.jpg" referrerpolicy="no-referrer">
+      </div><p><div class="details admonition quote open">
+    <div class="details-summary admonition-title">
+      <i class="icon fa-solid fa-quote-right fa-fw" aria-hidden="true"></i>说明<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i>
+    </div>
+    <div class="details-content">
+      <div class="admonition-content">记录自己博客主题的修改和美化记录</div>
+    </div>
+  </div><br>
+这里使用MD语法编写你的文章</p>]]></description></item><item><title>各种 Links 汇总</title><link>https://geekswg.github.io/links/</link><pubDate>Thu, 07 Jun 2018 00:06:05 +0000</pubDate><author>geekswg</author><guid>https://geekswg.github.io/links/</guid><description><![CDATA[<blockquote>
 <p>2021/10/1 更新<br>
 使用 Chrome 等浏览器管理书签是更好更方便的方式，登陆 google 账号，或者导出 html 书签文件都挺方便。</p>
 </blockquote>
@@ -41,7 +51,17 @@
 使用文章描述作为摘要<br>
 你可能希望将文章前置参数中的 description 变量的内容作为摘要.</p>
 <h2 id="内容摘要">内容摘要</h2>
-<p><strong>LoveIt</strong> 主题使用内容摘要在主页中显示大致文章信息。Hugo 支持生成文章的摘要.</p>]]></description></item><item><title>Notes</title><link>https://geekswg.github.io/notes/</link><pubDate>Wed, 22 Feb 2023 20:15:48 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/notes/</guid><description><![CDATA[<div class="featured-image">
+<p><strong>LoveIt</strong> 主题使用内容摘要在主页中显示大致文章信息。Hugo 支持生成文章的摘要.</p>]]></description></item><item><title>基于Fixit主题美化记录</title><link>https://geekswg.github.io/fixit-beautification/</link><pubDate>Sun, 26 Feb 2023 14:21:02 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/fixit-beautification/</guid><description><![CDATA[<div class="featured-image">
+        <img src="/images/posts/featured-image.jpg" referrerpolicy="no-referrer">
+      </div><p><div class="details admonition quote open">
+    <div class="details-summary admonition-title">
+      <i class="icon fa-solid fa-quote-right fa-fw" aria-hidden="true"></i>说明<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i>
+    </div>
+    <div class="details-content">
+      <div class="admonition-content">记录自己博客主题的修改和美化记录</div>
+    </div>
+  </div><br>
+这里使用MD语法编写你的文章</p>]]></description></item><item><title>Notes</title><link>https://geekswg.github.io/notes/</link><pubDate>Wed, 22 Feb 2023 20:15:48 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/notes/</guid><description><![CDATA[<div class="featured-image">
         <img src="/images/posts/featured-image.jpg" referrerpolicy="no-referrer">
       </div><p><div class="details admonition quote">
     <div class="details-summary admonition-title">
