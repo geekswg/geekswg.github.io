@@ -4,7 +4,6 @@
 {{< admonition quote "说明" true >}}
 记录自己博客主题的修改和美化记录
 {{< /admonition >}}
-这里使用MD语法编写你的文章
 <!--more-->
 
 ## 首页-home

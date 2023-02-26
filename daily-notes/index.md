@@ -1,6 +1,6 @@
 # 日常笔记
 
-{{< admonition quote "再要" true >}}
+{{< admonition quote "摘要" true >}}
 记录日常笔记，随手记录一些流水账。
 倒叙记录。
 {{< /admonition >}}

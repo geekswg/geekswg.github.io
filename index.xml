@@ -1,14 +1,13 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>毕少侠</title><link>https://geekswg.github.io/</link><description>博客：探索、发现、分享</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>geekswg@qq.com (geekswg)</managingEditor><webMaster>geekswg@qq.com (geekswg)</webMaster><copyright>geekswg</copyright><lastBuildDate>Sun, 26 Feb 2023 23:16:19 +0800</lastBuildDate><atom:link href="https://geekswg.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>基于Fixit主题美化记录</title><link>https://geekswg.github.io/fixit-beautification/</link><pubDate>Sun, 26 Feb 2023 14:21:02 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/fixit-beautification/</guid><description><![CDATA[<div class="featured-image">
         <img src="/images/posts/featured-image.jpg" referrerpolicy="no-referrer">
-      </div><p><div class="details admonition quote open">
+      </div><div class="details admonition quote open">
     <div class="details-summary admonition-title">
       <i class="icon fa-solid fa-quote-right fa-fw" aria-hidden="true"></i>说明<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i>
     </div>
     <div class="details-content">
       <div class="admonition-content">记录自己博客主题的修改和美化记录</div>
     </div>
-  </div><br>
-这里使用MD语法编写你的文章</p>]]></description></item><item><title>Notes</title><link>https://geekswg.github.io/notes/</link><pubDate>Wed, 22 Feb 2023 20:15:48 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/notes/</guid><description><![CDATA[<div class="featured-image">
+  </div>]]></description></item><item><title>Notes</title><link>https://geekswg.github.io/notes/</link><pubDate>Wed, 22 Feb 2023 20:15:48 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/notes/</guid><description><![CDATA[<div class="featured-image">
         <img src="/images/posts/featured-image.jpg" referrerpolicy="no-referrer">
       </div><p><div class="details admonition quote">
     <div class="details-summary admonition-title">
@@ -26,13 +25,7 @@
       </div><p><code>admonition</code> shortcode 支持 <strong>12</strong> 种 帮助你在页面中插入提示的横幅.<br>
 <em>支持 Markdown 或者 HTML 格式.</em></p>]]></description></item><item><title>DOS命令总结</title><link>https://geekswg.github.io/dos/</link><pubDate>Thu, 02 Feb 2023 14:51:53 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/dos/</guid><description><![CDATA[<div class="featured-image">
         <img src="/images/posts/featured-image.jpg" referrerpolicy="no-referrer">
-      </div><p>总结一些用到dos命令，方便查用</p>]]></description></item><item><title>测试 featured-image 文章标题</title><link>https://geekswg.github.io/t/</link><pubDate>Thu, 02 Feb 2023 14:51:53 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/t/</guid><description><![CDATA[<div class="featured-image">
-        <img src="/images/posts/featured-image.jpg" referrerpolicy="no-referrer">
-      </div><p>文章demo - 这里使用md语法编写文章。<br>
-使用文章描述作为摘要<br>
-你可能希望将文章前置参数中的 description 变量的内容作为摘要.</p>
-<h2 id="内容摘要">内容摘要</h2>
-<p><strong>LoveIt</strong> 主题使用内容摘要在主页中显示大致文章信息。Hugo 支持生成文章的摘要.</p>]]></description></item><item><title>示例代码使用</title><link>https://geekswg.github.io/code/demo/</link><pubDate>Thu, 02 Feb 2023 09:47:56 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/code/demo/</guid><description>&lt;div class="featured-image">
+      </div><p>总结一些用到dos命令，方便查用</p>]]></description></item><item><title>示例代码使用</title><link>https://geekswg.github.io/code/demo/</link><pubDate>Thu, 02 Feb 2023 09:47:56 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/code/demo/</guid><description>&lt;div class="featured-image">
 &lt;img src="/images/posts/featured-image.jpg" referrerpolicy="no-referrer">
 &lt;/div></description></item><item><title>加密测试</title><link>https://geekswg.github.io/demo2/</link><pubDate>Wed, 01 Feb 2023 15:52:43 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/demo2/</guid><description><![CDATA[<pre><code>测试全文加密密码123
 </code></pre>
@@ -60,7 +53,7 @@
         <img src="/images/posts/featured-image.jpg" referrerpolicy="no-referrer">
       </div><div class="details admonition quote open">
     <div class="details-summary admonition-title">
-      <i class="icon fa-solid fa-quote-right fa-fw" aria-hidden="true"></i>再要<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i>
+      <i class="icon fa-solid fa-quote-right fa-fw" aria-hidden="true"></i>摘要<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i>
     </div>
     <div class="details-content">
       <div class="admonition-content">记录日常笔记，随手记录一些流水账。<br>
