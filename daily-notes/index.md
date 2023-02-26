@@ -19,8 +19,8 @@
 直呼niubility，非常方便快捷，赶紧用起来吧。
 {{< /admonition >}}
 
-![github-vscode 在线联动](github-vscode.gif "github-vscode 在线联动")
-![Edge-Dev new bing 使用预览](newbing.gif "Edge-Dev new bing 使用预览")
+![github-vscode 在线联动](img/github-vscode.gif "github-vscode 在线联动")
+
 
 {{< admonition question "提醒" >}}
 要有 **科学上网的环境** ,不然vscode 显示有点问题，不能浏览仓库内容。
