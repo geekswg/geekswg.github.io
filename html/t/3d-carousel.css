@@ -61,12 +61,13 @@
 
   #drag-container p {
     font-family: Serif;
+    font-size: 20px;
     position: absolute;
     top: 100%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%) rotateX(90deg);
     transform: translate(-50%, -50%) rotateX(90deg);
-    color: #fff;
+    color: #f50707;
   }
 
   #ground {
