@@ -1,35 +1,35 @@
-# Notes
+# 日常笔记
 
-{{< admonition quote "quote" false >}}
-note abstract info tip success question warning failure danger bug example quote
+{{< admonition quote "再要" true >}}
+记录日常笔记，随手记录一些流水账。
+倒叙记录。
 {{< /admonition >}}
-    记录常用命令，方便查阅。
 <!--more-->
+## Github网页小技巧
 
-## Hugo相关命令
+> github 网页快捷键 `.` 和 `?`
+> [Github](https://github.com/)和[VSCode](https://vscode.dev/)在梦幻线联动，非常惊喜。
 
-```
-// 新建一个hugo站点
-hugo new site yourSiteName
+### `.`快捷键
 
-// 新建一篇文章
-hugo new posts/notes.md
+> 快速在vscode-for-web中打开当前仓库代码
 
-// 以production 环境运行 hugo 站点
-hugo server -e production -D
-// 这里注意 serve 是 server 两种写法都可以
-hugo serve -e production -D
+{{< admonition tip >}}
+在 `github`的仓库地址页面 按下键盘上的**.**按键会自动跳转到在线vscode编辑上，可直接编辑你的仓库代码。
+直呼niubility，非常方便快捷，赶紧用起来吧。
+{{< /admonition >}}
 
-```
+![github-vscode 在线联动](github-vscode.gif "github-vscode 在线联动")
+![Edge-Dev new bing 使用预览](newbing.gif "Edge-Dev new bing 使用预览")
 
-## git相关命令
+{{< admonition question "提醒" >}}
+要有 **科学上网的环境** ,不然vscode 显示有点问题，不能浏览仓库内容。
+{{< /admonition >}}
 
-> git clone 自动下载子模块
+### `/`快捷键快速搜索
 
-```
-//在执行 git clone 时加上 --recursive 参数
-git clone --recursive https://github.com/example/example.git
-```
+在github web页面上,按快捷键`/`可快速在github搜索。
+
 
 ---
 
