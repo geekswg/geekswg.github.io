@@ -8,19 +8,42 @@
 <!--more-->
 
 ## 首页-home
+
 修改更新资料背景
 
 ## 侧边栏-aside
+
+> 对应自定义文件 layouts/partials/custom/aside.html 
 
 自定义aside.html
 
 ### 添加天气插件
 
+> 在 aside.html中添加
+参考链接 {{< link "https://tianqi.2345.com/plugin/" "2345天气插件" "title" false >}}
+
+```html
+<iframe allowtransparency="true" frameborder="0" width="140" height="278" scrolling="no" 
+src="//tianqi.2345.com/plugin/widget/index.htm?s=2&z=3&t=1&v=1&d=3&bd=0&k=&f=&ltf=009944&htf=cc0000&q=1&e=1&a=1&c=54511&w=140&h=278&align=center">
+</iframe>  
+```
+
 ## 头部自定义
 
-### 添加按钮
+> layouts/partials/header.html 主要修改文件，如果文件不存在，则去你使用的主题目录下找到该文件，复制到自己的site对应的路径下。
+
+### 添加菜单按钮
+
+> 自定义 layouts/partials/header.html 找到需要添加的位置
+
+{{< admonition tip "提示" true >}}
+这里是菜单文件的样式，注意这里面有PC端和移动端的，如果要双端都要添加，在对应的两个地方同时加上。
+{{< /admonition >}}
 
 ### 添加版娘
+
+> 在项目 layouts/partials/header.html 最底部 中添加
+
 ```html
 <!-- 板娘 https://github.com/stevenjoezhang/live2d-widget --> 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
@@ -98,8 +121,8 @@ console.log(`
 
 > 添加十年之约 和 开往友链 的链接
 
-{{< link "https://www.travellings.cn" "开往" "" true >}}
-{{< link "https://www.foreverblog.cn/" "十年之约" "" true >}}
+{{< link "https://www.travellings.cn" "开往" "title" false >}}
+{{< link "https://www.foreverblog.cn/" "十年之约" "title" false >}}
 
 ```html
 <style>
