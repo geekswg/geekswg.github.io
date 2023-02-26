@@ -30,11 +30,11 @@
       <img src="1.jpg" />
 
       <!-- Example image with link -->
-      <a target="_blank" href="4.jpeg">
-        <img src="4.jpeg" alt="" />
+      <a target="_blank" href="4.jpg">
+        <img src="4.jpg" alt="" title="田婵婵" />
       </a>
-      <a target="_blank" href="4.jpeg">
-        <img src="4.jpeg" alt="" />
+      <a target="_blank" href="4.jpg">
+        <img src="4.jpg" alt="" title="田婵婵" />
       </a>
 
       <!-- Example add video  -->
@@ -43,7 +43,7 @@
       </video>
 
       <!-- Text at center of ground -->
-      <p>田婵婵</p>
+      <p>田婵婵田婵婵</p>
     </div>
     <div id="ground"></div>
   </div>
