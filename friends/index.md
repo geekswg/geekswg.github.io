@@ -7,20 +7,20 @@
 ## Base info 友链格式
 
 ```yaml
-- nickname: Lruihao
-  avatar: https://lruihao.cn/images/avatar.jpg
-  url: https://lruihao.cn
-  description: Lruihao's Note
+- nickname: geekswg
+  avatar: https://geekswg.github.io/images/avatar.jpg
+  url: https://geekswg.github.io
+  description: 毕少侠也在江湖。
 ```
 > 提示
 
 {{< admonition info "FixIt主题 添加友链方法" >}}
 在项目 /data/friends.yml 添加如下格式
 ```yaml
-- nickname: Lruihao
-  avatar: https://lruihao.cn/images/avatar.jpg
-  url: https://lruihao.cn
-  description: Lruihao's Note
+- nickname: geekswg
+  avatar: https://geekswg.github.io/images/avatar.jpg
+  url: https://geekswg.github.io
+  description: 毕少侠也在江湖。
 ```
 {{< /admonition >}}
 
