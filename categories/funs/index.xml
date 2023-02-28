@@ -1,5 +1,5 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>funs - 分类 - 毕少侠</title><link>https://geekswg.github.io/categories/funs/</link><description>funs - 分类 - 毕少侠</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>geekswg@qq.com (geekswg)</managingEditor><webMaster>geekswg@qq.com (geekswg)</webMaster><copyright>geekswg</copyright><atom:link href="https://geekswg.github.io/categories/funs/" rel="self" type="application/rss+xml"/><item><title>史上最牛Hello World</title><link>https://geekswg.github.io/funs/js-hello-world/</link><pubDate>Tue, 28 Feb 2023 17:05:33 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/funs/js-hello-world/</guid><description><![CDATA[<div class="featured-image">
-        <img src="/images/posts/featured-image.jpg" referrerpolicy="no-referrer">
+        <img src="/images/posts/featured-image-preview.jpg" referrerpolicy="no-referrer">
       </div><div class="details admonition tip open">
     <div class="details-summary admonition-title">
       <i class="icon fa-solid fa-lightbulb fa-fw" aria-hidden="true"></i>技巧<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i>
