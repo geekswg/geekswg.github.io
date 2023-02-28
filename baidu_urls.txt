@@ -1,3 +1,4 @@
+https://geekswg.github.io/daily-notes/
 https://geekswg.github.io/notes1/
 https://geekswg.github.io/notes2/
 https://geekswg.github.io/html/t/
@@ -18,4 +19,3 @@ https://geekswg.github.io/demo3/
 https://geekswg.github.io/demo/
 https://geekswg.github.io/about/
 https://geekswg.github.io/links/
-https://geekswg.github.io/daily-notes/
