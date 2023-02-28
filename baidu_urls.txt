@@ -1,3 +1,4 @@
+https://geekswg.github.io/funs/js-hello-world/
 https://geekswg.github.io/daily-notes/
 https://geekswg.github.io/notes1/
 https://geekswg.github.io/notes2/
