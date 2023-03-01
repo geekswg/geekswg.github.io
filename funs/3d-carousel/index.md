@@ -78,7 +78,7 @@
       left: 50%;
       -webkit-transform: translate(-50%, -50%) rotateX(90deg);
       transform: translate(-50%, -50%) rotateX(90deg);
-      color: #fff;
+      color: #F00;
     }
 
     #ground {
