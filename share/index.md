@@ -19,8 +19,10 @@ Do no evil ！
 {{< music auto="https://y.qq.com/n/yqq/playlist/8138088068.html" fixed=false list-folded=false autoplay=true volume="0.2" >}}
 
 ## 开源软件-soft
+{{< admonition note "提醒" true >}}
 分享一些用过就离不开的开源软件，免费且实用。
 注意：并不是所有的开源软件都是免费的，留意开源协议即可。
+{{< /admonition >}}
 
 |链接|描述|备注|
 |:--|:--|:--|
@@ -28,6 +30,12 @@ Do no evil ！
 |[音乐-lx-music](https://lxmusic.toside.cn/)|一个免费&开源的音乐查找工具|手机电脑双端、绿色、音乐、下载|
 
 ## 手机软件-soft
+> android 手机软件分享
+|下载地址|功能描述|备注|
+|:--|:--|:--|
+|[闪电侠](https://share.weiyun.com/s7FnuI6E)|闪电侠-无广告免费手机影视盒子软件，自带影视源|别再用爱优腾的vip超级vip了|
+|[TVBox类影视软件](http://xn--sss604efuw.ga/)|开源壳子 TVbox相关免费资源推荐，免费影视的软件|各种vip各种套路限制|
+
 
 ## 网站-website
 
