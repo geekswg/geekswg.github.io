@@ -28,6 +28,8 @@ Do no evil ！
 |:--|:------|:--|
 |[verycapture](https://verycapture.com/cn/download.html)|VeryCapture专业的屏幕截取软件，提升办公效率，让用户有更多时间投入业务|截图、免费、开源          |
 |[音乐-lx-music](https://lxmusic.toside.cn/)|一个免费&开源的音乐查找工具|手机电脑双端、绿色、音乐、下载手机电脑双端、绿色、音乐、下载|
+|[FastGithub](https://github.com/dotnetcore/FastGithub/releases)|github加速神器，解决github打不开、用户头像无法加载、releases无法上传下载、git-clone、git-pull、git-push失败等问题。|国内稳定访问|
+|[V2rayN科学上网](https://github.com/2dust/v2rayN/releases)|科学上网客户端软件|免费订阅地址https://raw.githubusercontent.com/aiboboxx/v2rayfree/main/v2|
 |<p style="width:10%"></p>|<p style="width:60%"></p>|<p style="width:30%"></p>|
 
 ## 手机软件-soft
