@@ -44,7 +44,8 @@ https://www.typeitjs.com/docs/vanilla/usage#options
 
 
 
-<!-- > typeit 示例
+<!-- 
+> typeit 示例
 
 ```markdown
 {{</* typeit */>}}
@@ -58,7 +59,8 @@ https://www.typeitjs.com/docs/vanilla/usage#options
 
 <!-- ```markdown
 {{</* music url="/music/Take-Me-To-Your-Heart.mp3"  name="Take-Me-To-Your-Heart" artist="Michael Learns To Rock" cover="/logo.png" volume="0.2" autoplay=true loop=all */>}}
-``` -->
+``` 
+-->
 
 
 ---
