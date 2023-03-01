@@ -2,7 +2,7 @@
 
 {{< admonition tip "Welcome" >}}
 {{< typeit >}}
- 欢迎各位大光临我的小博客！有什么想说的请在下方留言，都会回复！
+ 欢迎各位光临我的小博客！有什么想说的请在下方留言，都会回复！Do no evil plz.
 {{< /typeit >}}
 
 <small>*关于 [FixIt 主题](https://github.com/hugo-fixit/FixIt) 的问题，请移步 [FixIt 官网](https://fixit.lruihao.cn) 相关文章哦～*</small>
