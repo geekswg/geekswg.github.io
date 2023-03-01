@@ -25,7 +25,7 @@ Do no evil ！
 |链接|描述|备注|
 |:--|:--|:--|
 |[verycapture](https://verycapture.com/cn/download.html)|VeryCapture专业的屏幕截取软件，提升办公效率，让用户有更多时间投入业务|截图、免费、开源|
-|[音乐-lx-music](https://github.lxmusic.folltoshe.com/)|一个免费&开源的音乐查找工具|手机电脑双端、绿色、音乐、下载|
+|[音乐-lx-music](https://lxmusic.toside.cn/)|一个免费&开源的音乐查找工具|手机电脑双端、绿色、音乐、下载|
 
 ## 手机软件-soft
 
