@@ -13,8 +13,10 @@
 
 ### ⏱️2023/03/02 00:16
 
-> 一个有趣的在线工具网站，很有意思，虽然是英文的。
-在线工具网站： http://patorjk.com/blog/software/
+> 两个个有趣的在线工具网站，很有意思，虽然是英文的。
+在线工具网站： 
+1. http://patorjk.com/blog/software/
+2. https://id.tool.lu
 
 ## notion超好用的笔记软件
 
