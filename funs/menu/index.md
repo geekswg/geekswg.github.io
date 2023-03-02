@@ -28,7 +28,7 @@
 var menu = [
 	{
 		title: 'tool-实用工具',
-		subtitle: ['cool-keybord-炫酷键盘', 'color-picker-颜色拾取器', 'pwd-generator-密码生成器'],
+		subtitle: ['cool-keybord-炫酷键盘', 'color-picker</br>颜色拾取器', 'pwd-generator-密码生成器'],
 		subUrl:['/funs/pages/tools-jq-keybord/','https://bing.com','https://qq.com']
 	},
 	{
