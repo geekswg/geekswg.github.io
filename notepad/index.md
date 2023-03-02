@@ -15,8 +15,8 @@
 
 {{< random-comment >}}  
 -->
-{{< mmt-netease "2414158210" >}}
 
+{{< mmt-netease mid="2414158210" autoplay=true >}}
 tip: 👆 点击上面随机播放音乐☝️
 
 
