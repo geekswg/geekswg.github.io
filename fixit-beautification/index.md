@@ -15,6 +15,25 @@
 
 > 文件位置 assets/js/custom.js [我的自定义custom.js](https://github.com/geekswg/geekswg.github.io/blob/main/js/custom.min.js)
 
+### console打印样式
+
+> console. 花样打印信息，让你的控制台更加高端大气上档次。
+
+在线工具：
+> 在线生成ascii字符画的网站
+1.  http://patorjk.com/software/taag
+2.  https://tool.lu/asciipainting
+
+> 图片生成字符画：
+1. http://life.chacuo.net/convertphoto2char
+2. https://www.degraeve.com/img2txt.php
+
+> 图片生成字符画：
+1. 
+
+参考：
+Console相关文档 https://developer.mozilla.org/zh-CN/docs/Web/API/Console
+
 ### 添加鼠标点击特效
 
 > 在自定义js中添加自己想要的鼠标点击特效的实现
