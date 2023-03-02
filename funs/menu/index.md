@@ -23,7 +23,7 @@
 	</ul>
 </div>
 </div>
-<div style="height:600xp;"></div>
+<div style="height:360px;"></div>
 <script>
 var menu = [
 	{
