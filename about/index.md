@@ -43,7 +43,6 @@ https://www.typeitjs.com/docs/vanilla/usage#options
 {{< music auto="https://y.qq.com/n/yqq/playlist/8138088068.html" fixed=false list-folded=true autoplay=true volume="0.2" order="random" loop="all"  >}}
 
 
-
 <!-- 
 > typeit 示例
 
