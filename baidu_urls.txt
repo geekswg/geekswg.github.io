@@ -1,3 +1,4 @@
+https://geekswg.github.io/funs/menu/
 https://geekswg.github.io/funs/funs-index/
 https://geekswg.github.io/funs/pages/album-accordion-image/
 https://geekswg.github.io/funs/pages/games-ai-chess/
