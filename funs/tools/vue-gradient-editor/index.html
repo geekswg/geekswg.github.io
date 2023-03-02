@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Vue.js 圆形CSS3渐变色拾取器DEMO演示</title>
+  <link rel="stylesheet" href="normalize.min.css">
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<script type="text/x-template" id="picker">
+  <div>
+  <svg v-bind:style="{ transform: 'rotate(' + (shift * -360 % 360) + 'deg)' }"class="picker__svg" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" viewBox="-10 -10 220 220">
+      <defs>
+        <linearGradient v-bind:id="'redyel-' + id" gradientUnits="objectBoundingBox" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" v-bind:stop-color="colors[0]"/>   
+            <stop offset="100%" v-bind:stop-color="colors[1]"/>   
+        </linearGradient>
+        <linearGradient v-bind:id="'yelgre-' + id" gradientUnits="objectBoundingBox" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" v-bind:stop-color="colors[1]"/>   
+            <stop offset="100%" v-bind:stop-color="colors[2]"/>   
+        </linearGradient>
+        <linearGradient v-bind:id="'grecya-' + id" gradientUnits="objectBoundingBox" x1="1" y1="0" x2="0" y2="1">
+            <stop offset="0%" v-bind:stop-color="colors[2]"/>   
+            <stop offset="100%" v-bind:stop-color="colors[3]"/>   
+        </linearGradient>
+        <linearGradient v-bind:id="'cyablu-' + id" gradientUnits="objectBoundingBox" x1="1" y1="1" x2="0" y2="0">
+            <stop offset="0%" v-bind:stop-color="colors[3]"/>   
+            <stop offset="100%" v-bind:stop-color="colors[4]"/>   
+        </linearGradient>
+        <linearGradient v-bind:id="'blumag-' + id" gradientUnits="objectBoundingBox" x1="0" y1="1" x2="0" y2="0">
+            <stop offset="0%" v-bind:stop-color="colors[4]"/>   
+            <stop offset="100%" v-bind:stop-color="colors[5]"/>   
+        </linearGradient>
+        <linearGradient v-bind:id="'magred-' + id" gradientUnits="objectBoundingBox" x1="0" y1="1" x2="1" y2="0">
+            <stop offset="0%" v-bind:stop-color="colors[5]"/>   
+            <stop offset="100%" v-bind:stop-color="colors[0]"/>   
+        </linearGradient>
+      </defs>
+      <ellipse class="ellipse" cx="100" cy="100" rx="100.95" ry="100.95" fill="none" stroke="#212121"/>
+      <g fill="none" transform="translate(100,100)">
+        <path d="M -1,-100 A 100,100 0 0,1 86.6,-50" v-bind:stroke="'url(#redyel-' + id + ')'"/>
+        <path d="M 86,-51 A 100,100 0 0,1 86.6,50" v-bind:stroke="'url(#yelgre-' + id + ')'"/>
+        <path d="M 87,49 A 100,100 0 0,1 0,100" v-bind:stroke="'url(#grecya-' + id + ')'"/>
+        <path d="M 1,100 A 100,100 0 0,1 -86.6,50" v-bind:stroke="'url(#cyablu-' + id + ')'"/>
+        <path d="M -86,51 A 100,100 0 0,1 -86.6,-50" v-bind:stroke="'url(#blumag-' + id + ')'"/>
+        <path d="M -87,-49 A 100,100 0 0,1 0,-100" v-bind:stroke="'url(#magred-' + id + ')'"/>
+      </g>
+  </svg>
+  <div>
+</script>
+
+<script type="text/x-template" id="pointer">
+  <div class="pointer" v-bind:style="{color: color}">
+    <div class="pointer__marker" v-bind:style="{transform: 'translate(-50%,-50%) rotate(' + position * 380 + 'deg)'}"></div>
+  </div>
+</script>
+
+<script type="text/x-template" id="bg">
+  <div class="gradient" v-bind:style="{color: start, background: 'linear-gradient(' + start + ', ' + stop + ')'}">
+  <transition name="pouf">
+    <span v-if="!scrolled" class="gradient__text">  
+      <strong>scroll to change color shift</strong>
+    </span>
+  </transition>
+  </div>
+</script>
+
+<script type="text/x-template" id="ratio">
+  <label v-bind:style="{color: color}" class="ratio">
+    <strong class="ratio__label">Ratio</strong>
+    <input class="ratio__range" type="range" v-bind:value="ratio" v-on:input="updateValue($event)" increment=0.01 min=0 max=1 step="0.001">
+  </label>
+</script>
+
+<div id="app" class="app">
+  <div class="app__wrap" v-bind:class="{ 'app--uihide': !visibleUI, 'app--uianimate': animateUI }">
+    <v-style>
+      :root {
+        --colorInner: {{colorInner}};
+        --colorOuter: {{colorOuter}};
+        --colorUI: {{colorUI}}};
+      }
+    </v-style>
+    <bg v-bind:stop="colorInner" 
+        v-bind:scrolled="didScroll" 
+        v-bind:start="colorOuter">
+    </bg>
+    <div class="controls">
+      <!--pointer class="pointer--lower" v-bind:position="pointer"></pointer-->
+      <picker class="picker picker--outer" v-bind:colors="colorsOuter"></picker>
+      <picker class="picker picker--inner" v-bind:colors="colorsInner" v-bind:shift="shift"></picker>
+      <pointer v-bind:position="pointer" v-bind:color="colorInner"></pointer>
+      <ratio v-model="ratio"></ratio>
+    </div>
+    <div class="actions" v-bind:class="{ 'actions--up': didScroll }">
+      <button title="copy to clipboard" v-bind:data-clipboard-text="'linear-gradient(' + colorOuter +', '+ colorInner +')'" class="button actions__button"><i class="button__icon"><svg viewBox="0 0 1151.25 1440.625125" xmlns="http://www.w3.org/2000/svg"><path d="m-5932.9762 2569.7556-362.8126-.3168v-143.7479-143.7479h-143.75-143.75v-431.875-431.875h431.875 431.8751v143.75 143.75h143.75 143.75v432.5 432.5001l-69.0625-.3104c-37.9844-.1707-232.3282-.4529-431.875-.6271zm362.1875-432.3559v-293.2934l-292.1875.9223c-160.7032.5072-292.3696 1.0931-292.5921 1.302-.2224.2089-.5457 131.7759-.7183 292.3711l-.3139 291.9914h292.9059 292.9059zm-725.0001-212.9567v-218.75h218.75 218.7501v-74.0625-74.0625l-292.4948.3177-292.4948.3178-.3177 292.4948-.3178 292.4948 74.0625-.0001h74.0625z" transform="translate(6583.2887 -1418.193)"/></svg></i><span class="button__text">copy</span></button>
+      <button v-on:click="toggleDiscrete()" class="button actions__button"><i class="button__icon"><svg viewBox="0 0 1279.0173 1598.999125" xmlns="http://www.w3.org/2000/svg"><path d="m-2896.2791 556.86227c-20.5895-1.755-45.7549-4.81513-61.8496-7.521-232.2831-39.0512-423.5294-201.18751-500.3924-424.22668-14.6274-42.445313-25.1549-89.624913-31.0953-139.354163-3.2286-27.02832-3.2286-109.221637 0-136.249937 17.7073-148.2357 78.1511-276.1044 179.5379-379.8118 104.1372-106.5209 236.6946-170.9064 389.4244-189.1505 27.0283-3.2286 109.2216-3.2286 136.2499 0 152.7298 18.2441 285.2872 82.6296 389.4244 189.1505 101.3868 103.7074 161.8306 231.5761 179.5379 379.8118 3.2286 27.0283 3.2286 109.221617 0 136.249937-17.7073 148.235623-78.1511 276.104363-179.5379 379.811793-103.9338 106.31275-236.9979 171.02105-388.7994 189.07092-15.9852 1.90075-97.3955 3.5065-112.4999 2.21913zm98.1754-162.3659c184.4382-21.39347 338.9126-145.55761 399.6544-321.235943 10.9472-31.66149 19.6053-71.03906 23.6366-107.49999 2.1674-19.60284 2.1674-76.647147 0-96.249947-9.7254-87.9607-41.1265-169.0733-91.8694-237.3086-87.3017-117.397-220.3349-187.8181-366.7341-194.1305l-19.113-.8241v480.388147 480.388173l19.113-.82411c10.5121-.45326 26.4027-1.66967 35.3125-2.70313z" transform="translate(3492.0379 721.87326)"/></svg></i><span class="button__text">lightmode</span></button>
+      <!--button v-on:click="toggleUI()" class="button actions__button"><i class="button__icon">☉</i><span class="button__text">toggle ui</span></button-->
+      <button v-on:click="togglePlay()" class="button button--play actions__button"><i class="button__icon"><svg viewBox="0 0 560.62432 1401.56075" xmlns="http://www.w3.org/2000/svg"><path d="m-1464.3832 828.28949v-560.6243l280.3122 280.3121 280.31211 280.3122-280.31211 280.31211-280.3122 280.3122z" transform="translate(1464.3832 -267.66519)"/></svg></i><span class="button__text">play</span></button>
+    </div>
+  </div>
+</div>
+<!-- partial -->
+  <script src='vue.min.js'></script>
+<script src='chroma.min.js'></script>
+<script src='hamster.js'></script>
+<script src='clipboard.min.js'></script><script  src="script.js"></script>
+
+</body>
+</html>

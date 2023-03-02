@@ -12,13 +12,12 @@ note abstract info tip success question warning failure danger bug example quote
 Do no evil ！
 {{< /admonition >}}
 <!--more-->
-
-## 音乐-music
+## music-favor
 
 > 个人喜欢的音乐列表
-{{< music auto="https://y.qq.com/n/yqq/playlist/8138088068.html" fixed=false list-folded=false autoplay=true volume="0.2" >}}
+{{< music auto="https://y.qq.com/n/yqq/playlist/8138088068.html" mini=false  fixed=false list-folded=false autoplay=true volume="0.2" >}}
 
-## 开源软件-soft
+## Open-Source-Software
 {{< admonition note "提醒" true >}}
 分享一些用过就离不开的开源软件，免费且实用。
 注意：并不是所有的开源软件都是免费的，留意开源协议即可。
@@ -29,10 +28,10 @@ Do no evil ！
 |[verycapture](https://verycapture.com/cn/download.html)|VeryCapture专业的屏幕截取软件，提升办公效率，让用户有更多时间投入业务|截图、免费、开源          |
 |[音乐-lx-music](https://lxmusic.toside.cn/)|一个免费&开源的音乐查找工具|手机电脑双端、绿色、音乐、下载手机电脑双端、绿色、音乐、下载|
 |[FastGithub](https://github.com/dotnetcore/FastGithub/releases)|github加速神器，解决github打不开、用户头像无法加载、releases无法上传下载、git-clone、git-pull、git-push失败等问题。|国内稳定访问|
-|[V2rayN科学上网](https://github.com/2dust/v2rayN/releases)|科学上网客户端软件|免费订阅地址https://raw.githubusercontent.com/aiboboxx/v2rayfree/main/v2|
+|[V2rayN科学上网](https://github.com/2dust/v2rayN/releases)|科学上网客户端软件|[#订阅地址](#free)|
 |<p style="width:10%"></p>|<p style="width:60%"></p>|<p style="width:30%"></p>|
 
-## 手机软件-soft
+## apps
 > android 手机软件分享
 |**下载地址**|**功能描述**|**备注**|
 |:--|:--|:--|
@@ -40,11 +39,21 @@ Do no evil ！
 |[TVBox类影视软件](http://xn--sss604efuw.ga/)|开源壳子 TVbox相关免费资源推荐，免费影视的软件|各种vip各种套路限制|
 
 
-## 网站-website
+## website
 
 👉 [点击这里查看](http://geekswg.js.cool/website/ "网站收藏")
 
-## 其他-other
+## other
+
+### free
+
+免费订阅地址 https://raw.githubusercontent.com/aiboboxx/v2rayfree/main/v2
+
+其他内容
+
+
+
+
 
 ---
 

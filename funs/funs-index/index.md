@@ -1,5 +1,9 @@
-# Game
+# funs-index
 
+{{< admonition "摘要" true >}}
+有趣的网页，包含，游戏，相册，实用工具等一些好玩的网页。
+note abstract info tip success question warning failure danger bug example quote
+{{< /admonition >}}
 <!--more-->
 <!DOCTYPE html>
 <html lang="zh">
@@ -18,7 +22,7 @@
 </head>
 
 <body>
-  <h1>html -title</h1>
+  <h1>funs-index 目录</h1>
   <div id="app">
     <div></div>
     <span></span>
@@ -32,5 +36,5 @@
 ---
 
 > 作者: [geekswg](https://geekswg.github.io)  
-> URL: https://geekswg.github.io/funs/game/  
+> URL: https://geekswg.github.io/funs/funs-index/  
 
