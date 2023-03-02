@@ -17,8 +17,8 @@
 <center>
 <span id="typeitObj" style='font-family: MMT,"沐目体";font-size:20px;font-weight:bold;color:#009966;' >
 莫笑少年江湖梦，谁不少年梦江湖。曾经年少立志三千里，如今踌躇百步无寸功。
-懵懂半生，庸碌尘世中，转眼高堂皆白发，儿女蹒跚学堂中。碎银几两催人老。
-心仍少，皱纹却上眉目中，浮生醉酒回梦里。青春人依旧，只叹时光太匆匆！
+<br/>懵懂半生，庸碌尘世中，转眼高堂皆白发，儿女蹒跚学堂中。碎银几两催人老。
+<br/>心仍少，皱纹却上眉目中，浮生醉酒回梦里。青春人依旧，只叹时光太匆匆！
 </span>
 </center>
 <!-- The script itself, loaded AFTER your root element. 
