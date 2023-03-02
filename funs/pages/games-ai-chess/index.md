@@ -1,5 +1,4 @@
-# js-pwd-generator密码生成器
-
+# ai-chess国际象棋
 
 <!--more-->
 <!DOCTYPE html>
@@ -14,13 +13,13 @@
   </style>
 </head>
 <body>
-  <h2>密码生成器</h2>
-  <iframe allowtransparency="true" frameborder="0" width="100%" height="660px" scrolling="no" src="/funs/tools/js-passwd-generator/index.html"></iframe>
+  <h2>ai-chess国际象棋</h2>
+  <iframe allowtransparency="true" frameborder="0" width="100%" height="620px" scrolling="no" src="/funs/games/html5-ai-chess/index.html"></iframe>
 </body>
 </html>
 
 ---
 
 > 作者: [geekswg](https://geekswg.github.io)  
-> URL: https://geekswg.github.io/funs/pages/jq-keybord-copy/  
+> URL: https://geekswg.github.io/funs/pages/games-ai-chess/  
 

@@ -1,7 +1,10 @@
 https://geekswg.github.io/funs/funs-index/
+https://geekswg.github.io/funs/pages/album-accordion-image/
+https://geekswg.github.io/funs/pages/games-ai-chess/
 https://geekswg.github.io/funs/pages/color-picker/
 https://geekswg.github.io/funs/pages/jq-keybord/
-https://geekswg.github.io/funs/pages/jq-keybord-copy/
+https://geekswg.github.io/funs/pages/album-image-wall/
+https://geekswg.github.io/funs/pages/tools-generator/
 https://geekswg.github.io/funs/game-cube/
 https://geekswg.github.io/funs/game2048/
 https://geekswg.github.io/share/
