@@ -1,4 +1,4 @@
-<h1 align="center">毕少侠</h1>
+<h1 align="center">毕少侠 geekswg</h1>
 
 <div align="center">
 毕少侠也在江湖
@@ -14,7 +14,7 @@
 
 ## Copyright
 
-:copyright: 2018 - 2022 [geekswg](https://github.com/geekswg)
+:copyright: 2018 - 2023 [geekswg](https://github.com/geekswg)
 
 ## Stargazers over time
 
