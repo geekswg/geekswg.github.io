@@ -12,12 +12,12 @@ note abstract info tip success question warning failure danger bug example quote
 Do no evil ！
 {{< /admonition >}}
 <!--more-->
-## music-favor
+## music-favor-收藏
 
 > 个人喜欢的音乐列表
 {{< music auto="https://y.qq.com/n/yqq/playlist/8138088068.html" mini=false  fixed=false list-folded=false autoplay=true volume="0.2" >}}
 
-## Free-Software
+## Free-Software-软件
 
 {{< admonition note "提醒" true >}}
 分享一些用过就离不开的开源软件或者免费的软件，免费且实用。
