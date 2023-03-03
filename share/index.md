@@ -32,6 +32,7 @@ Do no evil ！
 |[V2rayN科学上网](https://github.com/2dust/v2rayN/releases)|科学上网客户端软件|[#订阅地址](#free)|
 |[7-Zip](https://www.7-zip.org/)|7-Zip is free software with open source. 高效，高压，开源，小巧|别再用winrar了，缺点UI丑了点|
 |[NanaZip](https://github.com/M2Team/NanaZip/releases/)|基于7-zip开发|支持适配win11右键菜单|
+|[NanRoundedTBaZip](https://github.com/torchgm/RoundedTB/releases)|Add margins, rounded corners and segments to your taskbars!|win11任务栏美化|
 |<p style="width:10%"></p>|<p style="width:60%"></p>|<p style="width:30%"></p>|
 
 ## apps-安卓软件
