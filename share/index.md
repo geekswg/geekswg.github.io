@@ -30,12 +30,13 @@ Do no evil ！
 |[音乐-lx-music](https://lxmusic.toside.cn/)|一个免费&开源的音乐查找工具|手机电脑双端、绿色、音乐、下载手机电脑双端、绿色、音乐、下载|
 |[FastGithub](https://github.com/dotnetcore/FastGithub/releases)|github加速神器，解决github打不开、用户头像无法加载、releases无法上传下载、git-clone、git-pull、git-push失败等问题。|国内稳定访问|
 |[V2rayN科学上网](https://github.com/2dust/v2rayN/releases)|科学上网客户端软件|[#订阅地址](#free)|
+|[7-Zip](https://www.7-zip.org/)|7-Zip is free software with open source. 高效，高压，开源，小巧|别再用winrar了，缺点UI丑了点|
+|[NanaZip](NanaZip https://github.com/M2Team/NanaZip/releases/)|基于7-zip开发|支持适配win11右键菜单|
 |<p style="width:10%"></p>|<p style="width:60%"></p>|<p style="width:30%"></p>|
 
-7-Zip is free software with open source. 
-https://www.7-zip.org/
 
-NanaZip https://github.com/M2Team/NanaZip/releases/
+
+
 
 
 ## apps
