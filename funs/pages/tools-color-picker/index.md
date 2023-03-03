@@ -25,5 +25,5 @@
 ---
 
 > 作者: [geekswg](https://geekswg.github.io)  
-> URL: https://geekswg.github.io/funs/pages/color-picker/  
+> URL: https://geekswg.github.io/funs/pages/tools-color-picker/  
 

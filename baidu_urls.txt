@@ -1,13 +1,12 @@
-https://geekswg.github.io/funs/menu/
 https://geekswg.github.io/funs/funs-index/
 https://geekswg.github.io/funs/pages/album-accordion-image/
 https://geekswg.github.io/funs/pages/games-ai-chess/
-https://geekswg.github.io/funs/pages/color-picker/
+https://geekswg.github.io/funs/pages/tools-color-picker/
 https://geekswg.github.io/funs/pages/tools-jq-keybord/
 https://geekswg.github.io/funs/pages/album-image-wall/
 https://geekswg.github.io/funs/pages/tools-generator/
-https://geekswg.github.io/funs/game-cube/
-https://geekswg.github.io/funs/game2048/
+https://geekswg.github.io/funs/pages/games-cube/
+https://geekswg.github.io/funs/pages/games-2048/
 https://geekswg.github.io/share/
 https://geekswg.github.io/funs/js-hello-world/
 https://geekswg.github.io/daily-notes/
@@ -18,8 +17,8 @@ https://geekswg.github.io/fixit-beautification/
 https://geekswg.github.io/notes/
 https://geekswg.github.io/new-bing/
 https://geekswg.github.io/website/
-https://geekswg.github.io/funs/3d-carousel/
-https://geekswg.github.io/funs/chatgpt-web/
+https://geekswg.github.io/funs/album/3d-carousel/
+https://geekswg.github.io/funs/pages/tools-chatgpt-web/
 https://geekswg.github.io/code/hugo-admonition/
 https://geekswg.github.io/dos/
 https://geekswg.github.io/code/demo/
@@ -30,3 +29,5 @@ https://geekswg.github.io/demo3/
 https://geekswg.github.io/demo/
 https://geekswg.github.io/about/
 https://geekswg.github.io/links/
+https://geekswg.github.io/funs/games/game2048/contributing/
+https://geekswg.github.io/funs/games/game2048/readme/

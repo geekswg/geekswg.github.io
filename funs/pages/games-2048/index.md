@@ -14,12 +14,12 @@
   </style>
 </head>
 <body>
-  <iframe allowtransparency="true" frameborder="0" width="100%" height="820px" scrolling="no" src="2048.html"></iframe>  
+  <iframe allowtransparency="true" frameborder="0" width="100%" height="820px" scrolling="no" src="/funs/games/game2048/2048.html"></iframe>  
 </body>
 </html>
 
 ---
 
 > 作者: [geekswg](https://geekswg.github.io)  
-> URL: https://geekswg.github.io/funs/game2048/  
+> URL: https://geekswg.github.io/funs/pages/games-2048/  
 

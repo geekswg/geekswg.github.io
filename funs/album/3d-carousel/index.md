@@ -388,5 +388,5 @@
 ---
 
 > 作者: [geekswg](https://geekswg.github.io)  
-> URL: https://geekswg.github.io/funs/3d-carousel/  
+> URL: https://geekswg.github.io/funs/album/3d-carousel/  
 

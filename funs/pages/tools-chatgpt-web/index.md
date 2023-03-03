@@ -101,9 +101,10 @@
   <div id="hello-vue">
 
     <el-container>
-      <el-header>
+      {{/*  <el-header>
         <h2>ChatGPT-Web v0.2.2 </h2>
-      </el-header>
+      </el-header>  */}}
+
       <el-main>
         <el-row :gutter="40">
           <el-col :span="8" class="col-params" v-loading="loading" element-loading-text="Loading..."
@@ -303,5 +304,5 @@
 ---
 
 > 作者: [geekswg](https://geekswg.github.io)  
-> URL: https://geekswg.github.io/funs/chatgpt-web/  
+> URL: https://geekswg.github.io/funs/pages/tools-chatgpt-web/  
 

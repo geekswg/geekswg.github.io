@@ -16,7 +16,7 @@ note abstract info tip success question warning failure danger bug example quote
 
 <body>
   <h2>funs-index 目录导航</h2>
-  <iframe allowtransparency="true" frameborder="0" width="100%" height="720px" scrolling="no" src="/funs/menu/index.html"></iframe>
+  <iframe allowtransparency="true" frameborder="0" width="100%" height="680px" scrolling="no" src="/funs/menu/pc-menu/index.html"></iframe>
 </body>
 </html>
 
