@@ -34,12 +34,8 @@ Do no evil ！
 |[NanaZip](NanaZip https://github.com/M2Team/NanaZip/releases/)|基于7-zip开发|支持适配win11右键菜单|
 |<p style="width:10%"></p>|<p style="width:60%"></p>|<p style="width:30%"></p>|
 
+## apps-安卓软件
 
-
-
-
-
-## apps
 > android 手机软件分享
 |**下载地址**|**功能描述**|**备注**|
 |:--|:--|:--|
