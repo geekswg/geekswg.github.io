@@ -32,6 +32,12 @@ Do no evil ！
 |[V2rayN科学上网](https://github.com/2dust/v2rayN/releases)|科学上网客户端软件|[#订阅地址](#free)|
 |<p style="width:10%"></p>|<p style="width:60%"></p>|<p style="width:30%"></p>|
 
+7-Zip is free software with open source. 
+https://www.7-zip.org/
+
+NanaZip https://github.com/M2Team/NanaZip/releases/
+
+
 ## apps
 > android 手机软件分享
 |**下载地址**|**功能描述**|**备注**|
