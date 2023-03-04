@@ -1,4 +1,4 @@
-<h1 align="center">毕少侠 geekswg</h1>
+<h1 align="center">毕少侠</h1>
 
 <div align="center">
 毕少侠也在江湖
@@ -11,10 +11,11 @@
 博客内容主要以 Web 前端为主。
 
 分享一些有趣程序、技巧、开发教程、心情和学习记录！
+share some funs.
 
 ## Copyright
 
-:copyright: 2018 - 2023 [geekswg](https://github.com/geekswg)
+:copyright: 2020 - 2023 [geekswg](https://github.com/geekswg)
 
 ## Stargazers over time
 

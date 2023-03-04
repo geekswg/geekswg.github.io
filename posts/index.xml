@@ -1,4 +1,16 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>所有文章 - 毕少侠</title><link>https://geekswg.github.io/posts/</link><description>所有文章 | 毕少侠</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>geekswg@qq.com (geekswg)</managingEditor><webMaster>geekswg@qq.com (geekswg)</webMaster><copyright>geekswg</copyright><lastBuildDate>Wed, 01 Mar 2023 08:52:54 +0800</lastBuildDate><atom:link href="https://geekswg.github.io/posts/" rel="self" type="application/rss+xml"/><item><title>分享</title><link>https://geekswg.github.io/share/</link><pubDate>Wed, 01 Mar 2023 08:52:54 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/share/</guid><description><![CDATA[<div class="featured-image">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>所有文章 - 毕少侠</title><link>https://geekswg.github.io/posts/</link><description>所有文章 | 毕少侠</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>geekswg@qq.com (geekswg)</managingEditor><webMaster>geekswg@qq.com (geekswg)</webMaster><copyright>geekswg</copyright><lastBuildDate>Sat, 04 Mar 2023 15:34:45 +0800</lastBuildDate><atom:link href="https://geekswg.github.io/posts/" rel="self" type="application/rss+xml"/><item><title>日常笔记</title><link>https://geekswg.github.io/daily-notes/</link><pubDate>Tue, 28 Feb 2023 13:28:09 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/daily-notes/</guid><description><![CDATA[<div class="featured-image">
+        <img src="/images/posts/featured-image.jpg" referrerpolicy="no-referrer">
+      </div><div class="details admonition quote open">
+    <div class="details-summary admonition-title">
+      <i class="icon fa-solid fa-quote-right fa-fw" aria-hidden="true"></i>摘要<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i>
+    </div>
+    <div class="details-content">
+      <div class="admonition-content"><pre><code>记录日常笔记和分享一些有趣的发现，随手记录一些流水账，好记性不如烂笔头。
+</code></pre>
+<p>倒叙记录。</p>
+</div>
+    </div>
+  </div>]]></description></item><item><title>ShareAnthing-分享一切</title><link>https://geekswg.github.io/share/</link><pubDate>Wed, 01 Mar 2023 08:52:54 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/share/</guid><description><![CDATA[<div class="featured-image">
         <img src="/images/posts/featured-image-preview.jpg" referrerpolicy="no-referrer">
       </div><div class="details admonition warning open">
     <div class="details-summary admonition-title">
@@ -20,19 +32,28 @@ note abstract info tip success question warning failure danger bug example quote
       <div class="admonition-content">软件都是我用过的，大家可以放心食用，不给任何产品推广。<br>
 Do no evil ！</div>
     </div>
-  </div>]]></description></item><item><title>日常笔记</title><link>https://geekswg.github.io/daily-notes/</link><pubDate>Tue, 28 Feb 2023 13:28:09 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/daily-notes/</guid><description><![CDATA[<div class="featured-image">
-        <img src="/images/posts/featured-image.jpg" referrerpolicy="no-referrer">
-      </div><div class="details admonition quote open">
+  </div>]]></description></item><item><title>分享VSCode插件</title><link>https://geekswg.github.io/share-vscode-plugins/</link><pubDate>Sat, 04 Mar 2023 15:34:45 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/share-vscode-plugins/</guid><description><![CDATA[<div class="featured-image">
+        <img src="/images/posts/featured-image-preview.jpg" referrerpolicy="no-referrer">
+      </div><div class="details admonition warning open">
     <div class="details-summary admonition-title">
-      <i class="icon fa-solid fa-quote-right fa-fw" aria-hidden="true"></i>摘要<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i>
+      <i class="icon fa-solid fa-exclamation-triangle fa-fw" aria-hidden="true"></i>申明<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i>
     </div>
     <div class="details-content">
-      <div class="admonition-content"><pre><code>记录日常笔记和分享一些有趣的发现，随手记录一些流水账，好记性不如烂笔头。
-</code></pre>
-<p>倒叙记录。</p>
-</div>
+      <div class="admonition-content">所有分享资源来自互联网，如有侵权请告知，会立即删除<br>
+note abstract info tip success question warning failure danger bug example quote</div>
     </div>
-  </div>]]></description></item><item><title>基于Fixit主题美化记录</title><link>https://geekswg.github.io/fixit-beautification/</link><pubDate>Sun, 26 Feb 2023 14:21:02 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/fixit-beautification/</guid><description><![CDATA[<div class="featured-image">
+  </div>
+<blockquote>
+<p>分享 VSCode 插件，提升编码效率，插件侠篇。<br>
+<div class="details admonition tip open">
+    <div class="details-summary admonition-title">
+      <i class="icon fa-solid fa-lightbulb fa-fw" aria-hidden="true"></i>技巧<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i>
+    </div>
+    <div class="details-content">
+      <div class="admonition-content">小技巧：vscode插件栏目中，热门标签类目下的插件都是比较优秀和好用的插件，不知道用什么插件时去哪里可以发现很多宝藏的插件！推荐里面也能找到你想要的，微软这方面做的还是非常不错的。</div>
+    </div>
+  </div></p>
+</blockquote>]]></description></item><item><title>基于Fixit主题美化记录</title><link>https://geekswg.github.io/fixit-beautification/</link><pubDate>Sun, 26 Feb 2023 14:21:02 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/fixit-beautification/</guid><description><![CDATA[<div class="featured-image">
         <img src="/images/posts/featured-image.jpg" referrerpolicy="no-referrer">
       </div><div class="details admonition quote open">
     <div class="details-summary admonition-title">
@@ -98,7 +119,28 @@ Do no evil ！</div>
       </div><p>最近除了有很红的ChatGPT AI 聊天机器人之外，还有很多人跃跃欲试新版Bing（New Bing），因为微软将新版Bing 结合了比ChatGPT 更强大的新一代OpenAI 语言模型，不仅能询问复杂问题、提供建议与解决方法，Bing 也会查看网路搜寻结果，迅速为我们提供摘要。<br>
 记录申请过程中遇到各种问题以及解决办法。</p>]]></description></item><item><title>测试评论</title><link>https://geekswg.github.io/demo3/</link><pubDate>Tue, 01 Feb 2022 23:02:55 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/demo3/</guid><description></description></item><item><title>DOS命令总结</title><link>https://geekswg.github.io/dos/</link><pubDate>Thu, 02 Feb 2023 14:51:53 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/dos/</guid><description><![CDATA[<div class="featured-image">
         <img src="/images/posts/featured-image.jpg" referrerpolicy="no-referrer">
-      </div><p>总结一些用到dos命令，方便查用</p>]]></description></item><item><title>分享</title><link>https://geekswg.github.io/share/</link><pubDate>Wed, 01 Mar 2023 08:52:54 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/share/</guid><description><![CDATA[<div class="featured-image">
+      </div><p>总结一些用到dos命令，方便查用</p>]]></description></item><item><title>分享VSCode插件</title><link>https://geekswg.github.io/share-vscode-plugins/</link><pubDate>Sat, 04 Mar 2023 15:34:45 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/share-vscode-plugins/</guid><description><![CDATA[<div class="featured-image">
+        <img src="/images/posts/featured-image-preview.jpg" referrerpolicy="no-referrer">
+      </div><div class="details admonition warning open">
+    <div class="details-summary admonition-title">
+      <i class="icon fa-solid fa-exclamation-triangle fa-fw" aria-hidden="true"></i>申明<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i>
+    </div>
+    <div class="details-content">
+      <div class="admonition-content">所有分享资源来自互联网，如有侵权请告知，会立即删除<br>
+note abstract info tip success question warning failure danger bug example quote</div>
+    </div>
+  </div>
+<blockquote>
+<p>分享 VSCode 插件，提升编码效率，插件侠篇。<br>
+<div class="details admonition tip open">
+    <div class="details-summary admonition-title">
+      <i class="icon fa-solid fa-lightbulb fa-fw" aria-hidden="true"></i>技巧<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i>
+    </div>
+    <div class="details-content">
+      <div class="admonition-content">小技巧：vscode插件栏目中，热门标签类目下的插件都是比较优秀和好用的插件，不知道用什么插件时去哪里可以发现很多宝藏的插件！推荐里面也能找到你想要的，微软这方面做的还是非常不错的。</div>
+    </div>
+  </div></p>
+</blockquote>]]></description></item><item><title>ShareAnthing-分享一切</title><link>https://geekswg.github.io/share/</link><pubDate>Wed, 01 Mar 2023 08:52:54 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/share/</guid><description><![CDATA[<div class="featured-image">
         <img src="/images/posts/featured-image-preview.jpg" referrerpolicy="no-referrer">
       </div><div class="details admonition warning open">
     <div class="details-summary admonition-title">
@@ -178,4 +220,4 @@ Do no evil ！</div>
         <img src="/images/posts/featured-image.jpg" referrerpolicy="no-referrer">
       </div><p>总结一些用到dos命令，方便查用</p>]]></description></item><item><title>加密测试</title><link>https://geekswg.github.io/demo2/</link><pubDate>Wed, 01 Feb 2023 15:52:43 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/demo2/</guid><description><![CDATA[<pre><code>测试全文加密密码123
 </code></pre>
-<p>全文加密时无法在搜索中收索</p>]]></description></item><item><title>测试评论</title><link>https://geekswg.github.io/demo3/</link><pubDate>Tue, 01 Feb 2022 23:02:55 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/demo3/</guid><description></description></item></channel></rss>
+<p>全文加密时无法在搜索中收索</p>]]></description></item></channel></rss>

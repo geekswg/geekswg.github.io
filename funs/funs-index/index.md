@@ -7,7 +7,6 @@ note abstract info tip success question warning failure danger bug example quote
 <!--more-->
 <!DOCTYPE html>
 <html lang="zh">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">

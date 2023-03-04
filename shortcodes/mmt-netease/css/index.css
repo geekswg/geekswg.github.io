@@ -1,6 +1,6 @@
 @font-face {
   font-family: MMT;
-  src: url('/fonts/mmt_1.5.ttf');
+  src: url('/shortcodes/mmt-netease/fonts/mmt_1.5.ttf');
   font-display: swap;
 }
 .netease-music {
@@ -78,9 +78,11 @@
   margin-right: 0.25rem;
 }
 .mmt-netease-powered {
-  display: block;
+  display: blcok;
   text-align: right;
-  margin-block: 0.25rem;
+  font-size: 80%;
+  color: #999;
+  margin-block: 0.5rem;
 }
 
 .d-none {

@@ -1,4 +1,5 @@
 https://geekswg.github.io/funs/funs-index/
+https://geekswg.github.io/share-vscode-plugins/
 https://geekswg.github.io/funs/pages/album-accordion-image/
 https://geekswg.github.io/funs/pages/games-ai-chess/
 https://geekswg.github.io/funs/pages/tools-color-picker/
@@ -29,5 +30,3 @@ https://geekswg.github.io/demo3/
 https://geekswg.github.io/demo/
 https://geekswg.github.io/about/
 https://geekswg.github.io/links/
-https://geekswg.github.io/funs/games/game2048/contributing/
-https://geekswg.github.io/funs/games/game2048/readme/
