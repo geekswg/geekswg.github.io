@@ -9,6 +9,18 @@
 
 ### ⏱️2023/02/28 00:16
 
+
+## git clone报错
+### ⏱️2023/03/04 00:16
+{{< admonition bug "bug" true >}}
+Cloning into 'blogFixit'...
+fatal: unable to access 'https://github.com/geekswg/blogFixit.git/': SSL certificate problem: unable to get local issuer certificate
+{{< /admonition >}}
+
+> 解决方法：
+打开git命令操作框，配置http.sslVerify为false,如下：
+`git config --global http.sslVerify false`
+
 ## 发现一个宝藏网站
 
 ### ⏱️2023/03/02 00:16
