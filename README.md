@@ -11,6 +11,7 @@
 博客内容主要以 Web 前端为主。
 
 分享一些有趣程序、技巧、开发教程、心情和学习记录！
+Talk is cheap , Show me the code.
 
 ## Copyright
 
