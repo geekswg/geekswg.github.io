@@ -21,6 +21,16 @@ fatal: unable to access 'https://github.com/geekswg/blogFixit.git/': SSL certifi
 打开git命令操作框，配置http.sslVerify为false,如下：
 `git config --global http.sslVerify false`
 
+{{< admonition tip >}}
+2023-03-05 01:41:52.782 [info] Author identity unknown
+*** Please tell me who you are.
+Run
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+{{< /admonition >}}
+
 ## 发现一个宝藏网站
 
 ### ⏱️2023/03/02 00:16
