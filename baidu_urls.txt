@@ -30,5 +30,3 @@ https://geekswg.github.io/demo3/
 https://geekswg.github.io/demo/
 https://geekswg.github.io/about/
 https://geekswg.github.io/links/
-https://geekswg.github.io/funs/games/game2048/contributing/
-https://geekswg.github.io/funs/games/game2048/readme/

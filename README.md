@@ -14,7 +14,7 @@
 
 ## Copyright
 
-:copyright: 2018 - 2022 [geekswg](https://github.com/geekswg)
+:copyright: 2020 - 2023 [geekswg](https://github.com/geekswg)
 
 ## Stargazers over time
 
