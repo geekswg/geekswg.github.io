@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>test</title>
+  <meta name="site" content="content site">
+  <meta name="Site" content="content Site">
+  <meta name="title" content="content title">
+  <meta name="Title" content="content Title">
+  <link rel="stylesheet" href="css/share.min.css">
+
+  <style>
+  .row{padding: 20px 0 0 20px}
+  .row-pad{padding: 20px 0 0 60px}
+  </style>
+</head>
+<body>
+  <div class="row-pad">
+    <h1>test</h1>
+  </div>
+
+<div id="share-bar" ></div>
+  
+
+<script src="sharejs/social-share.js"></script>
+<script src="sharejs/qrcode.js"></script>
+<script>
+socialShare('#share-bar', {
+  sites: ['qzone', 'qq','wechat', 'weibo', 'douban']
+});
+</script>
+</body>
+</html>
