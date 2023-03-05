@@ -17,7 +17,7 @@
 </head>
 <body>
   <h3>魔方小游戏</h3>
-  <iframe allowtransparency="true" frameborder="0" width="100%" height="700px" scrolling="no" src="/funs/games/html5-css3-3d-rubik-cube/index.html"></iframe> 
+  <iframe allowtransparency="true" frameborder="0" width="100%" height="700px" scrolling="no" src="/funs/games/html5-css3-3d-rubik-cube/cube.html"></iframe> 
 </body>
 </html>
 
