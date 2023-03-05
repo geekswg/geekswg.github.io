@@ -14,7 +14,7 @@
 </head>
 <body>
   <h2>ai-chess国际象棋</h2>
-  <iframe allowtransparency="true" frameborder="0" width="100%" height="620px" scrolling="no" src="/funs/games/html5-ai-chess/chess.html"></iframe>
+  <iframe allowtransparency="true" frameborder="0" width="100%" height="620px" scrolling="no" src="/funs/games/h5-ai-chess/chess.html"></iframe>
 </body>
 </html>
 
