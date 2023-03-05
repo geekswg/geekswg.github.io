@@ -1,4 +1,13 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>毕少侠</title><link>https://geekswg.github.io/</link><description>博客：探索、发现、分享</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>geekswg@qq.com (geekswg)</managingEditor><webMaster>geekswg@qq.com (geekswg)</webMaster><copyright>geekswg</copyright><lastBuildDate>Sat, 04 Mar 2023 23:16:19 +0800</lastBuildDate><atom:link href="https://geekswg.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>分享VSCode插件</title><link>https://geekswg.github.io/share-vscode-plugins/</link><pubDate>Sat, 04 Mar 2023 15:34:45 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/share-vscode-plugins/</guid><description><![CDATA[<div class="featured-image">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>毕少侠</title><link>https://geekswg.github.io/</link><description>博客：探索、发现、分享</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>geekswg@qq.com (geekswg)</managingEditor><webMaster>geekswg@qq.com (geekswg)</webMaster><copyright>geekswg</copyright><lastBuildDate>Sun, 05 Mar 2023 14:50:31 +0800</lastBuildDate><atom:link href="https://geekswg.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Debian从稳定版切换到testing版</title><link>https://geekswg.github.io/debian-testing/</link><pubDate>Sun, 05 Mar 2023 14:50:31 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/debian-testing/</guid><description><![CDATA[<div class="featured-image">
+        <img src="/images/posts/featured-image-preview.jpg" referrerpolicy="no-referrer">
+      </div><div class="details admonition tip open">
+    <div class="details-summary admonition-title">
+      <i class="icon fa-solid fa-lightbulb fa-fw" aria-hidden="true"></i>技巧<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i>
+    </div>
+    <div class="details-content">
+      <div class="admonition-content">debian升级到testing – 让debian系统永远保持最新的秘诀</div>
+    </div>
+  </div>]]></description></item><item><title>分享VSCode插件</title><link>https://geekswg.github.io/share-vscode-plugins/</link><pubDate>Sat, 04 Mar 2023 15:34:45 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/share-vscode-plugins/</guid><description><![CDATA[<div class="featured-image">
         <img src="/images/posts/featured-image-preview.jpg" referrerpolicy="no-referrer">
       </div><div class="details admonition warning open">
     <div class="details-summary admonition-title">
