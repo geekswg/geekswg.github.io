@@ -1,7 +1,6 @@
 https://geekswg.github.io/funs/funs-index/
 https://geekswg.github.io/debian11-learn/
 https://geekswg.github.io/debian-testing/
-https://geekswg.github.io/html/heomusic/
 https://geekswg.github.io/share-vscode-plugins/
 https://geekswg.github.io/funs/pages/album-accordion-image/
 https://geekswg.github.io/funs/pages/games-ai-chess/
@@ -16,7 +15,6 @@ https://geekswg.github.io/funs/js-hello-world/
 https://geekswg.github.io/daily-notes/
 https://geekswg.github.io/notes1/
 https://geekswg.github.io/notes2/
-https://geekswg.github.io/html/t/
 https://geekswg.github.io/fixit-beautification/
 https://geekswg.github.io/notes/
 https://geekswg.github.io/new-bing/
