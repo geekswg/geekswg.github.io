@@ -8,12 +8,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ChatGPT-Web</title>
-  <script src="https://cdn.bootcdn.net/ajax/libs/vue/3.2.45/vue.global.js"></script>
-  <link href="https://cdn.bootcdn.net/ajax/libs/element-plus/2.2.28/index.css" rel="stylesheet" />
-
-
-  <script src="https://cdn.bootcdn.net/ajax/libs/axios/1.2.5/axios.min.js"></script>
-  <script src="https://cdn.bootcdn.net/ajax/libs/element-plus/2.2.28/index.full.js"></script>
 
   <style>
     .github-corner:hover .octo-arm {

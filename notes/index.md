@@ -30,6 +30,11 @@ hugo serve -e production -D
 //在执行 git clone 时加上 --recursive 参数
 git clone --recursive https://github.com/example/example.git
 ```
+> 如过忘记下载子模块可以执行下面的语句更新
+```bash
+git submodule update --init
+```
+
 
 ---
 

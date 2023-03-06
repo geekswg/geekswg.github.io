@@ -1,4 +1,14 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>所有文章 - 毕少侠</title><link>https://geekswg.github.io/posts/</link><description>所有文章 | 毕少侠</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>geekswg@qq.com (geekswg)</managingEditor><webMaster>geekswg@qq.com (geekswg)</webMaster><copyright>geekswg</copyright><lastBuildDate>Sun, 05 Mar 2023 18:27:38 +0800</lastBuildDate><atom:link href="https://geekswg.github.io/posts/" rel="self" type="application/rss+xml"/><item><title>Debian11 Learn 相关命令</title><link>https://geekswg.github.io/debian11-learn/</link><pubDate>Sun, 05 Mar 2023 18:27:38 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/debian11-learn/</guid><description><![CDATA[<div class="featured-image">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>所有文章 - 毕少侠</title><link>https://geekswg.github.io/posts/</link><description>所有文章 | 毕少侠</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>geekswg@qq.com (geekswg)</managingEditor><webMaster>geekswg@qq.com (geekswg)</webMaster><copyright>geekswg</copyright><lastBuildDate>Sun, 05 Mar 2023 18:27:38 +0800</lastBuildDate><atom:link href="https://geekswg.github.io/posts/" rel="self" type="application/rss+xml"/><item><title>Notes</title><link>https://geekswg.github.io/notes/</link><pubDate>Wed, 22 Feb 2023 20:15:48 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/notes/</guid><description><![CDATA[<div class="featured-image">
+        <img src="/images/posts/featured-image.jpg" referrerpolicy="no-referrer">
+      </div><p><div class="details admonition quote">
+    <div class="details-summary admonition-title">
+      <i class="icon fa-solid fa-quote-right fa-fw" aria-hidden="true"></i>quote<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i>
+    </div>
+    <div class="details-content">
+      <div class="admonition-content">note abstract info tip success question warning failure danger bug example quote</div>
+    </div>
+  </div><br>
+记录常用命令，方便查阅。</p>]]></description></item><item><title>Debian11 Learn 相关命令</title><link>https://geekswg.github.io/debian11-learn/</link><pubDate>Sun, 05 Mar 2023 18:27:38 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/debian11-learn/</guid><description><![CDATA[<div class="featured-image">
         <img src="/images/posts/featured-image-preview.jpg" referrerpolicy="no-referrer">
       </div><p><div class="details admonition quote">
     <div class="details-summary admonition-title">
@@ -107,17 +117,7 @@ note abstract info tip success question warning failure danger bug example quote
 </blockquote>
 <blockquote>
 <p>我们在平时学习生活总会遇到很多很多有用的网站，也许我们收藏在了浏览器书签里，可过久了，不做说明，这些链接的价值就被时间淹没了，我们自己都记不起来了，所以这篇文章因此而生。对自己收藏的链接做些简单的说明（第一次编写用了我一个下午）；也相当于我的链接收藏夹，分享一些有趣的网站，</p>
-</blockquote>]]></description></item><item><title>Notes</title><link>https://geekswg.github.io/notes/</link><pubDate>Wed, 22 Feb 2023 20:15:48 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/notes/</guid><description><![CDATA[<div class="featured-image">
-        <img src="/images/posts/featured-image.jpg" referrerpolicy="no-referrer">
-      </div><p><div class="details admonition quote">
-    <div class="details-summary admonition-title">
-      <i class="icon fa-solid fa-quote-right fa-fw" aria-hidden="true"></i>quote<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i>
-    </div>
-    <div class="details-content">
-      <div class="admonition-content">note abstract info tip success question warning failure danger bug example quote</div>
-    </div>
-  </div><br>
-记录常用命令，方便查阅。</p>]]></description></item><item><title>加密测试</title><link>https://geekswg.github.io/demo2/</link><pubDate>Wed, 01 Feb 2023 15:52:43 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/demo2/</guid><description><![CDATA[<pre><code>测试全文加密密码123
+</blockquote>]]></description></item><item><title>加密测试</title><link>https://geekswg.github.io/demo2/</link><pubDate>Wed, 01 Feb 2023 15:52:43 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/demo2/</guid><description><![CDATA[<pre><code>测试全文加密密码123
 </code></pre>
 <p>全文加密时无法在搜索中收索</p>]]></description></item><item><title>我的第一个 Hugo 博客</title><link>https://geekswg.github.io/demo/</link><pubDate>Sat, 01 Jan 2022 12:15:22 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/demo/</guid><description><![CDATA[<div class="featured-image">
         <img src="/images/posts/featured-image.jpg" referrerpolicy="no-referrer">
@@ -136,9 +136,7 @@ note abstract info tip success question warning failure danger bug example quote
 <p>markdown 语法</p>]]></description></item><item><title>New Bing 申请教程</title><link>https://geekswg.github.io/new-bing/</link><pubDate>Mon, 20 Feb 2023 14:51:53 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/new-bing/</guid><description><![CDATA[<div class="featured-image">
         <img src="/featured-img.png" referrerpolicy="no-referrer">
       </div><p>最近除了有很红的ChatGPT AI 聊天机器人之外，还有很多人跃跃欲试新版Bing（New Bing），因为微软将新版Bing 结合了比ChatGPT 更强大的新一代OpenAI 语言模型，不仅能询问复杂问题、提供建议与解决方法，Bing 也会查看网路搜寻结果，迅速为我们提供摘要。<br>
-记录申请过程中遇到各种问题以及解决办法。</p>]]></description></item><item><title>测试评论</title><link>https://geekswg.github.io/demo3/</link><pubDate>Tue, 01 Feb 2022 23:02:55 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/demo3/</guid><description></description></item><item><title>DOS命令总结</title><link>https://geekswg.github.io/dos/</link><pubDate>Thu, 02 Feb 2023 14:51:53 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/dos/</guid><description><![CDATA[<div class="featured-image">
-        <img src="/images/posts/featured-image.jpg" referrerpolicy="no-referrer">
-      </div><p>总结一些用到dos命令，方便查用</p>]]></description></item><item><title>Debian11 Learn 相关命令</title><link>https://geekswg.github.io/debian11-learn/</link><pubDate>Sun, 05 Mar 2023 18:27:38 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/debian11-learn/</guid><description><![CDATA[<div class="featured-image">
+记录申请过程中遇到各种问题以及解决办法。</p>]]></description></item><item><title>测试评论</title><link>https://geekswg.github.io/demo3/</link><pubDate>Tue, 01 Feb 2022 23:02:55 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/demo3/</guid><description></description></item><item><title>Debian11 Learn 相关命令</title><link>https://geekswg.github.io/debian11-learn/</link><pubDate>Sun, 05 Mar 2023 18:27:38 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/debian11-learn/</guid><description><![CDATA[<div class="featured-image">
         <img src="/images/posts/featured-image-preview.jpg" referrerpolicy="no-referrer">
       </div><p><div class="details admonition quote">
     <div class="details-summary admonition-title">

@@ -8,8 +8,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>html -title</title>
-  <script src="https://cdn.bootcdn.net/ajax/libs/vue/3.2.45/vue.global.js"></script>
-  <link href="https://cdn.bootcdn.net/ajax/libs/element-plus/2.2.28/index.css" rel="stylesheet" />
 
   <style>
     
@@ -17,7 +15,7 @@
 </head>
 <body>
   <h3>魔方小游戏</h3>
-  <iframe allowtransparency="true" frameborder="0" width="100%" height="700px" scrolling="no" src="/funs/games/html5-css3-3d-rubik-cube/cube.html"></iframe> 
+  <iframe allowtransparency="true" frameborder="0" width="100%" height="620px" scrolling="no" src="/html/games/h5-js-game-cube/index.html"></iframe>
 </body>
 </html>
 
