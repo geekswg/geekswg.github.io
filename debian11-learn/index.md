@@ -54,6 +54,20 @@ echo "instsall is finish"
 # 完
 ```
 
+## 安装Hugo
+
+```bash
+# 通过运行以下命令确保您的系统是最新的 apt 终端中的命令：
+sudo apt update
+sudo apt upgrade
+
+# 默认情况下，Hugo 在 Debian 11 基础存储库中可用。 现在我们使用以下命令安装`Hugo`
+sudo apt install hugo
+
+# 查看hugo 版本号以验证是否安装成功：
+hugo version
+```
+
 ---
 
 > 作者: [geekswg](https://geekswg.github.io)  
