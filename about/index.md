@@ -13,6 +13,7 @@
 </center>
 {{< /typeit >}} -->
 
+
 <!-- A root element for TypeIt to target. -->
 <center>
 <span id="typeitObj" style='font-family: MMT,"沐目体";font-size:20px;font-weight:bold;color:#009966;' >
