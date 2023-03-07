@@ -8,6 +8,7 @@ https://geekswg.github.io/funs/pages/tools-color-picker/
 https://geekswg.github.io/funs/pages/tools-jq-keybord/
 https://geekswg.github.io/funs/pages/album-image-wall/
 https://geekswg.github.io/funs/pages/tools-generator/
+https://geekswg.github.io/funs/pages/tools-qrcode-creator/
 https://geekswg.github.io/funs/pages/games-cube/
 https://geekswg.github.io/funs/pages/games-2048/
 https://geekswg.github.io/share/
