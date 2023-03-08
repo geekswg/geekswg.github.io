@@ -1,49 +1,58 @@
 [
   {
     "id": "1",
-    "type": "Translate",
-    "sort": 1,
-    "description": "在线翻译工具",
+    "type": "系统保留",
+    "sort": 0,
+    "description": "置顶",
     "items": [
       {
         "id": "1",
-        "name": "百度翻译",
-        "url": "http://fanyi.baidu.com/",
+        "name": "🏠 首页",
+        "url": "/",
         "sort": 1,
-        "target": "_blank",
-        "description": "百度在线翻译"
+        "target": "",
+        "description": "💻返回网站首页💾💻🖥️📃📋🏠🪪🖨️🖱️⌨️🔍✉️✏️📝📌⏱️📝📁🎧🎵🎶🎼🎮🏆🎲"
       },
       {
         "id": "2",
-        "name": "有道翻译",
-        "url": "http://fanyi.youdao.com/",
-        "sort": 2,
+        "name": "📝 添加",
+        "url": "https://github.com/geekswg/blogFixit/edit/master/static/html/tools/html-dev-tool/datasource.json",
+        "sort": 1,
         "target": "_blank",
-        "description": "有道在线翻译"
-      },
+        "description": "✏️维护在线工具列表"
+      }
+      ,
       {
         "id": "3",
-        "name": "谷歌翻译",
-        "url": "https://translate.google.com.hk/",
-        "sort": 3,
+        "name": "🎵 音乐",
+        "url": "/html/heo-music/index.html",
+        "sort": 1,
         "target": "_blank",
-        "description": "谷歌在线翻译（需要VPN支持）"
+        "description": "在线听音乐"
+      }
+    ]
+  },
+  {
+    "id": "1.1",
+    "type": "AI类",
+    "sort": 0.1,
+    "description": "AI类搜索引擎",
+    "items": [
+      {
+        "id": "1",
+        "name": "🖥️ Phind",
+        "url": "https://www.phind.com/",
+        "sort": 1,
+        "target": "_blank",
+        "description": "The AI search engine for developers."
       },
       {
-        "id": "4",
-        "name": "海词翻译",
-        "url": "http://fanyi.dict.cn/",
-        "sort": 4,
+        "id": "2",
+        "name": "📝 ChatGPT",
+        "url": "https://chat.openai.com/chat",
+        "sort": 1,
         "target": "_blank",
-        "description": "海词在线翻译，计算机专业英语"
-      },
-      {
-        "id": "5",
-        "name": "必应翻译",
-        "url": "https://www.bing.com/translator/",
-        "sort": 5,
-        "target": "_blank",
-        "description": "微软的在线翻译（Bing）"
+        "description": "✏️ ChatGPT是一种AI聊天机器人，由OpenAI公司开发，于2022年12月发布。它是一种基于语言模型的聊天机器人，可以回答各种问题，从天气预报到哲学问题，甚至可以编写代码和修复错误。"
       }
     ]
   },
@@ -53,6 +62,14 @@
     "sort": 3,
     "description": "各大搜索引擎",
     "items": [
+      {
+        "id": "1",
+        "name": "Bing",
+        "url": "https://bing.com/",
+        "sort": 1,
+        "target": "_blank",
+        "description": "Bing 搜索引擎微软Bing搜索是国际领先的搜索引擎，为中国用户提供网页、图片、视频、词典、翻译、地图等全球信息搜索服务。"
+      },
       {
         "id": "1",
         "name": "Google HK",
@@ -92,6 +109,46 @@
         "sort": 5,
         "target": "_blank",
         "description": "百度"
+      }
+    ]
+  },
+  {
+    "id": "1",
+    "type": "Translate",
+    "sort": 1,
+    "description": "在线翻译工具",
+    "items": [
+      {
+        "id": "1",
+        "name": "百度翻译",
+        "url": "http://fanyi.baidu.com/",
+        "sort": 1,
+        "target": "_blank",
+        "description": "百度在线翻译"
+      },
+      {
+        "id": "2",
+        "name": "有道翻译",
+        "url": "http://fanyi.youdao.com/",
+        "sort": 2,
+        "target": "_blank",
+        "description": "有道在线翻译"
+      },
+      {
+        "id": "3",
+        "name": "谷歌翻译",
+        "url": "https://translate.google.com.hk/",
+        "sort": 3,
+        "target": "_blank",
+        "description": "谷歌在线翻译（需要VPN支持）"
+      },
+      {
+        "id": "4",
+        "name": "海词翻译",
+        "url": "http://fanyi.dict.cn/",
+        "sort": 4,
+        "target": "_blank",
+        "description": "海词在线翻译，计算机专业英语"
       }
     ]
   },
