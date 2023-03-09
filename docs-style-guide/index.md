@@ -1,7 +1,7 @@
 # 中文技术文档的写作规范
 
-{{< admonition quote "转载" false >}}
-本文转载于 ：[李瑞豪的博客](https://lruihao.cn/posts/document-style-guide/)
+{{< admonition quote "转载" true >}}
+本文转载于 ：[李瑞豪的博客-中文技术文档的写作规范](https://lruihao.cn/posts/document-style-guide/)
 {{< /admonition >}}
 
 英语世界里，文档非常受重视，许多公司和组织都有自己的文档规范，清楚地规定写作要求，比如[微软](https://www.microsoftpressstore.com/store/microsoft-manual-of-style-9780735648715)、[MailChimp](http://styleguide.mailchimp.com/)、[Apple](https://help.apple.com/asg/mac/2013/ASG_2013.pdf)、[Yahoo](https://www.amazon.com/dp/B003P8QDFU/ref=dp-kindle-redirect?_encoding=UTF8&btkr=1)、[docker](https://docs.docker.com/opensource/doc-style/)、[Struts](https://struts.apache.org/docs/documentation-style-guide.html) 等等（维基百科有一份完整的[清单](https://en.wikipedia.org/wiki/List_of_style_guides)）。[中文的](https://github.com/ruanyf/document-style-guide/blob/master/docs/reference.md)也有不少，但都不令人满意，要么太简单，要么不太适用。
