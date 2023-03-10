@@ -11,6 +11,30 @@
     首页个人头像添加 snake 动画特效 背景
 > 参考 [动态贪吃蛇特效Github地址](https://github.com/Platane/snk)
 
+
+## 自定义css
+
+> 文件位置 /assets\css/_custom.scss
+
+### div滚动条样式
+```css
+/************************** div 滚动条样式设定 **************************/
+div{
+  scrollbar-width: none; /*火狐隐藏滚动条*/
+  /* scrollbar-color: transparent transparent;*/
+  /* scrollbar-track-color: transparent;
+  -ms-scrollbar-track-color: transparent; */
+  /* 上面注释的是让滚动条变透明的 */
+}
+/** div 滚动条样式设定 */
+div::-webkit-scrollbar {  /* 仅对webkit内核浏览器生效如 chrome edge */
+  width: 1px; /* 高宽分别对应横竖滚动条的尺寸,1px为了方便查看，如果不想显示填0 */
+  height: 1px; /* 高度参数没有作用可不写 */
+  /*display: none;*/ /*隐藏滚动条*/
+}
+/************************** div 滚动条样式设定 **************************/
+```
+
 ## 自定义js
 
 > 文件位置 assets/js/custom.js [我的自定义custom.js](https://github.com/geekswg/geekswg.github.io/blob/main/js/custom.min.js)
@@ -18,6 +42,58 @@
 ### console打印样式
 
 > console. 花样打印信息，让你的控制台更加高端大气上档次。
+
+```js
+this.consoleInfo = () => {
+      var myConsole = {
+        log: function (s, css) {
+            css = (css == undefined) ? "color:#fff7d3;background-color:#ff4f49;font-size:12px;" : css;
+            console.log("%c%s", css, s);
+        },
+        green: function (s, css) {
+            css = (css == undefined) ? "color:#fff7d3;background-color:#33a600;font-size:12px;" : css;
+            console.log("%c%s", css, s);
+        },
+        blue: function (s, css) {
+            css = (css == undefined) ? "color:#fff7d3;background-color:#00768f;font-size:12px;" : css;
+            console.log("%c%s", css, s);
+        },
+        violet: function (s, css) {
+            css = (css == undefined) ? "color:#fff7d3;background-color:#79008f;font-size:12px;padding:10px;" : css;
+            console.log("%c%s", css, s);
+        },
+        img: function(imgUrl,width,height){
+          width = (width == undefined) ? '100px':width;
+          height = (height == undefined) ? '100px':height;
+          console.log("%c  ", 
+          "background-image:url("+imgUrl+");"+
+          "line-height:"+height+";font-size:"+width+";background-size: contain;");
+        }
+      }
+      myConsole.violet(
+        " Talk is cheap, Show me the code. \n"+
+        "                       --Linux 的创始人 Linus Torvalds "
+      );
+      console.log(
+        '%c 毕少侠 | https://geekswg.github.io %c e-mail: mailto://geekswg@qq.com %c',
+        'color: #FF0000; background: #4bffba; padding:5px 0; border-radius: 5px 5px 5px 5px;',
+        'background: #fadfa3; padding:5px 0; border-radius: 5px 5px 5px 5px;',
+        ''
+      );
+      myConsole.blue(
+      '____________________________________________\n'+
+      '                      /                     \n'+
+      '----__----__----__---/-__---__-----------__-\n'+
+      '  /   ) /___) /___) /(     (_ `| /| /  /   )\n'+
+      '_(___/_(___ _(___ _/___\\__(__)_|/_|/__(___/_\n'+
+      '    /                                    /  \n'+
+      '(_ /                                 (_ /   \n'+
+      '————————————————————————————————————————————'
+      );
+      myConsole.img('http://geekswg.js.cool/images/posts/featured-image-preview.jpg','264px','100px');
+      return this;
+    };
+```
 
 在线工具：
 > 在线生成ascii字符画的网站
