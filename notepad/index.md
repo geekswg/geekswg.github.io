@@ -1,10 +1,5 @@
 # 留言板
 
-
-{{< typeit >}}
- 欢迎各位！
-{{< /typeit >}}
-
 {{< admonition tip "Welcome" >}}
 {{< typeit >}}
  欢迎各位光临我的小博客！有什么想说的请在下方留言，都会回复！Do no evil plz.
