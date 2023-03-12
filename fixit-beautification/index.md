@@ -4,6 +4,8 @@
 {{< admonition quote "说明" true >}}
 记录自己博客主题的修改和美化记录
 {{< /admonition >}}
+> 本文阅读前，基于你已经了解hugo，并且使用Fixit主题成功搭建成功后，如还不了解相关内容请访问👉 [FixIt 主题文档](https://fixit.lruihao.cn/zh-cn/) 了解。
+> <small>*关于 [FixIt 主题](https://github.com/hugo-fixit/FixIt) 的问题，请移步 [FixIt 官网](https://fixit.lruihao.cn) 相关文章哦～*</small>
 <!--more-->
 
 ## 首页-home
