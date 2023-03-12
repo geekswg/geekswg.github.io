@@ -1,5 +1,6 @@
 # 关于-About
 
+关于我-about me
 <!--more-->
 {{< typeit >}}
 <center>
@@ -12,7 +13,6 @@
 </span>
 </center>
 {{< /typeit >}}
-
 
 <!-- A root element for TypeIt to target. 
 <center>
@@ -40,7 +40,6 @@ https://www.typeitjs.com/docs/vanilla/usage#options
 
 <!-- metingJs 音乐插件 -->
 {{< music auto="https://y.qq.com/n/yqq/playlist/8138088068.html" fixed=false list-folded=true autoplay=true volume="0.2" order="random" loop="all"  >}}
-
 
 <!-- 
 > typeit 示例
