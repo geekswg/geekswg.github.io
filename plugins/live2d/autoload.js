@@ -34,6 +34,11 @@ function initLoaclLive2d(live2d_width,live2d_height,position){
     live2d_settings['waifuDraggable']       = 'unlimited';    // 拖拽样式，例如 'disable'(禁用), 'axis-x'(只能水平拖拽), 'unlimited'(自由拖拽)
     live2d_settings['waifuDraggableRevert'] = false;         // 松开鼠标还原拖拽位置，可选 true(真), false(假)
     live2d_settings['waifuMinWidth']        = '100px';      // 面页小于 指定宽度 隐藏看板娘，例如 'disable'(禁用), '768px'
+    live2d_settings['modelRandMode']        = 'switch';     // 模型切换，可选 'rand'(随机), 'switch'(顺序)
+    live2d_settings['modelTexturesRandMode']= 'switch';       // 材质切换，可选 'rand'(随机), 'switch'(顺序)
+    
+    // 后端接口
+    live2d_settings['modelAPI']             = '//live2d.fghrsh.net/api/';   // 自建 API 修改这里  https://api3.fghrsh.net/live2d/ https://www.fghrsh.net/post/123.html
     /* 在 initModel 前添加 */
     initModel('/plugins/live2d/assets/waifu-tips.json');
     console.info("initLoaclLive2d success!");
