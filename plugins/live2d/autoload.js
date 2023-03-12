@@ -31,7 +31,9 @@ function initLoaclLive2d(live2d_width,live2d_height,position){
     live2d_settings['waifuToolFont'] = '18px';         // 工具栏字体
     live2d_settings['waifuToolLine'] = '26px';         // 工具栏行高
     //live2d_settings['waifuToolTop'] = '-30px';         // 工具栏顶部边距
-    
+    live2d_settings['waifuDraggable']       = 'unlimited';    // 拖拽样式，例如 'disable'(禁用), 'axis-x'(只能水平拖拽), 'unlimited'(自由拖拽)
+    live2d_settings['waifuDraggableRevert'] = false;         // 松开鼠标还原拖拽位置，可选 true(真), false(假)
+    live2d_settings['waifuMinWidth']        = '100px';      // 面页小于 指定宽度 隐藏看板娘，例如 'disable'(禁用), '768px'
     /* 在 initModel 前添加 */
     initModel('/plugins/live2d/assets/waifu-tips.json');
     console.info("initLoaclLive2d success!");
