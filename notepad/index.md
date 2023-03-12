@@ -1,5 +1,6 @@
 # 留言板
 
+
 {{< admonition tip "Welcome" >}}
 {{< typeit >}}
  欢迎各位光临我的小博客！有什么想说的请在下方留言，都会回复！Do no evil plz.
@@ -10,7 +11,7 @@
 
 <!-- 
 {{< details "来自 [网易云歌单](https://music.163.com/#/playlist?id=2414158210)" true >}}
-{{< music server="netease" type="playlist" id="2414158210" loop="all" list-folded=false autoplay=true volume="0.2" >}} 
+{{< music server="netease" type="playlist" id="2414158210" loop="all" list-folded=false autoplay=true volume="0.5" >}} 
 {{< /details >}}
 
 {{< random-comment >}}  
