@@ -41,6 +41,12 @@
     },
     "mouseover": [
         { "selector": ".container a[href^='http']", "text": ["要看看 <span style=\"color:#0099cc;\">{text}</span> 么？"] },
+        { "selector": ".container a[href^='/']", "text": ["要看看 <span style=\"color:#0099cc;\">{text}</span> 么？"] },
+        { "selector": ".menu a[href]", "text": ["要看看菜单 <span style=\"color:#0099cc;\">{text}</span> 么？"] },
+        { "selector": "#share-bar a[href]", "text": ["好东西要和朋友一起分享 <span style=\"color:#0099cc;\">{text}</span> 么？"] },
+        { "selector": ".widgets .fixed-button", "text": ["小助手 <span style=\"color:#0099cc;\">{text}</span> "] },
+        { "selector": ".search", "text": ["<span style=\"color:#0099cc;\">这里可以找到你想要的东西哟{text}</span> "] },
+
         { "selector": ".fui-home", "text": ["点击前往首页，想回到上一页可以使用浏览器的后退功能哦"] },
         { "selector": ".fui-chat", "text": ["一言一语，一颦一笑。一字一句，一颗赛艇。"] },
         { "selector": ".fui-eye", "text": ["嗯··· 要切换 看板娘 吗？"] },
