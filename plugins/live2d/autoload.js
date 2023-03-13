@@ -25,7 +25,7 @@ function initLoaclLive2d(live2d_width,live2d_height,position){
     live2d_settings['homePageUrl']          = '/';       // 主页地址，可选 'auto'(自动), '{URL 网址}'
     live2d_settings['aboutPageUrl']         = '/about/';   // 关于页地址, '{URL 网址}'
     live2d_settings['waifuSize'] = live2d_width+'x'+live2d_height;          // 看板娘大小
-    live2d_settings['waifuTipsSize']        = '250x70';     // 提示框大小，例如 '250x70', '570x150'
+    live2d_settings['waifuTipsSize']        = live2d_width+'x66';     // 提示框大小，例如 '250x70', '570x150'
     live2d_settings['waifuFontSize']        = '16px';       // 提示框字体，例如 '12px', '30px'
     live2d_settings['waifuToolFont']        = '24px';       // 工具栏字体，例如 '14px', '36px'
     live2d_settings['waifuToolLine']        = '26px';       // 工具栏行高，例如 '20px', '36px'
