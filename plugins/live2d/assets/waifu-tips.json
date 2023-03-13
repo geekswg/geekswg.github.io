@@ -41,6 +41,7 @@
     },
     "mouseover": [
         { "selector": ".container a[href^='http']", "text": ["要看看 <span style=\"color:#0099cc;\">{text}</span> 么？"] },
+        { "selector": ".container a[href^='#']", "text": ["要看目录 <span style=\"color:#0099cc;\">{text}</span> 么？"] },
         { "selector": ".container a[href^='/']", "text": ["要看看 <span style=\"color:#0099cc;\">{text}</span> 么？"] },
         { "selector": ".menu a[href]", "text": ["要看看菜单 <span style=\"color:#0099cc;\">{text}</span> 么？"] },
         { "selector": "#share-bar a[href]", "text": ["好东西要和朋友一起分享 <span style=\"color:#0099cc;\">{text}</span> 么？"] },
