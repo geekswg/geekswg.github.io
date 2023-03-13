@@ -27,8 +27,8 @@ function initLoaclLive2d(live2d_width,live2d_height,position){
     live2d_settings['waifuSize'] = live2d_width+'x'+live2d_height;          // 看板娘大小
     live2d_settings['waifuTipsSize']        = live2d_width+'x66';     // 提示框大小，例如 '250x70', '570x150'
     live2d_settings['waifuFontSize']        = '16px';       // 提示框字体，例如 '12px', '30px'
-    live2d_settings['waifuToolFont']        = '30px';       // 工具栏字体，例如 '14px', '36px'
-    live2d_settings['waifuToolLine']        = '34px';       // 工具栏行高，例如 '20px', '36px'
+    live2d_settings['waifuToolFont']        = '24px';       // 工具栏字体，例如 '14px', '36px'
+    live2d_settings['waifuToolLine']        = '28px';       // 工具栏行高，例如 '20px', '36px'
 
     // live2d_settings['waifuToolTop']         = '0px'       // 工具栏顶部边距，例如 '0px', '-60px'
     live2d_settings['waifuEdgeSide']        =  position;    // 看板娘贴边方向，例如 'left:0'(靠左 0px), 'right:30'(靠右 30px)
