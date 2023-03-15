@@ -1,4 +1,4 @@
-# ShareAnthing-分享一切
+# ShareAnything-分享一切
 
 {{< admonition warning "申明" true >}}
 所有分享资源来自互联网，如有侵权请告知，会立即删除
@@ -15,7 +15,7 @@ Do no evil ！
 ## music-favor-收藏
 
 > 个人喜欢的音乐列表
-{{< music auto="https://y.qq.com/n/yqq/playlist/8138088068.html" mini=false  fixed=false list-folded=false autoplay=true volume="0.2" >}}
+{{< music auto="https://y.qq.com/n/yqq/playlist/8138088068.html" mini=false  fixed=false list-folded=false autoplay=true volume="0.5" >}}
 
 ## Free-Software-软件
 

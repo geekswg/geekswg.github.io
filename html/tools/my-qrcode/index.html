@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <script src='js/jquery-1.9.1.min.js' type="text/javascript"></script>
+    <link rel="stylesheet" href="bootstrap-3.4.1-dist/css/bootstrap.min.css">
+    <script src="bootstrap-3.4.1-dist/js/bootstrap.min.js"></script>
+    <script src='js/awesome-qr/awesome-qr.js'></script>
+    <script src="https://cdn.staticfile.org/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+    <title>二维码生成器</title>
+    <link rel="icon" href="img/favicon.ico"/>
+</head>
+<body>
+<h2 class="text-center">二维码生成器</h2>
+<hr>
+<div>
+    <form class="form-horizontal" style="margin-left: 20%">
+        <div class="form-group">
+            <label for="qrText" class="col-sm-2 control-label">二维码内容：</label>
+            <div class="col-sm-5">
+            <textarea id="qrText" class="form-control" rows="3"
+                      placeholder="请输入文字、链接、电话等纯文本或wifi链接信息,不建议超过150字。"></textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="logo_image_input" class="col-sm-2 control-label">中间logo图片</label>
+            <div class="col-sm-1">
+                <!--./img/favicon.ico-->
+                <img id="logo_image" src="./img/favicon.ico" style="width: 50px; height: 50px">
+            </div>
+            <div class="col-sm-4">
+                <input type="file" accept="image/jpeg,image/png,image/jpg,image/bmp" class="form-control"
+                       onchange="getImageDataURL(this, '#logo_image')" id="logo_image_input">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="qr_logo_correct_level_select" class="col-sm-2 control-label">容错率</label>
+            <div class="col-sm-5">
+                <select class="form-control" id="qr_logo_correct_level_select" onchange="setQrLogoCorrectLevel('#qr_logo_correct_level_select')">
+                    <option value="1">7%</option>
+                    <option value="0">15%</option>
+                    <option value="3">25%</option>
+                    <option value="2" selected>30%</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="background_image_input" class="col-sm-2 control-label">背景图片</label>
+            <div class="col-sm-1">
+                <img id="background_image" src="./img/favicon.ico" style="width: 50px; height: 50px">
+            </div>
+            <div class="col-sm-4">
+                <input type="file" accept="image/jpeg,image/png,image/jpg,image/bmp" class="form-control"
+                       onchange="getImageDataURL(this, '#background_image')" id="background_image_input">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="gif_image_input" class="col-sm-2 control-label">动态背景图片（gif）</label>
+            <div class="col-sm-1">
+                <img id="gif_image" src="./img/favicon.ico" style="width: 50px; height: 50px">
+            </div>
+            <div class="col-sm-4">
+                <input type="file" accept="image/gif" class="form-control"
+                       onchange="getGifImageArrayBuffer(this, '#gif_image')" id="gif_image_input">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="qr_file_size_input" class="col-sm-2 control-label">二维码大小</label>
+            <div class="col-sm-5">
+                <input type="number" class="form-control" min="400" max="1000"
+                       onchange="setQrFileSize(this, '#qr_file_size_input')" id="qr_file_size_input"
+                       placeholder="二维码大小(最小400X400px; 最大1000X1000px)" value="400">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="qr_file_name_input" class="col-sm-2 control-label">二维码文件名称</label>
+            <div class="col-sm-5">
+                <input type="text" class="form-control" maxlength="150"
+                       onchange="setQrFileName(this, '#qr_file_name_input')" id="qr_file_name_input"
+                       placeholder="二维码文件名称, 最多150字">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">操作</label>
+            <div class="col-sm-4">
+                <button id="donation" type="button" class="btn btn-success" style=";margin-left: 43.5%">捐赠</button>
+                <button id="makeQR" onclick="createQR()" type="button" class="btn btn-success">生成二维码</button>
+            </div>
+        </div>
+        <div class="form-group" id="mypay" style="display: none;">
+            <label class="col-sm-2 control-label">请制作者喝杯奶茶吧O(∩_∩)O哈哈~</label>
+            <div class="col-sm-4">
+                <img style="width: 200px;height: 200px;" src="img/pay/alipay.jpg"/>
+                <img style="width: 200px;height: 200px;" src="img/pay/wechatpay.jpg"/>
+            </div>
+        </div>
+        <hr>
+        <div class="form-group" id="show_qr_div" hidden>
+            <label class="col-sm-2 control-label">生成的二维码图片</label>
+            <div class="col-sm-4">
+                <img id='qrcodeimg' src="" style="width: 200px; height: 200px">
+                <button id="downloadQR" onclick="downloadQrPhoto()" type="button" class="btn btn-success">下载</button>
+                <a href="" download="default" style="width: 50px;height: 50px" id="qrALinke" hidden>用于下载二维码的标签</a>
+            </div>
+        </div>
+    </form>
+</div>
+<script>
+    var temp_gif_arrayBuffer;
+    var temp_qr_file_name;
+    var temp_qr_file_size;
+    var qr_logo_correct_level;
+
+    /*二维码文件名称*/
+    function setQrFileName(res, targetId) {
+        var qrFileName = $(targetId).val();
+        //下载
+        if (qrFileName) {
+            //下载
+            temp_qr_file_name = qrFileName
+        }
+    }
+
+    /*纠错率*/
+    function setQrLogoCorrectLevel(targetId) {
+        var qrLogoCorrectLevel = $(targetId).val();
+        console.log(qrLogoCorrectLevel)
+        if (qrLogoCorrectLevel) {
+            qr_logo_correct_level = qrLogoCorrectLevel
+        }
+    }
+
+    /*二维码大小*/
+    function setQrFileSize(res, targetId) {
+        var qrFileSize = $(targetId).val();
+        if (qrFileSize) {
+            temp_qr_file_size = (qrFileSize > 1000 || qrFileSize < 300 ) ? 400 : qrFileSize
+        }
+    }
+
+    /*下载DataURL格式图片*/
+    function downloadQrPhoto() {
+        var qrImage = $('#qrcodeimg').attr("src");
+        //下载
+        if (qrImage) {
+            //下载
+            var qrLinke = $('#qrALinke')
+            qrLinke.attr("href", qrImage);
+            temp_qr_file_name = temp_qr_file_name || ("二维码" + new Date().getTime())
+            qrLinke.attr("download", temp_qr_file_name);
+            document.getElementById("qrALinke").click()
+        } else {
+            alert("暂无二维码图片可供下载")
+        }
+    }
+
+    /*获取图片的DataURL*/
+    function getImageDataURL(res, targetId) {
+        var tempFile = res.files[0]
+        if (window.FileReader) {
+            var fr = new FileReader()
+            fr.readAsDataURL(tempFile)
+            fr.onloadend = function (e) {
+                $(targetId).attr("src", e.target.result)
+            }
+        }
+    }
+
+    /*获取gif图片的ArrayBuffer*/
+    function getGifImageArrayBuffer(res, targetShowId) {
+        var tempFile = res.files[0]
+        if (window.FileReader) {
+            var frHidden = new FileReader()
+            frHidden.readAsArrayBuffer(tempFile)
+            frHidden.onloadend = function (e) {
+                temp_gif_arrayBuffer = e.target.result
+            }
+            var frShow = new FileReader()
+            frShow.readAsDataURL(tempFile)
+            frShow.onloadend = function (e) {
+                $(targetShowId).attr("src", e.target.result)
+            }
+        }
+    }
+
+    /*生成二维码*/
+    function createQR() {
+        //判参
+        var qrTextVal = $("#qrText").val()
+        if (qrTextVal.length <= 0) {
+            alert("二维码内容为空")
+            return
+        }
+        if (qrTextVal.length > 200) {
+            alert("二维码内容过长会导致生成失败")
+        }
+        //logo
+        var logoImage = $("#logo_image").attr("src");
+        if (logoImage == "./img/favicon.ico") {
+            logoImage = ""
+        }
+        //背景图
+        var backgroundImage = $("#background_image").attr("src");
+        if (backgroundImage == "./img/favicon.ico") {
+            backgroundImage = ""
+        }
+        //动态背景图
+        //var gifImage = temp_gif_arrayBuffer;
+        // 初始化生成二维码
+        creatqrcode(qrTextVal, logoImage, backgroundImage, temp_gif_arrayBuffer)
+    }
+</script>
+<script>
+    /*关于捐赠*/
+    $("#donation").click(function () {
+        let mypay_css_display = $("#mypay").css("display")
+        if (mypay_css_display == 'none') {
+            $("#mypay").show()
+            $("#donation").text("关闭捐赠")
+        } else {
+            $("#mypay").hide();
+            $("#donation").text("捐赠")
+        }
+    });
+</script>
+<script>
+
+    function creatqrcode(text, logo, backgroundImage, gifImage) {
+        // 二维码生成参数
+        var text = text || '吾爱破解万岁'
+        var size = temp_qr_file_size || 400;
+        var colorDark = "#000000";
+        var margin = 9
+        var background = background || "#ffffff";
+        var logo = logo || "";
+        var correctLevel = qr_logo_correct_level || 2;
+        //$("#qrcodeimg").css({width: size + "px", height: size + "px"})
+        console.log(qr_logo_correct_level)
+        new AwesomeQR.AwesomeQR({
+            text: text, // 内容
+            size: size, // 二维码大小
+            //margin: margin, // 二维码白边大小
+            //colorDark: colorDark, // 二维码颜色
+            //colorLight: "rgba(159,255,255,0)", // 二维码背景颜色
+            correctLevel: correctLevel,
+            logoImage: logo, // 二维码中间logo
+            logoScale: 0.3, // 二维码中间logo大小
+            logoCornerRadius: 0, // 二维码中间logo圆角
+            backgroundImage: backgroundImage,//背景图片
+            gifBackground: gifImage,//动态背景
+            autoColor: true,//自动颜色
+        })
+            .draw()
+            .then((dataURL) => {
+                $("#qrcodeimg").attr("src", dataURL)
+                $("#show_qr_div").show()
+            })
+            .catch((err) => {
+                console.error(err);
+                $("#show_qr_div").hide()
+            });
+    }
+</script>
+</body>
+</html>
