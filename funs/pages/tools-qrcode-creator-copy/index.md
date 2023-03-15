@@ -14,7 +14,7 @@
 </head>
 <body>
 
-  <iframe allowtransparency="true" frameborder="0" width="100%" height="720px" scrolling="no" src="/html/tools/my-qrcode/index.html"></iframe>
+  <iframe allowtransparency="true" frameborder="0" width="100%" height="1024px" scrolling="no" src="/html/tools/my-qrcode/index.html"></iframe>
 
 </body>
 </html>
