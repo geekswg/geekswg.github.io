@@ -10,6 +10,10 @@
 
 主题下载地址 [WhiteSur-gtk-theme](https://github.com/vinceliuice/WhiteSur-gtk-theme)  
 
+### 预览效果
+
+![whiteSur主题](230316181427-debian-theme-whiteSur.png "whiteSur主题")
+
 ## 安装主题
 
 解压后在终端中执行执行`./install`即可。
@@ -17,7 +21,11 @@
 ## 安装icons
 
 下载地址 ：https://github.com/vinceliuice/WhiteSur-icon-theme
+上面的地址下载后 图标显示不全，使用下面的地址即可解决问题。
+下载的时候下载：https://github.com/vinceliuice/WhiteSur-icon-theme/archive/refs/tags/2022-08-30.tar.gz
 安装方法，解压后 `./install`，非常简单。
+
+![whiteSur图标](debian-theme-whiteSur-icons.png "whiteSur图标")
 
 ## 安装plank dock栏
 
@@ -27,6 +35,12 @@ plank的安装非常简单：
 sudo apt install plank
 ```
 地址1：https://www.gnome-look.org/p/1399398/
+github地址：[下载地址](https://github.com/x64Bits/plank-themes)
+> 使用方法：
+解压后，在终端打开，复制主题文件夹到plank主题目录。
+```bash
+cp 'Big Sur Dark'/ -r ~/.local/share/plank/themes
+```
 启动plank:  `plank &`
 
 ## linux添加自启动
