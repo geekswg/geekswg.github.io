@@ -34,6 +34,7 @@ plank的安装非常简单：
 ```bash
 sudo apt install plank
 ```
+> plank主题地址
 地址1：https://www.gnome-look.org/p/1399398/
 github地址：[下载地址](https://github.com/x64Bits/plank-themes)
 > 使用方法：
