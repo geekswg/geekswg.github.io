@@ -1,6 +1,6 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>毕少侠</title><link>https://geekswg.github.io/</link><description>博客：探索、发现、分享</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>geekswg@qq.com (geekswg)</managingEditor><webMaster>geekswg@qq.com (geekswg)</webMaster><copyright>geekswg</copyright><lastBuildDate>Sat, 18 Mar 2023 16:49:11 +0800</lastBuildDate><atom:link href="https://geekswg.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>New Bing 国内正常访问方法</title><link>https://geekswg.github.io/new-bing-visit/</link><pubDate>Sat, 18 Mar 2023 16:49:11 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/new-bing-visit/</guid><description><![CDATA[<div class="featured-image">
         <img src="/230318164630-new-bing.png" referrerpolicy="no-referrer">
-      </div><p><div class="details admonition quote open">
+      </div><div class="details admonition quote open">
     <div class="details-summary admonition-title">
       <i class="icon fa-solid fa-quote-right fa-fw" aria-hidden="true"></i>quote<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i>
     </div>
@@ -10,8 +10,18 @@
 截止目前以下方法可正常访问，使用 <a href="https://github.com/oldj/SwitchHosts"target="_blank" rel="external nofollow noopener noreferrer">SwitchHosts<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a> 插件<br>
 note abstract info tip success question warning failure danger bug example quote</div>
     </div>
-  </div><br>
-这里使用MD语法编写你的文章</p>]]></description></item><item><title>Debian Theme Whitesur</title><link>https://geekswg.github.io/debian-theme-whitesur/</link><pubDate>Thu, 16 Mar 2023 20:06:36 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/debian-theme-whitesur/</guid><description><![CDATA[<div class="featured-image">
+  </div>
+<h2 id="前言">前言</h2>
+<p>最近百度文心一言发布了，还在内测申请，<a href="https://yiyan.baidu.com/welcome"target="_blank" rel="external nofollow noopener noreferrer">申请地址<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a>,不知道个人需要多长时间可以通过申请。<br>
+最近的AI搜索引擎比较火，我之前申请的new bing体验了，还是比较厉害的，现在又升级了，对话限制提高到了15次对了。不过国内的网络不能直接访问bing.com/new,这一点比较难受，今天在晚上看到一个工具可以解决，国内直接访问new bing的方法。<br>
+<div class="details admonition tip open">
+    <div class="details-summary admonition-title">
+      <i class="icon fa-solid fa-lightbulb fa-fw" aria-hidden="true"></i>技巧<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i>
+    </div>
+    <div class="details-content">
+      <div class="admonition-content">前提你已经通过new bing 的waitlist，不然你还是用不上new bing哟！</div>
+    </div>
+  </div></p>]]></description></item><item><title>Debian Theme Whitesur</title><link>https://geekswg.github.io/debian-theme-whitesur/</link><pubDate>Thu, 16 Mar 2023 20:06:36 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/debian-theme-whitesur/</guid><description><![CDATA[<div class="featured-image">
         <img src="/230316181427-debian-theme-mac.png" referrerpolicy="no-referrer">
       </div><div class="details admonition quote open">
     <div class="details-summary admonition-title">
