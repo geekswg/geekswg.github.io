@@ -34,7 +34,6 @@ SwitchHosts 是一个管理、切换多个 hosts 方案的工具。 它是一个
 
 ```hosts
 # Windows 推荐管理工具：SwitchHosts
-# 下载：https://www.ithaoge.com/SwitchHosts.html
 # 新必应主页：https://www.bing.com/new
 
 # 说明1：如果失效，请在编辑里点击刷新，查看 Hosts 配置否有更新
