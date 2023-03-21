@@ -1,10 +1,28 @@
 # Notes
 
-{{< admonition quote "quote" false >}}
+{{< admonition quote >}}
 note abstract info tip success question warning failure danger bug example quote
 {{< /admonition >}}
-    记录常用命令，方便查阅。
+快速上手Hugo blog指引。
+记录常用命令，方便查阅。
 <!--more-->
+
+## Hugo快速开始
+
+> 快速开始相关命令，前置条件，Hugo环境， 基于 [hugo-extended](https://github.com/gohugoio/hugo/releases/tag/v0.111.3)
+本文基于windows11，dos环境下命令，不过hugo命令，和git命令都是通用没有区别。
+
+```batch
+#
+hugo new site your_site_name
+cd your_site_name/
+# 初始化git ，使用git子模块 添加主题
+git init
+git submodule add https://github.com/hugo-fixit/FixIt.git themes/FixIt
+# 更新同步主题版本
+git submodule update --remote --merge
+
+```
 
 ## Hugo相关命令
 
@@ -39,5 +57,5 @@ git submodule update --init
 ---
 
 > 作者: [geekswg](https://geekswg.github.io)  
-> URL: https://geekswg.github.io/notes/  
+> URL: https://geekswg.github.io/code/notes/  
 

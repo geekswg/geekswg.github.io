@@ -186,17 +186,7 @@ hello, world!</div>
 <blockquote>
 <p>本文阅读前，基于你已经了解hugo，并且使用Fixit主题成功搭建成功后，如还不了解相关内容请访问👉 <a href="https://fixit.lruihao.cn/zh-cn/"target="_blank" rel="external nofollow noopener noreferrer">FixIt 主题文档<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a> 了解。<br>
 <small><em>关于 <a href="https://github.com/hugo-fixit/FixIt"target="_blank" rel="external nofollow noopener noreferrer">FixIt 主题<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a> 的问题，请移步 <a href="https://fixit.lruihao.cn"target="_blank" rel="external nofollow noopener noreferrer">FixIt 官网<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a> 相关文章哦～</em></small></p>
-</blockquote>]]></description></item><item><title>Notes</title><link>https://geekswg.github.io/notes/</link><pubDate>Wed, 22 Feb 2023 20:15:48 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/notes/</guid><description><![CDATA[<div class="featured-image">
-        <img src="/images/posts/featured-image.jpg" referrerpolicy="no-referrer">
-      </div><p><div class="details admonition quote">
-    <div class="details-summary admonition-title">
-      <i class="icon fa-solid fa-quote-right fa-fw" aria-hidden="true"></i>quote<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i>
-    </div>
-    <div class="details-content">
-      <div class="admonition-content">note abstract info tip success question warning failure danger bug example quote</div>
-    </div>
-  </div><br>
-记录常用命令，方便查阅。</p>]]></description></item><item><title>New Bing 申请教程</title><link>https://geekswg.github.io/new-bing/</link><pubDate>Mon, 20 Feb 2023 14:51:53 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/new-bing/</guid><description><![CDATA[<div class="featured-image">
+</blockquote>]]></description></item><item><title>New Bing 申请教程</title><link>https://geekswg.github.io/new-bing/</link><pubDate>Mon, 20 Feb 2023 14:51:53 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/new-bing/</guid><description><![CDATA[<div class="featured-image">
         <img src="/featured-img.png" referrerpolicy="no-referrer">
       </div><p>最近除了有很红的ChatGPT AI 聊天机器人之外，还有很多人跃跃欲试新版Bing（New Bing），因为微软将新版Bing 结合了比ChatGPT 更强大的新一代OpenAI 语言模型，不仅能询问复杂问题、提供建议与解决方法，Bing 也会查看网路搜寻结果，迅速为我们提供摘要。<br>
 记录申请过程中遇到各种问题以及解决办法。</p>]]></description></item><item><title>Hugo-Admonition</title><link>https://geekswg.github.io/code/hugo-admonition/</link><pubDate>Fri, 03 Feb 2023 21:42:57 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/code/hugo-admonition/</guid><description><![CDATA[<div class="featured-image">
@@ -208,4 +198,4 @@ hello, world!</div>
 &lt;img src="/images/posts/featured-image.jpg" referrerpolicy="no-referrer">
 &lt;/div></description></item><item><title>加密测试</title><link>https://geekswg.github.io/demo2/</link><pubDate>Wed, 01 Feb 2023 15:52:43 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/demo2/</guid><description><![CDATA[<pre><code>测试全文加密密码123
 </code></pre>
-<p>全文加密时无法在搜索中收索</p>]]></description></item></channel></rss>
+<p>全文加密时无法在搜索中收索</p>]]></description></item><item><title>测试评论</title><link>https://geekswg.github.io/demo3/</link><pubDate>Tue, 01 Feb 2022 23:02:55 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/demo3/</guid><description></description></item></channel></rss>

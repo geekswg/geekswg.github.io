@@ -23,7 +23,7 @@ https://geekswg.github.io/daily-notes/
 https://geekswg.github.io/notes1/
 https://geekswg.github.io/notes2/
 https://geekswg.github.io/fixit-beautification/
-https://geekswg.github.io/notes/
+https://geekswg.github.io/code/notes/
 https://geekswg.github.io/new-bing/
 https://geekswg.github.io/website/
 https://geekswg.github.io/funs/album/3d-carousel/

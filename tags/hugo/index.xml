@@ -21,16 +21,17 @@ note abstract info tip success question warning failure danger bug example quote
 <blockquote>
 <p>本文阅读前，基于你已经了解hugo，并且使用Fixit主题成功搭建成功后，如还不了解相关内容请访问👉 <a href="https://fixit.lruihao.cn/zh-cn/"target="_blank" rel="external nofollow noopener noreferrer">FixIt 主题文档<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a> 了解。<br>
 <small><em>关于 <a href="https://github.com/hugo-fixit/FixIt"target="_blank" rel="external nofollow noopener noreferrer">FixIt 主题<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a> 的问题，请移步 <a href="https://fixit.lruihao.cn"target="_blank" rel="external nofollow noopener noreferrer">FixIt 官网<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a> 相关文章哦～</em></small></p>
-</blockquote>]]></description></item><item><title>Notes</title><link>https://geekswg.github.io/notes/</link><pubDate>Wed, 22 Feb 2023 20:15:48 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/notes/</guid><description><![CDATA[<div class="featured-image">
+</blockquote>]]></description></item><item><title>Notes</title><link>https://geekswg.github.io/code/notes/</link><pubDate>Wed, 22 Feb 2023 20:15:48 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/code/notes/</guid><description><![CDATA[<div class="featured-image">
         <img src="/images/posts/featured-image.jpg" referrerpolicy="no-referrer">
-      </div><p><div class="details admonition quote">
+      </div><p><div class="details admonition quote open">
     <div class="details-summary admonition-title">
-      <i class="icon fa-solid fa-quote-right fa-fw" aria-hidden="true"></i>quote<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i>
+      <i class="icon fa-solid fa-quote-right fa-fw" aria-hidden="true"></i>引用<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i>
     </div>
     <div class="details-content">
       <div class="admonition-content">note abstract info tip success question warning failure danger bug example quote</div>
     </div>
   </div><br>
+快速上手Hugo blog指引。<br>
 记录常用命令，方便查阅。</p>]]></description></item><item><title>Hugo-Admonition</title><link>https://geekswg.github.io/code/hugo-admonition/</link><pubDate>Fri, 03 Feb 2023 21:42:57 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/code/hugo-admonition/</guid><description><![CDATA[<div class="featured-image">
         <img src="/images/posts/featured-image.jpg" referrerpolicy="no-referrer">
       </div><p><code>admonition</code> shortcode 支持 <strong>12</strong> 种 帮助你在页面中插入提示的横幅.<br>
