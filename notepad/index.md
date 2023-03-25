@@ -20,8 +20,7 @@
 {{< mmt-netease mid="2414158210" autoplay=true >}}
 tip: 👆 点击上面随机播放音乐☝️
 
-
-
+{{< plugins-live2d 200 220  "left:100" >}}
 
 ---
 

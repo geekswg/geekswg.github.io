@@ -1,0 +1,7 @@
+
+/* 元素隐藏，该class用来保存参数 */
+.plugins-live2d-data {
+    height: 0;
+    width: 0;
+    display: none; 
+}
