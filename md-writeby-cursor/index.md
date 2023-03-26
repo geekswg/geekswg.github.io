@@ -2,7 +2,7 @@
 
 {{< admonition quote "申明" >}}
 这一片关于ChatGPT的文章，由AI工具Cursor写作
-作者: Cursor
+作者: [Cursor](https://www.cursor.so/)
 {{< /admonition >}}
 <!--more-->
 
