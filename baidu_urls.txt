@@ -1,4 +1,5 @@
 https://geekswg.github.io/funs/funs-index/
+https://geekswg.github.io/hugo-shortcode-plugins-live2d/
 https://geekswg.github.io/new-bing-visit/
 https://geekswg.github.io/debian-theme-whitesur/
 https://geekswg.github.io/funs/pages/tools-qrcode-creator-copy/
