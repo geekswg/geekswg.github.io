@@ -1,5 +1,3 @@
-'use strict'
-
 /**
  *  fullscreen (全屏控件)
  * 
