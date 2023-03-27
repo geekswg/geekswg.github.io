@@ -20,8 +20,11 @@ const PLUGINS_LIVE2D = new(function(){
     console.log('--- 初始 getRequire完成 ---');
 
 
-    console.log(`--- 初始 initMyLive2d  参数 ${$live2d.dataset.live2d_width} / ${$live2d.dataset.live2d_height} / ${$live2d.dataset.live2d_position} ---`);
-    this.initMyLive2d(`${$live2d.dataset.live2d_width}`,`${$live2d.dataset.live2d_height}`,`${$live2d.dataset.live2d_position}`);
+    console.log(['初始 initMyLive2d  参数: ', `${$live2d.dataset.live2d_width}`
+      , `${$live2d.dataset.live2d_height}` , `${$live2d.dataset.live2d_position}` 
+      , `${$live2d.dataset.live2d_minwidth}`]
+    .join(' / '));
+    this.initMyLive2d(`${$live2d.dataset.live2d_width}`,`${$live2d.dataset.live2d_height}`,`${$live2d.dataset.live2d_position}`,`${$live2d.dataset.live2d_minwidth}`);
     // $comment.addEventListener('click', () => {
     //   this.getRandomComment($music.dataset.autoplay);
     // });
@@ -51,17 +54,26 @@ const PLUGINS_LIVE2D = new(function(){
     // }
   };
 
+  this.strimStr = function(srcStr){
+    srcStr = srcStr || '';
+    srcStr = srcStr.replace(/(\"|'*)/g, '');
+    return srcStr;
+  }
+
   /**
    * 初始化 live2d 
    * @param {*} live2d_width 宽度
    * @param {*} live2d_height 高度
    * @param {*} position 位置 //'left:10'; //页面左边10px;
    */
-  this.initMyLive2d = function(live2d_width,live2d_height,position){
-    live2d_width = live2d_width || '200'; live2d_width=live2d_height.replace(/(\"|'*)/g, '');
-    live2d_height = live2d_height || '200'; live2d_height=live2d_height.replace(/(\"|'*)/g, '');
+  this.initMyLive2d = function(live2d_width,live2d_height,position,minWidth){
+    live2d_width = live2d_width || '200'; //live2d_width=live2d_height.replace(/(\"|'*)/g, '');
+    live2d_height = live2d_height || '200'; //live2d_height=live2d_height.replace(/(\"|'*)/g, '');
     position = position || 'left:10'; //页面左边10px; 
-    position = position.replace(/(\"|'*)/g, '');
+    //position = position.replace(/(\"|'*)/g, '');
+    minWidth = minWidth || '400px' ;// minWidth = this.strimStr(minWidth);
+
+    console.info([live2d_width,live2d_height,position,minWidth].join(' / '));
 
     $("<link>").attr({href: "https://live2d.fghrsh.net/assets/1.4.2/waifu.min.css", rel: "stylesheet", type: "text/css"}).appendTo('head');
     $('body').append('<div class="waifu"><div class="waifu-tips"></div><canvas id="live2d" class="live2d"></canvas><div class="waifu-tool"><span class="fui-home"></span> <span class="fui-chat"></span> <span class="fui-eye"></span> <span class="fui-user"></span> <span class="fui-photo"></span> <span class="fui-info-circle"></span> <span class="fui-cross"></span></div></div>');
@@ -73,21 +85,28 @@ const PLUGINS_LIVE2D = new(function(){
     $.ajax({url: "https://live2d.fghrsh.net/assets/1.4.2/live2d.min.js", dataType:"script", cache: true, success: function() {
         /* 可直接修改部分参数 */
         live2d_settings['hitokotoAPI'] = 'hitokoto.cn'; // 一言 API
-        live2d_settings['modelId'] = 2;                    // 默认模型 ID
-        live2d_settings['modelTexturesId'] = 6;            // 默认材质 ID
+        live2d_settings['modelId'] = 6;                    // 默认模型 ID
+        live2d_settings['modelTexturesId'] = 16;            // 默认材质 ID
         live2d_settings['modelStorage'] = true;           // 不储存模型 ID
         live2d_settings['canCloseLive2d'] = true;         // 隐藏 关闭看板娘 按钮
         live2d_settings['canTurnToHomePage'] = true;      // 隐藏 返回首页 按钮
         live2d_settings['waifuSize'] = live2d_width+'x'+live2d_height;          // 看板娘大小
+        live2d_settings['homePageUrl']  = '/';       // 主页地址，可选 'auto'(自动), '{URL 网址}'
+        live2d_settings['aboutPageUrl'] = '/about/';   // 关于页地址, '{URL 网址}'
         
-        live2d_settings['waifuToolLine']        = (live2d_height/10)+'px';       // 工具栏行高，例如 '20px', '36px'
         live2d_settings['waifuTipsSize'] = (live2d_width-10)+'x'+live2d_height/4;      // 提示框大小
         //live2d_settings['waifuFontSize'] = '16px';         // 提示框字体
         live2d_settings['waifuEdgeSide'] = position;     // 看板娘贴边方向
-        //live2d_settings['waifuToolFont'] = '18px';         // 工具栏字体
-        //live2d_settings['waifuToolLine'] = '26px';         // 工具栏行高
-        //live2d_settings['waifuToolTop'] = '-30px';         // 工具栏顶部边距
-        live2d_settings['waifuDraggable'] = 'axis-x';      // 拖拽样式
+        live2d_settings['waifuToolFont'] = (live2d_height/10)+'px';         // 工具栏字体
+        live2d_settings['waifuToolLine'] = (live2d_height/8)+'px';       // 工具栏行高，例如 '20px', '36px'
+        live2d_settings['waifuToolTop'] = '16px';         // 工具栏顶部边距
+
+        live2d_settings['waifuEdgeSide']        =  position;    // 看板娘贴边方向，例如 'left:0'(靠左 0px), 'right:30'(靠右 30px)
+        live2d_settings['waifuDraggable']       = 'unlimited';    // 拖拽样式，例如 'disable'(禁用), 'axis-x'(只能水平拖拽), 'unlimited'(自由拖拽)
+        live2d_settings['waifuDraggableRevert'] = false;         // 松开鼠标还原拖拽位置，可选 true(真), false(假)
+        live2d_settings['waifuMinWidth']        = minWidth;      // 面页小于 指定宽度 隐藏看板娘，例如 'disable'(禁用), '768px'
+        live2d_settings['modelRandMode']        = 'rand';       //switch 模型切换，可选 'rand'(随机), 'switch'(顺序)
+        live2d_settings['modelTexturesRandMode']= 'switch';     //rand 材质切换，可选 'rand'(随机), 'switch'(顺序)
             
         /* 内置 waifu-tips.json */
         initModel({
@@ -178,11 +197,14 @@ const PLUGINS_LIVE2D = new(function(){
                 {
                     "selector": ".waifu #live2d",
                     "text": [
-                        "是…是不小心碰到了吧",
-                        "萝莉控是什么呀",
-                        "你看到我的小熊了吗",
-                        "再摸的话我可要报警了！⌇●﹏●⌇",
-                        "110吗，这里有个变态一直在摸我(ó﹏ò｡)"
+                      "是…是不小心碰到了吧！",
+                      "萝莉控是什么呀？",
+                      "你看到我的小熊了吗",
+                      "再摸的话我可要报警了！⌇●﹏●⌇",
+                      "你在做什么呀，大变态！⌇●﹏●⌇",
+                      "我已经名花有主了，不要动坏心思哟(❤️´艸｀❤️)",
+                      "你什么气质？，和我用一样的手机，给我砸了😡",
+                      "110吗，这里有个变态一直在摸我(ó﹏ò｡)"
                     ]
                 }
             ],
