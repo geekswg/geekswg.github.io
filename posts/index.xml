@@ -1,4 +1,14 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>所有文章 - 毕少侠</title><link>https://geekswg.github.io/posts/</link><description>所有文章 | 毕少侠</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>geekswg@qq.com (geekswg)</managingEditor><webMaster>geekswg@qq.com (geekswg)</webMaster><copyright>geekswg</copyright><lastBuildDate>Sun, 26 Mar 2023 18:30:40 +0800</lastBuildDate><atom:link href="https://geekswg.github.io/posts/" rel="self" type="application/rss+xml"/><item><title>Cursor帮我写的代码</title><link>https://geekswg.github.io/code-writed-by-cursor/</link><pubDate>Sun, 26 Mar 2023 18:30:40 +0800</pubDate><author>map[link:https://www.cursor.so/ name:Cursor]</author><guid>https://geekswg.github.io/code-writed-by-cursor/</guid><description><![CDATA[<div class="featured-image">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>所有文章 - 毕少侠</title><link>https://geekswg.github.io/posts/</link><description>所有文章 | 毕少侠</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>geekswg@qq.com (geekswg)</managingEditor><webMaster>geekswg@qq.com (geekswg)</webMaster><copyright>geekswg</copyright><lastBuildDate>Sun, 26 Mar 2023 18:30:40 +0800</lastBuildDate><atom:link href="https://geekswg.github.io/posts/" rel="self" type="application/rss+xml"/><item><title>Electron是什么？</title><link>https://geekswg.github.io/cursor-electron/</link><pubDate>Sun, 26 Mar 2023 18:30:40 +0800</pubDate><author>map[link:https://www.cursor.so/ name:Cursor]</author><guid>https://geekswg.github.io/cursor-electron/</guid><description><![CDATA[<div class="featured-image">
+        <img src="/230328000644-cursor-electron.png" referrerpolicy="no-referrer">
+      </div><div class="details admonition quote open">
+    <div class="details-summary admonition-title">
+      <i class="icon fa-solid fa-quote-right fa-fw" aria-hidden="true"></i>申明<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i>
+    </div>
+    <div class="details-content">
+      <div class="admonition-content">这一片关于ChatGPT的文章，由AI工具Cursor写作<br>
+作者: <a href="https://www.cursor.so/"target="_blank" rel="external nofollow noopener noreferrer">Cursor<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a></div>
+    </div>
+  </div>]]></description></item><item><title>Cursor帮我写的代码</title><link>https://geekswg.github.io/code-writed-by-cursor/</link><pubDate>Sun, 26 Mar 2023 18:30:40 +0800</pubDate><author>map[link:https://www.cursor.so/ name:Cursor]</author><guid>https://geekswg.github.io/code-writed-by-cursor/</guid><description><![CDATA[<div class="featured-image">
         <img src="/images/posts/featured-image-preview.jpg" referrerpolicy="no-referrer">
       </div><div class="details admonition note open">
     <div class="details-summary admonition-title">
@@ -220,6 +230,16 @@ note abstract info tip success question warning failure danger bug example quote
       <div class="admonition-content">记录由AI工具帮忙写的代码，越来越离不开Cusor了。<br>
 作者: <a href="https://www.cursor.so/"target="_blank" rel="external nofollow noopener noreferrer">Cursor<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a></div>
     </div>
+  </div>]]></description></item><item><title>Electron是什么？</title><link>https://geekswg.github.io/cursor-electron/</link><pubDate>Sun, 26 Mar 2023 18:30:40 +0800</pubDate><author>map[link:https://www.cursor.so/ name:Cursor]</author><guid>https://geekswg.github.io/cursor-electron/</guid><description><![CDATA[<div class="featured-image">
+        <img src="/230328000644-cursor-electron.png" referrerpolicy="no-referrer">
+      </div><div class="details admonition quote open">
+    <div class="details-summary admonition-title">
+      <i class="icon fa-solid fa-quote-right fa-fw" aria-hidden="true"></i>申明<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i>
+    </div>
+    <div class="details-content">
+      <div class="admonition-content">这一片关于ChatGPT的文章，由AI工具Cursor写作<br>
+作者: <a href="https://www.cursor.so/"target="_blank" rel="external nofollow noopener noreferrer">Cursor<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a></div>
+    </div>
   </div>]]></description></item><item><title>关于ChatGPT</title><link>https://geekswg.github.io/md-writeby-cursor/</link><pubDate>Sun, 26 Mar 2023 18:30:40 +0800</pubDate><author>map[link:https://www.cursor.so/ name:Cursor]</author><guid>https://geekswg.github.io/md-writeby-cursor/</guid><description><![CDATA[<div class="featured-image">
         <img src="/images/posts/featured-image-preview.jpg" referrerpolicy="no-referrer">
       </div><div class="details admonition quote open">
@@ -312,14 +332,4 @@ note abstract info tip success question warning failure danger bug example quote
       <div class="admonition-content">记录一次修改fixit主题代码，并pr的过程<br>
 note abstract info tip success question warning failure danger bug example quote</div>
     </div>
-  </div>]]></description></item><item><title>Debian11 Learn 相关命令</title><link>https://geekswg.github.io/debian11-learn/</link><pubDate>Sun, 05 Mar 2023 18:27:38 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/debian11-learn/</guid><description><![CDATA[<div class="featured-image">
-        <img src="/images/posts/featured-image-preview.jpg" referrerpolicy="no-referrer">
-      </div><p><div class="details admonition quote">
-    <div class="details-summary admonition-title">
-      <i class="icon fa-solid fa-quote-right fa-fw" aria-hidden="true"></i>quote<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i>
-    </div>
-    <div class="details-content">
-      <div class="admonition-content">note abstract info tip success question warning failure danger bug example quote</div>
-    </div>
-  </div><br>
-刚刚入手debian11,记录使用中遇到的一些常用命令。</p>]]></description></item></channel></rss>
+  </div>]]></description></item></channel></rss>

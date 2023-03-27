@@ -1,5 +1,6 @@
 https://geekswg.github.io/funs/funs-index/
 https://geekswg.github.io/code-writed-by-cursor/
+https://geekswg.github.io/cursor-electron/
 https://geekswg.github.io/md-writeby-cursor/
 https://geekswg.github.io/hugo-shortcode-plugins-live2d/
 https://geekswg.github.io/share-cursor/
