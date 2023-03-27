@@ -1,0 +1,11 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Code - 标签 - 毕少侠</title><link>https://geekswg.github.io/tags/code/</link><description>Code - 标签 - 毕少侠</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>geekswg@qq.com (geekswg)</managingEditor><webMaster>geekswg@qq.com (geekswg)</webMaster><copyright>geekswg</copyright><lastBuildDate>Sun, 26 Mar 2023 18:30:40 +0800</lastBuildDate><atom:link href="https://geekswg.github.io/tags/code/" rel="self" type="application/rss+xml"/><item><title>Cursor帮我写的代码</title><link>https://geekswg.github.io/code-writed-by-cursor/</link><pubDate>Sun, 26 Mar 2023 18:30:40 +0800</pubDate><author>map[link:https://www.cursor.so/ name:Cursor]</author><guid>https://geekswg.github.io/code-writed-by-cursor/</guid><description><![CDATA[<div class="featured-image">
+        <img src="/images/posts/featured-image-preview.jpg" referrerpolicy="no-referrer">
+      </div><div class="details admonition note open">
+    <div class="details-summary admonition-title">
+      <i class="icon fa-solid fa-pencil-alt fa-fw" aria-hidden="true"></i>申明<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i>
+    </div>
+    <div class="details-content">
+      <div class="admonition-content">记录由AI工具帮忙写的代码，越来越离不开Cusor了。<br>
+作者: <a href="https://www.cursor.so/"target="_blank" rel="external nofollow noopener noreferrer">Cursor<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a></div>
+    </div>
+  </div>]]></description></item></channel></rss>
