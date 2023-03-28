@@ -1,6 +1,6 @@
 # 使命召唤19-战区2-地图
 
-![wz2](https://jsd.cdn.zzko.cn/gh/geekswg/static@main/blog-img/cod19/wz2.jpeg)
+![wz2](https://jsd.cdn.zzko.cn/gh/geekswg/static@main/blog-img/cod19/wz2.jpeg '战区2')
 
 > 在DMZ模式中做任务时经常找不到点位。
 
