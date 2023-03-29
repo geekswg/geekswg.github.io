@@ -4,6 +4,10 @@
 
 > 在DMZ模式中做任务时经常找不到点位。
 
+## 21号楼
+
+![21-room](https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/cod19/21-room.jpg "21号楼平面图")
+
 ## 马兹拉
 
 ### 垃圾箱
@@ -65,6 +69,10 @@
 ## 海狮岛
 
 > 海狮岛地图点位
+
+## 21号楼
+
+![21-room](https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/cod19/21-room.jpg "21号楼平面图")
 
 ---
 
