@@ -26,7 +26,6 @@ Do no evil ！
 
 |<center>**链接**</center>| **描述** | **备注** |
 |:--|:------|:--|
-
 |[Office部署工具](https://otp.landian.vip/zh-cn/download.html)|一个强大且实用的 Office 部署工具。系统要求：Windows 7 SP1 或更高版本，不支持其他操作系统（例如 Linux 或 macOS）。|推荐安装绿色免费好管理|
 |[verycapture](https://verycapture.com/cn/download.html)|VeryCapture专业的屏幕截取软件，提升办公效率，让用户有更多时间投入业务|截图、免费、            |
 |[音乐-lx-music](https://lxmusic.toside.cn/)|一个免费&开源的音乐查找工具|手机电脑双端、绿色、音乐、下载手机电脑双端、绿色、音乐、下载|
@@ -36,7 +35,6 @@ Do no evil ！
 |[NanaZip](https://github.com/M2Team/NanaZip/releases/)|基于7-zip开发|支持适配win11右键菜单|
 |[RoundedTB](https://github.com/torchgm/RoundedTB/releases)|Add margins, rounded corners and segments to your taskbars!|win11任务栏美化|
 |[VirtualBox](https://www.virtualbox.org/)|VirtualBox is a powerful x86 and AMD64/Intel64 virtualization product for enterprise as well as home use. Not only is VirtualBox an extremely feature rich, high performance product for enterprise customers, it is also the only professional solution that is freely available as Open Source Software under the terms of the GNU General Public License (GPL) version 3. See "About VirtualBox" for an introduction.| Oracle旗下免费虚拟机软件,小巧，扔掉VM吧 |
-|<p style="width:10%"></p>|<p style="width:60%"></p>|<p style="width:30%"></p>|
 
 ## apps-安卓软件
 
@@ -50,7 +48,23 @@ Do no evil ！
 
 👉 [点击这里查看](http://geekswg.js.cool/website/ "网站收藏")
 
-## other
+## 浏览器插件
+
+### nbtab
+
+> 简约不简单，浏览器tab页 
+![230330-nbtab](https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/posts2023/230330-nbtab.webp "nbtab")
+
+### wetab
+> wetab, chatgpt组件非常好。
+![230330-wetab](https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/posts2023/230330-wetab.webp "wetab")
+
+### itab
+
+> 功能丰富，插件多。
+![230330-itab](https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/posts2023/230330-itab.webp "itab")
+
+## other-其他
 
 ### free
 
