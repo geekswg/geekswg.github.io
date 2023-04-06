@@ -427,6 +427,7 @@ a:hover {
 	padding: 0 4px;
 }
 .camera_thumbs_cont ul li > img {
+	height: 60px;
 	border: 1px solid;
 	cursor: pointer;
 	margin-top: 5px;
