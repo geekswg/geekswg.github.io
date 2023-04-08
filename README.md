@@ -3,6 +3,11 @@
 <div align="center">
 毕少侠也在江湖
 
+|免费加速站|预览地址|
+|:-|:-|
+|netlify||
+|cloudfare||
+
 [预览](https://geekswg.github.io/) | [源码](https://github.com/geekswg/blogFixit)
 </div>
 
