@@ -138,58 +138,7 @@ note abstract info tip success question warning failure danger bug example quote
   </div>
 <blockquote>
 <p>下面内容来自<a href="https://blog.moeworld.tech/"target="_blank" rel="external nofollow noopener noreferrer">晓空的博客<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a>分析过程，转载学习一下。</p>
-</blockquote>]]></description></item><item><title>分享VSCode插件</title><link>https://geekswg.github.io/share-vscode-plugins/</link><pubDate>Sat, 04 Mar 2023 15:34:45 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/share-vscode-plugins/</guid><description><![CDATA[<div class="featured-image">
-        <img src="/images/posts/featured-image-preview.jpg" referrerpolicy="no-referrer">
-      </div><div class="details admonition warning open">
-    <div class="details-summary admonition-title">
-      <i class="icon fa-solid fa-exclamation-triangle fa-fw" aria-hidden="true"></i>申明<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i>
-    </div>
-    <div class="details-content">
-      <div class="admonition-content">所有分享资源来自互联网，如有侵权请告知，会立即删除<br>
-note abstract info tip success question warning failure danger bug example quote</div>
-    </div>
-  </div>
-<blockquote>
-<p>分享 VSCode 插件，提升编码效率，插件侠篇。<br>
-<div class="details admonition tip open">
-    <div class="details-summary admonition-title">
-      <i class="icon fa-solid fa-lightbulb fa-fw" aria-hidden="true"></i>技巧<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i>
-    </div>
-    <div class="details-content">
-      <div class="admonition-content">小技巧：vscode插件栏目中，热门标签类目下的插件都是比较优秀和好用的插件，不知道用什么插件时去哪里可以发现很多宝藏的插件！推荐里面也能找到你想要的，微软这方面做的还是非常不错的。</div>
-    </div>
-  </div></p>
-</blockquote>]]></description></item><item><title>中文技术文档的写作规范</title><link>https://geekswg.github.io/docs-style-guide/</link><pubDate>Thu, 09 Mar 2023 14:07:33 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/docs-style-guide/</guid><description><![CDATA[<div class="details admonition quote open">
-    <div class="details-summary admonition-title">
-      <i class="icon fa-solid fa-quote-right fa-fw" aria-hidden="true"></i>转载<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i>
-    </div>
-    <div class="details-content">
-      <div class="admonition-content">本文转载于 ：<a href="https://lruihao.cn/posts/document-style-guide/"target="_blank" rel="external nofollow noopener noreferrer">李瑞豪的博客-中文技术文档的写作规范<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a></div>
-    </div>
-  </div>
-<p>英语世界里，文档非常受重视，许多公司和组织都有自己的文档规范，清楚地规定写作要求，比如<a href="https://www.microsoftpressstore.com/store/microsoft-manual-of-style-9780735648715"target="_blank" rel="external nofollow noopener noreferrer">微软<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a>、<a href="http://styleguide.mailchimp.com/"target="_blank" rel="external nofollow noopener noreferrer">MailChimp<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a>、<a href="https://help.apple.com/asg/mac/2013/ASG_2013.pdf"target="_blank" rel="external nofollow noopener noreferrer">Apple<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a>、<a href="https://www.amazon.com/dp/B003P8QDFU/ref=dp-kindle-redirect?_encoding=UTF8&amp;btkr=1"target="_blank" rel="external nofollow noopener noreferrer">Yahoo<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a>、<a href="https://docs.docker.com/opensource/doc-style/"target="_blank" rel="external nofollow noopener noreferrer">docker<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a>、<a href="https://struts.apache.org/docs/documentation-style-guide.html"target="_blank" rel="external nofollow noopener noreferrer">Struts<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a> 等等（维基百科有一份完整的<a href="https://en.wikipedia.org/wiki/List_of_style_guides"target="_blank" rel="external nofollow noopener noreferrer">清单<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a>）。<a href="https://github.com/ruanyf/document-style-guide/blob/master/docs/reference.md"target="_blank" rel="external nofollow noopener noreferrer">中文的<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a>也有不少，但都不令人满意，要么太简单，要么不太适用。</p>]]></description></item><item><title>Fixit-theme修改和PR过程</title><link>https://geekswg.github.io/theme-develop-pr/</link><pubDate>Tue, 07 Mar 2023 18:50:58 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/theme-develop-pr/</guid><description><![CDATA[<div class="featured-image">
-        <img src="/images/posts/featured-image-preview.jpg" referrerpolicy="no-referrer">
-      </div><div class="details admonition note open">
-    <div class="details-summary admonition-title">
-      <i class="icon fa-solid fa-pencil-alt fa-fw" aria-hidden="true"></i>注意<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i>
-    </div>
-    <div class="details-content">
-      <div class="admonition-content">记录一次修改fixit主题代码，并pr的过程<br>
-note abstract info tip success question warning failure danger bug example quote</div>
-    </div>
-  </div>]]></description></item><item><title>日常笔记</title><link>https://geekswg.github.io/daily-notes/</link><pubDate>Tue, 28 Feb 2023 13:28:09 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/daily-notes/</guid><description><![CDATA[<div class="featured-image">
-        <img src="/images/posts/featured-image.jpg" referrerpolicy="no-referrer">
-      </div><div class="details admonition quote open">
-    <div class="details-summary admonition-title">
-      <i class="icon fa-solid fa-quote-right fa-fw" aria-hidden="true"></i>摘要<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i>
-    </div>
-    <div class="details-content">
-      <div class="admonition-content"><pre><code>记录日常笔记和分享一些有趣的发现，随手记录一些流水账，好记性不如烂笔头。
-</code></pre>
-<p>倒叙记录。</p>
-</div>
-    </div>
-  </div>]]></description></item><item><title>关于Docker</title><link>https://geekswg.github.io/cursor-docker/</link><pubDate>Sun, 02 Apr 2023 18:30:40 +0800</pubDate><author>map[link:https://www.cursor.so/ name:Cursor]</author><guid>https://geekswg.github.io/cursor-docker/</guid><description><![CDATA[<div class="featured-image">
+</blockquote>]]></description></item><item><title>关于Docker</title><link>https://geekswg.github.io/cursor-docker/</link><pubDate>Sun, 02 Apr 2023 18:30:40 +0800</pubDate><author>map[link:https://www.cursor.so/ name:Cursor]</author><guid>https://geekswg.github.io/cursor-docker/</guid><description><![CDATA[<div class="featured-image">
         <img src="/images/posts/featured-image-preview.jpg" referrerpolicy="no-referrer">
       </div><blockquote>
 <p>这一片关于Docker的文章，由AI工具Cursor写作<br>
