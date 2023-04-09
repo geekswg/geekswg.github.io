@@ -1,4 +1,5 @@
 https://geekswg.github.io/funs/funs-index/
+https://geekswg.github.io/life/next10/
 https://geekswg.github.io/album/album-jq/
 https://geekswg.github.io/funs/pages/album-jq/
 https://geekswg.github.io/album/album-jq-demo/
