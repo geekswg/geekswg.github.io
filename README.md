@@ -5,8 +5,10 @@
 
 |免费加速站|预览地址|
 |:-|:-|
-|netlify||
-|cloudfare||
+|主站1|[https://geekswg.js.cool](https://geekswg.js.cool)|
+|主站2|[https://geekswg.top](https://geekswg.top)|
+|netlify|[https://geekswg.netlify.app](https://geekswg.netlify.app)|
+|cloudfare|[https://geekswg.pages.dev](https://geekswg.pages.dev)|
 
 [预览](https://geekswg.github.io/) | [源码](https://github.com/geekswg/blogFixit)
 </div>
