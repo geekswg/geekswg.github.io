@@ -12,29 +12,7 @@
 <p>这一片关于Docker的文章，由AI工具Cursor写作<br>
 作者: <a href="https://www.cursor.so/"target="_blank" rel="external nofollow noopener noreferrer">Cursor<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a><br>
 <code>Ctrl + K</code>: 使用md写一篇1万字的关于docker的博文</p>
-</blockquote>]]></description></item><item><title>ShareAnything-分享一切</title><link>https://geekswg.github.io/share/</link><pubDate>Wed, 01 Mar 2023 08:52:54 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/share/</guid><description><![CDATA[<div class="featured-image">
-        <img src="/images/posts/featured-image-preview.jpg" referrerpolicy="no-referrer">
-      </div><div class="details admonition warning open">
-    <div class="details-summary admonition-title">
-      <i class="icon fa-solid fa-exclamation-triangle fa-fw" aria-hidden="true"></i>申明<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i>
-    </div>
-    <div class="details-content">
-      <div class="admonition-content">所有分享资源来自互联网，如有侵权请告知，会立即删除<br>
-note abstract info tip success question warning failure danger bug example quote</div>
-    </div>
-  </div>
-<blockquote>
-<p>分享 音乐、软件、网站等一切我觉得好玩或者有用的资源</p>
-</blockquote>
-<div class="details admonition info open">
-    <div class="details-summary admonition-title">
-      <i class="icon fa-solid fa-info-circle fa-fw" aria-hidden="true"></i>信息<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i>
-    </div>
-    <div class="details-content">
-      <div class="admonition-content">软件都是我用过的，大家可以放心食用，不给任何产品推广。<br>
-Do no evil ！</div>
-    </div>
-  </div>]]></description></item><item><title>Git常用命令</title><link>https://geekswg.github.io/git-usage/</link><pubDate>Mon, 17 Apr 2023 14:45:50 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/git-usage/</guid><description><![CDATA[<div class="featured-image">
+</blockquote>]]></description></item><item><title>Git常用命令</title><link>https://geekswg.github.io/git-usage/</link><pubDate>Mon, 17 Apr 2023 14:45:50 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/git-usage/</guid><description><![CDATA[<div class="featured-image">
         <img src="/images/posts/featured-image-preview.jpg" referrerpolicy="no-referrer">
       </div><p>Git 是一个分布式版本控制系统，用于跟踪文件和代码的更改。经常用来管理代码，方便查阅，版本控制，合作开发，代码审阅。<br>
 记录经常使用到git命令，以便查用.</p>]]></description></item><item><title>我的第一个域名</title><link>https://geekswg.github.io/my-first-domain/</link><pubDate>Thu, 13 Apr 2023 17:05:47 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/my-first-domain/</guid><description><![CDATA[<div class="featured-image">
