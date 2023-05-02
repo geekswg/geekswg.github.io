@@ -1,4 +1,14 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>所有文章 - 毕少侠</title><link>https://geekswg.github.io/posts/</link><description>所有文章 | 毕少侠</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>geekswg@qq.com (geekswg)</managingEditor><webMaster>geekswg@qq.com (geekswg)</webMaster><copyright>geekswg</copyright><lastBuildDate>Mon, 17 Apr 2023 14:45:50 +0800</lastBuildDate><atom:link href="https://geekswg.github.io/posts/" rel="self" type="application/rss+xml"/><item><title>Git常用命令</title><link>https://geekswg.github.io/git-usage/</link><pubDate>Mon, 17 Apr 2023 14:45:50 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/git-usage/</guid><description><![CDATA[<div class="featured-image">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>所有文章 - 毕少侠</title><link>https://geekswg.github.io/posts/</link><description>所有文章 | 毕少侠</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>geekswg@qq.com (geekswg)</managingEditor><webMaster>geekswg@qq.com (geekswg)</webMaster><copyright>geekswg</copyright><lastBuildDate>Sun, 30 Apr 2023 15:13:41 +0800</lastBuildDate><atom:link href="https://geekswg.github.io/posts/" rel="self" type="application/rss+xml"/><item><title>快速搭建Hexo-blog指南</title><link>https://geekswg.github.io/build-hexo-blog/</link><pubDate>Sun, 30 Apr 2023 15:13:41 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/build-hexo-blog/</guid><description><![CDATA[<div class="featured-image">
+        <img src="/images/posts/featured-image-preview.jpg" referrerpolicy="no-referrer">
+      </div><p>快速搭建hexo博客的步骤如下：</p>
+<ol>
+<li>安装Nodejs <a href="https://nodejs.org/zh-cn"target="_blank" rel="external nofollow noopener noreferrer">https://nodejs.org/zh-cn<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a></li>
+<li>安装Git, <a href="https://git-scm.com/"target="_blank" rel="external nofollow noopener noreferrer">https://git-scm.com/<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a></li>
+<li>安装Hexo, <a href="https://hexo.io/zh-cn/index.html"target="_blank" rel="external nofollow noopener noreferrer">https://hexo.io/zh-cn/index.html<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a></li>
+<li>初始化Hexo</li>
+<li>选择主题</li>
+<li>发布文章</li>
+</ol>]]></description></item><item><title>Git常用命令</title><link>https://geekswg.github.io/git-usage/</link><pubDate>Mon, 17 Apr 2023 14:45:50 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/git-usage/</guid><description><![CDATA[<div class="featured-image">
         <img src="/images/posts/featured-image-preview.jpg" referrerpolicy="no-referrer">
       </div><p>Git 是一个分布式版本控制系统，用于跟踪文件和代码的更改。经常用来管理代码，方便查阅，版本控制，合作开发，代码审阅。<br>
 记录经常使用到git命令，以便查用.</p>]]></description></item><item><title>我的第一个域名</title><link>https://geekswg.github.io/my-first-domain/</link><pubDate>Thu, 13 Apr 2023 17:05:47 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/my-first-domain/</guid><description><![CDATA[<div class="featured-image">
@@ -6,13 +16,23 @@
       </div><blockquote>
 <p>终于买了我的人生中第一个域名。 <a href="https://geekswg.top/"target="_blank" rel="external nofollow noopener noreferrer">geekswg.top<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a><br>
 用于个人博客使用，花费 $1.88美元，支付宝支付，折合人民币 ￥13.01</p>
-</blockquote>]]></description></item><item><title>关于Docker</title><link>https://geekswg.github.io/cursor-docker/</link><pubDate>Sun, 02 Apr 2023 18:30:40 +0800</pubDate><author>map[link:https://www.cursor.so/ name:Cursor]</author><guid>https://geekswg.github.io/cursor-docker/</guid><description><![CDATA[<div class="featured-image">
+</blockquote>]]></description></item><item><title>关于Docker</title><link>https://geekswg.github.io/cursor-docker/</link><pubDate>Sun, 02 Apr 2023 18:30:40 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/cursor-docker/</guid><description><![CDATA[<div class="featured-image">
         <img src="/images/posts/featured-image-preview.jpg" referrerpolicy="no-referrer">
       </div><blockquote>
 <p>这一片关于Docker的文章，由AI工具Cursor写作<br>
 作者: <a href="https://www.cursor.so/"target="_blank" rel="external nofollow noopener noreferrer">Cursor<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a><br>
 <code>Ctrl + K</code>: 使用md写一篇1万字的关于docker的博文</p>
-</blockquote>]]></description></item><item><title>Git常用命令</title><link>https://geekswg.github.io/git-usage/</link><pubDate>Mon, 17 Apr 2023 14:45:50 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/git-usage/</guid><description><![CDATA[<div class="featured-image">
+</blockquote>]]></description></item><item><title>快速搭建Hexo-blog指南</title><link>https://geekswg.github.io/build-hexo-blog/</link><pubDate>Sun, 30 Apr 2023 15:13:41 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/build-hexo-blog/</guid><description><![CDATA[<div class="featured-image">
+        <img src="/images/posts/featured-image-preview.jpg" referrerpolicy="no-referrer">
+      </div><p>快速搭建hexo博客的步骤如下：</p>
+<ol>
+<li>安装Nodejs <a href="https://nodejs.org/zh-cn"target="_blank" rel="external nofollow noopener noreferrer">https://nodejs.org/zh-cn<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a></li>
+<li>安装Git, <a href="https://git-scm.com/"target="_blank" rel="external nofollow noopener noreferrer">https://git-scm.com/<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a></li>
+<li>安装Hexo, <a href="https://hexo.io/zh-cn/index.html"target="_blank" rel="external nofollow noopener noreferrer">https://hexo.io/zh-cn/index.html<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a></li>
+<li>初始化Hexo</li>
+<li>选择主题</li>
+<li>发布文章</li>
+</ol>]]></description></item><item><title>Git常用命令</title><link>https://geekswg.github.io/git-usage/</link><pubDate>Mon, 17 Apr 2023 14:45:50 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/git-usage/</guid><description><![CDATA[<div class="featured-image">
         <img src="/images/posts/featured-image-preview.jpg" referrerpolicy="no-referrer">
       </div><p>Git 是一个分布式版本控制系统，用于跟踪文件和代码的更改。经常用来管理代码，方便查阅，版本控制，合作开发，代码审阅。<br>
 记录经常使用到git命令，以便查用.</p>]]></description></item><item><title>我的第一个域名</title><link>https://geekswg.github.io/my-first-domain/</link><pubDate>Thu, 13 Apr 2023 17:05:47 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/my-first-domain/</guid><description><![CDATA[<div class="featured-image">
@@ -20,7 +40,7 @@
       </div><blockquote>
 <p>终于买了我的人生中第一个域名。 <a href="https://geekswg.top/"target="_blank" rel="external nofollow noopener noreferrer">geekswg.top<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a><br>
 用于个人博客使用，花费 $1.88美元，支付宝支付，折合人民币 ￥13.01</p>
-</blockquote>]]></description></item><item><title>关于Docker</title><link>https://geekswg.github.io/cursor-docker/</link><pubDate>Sun, 02 Apr 2023 18:30:40 +0800</pubDate><author>map[link:https://www.cursor.so/ name:Cursor]</author><guid>https://geekswg.github.io/cursor-docker/</guid><description><![CDATA[<div class="featured-image">
+</blockquote>]]></description></item><item><title>关于Docker</title><link>https://geekswg.github.io/cursor-docker/</link><pubDate>Sun, 02 Apr 2023 18:30:40 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/cursor-docker/</guid><description><![CDATA[<div class="featured-image">
         <img src="/images/posts/featured-image-preview.jpg" referrerpolicy="no-referrer">
       </div><blockquote>
 <p>这一片关于Docker的文章，由AI工具Cursor写作<br>
@@ -28,7 +48,7 @@
 <code>Ctrl + K</code>: 使用md写一篇1万字的关于docker的博文</p>
 </blockquote>]]></description></item><item><title>使命召唤19-战区2-地图</title><link>https://geekswg.github.io/cod19-wz2/</link><pubDate>Tue, 28 Mar 2023 20:07:11 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/cod19-wz2/</guid><description>&lt;div class="featured-image">
 &lt;img src="https://jsd.cdn.zzko.cn/gh/geekswg/static@main/blog-img/cod19/wz2.jpeg" referrerpolicy="no-referrer">
-&lt;/div>wz2 在DMZ模式中做任务时经常找不到点位。 21号楼 21-room 马兹拉 垃圾箱 垃圾箱 垃圾箱 扎克瓦水电站 扎克瓦水电站 扎克瓦水电站 塔拉克村 沙里木小道 沙里木小道 沙</description></item><item><title>Cursor帮我写的代码</title><link>https://geekswg.github.io/code-writed-by-cursor/</link><pubDate>Sun, 26 Mar 2023 18:30:40 +0800</pubDate><author>map[link:https://www.cursor.so/ name:Cursor]</author><guid>https://geekswg.github.io/code-writed-by-cursor/</guid><description><![CDATA[<div class="featured-image">
+&lt;/div>wz2 在DMZ模式中做任务时经常找不到点位。 21号楼 21-room 马兹拉 垃圾箱 垃圾箱 垃圾箱 扎克瓦水电站 扎克瓦水电站 扎克瓦水电站 塔拉克村 沙里木小道 沙里木小道 沙</description></item><item><title>Cursor帮我写的代码</title><link>https://geekswg.github.io/code-writed-by-cursor/</link><pubDate>Sun, 26 Mar 2023 18:30:40 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/code-writed-by-cursor/</guid><description><![CDATA[<div class="featured-image">
         <img src="/images/posts/featured-image-preview.jpg" referrerpolicy="no-referrer">
       </div><div class="details admonition note open">
     <div class="details-summary admonition-title">
@@ -38,7 +58,7 @@
       <div class="admonition-content">记录由AI工具帮忙写的代码，越来越离不开Cusor了。<br>
 作者: <a href="https://www.cursor.so/"target="_blank" rel="external nofollow noopener noreferrer">Cursor<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a></div>
     </div>
-  </div>]]></description></item><item><title>Electron是什么？</title><link>https://geekswg.github.io/cursor-electron/</link><pubDate>Sun, 26 Mar 2023 18:30:40 +0800</pubDate><author>map[link:https://www.cursor.so/ name:Cursor]</author><guid>https://geekswg.github.io/cursor-electron/</guid><description><![CDATA[<div class="featured-image">
+  </div>]]></description></item><item><title>Electron是什么？</title><link>https://geekswg.github.io/cursor-electron/</link><pubDate>Sun, 26 Mar 2023 18:30:40 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/cursor-electron/</guid><description><![CDATA[<div class="featured-image">
         <img src="/230328000644-cursor-electron.png" referrerpolicy="no-referrer">
       </div><div class="details admonition quote open">
     <div class="details-summary admonition-title">
@@ -48,7 +68,7 @@
       <div class="admonition-content">这一片关于ChatGPT的文章，由AI工具Cursor写作<br>
 作者: <a href="https://www.cursor.so/"target="_blank" rel="external nofollow noopener noreferrer">Cursor<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a></div>
     </div>
-  </div>]]></description></item><item><title>关于ChatGPT</title><link>https://geekswg.github.io/md-writeby-cursor/</link><pubDate>Sun, 26 Mar 2023 18:30:40 +0800</pubDate><author>map[link:https://www.cursor.so/ name:Cursor]</author><guid>https://geekswg.github.io/md-writeby-cursor/</guid><description><![CDATA[<div class="featured-image">
+  </div>]]></description></item><item><title>关于ChatGPT</title><link>https://geekswg.github.io/md-writeby-cursor/</link><pubDate>Sun, 26 Mar 2023 18:30:40 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/md-writeby-cursor/</guid><description><![CDATA[<div class="featured-image">
         <img src="/images/posts/featured-image-preview.jpg" referrerpolicy="no-referrer">
       </div><div class="details admonition quote open">
     <div class="details-summary admonition-title">
@@ -69,27 +89,4 @@
 感谢Fixit主题作者提供方法和指导帮助。<br>
 note abstract info tip success question warning failure danger bug example quote</div>
     </div>
-  </div>]]></description></item><item><title>Share Cursor</title><link>https://geekswg.github.io/share-cursor/</link><pubDate>Thu, 23 Mar 2023 18:15:27 +0800</pubDate><author>毕少侠</author><guid>https://geekswg.github.io/share-cursor/</guid><description>Cursor 最重要的是这个是 开源免费，国内直接访问的AI助手小工具. 开源地址 https://github.com/getcursor/cursor Build Software. Fast. Write, edit, and chat about your code with a pful AI 食用方法 快捷键：Ctrl + K 输入你的描述，自</description></item><item><title>New Bing 国内正常访问方法</title><link>https://geekswg.github.io/new-bing-visit/</link><pubDate>Sat, 18 Mar 2023 16:49:11 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/new-bing-visit/</guid><description><![CDATA[<div class="featured-image">
-        <img src="/230318164630-new-bing.png" referrerpolicy="no-referrer">
-      </div><div class="details admonition quote open">
-    <div class="details-summary admonition-title">
-      <i class="icon fa-solid fa-quote-right fa-fw" aria-hidden="true"></i>quote<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i>
-    </div>
-    <div class="details-content">
-      <div class="admonition-content">记录国内正常网络环境直接访问New Bing的方法。<br>
-之前的插件方法已经失效<br>
-截止目前以下方法可正常访问，使用 <a href="https://github.com/oldj/SwitchHosts"target="_blank" rel="external nofollow noopener noreferrer">SwitchHosts<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a> 插件<br>
-note abstract info tip success question warning failure danger bug example quote</div>
-    </div>
-  </div>
-<h2 id="前言">前言</h2>
-<p>最近百度文心一言发布了，还在内测申请，<a href="https://yiyan.baidu.com/welcome"target="_blank" rel="external nofollow noopener noreferrer">申请地址<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a>,不知道个人需要多长时间可以通过申请。<br>
-最近的AI搜索引擎比较火，我之前申请的new bing体验了，还是比较厉害的，现在又升级了，对话限制提高到了15次对了。不过国内的网络不能直接访问bing.com/new,这一点比较难受，今天在晚上看到一个工具可以解决，国内直接访问new bing的方法。<br>
-<div class="details admonition tip open">
-    <div class="details-summary admonition-title">
-      <i class="icon fa-solid fa-lightbulb fa-fw" aria-hidden="true"></i>技巧<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i>
-    </div>
-    <div class="details-content">
-      <div class="admonition-content">前提你已经通过new bing 的waitlist，不然你还是用不上new bing哟！</div>
-    </div>
-  </div></p>]]></description></item></channel></rss>
+  </div>]]></description></item><item><title>Share Cursor</title><link>https://geekswg.github.io/share-cursor/</link><pubDate>Thu, 23 Mar 2023 18:15:27 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/share-cursor/</guid><description>Cursor 最重要的是这个是 开源免费，国内直接访问的AI助手小工具. 开源地址 https://github.com/getcursor/cursor Build Software. Fast. Write, edit, and chat about your code with a pful AI 食用方法 快捷键：Ctrl + K 输入你的描述，自</description></item></channel></rss>

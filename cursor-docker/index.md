@@ -50,6 +50,6 @@ $ sudo apt-get update
 
 ---
 
-> 作者: map[link:https://www.cursor.so/ name:Cursor]  
+> 作者: [Cursor](https://www.cursor.so/)  
 > URL: https://geekswg.github.io/cursor-docker/  
 

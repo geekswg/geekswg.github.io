@@ -119,6 +119,6 @@ while (i < arr.length)
 
 ---
 
-> 作者: map[link:https://www.cursor.so/ name:Cursor]  
+> 作者: [Cursor](https://www.cursor.so/)  
 > URL: https://geekswg.github.io/code-writed-by-cursor/  
 

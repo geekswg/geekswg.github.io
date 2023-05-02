@@ -37,6 +37,6 @@ ChatGPT可以回答用户的问题、提供建议、进行闲聊等。用户可�
 
 ---
 
-> 作者: map[link:https://www.cursor.so/ name:Cursor]  
+> 作者: [Cursor](https://www.cursor.so/)  
 > URL: https://geekswg.github.io/md-writeby-cursor/  
 
