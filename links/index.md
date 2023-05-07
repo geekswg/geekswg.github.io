@@ -145,11 +145,8 @@
 ## 博客文章
 |文章|概括|
 |:--|:--|
-|[Web 笔记](/posts/webbiji/)|记录一下自己 web 相关学习的笔记|
-|[Git 常用指令汇总](/posts/git/)|可能用到按需自查|
-|[hexo 插件及 next 内置样式集](/posts/nextplugin/)|让文章写的好看又简洁又好用的插件！[hexo 更多请看分类](https://lruihao.cn/categories/hexo/)|
-|[hexo-theme-next @modified LRH](/posts/hexo-theme-next/)|对 next 主题的 DIY 设计记录日志|
-|[一款自己写的字体 - 沐目体](/posts/font-mmt/)|沐目体--release|
+|[Git 常用指令汇总](/git-usage/)|可能用到按需自查|
+
 
 ---
 
