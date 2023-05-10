@@ -29,4 +29,4 @@
 
 ## Repobeats analytics
 > Powered By [Repobeats](https://repobeats.axiom.co/)
-![Repobeats analytics](https://repobeats.axiom.co/api/embed/9695faf65cb0438b3e8f9c999f8ba4bfda1efb95.svg "Repobeats analytics image")
+[![Repobeats analytics](https://repobeats.axiom.co/api/embed/9695faf65cb0438b3e8f9c999f8ba4bfda1efb95.svg "Repobeats analytics image")](https://repobeats.axiom.co/)
