@@ -7,8 +7,9 @@
 |:-|:-|
 |主站1|[https://geekswg.js.cool](https://geekswg.js.cool)|
 |主站2|[https://geekswg.top](https://geekswg.top)|
-|netlify|[https://geekswg.netlify.app](https://geekswg.netlify.app)|
-|cloudfare|[https://geekswg.pages.dev](https://geekswg.pages.dev)|
+|Netlify|[https://geekswg.netlify.app](https://geekswg.netlify.app)|
+|CloudFlare|[https://geekswg.pages.dev](https://geekswg.pages.dev)|
+|Hexo-Blog|[https://geekswg-hexo.netlify.app](https://geekswg-hexo.netlify.app)|
 
 [预览](https://geekswg.github.io/) | [源码](https://github.com/geekswg/blogFixit)
 </div>
@@ -26,3 +27,9 @@
 ## Stargazers over time
 
 [![Stargazers over time](https://starchart.cc/geekswg/geekswg.github.io.svg)](https://starchart.cc/geekswg/geekswg.github.io)
+
+## Repobeats analytics
+
+> Powered By [Repobeats](https://repobeats.axiom.co/)
+
+![Alt](https://repobeats.axiom.co/api/embed/9695faf65cb0438b3e8f9c999f8ba4bfda1efb95.svg "Repobeats analytics image")
