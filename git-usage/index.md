@@ -61,53 +61,64 @@ git submodule update --remote：更新子模块到最新的远程分支。
 
 git submodule deinit <submodule>：从父仓库中删除子模块。
 ```
+
 > 注意，对于子模块的操作需要在父仓库中进行。在进行子模块的操作时，需要切换到子模块所在的目录中进行。
 
 ## 由ChatGPT生成
+
 以下是一些常用的 Git 命令：
 初始化仓库：创建一个新的 Git 仓库或将现有项目初始化为 Git 仓库。
+
 ```bash
 git init
 ```
 
 克隆仓库：将远程仓库克隆到本地。
-```
+
+```bash
 git clone <repository_url>
 ```
 
 添加文件：将文件添加到暂存区。
-```
+
+```bash
 git add <file_name>
 git add .  # 将所有文件添加到暂存区
 ```
 
 提交更改：将暂存区中的更改提交到本地仓库。
-```
+
+```bash
 git commit -m "Commit message"
 ```
 
 查看状态：查看文件的更改状态。
-```
+
+```bash
 git status
 ```
 
 查看日志：查看提交历史。
-```
+
+```bash
 git log
 ```
 
 检出分支：切换到指定分支。
-```
+
+```bash
 git checkout <branch_name>
 ```
 
 创建分支：创建一个新的分支。
-```
+
+```bash
 git branch <new_branch_name>
 ```
 
 合并分支：将指定分支的更改合并到当前分支。
-```
+
+```bash
 git merge <source_branch>
 ```
 

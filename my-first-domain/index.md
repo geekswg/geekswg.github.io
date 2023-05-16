@@ -4,13 +4,14 @@
 > 用于个人博客使用，花费 $1.88美元，支付宝支付，折合人民币 ￥13.01
 <!--more-->
 
-前端时间苦于，github自带的G[ithub Pages](https://geekswg.github.io/) 提供二级域名，经常访问不了，而且速度比较慢。就下决心买了个域名。
+前端时间苦于，github自带的[Github Pages](https://geekswg.github.io/) 提供二级域名，经常访问不了，而且速度比较慢。就下决心买了个域名。
 
 ## 域名购买
 
 域名购买商 ：[Namesilo](https://www.namesilo.com/)
 > Bing搜索了好长时间，选择他的原因。
-1. 便宜，相对稳定靠谱，
+
+1. 便宜，相对稳定靠谱。
 2. 国外域名，不用备案。
 3. 支持支付宝支付方式。
 
