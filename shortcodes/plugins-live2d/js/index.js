@@ -36,9 +36,10 @@ const PLUGINS_LIVE2D = new(function(){
    */
   this.getRequire = () => {
     
-    $.ajax({url: 'https://live2d.fghrsh.net/assets/1.4.2/jquery-ui.min.js',dataType:"script", cache: true, async: false});
+
+    $.ajax({url: 'https://cdn.bootcdn.net/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js',dataType:"script", cache: true, async: true});
     const JQ_UI = document.createElement('script');
-    JQ_UI.src = 'https://unpkg.com/browse/jquery-ui@1.13.2/dist/jquery-ui.min.js';
+    JQ_UI.src = 'https://cdn.bootcdn.net/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js';
 
     const s = document.getElementsByTagName('script')[0];
 
