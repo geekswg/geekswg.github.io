@@ -2,7 +2,7 @@ https://geekswg.github.io/funs/funs-index/
 https://geekswg.github.io/build-hexo-blog/
 https://geekswg.github.io/git-usage/
 https://geekswg.github.io/my-first-domain/
-https://geekswg.github.io/life/next10/
+https://geekswg.github.io/life/next10-2/
 https://geekswg.github.io/album/album-jq/
 https://geekswg.github.io/funs/pages/album-jq/
 https://geekswg.github.io/album/album-jq-demo/
@@ -52,3 +52,4 @@ https://geekswg.github.io/demo3/
 https://geekswg.github.io/demo/
 https://geekswg.github.io/about/
 https://geekswg.github.io/links/
+https://geekswg.github.io/life/next10-1/
