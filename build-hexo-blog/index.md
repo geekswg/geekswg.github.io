@@ -41,7 +41,7 @@
 
 ```yaml
 name: 自动发布 hexo-deploay
-# 触发条件：在 push 到 hexo-blog-backup 分支后触发
+# 触发条件：在 push 到 master 分支后触发
 on:
   push:
     branches: 
