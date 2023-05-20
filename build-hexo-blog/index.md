@@ -110,6 +110,15 @@ jobs:
         #publish_dir: ./public
 
 
+        # 以下配置可忽悠，测试功能
+        user_name: 'github-actions[bot]'
+        user_email: 'github-actions[bot]@users.noreply.github.com'
+        commit_message: ${{ github.event.head_commit.message }}
+        #full_commit_message: ${{ github.event.head_commit.message }}
+        tag_name: ${{ steps.prepare_tag.outputs.DEPLOY_TAG_NAME }}
+        tag_message: 'Deployment ${{ github.ref_name }}'
+        #cname: github.com
+
 ```
 
 
