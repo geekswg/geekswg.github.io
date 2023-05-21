@@ -27,16 +27,26 @@ Namesilo供应商可支持50个子域名。
 使用CloudFlare管理子域名。
 在CloudFlare的控制主页，`网站` 选择自己已经绑定的域名，点击 `DNS` ,然后 `添加记录`。
 常用的两种类型：
+
 * A     : 用于绑定IP的。
 * CNAME : 用于绑定名称的。不过，名称可以是任意大写字母或空格字符的完整子串
-绑定步骤主要两个步骤
-1. 在CloudFlare DNS中添加CNAME类型记录（这个最常用）
+
+绑定步骤主要两个步骤:
+
+1. 在CloudFlare DNS中添加CNAME类型记录（这个最常用）.
 2. 在你需要自定义域名的地方，输入第一给步骤中你生成的子域名，然后按照提示一步步绑定即可成功
 3. 成功后需要几分钟更新DNS记录，大概十分钟后，即可正常访问你的子域名了。
 
 如我的子域名：
-[hexo.geekswg.top](https://hexo.geekswg.top/) 
+[hexo.geekswg.top](https://hexo.geekswg.top/)
 [blog.geekswg.top](https://blog.geekswg.top/)
+
+> 注意事项
+使用 `CloudFlare` 导致网站「重定向的次数过多」解决方案
+
+在 CloudFlare 的 SSL/TLS 菜单里将「SSL/TLS 加密模式」设置为完全（Strict）即可。
+
+===
 
 ## CloudFlare加速
 
