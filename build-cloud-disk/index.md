@@ -1,11 +1,10 @@
 # Build Cloud Disk - CloudReve
 
-{{< admonition quote "quote" >}}
+{{< admonition >}}
 今天介绍一下非常好用的私有云网盘系统。
 以 跨平|的方式组织你的文件。Cloudreve 可助你即刻构建出兼备自用或公用的网盘服务，通过多种存储策略的支持、虚拟文件系统等特性实现灵活的文件管理体验。
-note abstract info tip success question warning failure danger bug example quote
 {{< /admonition >}}
-这里使用MD语法编写你的文章
+
 <!--more-->
 [CloudReve官网地址](https://cloudreve.org/)
 
