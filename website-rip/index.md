@@ -1,4 +1,4 @@
-# Website Rip
+# Website RIP 效果实现
 
 {{< admonition>}}
 
@@ -15,6 +15,12 @@
 > 稍微封装了一下，方便维护日期。
 
 ```javacript
+/**
+    * Rest in Peace. R.I.P 🕯️
+    * @2022-3-28 [3.21-mu5735] 沉痛哀悼 132 名遇难同胞：东航航班失事，遇难者含旅客 123 人，机组 9 人
+    * @2022-12-03 江泽民同志逝世，享年96岁
+    * @returns {Blog}
+    */
 const RIP = new (function () {
   // 配置信息
   this.rip_configs = [
