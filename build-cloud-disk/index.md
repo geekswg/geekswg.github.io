@@ -39,8 +39,6 @@ Cloudreve 可以让您快速搭建起公私兼备的网盘系统。Cloudreve 在
 2. 使用Web Application Open Platform Interface (WOPI) 协议是一种用于集成 Web 文档编辑器的协议，你可以在 微软的文档 中阅读详细的协议定义。Cloudreve 可以对接实现了 WOPI 协议的文档处理服务，用于扩展已有的文档预览和编辑能力。
 
 
-
-
 ---
 
 > 作者: [geekswg](https://geekswg.github.io)  

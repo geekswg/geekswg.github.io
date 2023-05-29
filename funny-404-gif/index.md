@@ -4,10 +4,9 @@
 有趣的404-Not Found gif 动态图。
 > 所有图片资源均来自互联网，如果侵权，请告知！
 {{< /admonition >}}
-
+<!--more-->
 ![404](https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404.gif "样式-Style")
 
-<!--more-->
 ## 样式1-Style1
 
 ```md

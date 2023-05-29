@@ -1,12 +1,12 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>所有文章 - 毕少侠</title><link>https://geekswg.github.io/posts/</link><description>所有文章 | 毕少侠</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>geekswg@qq.com (geekswg)</managingEditor><webMaster>geekswg@qq.com (geekswg)</webMaster><copyright>geekswg &amp; 毕少侠</copyright><lastBuildDate>Sat, 27 May 2023 20:20:00 +0800</lastBuildDate><atom:link href="https://geekswg.github.io/posts/" rel="self" type="application/rss+xml"/><item><title>Cursor帮我写的代码</title><link>https://geekswg.github.io/code-writed-by-cursor/</link><pubDate>Sun, 26 Mar 2023 18:30:40 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/code-writed-by-cursor/</guid><description><![CDATA[<div class="featured-image">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>所有文章 - 毕少侠</title><link>https://geekswg.github.io/posts/</link><description>所有文章 | 毕少侠</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><managingEditor>geekswg@qq.com (geekswg)</managingEditor><webMaster>geekswg@qq.com (geekswg)</webMaster><copyright>geekswg &amp; 毕少侠</copyright><lastBuildDate>Sat, 27 May 2023 20:20:00 +0800</lastBuildDate><atom:link href="https://geekswg.github.io/posts/" rel="self" type="application/rss+xml"/><item><title>Build Cloud Disk - CloudReve</title><link>https://geekswg.github.io/build-cloud-disk/</link><pubDate>Sun, 21 May 2023 17:34:32 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/build-cloud-disk/</guid><description><![CDATA[<div class="featured-image">
         <img src="/images/posts/featured-image-preview.jpg" referrerpolicy="no-referrer">
       </div><div class="details admonition note open">
     <div class="details-summary admonition-title">
-      <i class="icon fa-solid fa-pencil-alt fa-fw" aria-hidden="true"></i>申明<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i>
+      <i class="icon fa-solid fa-pencil-alt fa-fw" aria-hidden="true"></i>注意<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i>
     </div>
     <div class="details-content">
-      <div class="admonition-content">记录由AI工具帮忙写的代码，越来越离不开Cusor了。<br>
-作者: <a href="https://www.cursor.so/"target="_blank" rel="external nofollow noopener noreferrer">Cursor<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a></div>
+      <div class="admonition-content">今天介绍一下非常好用的私有云网盘系统。<br>
+以 跨平|的方式组织你的文件。Cloudreve 可助你即刻构建出兼备自用或公用的网盘服务，通过多种存储策略的支持、虚拟文件系统等特性实现灵活的文件管理体验。</div>
     </div>
   </div>]]></description></item><item><title>Funny 404 Gif</title><link>https://geekswg.github.io/funny-404-gif/</link><pubDate>Sat, 27 May 2023 20:20:00 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/funny-404-gif/</guid><description><![CDATA[<div class="featured-image">
         <img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404.gif" referrerpolicy="no-referrer">
@@ -21,9 +21,17 @@
 </blockquote>
 </div>
     </div>
-  </div>
-<p><figure><a class="lightgallery" href="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404.gif" data-thumbnail="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404.gif" data-sub-html="<h2>404</h2><p>样式-Style</p>"></a><figcaption class="image-caption">404</figcaption>
-  </figure></p>]]></description></item><item><title>Website RIP 效果实现</title><link>https://geekswg.github.io/website-rip/</link><pubDate>Wed, 24 May 2023 20:42:20 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/website-rip/</guid><description><![CDATA[<div class="featured-image">
+  </div>]]></description></item><item><title>Cursor帮我写的代码</title><link>https://geekswg.github.io/code-writed-by-cursor/</link><pubDate>Sun, 26 Mar 2023 18:30:40 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/code-writed-by-cursor/</guid><description><![CDATA[<div class="featured-image">
+        <img src="/images/posts/featured-image-preview.jpg" referrerpolicy="no-referrer">
+      </div><div class="details admonition note open">
+    <div class="details-summary admonition-title">
+      <i class="icon fa-solid fa-pencil-alt fa-fw" aria-hidden="true"></i>申明<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i>
+    </div>
+    <div class="details-content">
+      <div class="admonition-content">记录由AI工具帮忙写的代码，越来越离不开Cusor了。<br>
+作者: <a href="https://www.cursor.so/"target="_blank" rel="external nofollow noopener noreferrer">Cursor<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a></div>
+    </div>
+  </div>]]></description></item><item><title>Website RIP 效果实现</title><link>https://geekswg.github.io/website-rip/</link><pubDate>Wed, 24 May 2023 20:42:20 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/website-rip/</guid><description><![CDATA[<div class="featured-image">
         <img src="/images/posts/featured-image-preview.jpg" referrerpolicy="no-referrer">
       </div><div class="details admonition note open">
     <div class="details-summary admonition-title">
@@ -45,17 +53,7 @@
 <blockquote>
 <p>本文阅读前，基于你已经了解hugo，并且使用Fixit主题成功搭建成功后，如还不了解相关内容请访问👉 <a href="https://fixit.lruihao.cn/zh-cn/"target="_blank" rel="external nofollow noopener noreferrer">FixIt 主题文档<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a> 了解。<br>
 <small><em>关于 <a href="https://github.com/hugo-fixit/FixIt"target="_blank" rel="external nofollow noopener noreferrer">FixIt 主题<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a> 的问题，请移步 <a href="https://fixit.lruihao.cn"target="_blank" rel="external nofollow noopener noreferrer">FixIt 官网<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a> 相关文章哦～</em></small></p>
-</blockquote>]]></description></item><item><title>Build Cloud Disk - CloudReve</title><link>https://geekswg.github.io/build-cloud-disk/</link><pubDate>Sun, 21 May 2023 17:34:32 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/build-cloud-disk/</guid><description><![CDATA[<div class="featured-image">
-        <img src="/images/posts/featured-image-preview.jpg" referrerpolicy="no-referrer">
-      </div><div class="details admonition note open">
-    <div class="details-summary admonition-title">
-      <i class="icon fa-solid fa-pencil-alt fa-fw" aria-hidden="true"></i>注意<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i>
-    </div>
-    <div class="details-content">
-      <div class="admonition-content">今天介绍一下非常好用的私有云网盘系统。<br>
-以 跨平|的方式组织你的文件。Cloudreve 可助你即刻构建出兼备自用或公用的网盘服务，通过多种存储策略的支持、虚拟文件系统等特性实现灵活的文件管理体验。</div>
-    </div>
-  </div>]]></description></item><item><title>我的第一个域名</title><link>https://geekswg.github.io/my-first-domain/</link><pubDate>Thu, 13 Apr 2023 17:05:47 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/my-first-domain/</guid><description><![CDATA[<div class="featured-image">
+</blockquote>]]></description></item><item><title>我的第一个域名</title><link>https://geekswg.github.io/my-first-domain/</link><pubDate>Thu, 13 Apr 2023 17:05:47 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/my-first-domain/</guid><description><![CDATA[<div class="featured-image">
         <img src="/images/posts/featured-image-preview.jpg" referrerpolicy="no-referrer">
       </div><blockquote>
 <p>终于买了我的人生中第一个域名。 <a href="https://geekswg.top/"target="_blank" rel="external nofollow noopener noreferrer">geekswg.top<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a><br>
@@ -103,9 +101,7 @@
 </blockquote>
 </div>
     </div>
-  </div>
-<p><figure><a class="lightgallery" href="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404.gif" data-thumbnail="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404.gif" data-sub-html="<h2>404</h2><p>样式-Style</p>"></a><figcaption class="image-caption">404</figcaption>
-  </figure></p>]]></description></item><item><title>Website RIP 效果实现</title><link>https://geekswg.github.io/website-rip/</link><pubDate>Wed, 24 May 2023 20:42:20 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/website-rip/</guid><description><![CDATA[<div class="featured-image">
+  </div>]]></description></item><item><title>Website RIP 效果实现</title><link>https://geekswg.github.io/website-rip/</link><pubDate>Wed, 24 May 2023 20:42:20 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/website-rip/</guid><description><![CDATA[<div class="featured-image">
         <img src="/images/posts/featured-image-preview.jpg" referrerpolicy="no-referrer">
       </div><div class="details admonition note open">
     <div class="details-summary admonition-title">
