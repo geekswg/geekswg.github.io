@@ -1,4 +1,24 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>所有文章 - 毕少侠</title><link>https://geekswg.github.io/posts/</link><description>所有文章 | 毕少侠</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>geekswg@qq.com (geekswg)</managingEditor><webMaster>geekswg@qq.com (geekswg)</webMaster><copyright>geekswg &amp; 毕少侠</copyright><lastBuildDate>Mon, 29 May 2023 17:38:41 +0800</lastBuildDate><atom:link href="https://geekswg.github.io/posts/" rel="self" type="application/rss+xml"/><item><title>WPS-AI内测使用体验</title><link>https://geekswg.github.io/wps-ai-use/</link><pubDate>Mon, 29 May 2023 17:38:41 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/wps-ai-use/</guid><description><![CDATA[<div class="featured-image">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>所有文章 - 毕少侠</title><link>https://geekswg.github.io/posts/</link><description>所有文章 | 毕少侠</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>geekswg@qq.com (geekswg)</managingEditor><webMaster>geekswg@qq.com (geekswg)</webMaster><copyright>geekswg &amp; 毕少侠</copyright><lastBuildDate>Tue, 30 May 2023 18:14:48 +0800</lastBuildDate><atom:link href="https://geekswg.github.io/posts/" rel="self" type="application/rss+xml"/><item><title>notes1</title><link>https://geekswg.github.io/notes1/</link><pubDate>Tue, 28 Feb 2023 01:51:53 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/notes1/</guid><description><![CDATA[<div class="featured-image">
+        <img src="/images/posts/featured-image.jpg" referrerpolicy="no-referrer">
+      </div><p><div class="details admonition quote open">
+    <div class="details-summary admonition-title">
+      <i class="icon fa-solid fa-quote-right fa-fw" aria-hidden="true"></i>quote<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i>
+    </div>
+    <div class="details-content">
+      <div class="admonition-content">note abstract info tip success question warning failure danger bug example quote</div>
+    </div>
+  </div><br>
+这里使用MD语法编写你的文章</p>]]></description></item><item><title>Timeline</title><link>https://geekswg.github.io/timeline/</link><pubDate>Tue, 30 May 2023 18:14:48 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/timeline/</guid><description><![CDATA[<div class="featured-image">
+        <img src="/images/posts/featured-image-preview.jpg" referrerpolicy="no-referrer">
+      </div><p><div class="details admonition quote open">
+    <div class="details-summary admonition-title">
+      <i class="icon fa-solid fa-quote-right fa-fw" aria-hidden="true"></i>quote<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i>
+    </div>
+    <div class="details-content">
+      <div class="admonition-content">note abstract info tip success question warning failure danger bug example quote</div>
+    </div>
+  </div><br>
+这里使用MD语法编写你的文章</p>]]></description></item><item><title>WPS-AI内测使用体验</title><link>https://geekswg.github.io/wps-ai-use/</link><pubDate>Mon, 29 May 2023 17:38:41 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/wps-ai-use/</guid><description><![CDATA[<div class="featured-image">
         <img src="/230529180454-wps-ai.jpg" referrerpolicy="no-referrer">
       </div><div class="details admonition quote open">
     <div class="details-summary admonition-title">
@@ -102,7 +122,17 @@
 </blockquote>
 <blockquote>
 <p>我们在平时学习生活总会遇到很多很多有用的网站，也许我们收藏在了浏览器书签里，可过久了，不做说明，这些链接的价值就被时间淹没了，我们自己都记不起来了，所以这篇文章因此而生。对自己收藏的链接做些简单的说明（第一次编写用了我一个下午）；也相当于我的链接收藏夹，分享一些有趣的网站，</p>
-</blockquote>]]></description></item><item><title>WPS-AI内测使用体验</title><link>https://geekswg.github.io/wps-ai-use/</link><pubDate>Mon, 29 May 2023 17:38:41 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/wps-ai-use/</guid><description><![CDATA[<div class="featured-image">
+</blockquote>]]></description></item><item><title>Timeline</title><link>https://geekswg.github.io/timeline/</link><pubDate>Tue, 30 May 2023 18:14:48 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/timeline/</guid><description><![CDATA[<div class="featured-image">
+        <img src="/images/posts/featured-image-preview.jpg" referrerpolicy="no-referrer">
+      </div><p><div class="details admonition quote open">
+    <div class="details-summary admonition-title">
+      <i class="icon fa-solid fa-quote-right fa-fw" aria-hidden="true"></i>quote<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i>
+    </div>
+    <div class="details-content">
+      <div class="admonition-content">note abstract info tip success question warning failure danger bug example quote</div>
+    </div>
+  </div><br>
+这里使用MD语法编写你的文章</p>]]></description></item><item><title>WPS-AI内测使用体验</title><link>https://geekswg.github.io/wps-ai-use/</link><pubDate>Mon, 29 May 2023 17:38:41 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/wps-ai-use/</guid><description><![CDATA[<div class="featured-image">
         <img src="/230529180454-wps-ai.jpg" referrerpolicy="no-referrer">
       </div><div class="details admonition quote open">
     <div class="details-summary admonition-title">
@@ -174,14 +204,4 @@
 <code>Ctrl + K</code>: 使用md写一篇1万字的关于docker的博文</p>
 </blockquote>]]></description></item><item><title>使命召唤19-战区2-地图</title><link>https://geekswg.github.io/cod19-wz2/</link><pubDate>Tue, 28 Mar 2023 20:07:11 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/cod19-wz2/</guid><description>&lt;div class="featured-image">
 &lt;img src="https://jsd.cdn.zzko.cn/gh/geekswg/static@main/blog-img/cod19/wz2.jpeg" referrerpolicy="no-referrer">
-&lt;/div>wz2 在DMZ模式中做任务时经常找不到点位。 21号楼 21-room 马兹拉 垃圾箱 垃圾箱 垃圾箱 1扎克瓦水电站 扎克瓦水电站 2塔拉克村 塔拉克村 3沙里木小道 沙里木小道</description></item><item><title>Cursor帮我写的代码</title><link>https://geekswg.github.io/code-writed-by-cursor/</link><pubDate>Sun, 26 Mar 2023 18:30:40 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/code-writed-by-cursor/</guid><description><![CDATA[<div class="featured-image">
-        <img src="/images/posts/featured-image-preview.jpg" referrerpolicy="no-referrer">
-      </div><div class="details admonition note open">
-    <div class="details-summary admonition-title">
-      <i class="icon fa-solid fa-pencil-alt fa-fw" aria-hidden="true"></i>申明<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i>
-    </div>
-    <div class="details-content">
-      <div class="admonition-content">记录由AI工具帮忙写的代码，越来越离不开Cusor了。<br>
-作者: <a href="https://www.cursor.so/"target="_blank" rel="external nofollow noopener noreferrer">Cursor<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a></div>
-    </div>
-  </div>]]></description></item></channel></rss>
+&lt;/div>wz2 在DMZ模式中做任务时经常找不到点位。 21号楼 21-room 马兹拉 垃圾箱 垃圾箱 垃圾箱 1扎克瓦水电站 扎克瓦水电站 2塔拉克村 塔拉克村 3沙里木小道 沙里木小道</description></item></channel></rss>
