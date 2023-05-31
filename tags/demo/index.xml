@@ -8,6 +8,16 @@
       <div class="admonition-content">note abstract info tip success question warning failure danger bug example quote</div>
     </div>
   </div><br>
+这里使用MD语法编写你的文章</p>]]></description></item><item><title>timeline2</title><link>https://geekswg.github.io/timeline2/</link><pubDate>Tue, 30 May 2023 18:14:48 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/timeline2/</guid><description><![CDATA[<div class="featured-image">
+        <img src="/images/posts/featured-image-preview.jpg" referrerpolicy="no-referrer">
+      </div><p><div class="details admonition quote open">
+    <div class="details-summary admonition-title">
+      <i class="icon fa-solid fa-quote-right fa-fw" aria-hidden="true"></i>quote<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i>
+    </div>
+    <div class="details-content">
+      <div class="admonition-content">note abstract info tip success question warning failure danger bug example quote</div>
+    </div>
+  </div><br>
 这里使用MD语法编写你的文章</p>]]></description></item><item><title>我的第一个 Hugo 博客</title><link>https://geekswg.github.io/demo/</link><pubDate>Sat, 01 Jan 2022 12:15:22 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/demo/</guid><description><![CDATA[<div class="featured-image">
         <img src="/images/posts/featured-image.jpg" referrerpolicy="no-referrer">
       </div><h2 id="我的hugo博客">我的Hugo博客</h2>
