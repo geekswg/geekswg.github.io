@@ -1,6 +1,6 @@
 {
-    "name": "",
-    "short_name": "",
+    "name": "毕少侠APP",
+    "short_name": "毕少侠PWA",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
