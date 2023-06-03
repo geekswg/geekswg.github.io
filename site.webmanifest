@@ -1,6 +1,6 @@
 {
-    "name": "毕少侠APP",
-    "short_name": "毕少侠PWA",
+    "name": "毕少侠Hogo-APP",
+    "short_name": "毕少侠PWA-Hugo",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
