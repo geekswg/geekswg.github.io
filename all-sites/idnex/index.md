@@ -12,6 +12,9 @@
 [毕少侠-Hexo​](https://hexo.geekswg.top)
 
 [毕少侠-站点监测​](https://status.geekswg.top)
+[毕少侠-Hugo导航​](https://nav.geekswg.top)
+
+[毕少侠-Picx-Github图床](https://github.com/gavinblog/picx)
 
 ## 评论系统
 
@@ -22,6 +25,10 @@
 
 [毕少侠-ChatGPT-Next-Web​](https://chatgpt.geekswg.top)
 [毕少侠-NewBing-代理​](https://bingai.geekswg.top)
+
+## API
+
+[meting_api](https://api-meting.geekswg.top/api)
 
 ## Others
 
