@@ -1,8 +1,7 @@
 # Fixit-快速开始
 
-{{< admonition quote >}}
-note abstract info tip success question warning failure danger bug example quote
-快速上手Hugo blog指引。
+{{< admonition >}}
+快速上手Hugo-blog指引。
 记录常用命令，方便查阅。
 {{< /admonition >}}
 <!--more-->
