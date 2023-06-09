@@ -10,6 +10,7 @@ note abstract info tip success question warning failure danger bug example quote
 
     {{% tl-event2 title="标题" from="2023-05-21" to="2023-05-22" %}}
 ## 你好
+
 > 测试md 语法支持
     {{% /tl-event2 %}}
 
@@ -25,7 +26,7 @@ I worked here 1
 
 ## 使用demo-timeline2
 
-```
+```html
 {{</* timeline2 */>}}
 {{%/* tl-event2 title="标题" from="2023-05-21" to="2023-05-22" */%}}
 ## 你好
