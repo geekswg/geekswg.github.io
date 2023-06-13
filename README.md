@@ -18,6 +18,12 @@
 
 博客内容主要以 Web 前端为主。
 
+![visitor](https://visitor-badge.laobi.icu/badge?page_id=geekswg/geekswg.github.io)
+![JavaScript](https://img.shields.io/badge/-Hugo-oringe?style=flat-square&logo=hugo)
+![HTML5](https://img.shields.io/badge/-HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/-CSS3-1572B6?style=flat-square&logo=css3)
+![JavaScript](https://img.shields.io/badge/-JavaScript-oringe?style=flat-square&logo=javascript)
+
 分享一些有趣程序、技巧、开发教程、心情和学习记录！
 
 ## Copyright
