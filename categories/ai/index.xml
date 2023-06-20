@@ -1,4 +1,4 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>AI - 分类 - 毕少侠</title><link>https://geekswg.github.io/categories/ai/</link><description>AI - 分类 - 毕少侠</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>geekswg@qq.com (geekswg)</managingEditor><webMaster>geekswg@qq.com (geekswg)</webMaster><copyright>geekswg &amp; 毕少侠</copyright><lastBuildDate>Mon, 29 May 2023 17:38:41 +0800</lastBuildDate><atom:link href="https://geekswg.github.io/categories/ai/" rel="self" type="application/rss+xml"/><item><title>WPS-AI内测使用体验</title><link>https://geekswg.github.io/wps-ai-use/</link><pubDate>Mon, 29 May 2023 17:38:41 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/wps-ai-use/</guid><description><![CDATA[<div class="featured-image">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>AI - 分类 - 毕少侠</title><link>https://geekswg.github.io/categories/ai/</link><description>AI - 分类 - 毕少侠</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>geekswg@qq.com (geekswg)</managingEditor><webMaster>geekswg@qq.com (geekswg)</webMaster><copyright>geekswg &amp; 毕少侠</copyright><lastBuildDate>Mon, 29 May 2023 17:38:41 +0800</lastBuildDate><atom:link href="https://geekswg.github.io/categories/ai/" rel="self" type="application/rss+xml"/><item><title>WPS-AI内测使用体验</title><link>https://geekswg.github.io/2023/wps-ai-use/</link><pubDate>Mon, 29 May 2023 17:38:41 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/2023/wps-ai-use/</guid><description><![CDATA[<div class="featured-image">
         <img src="/230529180454-wps-ai.jpg" referrerpolicy="no-referrer">
       </div><div class="details admonition quote open">
     <div class="details-summary admonition-title">
@@ -12,13 +12,13 @@
 </blockquote>
 </div>
     </div>
-  </div>]]></description></item><item><title>关于Docker</title><link>https://geekswg.github.io/cursor-docker/</link><pubDate>Sun, 02 Apr 2023 18:30:40 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/cursor-docker/</guid><description><![CDATA[<div class="featured-image">
+  </div>]]></description></item><item><title>关于Docker</title><link>https://geekswg.github.io/2023/cursor-docker/</link><pubDate>Sun, 02 Apr 2023 18:30:40 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/2023/cursor-docker/</guid><description><![CDATA[<div class="featured-image">
         <img src="/images/posts/featured-image-preview.jpg" referrerpolicy="no-referrer">
       </div><blockquote>
 <p>这一片关于Docker的文章，由AI工具Cursor写作<br>
 作者: <a href="https://www.cursor.so/"target="_blank" rel="external nofollow noopener noreferrer">Cursor<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a><br>
 <code>Ctrl + K</code>: 使用md写一篇1万字的关于docker的博文</p>
-</blockquote>]]></description></item><item><title>Cursor帮我写的代码</title><link>https://geekswg.github.io/code-writed-by-cursor/</link><pubDate>Sun, 26 Mar 2023 18:30:40 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/code-writed-by-cursor/</guid><description><![CDATA[<div class="featured-image">
+</blockquote>]]></description></item><item><title>Cursor帮我写的代码</title><link>https://geekswg.github.io/2023/code-writed-by-cursor/</link><pubDate>Sun, 26 Mar 2023 18:30:40 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/2023/code-writed-by-cursor/</guid><description><![CDATA[<div class="featured-image">
         <img src="/images/posts/featured-image-preview.jpg" referrerpolicy="no-referrer">
       </div><div class="details admonition note open">
     <div class="details-summary admonition-title">
@@ -28,7 +28,7 @@
       <div class="admonition-content">记录由AI工具帮忙写的代码，越来越离不开Cusor了。<br>
 作者: <a href="https://www.cursor.so/"target="_blank" rel="external nofollow noopener noreferrer">Cursor<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a></div>
     </div>
-  </div>]]></description></item><item><title>Electron是什么？</title><link>https://geekswg.github.io/cursor-electron/</link><pubDate>Sun, 26 Mar 2023 18:30:40 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/cursor-electron/</guid><description><![CDATA[<div class="featured-image">
+  </div>]]></description></item><item><title>Electron是什么？</title><link>https://geekswg.github.io/2023/cursor-electron/</link><pubDate>Sun, 26 Mar 2023 18:30:40 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/2023/cursor-electron/</guid><description><![CDATA[<div class="featured-image">
         <img src="/230328000644-cursor-electron.png" referrerpolicy="no-referrer">
       </div><div class="details admonition quote open">
     <div class="details-summary admonition-title">
@@ -38,7 +38,7 @@
       <div class="admonition-content">这一片关于ChatGPT的文章，由AI工具Cursor写作<br>
 作者: <a href="https://www.cursor.so/"target="_blank" rel="external nofollow noopener noreferrer">Cursor<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a></div>
     </div>
-  </div>]]></description></item><item><title>关于ChatGPT</title><link>https://geekswg.github.io/md-writeby-cursor/</link><pubDate>Sun, 26 Mar 2023 18:30:40 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/md-writeby-cursor/</guid><description><![CDATA[<div class="featured-image">
+  </div>]]></description></item><item><title>关于ChatGPT</title><link>https://geekswg.github.io/2023/md-writeby-cursor/</link><pubDate>Sun, 26 Mar 2023 18:30:40 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/2023/md-writeby-cursor/</guid><description><![CDATA[<div class="featured-image">
         <img src="/images/posts/featured-image-preview.jpg" referrerpolicy="no-referrer">
       </div><div class="details admonition quote open">
     <div class="details-summary admonition-title">
@@ -48,7 +48,7 @@
       <div class="admonition-content">这一片关于ChatGPT的文章，由AI工具Cursor写作<br>
 作者: <a href="https://www.cursor.so/"target="_blank" rel="external nofollow noopener noreferrer">Cursor<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a></div>
     </div>
-  </div>]]></description></item><item><title>New Bing 国内正常访问方法</title><link>https://geekswg.github.io/new-bing-visit/</link><pubDate>Sat, 18 Mar 2023 16:49:11 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/new-bing-visit/</guid><description><![CDATA[<div class="featured-image">
+  </div>]]></description></item><item><title>New Bing 国内正常访问方法</title><link>https://geekswg.github.io/2023/new-bing-visit/</link><pubDate>Sat, 18 Mar 2023 16:49:11 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/2023/new-bing-visit/</guid><description><![CDATA[<div class="featured-image">
         <img src="/230318164630-new-bing.png" referrerpolicy="no-referrer">
       </div><div class="details admonition quote open">
     <div class="details-summary admonition-title">
@@ -71,7 +71,7 @@ note abstract info tip success question warning failure danger bug example quote
     <div class="details-content">
       <div class="admonition-content">前提你已经通过new bing 的waitlist，不然你还是用不上new bing哟！</div>
     </div>
-  </div></p>]]></description></item><item><title>New Bing 申请教程</title><link>https://geekswg.github.io/new-bing/</link><pubDate>Mon, 20 Feb 2023 14:51:53 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/new-bing/</guid><description><![CDATA[<div class="featured-image">
+  </div></p>]]></description></item><item><title>New Bing 申请教程</title><link>https://geekswg.github.io/2023/new-bing/</link><pubDate>Mon, 20 Feb 2023 14:51:53 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/2023/new-bing/</guid><description><![CDATA[<div class="featured-image">
         <img src="/featured-img.png" referrerpolicy="no-referrer">
       </div><p>最近除了有很红的ChatGPT AI 聊天机器人之外，还有很多人跃跃欲试新版Bing（New Bing），因为微软将新版Bing 结合了比ChatGPT 更强大的新一代OpenAI 语言模型，不仅能询问复杂问题、提供建议与解决方法，Bing 也会查看网路搜寻结果，迅速为我们提供摘要。<br>
 记录申请过程中遇到各种问题以及解决办法。</p>]]></description></item></channel></rss>

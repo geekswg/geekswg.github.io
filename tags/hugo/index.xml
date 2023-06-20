@@ -1,4 +1,4 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Hugo - 标签 - 毕少侠</title><link>https://geekswg.github.io/tags/hugo/</link><description>Hugo - 标签 - 毕少侠</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>geekswg@qq.com (geekswg)</managingEditor><webMaster>geekswg@qq.com (geekswg)</webMaster><copyright>geekswg &amp; 毕少侠</copyright><lastBuildDate>Sun, 26 Mar 2023 15:30:06 +0800</lastBuildDate><atom:link href="https://geekswg.github.io/tags/hugo/" rel="self" type="application/rss+xml"/><item><title>Hugo Shortcode Plugins Live2d</title><link>https://geekswg.github.io/hugo-shortcode-plugins-live2d/</link><pubDate>Sun, 26 Mar 2023 15:30:06 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/hugo-shortcode-plugins-live2d/</guid><description><![CDATA[<div class="featured-image">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Hugo - 标签 - 毕少侠</title><link>https://geekswg.github.io/tags/hugo/</link><description>Hugo - 标签 - 毕少侠</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>geekswg@qq.com (geekswg)</managingEditor><webMaster>geekswg@qq.com (geekswg)</webMaster><copyright>geekswg &amp; 毕少侠</copyright><lastBuildDate>Sun, 26 Mar 2023 15:30:06 +0800</lastBuildDate><atom:link href="https://geekswg.github.io/tags/hugo/" rel="self" type="application/rss+xml"/><item><title>Hugo Shortcode Plugins Live2d</title><link>https://geekswg.github.io/2023/hugo-shortcode-plugins-live2d/</link><pubDate>Sun, 26 Mar 2023 15:30:06 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/2023/hugo-shortcode-plugins-live2d/</guid><description><![CDATA[<div class="featured-image">
         <img src="/images/posts/featured-image-preview.jpg" referrerpolicy="no-referrer">
       </div><div class="details admonition note open">
     <div class="details-summary admonition-title">
@@ -9,7 +9,7 @@
 感谢Fixit主题作者提供方法和指导帮助。<br>
 note abstract info tip success question warning failure danger bug example quote</div>
     </div>
-  </div>]]></description></item><item><title>Fixit-theme修改和PR过程</title><link>https://geekswg.github.io/theme-develop-pr/</link><pubDate>Tue, 07 Mar 2023 18:50:58 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/theme-develop-pr/</guid><description><![CDATA[<div class="featured-image">
+  </div>]]></description></item><item><title>Fixit-theme修改和PR过程</title><link>https://geekswg.github.io/2023/theme-develop-pr/</link><pubDate>Tue, 07 Mar 2023 18:50:58 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/2023/theme-develop-pr/</guid><description><![CDATA[<div class="featured-image">
         <img src="/images/posts/featured-image-preview.jpg" referrerpolicy="no-referrer">
       </div><div class="details admonition note open">
     <div class="details-summary admonition-title">
@@ -19,7 +19,7 @@ note abstract info tip success question warning failure danger bug example quote
       <div class="admonition-content">记录一次修改fixit主题代码，并pr的过程<br>
 note abstract info tip success question warning failure danger bug example quote</div>
     </div>
-  </div>]]></description></item><item><title>基于Fixit主题美化记录</title><link>https://geekswg.github.io/fixit-beautification/</link><pubDate>Sun, 26 Feb 2023 14:21:02 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/fixit-beautification/</guid><description><![CDATA[<div class="featured-image">
+  </div>]]></description></item><item><title>基于Fixit主题美化记录</title><link>https://geekswg.github.io/2023/fixit-beautification/</link><pubDate>Sun, 26 Feb 2023 14:21:02 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/2023/fixit-beautification/</guid><description><![CDATA[<div class="featured-image">
         <img src="/images/posts/featured-image.jpg" referrerpolicy="no-referrer">
       </div><div class="details admonition quote open">
     <div class="details-summary admonition-title">
@@ -32,7 +32,7 @@ note abstract info tip success question warning failure danger bug example quote
 <blockquote>
 <p>本文阅读前，基于你已经了解hugo，并且使用Fixit主题成功搭建成功后，如还不了解相关内容请访问👉 <a href="https://fixit.lruihao.cn/zh-cn/"target="_blank" rel="external nofollow noopener noreferrer">FixIt 主题文档<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a> 了解。<br>
 <small><em>关于 <a href="https://github.com/hugo-fixit/FixIt"target="_blank" rel="external nofollow noopener noreferrer">FixIt 主题<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a> 的问题，请移步 <a href="https://fixit.lruihao.cn"target="_blank" rel="external nofollow noopener noreferrer">FixIt 官网<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a> 相关文章哦～</em></small></p>
-</blockquote>]]></description></item><item><title>Fixit-快速开始</title><link>https://geekswg.github.io/code/notes/</link><pubDate>Wed, 22 Feb 2023 20:15:48 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/code/notes/</guid><description><![CDATA[<div class="featured-image">
+</blockquote>]]></description></item><item><title>Fixit-快速开始</title><link>https://geekswg.github.io/mydocs/notes/</link><pubDate>Wed, 22 Feb 2023 20:15:48 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/mydocs/notes/</guid><description><![CDATA[<div class="featured-image">
         <img src="/images/posts/featured-image.jpg" referrerpolicy="no-referrer">
       </div><div class="details admonition note open">
     <div class="details-summary admonition-title">
@@ -42,7 +42,7 @@ note abstract info tip success question warning failure danger bug example quote
       <div class="admonition-content">快速上手Hugo-blog指引。<br>
 记录常用命令，方便查阅。</div>
     </div>
-  </div>]]></description></item><item><title>Fixit-Admonition</title><link>https://geekswg.github.io/code/hugo-admonition/</link><pubDate>Fri, 03 Feb 2023 21:42:57 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/code/hugo-admonition/</guid><description><![CDATA[<div class="featured-image">
+  </div>]]></description></item><item><title>Fixit-Admonition</title><link>https://geekswg.github.io/mydocs/hugo-admonition/</link><pubDate>Fri, 03 Feb 2023 21:42:57 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/mydocs/hugo-admonition/</guid><description><![CDATA[<div class="featured-image">
         <img src="/images/posts/featured-image.jpg" referrerpolicy="no-referrer">
       </div><p><code>admonition</code> shortcode 支持 <strong>12</strong> 种 帮助你在页面中插入提示的横幅.<br>
 <em>支持 Markdown 或者 HTML 格式.</em></p>]]></description></item></channel></rss>

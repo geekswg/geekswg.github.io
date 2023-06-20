@@ -1,4 +1,10 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>所有文章 - 毕少侠</title><link>https://geekswg.github.io/posts/</link><description>所有文章 | 毕少侠</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>geekswg@qq.com (geekswg)</managingEditor><webMaster>geekswg@qq.com (geekswg)</webMaster><copyright>geekswg &amp; 毕少侠</copyright><lastBuildDate>Wed, 07 Jun 2023 19:54:12 +0800</lastBuildDate><atom:link href="https://geekswg.github.io/posts/" rel="self" type="application/rss+xml"/><item><title>timeline2</title><link>https://geekswg.github.io/timeline2/</link><pubDate>Wed, 31 May 2023 18:14:48 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/timeline2/</guid><description><![CDATA[<div class="featured-image">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>所有文章 - 毕少侠</title><link>https://geekswg.github.io/posts/</link><description>所有文章 | 毕少侠</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>geekswg@qq.com (geekswg)</managingEditor><webMaster>geekswg@qq.com (geekswg)</webMaster><copyright>geekswg &amp; 毕少侠</copyright><lastBuildDate>Wed, 07 Jun 2023 19:54:12 +0800</lastBuildDate><atom:link href="https://geekswg.github.io/posts/" rel="self" type="application/rss+xml"/><item><title>各种 Links 汇总</title><link>https://geekswg.github.io/2018/links/</link><pubDate>Thu, 07 Jun 2018 00:06:05 +0000</pubDate><author>geekswg</author><guid>https://geekswg.github.io/2018/links/</guid><description><![CDATA[<blockquote>
+<p>2021/10/1 更新<br>
+使用 Chrome 等浏览器管理书签是更好更方便的方式，登陆 google 账号，或者导出 html 书签文件都挺方便。</p>
+</blockquote>
+<blockquote>
+<p>我们在平时学习生活总会遇到很多很多有用的网站，也许我们收藏在了浏览器书签里，可过久了，不做说明，这些链接的价值就被时间淹没了，我们自己都记不起来了，所以这篇文章因此而生。对自己收藏的链接做些简单的说明（第一次编写用了我一个下午）；也相当于我的链接收藏夹，分享一些有趣的网站，</p>
+</blockquote>]]></description></item><item><title>timeline2</title><link>https://geekswg.github.io/2023/timeline2/</link><pubDate>Wed, 31 May 2023 18:14:48 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/2023/timeline2/</guid><description><![CDATA[<div class="featured-image">
         <img src="/images/posts/featured-image-preview.jpg" referrerpolicy="no-referrer">
       </div><p><div class="details admonition quote open">
     <div class="details-summary admonition-title">
@@ -8,7 +14,7 @@
       <div class="admonition-content">note abstract info tip success question warning failure danger bug example quote</div>
     </div>
   </div><br>
-这里使用MD语法编写你的文章</p>]]></description></item><item><title>Funny 404 Gif</title><link>https://geekswg.github.io/funny-404-gif/</link><pubDate>Sat, 27 May 2023 20:20:00 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/funny-404-gif/</guid><description><![CDATA[<div class="featured-image">
+这里使用MD语法编写你的文章</p>]]></description></item><item><title>Funny 404 Gif</title><link>https://geekswg.github.io/2023/funny-404-gif/</link><pubDate>Sat, 27 May 2023 20:20:00 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/2023/funny-404-gif/</guid><description><![CDATA[<div class="featured-image">
         <img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404.gif" referrerpolicy="no-referrer">
       </div><div class="details admonition note open">
     <div class="details-summary admonition-title">
@@ -21,12 +27,12 @@
 </blockquote>
 </div>
     </div>
-  </div>]]></description></item><item><title>Loading Gif</title><link>https://geekswg.github.io/loading-gif/</link><pubDate>Wed, 07 Jun 2023 19:54:12 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/loading-gif/</guid><description><![CDATA[<div class="featured-image">
+  </div>]]></description></item><item><title>Loading Gif</title><link>https://geekswg.github.io/2023/loading-gif/</link><pubDate>Wed, 07 Jun 2023 19:54:12 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/2023/loading-gif/</guid><description><![CDATA[<div class="featured-image">
         <img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/loading/loading-6.gif" referrerpolicy="no-referrer">
       </div><p>loading.gif 透明加载动画</p>
 <blockquote>
 <p>大部分来源于网站 <a href="https://www.bing.com/images/search?q=loading&amp;qs=n&amp;form=QBILPG&amp;sp=-1&amp;lq=0&amp;pq=loading&amp;sc=10-7&amp;cvid=23A7D80EB520465F9CD6951D4825FF8F&amp;ghsh=0&amp;ghacc=0&amp;first=1"target="_blank" rel="external nofollow noopener noreferrer">Bing<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a> 和 <a href="https://icons8.com/preloaders/en/search/windows%2010"target="_blank" rel="external nofollow noopener noreferrer">icos8<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a> ,如有侵权，请联系删除</p>
-</blockquote>]]></description></item><item><title>notes1</title><link>https://geekswg.github.io/notes1/</link><pubDate>Tue, 28 Feb 2023 01:51:53 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/notes1/</guid><description><![CDATA[<div class="featured-image">
+</blockquote>]]></description></item><item><title>notes1</title><link>https://geekswg.github.io/2023/notes1/</link><pubDate>Tue, 28 Feb 2023 01:51:53 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/2023/notes1/</guid><description><![CDATA[<div class="featured-image">
         <img src="/images/posts/featured-image.jpg" referrerpolicy="no-referrer">
       </div><p><div class="details admonition quote open">
     <div class="details-summary admonition-title">
@@ -36,7 +42,7 @@
       <div class="admonition-content">note abstract info tip success question warning failure danger bug example quote</div>
     </div>
   </div><br>
-这里使用MD语法编写你的文章</p>]]></description></item><item><title>Timeline</title><link>https://geekswg.github.io/timeline/</link><pubDate>Tue, 30 May 2023 18:14:48 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/timeline/</guid><description><![CDATA[<div class="featured-image">
+这里使用MD语法编写你的文章</p>]]></description></item><item><title>Timeline</title><link>https://geekswg.github.io/2023/timeline/</link><pubDate>Tue, 30 May 2023 18:14:48 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/2023/timeline/</guid><description><![CDATA[<div class="featured-image">
         <img src="/images/posts/featured-image-preview.jpg" referrerpolicy="no-referrer">
       </div><p><div class="details admonition quote open">
     <div class="details-summary admonition-title">
@@ -46,7 +52,7 @@
       <div class="admonition-content">note abstract info tip success question warning failure danger bug example quote</div>
     </div>
   </div><br>
-这里使用MD语法编写你的文章</p>]]></description></item><item><title>WPS-AI内测使用体验</title><link>https://geekswg.github.io/wps-ai-use/</link><pubDate>Mon, 29 May 2023 17:38:41 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/wps-ai-use/</guid><description><![CDATA[<div class="featured-image">
+这里使用MD语法编写你的文章</p>]]></description></item><item><title>WPS-AI内测使用体验</title><link>https://geekswg.github.io/2023/wps-ai-use/</link><pubDate>Mon, 29 May 2023 17:38:41 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/2023/wps-ai-use/</guid><description><![CDATA[<div class="featured-image">
         <img src="/230529180454-wps-ai.jpg" referrerpolicy="no-referrer">
       </div><div class="details admonition quote open">
     <div class="details-summary admonition-title">
@@ -60,7 +66,7 @@
 </blockquote>
 </div>
     </div>
-  </div>]]></description></item><item><title>Build Cloud Disk - CloudReve</title><link>https://geekswg.github.io/build-cloud-disk/</link><pubDate>Sun, 21 May 2023 17:34:32 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/build-cloud-disk/</guid><description><![CDATA[<div class="featured-image">
+  </div>]]></description></item><item><title>Build Cloud Disk - CloudReve</title><link>https://geekswg.github.io/2023/build-cloud-disk/</link><pubDate>Sun, 21 May 2023 17:34:32 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/2023/build-cloud-disk/</guid><description><![CDATA[<div class="featured-image">
         <img src="/images/posts/featured-image-preview.jpg" referrerpolicy="no-referrer">
       </div><div class="details admonition note open">
     <div class="details-summary admonition-title">
@@ -70,7 +76,7 @@
       <div class="admonition-content">今天介绍一下非常好用的私有云网盘系统。<br>
 以 跨平|的方式组织你的文件。Cloudreve 可助你即刻构建出兼备自用或公用的网盘服务，通过多种存储策略的支持、虚拟文件系统等特性实现灵活的文件管理体验。</div>
     </div>
-  </div>]]></description></item><item><title>Cursor帮我写的代码</title><link>https://geekswg.github.io/code-writed-by-cursor/</link><pubDate>Sun, 26 Mar 2023 18:30:40 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/code-writed-by-cursor/</guid><description><![CDATA[<div class="featured-image">
+  </div>]]></description></item><item><title>Cursor帮我写的代码</title><link>https://geekswg.github.io/2023/code-writed-by-cursor/</link><pubDate>Sun, 26 Mar 2023 18:30:40 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/2023/code-writed-by-cursor/</guid><description><![CDATA[<div class="featured-image">
         <img src="/images/posts/featured-image-preview.jpg" referrerpolicy="no-referrer">
       </div><div class="details admonition note open">
     <div class="details-summary admonition-title">
@@ -80,7 +86,7 @@
       <div class="admonition-content">记录由AI工具帮忙写的代码，越来越离不开Cusor了。<br>
 作者: <a href="https://www.cursor.so/"target="_blank" rel="external nofollow noopener noreferrer">Cursor<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a></div>
     </div>
-  </div>]]></description></item><item><title>Website RIP 效果实现</title><link>https://geekswg.github.io/website-rip/</link><pubDate>Wed, 24 May 2023 20:42:20 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/website-rip/</guid><description><![CDATA[<div class="featured-image">
+  </div>]]></description></item><item><title>Website RIP 效果实现</title><link>https://geekswg.github.io/2023/website-rip/</link><pubDate>Wed, 24 May 2023 20:42:20 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/2023/website-rip/</guid><description><![CDATA[<div class="featured-image">
         <img src="/images/posts/featured-image-preview.jpg" referrerpolicy="no-referrer">
       </div><div class="details admonition note open">
     <div class="details-summary admonition-title">
@@ -89,7 +95,7 @@
     <div class="details-content">
       <div class="admonition-content">我们常常会在百度百科中看到有人去世时，关于ta的百度百科页会变成黑白色，而其他的无影响。这难道是又重新创建或者修改了整个网页的内容吗？那工作量和时间也来不及呀，其实不然，而是有一个属性，只需设置该属性就可以改变一整个网页的色调。</div>
     </div>
-  </div>]]></description></item><item><title>基于Fixit主题美化记录</title><link>https://geekswg.github.io/fixit-beautification/</link><pubDate>Sun, 26 Feb 2023 14:21:02 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/fixit-beautification/</guid><description><![CDATA[<div class="featured-image">
+  </div>]]></description></item><item><title>基于Fixit主题美化记录</title><link>https://geekswg.github.io/2023/fixit-beautification/</link><pubDate>Sun, 26 Feb 2023 14:21:02 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/2023/fixit-beautification/</guid><description><![CDATA[<div class="featured-image">
         <img src="/images/posts/featured-image.jpg" referrerpolicy="no-referrer">
       </div><div class="details admonition quote open">
     <div class="details-summary admonition-title">
@@ -102,41 +108,17 @@
 <blockquote>
 <p>本文阅读前，基于你已经了解hugo，并且使用Fixit主题成功搭建成功后，如还不了解相关内容请访问👉 <a href="https://fixit.lruihao.cn/zh-cn/"target="_blank" rel="external nofollow noopener noreferrer">FixIt 主题文档<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a> 了解。<br>
 <small><em>关于 <a href="https://github.com/hugo-fixit/FixIt"target="_blank" rel="external nofollow noopener noreferrer">FixIt 主题<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a> 的问题，请移步 <a href="https://fixit.lruihao.cn"target="_blank" rel="external nofollow noopener noreferrer">FixIt 官网<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a> 相关文章哦～</em></small></p>
-</blockquote>]]></description></item><item><title>我的第一个域名</title><link>https://geekswg.github.io/my-first-domain/</link><pubDate>Thu, 13 Apr 2023 17:05:47 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/my-first-domain/</guid><description><![CDATA[<div class="featured-image">
+</blockquote>]]></description></item><item><title>我的第一个域名</title><link>https://geekswg.github.io/2023/my-first-domain/</link><pubDate>Thu, 13 Apr 2023 17:05:47 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/2023/my-first-domain/</guid><description><![CDATA[<div class="featured-image">
         <img src="/images/posts/featured-image-preview.jpg" referrerpolicy="no-referrer">
       </div><blockquote>
 <p>终于买了我的人生中第一个域名。 <a href="https://geekswg.top/"target="_blank" rel="external nofollow noopener noreferrer">geekswg.top<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a><br>
 用于个人博客使用，花费 $1.88美元，支付宝支付，折合人民币 ￥13.01</p>
-</blockquote>]]></description></item><item><title>快速搭建Hexo-blog指南</title><link>https://geekswg.github.io/build-hexo-blog/</link><pubDate>Sun, 30 Apr 2023 15:13:41 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/build-hexo-blog/</guid><description><![CDATA[<div class="featured-image">
-        <img src="/images/posts/featured-image-preview.jpg" referrerpolicy="no-referrer">
-      </div><p>快速搭建hexo博客的步骤如下：</p>
-<ol>
-<li>安装Nodejs <a href="https://nodejs.org/zh-cn"target="_blank" rel="external nofollow noopener noreferrer">https://nodejs.org/zh-cn<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a></li>
-<li>安装Git, <a href="https://git-scm.com/"target="_blank" rel="external nofollow noopener noreferrer">https://git-scm.com/<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a></li>
-<li>安装Hexo, <a href="https://hexo.io/zh-cn/index.html"target="_blank" rel="external nofollow noopener noreferrer">https://hexo.io/zh-cn/index.html<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a></li>
-<li>初始化Hexo</li>
-<li>选择主题</li>
-<li>发布文章</li>
-</ol>]]></description></item><item><title>Debian从稳定版切换到testing版</title><link>https://geekswg.github.io/debian-testing/</link><pubDate>Sun, 05 Mar 2023 14:50:31 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/debian-testing/</guid><description><![CDATA[<div class="featured-image">
-        <img src="/images/posts/featured-image-preview.jpg" referrerpolicy="no-referrer">
-      </div><div class="details admonition tip open">
-    <div class="details-summary admonition-title">
-      <i class="icon fa-solid fa-lightbulb fa-fw" aria-hidden="true"></i>技巧<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i>
-    </div>
-    <div class="details-content">
-      <div class="admonition-content">debian升级到testing – 让debian系统永远保持最新的秘诀</div>
-    </div>
-  </div>]]></description></item><item><title>使命召唤19-战区2-地图</title><link>https://geekswg.github.io/cod19-wz2/</link><pubDate>Tue, 28 Mar 2023 20:07:11 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/cod19-wz2/</guid><description>&lt;div class="featured-image">
-&lt;img src="https://jsd.cdn.zzko.cn/gh/geekswg/static@main/blog-img/cod19/wz2.jpeg" referrerpolicy="no-referrer">
-&lt;/div>wz2 在DMZ模式中做任务时经常找不到点位。 21号楼 21-room 马兹拉 垃圾箱 垃圾箱 垃圾箱 1扎克瓦水电站 扎克瓦水电站 2塔拉克村 塔拉克村 3沙里木小道 沙里木小道</description></item><item><title>Git常用命令</title><link>https://geekswg.github.io/git-usage/</link><pubDate>Mon, 17 Apr 2023 14:45:50 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/git-usage/</guid><description><![CDATA[<div class="featured-image">
-        <img src="/images/posts/featured-image-preview.jpg" referrerpolicy="no-referrer">
-      </div><p>Git 是一个分布式版本控制系统，用于跟踪文件和代码的更改。经常用来管理代码，方便查阅，版本控制，合作开发，代码审阅。<br>
-记录经常使用到git命令，以便查用.</p>]]></description></item><item><title>Loading Gif</title><link>https://geekswg.github.io/loading-gif/</link><pubDate>Wed, 07 Jun 2023 19:54:12 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/loading-gif/</guid><description><![CDATA[<div class="featured-image">
+</blockquote>]]></description></item><item><title>Loading Gif</title><link>https://geekswg.github.io/2023/loading-gif/</link><pubDate>Wed, 07 Jun 2023 19:54:12 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/2023/loading-gif/</guid><description><![CDATA[<div class="featured-image">
         <img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/loading/loading-6.gif" referrerpolicy="no-referrer">
       </div><p>loading.gif 透明加载动画</p>
 <blockquote>
 <p>大部分来源于网站 <a href="https://www.bing.com/images/search?q=loading&amp;qs=n&amp;form=QBILPG&amp;sp=-1&amp;lq=0&amp;pq=loading&amp;sc=10-7&amp;cvid=23A7D80EB520465F9CD6951D4825FF8F&amp;ghsh=0&amp;ghacc=0&amp;first=1"target="_blank" rel="external nofollow noopener noreferrer">Bing<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a> 和 <a href="https://icons8.com/preloaders/en/search/windows%2010"target="_blank" rel="external nofollow noopener noreferrer">icos8<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a> ,如有侵权，请联系删除</p>
-</blockquote>]]></description></item><item><title>timeline2</title><link>https://geekswg.github.io/timeline2/</link><pubDate>Wed, 31 May 2023 18:14:48 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/timeline2/</guid><description><![CDATA[<div class="featured-image">
+</blockquote>]]></description></item><item><title>timeline2</title><link>https://geekswg.github.io/2023/timeline2/</link><pubDate>Wed, 31 May 2023 18:14:48 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/2023/timeline2/</guid><description><![CDATA[<div class="featured-image">
         <img src="/images/posts/featured-image-preview.jpg" referrerpolicy="no-referrer">
       </div><p><div class="details admonition quote open">
     <div class="details-summary admonition-title">
@@ -146,7 +128,7 @@
       <div class="admonition-content">note abstract info tip success question warning failure danger bug example quote</div>
     </div>
   </div><br>
-这里使用MD语法编写你的文章</p>]]></description></item><item><title>Timeline</title><link>https://geekswg.github.io/timeline/</link><pubDate>Tue, 30 May 2023 18:14:48 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/timeline/</guid><description><![CDATA[<div class="featured-image">
+这里使用MD语法编写你的文章</p>]]></description></item><item><title>Timeline</title><link>https://geekswg.github.io/2023/timeline/</link><pubDate>Tue, 30 May 2023 18:14:48 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/2023/timeline/</guid><description><![CDATA[<div class="featured-image">
         <img src="/images/posts/featured-image-preview.jpg" referrerpolicy="no-referrer">
       </div><p><div class="details admonition quote open">
     <div class="details-summary admonition-title">
@@ -156,7 +138,7 @@
       <div class="admonition-content">note abstract info tip success question warning failure danger bug example quote</div>
     </div>
   </div><br>
-这里使用MD语法编写你的文章</p>]]></description></item><item><title>WPS-AI内测使用体验</title><link>https://geekswg.github.io/wps-ai-use/</link><pubDate>Mon, 29 May 2023 17:38:41 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/wps-ai-use/</guid><description><![CDATA[<div class="featured-image">
+这里使用MD语法编写你的文章</p>]]></description></item><item><title>WPS-AI内测使用体验</title><link>https://geekswg.github.io/2023/wps-ai-use/</link><pubDate>Mon, 29 May 2023 17:38:41 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/2023/wps-ai-use/</guid><description><![CDATA[<div class="featured-image">
         <img src="/230529180454-wps-ai.jpg" referrerpolicy="no-referrer">
       </div><div class="details admonition quote open">
     <div class="details-summary admonition-title">
@@ -170,7 +152,7 @@
 </blockquote>
 </div>
     </div>
-  </div>]]></description></item><item><title>Funny 404 Gif</title><link>https://geekswg.github.io/funny-404-gif/</link><pubDate>Sat, 27 May 2023 20:20:00 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/funny-404-gif/</guid><description><![CDATA[<div class="featured-image">
+  </div>]]></description></item><item><title>Funny 404 Gif</title><link>https://geekswg.github.io/2023/funny-404-gif/</link><pubDate>Sat, 27 May 2023 20:20:00 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/2023/funny-404-gif/</guid><description><![CDATA[<div class="featured-image">
         <img src="https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/404/404.gif" referrerpolicy="no-referrer">
       </div><div class="details admonition note open">
     <div class="details-summary admonition-title">
@@ -183,7 +165,7 @@
 </blockquote>
 </div>
     </div>
-  </div>]]></description></item><item><title>Website RIP 效果实现</title><link>https://geekswg.github.io/website-rip/</link><pubDate>Wed, 24 May 2023 20:42:20 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/website-rip/</guid><description><![CDATA[<div class="featured-image">
+  </div>]]></description></item><item><title>Website RIP 效果实现</title><link>https://geekswg.github.io/2023/website-rip/</link><pubDate>Wed, 24 May 2023 20:42:20 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/2023/website-rip/</guid><description><![CDATA[<div class="featured-image">
         <img src="/images/posts/featured-image-preview.jpg" referrerpolicy="no-referrer">
       </div><div class="details admonition note open">
     <div class="details-summary admonition-title">
@@ -192,7 +174,7 @@
     <div class="details-content">
       <div class="admonition-content">我们常常会在百度百科中看到有人去世时，关于ta的百度百科页会变成黑白色，而其他的无影响。这难道是又重新创建或者修改了整个网页的内容吗？那工作量和时间也来不及呀，其实不然，而是有一个属性，只需设置该属性就可以改变一整个网页的色调。</div>
     </div>
-  </div>]]></description></item><item><title>Build Cloud Disk - CloudReve</title><link>https://geekswg.github.io/build-cloud-disk/</link><pubDate>Sun, 21 May 2023 17:34:32 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/build-cloud-disk/</guid><description><![CDATA[<div class="featured-image">
+  </div>]]></description></item><item><title>Build Cloud Disk - CloudReve</title><link>https://geekswg.github.io/2023/build-cloud-disk/</link><pubDate>Sun, 21 May 2023 17:34:32 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/2023/build-cloud-disk/</guid><description><![CDATA[<div class="featured-image">
         <img src="/images/posts/featured-image-preview.jpg" referrerpolicy="no-referrer">
       </div><div class="details admonition note open">
     <div class="details-summary admonition-title">
@@ -202,7 +184,7 @@
       <div class="admonition-content">今天介绍一下非常好用的私有云网盘系统。<br>
 以 跨平|的方式组织你的文件。Cloudreve 可助你即刻构建出兼备自用或公用的网盘服务，通过多种存储策略的支持、虚拟文件系统等特性实现灵活的文件管理体验。</div>
     </div>
-  </div>]]></description></item><item><title>快速搭建Hexo-blog指南</title><link>https://geekswg.github.io/build-hexo-blog/</link><pubDate>Sun, 30 Apr 2023 15:13:41 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/build-hexo-blog/</guid><description><![CDATA[<div class="featured-image">
+  </div>]]></description></item><item><title>快速搭建Hexo-blog指南</title><link>https://geekswg.github.io/2023/build-hexo-blog/</link><pubDate>Sun, 30 Apr 2023 15:13:41 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/2023/build-hexo-blog/</guid><description><![CDATA[<div class="featured-image">
         <img src="/images/posts/featured-image-preview.jpg" referrerpolicy="no-referrer">
       </div><p>快速搭建hexo博客的步骤如下：</p>
 <ol>
@@ -212,10 +194,10 @@
 <li>初始化Hexo</li>
 <li>选择主题</li>
 <li>发布文章</li>
-</ol>]]></description></item><item><title>Git常用命令</title><link>https://geekswg.github.io/git-usage/</link><pubDate>Mon, 17 Apr 2023 14:45:50 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/git-usage/</guid><description><![CDATA[<div class="featured-image">
+</ol>]]></description></item><item><title>Git常用命令</title><link>https://geekswg.github.io/2023/git-usage/</link><pubDate>Mon, 17 Apr 2023 14:45:50 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/2023/git-usage/</guid><description><![CDATA[<div class="featured-image">
         <img src="/images/posts/featured-image-preview.jpg" referrerpolicy="no-referrer">
       </div><p>Git 是一个分布式版本控制系统，用于跟踪文件和代码的更改。经常用来管理代码，方便查阅，版本控制，合作开发，代码审阅。<br>
-记录经常使用到git命令，以便查用.</p>]]></description></item><item><title>我的第一个域名</title><link>https://geekswg.github.io/my-first-domain/</link><pubDate>Thu, 13 Apr 2023 17:05:47 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/my-first-domain/</guid><description><![CDATA[<div class="featured-image">
+记录经常使用到git命令，以便查用.</p>]]></description></item><item><title>我的第一个域名</title><link>https://geekswg.github.io/2023/my-first-domain/</link><pubDate>Thu, 13 Apr 2023 17:05:47 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/2023/my-first-domain/</guid><description><![CDATA[<div class="featured-image">
         <img src="/images/posts/featured-image-preview.jpg" referrerpolicy="no-referrer">
       </div><blockquote>
 <p>终于买了我的人生中第一个域名。 <a href="https://geekswg.top/"target="_blank" rel="external nofollow noopener noreferrer">geekswg.top<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a><br>
