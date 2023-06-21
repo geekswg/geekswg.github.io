@@ -1,4 +1,4 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>debian - 标签 - 毕少侠</title><link>https://geekswg.github.io/tags/debian/</link><description>debian - 标签 - 毕少侠</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>geekswg@qq.com (geekswg)</managingEditor><webMaster>geekswg@qq.com (geekswg)</webMaster><copyright>geekswg &amp; 毕少侠</copyright><lastBuildDate>Thu, 16 Mar 2023 20:06:36 +0800</lastBuildDate><atom:link href="https://geekswg.github.io/tags/debian/" rel="self" type="application/rss+xml"/><item><title>Debian Theme Whitesur</title><link>https://geekswg.github.io/2023/debian-theme-whitesur/</link><pubDate>Thu, 16 Mar 2023 20:06:36 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/2023/debian-theme-whitesur/</guid><description><![CDATA[<div class="featured-image">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>debian - 标签 - 毕少侠</title><link>https://geekswg.github.io/tags/debian/</link><description>debian - 标签 - 毕少侠</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>geekswg@qq.com (geekswg)</managingEditor><webMaster>geekswg@qq.com (geekswg)</webMaster><copyright>geekswg &amp; 毕少侠</copyright><lastBuildDate>Thu, 16 Mar 2023 20:06:36 +0800</lastBuildDate><atom:link href="https://geekswg.github.io/tags/debian/" rel="self" type="application/rss+xml"/><item><title>Debian Theme Whitesur</title><link>https://geekswg.github.io/posts/2023/debian-theme-whitesur/</link><pubDate>Thu, 16 Mar 2023 20:06:36 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/posts/2023/debian-theme-whitesur/</guid><description><![CDATA[<div class="featured-image">
         <img src="/230316181427-debian-theme-mac.png" referrerpolicy="no-referrer">
       </div><div class="details admonition quote open">
     <div class="details-summary admonition-title">
@@ -7,7 +7,7 @@
     <div class="details-content">
       <div class="admonition-content">通过安装主题，让你的linux看起来非常炫酷。</div>
     </div>
-  </div>]]></description></item><item><title>Debian11 Learn 相关命令</title><link>https://geekswg.github.io/2023/debian11-learn/</link><pubDate>Sun, 05 Mar 2023 18:27:38 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/2023/debian11-learn/</guid><description><![CDATA[<div class="featured-image">
+  </div>]]></description></item><item><title>Debian11 Learn 相关命令</title><link>https://geekswg.github.io/posts/2023/debian11-learn/</link><pubDate>Sun, 05 Mar 2023 18:27:38 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/posts/2023/debian11-learn/</guid><description><![CDATA[<div class="featured-image">
         <img src="/images/posts/featured-image-preview.jpg" referrerpolicy="no-referrer">
       </div><p><div class="details admonition quote">
     <div class="details-summary admonition-title">
@@ -17,7 +17,7 @@
       <div class="admonition-content">note abstract info tip success question warning failure danger bug example quote</div>
     </div>
   </div><br>
-刚刚入手debian11,记录使用中遇到的一些常用命令。</p>]]></description></item><item><title>Debian从稳定版切换到testing版</title><link>https://geekswg.github.io/2023/debian-testing/</link><pubDate>Sun, 05 Mar 2023 14:50:31 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/2023/debian-testing/</guid><description><![CDATA[<div class="featured-image">
+刚刚入手debian11,记录使用中遇到的一些常用命令。</p>]]></description></item><item><title>Debian从稳定版切换到testing版</title><link>https://geekswg.github.io/posts/2023/debian-testing/</link><pubDate>Sun, 05 Mar 2023 14:50:31 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/posts/2023/debian-testing/</guid><description><![CDATA[<div class="featured-image">
         <img src="/images/posts/featured-image-preview.jpg" referrerpolicy="no-referrer">
       </div><div class="details admonition tip open">
     <div class="details-summary admonition-title">
