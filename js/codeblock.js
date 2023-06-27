@@ -51,7 +51,7 @@ const CodeBlock = {
     },
     init : function(args){
         this.hello(args);
-        this.initCodeBlockOverflowY();
+        this.initCodeBlockOverflowY(512);// unit px
     }
 }
 
