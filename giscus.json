@@ -1,0 +1,17 @@
+{
+  "origins": [
+    "https://geekswg.js.cool"
+    "https://fixit.lruihao.cn",
+    "https://pre.fixit.lruihao.cn",
+    "https://hugofixit.vercel.app",
+    "https://fixit-x-cell.vercel.app"
+  ],
+  "originsRegex": [
+    "https://^.{1,20}$\\.geekswg\\.top",
+    "https://fixit-git-([A-z0-9]|-)*x-cell\\.vercel\\.app",
+    "https://fixit-git-([A-z0-9]|-)*x-cell\\.vercel\\.app",
+    "https://fixit-[A-z0-9]{9}-x-cell\\.vercel\\.app",
+    "http://localhost:[0-9]+"
+  ],
+  "defaultCommentOrder": "oldest"
+}
