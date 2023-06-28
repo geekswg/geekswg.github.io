@@ -7,7 +7,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 const CodeBlock = {
     maxHeight: 512, //px
-    initCodeBlockOverflowY:function(overflowHeight){
+    //当 overflow-x 值为 hidden、scroll 或者 auto，而本属性的值为 visible（默认值）时，本属性会被隐式的计算为 auto。
+    overflowY: 'auto',  // visible ,hidden
+    initCodeBlockOverflowY:function(overflowHeight,overflowY){
+        overflowY = overflowY || CodeBlock.overflowY;
         overflowHeight = overflowHeight || CodeBlock.maxHeight;
         eles = document.getElementsByClassName('highlight');
         eles = Array.from(eles);
@@ -21,26 +24,28 @@ const CodeBlock = {
                 let curEle = document.querySelector('#'+ele.id+'>.chroma.open>.table-wrapper');
                 //console.log(curEle);
                 curEle.style.height = overflowHeight + 'px';
-                curEle.style.overflow = 'auto';
+                curEle.style.overflowY = overflowY;
                 curEle.append();
                 
                 let showMoreDiv = document.createElement('div');
                 showMoreDiv.id = ele.id+'-more';
-                showMoreDiv.style.cssText = 'text-align: center;margin-top: -28px;cursor: pointer;';
-                showMoreDiv.innerHTML = '<i class="fa-solid fa-angles-down fa-beat-fade"></i>';
+                
+                showMoreDiv.style.cssText = 'margin-top: -24px;position:sticky;z-index:99;background-image: linear-gradient(to top, #9c9c9c, transparent);text-align: center;cursor: pointer;';
+                showMoreDiv.innerHTML = '<i class="fa-solid fa-angles-down fa-beat-fade" style="font-size:20px;"></i>';
                 ele.appendChild(showMoreDiv);
                 showMoreDiv.addEventListener('click', function(){
-                    if(showMoreDiv.innerHTML.indexOf('fa-angles-down')>0){
+                    if(showMoreDiv.innerHTML.indexOf('fa-angles-down') >= 0 ){
                         curEle.style.height = origalHeight + 'px';
-                        showMoreDiv.innerHTML = '<i class="fa-solid fa-angles-up fa-beat-fade"></i>';
-                        showMoreDiv.style.cssText = 'text-align: center;margin-top: -62px;cursor: pointer;';
+                        showMoreDiv.innerHTML = '<i class="fa-solid fa-angles-up fa-beat-fade" style="font-size:20px;"></i>';
+                        showMoreDiv.style.cssText = 'margin-top: -56px;position:sticky;z-index:99;background-image: linear-gradient(to top, #9c9c9c, transparent);text-align: center;cursor: pointer;';
                         
                     }else{
                         curEle.style.height = overflowHeight + 'px';
-                        showMoreDiv.innerHTML = '<i class="fa-solid fa-angles-down fa-beat-fade"></i>';
-                        showMoreDiv.style.cssText = 'text-align: center;margin-top: -28px;cursor: pointer;';
+                        showMoreDiv.innerHTML = '<i class="fa-solid fa-angles-down fa-beat-fade" style="font-size:20px;"></i>';
+                        showMoreDiv.style.cssText = 'margin-top: -24px;position:sticky;z-index:99;background-image: linear-gradient(to top, #9c9c9c, transparent);text-align: center;cursor: pointer;';
+                        window.scrollTo({top:ele.offsetTop, behavior: 'smooth'});
                     }
-                    window.scrollTo({top:ele.offsetTop, behavior: 'smooth'});
+                    
                 });
             }
         });
@@ -51,7 +56,7 @@ const CodeBlock = {
     },
     init : function(args){
         this.hello(args);
-        this.initCodeBlockOverflowY(512);// unit px
+        this.initCodeBlockOverflowY(512,'auto');// unit px
     }
 }
 
