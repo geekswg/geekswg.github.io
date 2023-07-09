@@ -62,3 +62,4 @@ https://geekswg.github.io/about/
 https://geekswg.github.io/posts/2018/links/
 https://geekswg.github.io/life/next10-1/
 https://geekswg.github.io/sites/all-sites/
+https://geekswg.github.io/offline/
