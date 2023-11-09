@@ -1,15 +1,11 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>notes - 分类 - 毕少侠</title><link>https://geekswg.github.io/categories/notes/</link><description>notes - 分类 - 毕少侠</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>geekswg@qq.com (geekswg)</managingEditor><webMaster>geekswg@qq.com (geekswg)</webMaster><copyright>geekswg &amp; 毕少侠</copyright><lastBuildDate>Wed, 24 May 2023 20:42:20 +0800</lastBuildDate><atom:link href="https://geekswg.github.io/categories/notes/" rel="self" type="application/rss+xml"/><item><title>Website RIP 效果实现</title><link>https://geekswg.github.io/posts/2023/website-rip/</link><pubDate>Wed, 24 May 2023 20:42:20 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/posts/2023/website-rip/</guid><description><![CDATA[<div class="featured-image">
-        <img src="/images/posts/featured-image-preview.jpg" referrerpolicy="no-referrer">
-      </div><div class="details admonition note open">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>notes - 分类 - 毕少侠</title><link>https://geekswg.github.io/categories/notes/</link><description>notes - 分类 - 毕少侠</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>geekswg@qq.com (geekswg)</managingEditor><webMaster>geekswg@qq.com (geekswg)</webMaster><copyright>geekswg &amp; 毕少侠</copyright><lastBuildDate>Wed, 24 May 2023 20:42:20 +0800</lastBuildDate><atom:link href="https://geekswg.github.io/categories/notes/" rel="self" type="application/rss+xml"/><item><title>Website RIP 效果实现</title><link>https://geekswg.github.io/posts/2023/website-rip/</link><pubDate>Wed, 24 May 2023 20:42:20 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/posts/2023/website-rip/</guid><description><![CDATA[<div class="featured-image"><img loading="eager" src="/images/posts/featured-image-preview.jpg" title="摘要" alt="Website RIP 效果实现" referrerpolicy="no-referrer"/></div><div class="details admonition note open">
     <div class="details-summary admonition-title">
       <i class="icon fa-solid fa-pencil-alt fa-fw" aria-hidden="true"></i>注意<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i>
     </div>
     <div class="details-content">
       <div class="admonition-content">我们常常会在百度百科中看到有人去世时，关于ta的百度百科页会变成黑白色，而其他的无影响。这难道是又重新创建或者修改了整个网页的内容吗？那工作量和时间也来不及呀，其实不然，而是有一个属性，只需设置该属性就可以改变一整个网页的色调。</div>
     </div>
-  </div>]]></description></item><item><title>Build Cloud Disk - CloudReve</title><link>https://geekswg.github.io/posts/2023/build-cloud-disk/</link><pubDate>Sun, 21 May 2023 17:34:32 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/posts/2023/build-cloud-disk/</guid><description><![CDATA[<div class="featured-image">
-        <img src="/images/posts/featured-image-preview.jpg" referrerpolicy="no-referrer">
-      </div><div class="details admonition note open">
+  </div>]]></description></item><item><title>Build Cloud Disk - CloudReve</title><link>https://geekswg.github.io/posts/2023/build-cloud-disk/</link><pubDate>Sun, 21 May 2023 17:34:32 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/posts/2023/build-cloud-disk/</guid><description><![CDATA[<div class="featured-image"><img loading="eager" src="/images/posts/featured-image-preview.jpg" title="Build Cloud Disk - CloudReve" alt="Build Cloud Disk - CloudReve" referrerpolicy="no-referrer"/></div><div class="details admonition note open">
     <div class="details-summary admonition-title">
       <i class="icon fa-solid fa-pencil-alt fa-fw" aria-hidden="true"></i>注意<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i>
     </div>
@@ -17,9 +13,7 @@
       <div class="admonition-content">今天介绍一下非常好用的私有云网盘系统。<br>
 以 跨平|的方式组织你的文件。Cloudreve 可助你即刻构建出兼备自用或公用的网盘服务，通过多种存储策略的支持、虚拟文件系统等特性实现灵活的文件管理体验。</div>
     </div>
-  </div>]]></description></item><item><title>快速搭建Hexo-blog指南</title><link>https://geekswg.github.io/posts/2023/build-hexo-blog/</link><pubDate>Sun, 30 Apr 2023 15:13:41 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/posts/2023/build-hexo-blog/</guid><description><![CDATA[<div class="featured-image">
-        <img src="/images/posts/featured-image-preview.jpg" referrerpolicy="no-referrer">
-      </div><p>快速搭建hexo博客的步骤如下：</p>
+  </div>]]></description></item><item><title>快速搭建Hexo-blog指南</title><link>https://geekswg.github.io/posts/2023/build-hexo-blog/</link><pubDate>Sun, 30 Apr 2023 15:13:41 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/posts/2023/build-hexo-blog/</guid><description><![CDATA[<div class="featured-image"><img loading="eager" src="/images/posts/featured-image-preview.jpg" title="快速搭建Hexo-blog指南" alt="快速搭建Hexo-blog指南" referrerpolicy="no-referrer"/></div><p>快速搭建hexo博客的步骤如下：</p>
 <ol>
 <li>安装Nodejs <a href="https://nodejs.org/zh-cn"target="_blank" rel="external nofollow noopener noreferrer">https://nodejs.org/zh-cn<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a></li>
 <li>安装Git, <a href="https://git-scm.com/"target="_blank" rel="external nofollow noopener noreferrer">https://git-scm.com/<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a></li>
@@ -27,17 +21,11 @@
 <li>初始化Hexo</li>
 <li>选择主题</li>
 <li>发布文章</li>
-</ol>]]></description></item><item><title>Git常用命令</title><link>https://geekswg.github.io/posts/2023/git-usage/</link><pubDate>Mon, 17 Apr 2023 14:45:50 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/posts/2023/git-usage/</guid><description><![CDATA[<div class="featured-image">
-        <img src="/images/posts/featured-image-preview.jpg" referrerpolicy="no-referrer">
-      </div><p>Git 是一个分布式版本控制系统，用于跟踪文件和代码的更改。经常用来管理代码，方便查阅，版本控制，合作开发，代码审阅。<br>
-记录经常使用到git命令，以便查用.</p>]]></description></item><item><title>我的第一个域名</title><link>https://geekswg.github.io/posts/2023/my-first-domain/</link><pubDate>Thu, 13 Apr 2023 17:05:47 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/posts/2023/my-first-domain/</guid><description><![CDATA[<div class="featured-image">
-        <img src="/images/posts/featured-image-preview.jpg" referrerpolicy="no-referrer">
-      </div><blockquote>
+</ol>]]></description></item><item><title>Git常用命令</title><link>https://geekswg.github.io/posts/2023/git-usage/</link><pubDate>Mon, 17 Apr 2023 14:45:50 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/posts/2023/git-usage/</guid><description><![CDATA[<div class="featured-image"><img loading="eager" src="/images/posts/featured-image-preview.jpg" title="记录经常使用到git命令，以便查用" alt="Git常用命令" referrerpolicy="no-referrer"/></div><p>Git 是一个分布式版本控制系统，用于跟踪文件和代码的更改。经常用来管理代码，方便查阅，版本控制，合作开发，代码审阅。<br>
+记录经常使用到git命令，以便查用.</p>]]></description></item><item><title>我的第一个域名</title><link>https://geekswg.github.io/posts/2023/my-first-domain/</link><pubDate>Thu, 13 Apr 2023 17:05:47 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/posts/2023/my-first-domain/</guid><description><![CDATA[<div class="featured-image"><img loading="eager" src="/images/posts/featured-image-preview.jpg" title="摘要" alt="我的第一个域名" referrerpolicy="no-referrer"/></div><blockquote>
 <p>终于买了我的人生中第一个域名。 <a href="https://geekswg.top/"target="_blank" rel="external nofollow noopener noreferrer">geekswg.top<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a><br>
 用于个人博客使用，花费 $1.88美元，支付宝支付，折合人民币 ￥13.01</p>
-</blockquote>]]></description></item><item><title>notes1</title><link>https://geekswg.github.io/posts/2023/notes1/</link><pubDate>Tue, 28 Feb 2023 01:51:53 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/posts/2023/notes1/</guid><description><![CDATA[<div class="featured-image">
-        <img src="/images/posts/featured-image.jpg" referrerpolicy="no-referrer">
-      </div><p><div class="details admonition quote open">
+</blockquote>]]></description></item><item><title>notes1</title><link>https://geekswg.github.io/posts/2023/notes1/</link><pubDate>Tue, 28 Feb 2023 01:51:53 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/posts/2023/notes1/</guid><description><![CDATA[<div class="featured-image"><img loading="eager" src="/images/posts/featured-image-preview.jpg" title="文章摘要" alt="notes1" referrerpolicy="no-referrer"/></div><p><div class="details admonition quote open">
     <div class="details-summary admonition-title">
       <i class="icon fa-solid fa-quote-right fa-fw" aria-hidden="true"></i>quote<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i>
     </div>
@@ -45,9 +33,7 @@
       <div class="admonition-content">note abstract info tip success question warning failure danger bug example quote</div>
     </div>
   </div><br>
-这里使用MD语法编写你的文章</p>]]></description></item><item><title>notes2</title><link>https://geekswg.github.io/posts/2023/notes2/</link><pubDate>Tue, 28 Feb 2023 01:51:53 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/posts/2023/notes2/</guid><description><![CDATA[<div class="featured-image">
-        <img src="/images/posts/featured-image.jpg" referrerpolicy="no-referrer">
-      </div><p><div class="details admonition quote open">
+这里使用MD语法编写你的文章</p>]]></description></item><item><title>notes2</title><link>https://geekswg.github.io/posts/2023/notes2/</link><pubDate>Tue, 28 Feb 2023 01:51:53 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/posts/2023/notes2/</guid><description><![CDATA[<div class="featured-image"><img loading="eager" src="/images/posts/featured-image-preview.jpg" title="文章摘要" alt="notes2" referrerpolicy="no-referrer"/></div><p><div class="details admonition quote open">
     <div class="details-summary admonition-title">
       <i class="icon fa-solid fa-quote-right fa-fw" aria-hidden="true"></i>quote<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i>
     </div>
