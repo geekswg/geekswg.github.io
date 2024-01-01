@@ -4,6 +4,6 @@
 
 ---
 
-> 作者: [geekswg](https://geekswg.github.io)  
+> 作者: [geekswg](https://github.com/geekswg)  
 > URL: https://geekswg.github.io/posts/2023/demo2/  
 

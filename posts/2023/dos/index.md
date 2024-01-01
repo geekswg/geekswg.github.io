@@ -1,12 +1,12 @@
 # DOS命令总结
 
 总结一些用到dos命令，方便查用
-<!--more-->
+&lt;!--more--&gt;
 ## 快捷打开控制面板
 
-{{< admonition >}}
+{{&lt; admonition &gt;}}
 我们在安装开发工具，和一些SDK，经常要 **配置环境变量** ，新建一个bat文件，使用DOS命令快速打开，windows环境变量配置页面.
-{{< /admonition >}}
+{{&lt; /admonition &gt;}}
 
 ```bat
 @echo off
@@ -16,7 +16,7 @@ exit
 
 ### 下载
 
-{{< link href="openENV.bat" content="下载批处理文件-快速打开环境变量" download="打开环境变量.bat" card=true >}}
+{{&lt; link href=&#34;openENV.bat&#34; content=&#34;下载批处理文件-快速打开环境变量&#34; download=&#34;打开环境变量.bat&#34; card=true &gt;}}
 
 ## DOS命令Demo
 
@@ -34,10 +34,10 @@ set /p inputStr=请输入需要下载的抖音主页的网址（q）:
 set excuteStr=%excuteStr%%inputStr%%paramStr%
 echo 正在执行 %excuteStr%
 rem 将echo内容保存到文件
-@echo %excuteStr% >> executeLog.txt
+@echo %excuteStr% &gt;&gt; executeLog.txt
 rem start cmd 新开一个窗口执行命令异步操作
 rem cmd 当前窗口执行命令 同步阻塞操作
-if "%inputStr%" == "%exitStr%" goto end_loop
+if &#34;%inputStr%&#34; == &#34;%exitStr%&#34; goto end_loop
 pause
 %excuteStr%
 goto loop
@@ -49,13 +49,13 @@ pause
 
 ### 批处理文件下载Demo
 
-{{< link href="dydownload.zip" content="下载抖音无水印视频" download="下载抖音无水印视频.zip" card=true >}}
+{{&lt; link href=&#34;dydownload.zip&#34; content=&#34;下载抖音无水印视频&#34; download=&#34;下载抖音无水印视频.zip&#34; card=true &gt;}}
 
-<!--more-->
+&lt;!--more--&gt;
 
 
 ---
 
-> 作者: [geekswg](https://geekswg.github.io)  
+> 作者: [geekswg](https://github.com/geekswg)  
 > URL: https://geekswg.github.io/posts/2023/dos/  
 

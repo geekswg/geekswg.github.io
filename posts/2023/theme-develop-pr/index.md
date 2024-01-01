@@ -1,11 +1,11 @@
 # Fixit-theme修改和PR过程
 
-{{< admonition >}}
+{{&lt; admonition &gt;}}
 记录一次修改fixit主题代码，并pr的过程
 note abstract info tip success question warning failure danger bug example quote
-{{< /admonition >}}
+{{&lt; /admonition &gt;}}
 
-<!--more-->
+&lt;!--more--&gt;
 
 ## fork项目
 
@@ -22,7 +22,7 @@ fork源项目到自己github仓库。
 ## 编译运行 
 
 在主题下根目录运行 `npm run babel`
-> 前提是要安装 node.js 环境
+&gt; 前提是要安装 node.js 环境
 
 ## 测试
 
@@ -38,6 +38,6 @@ fork源项目到自己github仓库。
 
 ---
 
-> 作者: [geekswg](https://geekswg.github.io)  
+> 作者: [geekswg](https://github.com/geekswg)  
 > URL: https://geekswg.github.io/posts/2023/theme-develop-pr/  
 

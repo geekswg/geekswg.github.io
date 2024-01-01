@@ -1,13 +1,13 @@
 # notes2
 
-{{< admonition quote "quote" true >}}
+{{&lt; admonition quote &#34;quote&#34; true &gt;}}
 note abstract info tip success question warning failure danger bug example quote
-{{< /admonition >}}
+{{&lt; /admonition &gt;}}
 这里使用MD语法编写你的文章
-<!--more-->
+&lt;!--more--&gt;
 
 ---
 
-> 作者: [geekswg](https://geekswg.github.io)  
+> 作者: [geekswg](https://github.com/geekswg)  
 > URL: https://geekswg.github.io/posts/2023/notes2/  
 

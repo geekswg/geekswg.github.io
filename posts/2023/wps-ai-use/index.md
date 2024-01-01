@@ -1,12 +1,12 @@
 # WPS-AI内测使用体验
 
-{{< admonition quote "quote" >}}
+{{&lt; admonition quote &#34;quote&#34; &gt;}}
 [WPS-AI官网](https://ai.wps.cn/)
-> 如何使用WPS AI帮助我们高效的写作
+&gt; 如何使用WPS AI帮助我们高效的写作
 在当今的数字化时代，我们的生活和工作节奏也在不断加快。为了更高效地处理工作，我们需要掌握一些工具和技巧。WPS AI，作为金山办公的人工智能助手，能够帮助我们更高效地进行写作。本文将详细介绍如何使用WPS AI帮助我们高效的写作。
-{{< /admonition >}}
+{{&lt; /admonition &gt;}}
 
-<!--more-->
+&lt;!--more--&gt;
 
 ## WPS AI介绍
 
@@ -47,11 +47,11 @@ WPS AI可以根据文章的主题和内容，对文章进行智能排版。它�
 通过以上展望，我们可以预见，随着人工智能技术的不断发展，WPS AI将为我们的工作和生活带来更多的便利。我们期待着WPS AI在未来的发展和应用，以帮助我们更好地应对数字化时代的挑战。
 很抱歉，作为一个人工智能助手，我暂时无法回应这条指令，您可以尝试重新输入。
 
-> 总结一下，WPS-AI使用起来，真的不错写作速度目前很快，写水文很给力，目前内测没有限制，以后估计会收费吧。
+&gt; 总结一下，WPS-AI使用起来，真的不错写作速度目前很快，写水文很给力，目前内测没有限制，以后估计会收费吧。
 
 
 ---
 
-> 作者: [geekswg](https://geekswg.github.io)  
+> 作者: [geekswg](https://github.com/geekswg)  
 > URL: https://geekswg.github.io/posts/2023/wps-ai-use/  
 

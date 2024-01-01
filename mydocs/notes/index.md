@@ -1,15 +1,15 @@
 # Fixit-快速开始
 
-{{< admonition >}}
+{{&lt; admonition &gt;}}
 快速上手Hugo-blog指引。
 记录常用命令，方便查阅。
-{{< /admonition >}}
-<!--more-->
-> 更多详细内容请参考官方文档：https://fixit.lruihao.cn/zh-cn/documentation/getting-started/
+{{&lt; /admonition &gt;}}
+&lt;!--more--&gt;
+&gt; 更多详细内容请参考官方文档：https://fixit.lruihao.cn/zh-cn/documentation/getting-started/
 
 ## Hugo快速开始
 
-> 快速开始相关命令，前置条件，Hugo环境， 基于 [hugo-extended](https://github.com/gohugoio/hugo/releases/tag/v0.111.3)
+&gt; 快速开始相关命令，前置条件，Hugo环境， 基于 [hugo-extended](https://github.com/gohugoio/hugo/releases/tag/v0.111.3)
 本文基于windows11，dos环境下命令，不过hugo命令，和git命令都是通用没有区别。
 
 ```bash
@@ -42,14 +42,14 @@ hugo serve -e production -D
 
 ## git相关命令
 
-> git clone 自动下载子模块
+&gt; git clone 自动下载子模块
 
 ```bash
 //在执行 git clone 时加上 --recursive 参数
 git clone --recursive https://github.com/example/example.git
 ```
 
-> 如过忘记下载子模块可以执行下面的语句更新
+&gt; 如过忘记下载子模块可以执行下面的语句更新
 
 ```bash
 git submodule update --init
@@ -58,6 +58,6 @@ git submodule update --init
 
 ---
 
-> 作者: [geekswg](https://geekswg.github.io)  
+> 作者: [geekswg](https://github.com/geekswg)  
 > URL: https://geekswg.github.io/mydocs/notes/  
 

@@ -1,7 +1,7 @@
 # 毕少侠所有站点
 
 
-<!--more-->
+&lt;!--more--&gt;
 ## Blog
 
 [主页](https://home.geekswg.top)
@@ -41,6 +41,6 @@
 
 ---
 
-> 作者: [geekswg](https://geekswg.github.io)  
+> 作者: [geekswg](https://github.com/geekswg)  
 > URL: https://geekswg.github.io/all-sites/idnex/  
 

@@ -1,10 +1,10 @@
 # Debian11 Learn 相关命令
 
-{{< admonition quote "quote" false >}}
+{{&lt; admonition quote &#34;quote&#34; false &gt;}}
 note abstract info tip success question warning failure danger bug example quote
-{{< /admonition >}}
+{{&lt; /admonition &gt;}}
 刚刚入手debian11,记录使用中遇到的一些常用命令。
-<!--more-->
+&lt;!--more--&gt;
 
 ## 配置中文环境
 
@@ -25,7 +25,7 @@ apt-get install scim-pinyin
 ```
 
 ## 安装VScode
->Visual Studio Code是由微软Microsoft开发，功能强大的开源代码编辑器。它具有内置的调试支持。
+&gt;Visual Studio Code是由微软Microsoft开发，功能强大的开源代码编辑器。它具有内置的调试支持。
 嵌入式Git控件，语法高亮显示，代码自动补全，集成终端，代码重构和代码片段。
 本教程介绍如何在Debian 11安装vscode编辑器。在继续本教程之前，我们假设你当前登录系统的用户是具有sudo权限的用户。
 要在Debian 11安装vscode，请完成这些步骤。首先apt命令更新软件包索引并安装导入微软GPG密钥的依赖软件。
@@ -43,13 +43,13 @@ sudo apt install software-properties-common apt-transport-https curl
 curl -sSL https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
 
 # 将Visual Studio代码存储库添加到你的系统：
-sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
+sudo add-apt-repository &#34;deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main&#34;
 
 # 03、添加存储库后，安装最新版本的Visual Studio代码：
 sudo apt update
 sudo apt install code
 
-echo "instsall is finish"
+echo &#34;instsall is finish&#34;
 
 # 完
 ```
@@ -70,6 +70,6 @@ hugo version
 
 ---
 
-> 作者: [geekswg](https://geekswg.github.io)  
+> 作者: [geekswg](https://github.com/geekswg)  
 > URL: https://geekswg.github.io/posts/2023/debian11-learn/  
 

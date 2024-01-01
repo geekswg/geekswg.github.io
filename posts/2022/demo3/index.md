@@ -1,7 +1,7 @@
 # 测试评论
 
 
-<!--more-->
+&lt;!--more--&gt;
 
 ## 评论
 
@@ -13,6 +13,6 @@
 
 ---
 
-> 作者: [geekswg](https://geekswg.github.io)  
+> 作者: [geekswg](https://github.com/geekswg)  
 > URL: https://geekswg.github.io/posts/2022/demo3/  
 

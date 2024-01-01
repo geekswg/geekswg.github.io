@@ -1,25 +1,25 @@
 # accordion-image 相册
 
-<!--more-->
-<!DOCTYPE html>
-<html lang="zh">
+&lt;!--more--&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&#34;zh&#34;&gt;
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>html -title</title>
-  <style>
+&lt;head&gt;
+  &lt;meta charset=&#34;UTF-8&#34;&gt;
+  &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.0&#34;&gt;
+  &lt;title&gt;html -title&lt;/title&gt;
+  &lt;style&gt;
     
-  </style>
-</head>
-<body>
-  <h2>accordion-image 相册</h2>
-  <iframe allowtransparency="true" frameborder="0" width="100%" height="620px" scrolling="no" src="/funs/album/css3-fullscreen-accordion-image/index.html"></iframe>
-</body>
-</html>
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h2&gt;accordion-image 相册&lt;/h2&gt;
+  &lt;iframe allowtransparency=&#34;true&#34; frameborder=&#34;0&#34; width=&#34;100%&#34; height=&#34;620px&#34; scrolling=&#34;no&#34; src=&#34;/funs/album/css3-fullscreen-accordion-image/index.html&#34;&gt;&lt;/iframe&gt;
+&lt;/body&gt;
+&lt;/html&gt;
 
 ---
 
-> 作者: [geekswg](https://geekswg.github.io)  
+> 作者: [geekswg](https://github.com/geekswg)  
 > URL: https://geekswg.github.io/funs/pages/album-accordion-image/  
 

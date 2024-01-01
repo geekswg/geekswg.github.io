@@ -1,22 +1,22 @@
 # Fixit-主题美化记录
 
 
-{{< admonition quote "说明" true >}}
+{{&lt; admonition quote &#34;说明&#34; true &gt;}}
 记录自己博客主题的修改和美化记录
-{{< /admonition >}}
-> 本文阅读前，基于你已经了解hugo，并且使用Fixit主题成功搭建成功后，如还不了解相关内容请访问👉 [FixIt 主题文档](https://fixit.lruihao.cn/zh-cn/) 了解。
-> <small>*关于 [FixIt 主题](https://github.com/hugo-fixit/FixIt) 的问题，请移步 [FixIt 官网](https://fixit.lruihao.cn) 相关文章哦～*</small>
-<!--more-->
+{{&lt; /admonition &gt;}}
+&gt; 本文阅读前，基于你已经了解hugo，并且使用Fixit主题成功搭建成功后，如还不了解相关内容请访问👉 [FixIt 主题文档](https://fixit.lruihao.cn/zh-cn/) 了解。
+&gt; &lt;small&gt;*关于 [FixIt 主题](https://github.com/hugo-fixit/FixIt) 的问题，请移步 [FixIt 官网](https://fixit.lruihao.cn) 相关文章哦～*&lt;/small&gt;
+&lt;!--more--&gt;
 
 ## 首页-home
 
     首页个人头像添加 snake 动画特效 背景
-> 参考 [动态贪吃蛇特效Github地址](https://github.com/Platane/snk)
+&gt; 参考 [动态贪吃蛇特效Github地址](https://github.com/Platane/snk)
 
 
 ## 自定义css
 
-> 文件位置 /assets\css/_custom.scss
+&gt; 文件位置 /assets\css/_custom.scss
 
 ### div滚动条样式
 ```css
@@ -39,74 +39,74 @@ div::-webkit-scrollbar {  /* 仅对webkit内核浏览器生效如 chrome edge */
 
 ## 自定义js
 
-> 文件位置 assets/js/custom.js [我的自定义custom.js](https://github.com/geekswg/geekswg.github.io/blob/main/js/custom.min.js)
+&gt; 文件位置 assets/js/custom.js [我的自定义custom.js](https://github.com/geekswg/geekswg.github.io/blob/main/js/custom.min.js)
 
 ### console打印样式
 
-> console. 花样打印信息，让你的控制台更加高端大气上档次。
+&gt; console. 花样打印信息，让你的控制台更加高端大气上档次。
 
 ```js
-this.consoleInfo = () => {
+this.consoleInfo = () =&gt; {
       var myConsole = {
         log: function (s, css) {
-            css = (css == undefined) ? "color:#fff7d3;background-color:#ff4f49;font-size:12px;" : css;
-            console.log("%c%s", css, s);
+            css = (css == undefined) ? &#34;color:#fff7d3;background-color:#ff4f49;font-size:12px;&#34; : css;
+            console.log(&#34;%c%s&#34;, css, s);
         },
         green: function (s, css) {
-            css = (css == undefined) ? "color:#fff7d3;background-color:#33a600;font-size:12px;" : css;
-            console.log("%c%s", css, s);
+            css = (css == undefined) ? &#34;color:#fff7d3;background-color:#33a600;font-size:12px;&#34; : css;
+            console.log(&#34;%c%s&#34;, css, s);
         },
         blue: function (s, css) {
-            css = (css == undefined) ? "color:#fff7d3;background-color:#00768f;font-size:12px;" : css;
-            console.log("%c%s", css, s);
+            css = (css == undefined) ? &#34;color:#fff7d3;background-color:#00768f;font-size:12px;&#34; : css;
+            console.log(&#34;%c%s&#34;, css, s);
         },
         violet: function (s, css) {
-            css = (css == undefined) ? "color:#fff7d3;background-color:#79008f;font-size:12px;padding:10px;" : css;
-            console.log("%c%s", css, s);
+            css = (css == undefined) ? &#34;color:#fff7d3;background-color:#79008f;font-size:12px;padding:10px;&#34; : css;
+            console.log(&#34;%c%s&#34;, css, s);
         },
         img: function(imgUrl,width,height){
-          width = (width == undefined) ? '100px':width;
-          height = (height == undefined) ? '100px':height;
-          console.log("%c  ", 
-          "background-image:url("+imgUrl+");"+
-          "line-height:"+height+";font-size:"+width+";background-size: contain;");
+          width = (width == undefined) ? &#39;100px&#39;:width;
+          height = (height == undefined) ? &#39;100px&#39;:height;
+          console.log(&#34;%c  &#34;, 
+          &#34;background-image:url(&#34;&#43;imgUrl&#43;&#34;);&#34;&#43;
+          &#34;line-height:&#34;&#43;height&#43;&#34;;font-size:&#34;&#43;width&#43;&#34;;background-size: contain;&#34;);
         }
       }
       myConsole.violet(
-        " Talk is cheap, Show me the code. \n"+
-        "                       --Linux 的创始人 Linus Torvalds "
+        &#34; Talk is cheap, Show me the code. \n&#34;&#43;
+        &#34;                       --Linux 的创始人 Linus Torvalds &#34;
       );
       console.log(
-        '%c 毕少侠 | https://geekswg.github.io %c e-mail: mailto://geekswg@qq.com %c',
-        'color: #FF0000; background: #4bffba; padding:5px 0; border-radius: 5px 5px 5px 5px;',
-        'background: #fadfa3; padding:5px 0; border-radius: 5px 5px 5px 5px;',
-        ''
+        &#39;%c 毕少侠 | https://geekswg.github.io %c e-mail: mailto://geekswg@qq.com %c&#39;,
+        &#39;color: #FF0000; background: #4bffba; padding:5px 0; border-radius: 5px 5px 5px 5px;&#39;,
+        &#39;background: #fadfa3; padding:5px 0; border-radius: 5px 5px 5px 5px;&#39;,
+        &#39;&#39;
       );
       myConsole.blue(
-      '____________________________________________\n'+
-      '                      /                     \n'+
-      '----__----__----__---/-__---__-----------__-\n'+
-      '  /   ) /___) /___) /(     (_ `| /| /  /   )\n'+
-      '_(___/_(___ _(___ _/___\\__(__)_|/_|/__(___/_\n'+
-      '    /                                    /  \n'+
-      '(_ /                                 (_ /   \n'+
-      '————————————————————————————————————————————'
+      &#39;____________________________________________\n&#39;&#43;
+      &#39;                      /                     \n&#39;&#43;
+      &#39;----__----__----__---/-__---__-----------__-\n&#39;&#43;
+      &#39;  /   ) /___) /___) /(     (_ `| /| /  /   )\n&#39;&#43;
+      &#39;_(___/_(___ _(___ _/___\\__(__)_|/_|/__(___/_\n&#39;&#43;
+      &#39;    /                                    /  \n&#39;&#43;
+      &#39;(_ /                                 (_ /   \n&#39;&#43;
+      &#39;————————————————————————————————————————————&#39;
       );
-      myConsole.img('http://geekswg.js.cool/images/posts/featured-image-preview.jpg','264px','100px');
+      myConsole.img(&#39;http://geekswg.js.cool/images/posts/featured-image-preview.jpg&#39;,&#39;264px&#39;,&#39;100px&#39;);
       return this;
     };
 ```
 
 在线工具：
-> 在线生成ascii字符画的网站
+&gt; 在线生成ascii字符画的网站
 1.  http://patorjk.com/software/taag
 2.  https://tool.lu/asciipainting
 
-> 图片生成字符画：
+&gt; 图片生成字符画：
 1. http://life.chacuo.net/convertphoto2char
 2. https://www.degraeve.com/img2txt.php
 
-> 图片生成字符画：
+&gt; 图片生成字符画：
 1. 
 
 参考：
@@ -114,14 +114,14 @@ Console相关文档 https://developer.mozilla.org/zh-CN/docs/Web/API/Console
 
 ### 添加鼠标点击特效
 
-> 在自定义js中添加自己想要的鼠标点击特效的实现
+&gt; 在自定义js中添加自己想要的鼠标点击特效的实现
 
 :point_down:
 
 ```html
 // =====鼠标特效
 function clickEffect() {
-  console.log('初始化鼠标特效-clickEffect!');
+  console.log(&#39;初始化鼠标特效-clickEffect!&#39;);
   let balls = [];
   let longPressed = false;
   let longPress;
@@ -131,50 +131,50 @@ function clickEffect() {
   let origin;
   let normal;
   let ctx;
-  const colours = ["#F73859", "#14FFEC", "#00E0FF", "#FF99FE", "#FAF15D"];
-  const canvas = document.createElement("canvas");
+  const colours = [&#34;#F73859&#34;, &#34;#14FFEC&#34;, &#34;#00E0FF&#34;, &#34;#FF99FE&#34;, &#34;#FAF15D&#34;];
+  const canvas = document.createElement(&#34;canvas&#34;);
   document.body.appendChild(canvas);
-  canvas.setAttribute("style", "width: 100%; height: 100%; top: 0; left: 0; z-index: 99999; position: fixed; pointer-events: none;");
-  const pointer = document.createElement("span");
-  pointer.classList.add("pointer");
+  canvas.setAttribute(&#34;style&#34;, &#34;width: 100%; height: 100%; top: 0; left: 0; z-index: 99999; position: fixed; pointer-events: none;&#34;);
+  const pointer = document.createElement(&#34;span&#34;);
+  pointer.classList.add(&#34;pointer&#34;);
   document.body.appendChild(pointer);
-  if (canvas.getContext && window.addEventListener) {
-      ctx = canvas.getContext("2d");
+  if (canvas.getContext &amp;&amp; window.addEventListener) {
+      ctx = canvas.getContext(&#34;2d&#34;);
       updateSize();
-      window.addEventListener('resize', updateSize, false);
+      window.addEventListener(&#39;resize&#39;, updateSize, false);
       loop();
-      window.addEventListener("mousedown", function (e) {
+      window.addEventListener(&#34;mousedown&#34;, function (e) {
           pushBalls(randBetween(10, 20), e.clientX, e.clientY);
-          document.body.classList.add("is-pressed");
+          document.body.classList.add(&#34;is-pressed&#34;);
           longPress = setTimeout(function () {
-              document.body.classList.add("is-longpress");
+              document.body.classList.add(&#34;is-longpress&#34;);
               longPressed = true;
           }, 500);
       }, false);
-      window.addEventListener("mouseup", function (e) {
+      window.addEventListener(&#34;mouseup&#34;, function (e) {
           clearInterval(longPress);
           if (longPressed == true) {
-              document.body.classList.remove("is-longpress");
-              pushBalls(randBetween(50 + Math.ceil(multiplier), 100 + Math.ceil(multiplier)), e.clientX, e.clientY);
+              document.body.classList.remove(&#34;is-longpress&#34;);
+              pushBalls(randBetween(50 &#43; Math.ceil(multiplier), 100 &#43; Math.ceil(multiplier)), e.clientX, e.clientY);
               longPressed = false;
           }
-          document.body.classList.remove("is-pressed");
+          document.body.classList.remove(&#34;is-pressed&#34;);
       }, false);
-      window.addEventListener("mousemove", function (e) {
+      window.addEventListener(&#34;mousemove&#34;, function (e) {
           let x = e.clientX;
           let y = e.clientY;
-          pointer.style.top = y + "px";
-          pointer.style.left = x + "px";
+          pointer.style.top = y &#43; &#34;px&#34;;
+          pointer.style.left = x &#43; &#34;px&#34;;
       }, false);
   } else {
-      console.log("canvas or addEventListener is unsupported!");
+      console.log(&#34;canvas or addEventListener is unsupported!&#34;);
   }
 
   function updateSize() {
       canvas.width = window.innerWidth * 2;
       canvas.height = window.innerHeight * 2;
-      canvas.style.width = window.innerWidth + 'px';
-      canvas.style.height = window.innerHeight + 'px';
+      canvas.style.width = window.innerWidth &#43; &#39;px&#39;;
+      canvas.style.height = window.innerHeight &#43; &#39;px&#39;;
       ctx.scale(2, 2);
       width = (canvas.width = window.innerWidth);
       height = (canvas.height = window.innerHeight);
@@ -193,18 +193,18 @@ function clickEffect() {
           this.y = y;
           this.angle = Math.PI * 2 * Math.random();
           if (longPressed == true) {
-              this.multiplier = randBetween(14 + multiplier, 15 + multiplier);
+              this.multiplier = randBetween(14 &#43; multiplier, 15 &#43; multiplier);
           } else {
               this.multiplier = randBetween(6, 12);
           }
-          this.vx = (this.multiplier + Math.random() * 0.5) * Math.cos(this.angle);
-          this.vy = (this.multiplier + Math.random() * 0.5) * Math.sin(this.angle);
-          this.r = randBetween(8, 12) + 3 * Math.random();
+          this.vx = (this.multiplier &#43; Math.random() * 0.5) * Math.cos(this.angle);
+          this.vy = (this.multiplier &#43; Math.random() * 0.5) * Math.sin(this.angle);
+          this.r = randBetween(8, 12) &#43; 3 * Math.random();
           this.color = colours[Math.floor(Math.random() * colours.length)];
       }
       update() {
-          this.x += this.vx - normal.x;
-          this.y += this.vy - normal.y;
+          this.x &#43;= this.vx - normal.x;
+          this.y &#43;= this.vy - normal.y;
           normal.x = -2 / window.innerWidth * Math.sin(this.angle);
           normal.y = -2 / window.innerHeight * Math.cos(this.angle);
           this.r -= 0.3;
@@ -213,19 +213,19 @@ function clickEffect() {
       }
   }
   function pushBalls(count = 1, x = origin.x, y = origin.y) {
-      for (let i = 0; i < count; i++) {
+      for (let i = 0; i &lt; count; i&#43;&#43;) {
           balls.push(new Ball(x, y));
       }
   }
   function randBetween(min, max) {
-      return Math.floor(Math.random() * max) + min;
+      return Math.floor(Math.random() * max) &#43; min;
   }
   function loop() {
-      ctx.fillStyle = "rgba(255, 255, 255, 0)";
+      ctx.fillStyle = &#34;rgba(255, 255, 255, 0)&#34;;
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      for (let i = 0; i < balls.length; i++) {
+      for (let i = 0; i &lt; balls.length; i&#43;&#43;) {
           let b = balls[i];
-          if (b.r < 0)
+          if (b.r &lt; 0)
               continue;
           ctx.fillStyle = b.color;
           ctx.beginPath();
@@ -234,17 +234,17 @@ function clickEffect() {
           b.update();
       }
       if (longPressed == true) {
-          multiplier += 0.2;
-      } else if (!longPressed && multiplier >= 0) {
+          multiplier &#43;= 0.2;
+      } else if (!longPressed &amp;&amp; multiplier &gt;= 0) {
           multiplier -= 0.4;
       }
       removeBall();
       requestAnimationFrame(loop);
   }
   function removeBall() {
-      for (let i = 0; i < balls.length; i++) {
+      for (let i = 0; i &lt; balls.length; i&#43;&#43;) {
           let b = balls[i];
-          if (b.x + b.r < 0 || b.x - b.r > width || b.y + b.r < 0 || b.y - b.r > height || b.r < 0) {
+          if (b.x &#43; b.r &lt; 0 || b.x - b.r &gt; width || b.y &#43; b.r &lt; 0 || b.y - b.r &gt; height || b.r &lt; 0) {
               balls.splice(i, 1);
           }
       }
@@ -255,25 +255,25 @@ function clickEffect() {
 
 ### 动态设置网站title
 
-> 动态设置网站title，当网页失去焦点时改变网页title，引起用户注意，让用户回来继续浏览。
+&gt; 动态设置网站title，当网页失去焦点时改变网页title，引起用户注意，让用户回来继续浏览。
 
 ```js
 //自动设置网站标题
 function autSetTitle(){
-  console.log('初始化-autSetTitle() => ' +document.title);
+  console.log(&#39;初始化-autSetTitle() =&gt; &#39; &#43;document.title);
   var OriginTitile = document.title;
   var titleTime;
-  document.addEventListener('visibilitychange', function() {
+  document.addEventListener(&#39;visibilitychange&#39;, function() {
     if(document.hidden) {
-      //$('[rel="icon"]').attr('href', "/failure.ico");
-      //$('[rel="shortcut icon"]').attr('href', "/failure.ico");
-      //document.title = '喔唷，崩溃啦！';
-      document.title = ' 😂去哪里了！';
+      //$(&#39;[rel=&#34;icon&#34;]&#39;).attr(&#39;href&#39;, &#34;/failure.ico&#34;);
+      //$(&#39;[rel=&#34;shortcut icon&#34;]&#39;).attr(&#39;href&#39;, &#34;/failure.ico&#34;);
+      //document.title = &#39;喔唷，崩溃啦！&#39;;
+      document.title = &#39; 😂去哪里了！&#39;;
       clearTimeout(titleTime);
     } else {
-      //$('[rel="icon"]').attr('href', "/favicon-32x32.ico");
-      //$('[rel="shortcut icon"]').attr('href', "/favicon-32x32.ico");
-      document.title = ' 😍欢迎回来！';
+      //$(&#39;[rel=&#34;icon&#34;]&#39;).attr(&#39;href&#39;, &#34;/favicon-32x32.ico&#34;);
+      //$(&#39;[rel=&#34;shortcut icon&#34;]&#39;).attr(&#39;href&#39;, &#34;/favicon-32x32.ico&#34;);
+      document.title = &#39; 😍欢迎回来！&#39;;
       titleTime = setTimeout(function() {
         document.title = OriginTitile;
       }, 2000);
@@ -285,54 +285,54 @@ function autSetTitle(){
 
 ### 代码块部分折叠功能
 
-> 自定义`assets/js/codeblock.js`,然后在配置文件`params.yml`中引入该js即可。
-```js {title="assets/js/codeblock.js"}
+&gt; 自定义`assets/js/codeblock.js`,然后在配置文件`params.yml`中引入该js即可。
+```js {title=&#34;assets/js/codeblock.js&#34;}
 /**
  * 代码块超过指定高度自动折叠Y
  */
-document.addEventListener('DOMContentLoaded', () => {
-    CodeBlock.init('hello world')
+document.addEventListener(&#39;DOMContentLoaded&#39;, () =&gt; {
+    CodeBlock.init(&#39;hello world&#39;)
 });
 
 const CodeBlock = {
     maxHeight: 512, //px
     //当 overflow-x 值为 hidden、scroll 或者 auto，而本属性的值为 visible（默认值）时，本属性会被隐式的计算为 auto。
-    overflowY: 'auto',  // visible ,hidden
+    overflowY: &#39;auto&#39;,  // visible ,hidden
     initCodeBlockOverflowY:function(overflowHeight,overflowY){
         overflowY = overflowY || CodeBlock.overflowY;
         overflowHeight = overflowHeight || CodeBlock.maxHeight;
-        eles = document.getElementsByClassName('highlight');
+        eles = document.getElementsByClassName(&#39;highlight&#39;);
         eles = Array.from(eles);
         //console.log(eles);
         eles.forEach(function(ele, index, eles) {
             //console.log(ele, index);
-            //console.info('ele.offsetHeight = ',ele.offsetHeight);
+            //console.info(&#39;ele.offsetHeight = &#39;,ele.offsetHeight);
             let origalHeight = ele.offsetHeight;
-            if(ele.offsetHeight > overflowHeight){
-                //console.log('#'+ele.id+'>.chroma.open>.table-wrapper');
-                let curEle = document.querySelector('#'+ele.id+'>.chroma.open>.table-wrapper');
+            if(ele.offsetHeight &gt; overflowHeight){
+                //console.log(&#39;#&#39;&#43;ele.id&#43;&#39;&gt;.chroma.open&gt;.table-wrapper&#39;);
+                let curEle = document.querySelector(&#39;#&#39;&#43;ele.id&#43;&#39;&gt;.chroma.open&gt;.table-wrapper&#39;);
                 //console.log(curEle);
-                curEle.style.height = overflowHeight + 'px';
+                curEle.style.height = overflowHeight &#43; &#39;px&#39;;
                 curEle.style.overflowY = overflowY;
                 curEle.append();
                 
-                let showMoreDiv = document.createElement('div');
-                showMoreDiv.id = ele.id+'-more';
+                let showMoreDiv = document.createElement(&#39;div&#39;);
+                showMoreDiv.id = ele.id&#43;&#39;-more&#39;;
                 
-                showMoreDiv.style.cssText = 'margin-top: -24px;position:sticky;z-index:99;background-image: linear-gradient(to top, #9c9c9c, transparent);text-align: center;cursor: pointer;';
-                showMoreDiv.innerHTML = '<i class="fa-solid fa-angles-down fa-beat-fade" style="font-size:20px;"></i>';
+                showMoreDiv.style.cssText = &#39;margin-top: -24px;position:sticky;z-index:99;background-image: linear-gradient(to top, #9c9c9c, transparent);text-align: center;cursor: pointer;&#39;;
+                showMoreDiv.innerHTML = &#39;&lt;i class=&#34;fa-solid fa-angles-down fa-beat-fade&#34; style=&#34;font-size:20px;&#34;&gt;&lt;/i&gt;&#39;;
                 ele.appendChild(showMoreDiv);
-                showMoreDiv.addEventListener('click', function(){
-                    if(showMoreDiv.innerHTML.indexOf('fa-angles-down') >= 0 ){
-                        curEle.style.height = origalHeight + 'px';
-                        showMoreDiv.innerHTML = '<i class="fa-solid fa-angles-up fa-beat-fade" style="font-size:20px;"></i>';
-                        showMoreDiv.style.cssText = 'margin-top: -56px;position:sticky;z-index:99;background-image: linear-gradient(to top, #9c9c9c, transparent);text-align: center;cursor: pointer;';
+                showMoreDiv.addEventListener(&#39;click&#39;, function(){
+                    if(showMoreDiv.innerHTML.indexOf(&#39;fa-angles-down&#39;) &gt;= 0 ){
+                        curEle.style.height = origalHeight &#43; &#39;px&#39;;
+                        showMoreDiv.innerHTML = &#39;&lt;i class=&#34;fa-solid fa-angles-up fa-beat-fade&#34; style=&#34;font-size:20px;&#34;&gt;&lt;/i&gt;&#39;;
+                        showMoreDiv.style.cssText = &#39;margin-top: -56px;position:sticky;z-index:99;background-image: linear-gradient(to top, #9c9c9c, transparent);text-align: center;cursor: pointer;&#39;;
                         
                     }else{
-                        curEle.style.height = overflowHeight + 'px';
-                        showMoreDiv.innerHTML = '<i class="fa-solid fa-angles-down fa-beat-fade" style="font-size:20px;"></i>';
-                        showMoreDiv.style.cssText = 'margin-top: -24px;position:sticky;z-index:99;background-image: linear-gradient(to top, #9c9c9c, transparent);text-align: center;cursor: pointer;';
-                        window.scrollTo({top:ele.offsetTop, behavior: 'smooth'});
+                        curEle.style.height = overflowHeight &#43; &#39;px&#39;;
+                        showMoreDiv.innerHTML = &#39;&lt;i class=&#34;fa-solid fa-angles-down fa-beat-fade&#34; style=&#34;font-size:20px;&#34;&gt;&lt;/i&gt;&#39;;
+                        showMoreDiv.style.cssText = &#39;margin-top: -24px;position:sticky;z-index:99;background-image: linear-gradient(to top, #9c9c9c, transparent);text-align: center;cursor: pointer;&#39;;
+                        window.scrollTo({top:ele.offsetTop, behavior: &#39;smooth&#39;});
                     }
                     
                 });
@@ -341,201 +341,201 @@ const CodeBlock = {
     },
 
     hello: function(msg){
-        console.info('CodeBlock.hello()=%s, by geekswg',msg);
+        console.info(&#39;CodeBlock.hello()=%s, by geekswg&#39;,msg);
     },
     init : function(args){
         this.hello(args);
-        this.initCodeBlockOverflowY(512,'auto');// unit px
+        this.initCodeBlockOverflowY(512,&#39;auto&#39;);// unit px
     }
 }
 ```
-> yml配置修改如下
-```yml {title="config/default/params.yml"}
+&gt; yml配置修改如下
+```yml {title=&#34;config/default/params.yml&#34;}
 # Third-party library config
   # 第三方库配置
   library:
-      # someCSS = "some.css"
-      # located in "assets/" 位于 "assets/"
+      # someCSS = &#34;some.css&#34;
+      # located in &#34;assets/&#34; 位于 &#34;assets/&#34;
       # Or 或者
-      # someCSS = "https://cdn.example.com/some.css"
+      # someCSS = &#34;https://cdn.example.com/some.css&#34;
     css: {}
 
     js:
       jquery-min: https://libs.baidu.com/jquery/2.1.4/jquery.min.js
       codeblockjs: js/codeblock.js
-      #someJavascript = "js/jquery-3.6.3.min.js"
-      # someJavascript = "some.js"
-      # located in "assets/" 位于 "assets/"
+      #someJavascript = &#34;js/jquery-3.6.3.min.js&#34;
+      # someJavascript = &#34;some.js&#34;
+      # located in &#34;assets/&#34; 位于 &#34;assets/&#34;
       # Or 或者
-      # someJavascript = "https://cdn.example.com/some.js"
-      #dayjs = "js/dayjs.min.js"
+      # someJavascript = &#34;https://cdn.example.com/some.js&#34;
+      #dayjs = &#34;js/dayjs.min.js&#34;
 ```
 
 ## 侧边栏-aside
 
-> 对应自定义文件 layouts/partials/custom/aside.html 
+&gt; 对应自定义文件 layouts/partials/custom/aside.html 
 
 自定义aside.html
 
 ### 添加天气插件
 
-> 在 aside.html中添加
-参考链接 {{< link "https://tianqi.2345.com/plugin/" "2345天气插件" "title" false >}}
+&gt; 在 aside.html中添加
+参考链接 {{&lt; link &#34;https://tianqi.2345.com/plugin/&#34; &#34;2345天气插件&#34; &#34;title&#34; false &gt;}}
 
 ```html
-<iframe allowtransparency="true" frameborder="0" width="140" height="278" scrolling="no" 
-src="//tianqi.2345.com/plugin/widget/index.htm?s=2&z=3&t=1&v=1&d=3&bd=0&k=&f=&ltf=009944&htf=cc0000&q=1&e=1&a=1&c=54511&w=140&h=278&align=center">
-</iframe>  
+&lt;iframe allowtransparency=&#34;true&#34; frameborder=&#34;0&#34; width=&#34;140&#34; height=&#34;278&#34; scrolling=&#34;no&#34; 
+src=&#34;//tianqi.2345.com/plugin/widget/index.htm?s=2&amp;z=3&amp;t=1&amp;v=1&amp;d=3&amp;bd=0&amp;k=&amp;f=&amp;ltf=009944&amp;htf=cc0000&amp;q=1&amp;e=1&amp;a=1&amp;c=54511&amp;w=140&amp;h=278&amp;align=center&#34;&gt;
+&lt;/iframe&gt;  
 ```
 
 ### 添加一言
 
-> 插件地址 [一言](https://v1.hitokoto.cn/)
+&gt; 插件地址 [一言](https://v1.hitokoto.cn/)
 
 ```html
 {{/*  添加 一言 https://v1.hitokoto.cn/  */}}
-<!-- 本例不能添加链接内容，放在此处只是因为此接口比较方便，也许能够解决大部分的需求 -->
-<script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
-<!-- 请注意，以下的示例包含超链接，您可能需要手动配置样式使其不变色。如果您嫌麻烦，可以移除。 -->
-<p id="hitokoto" style='color:red;font-family: MMT,"沐目体";font-size:20px;'>
-    <a href="#" id="hitokoto_text">:D 获取中...</a>
-</p>
+&lt;!-- 本例不能添加链接内容，放在此处只是因为此接口比较方便，也许能够解决大部分的需求 --&gt;
+&lt;script src=&#34;https://v1.hitokoto.cn/?encode=js&amp;select=%23hitokoto&#34; defer&gt;&lt;/script&gt;
+&lt;!-- 请注意，以下的示例包含超链接，您可能需要手动配置样式使其不变色。如果您嫌麻烦，可以移除。 --&gt;
+&lt;p id=&#34;hitokoto&#34; style=&#39;color:red;font-family: MMT,&#34;沐目体&#34;;font-size:20px;&#39;&gt;
+    &lt;a href=&#34;#&#34; id=&#34;hitokoto_text&#34;&gt;:D 获取中...&lt;/a&gt;
+&lt;/p&gt;
 ```
 
 ### 添加音乐插件
 
-> 插件地址 [MetingJS](https://github.com/metowolf/MetingJS)
+&gt; 插件地址 [MetingJS](https://github.com/metowolf/MetingJS)
 
 ```html
-<!-- require APlayer 添加侧边栏音乐 暂时于目录冲突找不到原因，注释了 -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
-<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
-<!-- require MetingJS -->
-<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
-<meting-js
-	server="netease"
-	type="playlist" list-folded=true order="random"
-	id="6678743774" volume="0.2" list-max-height="340px" >
-</meting-js>
+&lt;!-- require APlayer 添加侧边栏音乐 暂时于目录冲突找不到原因，注释了 --&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css&#34;&gt;
+&lt;script src=&#34;https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js&#34;&gt;&lt;/script&gt;
+&lt;!-- require MetingJS --&gt;
+&lt;script src=&#34;https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js&#34;&gt;&lt;/script&gt;
+&lt;meting-js
+	server=&#34;netease&#34;
+	type=&#34;playlist&#34; list-folded=true order=&#34;random&#34;
+	id=&#34;6678743774&#34; volume=&#34;0.2&#34; list-max-height=&#34;340px&#34; &gt;
+&lt;/meting-js&gt;
 ```
 
 ## 头部自定义
 
-> layouts/partials/header.html 主要修改文件，如果文件不存在，则去你使用的主题目录下找到该文件，复制到自己的site对应的路径下。
+&gt; layouts/partials/header.html 主要修改文件，如果文件不存在，则去你使用的主题目录下找到该文件，复制到自己的site对应的路径下。
 
 ### 添加菜单按钮
 
-> 自定义 layouts/partials/header.html 找到需要添加的位置
+&gt; 自定义 layouts/partials/header.html 找到需要添加的位置
 
-{{< admonition tip "提示" true >}}
+{{&lt; admonition tip &#34;提示&#34; true &gt;}}
 这里是菜单文件的样式，注意这里面有PC端和移动端的，如果要双端都要添加，在对应的两个地方同时加上。
-{{< /admonition >}}
+{{&lt; /admonition &gt;}}
 
 ### 添加版娘
 
-> 在项目 layouts/partials/header.html 最底部 中添加
+&gt; 在项目 layouts/partials/header.html 最底部 中添加
 
 :point_down: 点击下方查看代码
 
 ```html
-<!-- 板娘 https://github.com/stevenjoezhang/live2d-widget --> 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
-<!--
-<script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>
--->
-<script type="text/javascript">
+&lt;!-- 板娘 https://github.com/stevenjoezhang/live2d-widget --&gt; 
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css&#34;&gt;
+&lt;!--
+&lt;script src=&#34;https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js&#34;&gt;&lt;/script&gt;
+--&gt;
+&lt;script type=&#34;text/javascript&#34;&gt;
 // live2d_path 参数建议使用绝对路径
-const live2d_path = "https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/";
-//const live2d_path = "/live2d-widget/";
+const live2d_path = &#34;https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/&#34;;
+//const live2d_path = &#34;/live2d-widget/&#34;;
 
 // 封装异步加载资源的方法
 function loadExternalResource(url, type) {
-	return new Promise((resolve, reject) => {
+	return new Promise((resolve, reject) =&gt; {
 		let tag;
 
-		if (type === "css") {
-			tag = document.createElement("link");
-			tag.rel = "stylesheet";
+		if (type === &#34;css&#34;) {
+			tag = document.createElement(&#34;link&#34;);
+			tag.rel = &#34;stylesheet&#34;;
 			tag.href = url;
 		}
-		else if (type === "js") {
-			tag = document.createElement("script");
+		else if (type === &#34;js&#34;) {
+			tag = document.createElement(&#34;script&#34;);
 			tag.src = url;
 		}
 		if (tag) {
-			tag.onload = () => resolve(url);
-			tag.onerror = () => reject(url);
+			tag.onload = () =&gt; resolve(url);
+			tag.onerror = () =&gt; reject(url);
 			document.head.appendChild(tag);
 		}
 	});
 }
 
 // 加载 waifu.css live2d.min.js waifu-tips.js
-if (screen.width >= 100) {
+if (screen.width &gt;= 100) {
 	Promise.all([
-		loadExternalResource(live2d_path + "waifu.css", "css"),
-		loadExternalResource(live2d_path + "live2d.min.js", "js"),
-		loadExternalResource(live2d_path + "waifu-tips.js", "js")
-	]).then(() => {
+		loadExternalResource(live2d_path &#43; &#34;waifu.css&#34;, &#34;css&#34;),
+		loadExternalResource(live2d_path &#43; &#34;live2d.min.js&#34;, &#34;js&#34;),
+		loadExternalResource(live2d_path &#43; &#34;waifu-tips.js&#34;, &#34;js&#34;)
+	]).then(() =&gt; {
 		// 配置选项的具体用法见 README.md
 		initWidget({
-			waifuPath: live2d_path + "waifu-tips.json",
-			//apiPath: "https://live2d.fghrsh.net/api/", 
-			//cdnPath: "https://fastly.jsdelivr.net/gh/fghrsh/live2d_api/",
-			cdnPath: "https://live2d.fghrsh.net/api/",
-			tools: ["hitokoto", "asteroids", "switch-model", "switch-texture", "photo", "info", "quit"]
+			waifuPath: live2d_path &#43; &#34;waifu-tips.json&#34;,
+			//apiPath: &#34;https://live2d.fghrsh.net/api/&#34;, 
+			//cdnPath: &#34;https://fastly.jsdelivr.net/gh/fghrsh/live2d_api/&#34;,
+			cdnPath: &#34;https://live2d.fghrsh.net/api/&#34;,
+			tools: [&#34;hitokoto&#34;, &#34;asteroids&#34;, &#34;switch-model&#34;, &#34;switch-texture&#34;, &#34;photo&#34;, &#34;info&#34;, &#34;quit&#34;]
 		});
 	});
 }
 
 console.log(`
   く__,.ヘヽ.        /  ,ー､ 〉
-           ＼ ', !-─‐-i  /  /´
-           ／｀ｰ'       L/／｀ヽ､
-         /   ／,   /|   ,   ,       ',
+           ＼ &#39;, !-─‐-i  /  /´
+           ／｀ｰ&#39;       L/／｀ヽ､
+         /   ／,   /|   ,   ,       &#39;,
        ｲ   / /-‐/  ｉ  L_ ﾊ ヽ!   i
-        ﾚ ﾍ 7ｲ｀ﾄ   ﾚ'ｧ-ﾄ､!ハ|   |
-          !,/7 '0'     ´0iソ|    |
-          |.从"    _     ,,,, / |./    |
-          ﾚ'| i＞.､,,__  _,.イ /   .i   |
-            ﾚ'| | / k_７_/ﾚ'ヽ,  ﾊ.  |
+        ﾚ ﾍ 7ｲ｀ﾄ   ﾚ&#39;ｧ-ﾄ､!ハ|   |
+          !,/7 &#39;0&#39;     ´0iソ|    |
+          |.从&#34;    _     ,,,, / |./    |
+          ﾚ&#39;| i＞.､,,__  _,.イ /   .i   |
+            ﾚ&#39;| | / k_７_/ﾚ&#39;ヽ,  ﾊ.  |
               | |/i 〈|/   i  ,.ﾍ |  i  |
              .|/ /  ｉ：    ﾍ!    ＼  |
-              kヽ>､ﾊ    _,.ﾍ､    /､!
-              !'〈//｀Ｔ´', ＼ ｀'7'ｰr'
-              ﾚ'ヽL__|___i,___,ンﾚ|ノ
+              kヽ&gt;､ﾊ    _,.ﾍ､    /､!
+              !&#39;〈//｀Ｔ´&#39;, ＼ ｀&#39;7&#39;ｰr&#39;
+              ﾚ&#39;ヽL__|___i,___,ンﾚ|ノ
                   ﾄ-,/  |___./
-                  'ｰ'    !_,.:
+                  &#39;ｰ&#39;    !_,.:
 `);
-</script>
+&lt;/script&gt;
 ```
 
 ## 页脚-footer
 
-> 添加十年之约 和 开往友链 的链接
+&gt; 添加十年之约 和 开往友链 的链接
 
-{{< link "https://www.travellings.cn" "开往" "title" false >}}
-{{< link "https://www.foreverblog.cn/" "十年之约" "title" false >}}
+{{&lt; link &#34;https://www.travellings.cn&#34; &#34;开往&#34; &#34;title&#34; false &gt;}}
+{{&lt; link &#34;https://www.foreverblog.cn/&#34; &#34;十年之约&#34; &#34;title&#34; false &gt;}}
 
-```html { title="layouts/partials/custom/footer.html" }
-<style>
+```html { title=&#34;layouts/partials/custom/footer.html&#34; }
+&lt;style&gt;
     .footerImg {
         height: 20px;  
     }
-</style>
-<div class="footer-line custom">
-    <a href="https://www.travellings.cn" target="_blank"><img src="/images/travelling.png"  class="footerImg" alt="" title="开往-友链接力 v1.5"></a>
-    <a href="https://www.travellings.cn/go.html" target="_blank"><img src="/images/travelling.gif" class="footerImg" alt=""  title="开往-友链接力 v1.5"></a>
-    <a href="https://www.foreverblog.cn/" target="_blank"><img src="https://img.foreverblog.cn/logo_en_default.png" class="footerImg" alt="" > </a>
-    <a href="https://www.foreverblog.cn/go.html" target="_blank"><img src="https://img.foreverblog.cn/wormhole_2.gif" class="footerImg" alt="" title="穿梭虫洞-随机访问十年之约友链博客"></a>
-</div>
+&lt;/style&gt;
+&lt;div class=&#34;footer-line custom&#34;&gt;
+    &lt;a href=&#34;https://www.travellings.cn&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;/images/travelling.png&#34;  class=&#34;footerImg&#34; alt=&#34;&#34; title=&#34;开往-友链接力 v1.5&#34;&gt;&lt;/a&gt;
+    &lt;a href=&#34;https://www.travellings.cn/go.html&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;/images/travelling.gif&#34; class=&#34;footerImg&#34; alt=&#34;&#34;  title=&#34;开往-友链接力 v1.5&#34;&gt;&lt;/a&gt;
+    &lt;a href=&#34;https://www.foreverblog.cn/&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://img.foreverblog.cn/logo_en_default.png&#34; class=&#34;footerImg&#34; alt=&#34;&#34; &gt; &lt;/a&gt;
+    &lt;a href=&#34;https://www.foreverblog.cn/go.html&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://img.foreverblog.cn/wormhole_2.gif&#34; class=&#34;footerImg&#34; alt=&#34;&#34; title=&#34;穿梭虫洞-随机访问十年之约友链博客&#34;&gt;&lt;/a&gt;
+&lt;/div&gt;
 ```
 
 ## 核心配置文件
 
-> params.toml
+&gt; params.toml
 
-```toml { title="config/deafault/params.toml" }
+```toml { title=&#34;config/deafault/params.toml&#34; }
 # -------------------------------------------------------------------------------------
 # Theme Core Configuration | 主题核心配置
 # See: https://fixit.lruihao.cn/theme-documentation-basics/#site-configuration
@@ -543,28 +543,28 @@ console.log(`
 
 # FixIt theme version
 # FixIt 主题版本
-version = "0.2.X"
+version = &#34;0.2.X&#34;
 # website description for RSS, SEO, Open Graph and Twitter Cards
 # 网站描述, 用于 RSS, SEO, Open Graph 和 Twitter Cards
-description = "博客：探索、发现、分享 By geekswg-[毕少侠]"
+description = &#34;博客：探索、发现、分享 By geekswg-[毕少侠]&#34;
 # site keywords
 # 网站关键词
-keywords = ["geekswg","毕少侠","博客","Github","Hugo", "LoveIt","FixIt"]
-# site default theme ["light", "dark", "auto"]
-# 网站默认主题 ["light", "dark", "auto"]
-defaultTheme = "auto"
+keywords = [&#34;geekswg&#34;,&#34;毕少侠&#34;,&#34;博客&#34;,&#34;Github&#34;,&#34;Hugo&#34;, &#34;LoveIt&#34;,&#34;FixIt&#34;]
+# site default theme [&#34;light&#34;, &#34;dark&#34;, &#34;auto&#34;]
+# 网站默认主题 [&#34;light&#34;, &#34;dark&#34;, &#34;auto&#34;]
+defaultTheme = &#34;auto&#34;
 # public git repo url only then enableGitInfo is true
 # 公共 git 仓库路径，仅在 enableGitInfo 设为 true 时有效
-gitRepo = "https://github.com/geekswg/blogFixit"
-# which hash function used for SRI, when empty, no SRI is used ["sha256", "sha384", "sha512", "md5"]
-# 哪种哈希函数用来 SRI, 为空时表示不使用 SRI ["sha256", "sha384", "sha512", "md5"]
-fingerprint = ""
+gitRepo = &#34;https://github.com/geekswg/blogFixit&#34;
+# which hash function used for SRI, when empty, no SRI is used [&#34;sha256&#34;, &#34;sha384&#34;, &#34;sha512&#34;, &#34;md5&#34;]
+# 哪种哈希函数用来 SRI, 为空时表示不使用 SRI [&#34;sha256&#34;, &#34;sha384&#34;, &#34;sha512&#34;, &#34;md5&#34;]
+fingerprint = &#34;&#34;
 # date format
 # 日期格式
-dateFormat = "2006-01-02"
+dateFormat = &#34;2006-01-02&#34;
 # website images for Open Graph and Twitter Cards
 # 网站图片, 用于 Open Graph 和 Twitter Cards
-images = ["/images/avatar.png"]
+images = [&#34;/images/avatar.png&#34;]
 # FixIt 0.2.12 | NEW enable PWA
 # FixIt 0.2.12 | 新增 开启 PWA 支持
 enablePWA = true
@@ -572,7 +572,7 @@ enablePWA = true
 # 是否自动显示外链图标 since v0.2.14
 externalIcon = true
 # FixIt will, by default, inject a theme meta tag in the HTML head on the home page only. since v0.2.14
-# You can turn it off, but we would really appreciate if you don’t, as this is a good way to watch FixIt's popularity on the rise.
+# You can turn it off, but we would really appreciate if you don’t, as this is a good way to watch FixIt&#39;s popularity on the rise.
 # 默认情况下，FixIt 只会在主页的 HTML 头中注入主题元标记。since v0.2.14
 # 您可以将其关闭，但如果您不这样做，我们将不胜感激，因为这是观察 FixIt 受欢迎程度上升的好方法。
 disableThemeInject = false
@@ -582,38 +582,38 @@ disableThemeInject = false
 [app]
   # optional site title override for the app when added to an iOS home screen or Android launcher
   # 当添加到 iOS 主屏幕或者 Android 启动器时的标题, 覆盖默认标题
-  title = "毕少侠APP"
+  title = &#34;毕少侠APP&#34;
   # whether to omit favicon resource links
   # 是否隐藏网站图标资源链接
   noFavicon = false
   # modern SVG favicon to use in place of older style .png and .ico files
   # 更现代的 SVG 网站图标, 可替代旧的 .png 和 .ico 文件 #设置网站logo的 favicon
-  svgFavicon = "/favicon.svg"
+  svgFavicon = &#34;/favicon.svg&#34;
   # Safari mask icon color
   # Safari 图标颜色
-  iconColor = "#5bbad5"
+  iconColor = &#34;#5bbad5&#34;
   # Windows v8-10 tile color
   # Windows v8-10 磁贴颜色
-  tileColor = "#da532c"
+  tileColor = &#34;#da532c&#34;
   # Android browser theme color
   # Android 浏览器主题色
   [app.themeColor]
-    light = "#f8f8f8"
-    dark = "#252627"
+    light = &#34;#f8f8f8&#34;
+    dark = &#34;#252627&#34;
 
 # Search config
 # 搜索配置
 [search]
   enable = true
-  # type of search engine ["lunr", "algolia", "fuse"]
-  # 搜索引擎的类型 ["lunr", "algolia", "fuse"]
-  type = "fuse"
+  # type of search engine [&#34;lunr&#34;, &#34;algolia&#34;, &#34;fuse&#34;]
+  # 搜索引擎的类型 [&#34;lunr&#34;, &#34;algolia&#34;, &#34;fuse&#34;]
+  type = &#34;fuse&#34;
   # max index length of the chunked content
   # 文章内容最长索引长度
   contentLength = 9999000
   # placeholder of the search bar
   # 搜索框的占位提示语
-  placeholder = "输入关键词搜索"
+  placeholder = &#34;输入关键词搜索&#34;
   # max number of results length
   # 最大结果数目
   maxResultLength = 10
@@ -622,14 +622,14 @@ disableThemeInject = false
   snippetLength = 30
   # HTML tag name of the highlight part in results
   # 搜索结果中高亮部分的 HTML 标签
-  highlightTag = "em"
+  highlightTag = &#34;em&#34;
   # whether to use the absolute URL based on the baseURL in search index
   # 是否在搜索索引中使用基于 baseURL 的绝对路径
   absoluteURL = false
   [search.algolia]
-    index = ""
-    appID = ""
-    searchKey = ""
+    index = &#34;&#34;
+    appID = &#34;&#34;
+    searchKey = &#34;&#34;
   [search.fuse]
     # FixIt 0.2.17 | NEW https://fusejs.io/api/options.html
     isCaseSensitive = false
@@ -645,27 +645,27 @@ disableThemeInject = false
 # Header config
 # 页面头部导航栏配置
 [header]
-  # desktop header mode ["sticky", "normal", "auto"]
-  # 桌面端导航栏模式 ["sticky", "normal", "auto"]
-  desktopMode = "sticky"
-  # mobile header mode ["sticky", "normal", "auto"]
-  # 移动端导航栏模式 ["sticky", "normal", "auto"]
-  mobileMode = "auto"
+  # desktop header mode [&#34;sticky&#34;, &#34;normal&#34;, &#34;auto&#34;]
+  # 桌面端导航栏模式 [&#34;sticky&#34;, &#34;normal&#34;, &#34;auto&#34;]
+  desktopMode = &#34;sticky&#34;
+  # mobile header mode [&#34;sticky&#34;, &#34;normal&#34;, &#34;auto&#34;]
+  # 移动端导航栏模式 [&#34;sticky&#34;, &#34;normal&#34;, &#34;auto&#34;]
+  mobileMode = &#34;auto&#34;
   # Header title config
   # 页面头部导航栏标题配置
   [header.title]
     # URL of the LOGO
     # LOGO 的 URL 网页左上角logo图标配置
-    logo = "/images/avatar.png" 
+    logo = &#34;/images/avatar.png&#34; 
     # title name
     # 标题名称
-    name = "毕少侠"
+    name = &#34;毕少侠&#34;
     # you can add extra information before the name (HTML format is supported), such as icons
     # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
-    pre = ""
+    pre = &#34;&#34;
     # you can add extra information after the name (HTML format is supported), such as icons
     # 你可以在名称 (允许 HTML 格式) 之后添加其他信息, 例如图标
-    post = ""
+    post = &#34;&#34;
     # whether to use typeit animation for title name
     # 是否为标题显示打字机动画
     typeit = false
@@ -674,7 +674,7 @@ disableThemeInject = false
   [header.subtitle]
     # subtitle name
     # 副标题名称
-    name = "<span style='font-family: MMT,\"沐目体\";'>也在江湖</span>"
+    name = &#34;&lt;span style=&#39;font-family: MMT,\&#34;沐目体\&#34;;&#39;&gt;也在江湖&lt;/span&gt;&#34;
     # whether to use typeit animation for subtitle name
     # 是否为副标题显示打字机动画
     typeit = true
@@ -694,7 +694,7 @@ disableThemeInject = false
   # For advanced use, see parameter `params.customFilePath.footer`
   # FixIt 0.2.17 | 更改 自定义内容 (支持 HTML 格式)
   # 进阶使用，见参数 `params.customFilePath.footer`
-  custom = ""
+  custom = &#34;&#34;
   # whether to show Hugo and theme info
   # 是否显示 Hugo 和主题信息
   hugo = true
@@ -712,32 +712,32 @@ disableThemeInject = false
   wordCount = true
   # Public network security only in China (HTML format is supported) since v0.2.12
   # 公网安备信息，仅在中国使用 (支持 HTML 格式) since v0.2.12
-  gov = "<a href='https://icp.gov.moe/?keyword=20231992' target='_blank'><img style='height:16px;margin-bottom:-3px;' src='https://icp.gov.moe/images/ico64.png'></a>"
+  gov = &#34;&lt;a href=&#39;https://icp.gov.moe/?keyword=20231992&#39; target=&#39;_blank&#39;&gt;&lt;img style=&#39;height:16px;margin-bottom:-3px;&#39; src=&#39;https://icp.gov.moe/images/ico64.png&#39;&gt;&lt;/a&gt;&#34;
   # ICP info only in China (HTML format is supported)
   # ICP 备案信息，仅在中国使用 (支持 HTML 格式)
-  icp = "<a href='https://icp.gov.moe/?keyword=20231992' target='_blank'>萌ICP备20231992号</a>"
+  icp = &#34;&lt;a href=&#39;https://icp.gov.moe/?keyword=20231992&#39; target=&#39;_blank&#39;&gt;萌ICP备20231992号&lt;/a&gt;&#34;
   # license info (HTML format is supported)
   # 许可协议信息 (支持 HTML 格式)
-  license = ''
-  # license = '<a rel="license external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>'
+  license = &#39;&#39;
+  # license = &#39;&lt;a rel=&#34;license external nofollow noopener noreferrer&#34; href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34;&gt;CC BY-NC 4.0&lt;/a&gt;&#39;
   # FixIt 0.2.17 | CHANGED Site creation time
   # FixIt 0.2.17 | 更改 网站创立时间
   [footer.siteTime]
     enable = true
     animate = true
-    icon = "fa-solid fa-heartbeat fa-fw animate-icon"
-    pre = "Runing"
-    value = "2018-05-28T20:01:01+08:00"
-  # FixIt 0.2.17 | NEW footer lines order, optional values: ["first", 0, 1, 2, 3, 4, 5, "last"]
-  # FixIt 0.2.17 | 新增 页面底部行排序，可选值：["first", 0, 1, 2, 3, 4, 5, "last"]
+    icon = &#34;fa-solid fa-heartbeat fa-fw animate-icon&#34;
+    pre = &#34;Runing&#34;
+    value = &#34;2018-05-28T20:01:01&#43;08:00&#34;
+  # FixIt 0.2.17 | NEW footer lines order, optional values: [&#34;first&#34;, 0, 1, 2, 3, 4, 5, &#34;last&#34;]
+  # FixIt 0.2.17 | 新增 页面底部行排序，可选值：[&#34;first&#34;, 0, 1, 2, 3, 4, 5, &#34;last&#34;]
   [footer.order]
-    copyright = 'first'
+    copyright = &#39;first&#39;
     
     statistics = 0
     visitor = 0
     beian = 0
-    custom = 'last'
-    powered = 'last'
+    custom = &#39;last&#39;
+    powered = &#39;last&#39;
 
 # Section (all posts) page config
 # Section (所有文章) 页面配置
@@ -747,7 +747,7 @@ disableThemeInject = false
   paginate = 20
   # date format (month and day)
   # 日期格式 (月和日)
-  dateFormat = "2006-01-02"
+  dateFormat = &#34;2006-01-02&#34;
   # amount of RSS pages
   # RSS 文章数目
   rss = 10
@@ -767,7 +767,7 @@ disableThemeInject = false
   paginate = 20
   # date format (month and day)
   # 日期格式 (月和日)
-  dateFormat = "2006-01-02"
+  dateFormat = &#34;2006-01-02&#34;
   # amount of RSS pages
   # RSS 文章数目
   rss = 10
@@ -785,9 +785,9 @@ disableThemeInject = false
   # Maximum count of posts per tag
   # 每个标签的最大帖子数
   peakCount = 10
-  # Order of tags, optional values: ["name", "count"]
-  # 标签顺序，可选值：["name", "count"]
-  orderby = "name"
+  # Order of tags, optional values: [&#34;name&#34;, &#34;count&#34;]
+  # 标签顺序，可选值：[&#34;name&#34;, &#34;count&#34;]
+  orderby = &#34;name&#34;
 
 # Home page config
 # 主页配置
@@ -801,17 +801,17 @@ disableThemeInject = false
     enable = true
     # Gravatar Email for preferred avatar in home page
     # Gravatar 邮箱，用于优先在主页显示的头像
-    gravatarEmail = ""
+    gravatarEmail = &#34;&#34;
     # URL of avatar shown in home page
     # 主页显示头像的 URL
-    avatarURL = "/images/avatar.webp" #图片地址/static/images/avatar.png
-    # avatarURL = "/images/avatar.webp" 
+    avatarURL = &#34;/images/avatar.webp&#34; #图片地址/static/images/avatar.png
+    # avatarURL = &#34;/images/avatar.webp&#34; 
     # FixIt 0.2.7 | CHANGED title shown in home page (HTML format is supported)
     # FixIt 0.2.7 | 更改 主页显示的网站标题（支持 HTML 格式）
-    title = "Every day is beautiful if you choose to see it."
+    title = &#34;Every day is beautiful if you choose to see it.&#34;
     # subtitle shown in home page
     # 主页显示的网站副标题
-    subtitle = "如果你愿意去发现，其实每一天都很美"
+    subtitle = &#34;如果你愿意去发现，其实每一天都很美&#34;
     # whether to use typeit animation for subtitle
     # 是否为副标题显示打字机动画
     typeit = true
@@ -820,7 +820,7 @@ disableThemeInject = false
     social = true
     # FixIt 0.2.0 | NEW disclaimer (HTML format is supported)
     # FixIt 0.2.0 | 新增 免责声明（支持 HTML 格式）
-    disclaimer = ""
+    disclaimer = &#34;&#34;
   # Home page posts
   # 主页文章列表
   [home.posts]
@@ -832,17 +832,17 @@ disableThemeInject = false
 # Social config in home page
 # 主页的社交信息设置
 [social]
-  GitHub = "geekswg"
-  Weibo = ""
-  Email = "geekswg@qq.com"
+  GitHub = &#34;geekswg&#34;
+  Weibo = &#34;&#34;
+  Email = &#34;geekswg@qq.com&#34;
   RSS = true
-  Stackoverflow = ""
-  QQ = "1101303970"
-  blogger = "https://gavinblog.github.io/stellar/"
-  cnblog = "geekswg"
-  QQGroup = ""
-  CSDN = ""
-  douyin = "MS4wLjABAAAA7wEzz2PEAVqUc8bQxcCPGOV9r1zmjMooBHGKcVuP1Es"
+  Stackoverflow = &#34;&#34;
+  QQ = &#34;1101303970&#34;
+  blogger = &#34;https://gavinblog.github.io/stellar/&#34;
+  cnblog = &#34;geekswg&#34;
+  QQGroup = &#34;&#34;
+  CSDN = &#34;&#34;
+  douyin = &#34;MS4wLjABAAAA7wEzz2PEAVqUc8bQxcCPGOV9r1zmjMooBHGKcVuP1Es&#34;
 
 # Page config
 # 文章页面配置
@@ -870,17 +870,17 @@ disableThemeInject = false
   fontawesome = true
   # license info (HTML format is supported)
   # 许可协议信息（支持 HTML 格式）
-  license = '<a rel="license external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>'
+  license = &#39;&lt;a rel=&#34;license external nofollow noopener noreferrer&#34; href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34;&gt;CC BY-NC 4.0&lt;/a&gt;&#39;
   # whether to show link to Raw Markdown content of the content
   # 是否显示原始 Markdown 文档内容的链接
   linkToMarkdown = true
   # whether to show the full text content in RSS
   # 是否在 RSS 中显示全文内容
   rssFullText = false
-  # Page style ["narrow", "normal", "wide", ...] since v0.2.13
-  # 页面样式 ["narrow", "normal", "wide", ...] since v0.2.13
-  pageStyle = "wide"
-  # Gravatar is force-used as the author's avatar since v0.2.14
+  # Page style [&#34;narrow&#34;, &#34;normal&#34;, &#34;wide&#34;, ...] since v0.2.13
+  # 页面样式 [&#34;narrow&#34;, &#34;normal&#34;, &#34;wide&#34;, ...] since v0.2.13
+  pageStyle = &#34;wide&#34;
+  # Gravatar is force-used as the author&#39;s avatar since v0.2.14
   # 强制使用 Gravatar 作为作者头像 since v0.2.14
   gravatarForce = false
   # FixIt 0.2.17 | CHANGED Auto Bookmark Support
@@ -896,7 +896,7 @@ disableThemeInject = false
   readingTime = true
   # end of post flag
   # 文章结束标志
-  endFlag = "-----（完）-----"
+  endFlag = &#34;-----（完）-----&#34;
   # FixIt 0.2.18 | NEW whether to enable instant.page
   # FixIt 0.2.18 | 新增 是否开启即时页面
   instantPage = true
@@ -905,7 +905,7 @@ disableThemeInject = false
   # 转载配置 since v0.2.15
   [page.repost]
     enable = false
-    url = ""
+    url = &#34;&#34;
   # Table of the contents config
   # 目录配置
   [page.toc]
@@ -918,9 +918,9 @@ disableThemeInject = false
     # whether to make the table of the contents in the sidebar automatically collapsed
     # 是否使侧边目录自动折叠展开
     auto = false
-    # position of TOC ["left", "right"] since v0.2.13
-    # 目录位置 ["left", "right"] since v0.2.13
-    position = "right"
+    # position of TOC [&#34;left&#34;, &#34;right&#34;] since v0.2.13
+    # 目录位置 [&#34;left&#34;, &#34;right&#34;] since v0.2.13
+    position = &#34;right&#34;
   # Display a message at the beginning of an article to warn the reader that its content might be expired. since v0.2.13
   # 在文章开头显示提示信息，提醒读者文章内容可能过时。 since v0.2.13
   [page.expirationReminder]
@@ -950,22 +950,22 @@ disableThemeInject = false
   # 文章编辑 since v0.2.14
   [page.edit]
     enable = true
-    # Link for fork & edit
-    # url = "/edit/branch-name/subdirectory-name" # base on `params.gitRepo`
-    # url = "https://github.com/user-name/repo-name/edit/branch-name/subdirectory-name" # full url
-    url = "/edit/master/content"
+    # Link for fork &amp; edit
+    # url = &#34;/edit/branch-name/subdirectory-name&#34; # base on `params.gitRepo`
+    # url = &#34;https://github.com/user-name/repo-name/edit/branch-name/subdirectory-name&#34; # full url
+    url = &#34;/edit/master/content&#34;
   # KaTeX mathematical formulas config (KaTeX https://katex.org/)
   # KaTeX 数学公式配置 (KaTeX https://katex.org/)
   [page.math]
     enable = false
     # default inline delimiter is $ ... $ and \( ... \)
     # 默认行内定界符是 $ ... $ 和 \( ... \)
-    inlineLeftDelimiter = ""
-    inlineRightDelimiter = ""
+    inlineLeftDelimiter = &#34;&#34;
+    inlineRightDelimiter = &#34;&#34;
     # default block delimiter is $$ ... $$, \[ ... \], \begin{equation} ... \end{equation} and some other functions
     # 默认块定界符是 $$ ... $$, \[ ... \],  \begin{equation} ... \end{equation} 和一些其它的函数
-    blockLeftDelimiter = ""
-    blockRightDelimiter = ""
+    blockLeftDelimiter = &#34;&#34;
+    blockRightDelimiter = &#34;&#34;
     # KaTeX extension copy_tex
     # KaTeX 插件 copy_tex
     copyTex = true
@@ -977,13 +977,13 @@ disableThemeInject = false
   [page.mapbox]
     # access token of Mapbox GL JS
     # Mapbox GL JS 的 access token
-    accessToken = "pk.eyJ1IjoiZGlsbG9uenEiLCJhIjoiY2s2czd2M2x3MDA0NjNmcGxmcjVrZmc2cyJ9.aSjv2BNuZUfARvxRYjSVZQ"
+    accessToken = &#34;pk.eyJ1IjoiZGlsbG9uenEiLCJhIjoiY2s2czd2M2x3MDA0NjNmcGxmcjVrZmc2cyJ9.aSjv2BNuZUfARvxRYjSVZQ&#34;
     # style for the light theme
     # 浅色主题的地图样式
-    lightStyle = "mapbox://styles/mapbox/light-v10?optimize=true"
+    lightStyle = &#34;mapbox://styles/mapbox/light-v10?optimize=true&#34;
     # style for the dark theme
     # 深色主题的地图样式
-    darkStyle = "mapbox://styles/mapbox/dark-v10?optimize=true"
+    darkStyle = &#34;mapbox://styles/mapbox/dark-v10?optimize=true&#34;
     # whether to add NavigationControl (https://docs.mapbox.com/mapbox-gl-js/api/#navigationcontrol)
     # 是否添加 导航控制 (https://docs.mapbox.com/mapbox-gl-js/api/#navigationcontrol)
     navigation = true
@@ -1001,15 +1001,15 @@ disableThemeInject = false
   [page.reward]
     enable = true
     animation = true
-    # position relative to post footer, optional values: ["before", "after"]
-    # 相对于页脚的位置，可选值：["before", "after"]
-    position = "after"
-    comment = "Buy me a coffee"
+    # position relative to post footer, optional values: [&#34;before&#34;, &#34;after&#34;]
+    # 相对于页脚的位置，可选值：[&#34;before&#34;, &#34;after&#34;]
+    position = &#34;after&#34;
+    comment = &#34;Buy me a coffee&#34;
     [page.reward.ways]
-      wechatpay = "/images/sponsor/wechatpay2.png"
-      alipay = "/images/sponsor/alipay2.png"
-      # paypal = "/images/paypal.png"
-      # bitcoin = "/images/bitcoin.png"
+      wechatpay = &#34;/images/sponsor/wechatpay2.png&#34;
+      alipay = &#34;/images/sponsor/alipay2.png&#34;
+      # paypal = &#34;/images/paypal.png&#34;
+      # bitcoin = &#34;/images/bitcoin.png&#34;
   # Social share links in post page
   # 文章页面的分享信息设置
   [page.share]
@@ -1047,28 +1047,28 @@ disableThemeInject = false
   # 第三方库配置
   [page.library]
     [page.library.css]
-      # someCSS = "some.css"
-      # located in "assets/" 位于 "assets/"
+      # someCSS = &#34;some.css&#34;
+      # located in &#34;assets/&#34; 位于 &#34;assets/&#34;
       # Or 或者
-      # someCSS = "https://cdn.example.com/some.css"
+      # someCSS = &#34;https://cdn.example.com/some.css&#34;
     [page.library.js]
-      jquryMin = "https://libs.baidu.com/jquery/2.1.4/jquery.min.js"
-      #someJavascript = "js/jquery-3.6.3.min.js"
-      # someJavascript = "some.js"
-      # located in "assets/" 位于 "assets/"
+      jquryMin = &#34;https://libs.baidu.com/jquery/2.1.4/jquery.min.js&#34;
+      #someJavascript = &#34;js/jquery-3.6.3.min.js&#34;
+      # someJavascript = &#34;some.js&#34;
+      # located in &#34;assets/&#34; 位于 &#34;assets/&#34;
       # Or 或者
-      # someJavascript = "https://cdn.example.com/some.js"
+      # someJavascript = &#34;https://cdn.example.com/some.js&#34;
   
   # 页面 SEO 配置
   [page.seo]
     # image URL
     # 图片 URL
-    images = ["/images/avatar.png"]
+    images = [&#34;/images/avatar.png&#34;]
     # Publisher info
     # 出版者信息
     [page.seo.publisher]
-      name = "geekswg"
-      logoUrl = "/images/avatar.png"
+      name = &#34;geekswg&#34;
+      logoUrl = &#34;/images/avatar.png&#34;
 
 # TypeIt config
 # TypeIt 配置
@@ -1081,9 +1081,9 @@ disableThemeInject = false
   cursorSpeed = 1000
   # character used for the cursor (HTML format is supported)
   # 光标的字符 (支持 HTML 格式)
-  cursorChar = "|"
-  # cursor duration after typing finishing (measured in milliseconds, "-1" means unlimited)
-  # 打字结束之后光标的持续时间 (单位是毫秒, "-1" 代表无限大)
+  cursorChar = &#34;|&#34;
+  # cursor duration after typing finishing (measured in milliseconds, &#34;-1&#34; means unlimited)
+  # 打字结束之后光标的持续时间 (单位是毫秒, &#34;-1&#34; 代表无限大)
   duration = -1
   # 是否启用循环打字特效
   loop = true
@@ -1095,7 +1095,7 @@ disableThemeInject = false
 [mermaid]
   # For values, see https://mermaid-js.github.io/mermaid/#/Setup?id=theme
   # 取值详见 https://mermaid-js.github.io/mermaid/#/Setup?id=theme
-  themes = ['neutral', 'dark']
+  themes = [&#39;neutral&#39;, &#39;dark&#39;]
 
 # PanguJS config since v0.2.12
 # 盘古之白配置 since v0.2.12
@@ -1103,7 +1103,7 @@ disableThemeInject = false
   # For Chinese writing
   # 适用于中文写作用户
   enable = true
-  selector = "article" # FixIt 0.2.17 | NEW
+  selector = &#34;article&#34; # FixIt 0.2.17 | NEW
 
 # Watermark config since v0.2.12
 # Detail config see https://github.com/Lruihao/watermark#readme
@@ -1111,19 +1111,19 @@ disableThemeInject = false
 # 详细参数见 https://github.com/Lruihao/watermark#readme
 [watermark]
   enable = true
-  # watermark's text (HTML format is supported)
+  # watermark&#39;s text (HTML format is supported)
   # 水印内容 (允许 HTML 格式)
-  content = '<img style="height: 2rem;" src="/images/avatar.webp" alt="logo" /> <span style="font-family:楷体;">毕少侠</span>'
-  # watermark's transparency
+  content = &#39;&lt;img style=&#34;height: 2rem;&#34; src=&#34;/images/avatar.webp&#34; alt=&#34;logo&#34; /&gt; &lt;span style=&#34;font-family:楷体;&#34;&gt;毕少侠&lt;/span&gt;&#39;
+  # watermark&#39;s transparency
   # 水印透明度
   opacity = 0.1000
-  # parent of watermark's container
+  # parent of watermark&#39;s container
   # 水印父节点
-  appendTo = ".wrapper>main"
-  # watermark's width. unit: px
+  appendTo = &#34;.wrapper&gt;main&#34;
+  # watermark&#39;s width. unit: px
   # 单水印宽度 单位：px
   width = 220
-  # watermark's height. unit: px
+  # watermark&#39;s height. unit: px
   # 单水印高度 单位：px
   height = 50
   # row spacing of watermarks. unit: px
@@ -1132,15 +1132,15 @@ disableThemeInject = false
   # col spacing of watermarks. unit: px
   # 水印列间距 单位：px
   colSpacing = 100
-  # watermark's tangent angle. unit: deg
+  # watermark&#39;s tangent angle. unit: deg
   # 水印旋转角度 单位：deg
   rotate = 30
-  # watermark's fontSize. unit: rem
+  # watermark&#39;s fontSize. unit: rem
   # 水印字体大小，单位：rem
   fontSize = 2
-  # watermark's fontFamily
+  # watermark&#39;s fontFamily
   # 水印字体
-  fontFamily = "inherit"
+  fontFamily = &#34;inherit&#34;
 
 # FixIt 0.2.12 | NEW Busuanzi count
 # FixIt 0.2.12 | NEW 不蒜子统计
@@ -1153,23 +1153,23 @@ disableThemeInject = false
 # Site verification code for Google/Bing/Yandex/Pinterest/Baidu/360/Sogou
 # 网站验证代码，用于 Google/Bing/Yandex/Pinterest/Baidu/360/Sogou
 [verification]
-  google = ""
-  bing = ""
-  yandex = ""
-  pinterest = ""
-  baidu = ""
-  so = ""
-  sogou = ""
+  google = &#34;&#34;
+  bing = &#34;&#34;
+  yandex = &#34;&#34;
+  pinterest = &#34;&#34;
+  baidu = &#34;&#34;
+  so = &#34;&#34;
+  sogou = &#34;&#34;
 
 # Site SEO config
 # 网站 SEO 配置
 [seo]
   # image URL
   # 图片 URL
-  image = "/favicon.svg"
+  image = &#34;/favicon.svg&#34;
   # thumbnail URL
   # 缩略图 URL
-  thumbnailUrl = "/favicon.svg"
+  thumbnailUrl = &#34;/favicon.svg&#34;
 
 
 # Analytics config
@@ -1178,16 +1178,16 @@ disableThemeInject = false
   enable = true
   # Google Analytics
   [analytics.google]
-    id = ""
+    id = &#34;&#34;
     # whether to anonymize IP
     # 是否匿名化用户 IP
     anonymizeIP = true
   # Fathom Analytics
   [analytics.fathom]
-    id = ""
-    # server url for your tracker if you're self hosting
+    id = &#34;&#34;
+    # server url for your tracker if you&#39;re self hosting
     # 自行托管追踪器时的主机路径
-    server = ""
+    server = &#34;&#34;
 
 # Cookie consent config
 # Cookie 许可配置
@@ -1196,21 +1196,21 @@ disableThemeInject = false
   # text strings used for Cookie consent banner
   # 用于 Cookie 许可横幅的文本字符串
   [cookieconsent.content]
-    message = ""
-    dismiss = ""
-    link = ""
+    message = &#34;&#34;
+    dismiss = &#34;&#34;
+    link = &#34;&#34;
 
 # CDN config for third-party library files
 # 第三方库文件的 CDN 设置
 [cdn]
-  # CDN data file name, disabled by default ["jsdelivr.yml", "unpkg.yml", ...]
-  # located in "themes/FixIt/assets/data/cdn/" directory
-  # you can store your own data files in the same path under your project: "assets/data/cdn/"
-  # CDN 数据文件名称, 默认不启用 ["jsdelivr.yml", "unpkg.yml", ...]
-  # 位于 "themes/FixIt/assets/data/cdn/" 目录
-  # 可以在你的项目下相同路径存放你自己的数据文件："assets/data/cdn/"
+  # CDN data file name, disabled by default [&#34;jsdelivr.yml&#34;, &#34;unpkg.yml&#34;, ...]
+  # located in &#34;themes/FixIt/assets/data/cdn/&#34; directory
+  # you can store your own data files in the same path under your project: &#34;assets/data/cdn/&#34;
+  # CDN 数据文件名称, 默认不启用 [&#34;jsdelivr.yml&#34;, &#34;unpkg.yml&#34;, ...]
+  # 位于 &#34;themes/FixIt/assets/data/cdn/&#34; 目录
+  # 可以在你的项目下相同路径存放你自己的数据文件：&#34;assets/data/cdn/&#34;
   # 使用 CDN 加速地址文件地址 assets/data/cdn/ 
-  data = "unpkg.yml"
+  data = &#34;unpkg.yml&#34;
 
 # Compatibility config
 # 兼容性设置
@@ -1226,18 +1226,18 @@ disableThemeInject = false
 # 在左上角或者右上角显示 GitHub 开源链接 since v0.2.14
 [githubCorner]
   enable = true
-  permalink = "https://github.com/geekswg/blogFixit/"
-  title = "在 GitHub 查看代码"
-  position = "left" # ["left", "right"]
+  permalink = &#34;https://github.com/geekswg/blogFixit/&#34;
+  title = &#34;在 GitHub 查看代码&#34;
+  position = &#34;left&#34; # [&#34;left&#34;, &#34;right&#34;]
 
 # Gravatar config since v0.2.14
 # Gravatar 设置 since v0.2.14
 [gravatar]
   enable = false
-  # Gravatar host, default: "www.gravatar.com" gravatar头像
+  # Gravatar host, default: &#34;www.gravatar.com&#34; gravatar头像
   # Gravatar 主机，默认：“www.gravatar.com”
-  host = "cn.gravatar.com" # ["cn.gravatar.com", "gravatar.loli.net", ...]
-  style = "mp" # ["", "mp", "identicon", "monsterid", "wavatar", "retro", "blank", "robohash"]
+  host = &#34;cn.gravatar.com&#34; # [&#34;cn.gravatar.com&#34;, &#34;gravatar.loli.net&#34;, ...]
+  style = &#34;mp&#34; # [&#34;&#34;, &#34;mp&#34;, &#34;identicon&#34;, &#34;monsterid&#34;, &#34;wavatar&#34;, &#34;retro&#34;, &#34;blank&#34;, &#34;robohash&#34;]
 
 # Back to top
 # 返回顶部
@@ -1251,16 +1251,16 @@ disableThemeInject = false
 # 阅读进度条
 [readingProgress]
   enable = true
-  # Available values: ["left", "right"]
-  # 可用值：["left", "right"]
-  start = "left"
-  # Available values: ["top", "bottom"]
-  # 可用值：["top", "bottom"]
-  position = "top"
+  # Available values: [&#34;left&#34;, &#34;right&#34;]
+  # 可用值：[&#34;left&#34;, &#34;right&#34;]
+  start = &#34;left&#34;
+  # Available values: [&#34;top&#34;, &#34;bottom&#34;]
+  # 可用值：[&#34;top&#34;, &#34;bottom&#34;]
+  position = &#34;top&#34;
   reversed = false
-  light = "#0076ff"
-  dark = "#fff"
-  height = "2px"
+  light = &#34;#0076ff&#34;
+  dark = &#34;#fff&#34;
+  height = &#34;2px&#34;
 
 # FixIt 0.2.17 | NEW Progress bar in the top during page loading
 # For more information: https://github.com/CodeByZach/pace
@@ -1270,23 +1270,23 @@ disableThemeInject = false
   enable = true
   # All available colors:
   # 所有可用颜色：
-  # ["black", "blue", "green", "orange", "pink", "purple", "red", "silver", "white", "yellow"]
-  color = "blue"
+  # [&#34;black&#34;, &#34;blue&#34;, &#34;green&#34;, &#34;orange&#34;, &#34;pink&#34;, &#34;purple&#34;, &#34;red&#34;, &#34;silver&#34;, &#34;white&#34;, &#34;yellow&#34;]
+  color = &#34;blue&#34;
   # All available themes:
   # 所有可用主题：
-  # ["barber-shop", "big-counter", "bounce", "center-atom", "center-circle", "center-radar", "center-simple",
-  # "corner-indicator", "fill-left", "flash", "flat-top", "loading-bar", "mac-osx", "material", "minimal"]
-  theme = "loading-bar"
+  # [&#34;barber-shop&#34;, &#34;big-counter&#34;, &#34;bounce&#34;, &#34;center-atom&#34;, &#34;center-circle&#34;, &#34;center-radar&#34;, &#34;center-simple&#34;,
+  # &#34;corner-indicator&#34;, &#34;fill-left&#34;, &#34;flash&#34;, &#34;flat-top&#34;, &#34;loading-bar&#34;, &#34;mac-osx&#34;, &#34;material&#34;, &#34;minimal&#34;]
+  theme = &#34;loading-bar&#34;
 
 # Define custom file paths
 # Create your custom files in site directory `layouts/partials/custom` and uncomment needed files below
 # 定义自定义文件路径
 # 在站点目录 `layouts/partials/custom` 中创建您的自定义文件，并取消注释下面需要的文件
 [customFilePath]
-  # aside = "custom/aside.html"
-  # profile = "custom/profile.html"
-  footer = "custom/footer.html"
-  aside = "custom/aside.html"
+  # aside = &#34;custom/aside.html&#34;
+  # profile = &#34;custom/profile.html&#34;
+  footer = &#34;custom/footer.html&#34;
+  aside = &#34;custom/aside.html&#34;
 
 # Developer options since v0.2.15
 # 开发者选项 since v0.2.15
@@ -1297,14 +1297,14 @@ disableThemeInject = false
   c4u = false
   # For using the GitHub API, please do not expose to public!
   # 用于使用 GitHub API，请勿公开展示！
-  githubToken = ""
+  githubToken = &#34;&#34;
   # Mobile Devtools config
   # 移动端开发者工具配置
   [dev.mDevtools]
     enable = false
-    # "vConsole", "eruda" supported
-    # 支持 "vConsole", "eruda"
-    type = "vConsole"
+    # &#34;vConsole&#34;, &#34;eruda&#34; supported
+    # 支持 &#34;vConsole&#34;, &#34;eruda&#34;
+    type = &#34;vConsole&#34;
 ```
 
 
@@ -1312,6 +1312,6 @@ disableThemeInject = false
 
 ---
 
-> 作者: [geekswg](https://geekswg.github.io)  
+> 作者: [geekswg](https://github.com/geekswg)  
 > URL: https://geekswg.github.io/posts/2023/fixit-beautification/  
 
