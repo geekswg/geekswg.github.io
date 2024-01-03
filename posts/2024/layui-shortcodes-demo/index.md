@@ -121,7 +121,7 @@ https://github.com/kubernetes/website/blob/main/layouts/shortcodes/tabs.html
 
 ```html {title=&#34;示例代码&#34;}
 {{&lt;/* timeline */&gt;}}
-{{%/* tl-event title=&#34;2024-01-03&#34; %*/}}
+{{%/* tl-event title=&#34;2024-01-03&#34; */%}}
 支持`MD`语法
 {{%/* /tl-event */%}}
 {{%/* tl-event title=&#34;2023-11-03&#34; */%}}
