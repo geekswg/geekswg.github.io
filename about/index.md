@@ -1,6 +1,6 @@
 # 关于-About
 
-关于我-about me
+
 &lt;!--more--&gt;
 {{&lt; typeit &gt;}}
 &lt;center&gt;
