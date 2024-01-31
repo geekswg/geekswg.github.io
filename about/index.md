@@ -53,7 +53,6 @@
     &lt;a href=&#34;https://geekswg.js.cool/&#34;&gt;&lt;img src=&#34;https://img.shields.io/badge/Website-博客-blue&#34; /&gt;&lt;/a&gt;&amp;emsp;
     &lt;a href=&#34;https://twitter.com/geekswg/&#34;&gt;&lt;img src=&#34;https://img.shields.io/badge/Twitter-推特-blue&#34; /&gt;&lt;/a&gt;&amp;emsp;
     &lt;a href=&#34;https://www.youtube.com/@geekswg&#34;&gt;&lt;img src=&#34;https://img.shields.io/badge/YouTube-油管-c32136&#34; /&gt;&lt;/a&gt;&amp;emsp;
-    &lt;a href=&#34;https://geekswg.js.cool/&#34;&gt;&lt;img src=&#34;https://img.shields.io/badge/WeChat-微信-07c160&#34; /&gt;&lt;/a&gt;&amp;emsp;
     &lt;a href=&#34;https://space.bilibili.com/39865904/&#34;&gt;&lt;img src=&#34;https://img.shields.io/badge/Bilibili-B站-ff69b4&#34; /&gt;&lt;/a&gt;&amp;emsp;
     &lt;a href=&#34;https://blog.csdn.net/geekswg/&#34;&gt;&lt;img src=&#34;https://img.shields.io/badge/CSDN-论坛-c32136&#34; /&gt;&lt;/a&gt;&amp;emsp;
     &lt;a href=&#34;https://www.zhihu.com/people/geekswg/&#34;&gt;&lt;img src=&#34;https://img.shields.io/badge/Zhihu-知乎-blue&#34; /&gt;&lt;/a&gt;&amp;emsp;
