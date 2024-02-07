@@ -40,6 +40,21 @@ hugo serve -e production -D
 
 ```
 
+### hugo-modules相关
+
+[hugo-modules](https://gohugo.io/hugo-modules/use-modules/) 官方文档说明
+
+```bash
+# 更新模块 Update all modules
+hugo mod get -u
+# Update all modules recursively
+hugo mod get -u ./...
+# Update one module
+hugo mod get -u github.com/hugo-fixit/FixIt
+# Get a specific version (e.g. v0.3.2, @latest, @master, @dev)
+hugo mod get github.com/hugo-fixit/FixIt@v0.3.2
+```
+
 ## git相关命令
 
 &gt; git clone 自动下载子模块
@@ -59,5 +74,5 @@ git submodule update --init
 ---
 
 > 作者: [geekswg](https://github.com/geekswg)  
-> URL: https://geekswg.github.io/mydocs/notes/  
+> URL: https://geekswg.github.io/mydocs/hugo-guideline/  
 
