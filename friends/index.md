@@ -51,7 +51,11 @@ document.addEventListener(&#39;DOMContentLoaded&#39;, () =&gt; {
   //document.getElementById(&#39;friend-posts&#39;).innerHTML = &#39;DOMContentLoaded&#39;;
   //randomPost();
   let allPosts = [];
-  let rssURls = [&#39;https://lruihao.cn/index.xml&#39;,&#39;https://geekswg.js.cool/index.xml&#39;];
+  let rssURls = [&#39;https://lruihao.cn/index.xml&#39;
+  ,&#39;https://geekswg.js.cool/index.xml&#39;
+  ,&#39;https://fixit.lruihao.cn/zh-cn/index.xml&#39;
+  ,&#39;https://lewky.cn/index.xml&#39;
+  ];
   //rssPosts(&#34;https://lruihao.cn/index.xml&#34;,2,allPosts);
   rssURls.forEach(rssURl=&gt;{
     rssPosts(rssURl,5,allPosts);
@@ -67,6 +71,9 @@ function rssPosts (rssURl,postCount,allPosts){
         //alert(&#39;fetch-data=&gt;&#39;&#43; xml2String(data));
         //解析rssxml
         let eles = data.getElementsByTagName(&#39;item&#39;);
+        if(eles.length &lt;1){
+          eles = data.getElementsByTagName(&#39;entry&#39;);
+        }
         //alert(&#39;eles.length=&gt;&#39;&#43; eles.length);
         let count = eles.length &gt; postCount ? postCount : eles.length;
         for(let i=0; i&lt;count; i&#43;&#43;){
@@ -91,19 +98,27 @@ function appendShowPost(eleID,post){
   let ele = document.getElementById(eleID);
   ele.innerHTML = ele.innerHTML &#43; 
   &#39;&lt;div style=&#34;width:200px;&#34;&gt;&lt;a href=&#34;&#39;
-  &#43; post.link &#43; &#39;&#34;&gt; &lt;h4&gt;&#39;&#43; post.title &#43;&#39;&lt;/h4&gt;&lt;p&gt;&#39;&#43; post.author &#43;&#39;&lt;/p&gt;&lt;p&gt;&#39;&#43; post.pubDate &#43;&#39;&lt;/p&gt;&#39;
+  &#43; post.link &#43; &#39;&#34;&gt; &lt;h4&gt;&#39;&#43; post.title &#43;&#39;&lt;/h4&gt;&lt;p&gt;&#39;&#43; post.author &#43;&#39;&lt;/p&gt;&lt;p&gt;&#39;&#43; formatDateStr(post.pubDate) &#43;&#39;&lt;/p&gt;&#39;
   //&#43;&#39;&lt;p&gt;&#39;&#43; post.description.slice(0.20) &#43; &#39;&lt;/p&gt;&#39;
   &#43;&#39;&lt;/a&gt;&lt;/div&gt;&#39;;
 }
-function showAllPosts(ele,allPosts){
-  for(let i=0; i&lt;allPosts.length; i&#43;&#43;){
-    ele.innerHTML &#43;= &#39;&lt;div&gt;&lt;h3&gt;&#39;&#43; allPosts[i].title &#43;&#39;&lt;/h3&gt;&lt;p&gt;&#39;&#43; allPosts[i].description &#43;&#39;&lt;/p&gt;&lt;p&gt;&#39;&#43; allPosts[i].pubDate &#43;&#39;&lt;/p&gt;&lt;p&gt;&#39;&#43; allPosts[i].author
-    &#43;&#39;&lt;/p&gt;&lt;p&gt;&#39;&#43; allPosts[i].link &#43;
-    &#39;&lt;/p&gt;&lt;/div&gt;&#39;;
-    ele.innerHTML &#43;= &#39;&lt;hr&gt;&#39;;
-  }
-}
 
+function formatDateStr(str){
+  // 给定的日期字符串
+  var dateString = &#39;Wed, 17 Jan 2024 14:57:48 &#43;0800&#39;;
+  // 创建 Date 对象并解析日期
+  var date = new Date(str);
+  // 获取日期的各个部分
+  var year = date.getFullYear();
+  var month = (&#39;0&#39; &#43; (date.getMonth() &#43; 1)).slice(-2);
+  var day = (&#39;0&#39; &#43; date.getDate()).slice(-2);
+  var hours = (&#39;0&#39; &#43; date.getHours()).slice(-2);
+  var minutes = (&#39;0&#39; &#43; date.getMinutes()).slice(-2);
+  var seconds = (&#39;0&#39; &#43; date.getSeconds()).slice(-2);
+  // 格式化日期
+  var formattedDate = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+  return formattedDate;
+}
 function xml2String(xmlObject) {
   //所有浏览器统一用这种方式处理(因为高版本的浏览器都支持)
   return (new XMLSerializer()).serializeToString(xmlObject);
