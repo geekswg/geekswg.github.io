@@ -21,6 +21,6 @@ note abstract info tip success question warning failure danger bug example quote
 
 ---
 
-> 作者: [geekswg](https://github.com/geekswg)  
+> 作者:   
 > URL: https://geekswg.github.io/funs/funs-index/  
 

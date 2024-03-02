@@ -150,6 +150,6 @@
 
 ---
 
-> 作者: [geekswg](https://github.com/geekswg)  
+> 作者:   
 > URL: https://geekswg.github.io/funs/album/css3-fullscreen-accordion-image/  
 

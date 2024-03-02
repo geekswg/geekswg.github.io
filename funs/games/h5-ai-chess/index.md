@@ -76,6 +76,6 @@
 
 ---
 
-> 作者: [geekswg](https://github.com/geekswg)  
+> 作者:   
 > URL: https://geekswg.github.io/funs/games/h5-ai-chess/  
 

@@ -20,6 +20,6 @@
 
 ---
 
-> 作者: [geekswg](https://github.com/geekswg)  
+> 作者:   
 > URL: https://geekswg.github.io/funs/pages/games-2048/  
 

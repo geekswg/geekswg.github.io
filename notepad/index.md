@@ -23,6 +23,6 @@ tip: 👆 点击上面随机播放音乐☝️
 
 ---
 
-> 作者: [geekswg](https://github.com/geekswg)  
+> 作者:   
 > URL: https://geekswg.github.io/notepad/  
 
