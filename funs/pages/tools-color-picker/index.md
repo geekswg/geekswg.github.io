@@ -14,10 +14,10 @@
 &lt;/head&gt;
 &lt;body&gt;
   &lt;h2&gt;颜色拾取&lt;/h2&gt;
-  &lt;iframe allowtransparency=&#34;true&#34; frameborder=&#34;0&#34; width=&#34;100%&#34; height=&#34;580px&#34; scrolling=&#34;no&#34; src=&#34;/funs/tools/svg-html5-circle-color-picker/index.html&#34;&gt;&lt;/iframe&gt;
+  &lt;iframe allowtransparency=&#34;true&#34; frameborder=&#34;0&#34; width=&#34;100%&#34; height=&#34;580px&#34; scrolling=&#34;no&#34; src=&#34;/html/tools/svg-html5-circle-color-picker/index.html&#34;&gt;&lt;/iframe&gt;
 
   &lt;h2&gt;vue渐变色拾取&lt;/h2&gt;
-  &lt;iframe allowtransparency=&#34;true&#34; frameborder=&#34;0&#34; width=&#34;100%&#34; height=&#34;720px&#34; scrolling=&#34;no&#34; src=&#34;/funs/tools/vue-gradient-editor/index.html&#34;&gt;&lt;/iframe&gt;
+  &lt;iframe allowtransparency=&#34;true&#34; frameborder=&#34;0&#34; width=&#34;100%&#34; height=&#34;720px&#34; scrolling=&#34;no&#34; src=&#34;/html/tools/vue-gradient-editor/index.html&#34;&gt;&lt;/iframe&gt;
 
 &lt;/body&gt;
 &lt;/html&gt;

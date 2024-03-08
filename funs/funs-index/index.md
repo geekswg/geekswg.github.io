@@ -15,7 +15,7 @@ note abstract info tip success question warning failure danger bug example quote
 
 &lt;body&gt;
   &lt;h2&gt;funs-index 目录导航&lt;/h2&gt;
-  &lt;iframe allowtransparency=&#34;true&#34; frameborder=&#34;0&#34; width=&#34;100%&#34; height=&#34;680px&#34; scrolling=&#34;no&#34; src=&#34;/funs/menu/pc-menu/index.html&#34;&gt;&lt;/iframe&gt;
+  &lt;iframe allowtransparency=&#34;true&#34; frameborder=&#34;0&#34; width=&#34;100%&#34; height=&#34;680px&#34; scrolling=&#34;no&#34; src=&#34;/html/menu/pc-menu/index.html&#34;&gt;&lt;/iframe&gt;
 &lt;/body&gt;
 &lt;/html&gt;
 

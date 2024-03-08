@@ -15,7 +15,7 @@
 &lt;/head&gt;
 &lt;body&gt;
   &lt;h2&gt;有趣的键盘特效，一起来练习打字吧！&lt;/h2&gt;
-  &lt;iframe allowtransparency=&#34;true&#34; frameborder=&#34;0&#34; width=&#34;100%&#34; height=&#34;620px&#34; scrolling=&#34;no&#34; src=&#34;/funs/tools/jquery-cool-keyboard/index.html&#34;&gt;&lt;/iframe&gt;
+  &lt;iframe allowtransparency=&#34;true&#34; frameborder=&#34;0&#34; width=&#34;100%&#34; height=&#34;620px&#34; scrolling=&#34;no&#34; src=&#34;/html/tools/jquery-cool-keyboard/index.html&#34;&gt;&lt;/iframe&gt;
 &lt;/body&gt;
 &lt;/html&gt;
 

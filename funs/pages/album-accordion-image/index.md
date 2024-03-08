@@ -14,7 +14,7 @@
 &lt;/head&gt;
 &lt;body&gt;
   &lt;h2&gt;accordion-image 相册&lt;/h2&gt;
-  &lt;iframe allowtransparency=&#34;true&#34; frameborder=&#34;0&#34; width=&#34;100%&#34; height=&#34;620px&#34; scrolling=&#34;no&#34; src=&#34;/funs/album/css3-fullscreen-accordion-image/index.html&#34;&gt;&lt;/iframe&gt;
+  &lt;iframe allowtransparency=&#34;true&#34; frameborder=&#34;0&#34; width=&#34;100%&#34; height=&#34;620px&#34; scrolling=&#34;no&#34; src=&#34;/html/album/css3-fullscreen-accordion-image/index.html&#34;&gt;&lt;/iframe&gt;
 &lt;/body&gt;
 &lt;/html&gt;
 
