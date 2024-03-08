@@ -16,7 +16,7 @@
 
 ## 自定义css
 
-&gt; 文件位置 /assets\css/_custom.scss
+&gt; 文件位置 /assets/css/_custom.scss
 
 ### div滚动条样式
 ```css
@@ -35,6 +35,30 @@ div::-webkit-scrollbar {  /* 仅对webkit内核浏览器生效如 chrome edge */
   /*display: none;*/ /*隐藏滚动条*/
 }
 /************************** div 滚动条样式设定 **************************/
+```
+
+
+### 自定义文章网格背景
+
+&gt; 在`/assets/css/_custom.scss`文件中添加如下代码：
+
+```css {title=&#34;/assets/css/_custom.scss&#34;}
+/** 添加网格背景 */
+.single {
+  .single-subtitle {
+    color: #57606a;
+  }
+
+  .content {
+    background-image: linear-gradient(90deg, rgba(60, 10, 30, .04) 3%, transparent 0), linear-gradient(1turn, rgba(60, 10, 30, .04) 3%, transparent 0);
+    background-size: 20px 20px;
+    background-position: center;
+  
+    [data-theme=&#39;dark&#39;] &amp; {
+      background-image: linear-gradient(90deg, rgba(195, 245, 215, .04) 3%, transparent 0), linear-gradient(1turn, rgba(195, 245, 215, .04) 3%, transparent 0);
+    }
+  }
+}
 ```
 
 ## 自定义js
