@@ -28,7 +28,7 @@ Do no evil ！
 |:--|:------|:--|
 |[Office部署工具](https://otp.landian.vip/zh-cn/download.html)|一个强大且实用的 Office 部署工具。系统要求：Windows 7 SP1 或更高版本，不支持其他操作系统（例如 Linux 或 macOS）。|推荐安装绿色免费好管理|
 |[verycapture](https://verycapture.com/cn/download.html)|VeryCapture专业的屏幕截取软件，提升办公效率，让用户有更多时间投入业务|截图、免费、            |
-|[音乐-lx-music](https://lxmusic.toside.cn/)|一个免费&amp;开源的音乐查找工具|手机电脑双端、绿色、音乐、下载手机电脑双端、绿色、音乐、下载|
+|[音乐-lx-music](https://docs.lxmusic.top/)|一个免费&amp;开源的音乐查找工具|手机电脑双端、绿色、音乐、下载手机电脑双端、绿色、音乐、下载|
 |[FastGithub](https://github.com/dotnetcore/FastGithub/releases)|github加速神器，解决github打不开、用户头像无法加载、releases无法上传下载、git-clone、git-pull、git-push失败等问题。|国内稳定访问|
 |[V2rayN科学上网](https://github.com/2dust/v2rayN/releases)|科学上网客户端软件|[#订阅地址](#free)|
 |[7-Zip](https://www.7-zip.org/)|7-Zip is free software with open source. 高效，高压，开源，小巧|别再用winrar了，缺点UI丑了点|
@@ -49,20 +49,29 @@ Do no evil ！
 👉 [点击这里查看](http://geekswg.js.cool/website/ &#34;网站收藏&#34;)
 
 ## 浏览器插件
-
-### nbtab
+### 起始页
+#### nbtab
 
 &gt; 简约不简单，浏览器tab页 
-![230330-nbtab](https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/posts2023/230330-nbtab.webp &#34;nbtab&#34;)
+![230330-nbtab](https://jsd.cdn.zzko.cn/gh/geekswg/static@main/blog-img/posts2023/230330-nbtab.webp &#34;nbtab&#34;)
 
-### wetab
+#### wetab
 &gt; wetab, chatgpt组件非常好。
-![230330-wetab](https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/posts2023/230330-wetab.webp &#34;wetab&#34;)
+![230330-wetab](https://jsd.cdn.zzko.cn/gh/geekswg/static@main/blog-img/posts2023/230330-wetab.webp &#34;wetab&#34;)
 
-### itab
+#### itab
 
 &gt; 功能丰富，插件多。
-![230330-itab](https://cdn.staticaly.com/gh/geekswg/static@main/blog-img/posts2023/230330-itab.webp &#34;itab&#34;)
+![230330-itab](https://jsd.cdn.zzko.cn/gh/geekswg/static@main/blog-img/posts2023/230330-itab.webp &#34;itab&#34;)
+
+### 翻译插件
+
+[沉浸式翻译](https://immersivetranslate.com/)，超级好用的翻译插件
+一键开启双语阅读，提升信息获取效率
+“沉浸式翻译”这个词，由我们发明创造。如今，它已然成为“双语对照翻译”的代名词。自2023年上线以来，这款备受赞誉的 AI 双语对照网页翻译扩展，已帮助超过 100 万用户跨越语言障碍，自由汲取全球智慧。我们坚信，打破语言壁垒，就是在促进信息平权。
+
+### 图片批量下载
+超级好用的网页图片批量下载，[imgget-image-downloader](https://microsoftedge.microsoft.com/addons/detail/imgget-image-downloader/piedaibadbdgjpakmphhnfniimfngnfn?hl=zh-CN)
 
 ## other-其他
 
