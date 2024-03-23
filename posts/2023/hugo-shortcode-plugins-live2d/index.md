@@ -45,5 +45,5 @@ https://github.com/fixit-theme/hugo-shortcode-plugins-live2d
 ---
 
 > 作者: [geekswg](https://github.com/geekswg)  
-> URL: https://geekswg.github.io/posts/2023/hugo-shortcode-plugins-live2d/  
+> URL: https://geekswg.js.cool/posts/2023/hugo-shortcode-plugins-live2d/  
 

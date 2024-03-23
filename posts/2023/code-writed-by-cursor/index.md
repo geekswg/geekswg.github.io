@@ -164,5 +164,5 @@ while (i &lt; arr.length)
 ---
 
 > 作者: [Cursor](https://www.cursor.so/)  
-> URL: https://geekswg.github.io/posts/2023/code-writed-by-cursor/  
+> URL: https://geekswg.js.cool/posts/2023/code-writed-by-cursor/  
 

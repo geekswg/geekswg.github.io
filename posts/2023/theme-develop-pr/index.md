@@ -39,5 +39,5 @@ fork源项目到自己github仓库。
 ---
 
 > 作者: [geekswg](https://github.com/geekswg)  
-> URL: https://geekswg.github.io/posts/2023/theme-develop-pr/  
+> URL: https://geekswg.js.cool/posts/2023/theme-develop-pr/  
 

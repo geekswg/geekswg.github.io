@@ -73,5 +73,5 @@
 ---
 
 > 作者:   
-> URL: https://geekswg.github.io/about/  
+> URL: https://geekswg.js.cool/about/  
 

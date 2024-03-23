@@ -5,5 +5,5 @@
 ---
 
 > 作者:   
-> URL: https://geekswg.github.io/offline/  
+> URL: https://geekswg.js.cool/offline/  
 

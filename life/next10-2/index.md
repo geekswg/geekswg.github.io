@@ -5,5 +5,5 @@
 ---
 
 > 作者: [geekswg](https://github.com/geekswg)  
-> URL: https://geekswg.github.io/life/next10-2/  
+> URL: https://geekswg.js.cool/life/next10-2/  
 

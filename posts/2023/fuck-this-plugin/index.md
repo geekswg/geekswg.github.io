@@ -71,5 +71,5 @@ image
 ---
 
 > 作者: [geekswg](https://github.com/geekswg)  
-> URL: https://geekswg.github.io/posts/2023/fuck-this-plugin/  
+> URL: https://geekswg.js.cool/posts/2023/fuck-this-plugin/  
 > 转载 URL: https://blog.moeworld.tech/2022/09/03/%e5%8e%bb%e4%bd%a0%e7%9a%84%e5%b9%bf%e5%91%8a%e7%bb%88%e7%bb%93%e8%80%85%ef%bc%81%e5%b9%b2%e6%8e%8951xiaolu-com/

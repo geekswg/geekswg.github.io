@@ -37,5 +37,5 @@ it(B = &#34;\\\\&#34;)./*           G####B&#34; #       */join(B&#43;B).split\
 ---
 
 > 作者: [geekswg](https://github.com/geekswg)  
-> URL: https://geekswg.github.io/posts/2023/js-hello-world/  
+> URL: https://geekswg.js.cool/posts/2023/js-hello-world/  
 

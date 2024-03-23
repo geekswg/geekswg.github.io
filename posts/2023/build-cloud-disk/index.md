@@ -42,5 +42,5 @@ Cloudreve 可以让您快速搭建起公私兼备的网盘系统。Cloudreve 在
 ---
 
 > 作者: [geekswg](https://github.com/geekswg)  
-> URL: https://geekswg.github.io/posts/2023/build-cloud-disk/  
+> URL: https://geekswg.js.cool/posts/2023/build-cloud-disk/  
 

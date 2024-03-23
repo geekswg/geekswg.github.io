@@ -1,4 +1,4 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>demo - 标签 | 毕少侠</title><link>https://geekswg.github.io/tags/demo/</link><description>demo - 标签 | 毕少侠</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>geekswg@qq.com (geekswg)</managingEditor><webMaster>geekswg@qq.com (geekswg)</webMaster><copyright>geekswg &amp; 毕少侠</copyright><lastBuildDate>Wed, 03 Jan 2024 09:35:22 +0800</lastBuildDate><atom:link href="https://geekswg.github.io/tags/demo/" rel="self" type="application/rss+xml"/><item><title>Layui Shortcodes Demo</title><link>https://geekswg.github.io/posts/2024/layui-shortcodes-demo/</link><pubDate>Wed, 03 Jan 2024 09:35:22 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/posts/2024/layui-shortcodes-demo/</guid><description><![CDATA[<div class="featured-image"><img loading="eager" src="/images/posts/featured-image-preview.jpg" alt="Layui Shortcodes Demo" title="摘要" referrerpolicy="no-referrer"/></div><div class="details admonition note open">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>demo - 标签 | 毕少侠</title><link>https://geekswg.js.cool/tags/demo/</link><description>demo - 标签 | 毕少侠</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>geekswg@qq.com (geekswg)</managingEditor><webMaster>geekswg@qq.com (geekswg)</webMaster><copyright>geekswg &amp; 毕少侠</copyright><lastBuildDate>Wed, 03 Jan 2024 09:35:22 +0800</lastBuildDate><atom:link href="https://geekswg.js.cool/tags/demo/" rel="self" type="application/rss+xml"/><item><title>Layui Shortcodes Demo</title><link>https://geekswg.js.cool/posts/2024/layui-shortcodes-demo/</link><pubDate>Wed, 03 Jan 2024 09:35:22 +0800</pubDate><author>geekswg</author><guid>https://geekswg.js.cool/posts/2024/layui-shortcodes-demo/</guid><description><![CDATA[<div class="featured-image"><img loading="eager" src="/images/posts/featured-image-preview.jpg" alt="Layui Shortcodes Demo" title="摘要" referrerpolicy="no-referrer"/></div><div class="details admonition note open">
     <div class="details-summary admonition-title">
       <i class="icon fa-solid fa-pencil-alt fa-fw" aria-hidden="true"></i>注意<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i>
     </div>
@@ -11,7 +11,7 @@
 <li>不善前端</li>
 <li>ui组件全</li>
 <li>符合我的审美</li>
-</ul>]]></description></item><item><title>timeline2</title><link>https://geekswg.github.io/posts/2023/timeline2/</link><pubDate>Wed, 31 May 2023 18:14:48 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/posts/2023/timeline2/</guid><description><![CDATA[<div class="featured-image"><img loading="eager" src="/images/posts/featured-image-preview.jpg" alt="timeline2" title="摘要" referrerpolicy="no-referrer"/></div><p><div class="details admonition quote open">
+</ul>]]></description></item><item><title>timeline2</title><link>https://geekswg.js.cool/posts/2023/timeline2/</link><pubDate>Wed, 31 May 2023 18:14:48 +0800</pubDate><author>geekswg</author><guid>https://geekswg.js.cool/posts/2023/timeline2/</guid><description><![CDATA[<div class="featured-image"><img loading="eager" src="/images/posts/featured-image-preview.jpg" alt="timeline2" title="摘要" referrerpolicy="no-referrer"/></div><p><div class="details admonition quote open">
     <div class="details-summary admonition-title">
       <i class="icon fa-solid fa-quote-right fa-fw" aria-hidden="true"></i>quote<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i>
     </div>
@@ -19,7 +19,7 @@
       <div class="admonition-content">note abstract info tip success question warning failure danger bug example quote</div>
     </div>
   </div><br>
-这里使用MD语法编写你的文章</p>]]></description></item><item><title>Timeline</title><link>https://geekswg.github.io/posts/2023/timeline/</link><pubDate>Tue, 30 May 2023 18:14:48 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/posts/2023/timeline/</guid><description><![CDATA[<div class="featured-image"><img loading="eager" src="/images/posts/featured-image-preview.jpg" alt="Timeline" title="摘要" referrerpolicy="no-referrer"/></div><p><div class="details admonition quote open">
+这里使用MD语法编写你的文章</p>]]></description></item><item><title>Timeline</title><link>https://geekswg.js.cool/posts/2023/timeline/</link><pubDate>Tue, 30 May 2023 18:14:48 +0800</pubDate><author>geekswg</author><guid>https://geekswg.js.cool/posts/2023/timeline/</guid><description><![CDATA[<div class="featured-image"><img loading="eager" src="/images/posts/featured-image-preview.jpg" alt="Timeline" title="摘要" referrerpolicy="no-referrer"/></div><p><div class="details admonition quote open">
     <div class="details-summary admonition-title">
       <i class="icon fa-solid fa-quote-right fa-fw" aria-hidden="true"></i>quote<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i>
     </div>
@@ -27,7 +27,7 @@
       <div class="admonition-content">note abstract info tip success question warning failure danger bug example quote</div>
     </div>
   </div><br>
-这里使用MD语法编写你的文章</p>]]></description></item><item><title>我的第一个 Hugo 博客</title><link>https://geekswg.github.io/posts/2022/demo/</link><pubDate>Sat, 01 Jan 2022 12:15:22 +0800</pubDate><author>geekswg</author><guid>https://geekswg.github.io/posts/2022/demo/</guid><description><![CDATA[<div class="featured-image"><img loading="eager" src="/images/posts/featured-image-preview.jpg" alt="我的第一个 Hugo 博客" title="我的第一个 Hugo 博客" referrerpolicy="no-referrer"/></div><h2 id="我的hugo博客" class="heading-element">
+这里使用MD语法编写你的文章</p>]]></description></item><item><title>我的第一个 Hugo 博客</title><link>https://geekswg.js.cool/posts/2022/demo/</link><pubDate>Sat, 01 Jan 2022 12:15:22 +0800</pubDate><author>geekswg</author><guid>https://geekswg.js.cool/posts/2022/demo/</guid><description><![CDATA[<div class="featured-image"><img loading="eager" src="/images/posts/featured-image-preview.jpg" alt="我的第一个 Hugo 博客" title="我的第一个 Hugo 博客" referrerpolicy="no-referrer"/></div><h2 id="我的hugo博客" class="heading-element">
   <a href="#%e6%88%91%e7%9a%84hugo%e5%8d%9a%e5%ae%a2" class="heading-mark"></a>1 我的Hugo博客</h2><pre><code>我的第一个Hugo博客。
 </code></pre>
 <blockquote>

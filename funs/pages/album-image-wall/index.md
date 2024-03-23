@@ -21,5 +21,5 @@
 ---
 
 > 作者:   
-> URL: https://geekswg.github.io/funs/pages/album-image-wall/  
+> URL: https://geekswg.js.cool/funs/pages/album-image-wall/  
 

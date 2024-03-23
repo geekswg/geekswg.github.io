@@ -66,5 +66,5 @@ Netlify加速Github-Pags 操作简单，目前国内可直接访问
 ---
 
 > 作者: [geekswg](https://github.com/geekswg)  
-> URL: https://geekswg.github.io/posts/2023/my-first-domain/  
+> URL: https://geekswg.js.cool/posts/2023/my-first-domain/  
 

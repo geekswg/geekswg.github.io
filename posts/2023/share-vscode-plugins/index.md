@@ -33,5 +33,5 @@ note abstract info tip success question warning failure danger bug example quote
 ---
 
 > 作者: [geekswg](https://github.com/geekswg)  
-> URL: https://geekswg.github.io/posts/2023/share-vscode-plugins/  
+> URL: https://geekswg.js.cool/posts/2023/share-vscode-plugins/  
 

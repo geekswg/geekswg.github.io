@@ -61,5 +61,5 @@ SwitchHosts 是一个管理、切换多个 hosts 方案的工具。 它是一个
 ---
 
 > 作者: [geekswg](https://github.com/geekswg)  
-> URL: https://geekswg.github.io/posts/2023/new-bing-visit/  
+> URL: https://geekswg.js.cool/posts/2023/new-bing-visit/  
 

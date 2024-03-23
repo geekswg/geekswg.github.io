@@ -14,5 +14,5 @@
 ---
 
 > 作者: [geekswg](https://github.com/geekswg)  
-> URL: https://geekswg.github.io/posts/2022/demo3/  
+> URL: https://geekswg.js.cool/posts/2022/demo3/  
 

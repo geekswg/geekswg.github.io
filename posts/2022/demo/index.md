@@ -23,5 +23,5 @@ markdown 语法
 ---
 
 > 作者: [geekswg](https://github.com/geekswg)  
-> URL: https://geekswg.github.io/posts/2022/demo/  
+> URL: https://geekswg.js.cool/posts/2022/demo/  
 

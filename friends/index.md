@@ -130,5 +130,5 @@ function xml2String(xmlObject) {
 ---
 
 > 作者:   
-> URL: https://geekswg.github.io/friends/  
+> URL: https://geekswg.js.cool/friends/  
 

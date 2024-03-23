@@ -637,5 +637,5 @@ $1,000
 ---
 
 > 作者: [geekswg](https://github.com/geekswg)  
-> URL: https://geekswg.github.io/posts/2023/docs-style-guide/  
+> URL: https://geekswg.js.cool/posts/2023/docs-style-guide/  
 > 转载 URL: https://lruihao.cn/posts/document-style-guide/

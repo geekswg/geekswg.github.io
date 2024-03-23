@@ -21,5 +21,5 @@
 ---
 
 > 作者:   
-> URL: https://geekswg.github.io/funs/pages/album-3d-carousel/  
+> URL: https://geekswg.js.cool/funs/pages/album-3d-carousel/  
 

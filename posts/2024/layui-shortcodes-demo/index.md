@@ -165,5 +165,5 @@ https://github.com/kubernetes/website/blob/main/layouts/shortcodes/tabs.html
 ---
 
 > 作者: [geekswg](https://github.com/geekswg)  
-> URL: https://geekswg.github.io/posts/2024/layui-shortcodes-demo/  
+> URL: https://geekswg.js.cool/posts/2024/layui-shortcodes-demo/  
 

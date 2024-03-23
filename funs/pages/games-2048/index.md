@@ -21,5 +21,5 @@
 ---
 
 > 作者:   
-> URL: https://geekswg.github.io/funs/pages/games-2048/  
+> URL: https://geekswg.js.cool/funs/pages/games-2048/  
 

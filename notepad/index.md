@@ -24,5 +24,5 @@ tip: 👆 点击上面随机播放音乐☝️
 ---
 
 > 作者:   
-> URL: https://geekswg.github.io/notepad/  
+> URL: https://geekswg.js.cool/notepad/  
 

@@ -22,5 +22,5 @@
 ---
 
 > 作者:   
-> URL: https://geekswg.github.io/funs/pages/games-cube/  
+> URL: https://geekswg.js.cool/funs/pages/games-cube/  
 

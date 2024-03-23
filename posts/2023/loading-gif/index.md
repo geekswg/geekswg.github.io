@@ -22,5 +22,5 @@ loading.gif 透明加载动画
 ---
 
 > 作者: [geekswg](https://github.com/geekswg)  
-> URL: https://geekswg.github.io/posts/2023/loading-gif/  
+> URL: https://geekswg.js.cool/posts/2023/loading-gif/  
 

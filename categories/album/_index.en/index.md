@@ -5,5 +5,5 @@
 ---
 
 > 作者:   
-> URL: https://geekswg.github.io/categories/album/_index.en/  
+> URL: https://geekswg.js.cool/categories/album/_index.en/  
 

@@ -22,5 +22,5 @@
 ---
 
 > 作者:   
-> URL: https://geekswg.github.io/funs/pages/tools-jq-keybord/  
+> URL: https://geekswg.js.cool/funs/pages/tools-jq-keybord/  
 

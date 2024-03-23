@@ -151,5 +151,5 @@
 ---
 
 > 作者: [geekswg](https://github.com/geekswg)  
-> URL: https://geekswg.github.io/posts/2018/links/  
+> URL: https://geekswg.js.cool/posts/2018/links/  
 

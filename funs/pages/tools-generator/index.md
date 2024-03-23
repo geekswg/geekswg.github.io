@@ -22,5 +22,5 @@
 ---
 
 > 作者:   
-> URL: https://geekswg.github.io/funs/pages/tools-generator/  
+> URL: https://geekswg.js.cool/funs/pages/tools-generator/  
 

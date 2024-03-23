@@ -21,5 +21,5 @@
 ---
 
 > 作者:   
-> URL: https://geekswg.github.io/funs/pages/games-ai-chess/  
+> URL: https://geekswg.js.cool/funs/pages/games-ai-chess/  
 

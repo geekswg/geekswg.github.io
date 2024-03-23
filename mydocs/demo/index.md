@@ -257,5 +257,5 @@ Markdown 官方教程访问：&lt;https://markdown.com.cn/&gt;
 ---
 
 > 作者: [geekswg](https://github.com/geekswg)  
-> URL: https://geekswg.github.io/mydocs/demo/  
+> URL: https://geekswg.js.cool/mydocs/demo/  
 

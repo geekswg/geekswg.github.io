@@ -74,5 +74,5 @@ git submodule update --init
 ---
 
 > 作者: [geekswg](https://github.com/geekswg)  
-> URL: https://geekswg.github.io/mydocs/hugo-guideline/  
+> URL: https://geekswg.js.cool/mydocs/hugo-guideline/  
 

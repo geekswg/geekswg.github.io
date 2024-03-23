@@ -82,5 +82,5 @@ sudo gedite /etc/init.d/my-starter.sh
 ---
 
 > 作者: [geekswg](https://github.com/geekswg)  
-> URL: https://geekswg.github.io/posts/2023/debian-theme-whitesur/  
+> URL: https://geekswg.js.cool/posts/2023/debian-theme-whitesur/  
 

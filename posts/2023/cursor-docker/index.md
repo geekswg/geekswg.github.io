@@ -51,5 +51,5 @@ $ sudo apt-get update
 ---
 
 > 作者: [Cursor](https://www.cursor.so/)  
-> URL: https://geekswg.github.io/posts/2023/cursor-docker/  
+> URL: https://geekswg.js.cool/posts/2023/cursor-docker/  
 

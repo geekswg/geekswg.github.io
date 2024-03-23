@@ -111,5 +111,5 @@ function pjax_js_reload(js_url, callback) {
 ---
 
 > 作者: [geekswg](https://github.com/geekswg)  
-> URL: https://geekswg.github.io/posts/2024/hugo-pjax-support/  
+> URL: https://geekswg.js.cool/posts/2024/hugo-pjax-support/  
 

@@ -41,5 +41,5 @@ git clone https://github.com/electron/electron-quick-start
 ---
 
 > 作者: [Cursor](https://www.cursor.so/)  
-> URL: https://geekswg.github.io/posts/2023/cursor-electron/  
+> URL: https://geekswg.js.cool/posts/2023/cursor-electron/  
 

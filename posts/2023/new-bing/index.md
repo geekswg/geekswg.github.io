@@ -64,5 +64,5 @@ https://www.bing.com/search?q=Bing&#43;AI&amp;showconv=1&amp;FORM=hpcodx
 ---
 
 > 作者: [geekswg](https://github.com/geekswg)  
-> URL: https://geekswg.github.io/posts/2023/new-bing/  
+> URL: https://geekswg.js.cool/posts/2023/new-bing/  
 
