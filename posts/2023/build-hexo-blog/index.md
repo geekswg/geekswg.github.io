@@ -110,7 +110,7 @@ jobs:
         #publish_dir: ./public
 
 
-        # 以下配置可忽悠，测试功能
+        # 以下配置可忽略，测试功能
         user_name: &#39;github-actions[bot]&#39;
         user_email: &#39;github-actions[bot]@users.noreply.github.com&#39;
         commit_message: ${{ github.event.head_commit.message }}
