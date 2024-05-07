@@ -49,8 +49,11 @@
 note abstract info tip success question warning failure danger bug example quote</div>
     </div>
   </div>
-<h2 id="前言" class="heading-element">
-  <a href="#%e5%89%8d%e8%a8%80" class="heading-mark"></a>1 前言</h2><p>最近百度文心一言发布了，还在内测申请，<a href="https://yiyan.baidu.com/welcome"target="_blank" rel="external nofollow noopener noreferrer">申请地址<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a>,不知道个人需要多长时间可以通过申请。<br>
+<h2 id="前言" class="heading-element"><span>1 前言</span>
+  <a href="#%e5%89%8d%e8%a8%80" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>最近百度文心一言发布了，还在内测申请，<a href="https://yiyan.baidu.com/welcome"target="_blank" rel="external nofollow noopener noreferrer">申请地址<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a>,不知道个人需要多长时间可以通过申请。<br>
 最近的AI搜索引擎比较火，我之前申请的new bing体验了，还是比较厉害的，现在又升级了，对话限制提高到了15次对了。不过国内的网络不能直接访问bing.com/new,这一点比较难受，今天在晚上看到一个工具可以解决，国内直接访问new bing的方法。<br>
 <div class="details admonition tip open">
     <div class="details-summary admonition-title">

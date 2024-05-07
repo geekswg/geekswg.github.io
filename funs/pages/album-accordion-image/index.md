@@ -1,4 +1,4 @@
-# accordion-image 相册
+# Accordion-Image 相册
 
 &lt;!--more--&gt;
 &lt;!DOCTYPE html&gt;

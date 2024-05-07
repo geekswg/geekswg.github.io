@@ -1,4 +1,4 @@
-# qrcode-二维码在线生成
+# Qrcode-二维码在线生成
 
 &lt;!--more--&gt;
 &lt;!DOCTYPE html&gt;

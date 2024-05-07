@@ -1,4 +1,4 @@
-# funs-index
+# Funs-Index
 
 {{&lt; admonition &#34;摘要&#34; true &gt;}}
 有趣的网页，包含，游戏，相册，实用工具等一些好玩的网页。

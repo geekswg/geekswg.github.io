@@ -1,4 +1,4 @@
-# js-pwd-generator密码生成器
+# Js-Pwd-Generator密码生成器
 
 
 &lt;!--more--&gt;

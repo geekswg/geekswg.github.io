@@ -1,4 +1,4 @@
-# ai-chess国际象棋
+# Ai-Chess国际象棋
 
 &lt;!--more--&gt;
 &lt;!DOCTYPE html&gt;

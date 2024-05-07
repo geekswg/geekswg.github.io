@@ -1,4 +1,4 @@
-# Fixit-theme修改和PR过程
+# Fixit-Theme修改和PR过程
 
 {{&lt; admonition &gt;}}
 记录一次修改fixit主题代码，并pr的过程

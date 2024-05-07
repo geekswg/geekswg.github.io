@@ -1,4 +1,4 @@
-# 快速搭建Hexo-blog指南
+# 快速搭建Hexo-Blog指南
 
 
 快速搭建hexo博客的步骤如下：

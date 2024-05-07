@@ -1,4 +1,4 @@
-# color-picker颜色拾取
+# Color-Picker颜色拾取
 
 &lt;!--more--&gt;
 &lt;!DOCTYPE html&gt;

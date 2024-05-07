@@ -37,16 +37,28 @@ note abstract info tip success question warning failure danger bug example quote
   </div>]]></description></item><item><title>Fixit-Admonition</title><link>https://geekswg.js.cool/mydocs/hugo-admonition/</link><pubDate>Fri, 03 Feb 2023 21:42:57 +0800</pubDate><author>geekswg</author><guid>https://geekswg.js.cool/mydocs/hugo-admonition/</guid><description><![CDATA[<div class="featured-image"><img loading="eager" src="/images/posts/featured-image.jpg" alt="Fixit-Admonition" title="Fixit-Admonition" referrerpolicy="no-referrer"/></div><p><code>admonition</code> shortcode 支持 <strong>12</strong> 种 帮助你在页面中插入提示的横幅.<br>
 <em>支持 Markdown 或者 HTML 格式.</em></p>]]></description></item><item><title>加密测试</title><link>https://geekswg.js.cool/posts/2023/demo2/</link><pubDate>Wed, 01 Feb 2023 15:52:43 +0800</pubDate><author>geekswg</author><guid>https://geekswg.js.cool/posts/2023/demo2/</guid><description><![CDATA[<pre><code>测试全文加密密码123
 </code></pre>
-<p>全文加密时无法在搜索中收索</p>]]></description></item><item><title>测试评论</title><link>https://geekswg.js.cool/posts/2022/demo3/</link><pubDate>Tue, 01 Feb 2022 23:02:55 +0800</pubDate><author>geekswg</author><guid>https://geekswg.js.cool/posts/2022/demo3/</guid><description></description></item><item><title>我的第一个 Hugo 博客</title><link>https://geekswg.js.cool/posts/2022/demo/</link><pubDate>Sat, 01 Jan 2022 12:15:22 +0800</pubDate><author>geekswg</author><guid>https://geekswg.js.cool/posts/2022/demo/</guid><description><![CDATA[<div class="featured-image"><img loading="eager" src="/images/posts/featured-image-preview.jpg" alt="我的第一个 Hugo 博客" title="我的第一个 Hugo 博客" referrerpolicy="no-referrer"/></div><h2 id="我的hugo博客" class="heading-element">
-  <a href="#%e6%88%91%e7%9a%84hugo%e5%8d%9a%e5%ae%a2" class="heading-mark"></a>1 我的Hugo博客</h2><pre><code>我的第一个Hugo博客。
+<p>全文加密时无法在搜索中收索</p>]]></description></item><item><title>测试评论</title><link>https://geekswg.js.cool/posts/2022/demo3/</link><pubDate>Tue, 01 Feb 2022 23:02:55 +0800</pubDate><author>geekswg</author><guid>https://geekswg.js.cool/posts/2022/demo3/</guid><description></description></item><item><title>我的第一个 Hugo 博客</title><link>https://geekswg.js.cool/posts/2022/demo/</link><pubDate>Sat, 01 Jan 2022 12:15:22 +0800</pubDate><author>geekswg</author><guid>https://geekswg.js.cool/posts/2022/demo/</guid><description><![CDATA[<div class="featured-image"><img loading="eager" src="/images/posts/featured-image-preview.jpg" alt="我的第一个 Hugo 博客" title="我的第一个 Hugo 博客" referrerpolicy="no-referrer"/></div><h2 id="我的hugo博客" class="heading-element"><span>1 我的Hugo博客</span>
+  <a href="#%e6%88%91%e7%9a%84hugo%e5%8d%9a%e5%ae%a2" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><pre><code>我的第一个Hugo博客。
 </code></pre>
 <blockquote>
 <p>hello Hugo</p>
 </blockquote>
 <p><a href="https://geekswg.github.io/"target="_blank" rel="external nofollow noopener noreferrer">我的博客发布地址<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a></p>
-<h3 id="fixit-hugo主题" class="heading-element">
-  <a href="#fixit-hugo%e4%b8%bb%e9%a2%98" class="heading-mark"></a>1.1 FixIt Hugo主题</h3><p><a href="https://github.com/hugo-fixit/FixIt"target="_blank" rel="external nofollow noopener noreferrer">FixIt 主题仓库地址<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a><br>
+<h3 id="fixit-hugo主题" class="heading-element"><span>1.1 FixIt Hugo主题</span>
+  <a href="#fixit-hugo%e4%b8%bb%e9%a2%98" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p><a href="https://github.com/hugo-fixit/FixIt"target="_blank" rel="external nofollow noopener noreferrer">FixIt 主题仓库地址<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a><br>
 <a href="https://fixit.lruihao.cn/zh-cn/"target="_blank" rel="external nofollow noopener noreferrer">FixIt 主题Demo地址<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a></p>
-<h2 id="主题" class="heading-element">
-  <a href="#%e4%b8%bb%e9%a2%98" class="heading-mark"></a>2 主题</h2><h2 id="语法" class="heading-element">
-  <a href="#%e8%af%ad%e6%b3%95" class="heading-mark"></a>3 语法</h2><p>markdown 语法</p>]]></description></item></channel></rss>
+<h2 id="主题" class="heading-element"><span>2 主题</span>
+  <a href="#%e4%b8%bb%e9%a2%98" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><h2 id="语法" class="heading-element"><span>3 语法</span>
+  <a href="#%e8%af%ad%e6%b3%95" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>markdown 语法</p>]]></description></item></channel></rss>

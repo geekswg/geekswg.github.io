@@ -1,4 +1,4 @@
-# jq 相册
+# Jq 相册
 
 &lt;!--more--&gt;
 &lt;!DOCTYPE html&gt;
