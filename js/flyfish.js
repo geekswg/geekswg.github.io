@@ -27,29 +27,16 @@ const RENDERER = {
     this.points = [];
     this.fishes = [];
     this.watchIds = [];
-    
-   
-      let fishDiv = document.createElement("div");
-      // 设置div的样式
-      fishDiv.style.position = "fixed";
-      fishDiv.style.bottom = "0";
-      fishDiv.style.left = "0";
-      fishDiv.style.backgroundColor = "red";
-      fishDiv.style.width = "100%";
-      fishDiv.style.height = "100px";
-      fishDiv.style.zIndex = "1";
     //document.querySelector('#footer').appendChild(this.container);
-    //document.body.appendChild(fishDiv).appendChild(this.container);
     document.body.appendChild(this.container);
   },
   setStyle: function () {
     const style = document.createElement("style");
     style.innerHTML = `
-    
     #flyfish {
       position: fixed;
       width: 100%;
-      height: 230px;
+      height: 260px;
       overflow: hidden;
       left: 0;
       bottom: 0;
@@ -84,7 +71,7 @@ const RENDERER = {
     this.fishes.length = 0;
     this.watchIds.length = 0;
     this.intervalCount = this.MAX_INTERVAL_COUNT;
-    
+
     this.containerWidth = this.container.offsetWidth;
     this.containerHeight = this.container.offsetHeight;
     this.width = this.containerWidth;
@@ -124,13 +111,13 @@ const RENDERER = {
   },
   bindEvent: function () {
     const self = this;
-    this.window.addEventListener("resize", function() {
+    this.window.addEventListener("resize", function () {
       self.watchWindowSize();
     });
-    this.container.addEventListener("mouseenter", function(event) {
+    this.container.addEventListener("mouseenter", function (event) {
       self.startEpicenter(event);
     });
-    this.container.addEventListener("mousemove", function(event) {
+    this.container.addEventListener("mousemove", function (event) {
       self.moveEpicenter(event);
     });
   },
@@ -214,6 +201,14 @@ const RENDERER = {
     }
     renderFrame();
   },
+  randomColor: function () {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  }
 };
 
 // SURFACE_POINT class
@@ -280,8 +275,7 @@ function FISH(renderer) {
   this.init();
 }
 FISH.prototype = {
-  GRAVITY: 0.4,
-
+  GRAVITY: 0.5,
   init: function () {
     this.direction = Math.random() < 0.5;
     this.x = this.direction
@@ -359,10 +353,12 @@ FISH.prototype = {
     }
   },
   render: function (context) {
+    
     context.save();
     context.translate(this.x, this.y);
     context.rotate(Math.PI + Math.atan2(this.vy, this.vx));
     context.scale(1, this.direction ? 1 : -1);
+    context.fillStyle = "red";
     context.beginPath();
     context.moveTo(-30, 0);
     context.bezierCurveTo(-20, 15, 15, 10, 40, 0);
@@ -385,7 +381,7 @@ FISH.prototype = {
     context.translate(-3, 0);
     context.rotate(
       (Math.PI / 3 + (Math.PI / 10) * Math.sin(this.phi)) *
-        (this.renderer.reverse ? -1 : 1)
+      (this.renderer.reverse ? -1 : 1)
     );
 
     context.beginPath();
@@ -404,6 +400,7 @@ FISH.prototype = {
     context.restore();
     context.restore();
     this.controlStatus(context);
+    
   },
 };
 
