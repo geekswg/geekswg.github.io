@@ -48,24 +48,10 @@
   &lt;!-- knock code pictures 敲代码的图片 --&gt;
   &lt;img src=&#34;https://cdn.jsdelivr.net/gh/geekswg/geekswg/assets/images/coding.gif&#34; /&gt;&lt;br&gt;
 
-  &lt;!-- profile logo 个人资料徽标 --&gt;
-  &lt;div align=&#34;center&#34;&gt;
-    &lt;a href=&#34;https://geekswg.js.cool/&#34;&gt;&lt;img src=&#34;https://img.shields.io/badge/Website-博客-blue&#34; /&gt;&lt;/a&gt;&amp;emsp;
-    &lt;a href=&#34;https://twitter.com/geekswg/&#34;&gt;&lt;img src=&#34;https://img.shields.io/badge/Twitter-推特-blue&#34; /&gt;&lt;/a&gt;&amp;emsp;
-    &lt;a href=&#34;https://www.youtube.com/@geekswg&#34;&gt;&lt;img src=&#34;https://img.shields.io/badge/YouTube-油管-c32136&#34; /&gt;&lt;/a&gt;&amp;emsp;
-    &lt;a href=&#34;https://space.bilibili.com/39865904/&#34;&gt;&lt;img src=&#34;https://img.shields.io/badge/Bilibili-B站-ff69b4&#34; /&gt;&lt;/a&gt;&amp;emsp;
-    &lt;a href=&#34;https://blog.csdn.net/geekswg/&#34;&gt;&lt;img src=&#34;https://img.shields.io/badge/CSDN-论坛-c32136&#34; /&gt;&lt;/a&gt;&amp;emsp;
-    &lt;a href=&#34;https://www.zhihu.com/people/geekswg/&#34;&gt;&lt;img src=&#34;https://img.shields.io/badge/Zhihu-知乎-blue&#34; /&gt;&lt;/a&gt;&amp;emsp;
-    &lt;!-- visitor statistics logo 访客数统计徽标 --&gt;
-    &lt;img src=&#34;https://komarev.com/ghpvc/?username=geekswg&amp;label=Views&amp;color=0e75b6&amp;style=flat&#34; alt=&#34;访问量统计&#34; /&gt;
-  &lt;/div&gt;
+ 
 
-  &lt;!-- Snake Code Contribution Map 贪吃蛇代码贡献图 --&gt;
-&lt;picture&gt;
-  &lt;source media=&#34;(prefers-color-scheme: dark)&#34; srcset=&#34;https://cdn.jsdelivr.net/gh/geekswg/geekswg/profile-snake-contrib/github-contribution-grid-snake-dark.svg&#34; /&gt;
-  &lt;source media=&#34;(prefers-color-scheme: light)&#34; srcset=&#34;https://cdn.jsdelivr.net/gh/geekswg/geekswg/profile-snake-contrib/github-contribution-grid-snake.svg&#34; /&gt;
-  &lt;img alt=&#34;github-snake&#34; src=&#34;https://cdn.jsdelivr.net/gh/geekswg/geekswg/profile-snake-contrib/github-contribution-grid-snake-dark.svg&#34; /&gt;
-&lt;/picture&gt;
+&lt;!-- Snake Code Contribution Map 贪吃蛇代码贡献图 --&gt;
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/geekswg/geekswg@snake/github-contribution-grid-snake.svg&#34; /&gt;
 
 &lt;/div&gt;
 
