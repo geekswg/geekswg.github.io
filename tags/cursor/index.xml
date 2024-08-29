@@ -1,29 +1,29 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Cursor - 标签 | 毕少侠</title><link>https://geekswg.js.cool/tags/cursor/</link><description>Cursor - 标签 | 毕少侠</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>geekswg@qq.com (geekswg)</managingEditor><webMaster>geekswg@qq.com (geekswg)</webMaster><copyright>geekswg &amp; 毕少侠</copyright><lastBuildDate>Sun, 02 Apr 2023 18:30:40 +0800</lastBuildDate><atom:link href="https://geekswg.js.cool/tags/cursor/" rel="self" type="application/rss+xml"/><item><title>关于Docker</title><link>https://geekswg.js.cool/posts/2023/cursor-docker/</link><pubDate>Sun, 02 Apr 2023 18:30:40 +0800</pubDate><author>geekswg</author><guid>https://geekswg.js.cool/posts/2023/cursor-docker/</guid><description><![CDATA[<div class="featured-image"><img loading="eager" src="/images/posts/featured-image-preview.jpg" alt="关于Docker" title="摘要" referrerpolicy="no-referrer"/></div><blockquote>
-<p>这一片关于Docker的文章，由AI工具Cursor写作<br>
-作者: <a href="https://www.cursor.so/"target="_blank" rel="external nofollow noopener noreferrer">Cursor<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a><br>
-<code>Ctrl + K</code>: 使用md写一篇1万字的关于docker的博文</p>
-</blockquote>]]></description></item><item><title>Cursor帮我写的代码</title><link>https://geekswg.js.cool/posts/2023/code-writed-by-cursor/</link><pubDate>Sun, 26 Mar 2023 18:30:40 +0800</pubDate><author>geekswg</author><guid>https://geekswg.js.cool/posts/2023/code-writed-by-cursor/</guid><description><![CDATA[<div class="featured-image"><img loading="eager" src="/images/posts/featured-image-preview.jpg" alt="Cursor帮我写的代码" title="摘要" referrerpolicy="no-referrer"/></div><div class="details admonition note open">
-    <div class="details-summary admonition-title">
-      <i class="icon fa-solid fa-pencil-alt fa-fw" aria-hidden="true"></i>申明<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i>
-    </div>
-    <div class="details-content">
-      <div class="admonition-content">记录由AI工具帮忙写的代码，越来越离不开Cusor了。<br>
-作者: <a href="https://www.cursor.so/"target="_blank" rel="external nofollow noopener noreferrer">Cursor<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a></div>
-    </div>
-  </div>]]></description></item><item><title>Electron是什么？</title><link>https://geekswg.js.cool/posts/2023/cursor-electron/</link><pubDate>Sun, 26 Mar 2023 18:30:40 +0800</pubDate><author>geekswg</author><guid>https://geekswg.js.cool/posts/2023/cursor-electron/</guid><description><![CDATA[<div class="featured-image"><img loading="eager" src="230328000644-cursor-electron.png" alt="Electron是什么？" title="摘要" referrerpolicy="no-referrer"/></div><div class="details admonition quote open">
-    <div class="details-summary admonition-title">
-      <i class="icon fa-solid fa-quote-right fa-fw" aria-hidden="true"></i>申明<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i>
-    </div>
-    <div class="details-content">
-      <div class="admonition-content">这一片关于ChatGPT的文章，由AI工具Cursor写作<br>
-作者: <a href="https://www.cursor.so/"target="_blank" rel="external nofollow noopener noreferrer">Cursor<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a></div>
-    </div>
-  </div>]]></description></item><item><title>关于ChatGPT</title><link>https://geekswg.js.cool/posts/2023/md-writeby-cursor/</link><pubDate>Sun, 26 Mar 2023 18:30:40 +0800</pubDate><author>geekswg</author><guid>https://geekswg.js.cool/posts/2023/md-writeby-cursor/</guid><description><![CDATA[<div class="featured-image"><img loading="eager" src="/images/posts/featured-image-preview.jpg" alt="关于ChatGPT" title="摘要" referrerpolicy="no-referrer"/></div><div class="details admonition quote open">
-    <div class="details-summary admonition-title">
-      <i class="icon fa-solid fa-quote-right fa-fw" aria-hidden="true"></i>申明<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i>
-    </div>
-    <div class="details-content">
-      <div class="admonition-content">这一片关于ChatGPT的文章，由AI工具Cursor写作<br>
-作者: <a href="https://www.cursor.so/"target="_blank" rel="external nofollow noopener noreferrer">Cursor<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a></div>
-    </div>
-  </div>]]></description></item><item><title>Share Cursor</title><link>https://geekswg.js.cool/posts/2023/share-cursor/</link><pubDate>Thu, 23 Mar 2023 18:15:27 +0800</pubDate><author>geekswg</author><guid>https://geekswg.js.cool/posts/2023/share-cursor/</guid><description>Cursor 最重要的是这个是 开源免费，国内直接访问的AI助手小工具. 开源地址 https://github.com/getcursor/cursor Build Software. Fast. Write, edit, and chat about your code with a pful AI 1 食用方法 快捷键：Ctrl + K 输入你的描述，</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Cursor - 标签 | 毕少侠</title><link>https://geekswg.js.cool/tags/cursor/</link><description>博客：探索、发现、分享 By geekswg-[毕少侠]</description><generator>Hugo 0.133.1 &amp; FixIt v0.3.10-5e1a7845</generator><language>zh-CN</language><managingEditor>geekswg@qq.com (geekswg)</managingEditor><webMaster>geekswg@qq.com (geekswg)</webMaster><copyright>geekswg &amp; 毕少侠</copyright><lastBuildDate>Thu, 07 Mar 2024 17:47:10 +0800</lastBuildDate><atom:link href="https://geekswg.js.cool/tags/cursor/index.xml" rel="self" type="application/rss+xml"/><item><title>关于Docker</title><link>https://geekswg.js.cool/posts/2023/cursor-docker/</link><pubDate>Sun, 02 Apr 2023 18:30:40 +0800</pubDate><guid>https://geekswg.js.cool/posts/2023/cursor-docker/</guid><category domain="https://geekswg.js.cool/categories/ai/">AI</category><description>&lt;blockquote>
+&lt;p>这一片关于Docker的文章，由AI工具Cursor写作&lt;br>
+作者: &lt;a href="https://www.cursor.so/"target="_blank" rel="external nofollow noopener noreferrer">Cursor&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a>&lt;br>
+&lt;code>Ctrl + K&lt;/code>: 使用md写一篇1万字的关于docker的博文&lt;/p>
+&lt;/blockquote></description></item><item><title>Cursor帮我写的代码</title><link>https://geekswg.js.cool/posts/2023/code-writed-by-cursor/</link><pubDate>Sun, 26 Mar 2023 18:30:40 +0800</pubDate><guid>https://geekswg.js.cool/posts/2023/code-writed-by-cursor/</guid><category domain="https://geekswg.js.cool/categories/ai/">AI</category><description>&lt;div class="details admonition note open">
+ &lt;div class="details-summary admonition-title">
+ &lt;i class="icon fa-solid fa-pencil-alt fa-fw" aria-hidden="true">&lt;/i>申明&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true">&lt;/i>
+ &lt;/div>
+ &lt;div class="details-content">
+ &lt;div class="admonition-content">记录由AI工具帮忙写的代码，越来越离不开Cusor了。&lt;br>
+作者: &lt;a href="https://www.cursor.so/"target="_blank" rel="external nofollow noopener noreferrer">Cursor&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a>&lt;/div>
+ &lt;/div>
+ &lt;/div></description></item><item><title>Electron是什么？</title><link>https://geekswg.js.cool/posts/2023/cursor-electron/</link><pubDate>Sun, 26 Mar 2023 18:30:40 +0800</pubDate><guid>https://geekswg.js.cool/posts/2023/cursor-electron/</guid><category domain="https://geekswg.js.cool/categories/ai/">AI</category><description>&lt;div class="details admonition quote open">
+ &lt;div class="details-summary admonition-title">
+ &lt;i class="icon fa-solid fa-quote-right fa-fw" aria-hidden="true">&lt;/i>申明&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true">&lt;/i>
+ &lt;/div>
+ &lt;div class="details-content">
+ &lt;div class="admonition-content">这一片关于ChatGPT的文章，由AI工具Cursor写作&lt;br>
+作者: &lt;a href="https://www.cursor.so/"target="_blank" rel="external nofollow noopener noreferrer">Cursor&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a>&lt;/div>
+ &lt;/div>
+ &lt;/div></description></item><item><title>关于ChatGPT</title><link>https://geekswg.js.cool/posts/2023/md-writeby-cursor/</link><pubDate>Sun, 26 Mar 2023 18:30:40 +0800</pubDate><guid>https://geekswg.js.cool/posts/2023/md-writeby-cursor/</guid><category domain="https://geekswg.js.cool/categories/ai/">AI</category><description>&lt;div class="details admonition quote open">
+ &lt;div class="details-summary admonition-title">
+ &lt;i class="icon fa-solid fa-quote-right fa-fw" aria-hidden="true">&lt;/i>申明&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true">&lt;/i>
+ &lt;/div>
+ &lt;div class="details-content">
+ &lt;div class="admonition-content">这一片关于ChatGPT的文章，由AI工具Cursor写作&lt;br>
+作者: &lt;a href="https://www.cursor.so/"target="_blank" rel="external nofollow noopener noreferrer">Cursor&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a>&lt;/div>
+ &lt;/div>
+ &lt;/div></description></item><item><title>Share Cursor</title><link>https://geekswg.js.cool/posts/2023/share-cursor/</link><pubDate>Thu, 23 Mar 2023 18:15:27 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2023/share-cursor/</guid><category domain="https://geekswg.js.cool/categories/share/">share</category><description>Cursor 最重要的是这个是 开源免费，国内直接访问的AI助手小工具. 开源地址 https://github.com/getcursor/cursor Build Software. Fast. Write, edit, and chat about your code with a pful AI 1 食用方法 快捷键：Ctrl + K 输入你的描述，</description></item></channel></rss>

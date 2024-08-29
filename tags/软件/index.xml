@@ -1,21 +1,21 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>软件 - 标签 | 毕少侠</title><link>https://geekswg.js.cool/tags/%E8%BD%AF%E4%BB%B6/</link><description>软件 - 标签 | 毕少侠</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>geekswg@qq.com (geekswg)</managingEditor><webMaster>geekswg@qq.com (geekswg)</webMaster><copyright>geekswg &amp; 毕少侠</copyright><lastBuildDate>Wed, 01 Mar 2023 08:52:54 +0800</lastBuildDate><atom:link href="https://geekswg.js.cool/tags/%E8%BD%AF%E4%BB%B6/" rel="self" type="application/rss+xml"/><item><title>ShareAnything-分享一切</title><link>https://geekswg.js.cool/posts/2023/share/</link><pubDate>Wed, 01 Mar 2023 08:52:54 +0800</pubDate><author>geekswg</author><guid>https://geekswg.js.cool/posts/2023/share/</guid><description><![CDATA[<div class="featured-image"><img loading="eager" src="/images/posts/featured-image-preview.jpg" alt="ShareAnything-分享一切" title="摘要" referrerpolicy="no-referrer"/></div><div class="details admonition warning open">
-    <div class="details-summary admonition-title">
-      <i class="icon fa-solid fa-exclamation-triangle fa-fw" aria-hidden="true"></i>申明<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i>
-    </div>
-    <div class="details-content">
-      <div class="admonition-content">所有分享资源来自互联网，如有侵权请告知，会立即删除<br>
-note abstract info tip success question warning failure danger bug example quote</div>
-    </div>
-  </div>
-<blockquote>
-<p>分享 音乐、软件、网站等一切我觉得好玩或者有用的资源</p>
-</blockquote>
-<div class="details admonition info open">
-    <div class="details-summary admonition-title">
-      <i class="icon fa-solid fa-info-circle fa-fw" aria-hidden="true"></i>信息<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i>
-    </div>
-    <div class="details-content">
-      <div class="admonition-content">软件都是我用过的，大家可以放心食用，不给任何产品推广。<br>
-Do no evil ！</div>
-    </div>
-  </div>]]></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>软件 - 标签 | 毕少侠</title><link>https://geekswg.js.cool/tags/%E8%BD%AF%E4%BB%B6/</link><description>博客：探索、发现、分享 By geekswg-[毕少侠]</description><generator>Hugo 0.133.1 &amp; FixIt v0.3.10-5e1a7845</generator><language>zh-CN</language><managingEditor>geekswg@qq.com (geekswg)</managingEditor><webMaster>geekswg@qq.com (geekswg)</webMaster><copyright>geekswg &amp; 毕少侠</copyright><lastBuildDate>Sun, 17 Mar 2024 18:12:58 +0800</lastBuildDate><atom:link href="https://geekswg.js.cool/tags/%E8%BD%AF%E4%BB%B6/index.xml" rel="self" type="application/rss+xml"/><item><title>ShareAnything-分享一切</title><link>https://geekswg.js.cool/posts/2023/share/</link><pubDate>Wed, 01 Mar 2023 08:52:54 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2023/share/</guid><category domain="https://geekswg.js.cool/categories/share/">share</category><description>&lt;div class="details admonition warning open">
+ &lt;div class="details-summary admonition-title">
+ &lt;i class="icon fa-solid fa-exclamation-triangle fa-fw" aria-hidden="true">&lt;/i>申明&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true">&lt;/i>
+ &lt;/div>
+ &lt;div class="details-content">
+ &lt;div class="admonition-content">所有分享资源来自互联网，如有侵权请告知，会立即删除&lt;br>
+note abstract info tip success question warning failure danger bug example quote&lt;/div>
+ &lt;/div>
+ &lt;/div>
+&lt;blockquote>
+&lt;p>分享 音乐、软件、网站等一切我觉得好玩或者有用的资源&lt;/p>
+&lt;/blockquote>
+&lt;div class="details admonition info open">
+ &lt;div class="details-summary admonition-title">
+ &lt;i class="icon fa-solid fa-info-circle fa-fw" aria-hidden="true">&lt;/i>信息&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true">&lt;/i>
+ &lt;/div>
+ &lt;div class="details-content">
+ &lt;div class="admonition-content">软件都是我用过的，大家可以放心食用，不给任何产品推广。&lt;br>
+Do no evil ！&lt;/div>
+ &lt;/div>
+ &lt;/div></description></item></channel></rss>
