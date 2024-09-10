@@ -1,33 +1,33 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Demo - 分类 | 毕少侠</title><link>https://geekswg.js.cool/categories/demo/</link><description>博客：探索、发现、分享 By geekswg-[毕少侠]</description><generator>Hugo 0.134.1 &amp; FixIt v0.3.12-788f8b7f</generator><language>zh-CN</language><managingEditor>geekswg@qq.com (geekswg)</managingEditor><webMaster>geekswg@qq.com (geekswg)</webMaster><copyright>geekswg &amp; 毕少侠</copyright><lastBuildDate>Thu, 07 Mar 2024 17:47:10 +0800</lastBuildDate><atom:link href="https://geekswg.js.cool/categories/demo/index.xml" rel="self" type="application/rss+xml"/><item><title>Layui Shortcodes Demo</title><link>https://geekswg.js.cool/posts/2024/layui-shortcodes-demo/</link><pubDate>Wed, 03 Jan 2024 09:35:22 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2024/layui-shortcodes-demo/</guid><category domain="https://geekswg.js.cool/categories/demo/">Demo</category><description>&lt;div class="details admonition note open">
- &lt;div class="details-summary admonition-title">
- &lt;i class="icon fa-solid fa-pencil-alt fa-fw" aria-hidden="true">&lt;/i>注意&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true">&lt;/i>
- &lt;/div>
- &lt;div class="details-content">
- &lt;div class="admonition-content">这是介绍一个依赖layui的shortcodes示例，的实现和使用方法&lt;/div>
- &lt;/div>
- &lt;/div>
-&lt;h2 id="为什么使用layui" class="heading-element">&lt;span>7 为什么使用Layui&lt;/span>
- &lt;a href="#%e4%b8%ba%e4%bb%80%e4%b9%88%e4%bd%bf%e7%94%a8layui" class="heading-mark">
- &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
- &lt;/a>
-&lt;/h2>&lt;ul>
-&lt;li>不善前端&lt;/li>
-&lt;li>ui组件全&lt;/li>
-&lt;li>符合我的审美&lt;/li>
-&lt;/ul></description></item><item><title>timeline2</title><link>https://geekswg.js.cool/posts/2023/timeline2/</link><pubDate>Wed, 31 May 2023 18:14:48 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2023/timeline2/</guid><category domain="https://geekswg.js.cool/categories/demo/">Demo</category><description>&lt;p>&lt;div class="details admonition quote open">
- &lt;div class="details-summary admonition-title">
- &lt;i class="icon fa-solid fa-quote-right fa-fw" aria-hidden="true">&lt;/i>quote&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true">&lt;/i>
- &lt;/div>
- &lt;div class="details-content">
- &lt;div class="admonition-content">note abstract info tip success question warning failure danger bug example quote&lt;/div>
- &lt;/div>
- &lt;/div>&lt;br>
-这里使用MD语法编写你的文章&lt;/p></description></item><item><title>Timeline</title><link>https://geekswg.js.cool/posts/2023/timeline/</link><pubDate>Tue, 30 May 2023 18:14:48 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2023/timeline/</guid><category domain="https://geekswg.js.cool/categories/demo/">Demo</category><description>&lt;p>&lt;div class="details admonition quote open">
- &lt;div class="details-summary admonition-title">
- &lt;i class="icon fa-solid fa-quote-right fa-fw" aria-hidden="true">&lt;/i>quote&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true">&lt;/i>
- &lt;/div>
- &lt;div class="details-content">
- &lt;div class="admonition-content">note abstract info tip success question warning failure danger bug example quote&lt;/div>
- &lt;/div>
- &lt;/div>&lt;br>
-这里使用MD语法编写你的文章&lt;/p></description></item></channel></rss>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Demo - 分类 | 毕少侠</title><link>https://geekswg.js.cool/categories/demo/</link><description>Demo - 分类 | 毕少侠</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>geekswg@qq.com (geekswg)</managingEditor><webMaster>geekswg@qq.com (geekswg)</webMaster><copyright>geekswg &amp; 毕少侠</copyright><lastBuildDate>Wed, 03 Jan 2024 09:35:22 +0800</lastBuildDate><atom:link href="https://geekswg.js.cool/categories/demo/" rel="self" type="application/rss+xml"/><item><title>Layui Shortcodes Demo</title><link>https://geekswg.js.cool/posts/2024/layui-shortcodes-demo/</link><pubDate>Wed, 03 Jan 2024 09:35:22 +0800</pubDate><author>geekswg</author><guid>https://geekswg.js.cool/posts/2024/layui-shortcodes-demo/</guid><description><![CDATA[<div class="featured-image"><img loading="eager" src="/images/posts/featured-image-preview.jpg" alt="Layui Shortcodes Demo" title="摘要" referrerpolicy="no-referrer"/></div><div class="details admonition note open">
+    <div class="details-summary admonition-title">
+      <i class="icon fa-solid fa-pencil-alt fa-fw" aria-hidden="true"></i>注意<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i>
+    </div>
+    <div class="details-content">
+      <div class="admonition-content">这是介绍一个依赖layui的shortcodes示例，的实现和使用方法</div>
+    </div>
+  </div>
+<h2 id="为什么使用layui" class="heading-element"><span>7 为什么使用Layui</span>
+  <a href="#%e4%b8%ba%e4%bb%80%e4%b9%88%e4%bd%bf%e7%94%a8layui" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><ul>
+<li>不善前端</li>
+<li>ui组件全</li>
+<li>符合我的审美</li>
+</ul>]]></description></item><item><title>timeline2</title><link>https://geekswg.js.cool/posts/2023/timeline2/</link><pubDate>Wed, 31 May 2023 18:14:48 +0800</pubDate><author>geekswg</author><guid>https://geekswg.js.cool/posts/2023/timeline2/</guid><description><![CDATA[<div class="featured-image"><img loading="eager" src="/images/posts/featured-image-preview.jpg" alt="timeline2" title="摘要" referrerpolicy="no-referrer"/></div><p><div class="details admonition quote open">
+    <div class="details-summary admonition-title">
+      <i class="icon fa-solid fa-quote-right fa-fw" aria-hidden="true"></i>quote<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i>
+    </div>
+    <div class="details-content">
+      <div class="admonition-content">note abstract info tip success question warning failure danger bug example quote</div>
+    </div>
+  </div><br>
+这里使用MD语法编写你的文章</p>]]></description></item><item><title>Timeline</title><link>https://geekswg.js.cool/posts/2023/timeline/</link><pubDate>Tue, 30 May 2023 18:14:48 +0800</pubDate><author>geekswg</author><guid>https://geekswg.js.cool/posts/2023/timeline/</guid><description><![CDATA[<div class="featured-image"><img loading="eager" src="/images/posts/featured-image-preview.jpg" alt="Timeline" title="摘要" referrerpolicy="no-referrer"/></div><p><div class="details admonition quote open">
+    <div class="details-summary admonition-title">
+      <i class="icon fa-solid fa-quote-right fa-fw" aria-hidden="true"></i>quote<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i>
+    </div>
+    <div class="details-content">
+      <div class="admonition-content">note abstract info tip success question warning failure danger bug example quote</div>
+    </div>
+  </div><br>
+这里使用MD语法编写你的文章</p>]]></description></item></channel></rss>

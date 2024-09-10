@@ -1,45 +1,46 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Hugo - 标签 | 毕少侠</title><link>https://geekswg.js.cool/tags/hugo/</link><description>博客：探索、发现、分享 By geekswg-[毕少侠]</description><generator>Hugo 0.134.1 &amp; FixIt v0.3.12-788f8b7f</generator><language>zh-CN</language><managingEditor>geekswg@qq.com (geekswg)</managingEditor><webMaster>geekswg@qq.com (geekswg)</webMaster><copyright>geekswg &amp; 毕少侠</copyright><lastBuildDate>Wed, 20 Mar 2024 20:22:55 +0800</lastBuildDate><atom:link href="https://geekswg.js.cool/tags/hugo/index.xml" rel="self" type="application/rss+xml"/><item><title>Hugo添加Pjax功能支持</title><link>https://geekswg.js.cool/posts/2024/hugo-pjax-support/</link><pubDate>Wed, 28 Feb 2024 18:38:31 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2024/hugo-pjax-support/</guid><category domain="https://geekswg.js.cool/categories/code/">code</category><description>&lt;p>&lt;div class="details admonition note open">
- &lt;div class="details-summary admonition-title">
- &lt;i class="icon fa-solid fa-pencil-alt fa-fw" aria-hidden="true">&lt;/i>注意&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true">&lt;/i>
- &lt;/div>
- &lt;div class="details-content">
- &lt;div class="admonition-content">Hugo是一个使用Go语言构建的静态网站生成器，它的速度非常快，并且具有强大的主题支持和灵活的定制选项。通过Hugo，你可以轻松地构建和管理博客网站，并且添加PJAX功能也非常简单。&lt;/div>
- &lt;/div>
- &lt;/div>&lt;br>
-当你希望你的博客网站加载更快、更平滑，同时又想要保持简洁的用户体验时，&lt;code>PJAX&lt;/code>（PushState + Ajax）就是一个很好的选择。Hugo是一个快速、灵活的静态网站生成器，它提供了添加PJAX功能的简便方法。在这篇博客中，我将向你介绍如何使用Hugo为你的博客网站添加PJAX功能。&lt;/p></description></item><item><title>Hugo Shortcode Plugins Live2d</title><link>https://geekswg.js.cool/posts/2023/hugo-shortcode-plugins-live2d/</link><pubDate>Sun, 26 Mar 2023 15:30:06 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2023/hugo-shortcode-plugins-live2d/</guid><category domain="https://geekswg.js.cool/categories/hugo/">Hugo</category><description>&lt;div class="details admonition note open">
- &lt;div class="details-summary admonition-title">
- &lt;i class="icon fa-solid fa-pencil-alt fa-fw" aria-hidden="true">&lt;/i>注意&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true">&lt;/i>
- &lt;/div>
- &lt;div class="details-content">
- &lt;div class="admonition-content">记录一次Hugo主题ShortCode插件集成过程和Shorcode插件的食用方法。&lt;br>
-感谢Fixit主题作者提供方法和指导帮助。&lt;br>
-note abstract info tip success question warning failure danger bug example quote&lt;/div>
- &lt;/div>
- &lt;/div></description></item><item><title>Fixit-theme修改和PR过程</title><link>https://geekswg.js.cool/posts/2023/theme-develop-pr/</link><pubDate>Tue, 07 Mar 2023 18:50:58 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2023/theme-develop-pr/</guid><category domain="https://geekswg.js.cool/categories/%E4%B8%BB%E9%A2%98/">主题</category><description>&lt;div class="details admonition note open">
- &lt;div class="details-summary admonition-title">
- &lt;i class="icon fa-solid fa-pencil-alt fa-fw" aria-hidden="true">&lt;/i>注意&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true">&lt;/i>
- &lt;/div>
- &lt;div class="details-content">
- &lt;div class="admonition-content">记录一次修改fixit主题代码，并pr的过程&lt;br>
-note abstract info tip success question warning failure danger bug example quote&lt;/div>
- &lt;/div>
- &lt;/div></description></item><item><title>Fixit-主题美化记录</title><link>https://geekswg.js.cool/posts/2023/fixit-beautification/</link><pubDate>Sun, 26 Feb 2023 14:21:02 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2023/fixit-beautification/</guid><category domain="https://geekswg.js.cool/categories/%E4%B8%BB%E9%A2%98/">主题</category><description>&lt;div class="details admonition quote open">
- &lt;div class="details-summary admonition-title">
- &lt;i class="icon fa-solid fa-quote-right fa-fw" aria-hidden="true">&lt;/i>说明&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true">&lt;/i>
- &lt;/div>
- &lt;div class="details-content">
- &lt;div class="admonition-content">记录自己博客主题的修改和美化记录&lt;/div>
- &lt;/div>
- &lt;/div>
-&lt;blockquote>&lt;p>本文阅读前，基于你已经了解hugo，并且使用Fixit主题成功搭建成功后，如还不了解相关内容请访问👉 &lt;a href="https://fixit.lruihao.cn/zh-cn/"target="_blank" rel="external nofollow noopener noreferrer">FixIt 主题文档&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a> 了解。&lt;br>
-&lt;small>&lt;em>关于 &lt;a href="https://github.com/hugo-fixit/FixIt"target="_blank" rel="external nofollow noopener noreferrer">FixIt 主题&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a> 的问题，请移步 &lt;a href="https://fixit.lruihao.cn"target="_blank" rel="external nofollow noopener noreferrer">FixIt 官网&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a> 相关文章哦～&lt;/em>&lt;/small>&lt;/p>
-&lt;/blockquote></description></item><item><title>Fixit-快速开始</title><link>https://geekswg.js.cool/mydocs/hugo-guideline/</link><pubDate>Wed, 22 Feb 2023 20:15:48 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/mydocs/hugo-guideline/</guid><category domain="https://geekswg.js.cool/categories/mydocs/">mydocs</category><description>&lt;div class="details admonition note open">
- &lt;div class="details-summary admonition-title">
- &lt;i class="icon fa-solid fa-pencil-alt fa-fw" aria-hidden="true">&lt;/i>注意&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true">&lt;/i>
- &lt;/div>
- &lt;div class="details-content">
- &lt;div class="admonition-content">快速上手Hugo-blog指引。&lt;br>
-记录常用命令，方便查阅。&lt;/div>
- &lt;/div>
- &lt;/div></description></item><item><title>Fixit-Admonition</title><link>https://geekswg.js.cool/mydocs/hugo-admonition/</link><pubDate>Fri, 03 Feb 2023 21:42:57 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/mydocs/hugo-admonition/</guid><category domain="https://geekswg.js.cool/categories/mydocs/">mydocs</category><description>&lt;p>&lt;code>admonition&lt;/code> shortcode 支持 &lt;strong>12&lt;/strong> 种 帮助你在页面中插入提示的横幅.&lt;br>
-&lt;em>支持 Markdown 或者 HTML 格式.&lt;/em>&lt;/p></description></item></channel></rss>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Hugo - 标签 | 毕少侠</title><link>https://geekswg.js.cool/tags/hugo/</link><description>Hugo - 标签 | 毕少侠</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>geekswg@qq.com (geekswg)</managingEditor><webMaster>geekswg@qq.com (geekswg)</webMaster><copyright>geekswg &amp; 毕少侠</copyright><lastBuildDate>Wed, 28 Feb 2024 18:38:31 +0800</lastBuildDate><atom:link href="https://geekswg.js.cool/tags/hugo/" rel="self" type="application/rss+xml"/><item><title>Hugo添加Pjax功能支持</title><link>https://geekswg.js.cool/posts/2024/hugo-pjax-support/</link><pubDate>Wed, 28 Feb 2024 18:38:31 +0800</pubDate><author>geekswg</author><guid>https://geekswg.js.cool/posts/2024/hugo-pjax-support/</guid><description><![CDATA[<div class="featured-image"><img loading="eager" src="cover.webp" alt="Hugo添加Pjax功能支持" title="Hugo添加Pjax功能支持" referrerpolicy="no-referrer"/></div><p><div class="details admonition note open">
+    <div class="details-summary admonition-title">
+      <i class="icon fa-solid fa-pencil-alt fa-fw" aria-hidden="true"></i>注意<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i>
+    </div>
+    <div class="details-content">
+      <div class="admonition-content">Hugo是一个使用Go语言构建的静态网站生成器，它的速度非常快，并且具有强大的主题支持和灵活的定制选项。通过Hugo，你可以轻松地构建和管理博客网站，并且添加PJAX功能也非常简单。</div>
+    </div>
+  </div><br>
+当你希望你的博客网站加载更快、更平滑，同时又想要保持简洁的用户体验时，<code>PJAX</code>（PushState + Ajax）就是一个很好的选择。Hugo是一个快速、灵活的静态网站生成器，它提供了添加PJAX功能的简便方法。在这篇博客中，我将向你介绍如何使用Hugo为你的博客网站添加PJAX功能。</p>]]></description></item><item><title>Hugo Shortcode Plugins Live2d</title><link>https://geekswg.js.cool/posts/2023/hugo-shortcode-plugins-live2d/</link><pubDate>Sun, 26 Mar 2023 15:30:06 +0800</pubDate><author>geekswg</author><guid>https://geekswg.js.cool/posts/2023/hugo-shortcode-plugins-live2d/</guid><description><![CDATA[<div class="featured-image"><img loading="eager" src="/images/posts/featured-image-preview.jpg" alt="Hugo Shortcode Plugins Live2d" title="摘要" referrerpolicy="no-referrer"/></div><div class="details admonition note open">
+    <div class="details-summary admonition-title">
+      <i class="icon fa-solid fa-pencil-alt fa-fw" aria-hidden="true"></i>注意<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i>
+    </div>
+    <div class="details-content">
+      <div class="admonition-content">记录一次Hugo主题ShortCode插件集成过程和Shorcode插件的食用方法。<br>
+感谢Fixit主题作者提供方法和指导帮助。<br>
+note abstract info tip success question warning failure danger bug example quote</div>
+    </div>
+  </div>]]></description></item><item><title>Fixit-theme修改和PR过程</title><link>https://geekswg.js.cool/posts/2023/theme-develop-pr/</link><pubDate>Tue, 07 Mar 2023 18:50:58 +0800</pubDate><author>geekswg</author><guid>https://geekswg.js.cool/posts/2023/theme-develop-pr/</guid><description><![CDATA[<div class="featured-image"><img loading="eager" src="/images/posts/featured-image-preview.jpg" alt="Fixit-theme修改和PR过程" title="摘要" referrerpolicy="no-referrer"/></div><div class="details admonition note open">
+    <div class="details-summary admonition-title">
+      <i class="icon fa-solid fa-pencil-alt fa-fw" aria-hidden="true"></i>注意<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i>
+    </div>
+    <div class="details-content">
+      <div class="admonition-content">记录一次修改fixit主题代码，并pr的过程<br>
+note abstract info tip success question warning failure danger bug example quote</div>
+    </div>
+  </div>]]></description></item><item><title>Fixit-主题美化记录</title><link>https://geekswg.js.cool/posts/2023/fixit-beautification/</link><pubDate>Sun, 26 Feb 2023 14:21:02 +0800</pubDate><author>geekswg</author><guid>https://geekswg.js.cool/posts/2023/fixit-beautification/</guid><description><![CDATA[<div class="featured-image"><img loading="eager" src="/images/posts/featured-image-preview.jpg" alt="Fixit-主题美化记录" title="文章摘要" referrerpolicy="no-referrer"/></div><div class="details admonition quote open">
+    <div class="details-summary admonition-title">
+      <i class="icon fa-solid fa-quote-right fa-fw" aria-hidden="true"></i>说明<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i>
+    </div>
+    <div class="details-content">
+      <div class="admonition-content">记录自己博客主题的修改和美化记录</div>
+    </div>
+  </div>
+<blockquote>
+<p>本文阅读前，基于你已经了解hugo，并且使用Fixit主题成功搭建成功后，如还不了解相关内容请访问👉 <a href="https://fixit.lruihao.cn/zh-cn/"target="_blank" rel="external nofollow noopener noreferrer">FixIt 主题文档<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a> 了解。<br>
+<small><em>关于 <a href="https://github.com/hugo-fixit/FixIt"target="_blank" rel="external nofollow noopener noreferrer">FixIt 主题<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a> 的问题，请移步 <a href="https://fixit.lruihao.cn"target="_blank" rel="external nofollow noopener noreferrer">FixIt 官网<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a> 相关文章哦～</em></small></p>
+</blockquote>]]></description></item><item><title>Fixit-快速开始</title><link>https://geekswg.js.cool/mydocs/hugo-guideline/</link><pubDate>Wed, 22 Feb 2023 20:15:48 +0800</pubDate><author>geekswg</author><guid>https://geekswg.js.cool/mydocs/hugo-guideline/</guid><description><![CDATA[<div class="featured-image"><img loading="eager" src="/images/posts/featured-image-preview.jpg" alt="Fixit-快速开始" title="文章摘要" referrerpolicy="no-referrer"/></div><div class="details admonition note open">
+    <div class="details-summary admonition-title">
+      <i class="icon fa-solid fa-pencil-alt fa-fw" aria-hidden="true"></i>注意<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i>
+    </div>
+    <div class="details-content">
+      <div class="admonition-content">快速上手Hugo-blog指引。<br>
+记录常用命令，方便查阅。</div>
+    </div>
+  </div>]]></description></item><item><title>Fixit-Admonition</title><link>https://geekswg.js.cool/mydocs/hugo-admonition/</link><pubDate>Fri, 03 Feb 2023 21:42:57 +0800</pubDate><author>geekswg</author><guid>https://geekswg.js.cool/mydocs/hugo-admonition/</guid><description><![CDATA[<div class="featured-image"><img loading="eager" src="/images/posts/featured-image.jpg" alt="Fixit-Admonition" title="Fixit-Admonition" referrerpolicy="no-referrer"/></div><p><code>admonition</code> shortcode 支持 <strong>12</strong> 种 帮助你在页面中插入提示的横幅.<br>
+<em>支持 Markdown 或者 HTML 格式.</em></p>]]></description></item></channel></rss>
