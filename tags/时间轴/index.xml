@@ -1,17 +1,17 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>时间轴 - 标签 | 毕少侠</title><link>https://geekswg.js.cool/tags/%E6%97%B6%E9%97%B4%E8%BD%B4/</link><description>时间轴 - 标签 | 毕少侠</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>geekswg@qq.com (geekswg)</managingEditor><webMaster>geekswg@qq.com (geekswg)</webMaster><copyright>geekswg &amp; 毕少侠</copyright><lastBuildDate>Wed, 31 May 2023 18:14:48 +0800</lastBuildDate><atom:link href="https://geekswg.js.cool/tags/%E6%97%B6%E9%97%B4%E8%BD%B4/" rel="self" type="application/rss+xml"/><item><title>timeline2</title><link>https://geekswg.js.cool/posts/2023/timeline2/</link><pubDate>Wed, 31 May 2023 18:14:48 +0800</pubDate><author>geekswg</author><guid>https://geekswg.js.cool/posts/2023/timeline2/</guid><description><![CDATA[<div class="featured-image"><img loading="eager" src="/images/posts/featured-image-preview.jpg" alt="timeline2" title="摘要" referrerpolicy="no-referrer"/></div><p><div class="details admonition quote open">
-    <div class="details-summary admonition-title">
-      <i class="icon fa-solid fa-quote-right fa-fw" aria-hidden="true"></i>quote<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i>
-    </div>
-    <div class="details-content">
-      <div class="admonition-content">note abstract info tip success question warning failure danger bug example quote</div>
-    </div>
-  </div><br>
-这里使用MD语法编写你的文章</p>]]></description></item><item><title>Timeline</title><link>https://geekswg.js.cool/posts/2023/timeline/</link><pubDate>Tue, 30 May 2023 18:14:48 +0800</pubDate><author>geekswg</author><guid>https://geekswg.js.cool/posts/2023/timeline/</guid><description><![CDATA[<div class="featured-image"><img loading="eager" src="/images/posts/featured-image-preview.jpg" alt="Timeline" title="摘要" referrerpolicy="no-referrer"/></div><p><div class="details admonition quote open">
-    <div class="details-summary admonition-title">
-      <i class="icon fa-solid fa-quote-right fa-fw" aria-hidden="true"></i>quote<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i>
-    </div>
-    <div class="details-content">
-      <div class="admonition-content">note abstract info tip success question warning failure danger bug example quote</div>
-    </div>
-  </div><br>
-这里使用MD语法编写你的文章</p>]]></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>时间轴 - 标签 | 毕少侠</title><link>https://geekswg.js.cool/tags/%E6%97%B6%E9%97%B4%E8%BD%B4/</link><description>博客：探索、发现、分享 By geekswg-[毕少侠]</description><generator>Hugo 0.135.0 &amp; FixIt v0.3.12-314d24a3</generator><language>zh-CN</language><managingEditor>geekswg@qq.com (geekswg)</managingEditor><webMaster>geekswg@qq.com (geekswg)</webMaster><copyright>geekswg &amp; 毕少侠</copyright><lastBuildDate>Thu, 07 Mar 2024 17:47:10 +0800</lastBuildDate><atom:link href="https://geekswg.js.cool/tags/%E6%97%B6%E9%97%B4%E8%BD%B4/index.xml" rel="self" type="application/rss+xml"/><item><title>timeline2</title><link>https://geekswg.js.cool/posts/2023/timeline2/</link><pubDate>Wed, 31 May 2023 18:14:48 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2023/timeline2/</guid><category domain="https://geekswg.js.cool/categories/demo/">Demo</category><description>&lt;p>&lt;div class="details admonition quote open">
+ &lt;div class="details-summary admonition-title">
+ &lt;i class="icon fa-solid fa-quote-right fa-fw" aria-hidden="true">&lt;/i>quote&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true">&lt;/i>
+ &lt;/div>
+ &lt;div class="details-content">
+ &lt;div class="admonition-content">note abstract info tip success question warning failure danger bug example quote&lt;/div>
+ &lt;/div>
+ &lt;/div>&lt;br>
+这里使用MD语法编写你的文章&lt;/p></description></item><item><title>Timeline</title><link>https://geekswg.js.cool/posts/2023/timeline/</link><pubDate>Tue, 30 May 2023 18:14:48 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2023/timeline/</guid><category domain="https://geekswg.js.cool/categories/demo/">Demo</category><description>&lt;p>&lt;div class="details admonition quote open">
+ &lt;div class="details-summary admonition-title">
+ &lt;i class="icon fa-solid fa-quote-right fa-fw" aria-hidden="true">&lt;/i>quote&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true">&lt;/i>
+ &lt;/div>
+ &lt;div class="details-content">
+ &lt;div class="admonition-content">note abstract info tip success question warning failure danger bug example quote&lt;/div>
+ &lt;/div>
+ &lt;/div>&lt;br>
+这里使用MD语法编写你的文章&lt;/p></description></item></channel></rss>

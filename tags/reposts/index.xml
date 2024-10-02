@@ -1,28 +1,27 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>reposts - 标签 | 毕少侠</title><link>https://geekswg.js.cool/tags/reposts/</link><description>reposts - 标签 | 毕少侠</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>geekswg@qq.com (geekswg)</managingEditor><webMaster>geekswg@qq.com (geekswg)</webMaster><copyright>geekswg &amp; 毕少侠</copyright><lastBuildDate>Sat, 11 Mar 2023 21:07:33 +0800</lastBuildDate><atom:link href="https://geekswg.js.cool/tags/reposts/" rel="self" type="application/rss+xml"/><item><title>去你的广告终结者！干掉51xiaolu.com</title><link>https://geekswg.js.cool/posts/2023/fuck-this-plugin/</link><pubDate>Sat, 11 Mar 2023 21:07:33 +0800</pubDate><author>geekswg</author><guid>https://geekswg.js.cool/posts/2023/fuck-this-plugin/</guid><description><![CDATA[<div class="featured-image"><img loading="eager" src="/images/posts/230311223621-fuck-plugin.png" alt="去你的广告终结者！干掉51xiaolu.com" title="摘要" referrerpolicy="no-referrer"/></div><div class="details admonition quote open">
-    <div class="details-summary admonition-title">
-      <i class="icon fa-solid fa-quote-right fa-fw" aria-hidden="true"></i>转载<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i>
-    </div>
-    <div class="details-content">
-      <div class="admonition-content">本文转载于 ：<a href="https://blog.moeworld.tech/2022/09/03/%e5%8e%bb%e4%bd%a0%e7%9a%84%e5%b9%bf%e5%91%8a%e7%bb%88%e7%bb%93%e8%80%85%ef%bc%81%e5%b9%b2%e6%8e%8951xiaolu-com/"target="_blank" rel="external nofollow noopener noreferrer">晓空的博客-<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a></div>
-    </div>
-  </div>
-<div class="details admonition note open">
-    <div class="details-summary admonition-title">
-      <i class="icon fa-solid fa-pencil-alt fa-fw" aria-hidden="true"></i>注意<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i>
-    </div>
-    <div class="details-content">
-      <div class="admonition-content">今天在调试自己的博客时，发现一个报错信息，来自1111.51xiaolu.com，我会想下我得网站好像从来没有用到这个网址得资源呀。<br>
-经过搜索后发现原来是浏览器安装一个去广告插件干的，简直不敢相信！</div>
-    </div>
-  </div>
-<blockquote>
-<p>下面内容来自<a href="https://blog.moeworld.tech/"target="_blank" rel="external nofollow noopener noreferrer">晓空的博客<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a>分析过程，转载学习一下。</p>
-</blockquote>]]></description></item><item><title>中文技术文档的写作规范</title><link>https://geekswg.js.cool/posts/2023/docs-style-guide/</link><pubDate>Thu, 09 Mar 2023 14:07:33 +0800</pubDate><author>geekswg</author><guid>https://geekswg.js.cool/posts/2023/docs-style-guide/</guid><description><![CDATA[<div class="details admonition quote open">
-    <div class="details-summary admonition-title">
-      <i class="icon fa-solid fa-quote-right fa-fw" aria-hidden="true"></i>转载<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i>
-    </div>
-    <div class="details-content">
-      <div class="admonition-content">本文转载于 ：<a href="https://lruihao.cn/posts/document-style-guide/"target="_blank" rel="external nofollow noopener noreferrer">李瑞豪的博客-中文技术文档的写作规范<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a></div>
-    </div>
-  </div>
-<p>英语世界里，文档非常受重视，许多公司和组织都有自己的文档规范，清楚地规定写作要求，比如<a href="https://www.microsoftpressstore.com/store/microsoft-manual-of-style-9780735648715"target="_blank" rel="external nofollow noopener noreferrer">微软<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a>、<a href="http://styleguide.mailchimp.com/"target="_blank" rel="external nofollow noopener noreferrer">MailChimp<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a>、<a href="https://help.apple.com/asg/mac/2013/ASG_2013.pdf"target="_blank" rel="external nofollow noopener noreferrer">Apple<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a>、<a href="https://www.amazon.com/dp/B003P8QDFU/ref=dp-kindle-redirect?_encoding=UTF8&amp;btkr=1"target="_blank" rel="external nofollow noopener noreferrer">Yahoo<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a>、<a href="https://docs.docker.com/opensource/doc-style/"target="_blank" rel="external nofollow noopener noreferrer">docker<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a>、<a href="https://struts.apache.org/docs/documentation-style-guide.html"target="_blank" rel="external nofollow noopener noreferrer">Struts<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a> 等等（维基百科有一份完整的<a href="https://en.wikipedia.org/wiki/List_of_style_guides"target="_blank" rel="external nofollow noopener noreferrer">清单<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a>）。<a href="https://github.com/ruanyf/document-style-guide/blob/master/docs/reference.md"target="_blank" rel="external nofollow noopener noreferrer">中文的<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a>也有不少，但都不令人满意，要么太简单，要么不太适用。</p>]]></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>reposts - 标签 | 毕少侠</title><link>https://geekswg.js.cool/tags/reposts/</link><description>博客：探索、发现、分享 By geekswg-[毕少侠]</description><generator>Hugo 0.135.0 &amp; FixIt v0.3.12-314d24a3</generator><language>zh-CN</language><managingEditor>geekswg@qq.com (geekswg)</managingEditor><webMaster>geekswg@qq.com (geekswg)</webMaster><copyright>geekswg &amp; 毕少侠</copyright><lastBuildDate>Thu, 07 Mar 2024 17:47:10 +0800</lastBuildDate><atom:link href="https://geekswg.js.cool/tags/reposts/index.xml" rel="self" type="application/rss+xml"/><item><title>去你的广告终结者！干掉51xiaolu.com</title><link>https://geekswg.js.cool/posts/2023/fuck-this-plugin/</link><pubDate>Sat, 11 Mar 2023 21:07:33 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2023/fuck-this-plugin/</guid><category domain="https://geekswg.js.cool/categories/%E8%BD%AC%E8%BD%BD/">转载</category><description>&lt;div class="details admonition quote open">
+ &lt;div class="details-summary admonition-title">
+ &lt;i class="icon fa-solid fa-quote-right fa-fw" aria-hidden="true">&lt;/i>转载&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true">&lt;/i>
+ &lt;/div>
+ &lt;div class="details-content">
+ &lt;div class="admonition-content">本文转载于 ：&lt;a href="https://blog.moeworld.tech/2022/09/03/%e5%8e%bb%e4%bd%a0%e7%9a%84%e5%b9%bf%e5%91%8a%e7%bb%88%e7%bb%93%e8%80%85%ef%bc%81%e5%b9%b2%e6%8e%8951xiaolu-com/"target="_blank" rel="external nofollow noopener noreferrer">晓空的博客-&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a>&lt;/div>
+ &lt;/div>
+ &lt;/div>
+&lt;div class="details admonition note open">
+ &lt;div class="details-summary admonition-title">
+ &lt;i class="icon fa-solid fa-pencil-alt fa-fw" aria-hidden="true">&lt;/i>注意&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true">&lt;/i>
+ &lt;/div>
+ &lt;div class="details-content">
+ &lt;div class="admonition-content">今天在调试自己的博客时，发现一个报错信息，来自1111.51xiaolu.com，我会想下我得网站好像从来没有用到这个网址得资源呀。&lt;br>
+经过搜索后发现原来是浏览器安装一个去广告插件干的，简直不敢相信！&lt;/div>
+ &lt;/div>
+ &lt;/div>
+&lt;blockquote>&lt;p>下面内容来自&lt;a href="https://blog.moeworld.tech/"target="_blank" rel="external nofollow noopener noreferrer">晓空的博客&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a>分析过程，转载学习一下。&lt;/p>
+&lt;/blockquote></description></item><item><title>中文技术文档的写作规范</title><link>https://geekswg.js.cool/posts/2023/docs-style-guide/</link><pubDate>Thu, 09 Mar 2023 14:07:33 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2023/docs-style-guide/</guid><category domain="https://geekswg.js.cool/categories/%E8%BD%AC%E8%BD%BD/">转载</category><description>&lt;div class="details admonition quote open">
+ &lt;div class="details-summary admonition-title">
+ &lt;i class="icon fa-solid fa-quote-right fa-fw" aria-hidden="true">&lt;/i>转载&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true">&lt;/i>
+ &lt;/div>
+ &lt;div class="details-content">
+ &lt;div class="admonition-content">本文转载于 ：&lt;a href="https://lruihao.cn/posts/document-style-guide/"target="_blank" rel="external nofollow noopener noreferrer">李瑞豪的博客-中文技术文档的写作规范&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a>&lt;/div>
+ &lt;/div>
+ &lt;/div>
+&lt;p>英语世界里，文档非常受重视，许多公司和组织都有自己的文档规范，清楚地规定写作要求，比如&lt;a href="https://www.microsoftpressstore.com/store/microsoft-manual-of-style-9780735648715"target="_blank" rel="external nofollow noopener noreferrer">微软&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a>、&lt;a href="http://styleguide.mailchimp.com/"target="_blank" rel="external nofollow noopener noreferrer">MailChimp&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a>、&lt;a href="https://help.apple.com/asg/mac/2013/ASG_2013.pdf"target="_blank" rel="external nofollow noopener noreferrer">Apple&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a>、&lt;a href="https://www.amazon.com/dp/B003P8QDFU/ref=dp-kindle-redirect?_encoding=UTF8&amp;amp;btkr=1"target="_blank" rel="external nofollow noopener noreferrer">Yahoo&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a>、&lt;a href="https://docs.docker.com/opensource/doc-style/"target="_blank" rel="external nofollow noopener noreferrer">docker&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a>、&lt;a href="https://struts.apache.org/docs/documentation-style-guide.html"target="_blank" rel="external nofollow noopener noreferrer">Struts&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a> 等等（维基百科有一份完整的&lt;a href="https://en.wikipedia.org/wiki/List_of_style_guides"target="_blank" rel="external nofollow noopener noreferrer">清单&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a>）。&lt;a href="https://github.com/ruanyf/document-style-guide/blob/master/docs/reference.md"target="_blank" rel="external nofollow noopener noreferrer">中文的&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a>也有不少，但都不令人满意，要么太简单，要么不太适用。&lt;/p></description></item></channel></rss>
