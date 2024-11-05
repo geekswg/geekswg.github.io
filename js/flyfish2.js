@@ -399,6 +399,6 @@ const RENDERER = {
     },
   };
   
-  window.addEventListener("load", function () {
+  window.addEventListener("DOMContentLoaded", function () {
     RENDERER.init();
   });
