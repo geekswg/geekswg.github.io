@@ -317,7 +317,6 @@ function autSetTitle(){
 document.addEventListener(&#39;DOMContentLoaded&#39;, () =&gt; {
     CodeBlock.init(&#39;hello world&#39;)
 });
-
 const CodeBlock = {
     maxHeight: 512, //px
     //当 overflow-x 值为 hidden、scroll 或者 auto，而本属性的值为 visible（默认值）时，本属性会被隐式的计算为 auto。
@@ -334,26 +333,25 @@ const CodeBlock = {
             let origalHeight = ele.offsetHeight;
             if(ele.offsetHeight &gt; overflowHeight){
                 //console.log(&#39;#&#39;&#43;ele.id&#43;&#39;&gt;.chroma.open&gt;.table-wrapper&#39;);
-                let curEle = document.querySelector(&#39;#&#39;&#43;ele.id&#43;&#39;&gt;.chroma.open&gt;.table-wrapper&#39;);
+                let childEle = ele.getElementsByClassName(&#39;chroma&#39;)[0];
                 //console.log(curEle);
-                curEle.style.height = overflowHeight &#43; &#39;px&#39;;
-                curEle.style.overflowY = overflowY;
-                curEle.append();
-                
+                childEle.style.height = overflowHeight &#43; &#39;px&#39;;
+                childEle.style.overflowY = overflowY;
+
                 let showMoreDiv = document.createElement(&#39;div&#39;);
                 showMoreDiv.id = ele.id&#43;&#39;-more&#39;;
                 
-                showMoreDiv.style.cssText = &#39;margin-top: -24px;position:sticky;z-index:99;background-image: linear-gradient(to top, #9c9c9c, transparent);text-align: center;cursor: pointer;&#39;;
+                showMoreDiv.style.cssText = &#39;position:sticky;background-image: linear-gradient(to top, #9c9c9c, transparent);text-align: center;cursor: pointer;&#39;;
                 showMoreDiv.innerHTML = &#39;&lt;i class=&#34;fa-solid fa-angles-down fa-beat-fade&#34; style=&#34;font-size:20px;&#34;&gt;&lt;/i&gt;&#39;;
                 ele.appendChild(showMoreDiv);
                 showMoreDiv.addEventListener(&#39;click&#39;, function(){
                     if(showMoreDiv.innerHTML.indexOf(&#39;fa-angles-down&#39;) &gt;= 0 ){
-                        curEle.style.height = origalHeight &#43; &#39;px&#39;;
+                        childEle.style.height = origalHeight &#43; &#39;px&#39;;
                         showMoreDiv.innerHTML = &#39;&lt;i class=&#34;fa-solid fa-angles-up fa-beat-fade&#34; style=&#34;font-size:20px;&#34;&gt;&lt;/i&gt;&#39;;
-                        showMoreDiv.style.cssText = &#39;margin-top: -56px;position:sticky;z-index:99;background-image: linear-gradient(to top, #9c9c9c, transparent);text-align: center;cursor: pointer;&#39;;
+                        showMoreDiv.style.cssText = &#39;margin-top: -34px;position:sticky;z-index:99;background-image: linear-gradient(to top, #9c9c9c, transparent);text-align: center;cursor: pointer;&#39;;
                         
                     }else{
-                        curEle.style.height = overflowHeight &#43; &#39;px&#39;;
+                        childEle.style.height = overflowHeight &#43; &#39;px&#39;;
                         showMoreDiv.innerHTML = &#39;&lt;i class=&#34;fa-solid fa-angles-down fa-beat-fade&#34; style=&#34;font-size:20px;&#34;&gt;&lt;/i&gt;&#39;;
                         showMoreDiv.style.cssText = &#39;margin-top: -24px;position:sticky;z-index:99;background-image: linear-gradient(to top, #9c9c9c, transparent);text-align: center;cursor: pointer;&#39;;
                         window.scrollTo({top:ele.offsetTop, behavior: &#39;smooth&#39;});
@@ -363,13 +361,16 @@ const CodeBlock = {
             }
         });
     },
-
     hello: function(msg){
         console.info(&#39;CodeBlock.hello()=%s, by geekswg&#39;,msg);
     },
     init : function(args){
-        this.hello(args);
-        this.initCodeBlockOverflowY(512,&#39;auto&#39;);// unit px
+        try {
+            this.initCodeBlockOverflowY(512,&#39;auto&#39;);// unit px 
+        }catch (error) {
+            console.error(&#39;CodeBlock.init() error&#39;,error);
+        }
+        
     }
 }
 ```
