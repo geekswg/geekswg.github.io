@@ -127,6 +127,53 @@ function xml2String(xmlObject) {
 &lt;/script&gt;
 
 
+
+&lt;div class=&#34;preview-box&#34; id=&#34;previewBox&#34;&gt;
+  &lt;img src=&#34;&#34; alt=&#34;预览图&#34; id=&#34;previewImage&#34;&gt;
+&lt;/div&gt;
+&lt;style&gt;
+  .preview-link {
+    position: relative;
+    text-decoration: none;
+    color: #3498db;
+}
+.preview-box {
+    display: none; /* 默认隐藏 */
+    position: absolute;
+    width: 200px;
+    height: 150px;
+    border: 1px solid #ddd;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    z-index: 10;
+}
+.preview-box img {
+    width: 100%;
+    height: 100%;
+}
+&lt;/style&gt;
+&lt;script&gt;
+  document.addEventListener(&#34;DOMContentLoaded&#34;, function () {
+    const previewBox = document.getElementById(&#34;previewBox&#34;);
+    const previewImage = document.getElementById(&#34;previewImage&#34;);
+    document.querySelectorAll(&#34;.friend-link&#34;).forEach(link =&gt; {
+        link.addEventListener(&#34;mouseenter&#34;, (e) =&gt; {
+            //const imageSrc = link.getAttribute(&#34;data-preview&#34;);
+            previewImage.src = &#34;https://image.thum.io/get/&#34;&#43;link.href;
+            previewBox.style.display = &#34;block&#34;;
+        });
+        link.addEventListener(&#34;mousemove&#34;, (e) =&gt; {
+            previewBox.style.top = `${e.pageY-150}px`;
+            previewBox.style.left = `${e.pageX-150}px`;
+        });
+        link.addEventListener(&#34;mouseleave&#34;, () =&gt; {
+            previewBox.style.display = &#34;none&#34;;
+        });
+    });
+});
+&lt;/script&gt;
+
+
 ---
 
 > 作者:   
