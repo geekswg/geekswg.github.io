@@ -35,24 +35,7 @@ const PLUGINS_LIVE2D = new(function(){
    * require APlayer and MetingJS
    */
   this.getRequire = () => {
-    
 
-    $.ajax({url: 'https://cdn.bootcdn.net/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js',dataType:"script", cache: true, async: true});
-    const JQ_UI = document.createElement('script');
-    JQ_UI.src = 'https://cdn.bootcdn.net/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js';
-
-    const s = document.getElementsByTagName('script')[0];
-
-    s.parentNode.insertBefore(JQ_UI, s);
-    // if (typeof MetingJSElement === 'undefined') {
-    //   const APlayer = document.createElement('script');
-    //   const Meting = document.createElement('script');
-    //   APlayer.src = 'https://unpkg.com/aplayer/dist/APlayer.min.js';
-    //   Meting.src = 'https://unpkg.com/meting@2/dist/Meting.min.js';
-    //   const s = document.getElementsByTagName('script')[0];
-    //   s.parentNode.insertBefore(APlayer, s);
-    //   s.parentNode.insertBefore(Meting, s);
-    // }
   };
 
   this.strimStr = function(srcStr){
@@ -79,9 +62,9 @@ const PLUGINS_LIVE2D = new(function(){
     $("<link>").attr({href: "https://live2d.fghrsh.net/assets/1.4.2/waifu.min.css", rel: "stylesheet", type: "text/css"}).appendTo('head');
     $('body').append('<div class="waifu"><div class="waifu-tips"></div><canvas id="live2d" class="live2d"></canvas><div class="waifu-tool"><span class="fui-home"></span> <span class="fui-chat"></span> <span class="fui-eye"></span> <span class="fui-user"></span> <span class="fui-photo"></span> <span class="fui-info-circle"></span> <span class="fui-cross"></span></div></div>');
     // waifu-tips.js 依赖 JQuery 库
-    // $.ajax({url: 'https://live2d.fghrsh.net/assets/1.4.2/jquery.min.js',dataType:"script", cache: true, async: false});
+    $.ajax({url: 'https://live2d.fghrsh.net/assets/1.4.2/jquery.min.js',dataType:"script", cache: true, async: false});
     // 实现拖动效果，需引入 JQuery UI
-    //$.ajax({url: 'https://live2d.fghrsh.net/assets/1.4.2/jquery-ui.min.js',dataType:"script", cache: true, async: false});
+    $.ajax({url: 'https://live2d.fghrsh.net/assets/1.4.2/jquery-ui.min.js',dataType:"script", cache: true, async: false});
     $.ajax({url: "https://live2d.fghrsh.net/assets/1.4.2/waifu-tips.min.js", dataType:"script", cache: true, success: function() {
     $.ajax({url: "https://live2d.fghrsh.net/assets/1.4.2/live2d.min.js", dataType:"script", cache: true, success: function() {
         /* 可直接修改部分参数 */
