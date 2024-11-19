@@ -44,11 +44,8 @@
 	}, {
 		"selector": ".menu-item-search a",
 		"text": ["找不到想看的内容？搜索看看吧！", "在找什么东西呢，需要帮忙吗？"]
-	}, {
-		"selector": ".menu-item a",
-		"text": ["快看看这里都有什么呢？"]
-	}, {
-		"selector": ".site-author",
+	},  {
+		"selector": ".home-avatar,header-title",
 		"text": ["我家主人好看吗？", "这是我家主人(*´∇｀*)"]
 	}, {
 		"selector": ".site-state",
@@ -173,12 +170,24 @@
 	}, {
 		"selector": ".vcontent",
 		"text": ["哇，快看看这个精彩评论！", "如果有疑问，请尽快留言哦～"]
-	}],
+	},         
+	{ "selector": ".container a[href^='http']", "text": ["要看看 <span style=\"color:#0099cc;\">{text}</span> 么？"] },
+	{ "selector": ".container a[href^='#']", "text": ["要看目录 <span style=\"color:#0099cc;\">{text}</span> 么？"] },
+	{ "selector": ".container a[href^='/']", "text": ["要看看 <span style=\"color:#0099cc;\">{text}</span> 么？"] },
+	{ "selector": ".menu a[href]", "text": ["要看看菜单 <span style=\"color:#0099cc;\">{text}</span> 么？"] },
+	{ "selector": "#share-bar a[href]", "text": ["好东西要和朋友一起分享 <span style=\"color:#0099cc;\">{text}</span> 么？"] },
+	{ "selector": ".widgets .fixed-button", "text": ["小助手 <span style=\"color:#0099cc;\">{text}</span> "] },
+	{ "selector": ".search", "text": ["<span style=\"color:#0099cc;\">这里可以找到你想要的东西哟{text}</span> "] },
+	{ "selector": "a[href]", "text": ["要看看 <span style=\"color:#0099cc;\">{text}</span> 么？"] },
+
+	{ "selector": ".aplayer-info", "text": ["来一起听音乐吧~~~ {text}"] },
+	{ "selector": ".aplayer-list li", "text": ["听听 <span style=\"color:#0099cc;\">{text}</span> ？"] }
+	],
 	"click": [{
 		"selector": "#live2d",
 		"text": ["是…是不小心碰到了吧…", "萝莉控是什么呀？", "你看到我的小熊了吗？", "再摸的话我可要报警了！⌇●﹏●⌇", "110 吗，这里有个变态一直在摸我(ó﹏ò｡)", "不要摸我了，我会告诉老婆来打你的！", "干嘛动我呀！小心我咬你！", "别摸我，有什么好摸的！"]
 	}, {
-		"selector": ".veditor",
+		"selector": ".wl-comment",
 		"text": ["要吐槽些什么呢？", "一定要认真填写喵～", "有什么想说的吗？"]
 	}, {
 		"selector": ".vsubmit",
