@@ -58,5 +58,5 @@
 ---
 
 > 作者:   
-> URL: https://geekswg.js.cool/gallery/  
+> URL: https://geekswg.js.cool/gallery/t/  
 
