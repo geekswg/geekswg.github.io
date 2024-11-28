@@ -42,13 +42,13 @@
 
 &lt;div class=&#34;gallery&#34;&gt;
         &lt;div class=&#34;gallery-item&#34;&gt;
-            &lt;a href=&#34;/gallery/hello&#34; &gt;
+            &lt;a href=&#34;/gallery/hello/&#34; &gt;
             &lt;img src=&#34;/images/avatar.webp&#34; alt=&#34;&#34;&gt;
             &lt;p&gt;相册&lt;/p&gt;
             &lt;/a&gt;
         &lt;/div&gt;
         &lt;div class=&#34;gallery-item&#34;&gt;
-            &lt;a href=&#34;/gallery/qsmy&#34; &gt;
+            &lt;a href=&#34;/gallery/qsmy/&#34; &gt;
             &lt;img src=&#34;/gallery/qsmy/qsmy/qsmy-7.webp&#34; alt=&#34;&#34;&gt;
             &lt;p&gt;秦时明月&lt;/p&gt;
             &lt;/a&gt;
