@@ -1,4 +1,14 @@
+
 (function(){ 
+// script.js
+var colors = ["#FF0000", "#FF7F00", "#00FF00", "#0000FF", "#4B0082", "#8B00FF"];
+var DEFAULT_COLOR = colors[Math.floor(Math.random() * colors.length)];
+// 获取当前脚本的 URL
+const script = document.currentScript.src;
+// 创建一个 URL 对象以解析参数
+const urlParams = new URL(script).searchParams;
+// 获取参数
+const colckColor = urlParams.get('colckColor') || DEFAULT_COLOR;
 
    var digit=
     [
@@ -141,7 +151,7 @@ var canvas = document.getElementById('canvasTime');
 if(canvas.getContext){
     var cxt = canvas.getContext('2d');
     //声明canvas的宽高
-    var H = 100,W = 700;
+    var H = 100,W = 660;
     canvas.height = H;
     canvas.width = W;  
     cxt.fillStyle = '#f00';
@@ -161,6 +171,7 @@ if(canvas.getContext){
 
     /*生成点阵数字*/
     function renderDigit(index,num){
+        cxt.fillStyle = colckColor;
         for(var i = 0; i < digit[num].length; i++){
             for(var j = 0; j < digit[num][i].length; j++){
                 if(digit[num][i][j] == 1){
