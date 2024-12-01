@@ -14,11 +14,11 @@
       "type": ["star","circle"],  
       "stroke": {
         "width": 0,
-        "color": "#ffffff"  
+        "color": "#FF0000"  
       }
     },
     "opacity": {
-      "value": 0.8,  
+      "value": 0.6,  
       "random": true,  
       "anim": {
         "enable": true,
@@ -57,9 +57,35 @@
         "enable": false  
       },
       "onclick": {
-        "enable": false  
+        "enable": true
+        ,"mode": "bubble"  
       },
       "resize": true
+    }
+    ,"modes": {
+      "grab": {
+        "distance": 100,
+        "line_linked": {
+          "opacity": 0.8
+        }
+      },
+      "bubble": {
+        "distance": 100,
+        "size": 10,
+        "duration": 0.5,
+        "opacity": 0.5,
+        "speed": 3
+      },
+      "repulse": {
+        "distance": 100,
+        "duration": 0.4
+      },
+      "push": {
+        "particles_nb": 1
+      },
+      "remove": {
+        "particles_nb": 2
+      }
     }
   },
   "retina_detect": true

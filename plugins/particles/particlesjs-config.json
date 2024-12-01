@@ -31,7 +31,7 @@
       }
     },
     "size": {
-      "value": 6,
+      "value": 10,
       "random": true,
       "anim": {
         "enable": true,
@@ -69,16 +69,30 @@
         "mode": "bubble"  
       },
       "resize": true
-    },
-    "modes": {
+    }
+    ,"modes": {
       "grab": {
         "distance": 100,
         "line_linked": {
-          "opacity": 1
+          "opacity": 0.8
         }
       },
+      "bubble": {
+        "distance": 100,
+        "size": 20,
+        "duration": 0.5,
+        "opacity": 0.5,
+        "speed": 3
+      },
+      "repulse": {
+        "distance": 100,
+        "duration": 0.4
+      },
       "push": {
-        "particles_nb": 4
+        "particles_nb": 1
+      },
+      "remove": {
+        "particles_nb": 2
       }
     }
   },

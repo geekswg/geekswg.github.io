@@ -38,7 +38,11 @@
       }
     },
     "line_linked": {
-      "enable": false  
+      "enable": true,
+      "distance": 100,
+      "color": "#B0B0B0",
+      "opacity": 0.4,
+      "width": 1
     },
     "move": {
       "enable": true,
@@ -54,12 +58,22 @@
     "detect_on": "window",
     "events": {
       "onhover": {
-        "enable": false  
+        "enable": true,
+        "mode": "bubble"
       },
       "onclick": {
         "enable": false  
       },
       "resize": true
+    },
+    "modes": {
+      "bubble": {
+        "distance": 100,
+        "size": 20,
+        "duration": 0.5,
+        "opacity": 0.6,
+        "speed": 3
+      }
     }
   },
   "retina_detect": true

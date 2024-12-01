@@ -1,7 +1,7 @@
 {
     "particles": {
       "number": {
-        "value": 30,
+        "value": 40,
         "limit": 120,
         "density": {
           "enable": true,
@@ -9,21 +9,21 @@
         }
       },
       "color": {
-        "value": "random"
+        "value": "#0a74da" 
       },
       "shape": {
-        "type": "circle",
+        "type": ["image"],
         "stroke": {
           "width": 0,
           "color": "#ffffff"
         },
-        "polygon": {
-          "nb_sides": 5
+        "image": {
+          "src": "/plugins/particles/snow.png"
         }
       },
       "opacity": {
         "value": 0.3,
-        "random": false,
+        "random": true,
         "anim": {
           "enable": false,
           "speed": 1,
@@ -32,12 +32,12 @@
         }
       },
       "size": {
-        "value": 4,
+        "value": 20,
         "random": true,
         "anim": {
           "enable": false,
           "speed": 1,
-          "size_min": 0.6,
+          "size_min": 0.1,
           "sync": false
         }
       },
@@ -46,12 +46,12 @@
       },
       "move": {
         "enable": true,
-        "speed": 4,  
+        "speed": 2,  
         "direction": "bottom",  
-        "random": false,
-        "straight": true,
+        "random": true,
+        "straight": false,
         "out_mode": "out",
-        "bounce": false
+        "bounce": true
       }
     },
     "interactivity": {
@@ -59,7 +59,7 @@
       "events": {
         "onhover": {
           "enable": true,
-          "mode": "remove"
+          "mode": ["grab", "bubble"]
         },
         "onclick": {
           "enable": true,
@@ -75,9 +75,9 @@
         },
         "bubble": {
           "distance": 100,
-          "size": 20,
+          "size": 40,
           "duration": 0.5,
-          "opacity": 0.5,
+          "opacity": 0.6,
           "speed": 3
         },
         "repulse": {
