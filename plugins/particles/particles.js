@@ -755,7 +755,7 @@ var pJS = function(tag_id, params){
 
     pJS.tmp.pushing = true;
     if((pJS.particles.array.length + nb) > pJS.particles.number.limit) {
-      pJS.fn.removeParticles((pJS.particles.array.length + nb)- pJS.particles.number.limit);
+      pJS.fn.modes.removeParticles((pJS.particles.array.length + nb)- pJS.particles.number.limit);
     }
     for(var i = 0; i < nb; i++){
       pJS.particles.array.push(
