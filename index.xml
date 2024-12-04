@@ -1,4 +1,58 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>毕少侠</title><link>https://geekswg.js.cool/</link><description>博客：探索、发现、分享 By geekswg-[毕少侠]</description><generator>Hugo 0.139.3 &amp; FixIt v0.3.16-fda3fa66</generator><language>zh-CN</language><managingEditor>geekswg@qq.com (geekswg)</managingEditor><webMaster>geekswg@qq.com (geekswg)</webMaster><copyright>geekswg &amp; 毕少侠</copyright><lastBuildDate>Mon, 11 Nov 2024 15:42:33 +0800</lastBuildDate><atom:link href="https://geekswg.js.cool/index.xml" rel="self" type="application/rss+xml"/><item><title>飞牛NAS的安装与使用体验</title><link>https://geekswg.js.cool/posts/2024/fnnas/</link><pubDate>Mon, 11 Nov 2024 14:54:12 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2024/fnnas/</guid><category domain="https://geekswg.js.cool/categories/linux/">linux</category><description>&lt;img src="https://geekswg.js.cool/images/posts/featured-image-preview.jpg" alt="featured image" referrerpolicy="no-referrer">&lt;h2 id="前言" class="heading-element">&lt;span>前言&lt;/span>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>毕少侠</title><link>https://geekswg.js.cool/</link><description>博客：探索、发现、分享 By geekswg-[毕少侠]</description><generator>Hugo 0.139.3 &amp; FixIt v0.3.16-fda3fa66</generator><language>zh-CN</language><managingEditor>geekswg@qq.com (geekswg)</managingEditor><webMaster>geekswg@qq.com (geekswg)</webMaster><copyright>geekswg &amp; 毕少侠</copyright><lastBuildDate>Thu, 05 Dec 2024 00:16:00 +0800</lastBuildDate><atom:link href="https://geekswg.js.cool/index.xml" rel="self" type="application/rss+xml"/><item><title>VSCode常用快捷键</title><link>https://geekswg.js.cool/posts/2024/vscode-keybing/</link><pubDate>Wed, 04 Dec 2024 22:02:38 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2024/vscode-keybing/</guid><category domain="https://geekswg.js.cool/categories/notes/">notes</category><description>&lt;p>在 VSCode 中，以下是一些常用的快捷键，特别是在编辑 Markdown 文件时：&lt;/p>
+&lt;blockquote>
+&lt;p>这些快捷键可以大大提高你在 VSCode 中编辑 Markdown 文件时的效率。&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="基本编辑快捷键" class="heading-element">&lt;span>基本编辑快捷键：&lt;/span>
+ &lt;a href="#%e5%9f%ba%e6%9c%ac%e7%bc%96%e8%be%91%e5%bf%ab%e6%8d%b7%e9%94%ae" class="heading-mark">
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
+ &lt;/a>
+&lt;/h2>&lt;ul>
+&lt;li>&lt;strong>打开文件&lt;/strong>: &lt;code>Ctrl + O&lt;/code> (Windows/Linux) 或 &lt;code>Cmd + O&lt;/code> (Mac)&lt;/li>
+&lt;li>&lt;strong>保存文件&lt;/strong>: &lt;code>Ctrl + S&lt;/code> 或 &lt;code>Cmd + S&lt;/code>&lt;/li>
+&lt;li>&lt;strong>撤销操作&lt;/strong>: &lt;code>Ctrl + Z&lt;/code> 或 &lt;code>Cmd + Z&lt;/code>&lt;/li>
+&lt;li>&lt;strong>重做操作&lt;/strong>: &lt;code>Ctrl + Shift + Z&lt;/code> 或 &lt;code>Cmd + Shift + Z&lt;/code>&lt;/li>
+&lt;li>&lt;strong>剪切&lt;/strong>: &lt;code>Ctrl + X&lt;/code> 或 &lt;code>Cmd + X&lt;/code>&lt;/li>
+&lt;li>&lt;strong>复制&lt;/strong>: &lt;code>Ctrl + C&lt;/code> 或 &lt;code>Cmd + C&lt;/code>&lt;/li>
+&lt;li>&lt;strong>粘贴&lt;/strong>: &lt;code>Ctrl + V&lt;/code> 或 &lt;code>Cmd + V&lt;/code>&lt;/li>
+&lt;li>&lt;strong>删除当前行&lt;/strong>: &lt;code>Ctrl + Shift + K&lt;/code> 或 &lt;code>Cmd + Shift + K&lt;/code>&lt;/li>
+&lt;li>&lt;strong>选择当前行&lt;/strong>: &lt;code>Ctrl + L&lt;/code> 或 &lt;code>Cmd + L&lt;/code>&lt;/li>
+&lt;li>&lt;strong>选择当前单词&lt;/strong>: &lt;code>Ctrl + D&lt;/code> 或 &lt;code>Cmd + D&lt;/code> (连续按可以选中所有相同的单词)&lt;/li>
+&lt;/ul>
+&lt;h2 id="markdown-相关快捷键" class="heading-element">&lt;span>Markdown 相关快捷键：&lt;/span>
+ &lt;a href="#markdown-%e7%9b%b8%e5%85%b3%e5%bf%ab%e6%8d%b7%e9%94%ae" class="heading-mark">
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
+ &lt;/a>
+&lt;/h2>&lt;ul>
+&lt;li>&lt;strong>预览 Markdown&lt;/strong>: &lt;code>Ctrl + Shift + V&lt;/code> 或 &lt;code>Cmd + Shift + V&lt;/code> (显示 Markdown 预览)&lt;/li>
+&lt;li>&lt;strong>分屏显示编辑和预览&lt;/strong>: &lt;code>Ctrl + \&lt;/code> 或 &lt;code>Cmd + \&lt;/code> (分屏编辑，&lt;code>Ctrl + 1&lt;/code> 和 &lt;code>Ctrl + 2&lt;/code> 切换编辑器)&lt;/li>
+&lt;li>&lt;strong>插入链接&lt;/strong>: &lt;code>Ctrl + K&lt;/code>，然后按 &lt;code>Ctrl + V&lt;/code> 或 &lt;code>Cmd + V&lt;/code> （插入链接）&lt;/li>
+&lt;li>&lt;strong>插入图片&lt;/strong>: &lt;code>Ctrl + Shift + P&lt;/code> 或 &lt;code>Cmd + Shift + P&lt;/code> 输入 &amp;ldquo;Insert Image&amp;rdquo;，并选择相应选项&lt;/li>
+&lt;li>&lt;strong>粗体&lt;/strong>: &lt;code>Ctrl + B&lt;/code> 或 &lt;code>Cmd + B&lt;/code> (选中并加粗)&lt;/li>
+&lt;li>&lt;strong>斜体&lt;/strong>: &lt;code>Ctrl + I&lt;/code> 或 &lt;code>Cmd + I&lt;/code> (选中并斜体)&lt;/li>
+&lt;li>&lt;strong>无序列表&lt;/strong>: &lt;code>Ctrl + Shift + 8&lt;/code> 或 &lt;code>Cmd + Shift + 8&lt;/code>&lt;/li>
+&lt;li>&lt;strong>有序列表&lt;/strong>: &lt;code>Ctrl + Shift + 7&lt;/code> 或 &lt;code>Cmd + Shift + 7&lt;/code>&lt;/li>
+&lt;li>&lt;strong>引用块&lt;/strong>: &lt;code>Ctrl + Shift + &amp;gt;&lt;/code> 或 &lt;code>Cmd + Shift + &amp;gt;&lt;/code> (插入引用块)&lt;/li>
+&lt;/ul>
+&lt;h2 id="查找和导航" class="heading-element">&lt;span>查找和导航：&lt;/span>
+ &lt;a href="#%e6%9f%a5%e6%89%be%e5%92%8c%e5%af%bc%e8%88%aa" class="heading-mark">
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
+ &lt;/a>
+&lt;/h2>&lt;ul>
+&lt;li>&lt;strong>查找&lt;/strong>: &lt;code>Ctrl + F&lt;/code> 或 &lt;code>Cmd + F&lt;/code>&lt;/li>
+&lt;li>&lt;strong>替换&lt;/strong>: &lt;code>Ctrl + H&lt;/code> 或 &lt;code>Cmd + H&lt;/code>&lt;/li>
+&lt;li>&lt;strong>跳转到行号&lt;/strong>: &lt;code>Ctrl + G&lt;/code> 或 &lt;code>Cmd + G&lt;/code>&lt;/li>
+&lt;li>&lt;strong>打开命令面板&lt;/strong>: &lt;code>Ctrl + Shift + P&lt;/code> 或 &lt;code>Cmd + Shift + P&lt;/code>&lt;/li>
+&lt;li>&lt;strong>切换文件&lt;/strong>: &lt;code>Ctrl + P&lt;/code> 或 &lt;code>Cmd + P&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h2 id="工作区和视图快捷键" class="heading-element">&lt;span>工作区和视图快捷键：&lt;/span>
+ &lt;a href="#%e5%b7%a5%e4%bd%9c%e5%8c%ba%e5%92%8c%e8%a7%86%e5%9b%be%e5%bf%ab%e6%8d%b7%e9%94%ae" class="heading-mark">
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
+ &lt;/a>
+&lt;/h2>&lt;ul>
+&lt;li>&lt;strong>打开侧边栏&lt;/strong>: &lt;code>Ctrl + B&lt;/code> 或 &lt;code>Cmd + B&lt;/code>&lt;/li>
+&lt;li>&lt;strong>切换集成终端&lt;/strong>: &lt;code>Ctrl + `` 或 &lt;/code>Cmd + `` (反引号)&lt;/li>
+&lt;li>&lt;strong>显示问题面板&lt;/strong>: &lt;code>Ctrl + Shift + M&lt;/code> 或 &lt;code>Cmd + Shift + M&lt;/code>&lt;/li>
+&lt;/ul></description></item><item><title>飞牛NAS的安装与使用体验</title><link>https://geekswg.js.cool/posts/2024/fnnas/</link><pubDate>Mon, 11 Nov 2024 14:54:12 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2024/fnnas/</guid><category domain="https://geekswg.js.cool/categories/linux/">linux</category><description>&lt;img src="https://geekswg.js.cool/images/posts/featured-image-preview.jpg" alt="featured image" referrerpolicy="no-referrer">&lt;h2 id="前言" class="heading-element">&lt;span>前言&lt;/span>
  &lt;a href="#%e5%89%8d%e8%a8%80" class="heading-mark">
  &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
  &lt;/a>
@@ -1318,170 +1372,4 @@ WPS AI可以根据文章的主题和内容，对文章进行智能排版。它�
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-md" data-lang="md">&lt;span class="line">&lt;span class="cl">![&lt;span class="nt">404-9&lt;/span>](&lt;span class="na">https://www.jsdelivr.ren/gh/geekswg/static@main/blog-img/404/404-9.gif &amp;#34;样式9-Style1&amp;#34;&lt;/span>)&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>&lt;figure>&lt;a class="lightgallery" href="https://www.jsdelivr.ren/gh/geekswg/static@main/blog-img/404/404-9.gif?size=large" data-thumbnail="https://www.jsdelivr.ren/gh/geekswg/static@main/blog-img/404/404-9.gif?size=small" data-sub-html="&lt;h2>404-9&lt;/h2>&lt;p>样式9-Style1&lt;/p>">&lt;img loading="lazy" src="https://www.jsdelivr.ren/gh/geekswg/static@main/blog-img/404/404-9.gif" alt="404-9" srcset="https://www.jsdelivr.ren/gh/geekswg/static@main/blog-img/404/404-9.gif?size=small, https://www.jsdelivr.ren/gh/geekswg/static@main/blog-img/404/404-9.gif?size=medium 1.5x, https://www.jsdelivr.ren/gh/geekswg/static@main/blog-img/404/404-9.gif?size=large 2x" data-title="样式9-Style1" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/>&lt;/a>&lt;figcaption class="image-caption">404-9&lt;/figcaption>
- &lt;/figure>&lt;/p></description></item><item><title>Website RIP 效果实现</title><link>https://geekswg.js.cool/posts/2023/website-rip/</link><pubDate>Wed, 24 May 2023 20:42:20 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2023/website-rip/</guid><category domain="https://geekswg.js.cool/categories/notes/">notes</category><description>&lt;img src="https://geekswg.js.cool/images/posts/featured-image-preview.jpg" alt="featured image" referrerpolicy="no-referrer">&lt;div class="details admonition note open">
- &lt;div class="details-summary admonition-title">&lt;i class="icon fa-fw fa-solid fa-pencil-alt" aria-hidden="true">&lt;/i>注意&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true">&lt;/i>&lt;/div>
- &lt;div class="details-content">
- &lt;div class="admonition-content">我们常常会在百度百科中看到有人去世时，关于ta的百度百科页会变成黑白色，而其他的无影响。这难道是又重新创建或者修改了整个网页的内容吗？那工作量和时间也来不及呀，其实不然，而是有一个属性，只需设置该属性就可以改变一整个网页的色调。&lt;/div>
- &lt;/div>
-&lt;/div>
-&lt;blockquote>
-&lt;p>实现代码&lt;/p>
-&lt;/blockquote>
-&lt;p>核心代码 &lt;code>document.querySelector('html').style.filter = 'grayscale(100%)';&lt;/code>&lt;/p>
-&lt;h2 id="具体js代码实现" class="heading-element">&lt;span>具体js代码实现&lt;/span>
- &lt;a href="#%e5%85%b7%e4%bd%93js%e4%bb%a3%e7%a0%81%e5%ae%9e%e7%8e%b0" class="heading-mark">
- &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
- &lt;/a>
-&lt;/h2>&lt;blockquote>
-&lt;p>稍微封装了一下，方便维护日期和默哀提示消息，。&lt;/p>
-&lt;/blockquote>
-&lt;h2 id="代码封装" class="heading-element">&lt;span>代码封装&lt;/span>
- &lt;a href="#%e4%bb%a3%e7%a0%81%e5%b0%81%e8%a3%85" class="heading-mark">
- &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
- &lt;/a>
-&lt;/h2>&lt;blockquote>
-&lt;p>使用Demo &lt;code>RIP.isInRIP(RIP.rip_configs)&lt;/code>&lt;br>
-只需要按照格式维护rip_configs就可以轻松实现整个网站默哀祭奠的效果了。&lt;/p>
-&lt;/blockquote>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
-&lt;/span>&lt;span class="lnt"> 2
-&lt;/span>&lt;span class="lnt"> 3
-&lt;/span>&lt;span class="lnt"> 4
-&lt;/span>&lt;span class="lnt"> 5
-&lt;/span>&lt;span class="lnt"> 6
-&lt;/span>&lt;span class="lnt"> 7
-&lt;/span>&lt;span class="lnt"> 8
-&lt;/span>&lt;span class="lnt"> 9
-&lt;/span>&lt;span class="lnt">10
-&lt;/span>&lt;span class="lnt">11
-&lt;/span>&lt;span class="lnt">12
-&lt;/span>&lt;span class="lnt">13
-&lt;/span>&lt;span class="lnt">14
-&lt;/span>&lt;span class="lnt">15
-&lt;/span>&lt;span class="lnt">16
-&lt;/span>&lt;span class="lnt">17
-&lt;/span>&lt;span class="lnt">18
-&lt;/span>&lt;span class="lnt">19
-&lt;/span>&lt;span class="lnt">20
-&lt;/span>&lt;span class="lnt">21
-&lt;/span>&lt;span class="lnt">22
-&lt;/span>&lt;span class="lnt">23
-&lt;/span>&lt;span class="lnt">24
-&lt;/span>&lt;span class="lnt">25
-&lt;/span>&lt;span class="lnt">26
-&lt;/span>&lt;span class="lnt">27
-&lt;/span>&lt;span class="lnt">28
-&lt;/span>&lt;span class="lnt">29
-&lt;/span>&lt;span class="lnt">30
-&lt;/span>&lt;span class="lnt">31
-&lt;/span>&lt;span class="lnt">32
-&lt;/span>&lt;span class="lnt">33
-&lt;/span>&lt;span class="lnt">34
-&lt;/span>&lt;span class="lnt">35
-&lt;/span>&lt;span class="lnt">36
-&lt;/span>&lt;span class="lnt">37
-&lt;/span>&lt;span class="lnt">38
-&lt;/span>&lt;span class="lnt">39
-&lt;/span>&lt;span class="lnt">40
-&lt;/span>&lt;span class="lnt">41
-&lt;/span>&lt;span class="lnt">42
-&lt;/span>&lt;span class="lnt">43
-&lt;/span>&lt;span class="lnt">44
-&lt;/span>&lt;span class="lnt">45
-&lt;/span>&lt;span class="lnt">46
-&lt;/span>&lt;span class="lnt">47
-&lt;/span>&lt;span class="lnt">48
-&lt;/span>&lt;span class="lnt">49
-&lt;/span>&lt;span class="lnt">50
-&lt;/span>&lt;span class="lnt">51
-&lt;/span>&lt;span class="lnt">52
-&lt;/span>&lt;span class="lnt">53
-&lt;/span>&lt;span class="lnt">54
-&lt;/span>&lt;span class="lnt">55
-&lt;/span>&lt;span class="lnt">56
-&lt;/span>&lt;span class="lnt">57
-&lt;/span>&lt;span class="lnt">58
-&lt;/span>&lt;span class="lnt">59
-&lt;/span>&lt;span class="lnt">60
-&lt;/span>&lt;span class="lnt">61
-&lt;/span>&lt;span class="lnt">62
-&lt;/span>&lt;span class="lnt">63
-&lt;/span>&lt;span class="lnt">64
-&lt;/span>&lt;span class="lnt">65
-&lt;/span>&lt;span class="lnt">66
-&lt;/span>&lt;span class="lnt">67
-&lt;/span>&lt;span class="lnt">68
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-javascript" data-lang="javascript">&lt;span class="line">&lt;span class="cl">&lt;span class="cm">/**
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> * Rest in Peace. R.I.P 🕯️
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> * @2022-3-28 [3.21-mu5735] 沉痛哀悼 132 名遇难同胞：东航航班失事，遇难者含旅客 123 人，机组 9 人
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> * @2022-12-03 江泽民同志逝世，享年96岁
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> * @returns {Blog}
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> */&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">RIP&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// 配置信息
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">rip_configs&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span> 
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">type&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="s1">&amp;#39;perYear&amp;#39;&lt;/span> &lt;span class="c1">// 重复方式 once , perYear , perMonth 
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="p">,&lt;/span>&lt;span class="nx">startTime&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nb">Date&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;2022/04/05 00:00:00&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1">// 开始时间 new Date(&amp;#39;2022/12/03 00:00:00&amp;#39;)
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="p">,&lt;/span>&lt;span class="nx">duration&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">24&lt;/span> &lt;span class="c1">// 持续时间 单位小时
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="p">,&lt;/span>&lt;span class="nx">msgOp&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="kd">function&lt;/span>&lt;span class="p">(){&lt;/span> &lt;span class="c1">//自定义操作，消息提醒等
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="nx">alert&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;清明节&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;清明节&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span> 
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">type&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="s1">&amp;#39;once&amp;#39;&lt;/span> &lt;span class="c1">// 重复方式 once , perYear , perMonth 
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="p">,&lt;/span>&lt;span class="nx">startTime&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nb">Date&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;2022/12/03 00:00:00&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1">// 开始时间 new Date(&amp;#39;2022/12/03 00:00:00&amp;#39;)
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="p">,&lt;/span>&lt;span class="nx">duration&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">48&lt;/span> &lt;span class="c1">// 持续时间 单位小时
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="p">,&lt;/span>&lt;span class="nx">msgOp&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="kd">function&lt;/span>&lt;span class="p">(){&lt;/span> &lt;span class="c1">//自定义操作，消息提醒等
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;祭奠日&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">];&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> 
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">isInRIP&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">rip_configs&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="nx">nowTime&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">let&lt;/span> &lt;span class="nx">result&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{};&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">let&lt;/span> &lt;span class="nx">isRIP&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kc">false&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1">//是否符合条件
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="nx">nowTime&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">nowTime&lt;/span> &lt;span class="o">||&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nb">Date&lt;/span>&lt;span class="p">();&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> 
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">//let type = &amp;#39;once&amp;#39; ;// once , perYear,perMonth,
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="c1">//let startTime = null; //开始时间
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="c1">//let duration = 24; //持续时间 单位H,小时
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="c1">//let msgOp = &amp;#39;&amp;#39;; //消息提示
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> 
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">rip_configs&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">forEach&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">conf&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">index&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">confs&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">info&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;rip_configs.forEach =&amp;gt; &amp;#39;&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="nx">index&lt;/span> &lt;span class="p">);&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> 
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">let&lt;/span> &lt;span class="nx">dur&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">conf&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">duration&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">let&lt;/span> &lt;span class="nx">startTime&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">conf&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">startTime&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> 
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;once&amp;#39;&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="nx">conf&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">type&lt;/span>&lt;span class="p">){&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> 
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;perYear&amp;#39;&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="nx">conf&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">type&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">startTime&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">setFullYear&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">nowTime&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getFullYear&lt;/span>&lt;span class="p">())&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">let&lt;/span> &lt;span class="nx">endTime&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nb">Date&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">startTime&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getTime&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">dur&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="mi">60&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="mi">60&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="mi">1000&lt;/span>&lt;span class="p">));&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">//console.log(&amp;#34;开始=&amp;gt;&amp;#34;+startTime+&amp;#34;\n&amp;#34; + &amp;#34;\n结束=&amp;gt;&amp;#34;+endTime);
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">nowTime&lt;/span> &lt;span class="o">&amp;gt;&lt;/span> &lt;span class="nx">startTime&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="nx">nowTime&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="nx">endTime&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">warn&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;RIP - Type : &amp;#39;&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="nx">conf&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">type&lt;/span>&lt;span class="p">);&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">conf&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">msgOp&lt;/span>&lt;span class="p">();&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;开始=&amp;gt;&amp;#34;&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="nx">startTime&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="s2">&amp;#34;\n&amp;#34;&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="s2">&amp;#34;\n结束=&amp;gt;&amp;#34;&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="nx">endTime&lt;/span>&lt;span class="p">);&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">querySelector&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;html&amp;#39;&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">style&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">filter&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;grayscale(100%)&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> 
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">RIP&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">isRIP&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kc">true&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">result&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">msgOp&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">conf&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">msgOp&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span> 
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">result&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">isRIP&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">isRIP&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">result&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">startTime&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">startTime&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">result&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">duration&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">dur&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">});&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="nx">result&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">};&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">})();&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div></description></item></channel></rss>
+ &lt;/figure>&lt;/p></description></item></channel></rss>

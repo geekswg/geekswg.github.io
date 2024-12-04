@@ -1,59 +1,36 @@
-# Gallery
+# 
 
-
-&lt;style&gt;
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    padding: 20px;
-    max-width: 100%;
-    margin: auto;
-
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.gallery-item {
-    text-align: center;
-    flex: 1 1 calc(25% - 15px); /* Adjust for 4 items per row with gap */
-    box-sizing: border-box;
-}
-
-.gallery-item img {
-    width: 100%;
-    aspect-ratio: 1 ;
-    object-fit: cover;
-    border-radius: 4px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.gallery-item img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.gallery-item p {
-    margin: 10px 0 0;
-    font-size: 14px;
-}
-
-&lt;/style&gt;
-
-&lt;div class=&#34;gallery&#34;&gt;
-        &lt;div class=&#34;gallery-item&#34;&gt;
-            &lt;a href=&#34;/gallery/hello/&#34; &gt;
-            &lt;img src=&#34;/images/avatar.webp&#34; alt=&#34;&#34;&gt;
-            &lt;p&gt;相册&lt;/p&gt;
-            &lt;/a&gt;
+&lt;div class=&#34;bg-gray-100 py-8&#34;&gt;
+    &lt;div class=&#34;container mx-auto px-4 max-w-7xl&#34;&gt;
+      &lt;h2 class=&#34;text-2xl font-semibold text-center text-gray-800 mb-8&#34;&gt;友情链接&lt;/h2&gt;
+      &lt;div class=&#34;grid grid-cols-1 sm:grid-cols-2 gap-6&#34;&gt;
+        &lt;!-- 友链项 1 --&gt;
+        &lt;div class=&#34;group bg-white p-6 rounded-lg shadow-lg flex flex-col items-center relative overflow-hidden&#34;&gt;
+          &lt;!-- 预览图，初始位置在底部并隐藏 --&gt;
+          &lt;div class=&#34;absolute inset-x-0 bottom-0 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300&#34;&gt;
+            &lt;img src=&#34;https://via.placeholder.com/300x200&#34; alt=&#34;站点预览图&#34; class=&#34;w-full h-auto rounded-lg shadow-lg&#34;&gt;
+          &lt;/div&gt;
+          &lt;img src=&#34;https://via.placeholder.com/80&#34; alt=&#34;头像1&#34; class=&#34;w-20 h-20 rounded-full mb-4 border-4 border-blue-500&#34;&gt;
+          &lt;h3 class=&#34;text-lg font-semibold text-gray-800 mb-2&#34;&gt;网站一&lt;/h3&gt;
+          &lt;a href=&#34;https://www.site1.com&#34; class=&#34;text-blue-500 hover:text-blue-700 text-sm mb-2&#34;&gt;www.site1.com&lt;/a&gt;
+          &lt;p class=&#34;text-gray-600 text-sm text-center&#34;&gt;站点描述：这是一个非常有用的网站，提供了各种资源。&lt;/p&gt;
         &lt;/div&gt;
-        &lt;div class=&#34;gallery-item&#34;&gt;
-            &lt;a href=&#34;/gallery/qsmy/&#34; &gt;
-            &lt;img src=&#34;/gallery/qsmy/qsmy/qsmy-7.webp&#34; alt=&#34;&#34;&gt;
-            &lt;p&gt;秦时明月&lt;/p&gt;
-            &lt;/a&gt;
+  
+        &lt;!-- 友链项 2 --&gt;
+        &lt;div class=&#34;group bg-white p-6 rounded-lg shadow-lg flex flex-col items-center relative overflow-hidden&#34;&gt;
+          &lt;!-- 预览图，初始位置在底部并隐藏 --&gt;
+          &lt;div class=&#34;absolute inset-x-0 bottom-0 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300&#34;&gt;
+            &lt;img src=&#34;https://via.placeholder.com/300x200&#34; alt=&#34;站点预览图&#34; class=&#34;w-full h-auto rounded-lg shadow-lg&#34;&gt;
+          &lt;/div&gt;
+          &lt;img src=&#34;https://via.placeholder.com/80&#34; alt=&#34;头像2&#34; class=&#34;w-20 h-20 rounded-full mb-4 border-4 border-blue-500&#34;&gt;
+          &lt;h3 class=&#34;text-lg font-semibold text-gray-800 mb-2&#34;&gt;网站二&lt;/h3&gt;
+          &lt;a href=&#34;https://www.site2.com&#34; class=&#34;text-blue-500 hover:text-blue-700 text-sm mb-2&#34;&gt;www.site2.com&lt;/a&gt;
+          &lt;p class=&#34;text-gray-600 text-sm text-center&#34;&gt;站点描述：另一个优质网站，聚焦于技术文章和教程。&lt;/p&gt;
         &lt;/div&gt;
-&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  
 
 ---
 
