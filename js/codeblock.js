@@ -22,6 +22,7 @@ const CodeBlock = {
                 //console.log('#'+ele.id+'>.chroma.open>.table-wrapper');
                 let childEle = ele.getElementsByClassName('chroma')[0];
                 //console.log(curEle);
+                childEle = childEle.getElementsByClassName('lntable')[0];
                 childEle.style.height = overflowHeight + 'px';
                 childEle.style.overflowY = overflowY;
 
@@ -29,18 +30,18 @@ const CodeBlock = {
                 showMoreDiv.id = ele.id+'-more';
                 
                 showMoreDiv.style.cssText = 'position:sticky;background-image: linear-gradient(to top, #9c9c9c, transparent);text-align: center;cursor: pointer;';
-                showMoreDiv.innerHTML = '<i class="fa-solid fa-angles-down fa-beat-fade" style="font-size:20px;"></i>';
+                showMoreDiv.innerHTML = '<i class="fa-solid fa-angles-down fa-beat-fade" style="font-size:20px;">展开</i>';
                 ele.appendChild(showMoreDiv);
                 showMoreDiv.addEventListener('click', function(){
                     if(showMoreDiv.innerHTML.indexOf('fa-angles-down') >= 0 ){
                         childEle.style.height = origalHeight + 'px';
-                        showMoreDiv.innerHTML = '<i class="fa-solid fa-angles-up fa-beat-fade" style="font-size:20px;"></i>';
+                        showMoreDiv.innerHTML = '<i class="fa-solid fa-angles-up fa-beat-fade" style="font-size:20px;">折叠</i>';
                         showMoreDiv.style.cssText = 'margin-top: -34px;position:sticky;z-index:99;background-image: linear-gradient(to top, #9c9c9c, transparent);text-align: center;cursor: pointer;';
                         
                     }else{
                         childEle.style.height = overflowHeight + 'px';
-                        showMoreDiv.innerHTML = '<i class="fa-solid fa-angles-down fa-beat-fade" style="font-size:20px;"></i>';
-                        showMoreDiv.style.cssText = 'margin-top: -24px;position:sticky;z-index:99;background-image: linear-gradient(to top, #9c9c9c, transparent);text-align: center;cursor: pointer;';
+                        showMoreDiv.innerHTML = '<i class="fa-solid fa-angles-down fa-beat-fade" style="font-size:20px;">展开</i>';
+                        showMoreDiv.style.cssText = 'position:sticky;z-index:99;background-image: linear-gradient(to top, #9c9c9c, transparent);text-align: center;cursor: pointer;';
                         window.scrollTo({top:ele.offsetTop, behavior: 'smooth'});
                     }
                     
