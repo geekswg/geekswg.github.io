@@ -50,7 +50,13 @@
 <span class=archive-item-date title='2023-03-26 18:30:40'>2023-03-26</span></article><ul class=pagination><li class="page-item active"><span class=page-link><a href=/posts/>1</a></span></li><li class=page-item><span class=page-link><a href=/posts/page/2/>2</a></span></li><li class=page-item><span class=page-link><a href=/posts/page/3/>3</a></span></li></ul></div></main><footer class=footer><div class=footer-container><script src=https://cdn.tailwindcss.com></script><style>@layer base{img:no([src]) {
         display: unset !important;  
       }
+      .cell-watermark-container  img{
+        display: unset !important;  
+      }
       .post-author img{
+        display: unset !important;
+      }
+      img:not([style*="display"]) {
         display: unset !important;
       }
       .content ul{
