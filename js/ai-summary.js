@@ -39,7 +39,7 @@ aiConfig = {}
       aiConfig.aiSelector = window.aiConfig.aiSelector || '#content';
       aiConfig.reportUrl = aiConfig.reportUrl || "mailto:geekswg@qq.cn?subject=文章摘要投诉&body=投诉网址：="+location.href;
       aiConfig.enableAIPathRegex = aiConfig.enableAIPathRegex||/\/posts\//; //正则表达式
-      aiConfig.aiGPTDesc = aiConfig.aiGPTDesc || 'qwenGPT';
+      aiConfig.aiGPTDesc = aiConfig.aiGPTDesc || '我是一个使用通义千问AI模型的AI摘要助手，可以帮助您快速生成文章摘要，提高阅读体验。';
       if (!aiConfig.enableAIPathRegex.test(location.pathname)) {
         return;
       }else if(!document.querySelector(aiConfig.aiSelector)){
