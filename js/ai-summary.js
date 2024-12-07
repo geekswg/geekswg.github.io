@@ -12,7 +12,7 @@
 aiConfig = {} 
 
   AISmmary={
-    styleHtml:'#post-ai-result,#summary-wrapper{max-width:100%;border:1px solid #2d96bd;padding:.5rem 1rem;margin-bottom:.8rem;border-radius:16px}#summary-wrapper>#title{display:flex;color:#2d96bd;flex-direction:row;align-items:center;justify-content:space-between;margin-bottom:.8rem;padding:0 8px}#summary-wrapper>#title>span.logo{padding:2px 10px;font-size:12px;font-weight:700;border:1px solid transparent;border-radius:25px;cursor:pointer}#summary-wrapper>#title>span.logo.typing{animation:loading 1s infinite;cursor:not-allowed}#summary-wrapper>#title>span.name{display:flex;align-items:center;cursor:pointer}.icon-up{font-weight:400;font-size:12px;margin-left:-3px;opacity:.8;transform:rotate(90deg)}.icon-robot{display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:400;width:25px;height:26px;border-radius:50%;margin-right:8px}.icon-up svg{width:1.1rem;height:19px}#summary-wrapper>#meta{display:flex;flex-direction:row;align-items:center;justify-content:space-between;margin-top:1rem;padding:0 8px;font-size:12px}#summary-wrapper>#meta>span.tip{opacity:.6}#summary-wrapper>#meta>a.report{white-space:nowrap;margin-left:12px;opacity:.8;transition:all .3s}.post-ai-result{margin-bottom:.9rem;min-height:3rem;max-width:41rem;font-size:16px}.ai-cursor{display:inline-block;width:3px;background:#333;height:16px;margin-bottom:-2px;opacity:.95;margin-left:3px;-webkit-transition:all .3s;-moz-transition:all .3s;-o-transition:all .3s;-ms-transition:all .3s;transition:all .3s;animation:blink 1s infinite}@keyframes blink{0%,50%,to{opacity:1}25%,75%{opacity:0}}@keyframes loading{0%{opacity:1}50%{opacity:.4}to{opacity:1}}'
+    styleHtml:'#post-ai-result,#summary-wrapper{max-width:100%;border:1px solid #2d96bd;padding:.5rem 1rem;margin-bottom:.8rem;border-radius:16px}#summary-wrapper>#title{display:flex;color:#2d96bd;flex-direction:row;align-items:center;justify-content:space-between;margin-bottom:.8rem;padding:0 8px}#summary-wrapper>#title>span.logo{padding:2px 10px;font-size:12px;font-weight:700;border:1px solid transparent;border-radius:25px;cursor:pointer}#summary-wrapper>#title>span.logo.typing{animation:loading 1s infinite;cursor:not-allowed}#summary-wrapper>#title>span.name{display:flex;align-items:center;cursor:pointer}.icon-up{font-weight:400;font-size:12px;margin-left:-3px;opacity:.8;transform:rotate(90deg)}.icon-robot{animation:loading 1s infinite;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:400;width:25px;height:26px;border-radius:50%;margin-right:8px}.icon-up svg{width:1.1rem;height:19px}#summary-wrapper>#meta{display:flex;flex-direction:row;align-items:center;justify-content:space-between;margin-top:1rem;padding:0 8px;font-size:12px}#summary-wrapper>#meta>span.tip{opacity:.6}#summary-wrapper>#meta>a.report{white-space:nowrap;margin-left:12px;opacity:.8;transition:all .3s}.post-ai-result{margin-bottom:.9rem;min-height:3rem;max-width:41rem;font-size:16px}.ai-cursor{display:inline-block;width:3px;background:#333;height:16px;margin-bottom:-2px;opacity:.95;margin-left:3px;-webkit-transition:all .3s;-moz-transition:all .3s;-o-transition:all .3s;-ms-transition:all .3s;transition:all .3s;animation:blink 1s infinite}@keyframes blink{0%,50%,to{opacity:1}25%,75%{opacity:0}}@keyframes loading{0%{opacity:1}50%{opacity:.4}to{opacity:1}}'
     ,initStyle:()=>{
       style = document.createElement('style');
       style.innerHTML = AISmmary.styleHtml;
@@ -32,6 +32,7 @@ aiConfig = {}
       aiSmmaryData(aiConfig);
     },
     pjaxInit:(aiConfig)=>{
+      clearTimeout(aiConfig.typingTimeout);
       AISmmary.init(aiConfig);
     },
     init:(aiConfig)=>{
@@ -120,6 +121,7 @@ aiConfig = {}
         index++;
 
         typingTimeout = setTimeout(() => typeWriter(index, text), 80); // 调整打字速度
+        aiConfig.typingTimeout = typingTimeout;
       } else {
         aiLogoCursor.classList.remove("typing");
         document.querySelector(".ai-cursor")?.remove(); // 移除光标
@@ -137,6 +139,7 @@ aiConfig = {}
 
       clearTimeout(typingTimeout);
       typeWriter(index, text);
+      // 当用户离开页面时调用stopTimer函数 
     };
 
     // 发送 GET 请求，获得摘要状态
