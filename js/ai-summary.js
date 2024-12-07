@@ -1,6 +1,6 @@
 
   //aiConfig = {};
-  // //ai摘要接口地址 项目 
+  // //ai摘要接口地址 项目 https://github.com/geekswg/qw/ fork https://github.com/FloatSheep/Qwen-Post-Summary
   // aiConfig.aiApi = "https://qw.geekswg.top"
   // //需要ai摘要的页面内容的选择器
   // aiConfig.aiSelector = '#content';
@@ -233,6 +233,6 @@ aiConfig = {}
     });
 
     postTitleCursor.addEventListener("click", () => {
-      //location.href = `/posts/qwen-summary`;
+      location.href = `https://geekswg.js.cool/posts/2024/ai-summary/`;
     });
   };

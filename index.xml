@@ -1,4 +1,1241 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>毕少侠</title><link>https://geekswg.js.cool/</link><description>博客：探索、发现、分享 By geekswg-[毕少侠]</description><generator>Hugo 0.139.3 &amp; FixIt v0.3.16-fda3fa66</generator><language>zh-CN</language><managingEditor>geekswg@qq.com (geekswg)</managingEditor><webMaster>geekswg@qq.com (geekswg)</webMaster><copyright>geekswg &amp; 毕少侠</copyright><lastBuildDate>Thu, 05 Dec 2024 00:16:00 +0800</lastBuildDate><atom:link href="https://geekswg.js.cool/index.xml" rel="self" type="application/rss+xml"/><item><title>VSCode常用快捷键</title><link>https://geekswg.js.cool/posts/2024/vscode-keybing/</link><pubDate>Wed, 04 Dec 2024 22:02:38 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2024/vscode-keybing/</guid><category domain="https://geekswg.js.cool/categories/notes/">notes</category><description>&lt;p>在 VSCode 中，以下是一些常用的快捷键，特别是在编辑 Markdown 文件时：&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>毕少侠</title><link>https://geekswg.js.cool/</link><description>博客：探索、发现、分享 By geekswg-[毕少侠]</description><generator>Hugo 0.139.3 &amp; FixIt v0.3.16-fda3fa66</generator><language>zh-CN</language><managingEditor>geekswg@qq.com (geekswg)</managingEditor><webMaster>geekswg@qq.com (geekswg)</webMaster><copyright>geekswg &amp; 毕少侠</copyright><lastBuildDate>Sat, 07 Dec 2024 15:30:25 +0800</lastBuildDate><atom:link href="https://geekswg.js.cool/index.xml" rel="self" type="application/rss+xml"/><item><title>Markdown基本语法</title><link>https://geekswg.js.cool/mydocs/md-basic/</link><pubDate>Sat, 07 Dec 2024 08:52:46 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/mydocs/md-basic/</guid><category domain="https://geekswg.js.cool/categories/repost/">repost</category><description>&lt;p>这篇文章提供了可以在 Hugo 的文章中使用的基本 Markdown 语法示例。&lt;/p>
+&lt;!-- markdownlint-disable-file -->
+&lt;div class="details admonition note open">
+ &lt;div class="details-summary admonition-title">&lt;i class="icon fa-fw fa-solid fa-pencil-alt" aria-hidden="true">&lt;/i>注意&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true">&lt;/i>&lt;/div>
+ &lt;div class="details-content">
+ &lt;div class="admonition-content">&lt;p>这篇文章借鉴了一篇很棒的 &lt;a href="http://learn.getgrav.org/content/markdown"target="_blank" rel="external nofollow noopener noreferrer">来自 Grav 的文章&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a>。&lt;/p>
+&lt;p>如果你想了解 &lt;strong>FixIt&lt;/strong> 主题的扩展 Markdown 语法，请阅读 [扩展 Markdown 语法页面]。&lt;/p>
+&lt;/div>
+ &lt;/div>
+&lt;/div>
+&lt;p>事实上，编写 Web 内容很麻烦。&lt;strong>&lt;ruby>WYSIWYG&lt;rt>所见即所得&lt;/rt>&lt;/ruby>&lt;/strong> 编辑器帮助减轻了这一任务。但通常会导致代码太糟，或更糟糕的是，网页也会很丑。&lt;/p>
+&lt;p>没有通常伴随的所有复杂和丑陋的问题，&lt;strong>Markdown&lt;/strong> 是一种更好的生成 &lt;strong>HTML&lt;/strong> 内容的方式。&lt;/p>
+&lt;p>一些主要好处是：&lt;/p>
+&lt;ol>
+&lt;li>Markdown 简单易学，几乎没有多余的字符，因此编写内容也更快。&lt;/li>
+&lt;li>用 Markdown 书写时出错的机会更少。&lt;/li>
+&lt;li>可以产生有效的 XHTML 输出。&lt;/li>
+&lt;li>将内容和视觉显示保持分开，这样就不会打乱网站的外观。&lt;/li>
+&lt;li>可以在你喜欢的任何文本编辑器或 Markdown 应用程序中编写内容。&lt;/li>
+&lt;li>Markdown 使用起来很有趣！&lt;/li>
+&lt;/ol>
+&lt;p>John Gruber, Markdown 的作者如是说：&lt;/p>
+&lt;blockquote>
+&lt;p>Markdown 格式的首要设计目标是更具可读性。
+最初的想法是 Markdown 格式的文档应当以纯文本形式发布，
+而不会看起来像被标签或格式说明所标记。
+虽然 Markdown 的语法受到几种现有的文本到 HTML 转换工具的影响，
+但 Markdown 语法的最大灵感来源是纯文本电子邮件的格式。&lt;/p>
+&lt;div id="id-1">&amp;ndash; &lt;em>John Gruber&lt;/em>&lt;/div>
+&lt;/blockquote>
+&lt;p>话不多说，我们来回顾一下 Markdown 的主要语法以及生成的 HTML 样式！&lt;/p>
+&lt;div class="details admonition tip open">
+ &lt;div class="details-summary admonition-title">&lt;i class="icon fa-fw fa-regular fa-lightbulb" aria-hidden="true">&lt;/i>技巧&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true">&lt;/i>&lt;/div>
+ &lt;div class="details-content">
+ &lt;div class="admonition-content">&lt;i class="fa-regular fa-bookmark fa-fw" aria-hidden="true">&lt;/i>&amp;nbsp;将此页保存为书签，以备将来参考！&lt;/div>
+ &lt;/div>
+&lt;/div>
+&lt;h2 id="标题" class="heading-element">&lt;span>标题&lt;/span>
+ &lt;a href="#%e6%a0%87%e9%a2%98" class="heading-mark">
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
+ &lt;/a>
+&lt;/h2>&lt;p>从 &lt;code>h2&lt;/code> 到 &lt;code>h6&lt;/code> 的标题在每个级别上都加上一个 &lt;code>＃&lt;/code>:&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">&lt;span class="gu">## h2 标题
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gu">### h3 标题
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gu">#### h4 标题
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gu">##### h5 标题
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gu">&lt;/span>###### h6 标题&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>输出的 HTML 看起来像这样：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">h2&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>h2 标题&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">h2&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">h3&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>h3 标题&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">h3&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">h4&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>h4 标题&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">h4&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">h5&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>h5 标题&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">h5&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">h6&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>h6 标题&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">h6&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;div class="details admonition note open">
+ &lt;div class="details-summary admonition-title">&lt;i class="icon fa-fw fa-solid fa-pencil-alt" aria-hidden="true">&lt;/i>标题 ID&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true">&lt;/i>&lt;/div>
+ &lt;div class="details-content">
+ &lt;div class="admonition-content">&lt;p>要添加自定义标题 ID, 请在与标题相同的行中将自定义 ID 放在花括号中：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">### 一个很棒的标题 {#custom-id}&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>输出的 HTML 看起来像这样：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">h3&lt;/span> &lt;span class="na">id&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;custom-id&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>一个很棒的标题&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">h3&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/div>
+ &lt;/div>
+&lt;/div>
+&lt;h2 id="注释" class="heading-element">&lt;span>注释&lt;/span>
+ &lt;a href="#%e6%b3%a8%e9%87%8a" class="heading-mark">
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
+ &lt;/a>
+&lt;/h2>&lt;p>注释是和 HTML 兼容的：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">&lt;span class="c">&amp;lt;!-- 这是一段注释 --&amp;gt;&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;strong>不能&lt;/strong>看到以下的注释：&lt;/p>
+&lt;!-- 这是一段注释 -->
+&lt;h2 id="水平线" class="heading-element">&lt;span>水平线&lt;/span>
+ &lt;a href="#%e6%b0%b4%e5%b9%b3%e7%ba%bf" class="heading-mark">
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
+ &lt;/a>
+&lt;/h2>&lt;p>HTML 中的 &lt;code>&amp;lt;hr&amp;gt;&lt;/code> 标签是用来在段落元素之间创建一个 &amp;ldquo;专题间隔&amp;rdquo; 的。
+使用 Markdown, 你可以用以下方式创建一个 &lt;code>&amp;lt;hr&amp;gt;&lt;/code> 标签：&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>___&lt;/code>: 三个连续的下划线&lt;/li>
+&lt;li>&lt;code>---&lt;/code>: 三个连续的破折号&lt;/li>
+&lt;li>&lt;code>***&lt;/code>: 三个连续的星号&lt;/li>
+&lt;/ul>
+&lt;p>呈现的输出效果如下：&lt;/p>
+&lt;hr>
+&lt;hr>
+&lt;hr>
+&lt;h2 id="段落" class="heading-element">&lt;span>段落&lt;/span>
+ &lt;a href="#%e6%ae%b5%e8%90%bd" class="heading-mark">
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
+ &lt;/a>
+&lt;/h2>&lt;p>按照纯文本的方式书写段落，纯文本在呈现的 HTML 中将用 &lt;code>&amp;lt;p&amp;gt;&lt;/code>/&lt;code>&amp;lt;/p&amp;gt;&lt;/code> 标签包裹。&lt;/p>
+&lt;p>如下段落：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">Lorem ipsum dolor sit amet, graecis denique ei vel, at duo primis mandamus. Et legere ocurreret pri,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">animal tacimates complectitur ad cum. Cu eum inermis inimicus efficiendi. Labore officiis his ex,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">soluta officiis concludaturque ei qui, vide sensibus vim ad.&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>输出的 HTML 看起来像这样：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">p&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>Lorem ipsum dolor sit amet, graecis denique ei vel, at duo primis mandamus. Et legere ocurreret pri, animal tacimates complectitur ad cum. Cu eum inermis inimicus efficiendi. Labore officiis his ex, soluta officiis concludaturque ei qui, vide sensibus vim ad.&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">p&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>可以使用一个空白行进行&lt;strong>换行&lt;/strong>。&lt;/p>
+&lt;h2 id="内联-html-元素" class="heading-element">&lt;span>内联 HTML 元素&lt;/span>
+ &lt;a href="#%e5%86%85%e8%81%94-html-%e5%85%83%e7%b4%a0" class="heading-mark">
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
+ &lt;/a>
+&lt;/h2>&lt;p>如果你需要某个 HTML 标签（带有一个类）, 则可以简单地像这样使用：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">Markdown 格式的段落。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;class&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> 这是 &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">b&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>HTML&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">b&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Markdown 格式的段落。&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="强调" class="heading-element">&lt;span>强调&lt;/span>
+ &lt;a href="#%e5%bc%ba%e8%b0%83" class="heading-mark">
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
+ &lt;/a>
+&lt;/h2>&lt;h3 id="加粗" class="heading-element">&lt;span>加粗&lt;/span>
+ &lt;a href="#%e5%8a%a0%e7%b2%97" class="heading-mark">
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
+ &lt;/a>
+&lt;/h3>&lt;p>用于强调带有较粗字体的文本片段。&lt;/p>
+&lt;p>以下文本片段会被 &lt;strong>渲染为粗体&lt;/strong>。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">**渲染为粗体**
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">__渲染为粗体__&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>输出的 HTML 看起来像这样：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">strong&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>渲染为粗体&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">strong&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="斜体" class="heading-element">&lt;span>斜体&lt;/span>
+ &lt;a href="#%e6%96%9c%e4%bd%93" class="heading-mark">
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
+ &lt;/a>
+&lt;/h3>&lt;p>用于强调带有斜体的文本片段。&lt;/p>
+&lt;p>以下文本片段被 &lt;em>渲染为斜体&lt;/em>。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">*渲染为斜体*
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">_渲染为斜体_&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>输出的 HTML 看起来像这样：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">em&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>渲染为斜体&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">em&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="删除线" class="heading-element">&lt;span>删除线&lt;/span>
+ &lt;a href="#%e5%88%a0%e9%99%a4%e7%ba%bf" class="heading-mark">
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
+ &lt;/a>
+&lt;/h3>&lt;p>按照 &lt;a href="https://github.github.com/gfm/"target="_blank" rel="external nofollow noopener noreferrer">&lt;strong>&lt;ruby>GFM&lt;rt>GitHub flavored Markdown&lt;/rt>&lt;/ruby>&lt;/strong>&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a> 你可以使用删除线。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">~~这段文本带有删除线。~~&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>呈现的输出效果如下：&lt;/p>
+&lt;p>&lt;del>这段文本带有删除线。&lt;/del>&lt;/p>
+&lt;p>输出的 HTML 看起来像这样：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">del&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>这段文本带有删除线。&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">del&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="组合" class="heading-element">&lt;span>组合&lt;/span>
+ &lt;a href="#%e7%bb%84%e5%90%88" class="heading-mark">
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
+ &lt;/a>
+&lt;/h3>&lt;p>加粗，斜体，和删除线可以 组合使用。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">_**加粗和斜体**_
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gd">~~**删除线和加粗**~~&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gd">~~_删除线和斜体_~~&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">~~_**加粗，斜体和删除线**_~~&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>呈现的输出效果如下：&lt;/p>
+&lt;p>&lt;em>&lt;strong>加粗和斜体&lt;/strong>&lt;/em>&lt;/p>
+&lt;p>&lt;del>&lt;strong>删除线和加粗&lt;/strong>&lt;/del>&lt;/p>
+&lt;p>&lt;del>&lt;em>删除线和斜体&lt;/em>&lt;/del>&lt;/p>
+&lt;p>&lt;del>&lt;em>&lt;strong>加粗，斜体和删除线&lt;/strong>&lt;/em>&lt;/del>&lt;/p>
+&lt;p>输出的 HTML 看起来像这样：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">em&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;&lt;/span>&lt;span class="nt">strong&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>加粗和斜体&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">strong&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">em&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">del&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;&lt;/span>&lt;span class="nt">strong&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>删除线和加粗&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">strong&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">del&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">del&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;&lt;/span>&lt;span class="nt">em&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>删除线和斜体&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">em&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">del&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">del&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;&lt;/span>&lt;span class="nt">em&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;&lt;/span>&lt;span class="nt">strong&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>加粗，斜体和删除线&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">strong&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">em&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">del&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="引用" class="heading-element">&lt;span>引用&lt;/span>
+ &lt;a href="#%e5%bc%95%e7%94%a8" class="heading-mark">
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
+ &lt;/a>
+&lt;/h2>&lt;p>用于在文档中引用其他来源的内容块。&lt;/p>
+&lt;p>在要引用的任何文本之前添加 &lt;code>&amp;gt;&lt;/code>:&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">&amp;gt; &lt;span class="gs">**Fusion Drive**&lt;/span> combines a hard drive with a flash storage (solid-state drive) and presents it as a single logical volume with the space of both drives combined.&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>呈现的输出效果如下：&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;strong>Fusion Drive&lt;/strong> combines a hard drive with a flash storage (solid-state drive) and presents it as a single logical volume with the space of both drives combined.&lt;/p>
+&lt;/blockquote>
+&lt;p>输出的 HTML 看起来像这样：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">blockquote&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">p&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">strong&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>Fusion Drive&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">strong&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> combines a hard drive with a flash storage (solid-state drive) and presents it as a single logical volume with the space of both drives combined.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">p&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">blockquote&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>引用也可以嵌套：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">&lt;span class="k">&amp;gt; &lt;/span>&lt;span class="ge">Donec massa lacus, ultricies a ullamcorper in, fermentum sed augue.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="ge">&lt;/span>Nunc augue augue, aliquam non hendrerit ac, commodo vel nisi.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;gt;&amp;gt; Sed adipiscing elit vitae augue consectetur a gravida nunc vehicula. Donec auctor
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">odio non est accumsan facilisis. Aliquam id turpis in dolor tincidunt mollis ac eu diam.&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>呈现的输出效果如下：&lt;/p>
+&lt;blockquote>
+&lt;p>Donec massa lacus, ultricies a ullamcorper in, fermentum sed augue.
+Nunc augue augue, aliquam non hendrerit ac, commodo vel nisi.&lt;/p>
+&lt;blockquote>
+&lt;p>Sed adipiscing elit vitae augue consectetur a gravida nunc vehicula. Donec auctor
+odio non est accumsan facilisis. Aliquam id turpis in dolor tincidunt mollis ac eu diam.&lt;/p>
+&lt;/blockquote>
+&lt;/blockquote>
+&lt;h2 id="列表" class="heading-element">&lt;span>列表&lt;/span>
+ &lt;a href="#%e5%88%97%e8%a1%a8" class="heading-mark">
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
+ &lt;/a>
+&lt;/h2>&lt;h3 id="无序列表" class="heading-element">&lt;span>无序列表&lt;/span>
+ &lt;a href="#%e6%97%a0%e5%ba%8f%e5%88%97%e8%a1%a8" class="heading-mark">
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
+ &lt;/a>
+&lt;/h3>&lt;p>一系列项的列表，其中项的顺序没有明显关系。&lt;/p>
+&lt;p>你可以使用以下任何符号来表示无序列表中的项：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">&lt;span class="k">*&lt;/span> 一项内容
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">-&lt;/span> 一项内容
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">+ 一项内容&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>例如：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">&lt;span class="k">*&lt;/span> Lorem ipsum dolor sit amet
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">*&lt;/span> Consectetur adipiscing elit
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">*&lt;/span> Integer molestie lorem at massa
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">*&lt;/span> Facilisis in pretium nisl aliquet
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">*&lt;/span> Nulla volutpat aliquam velit
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">*&lt;/span> Phasellus iaculis neque
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">*&lt;/span> Purus sodales ultricies
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">*&lt;/span> Vestibulum laoreet porttitor sem
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">*&lt;/span> Ac tristique libero volutpat at
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">*&lt;/span> Faucibus porta lacus fringilla vel
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">*&lt;/span> Aenean sit amet erat nunc
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">* Eget porttitor lorem&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>呈现的输出效果如下：&lt;/p>
+&lt;ul>
+&lt;li>Lorem ipsum dolor sit amet&lt;/li>
+&lt;li>Consectetur adipiscing elit&lt;/li>
+&lt;li>Integer molestie lorem at massa&lt;/li>
+&lt;li>Facilisis in pretium nisl aliquet&lt;/li>
+&lt;li>Nulla volutpat aliquam velit
+&lt;ul>
+&lt;li>Phasellus iaculis neque&lt;/li>
+&lt;li>Purus sodales ultricies&lt;/li>
+&lt;li>Vestibulum laoreet porttitor sem&lt;/li>
+&lt;li>Ac tristique libero volutpat at&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Faucibus porta lacus fringilla vel&lt;/li>
+&lt;li>Aenean sit amet erat nunc&lt;/li>
+&lt;li>Eget porttitor lorem&lt;/li>
+&lt;/ul>
+&lt;p>输出的 HTML 看起来像这样：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">ul&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>Lorem ipsum dolor sit amet&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>Consectetur adipiscing elit&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>Integer molestie lorem at massa&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>Facilisis in pretium nisl aliquet&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>Nulla volutpat aliquam velit
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">ul&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>Phasellus iaculis neque&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>Purus sodales ultricies&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>Vestibulum laoreet porttitor sem&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>Ac tristique libero volutpat at&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">ul&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>Faucibus porta lacus fringilla vel&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>Aenean sit amet erat nunc&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>Eget porttitor lorem&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">ul&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="有序列表" class="heading-element">&lt;span>有序列表&lt;/span>
+ &lt;a href="#%e6%9c%89%e5%ba%8f%e5%88%97%e8%a1%a8" class="heading-mark">
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
+ &lt;/a>
+&lt;/h3>&lt;p>一系列项的列表，其中项的顺序确实很重要。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">&lt;span class="k">1.&lt;/span> Lorem ipsum dolor sit amet
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">2.&lt;/span> Consectetur adipiscing elit
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">3.&lt;/span> Integer molestie lorem at massa
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">4.&lt;/span> Facilisis in pretium nisl aliquet
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">5.&lt;/span> Nulla volutpat aliquam velit
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">6.&lt;/span> Faucibus porta lacus fringilla vel
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">7.&lt;/span> Aenean sit amet erat nunc
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">8. Eget porttitor lorem&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>呈现的输出效果如下：&lt;/p>
+&lt;ol>
+&lt;li>Lorem ipsum dolor sit amet&lt;/li>
+&lt;li>Consectetur adipiscing elit&lt;/li>
+&lt;li>Integer molestie lorem at massa&lt;/li>
+&lt;li>Facilisis in pretium nisl aliquet&lt;/li>
+&lt;li>Nulla volutpat aliquam velit&lt;/li>
+&lt;li>Faucibus porta lacus fringilla vel&lt;/li>
+&lt;li>Aenean sit amet erat nunc&lt;/li>
+&lt;li>Eget porttitor lorem&lt;/li>
+&lt;/ol>
+&lt;p>输出的 HTML 看起来像这样：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">ol&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>Lorem ipsum dolor sit amet&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>Consectetur adipiscing elit&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>Integer molestie lorem at massa&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>Facilisis in pretium nisl aliquet&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>Nulla volutpat aliquam velit&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>Faucibus porta lacus fringilla vel&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>Aenean sit amet erat nunc&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>Eget porttitor lorem&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">ol&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;div class="details admonition tip open">
+ &lt;div class="details-summary admonition-title">&lt;i class="icon fa-fw fa-regular fa-lightbulb" aria-hidden="true">&lt;/i>技巧&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true">&lt;/i>&lt;/div>
+ &lt;div class="details-content">
+ &lt;div class="admonition-content">&lt;p>如果你对每一项使用 &lt;code>1.&lt;/code>, Markdown 将自动为每一项编号。例如：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">&lt;span class="k">1.&lt;/span> Lorem ipsum dolor sit amet
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">1.&lt;/span> Consectetur adipiscing elit
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">1.&lt;/span> Integer molestie lorem at massa
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">1.&lt;/span> Facilisis in pretium nisl aliquet
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">1.&lt;/span> Nulla volutpat aliquam velit
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">1.&lt;/span> Faucibus porta lacus fringilla vel
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">1.&lt;/span> Aenean sit amet erat nunc
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">1. Eget porttitor lorem&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>呈现的输出效果如下：&lt;/p>
+&lt;ol>
+&lt;li>Lorem ipsum dolor sit amet&lt;/li>
+&lt;li>Consectetur adipiscing elit&lt;/li>
+&lt;li>Integer molestie lorem at massa&lt;/li>
+&lt;li>Facilisis in pretium nisl aliquet&lt;/li>
+&lt;li>Nulla volutpat aliquam velit&lt;/li>
+&lt;li>Faucibus porta lacus fringilla vel&lt;/li>
+&lt;li>Aenean sit amet erat nunc&lt;/li>
+&lt;li>Eget porttitor lorem&lt;/li>
+&lt;/ol>
+&lt;/div>
+ &lt;/div>
+&lt;/div>
+&lt;h2 id="代码" class="heading-element">&lt;span>代码&lt;/span>
+ &lt;a href="#%e4%bb%a3%e7%a0%81" class="heading-mark">
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
+ &lt;/a>
+&lt;/h2>&lt;h3 id="行内代码" class="heading-element">&lt;span>行内代码&lt;/span>
+ &lt;a href="#%e8%a1%8c%e5%86%85%e4%bb%a3%e7%a0%81" class="heading-mark">
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
+ &lt;/a>
+&lt;/h3>&lt;p>用 &lt;code>`&lt;/code> 包装行内代码段。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">在这个例子中，`&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">section&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">section&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>` 会被包裹成 &lt;span class="gs">**代码**&lt;/span>。&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>呈现的输出效果如下：&lt;/p>
+&lt;p>在这个例子中，&lt;code>&amp;lt;section&amp;gt;&amp;lt;/section&amp;gt;&lt;/code> 会被包裹成 &lt;strong>代码&lt;/strong>。&lt;/p>
+&lt;p>输出的 HTML 看起来像这样：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">p&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> 在这个例子中，&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">code&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>&lt;span class="ni">&amp;amp;lt;&lt;/span>section&lt;span class="ni">&amp;amp;gt;&amp;amp;lt;&lt;/span>/section&lt;span class="ni">&amp;amp;gt;&lt;/span>&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">code&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> 会被包裹成 &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">strong&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>代码&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">strong&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">p&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="缩进代码" class="heading-element">&lt;span>缩进代码&lt;/span>
+ &lt;a href="#%e7%bc%a9%e8%bf%9b%e4%bb%a3%e7%a0%81" class="heading-mark">
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
+ &lt;/a>
+&lt;/h3>&lt;blockquote>
+&lt;p>❌ 不推荐使用。&lt;/p>
+&lt;/blockquote>
+&lt;p>将几行代码缩进至少四个空格，例如：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl"> // Some comments
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> line 1 of code
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> line 2 of code
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> line 3 of code&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>呈现的输出效果如下：&lt;/p>
+&lt;pre>&lt;code>// Some comments
+line 1 of code
+line 2 of code
+line 3 of code
+&lt;/code>&lt;/pre>
+&lt;p>输出的 HTML 看起来像这样：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">pre&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">code&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // Some comments
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> line 1 of code
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> line 2 of code
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> line 3 of code
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">code&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">pre&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="围栏代码块" class="heading-element">&lt;span>围栏代码块&lt;/span>
+ &lt;a href="#%e5%9b%b4%e6%a0%8f%e4%bb%a3%e7%a0%81%e5%9d%97" class="heading-mark">
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
+ &lt;/a>
+&lt;/h3>&lt;blockquote>
+&lt;p>✅ 推荐使用。&lt;/p>
+&lt;/blockquote>
+&lt;p>使用 &amp;ldquo;围栏&amp;rdquo; &lt;code>```&lt;/code> 来生成一段带有语言属性的代码块。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">&lt;span class="s">```markdown
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">&lt;/span>Sample text here...
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">```&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>输出的 HTML 看起来像这样：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">pre&lt;/span> &lt;span class="na">language-html&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">code&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>Sample text here...&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">code&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">pre&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="语法高亮" class="heading-element">&lt;span>语法高亮&lt;/span>
+ &lt;a href="#%e8%af%ad%e6%b3%95%e9%ab%98%e4%ba%ae" class="heading-mark">
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
+ &lt;/a>
+&lt;/h3>&lt;ul>
+&lt;li>&lt;a href="https://gohugo.io/content-management/syntax-highlighting/#list-of-chroma-highlighting-languages"target="_blank" rel="external nofollow noopener noreferrer">Chroma 语言高亮列表 - Hugo&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/alecthomas/chroma#supported-languages"target="_blank" rel="external nofollow noopener noreferrer">Chroma 支持语言 - Chroma&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>&lt;ruby>GFM&lt;rt>GitHub Flavored Markdown&lt;/rt>&lt;/ruby>&lt;/strong> 也支持语法高亮。&lt;/p>
+&lt;p>要激活它，只需在第一个代码 &amp;ldquo;围栏&amp;rdquo; 之后直接添加你要使用的语言的文件扩展名，
+&lt;code>```js&lt;/code>, 语法高亮显示将自动应用于渲染的 HTML 中。&lt;/p>
+&lt;p>例如，在以下 JavaScript 代码中应用语法高亮：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">&lt;span class="s">```js
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">&lt;/span>&lt;span class="nx">grunt&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">initConfig&lt;/span>&lt;span class="p">({&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">assemble&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">options&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">assets&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;docs/assets&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">data&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;src/data/*.{json,yml}&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">helpers&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;src/custom-helpers.js&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">partials&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;src/partials/**/*.{hbs,md}&amp;#39;&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">pages&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">options&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">layout&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;default.hbs&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">files&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s1">&amp;#39;./&amp;#39;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;src/templates/pages/index.hbs&amp;#39;&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">};&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">```&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>呈现的输出效果如下：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="nx">grunt&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">initConfig&lt;/span>&lt;span class="p">({&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">assemble&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">options&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">assets&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;docs/assets&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">data&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;src/data/*.{json,yml}&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">helpers&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;src/custom-helpers.js&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">partials&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;src/partials/**/*.{hbs,md}&amp;#39;&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">pages&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">options&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">layout&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;default.hbs&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">files&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s1">&amp;#39;./&amp;#39;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;src/templates/pages/index.hbs&amp;#39;&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">};&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;div class="details admonition note open">
+ &lt;div class="details-summary admonition-title">&lt;i class="icon fa-fw fa-solid fa-pencil-alt" aria-hidden="true">&lt;/i>注意&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true">&lt;/i>&lt;/div>
+ &lt;div class="details-content">
+ &lt;div class="admonition-content">&lt;strong>Hugo&lt;/strong> 文档中的 &lt;a href="https://gohugo.io/content-management/syntax-highlighting/"target="_blank" rel="external nofollow noopener noreferrer">语法高亮页面&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a> 介绍了有关语法高亮的更多信息，
+包括语法高亮的 shortcode。&lt;/div>
+ &lt;/div>
+&lt;/div>
+&lt;h2 id="表格" class="heading-element">&lt;span>表格&lt;/span>
+ &lt;a href="#%e8%a1%a8%e6%a0%bc" class="heading-mark">
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
+ &lt;/a>
+&lt;/h2>&lt;p>通过在每个单元格之间添加竖线作为分隔线，并在标题下添加一行破折号（也由竖线分隔）来创建表格。注意，竖线不需要垂直对齐。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">| Option | Description |
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">| ------ | ----------- |
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">| data | path to data files to supply the data that will be passed into templates. |
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">| engine | engine to be used for processing templates. Handlebars is the default. |
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">| ext | extension to be used for dest files. |&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>呈现的输出效果如下：&lt;/p>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Option&lt;/th>
+ &lt;th>Description&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>data&lt;/td>
+ &lt;td>path to data files to supply the data that will be passed into templates.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>engine&lt;/td>
+ &lt;td>engine to be used for processing templates. Handlebars is the default.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>ext&lt;/td>
+ &lt;td>extension to be used for dest files.&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;p>输出的 HTML 看起来像这样：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">table&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">thead&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">tr&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">th&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>Option&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">th&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">th&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>Description&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">th&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">tr&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">thead&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">tbody&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">tr&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">td&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>data&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">td&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">td&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>path to data files to supply the data that will be passed into templates.&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">td&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">tr&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">tr&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">td&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>engine&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">td&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">td&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>engine to be used for processing templates. Handlebars is the default.&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">td&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">tr&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">tr&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">td&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>ext&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">td&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">td&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>extension to be used for dest files.&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">td&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">tr&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">tbody&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">table&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;div class="details admonition note">
+ &lt;div class="details-summary admonition-title">&lt;i class="icon fa-fw fa-solid fa-pencil-alt" aria-hidden="true">&lt;/i>文本右对齐或居中对齐&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true">&lt;/i>&lt;/div>
+ &lt;div class="details-content">
+ &lt;div class="admonition-content">&lt;p>在任何标题下方的破折号右侧添加冒号将使该列的文本右对齐，在任何标题下方的破折号两边添加冒号将使该列的对齐文本居中。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">| Option | Description |
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">|:------:| -----------:|
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">| data | path to data files to supply the data that will be passed into templates. |
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">| engine | engine to be used for processing templates. Handlebars is the default. |
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">| ext | extension to be used for dest files. |&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>呈现的输出效果如下：&lt;/p>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th style="text-align: center">Option&lt;/th>
+ &lt;th style="text-align: right">Description&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td style="text-align: center">data&lt;/td>
+ &lt;td style="text-align: right">path to data files to supply the data that will be passed into templates.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: center">engine&lt;/td>
+ &lt;td style="text-align: right">engine to be used for processing templates. Handlebars is the default.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: center">ext&lt;/td>
+ &lt;td style="text-align: right">extension to be used for dest files.&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;/div>
+ &lt;/div>
+&lt;/div>
+&lt;h2 id="links" class="heading-element">&lt;span>链接&lt;/span>
+ &lt;a href="#links" class="heading-mark">
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
+ &lt;/a>
+&lt;/h2>&lt;h3 id="基本链接" class="heading-element">&lt;span>基本链接&lt;/span>
+ &lt;a href="#%e5%9f%ba%e6%9c%ac%e9%93%be%e6%8e%a5" class="heading-mark">
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
+ &lt;/a>
+&lt;/h3>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">https:&lt;/span>&lt;span class="err">//&lt;/span>&lt;span class="na">assemble&lt;/span>&lt;span class="err">.&lt;/span>&lt;span class="na">io&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">contact&lt;/span>&lt;span class="err">@&lt;/span>&lt;span class="na">revolunet&lt;/span>&lt;span class="err">.&lt;/span>&lt;span class="na">com&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">[&lt;span class="nt">Assemble&lt;/span>](&lt;span class="na">https://assemble.io&lt;/span>)&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>呈现的输出效果如下（将鼠标悬停在链接上，没有提示）:&lt;/p>
+&lt;p>&lt;a href="https://assemble.io"target="_blank" rel="external nofollow noopener noreferrer">https://assemble.io&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a>&lt;/p>
+&lt;p>&lt;a href="mailto:contact@revolunet.com"target="_blank" rel="external nofollow noopener noreferrer">contact@revolunet.com&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://assemble.io"target="_blank" rel="external nofollow noopener noreferrer">Assemble&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a>&lt;/p>
+&lt;p>输出的 HTML 看起来像这样：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">a&lt;/span> &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;https://assemble.io&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>https://assemble.io&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">a&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">a&lt;/span> &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;mailto:contact@revolunet.com&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>contact@revolunet.com&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">a&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">a&lt;/span> &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;https://assemble.io&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>Assemble&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">a&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="添加一个标题" class="heading-element">&lt;span>添加一个标题&lt;/span>
+ &lt;a href="#%e6%b7%bb%e5%8a%a0%e4%b8%80%e4%b8%aa%e6%a0%87%e9%a2%98" class="heading-mark">
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
+ &lt;/a>
+&lt;/h3>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">[&lt;span class="nt">Upstage&lt;/span>](&lt;span class="na">https://github.com/upstage/ &amp;#34;Visit Upstage!&amp;#34;&lt;/span>)&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>呈现的输出效果如下（将鼠标悬停在链接上，会有一行提示）:&lt;/p>
+&lt;p>&lt;a href="https://github.com/upstage/" title="Visit Upstage!"target="_blank" rel="external nofollow noopener noreferrer">Upstage&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a>&lt;/p>
+&lt;p>输出的 HTML 看起来像这样：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">a&lt;/span> &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;https://github.com/upstage/&amp;#34;&lt;/span> &lt;span class="na">title&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;Visit Upstage!&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>Upstage&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">a&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="引用式链接" class="heading-element">&lt;span>引用式链接&lt;/span>
+ &lt;a href="#%e5%bc%95%e7%94%a8%e5%bc%8f%e9%93%be%e6%8e%a5" class="heading-mark">
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
+ &lt;/a>
+&lt;/h3>&lt;p>引用式链接是一种特殊的链接，它使 URL 在 Markdown 中更易于显示和阅读。&lt;/p>
+&lt;p>引用式链接分为两部分：与文本保持内联的部分以及存储在文件中其他位置的部分，以使文本易于阅读。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">[text][id]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">⋮
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">[id]: http://example.org/ &amp;#34;title&amp;#34;&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>例如：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">[FixIt][fixit-repo]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">[fixit-repo]: https://github.com/hugo-fixit/FixIt &amp;#34;A clean, elegant but advanced blog theme for Hugo&amp;#34;&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>呈现的输出效果如下：&lt;/p>
+&lt;p>&lt;a href="https://github.com/hugo-fixit/FixIt" title="A clean, elegant but advanced blog theme for Hugo"target="_blank" rel="external nofollow noopener noreferrer">FixIt&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a>&lt;/p>
+&lt;h3 id="定位标记" class="heading-element">&lt;span>定位标记&lt;/span>
+ &lt;a href="#%e5%ae%9a%e4%bd%8d%e6%a0%87%e8%ae%b0" class="heading-mark">
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
+ &lt;/a>
+&lt;/h3>&lt;p>定位标记使你可以跳至同一页面上的指定锚点。例如，每个章节：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">&lt;span class="gu">## Table of Contents
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gu">&lt;/span> &lt;span class="k">*&lt;/span> [&lt;span class="nt">Chapter 1&lt;/span>](&lt;span class="na">#chapter-1&lt;/span>)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">*&lt;/span> [&lt;span class="nt">Chapter 2&lt;/span>](&lt;span class="na">#chapter-2&lt;/span>)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> * [&lt;span class="nt">Chapter 3&lt;/span>](&lt;span class="na">#chapter-3&lt;/span>)&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>将跳转到这些部分：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">&lt;span class="gu">## Chapter 1 &amp;lt;a id=&amp;#34;chapter-1&amp;#34;&amp;gt;&amp;lt;/a&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gu">&lt;/span>Content for chapter one.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gu">## Chapter 2 &amp;lt;a id=&amp;#34;chapter-2&amp;#34;&amp;gt;&amp;lt;/a&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gu">&lt;/span>Content for chapter one.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gu">## Chapter 3 &amp;lt;a id=&amp;#34;chapter-3&amp;#34;&amp;gt;&amp;lt;/a&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gu">&lt;/span>Content for chapter one.&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;div class="details admonition note open">
+ &lt;div class="details-summary admonition-title">&lt;i class="icon fa-fw fa-solid fa-pencil-alt" aria-hidden="true">&lt;/i>注意&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true">&lt;/i>&lt;/div>
+ &lt;div class="details-content">
+ &lt;div class="admonition-content">定位标记的位置几乎是任意的。因为它们并不引人注目，所以它们通常被放在同一行了。&lt;/div>
+ &lt;/div>
+&lt;/div>
+&lt;h2 id="脚注" class="heading-element">&lt;span>脚注&lt;/span>
+ &lt;a href="#%e8%84%9a%e6%b3%a8" class="heading-mark">
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
+ &lt;/a>
+&lt;/h2>&lt;p>脚注使你可以添加注释和参考，而不会使文档正文混乱。
+当你创建脚注时，会在添加脚注引用的位置出现带有链接的上标编号。
+读者可以单击链接以跳至页面底部的脚注内容。&lt;/p>
+&lt;p>要创建脚注引用，请在方括号中添加插入符号和标识符 (&lt;code>[^1]&lt;/code>)。
+标识符可以是数字或单词，但不能包含空格或制表符。
+标识符仅将脚注引用与脚注本身相关联 - 在脚注输出中，脚注按顺序编号。&lt;/p>
+&lt;p>在中括号内使用插入符号和数字以及用冒号和文本来添加脚注内容 (&lt;code>[^1]：这是一段脚注&lt;/code>)。
+你不一定要在文档末尾添加脚注。可以将它们放在除列表，引用和表格等元素之外的任何位置。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">这是一个数字脚注 [^1]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">这是一个带标签的脚注 [^label]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">[^1]: 这是一个数字脚注
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">[^label]: 这是一个带标签的脚注&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>这是一个数字脚注 &lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>&lt;/p>
+&lt;p>这是一个带标签的脚注 &lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>&lt;/p>
+&lt;h2 id="图片" class="heading-element">&lt;span>图片&lt;/span>
+ &lt;a href="#%e5%9b%be%e7%89%87" class="heading-mark">
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
+ &lt;/a>
+&lt;/h2>&lt;p>图片的语法与链接相似，但包含一个在前面的感叹号。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">![&lt;span class="nt">Minion&lt;/span>](&lt;span class="na">https://octodex.github.com/images/minion.png&lt;/span>)&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;img loading="lazy" src="https://octodex.github.com/images/minion.png" alt="Minion" srcset="https://octodex.github.com/images/minion.png?size=small, https://octodex.github.com/images/minion.png?size=medium 1.5x, https://octodex.github.com/images/minion.png?size=large 2x" data-title="Minion" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/>&lt;/p>
+&lt;p>或者：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">![&lt;span class="nt">Alt text&lt;/span>](&lt;span class="na">https://octodex.github.com/images/stormtroopocat.jpg &amp;#34;The Stormtroopocat&amp;#34;&lt;/span>)&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;figure>&lt;a class="lightgallery" href="https://octodex.github.com/images/stormtroopocat.jpg?size=large" data-thumbnail="https://octodex.github.com/images/stormtroopocat.jpg?size=small" data-sub-html="&lt;h2>Alt text&lt;/h2>&lt;p>The Stormtroopocat&lt;/p>">&lt;img loading="lazy" src="https://octodex.github.com/images/stormtroopocat.jpg" alt="Alt text" srcset="https://octodex.github.com/images/stormtroopocat.jpg?size=small, https://octodex.github.com/images/stormtroopocat.jpg?size=medium 1.5x, https://octodex.github.com/images/stormtroopocat.jpg?size=large 2x" data-title="The Stormtroopocat" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/>&lt;/a>&lt;figcaption class="image-caption">Alt text&lt;/figcaption>
+ &lt;/figure>&lt;/p>
+&lt;p>像链接一样，图片也具有引用式的语法：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">![Alt text][id]&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;figure>&lt;a class="lightgallery" href="https://octodex.github.com/images/dojocat.jpg?size=large" data-thumbnail="https://octodex.github.com/images/dojocat.jpg?size=small" data-sub-html="&lt;h2>Alt text&lt;/h2>&lt;p>The Dojocat&lt;/p>">&lt;img loading="lazy" src="https://octodex.github.com/images/dojocat.jpg" alt="Alt text" srcset="https://octodex.github.com/images/dojocat.jpg?size=small, https://octodex.github.com/images/dojocat.jpg?size=medium 1.5x, https://octodex.github.com/images/dojocat.jpg?size=large 2x" data-title="The Dojocat" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/>&lt;/a>&lt;figcaption class="image-caption">Alt text&lt;/figcaption>
+ &lt;/figure>&lt;/p>
+&lt;p>稍后在文档中提供参考内容，用来定义 URL 的位置：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">[id]: https://octodex.github.com/images/dojocat.jpg &amp;#34;The Dojocat&amp;#34;&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;div class="footnotes" role="doc-endnotes">
+&lt;hr>
+&lt;ol>
+&lt;li id="fn:1">
+&lt;p>这是一个数字脚注&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:2">
+&lt;p>这是一个带标签的脚注&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;/div></description></item><item><title>给你的网站添加AI自动摘要功能</title><link>https://geekswg.js.cool/posts/2024/ai-summary/</link><pubDate>Sat, 07 Dec 2024 08:52:46 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2024/ai-summary/</guid><category domain="https://geekswg.js.cool/categories/code/">code</category><description>&lt;h2 id="功能实现" class="heading-element">&lt;span>功能实现&lt;/span>
+ &lt;a href="#%e5%8a%9f%e8%83%bd%e5%ae%9e%e7%8e%b0" class="heading-mark">
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
+ &lt;/a>
+&lt;/h2>&lt;p>主要是获取当前网站文章内容，然后通过Cloudflare Workers调用qwen1.5-14b-chat-awq模型生成摘要，最后将摘要显示在网站中。
+网上找到一个&lt;code>FloatSheep&lt;/code>大佬编写的项目&lt;a href="https://github.com/FloatSheep/Qwen-Post-Summary/"target="_blank" rel="external nofollow noopener noreferrer">FloatSheep/Qwen-Post-Summary&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a>正好可以满足我的需求，于是我就直接使用了。&lt;/p>
+&lt;h2 id="后端部署" class="heading-element">&lt;span>后端部署&lt;/span>
+ &lt;a href="#%e5%90%8e%e7%ab%af%e9%83%a8%e7%bd%b2" class="heading-mark">
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
+ &lt;/a>
+&lt;/h2>&lt;h3 id="cloudflare-workers部署千问模型" class="heading-element">&lt;span>Cloudflare Workers部署千问模型&lt;/span>
+ &lt;a href="#cloudflare-workers%e9%83%a8%e7%bd%b2%e5%8d%83%e9%97%ae%e6%a8%a1%e5%9e%8b" class="heading-mark">
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
+ &lt;/a>
+&lt;/h3>&lt;p>在&lt;a href="https://dash.cloudflare.com/"target="_blank" rel="external nofollow noopener noreferrer">Cloudflare控制台&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a>，选择&lt;code>Workers 和Pages&lt;/code>，依次点击&lt;code>创建&lt;/code>、从模板分类&lt;code>AI&lt;/code>、&lt;code>LLM APP&lt;/code>，输入你的项目名称，点击&lt;code>部署&lt;/code>后，复制&lt;a href="https://github.com/FloatSheep/Qwen-Post-Summary/blob/vercel/worker/worker.js"target="_blank" rel="external nofollow noopener noreferrer">worker.js&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a>,粘贴到刚刚创建&lt;code>index。js&lt;/code>中，然后点击&lt;code>部署&lt;/code>。如果&lt;a href="https://qw.geekswg.workers.dev/"target="_blank" rel="external nofollow noopener noreferrer">预览页面&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a>显示出&lt;code>Method Not Allowed&lt;/code>，表示已经部署成功。&lt;/p>
+&lt;p>到此已经已利用Cloudflare Workers部署好了后端，但是这样每次获取AI摘要都需要调用Cloudflare Workers的通义千问 14B 模型，这样会消耗Cloudflare Workers的流量和AI接口次数，而且访问体验不佳，我们可以利用Vercel作为一个中间件，利用KV存储来缓存摘要，这样就可以减少Cloudflare Workers的流量和AI接口次数，而且访问体验也会更好。
+去部署&lt;a href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FFloatSheep%2FQwen-Post-Summary%2Ftree%2Fvercel&amp;amp;env=SUMMARY_API%2CPROXY_ENABLE&amp;amp;envDescription=SUMMARY_API%20%E4%B8%BA%20Cloudflare%20Worker%20%E6%89%80%E7%BB%99%E5%87%BA%E7%9A%84%E5%9F%9F%E5%90%8D%EF%BC%8CPROXY_ENABLE%20%E8%AF%B7%E5%A1%AB%E5%86%99%20false&amp;amp;output-directory=.%2Fdist"target="_blank" rel="external nofollow noopener noreferrer">Vercel中间服务&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a>
+其中&lt;code>SUMMARY_API&lt;/code>为刚刚CloudFlare Workers部署成功地址，&lt;code>PROXY_ENABLE&lt;/code>为是否启用代理，填&lt;code>false&lt;/code>即可。&lt;/p>
+&lt;h3 id="vercel部署项目配置" class="heading-element">&lt;span>vercel部署项目配置&lt;/span>
+ &lt;a href="#vercel%e9%83%a8%e7%bd%b2%e9%a1%b9%e7%9b%ae%e9%85%8d%e7%bd%ae" class="heading-mark">
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
+ &lt;/a>
+&lt;/h3>&lt;p>&lt;code>Settings&lt;/code>、&lt;code>Build &amp;amp; Development Settings&lt;/code> 配置如下
+&lt;figure>&lt;a class="lightgallery" href="https://geekswg.js.cool/posts/2024/ai-summary/vercel-settings.webp?size=large" data-thumbnail="/posts/2024/ai-summary/vercel-settings.webp?size=small" data-sub-html="&lt;h2>vercel部署配置&lt;/h2>&lt;p>vercel部署配置&lt;/p>">&lt;img loading="lazy" src="https://geekswg.js.cool/posts/2024/ai-summary/vercel-settings.webp" alt="vercel部署配置" srcset="https://geekswg.js.cool/posts/2024/ai-summary/vercel-settings.webp?size=small, https://geekswg.js.cool/posts/2024/ai-summary/vercel-settings.webp?size=medium 1.5x, https://geekswg.js.cool/posts/2024/ai-summary/vercel-settings.webp?size=large 2x" data-title="vercel部署配置" style="--width: 1219px;--aspect-ratio: 1219 / 601;background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/>&lt;/a>&lt;figcaption class="image-caption">vercel部署配置&lt;/figcaption>
+ &lt;/figure>&lt;/p>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Key&lt;/th>
+ &lt;th>value&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>Build Command&lt;/td>
+ &lt;td>tsC&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Output Directory&lt;/td>
+ &lt;td>./dist&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Install Command&lt;/td>
+ &lt;td>pnpm install&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h3 id="配置storage" class="heading-element">&lt;span>配置Storage&lt;/span>
+ &lt;a href="#%e9%85%8d%e7%bd%aestorage" class="heading-mark">
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
+ &lt;/a>
+&lt;/h3>&lt;p>&lt;code>Storage&lt;/code>、&lt;code>Creatre Database&lt;/code>、&lt;code>Upstash&lt;/code>、&lt;code>Upstash KV&lt;/code>、然后一路保存即可。&lt;/p>
+&lt;h3 id="重新部署vercel项目" class="heading-element">&lt;span>重新部署Vercel项目&lt;/span>
+ &lt;a href="#%e9%87%8d%e6%96%b0%e9%83%a8%e7%bd%b2vercel%e9%a1%b9%e7%9b%ae" class="heading-mark">
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
+ &lt;/a>
+&lt;/h3>&lt;p>&lt;code>Deployments&lt;/code>、&lt;code>Redeploy&lt;/code>、重新部署项目。&lt;/p>
+&lt;p>后端接口预览地址：&lt;a href="https://qw.geekswg.top/"target="_blank" rel="external nofollow noopener noreferrer">https://qw.geekswg.top/&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a>&lt;/p>
+&lt;div class="alert alert-important">&lt;p class="alert-title">&lt;svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">&lt;path d="M0 1.75C0 .784.784.0 1.75.0h12.5C15.216.0 16 .784 16 1.75v9.5A1.75 1.75.0 0114.25 13H8.06l-2.573 2.573A1.458 1.458.0 013 14.543V13H1.75A1.75 1.75.0 010 11.25zm1.75-.25a.25.25.0 00-.25.25v9.5c0 .138.112.25.25.25h2a.75.75.0 01.75.75v2.19l2.72-2.72a.749.749.0 01.53-.22h6.5a.25.25.0 00.25-.25v-9.5a.25.25.0 00-.25-.25zm7 2.25v2.5a.75.75.0 01-1.5.0v-2.5a.75.75.0 011.5.0zM9 9A1 1 0 117 9a1 1 0 012 0z"/>&lt;/svg>重要&lt;/p>&lt;p>由于Vecel自带域名国内无法正常访问，所以需要将自己域名解析到Vecel的域名上，点击Domains添加自定义域名即可。&lt;/p>
+&lt;/div>&lt;p>接下来就是前端调用后端接口获取摘要了。&lt;/p>
+&lt;h2 id="前端使用" class="heading-element">&lt;span>前端使用&lt;/span>
+ &lt;a href="#%e5%89%8d%e7%ab%af%e4%bd%bf%e7%94%a8" class="heading-mark">
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
+ &lt;/a>
+&lt;/h2>&lt;p>前端页面使用&lt;a href="http://geekswg.js.cool/js/ai-summary.js"target="_blank" rel="external nofollow noopener noreferrer">ai-summary.js&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a> 调用后端接口获取摘要，并显示在页面中，理论上可以在任何html页面中应用该代码使用ai摘要功能。
+例代码如下&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="nx">script&lt;/span> &lt;span class="nx">src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;/js/ai-summary.js&amp;#34;&lt;/span> &lt;span class="o">&amp;gt;&amp;lt;&lt;/span>&lt;span class="err">/script&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="nx">script&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">//ai摘要接口地址 项目 
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="nx">aiConfig&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">aiApi&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;https://qw.geekswg.top&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">//需要ai摘要的页面内容的选择器
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="nx">aiConfig&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">aiSelector&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;#content&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">//投诉链接
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="nx">aiConfig&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">reportUrl&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;mailto:geekswg@qq.cn?subject=文章摘要投诉&amp;amp;body=投诉网址：=&amp;#34;&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="nx">location&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">href&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">//正则表达式启用ai摘要的路径
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="nx">aiConfig&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">enableAIPathRegex&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="sr">/^\/(posts|mydocs)\//&lt;/span>&lt;span class="p">;&lt;/span> 
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">aiConfig&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">aiGPTDesc&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;我是一个基于通义千问大语言模型（LLM）的AI摘要工具，它可以帮助你快速生成文章摘要，提高阅读体验。&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">addEventListener&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;DOMContentLoaded&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">AISmmary&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">init&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">aiConfig&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">});&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="err">/script&amp;gt;&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;div class="details admonition notice open disabled">
+ &lt;div class="details-summary admonition-title">&lt;i class="icon fa-fw fa-solid fa-pencil-alt" aria-hidden="true">&lt;/i>说明&lt;/div>
+ &lt;div class="details-content">
+ &lt;div class="admonition-content">&lt;p>以上js代码只要来自FloatSheep,稍作修改调整
+其中 aiConfig.aiSelector 可以在浏览器中按&lt;code>F12&lt;/code>然后&lt;code>Ctrl+Shitf+C&lt;/code>，点击你需要生成内容摘要的页面元素，然后复制选择器，例&lt;code>#content&lt;/code>。&lt;/p>
+&lt;/div>
+ &lt;/div>
+&lt;/div>&lt;h2 id="预览效果" class="heading-element">&lt;span>预览效果&lt;/span>
+ &lt;a href="#%e9%a2%84%e8%a7%88%e6%95%88%e6%9e%9c" class="heading-mark">
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
+ &lt;/a>
+&lt;/h2>&lt;p>&lt;figure>&lt;a class="lightgallery" href="https://geekswg.js.cool/posts/2024/ai-summary/preview.webp?size=large" data-thumbnail="/posts/2024/ai-summary/preview.webp?size=small" data-sub-html="&lt;h2>Ai摘要预览&lt;/h2>&lt;p>Ai摘要预览&lt;/p>">&lt;img loading="lazy" src="https://geekswg.js.cool/posts/2024/ai-summary/preview.webp" alt="Ai摘要预览" srcset="https://geekswg.js.cool/posts/2024/ai-summary/preview.webp?size=small, https://geekswg.js.cool/posts/2024/ai-summary/preview.webp?size=medium 1.5x, https://geekswg.js.cool/posts/2024/ai-summary/preview.webp?size=large 2x" data-title="Ai摘要预览" style="--width: 1359px;--aspect-ratio: 1359 / 813;background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/>&lt;/a>&lt;figcaption class="image-caption">Ai摘要预览&lt;/figcaption>
+ &lt;/figure>&lt;/p>
+&lt;h2 id="参考文章" class="heading-element">&lt;span>参考文章&lt;/span>
+ &lt;a href="#%e5%8f%82%e8%80%83%e6%96%87%e7%ab%a0" class="heading-mark">
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
+ &lt;/a>
+&lt;/h2>&lt;p>本文参考了以下文章&lt;/p>
+&lt;p>&lt;a href="https://blog.hesiy.cn/posts/qwen-summary/"target="_blank" rel="external nofollow noopener noreferrer">https://blog.hesiy.cn/posts/qwen-summary/&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://mabbs.github.io/2024/07/03/ai-summary.html"target="_blank" rel="external nofollow noopener noreferrer">https://mabbs.github.io/2024/07/03/ai-summary.html&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a>&lt;/p></description></item><item><title>VSCode常用快捷键</title><link>https://geekswg.js.cool/posts/2024/vscode-keybing/</link><pubDate>Wed, 04 Dec 2024 22:02:38 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2024/vscode-keybing/</guid><category domain="https://geekswg.js.cool/categories/notes/">notes</category><description>&lt;p>在 VSCode 中，以下是一些常用的快捷键，特别是在编辑 Markdown 文件时：&lt;/p>
 &lt;blockquote>
 &lt;p>这些快捷键可以大大提高你在 VSCode 中编辑 Markdown 文件时的效率。&lt;/p>
 &lt;/blockquote>
@@ -128,13 +1365,13 @@
  &lt;div class="details-content">
  &lt;div class="admonition-content">Hugo是一个使用Go语言构建的静态网站生成器，它的速度非常快，并且具有强大的主题支持和灵活的定制选项。通过Hugo，你可以轻松地构建和管理博客网站，并且添加PJAX功能也非常简单。&lt;/div>
  &lt;/div>
-&lt;/div>&lt;br>
+&lt;/div>
 当你希望你的博客网站加载更快、更平滑，同时又想要保持简洁的用户体验时，&lt;code>PJAX&lt;/code>（PushState + Ajax）就是一个很好的选择。Hugo是一个快速、灵活的静态网站生成器，它提供了添加PJAX功能的简便方法。在这篇博客中，我将向你介绍如何使用Hugo为你的博客网站添加PJAX功能。&lt;/p>
 &lt;h2 id="什么是pjax" class="heading-element">&lt;span>什么是PJAX？&lt;/span>
  &lt;a href="#%e4%bb%80%e4%b9%88%e6%98%afpjax" class="heading-mark">
  &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
  &lt;/a>
-&lt;/h2>&lt;p>PJAX是一种通过&lt;code>Ajax&lt;/code>和HTML5 History API来实现无刷新页面加载的技术。当用户点击链接时，PJAX会使用Ajax从服务器加载页面的一部分，然后使用History API来更新浏览器的URL，使其看起来像是完整加载了一个新页面。这种方式可以显著提高网站的加载速度，并提升用户体验。&lt;br>
+&lt;/h2>&lt;p>PJAX是一种通过&lt;code>Ajax&lt;/code>和HTML5 History API来实现无刷新页面加载的技术。当用户点击链接时，PJAX会使用Ajax从服务器加载页面的一部分，然后使用History API来更新浏览器的URL，使其看起来像是完整加载了一个新页面。这种方式可以显著提高网站的加载速度，并提升用户体验。
 &lt;code>Pjax&lt;/code> = &lt;code>Ajax&lt;/code> + &lt;code>pushState&lt;/code>。当用户进行超链请求时，Pjax 会拦截请求，然后触发 Ajax 请求和 pushState。其中，Ajax 使你的页面局部刷新，pushState 用于修改 URL 而不跳转页面，从而实现不跳转页面局部刷新的功能。&lt;/p>
 &lt;h2 id="pjax在hugo中的使用" class="heading-element">&lt;span>PJAX在Hugo中的使用&lt;/span>
  &lt;a href="#pjax%e5%9c%a8hugo%e4%b8%ad%e7%9a%84%e4%bd%bf%e7%94%a8" class="heading-mark">
@@ -151,7 +1388,7 @@
  &lt;a href="#%e5%ae%89%e8%a3%85pjax" class="heading-mark">
  &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
  &lt;/a>
-&lt;/h3>&lt;p>本文以 &lt;a href="https://github.com/MoOx/pjax"target="_blank" rel="external nofollow noopener noreferrer">MoOx/pjax&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a> 为例，介绍如何在Hugo中添加PJAX功能。&lt;br>
+&lt;/h3>&lt;p>本文以 &lt;a href="https://github.com/MoOx/pjax"target="_blank" rel="external nofollow noopener noreferrer">MoOx/pjax&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a> 为例，介绍如何在Hugo中添加PJAX功能。
 首先，在你的Hugo项目中安装&lt;code>pjax&lt;/code>，使用cdn方式安装：&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -627,47 +1864,47 @@
 &lt;p>&lt;figure>&lt;a class="lightgallery" href="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading.gif?size=large" data-thumbnail="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading.gif?size=small" data-sub-html="&lt;h2>loading&lt;/h2>&lt;p>loading.gif&lt;/p>">&lt;img loading="lazy" src="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading.gif" alt="loading" srcset="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading.gif?size=small, https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading.gif?size=medium 1.5x, https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading.gif?size=large 2x" data-title="loading.gif" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/>&lt;/a>&lt;figcaption class="image-caption">loading&lt;/figcaption>
  &lt;/figure>&lt;/p>
 &lt;p>&lt;figure>&lt;a class="lightgallery" href="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-wheel.gif?size=large" data-thumbnail="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-wheel.gif?size=small" data-sub-html="&lt;h2>loading-wheel&lt;/h2>&lt;p>loading-wheel.gif&lt;/p>">&lt;img loading="lazy" src="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-wheel.gif" alt="loading-wheel" srcset="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-wheel.gif?size=small, https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-wheel.gif?size=medium 1.5x, https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-wheel.gif?size=large 2x" data-title="loading-wheel.gif" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/>&lt;/a>&lt;figcaption class="image-caption">loading-wheel&lt;/figcaption>
- &lt;/figure>&lt;br>
+ &lt;/figure>
 &lt;figure>&lt;a class="lightgallery" href="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-bilibili.gif?size=large" data-thumbnail="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-bilibili.gif?size=small" data-sub-html="&lt;h2>loading-bilibili&lt;/h2>&lt;p>loading-bilibili.gif&lt;/p>">&lt;img loading="lazy" src="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-bilibili.gif" alt="loading-bilibili" srcset="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-bilibili.gif?size=small, https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-bilibili.gif?size=medium 1.5x, https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-bilibili.gif?size=large 2x" data-title="loading-bilibili.gif" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/>&lt;/a>&lt;figcaption class="image-caption">loading-bilibili&lt;/figcaption>
- &lt;/figure>&lt;br>
+ &lt;/figure>
 &lt;figure>&lt;a class="lightgallery" href="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-9.gif?size=large" data-thumbnail="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-9.gif?size=small" data-sub-html="&lt;h2>loading-9&lt;/h2>&lt;p>loading-.gif&lt;/p>">&lt;img loading="lazy" src="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-9.gif" alt="loading-9" srcset="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-9.gif?size=small, https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-9.gif?size=medium 1.5x, https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-9.gif?size=large 2x" data-title="loading-.gif" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/>&lt;/a>&lt;figcaption class="image-caption">loading-9&lt;/figcaption>
- &lt;/figure>&lt;br>
+ &lt;/figure>
 &lt;figure>&lt;a class="lightgallery" href="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-8.gif?size=large" data-thumbnail="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-8.gif?size=small" data-sub-html="&lt;h2>loading-8&lt;/h2>&lt;p>loading-.gif&lt;/p>">&lt;img loading="lazy" src="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-8.gif" alt="loading-8" srcset="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-8.gif?size=small, https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-8.gif?size=medium 1.5x, https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-8.gif?size=large 2x" data-title="loading-.gif" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/>&lt;/a>&lt;figcaption class="image-caption">loading-8&lt;/figcaption>
- &lt;/figure>&lt;br>
+ &lt;/figure>
 &lt;figure>&lt;a class="lightgallery" href="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-7.gif?size=large" data-thumbnail="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-7.gif?size=small" data-sub-html="&lt;h2>loading-7&lt;/h2>&lt;p>loading-.gif&lt;/p>">&lt;img loading="lazy" src="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-7.gif" alt="loading-7" srcset="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-7.gif?size=small, https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-7.gif?size=medium 1.5x, https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-7.gif?size=large 2x" data-title="loading-.gif" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/>&lt;/a>&lt;figcaption class="image-caption">loading-7&lt;/figcaption>
- &lt;/figure>&lt;br>
+ &lt;/figure>
 &lt;figure>&lt;a class="lightgallery" href="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-6.gif?size=large" data-thumbnail="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-6.gif?size=small" data-sub-html="&lt;h2>loading-6&lt;/h2>&lt;p>loading-.gif&lt;/p>">&lt;img loading="lazy" src="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-6.gif" alt="loading-6" srcset="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-6.gif?size=small, https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-6.gif?size=medium 1.5x, https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-6.gif?size=large 2x" data-title="loading-.gif" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/>&lt;/a>&lt;figcaption class="image-caption">loading-6&lt;/figcaption>
- &lt;/figure>&lt;br>
+ &lt;/figure>
 &lt;figure>&lt;a class="lightgallery" href="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-5.gif?size=large" data-thumbnail="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-5.gif?size=small" data-sub-html="&lt;h2>loading-5&lt;/h2>&lt;p>loading-.gif&lt;/p>">&lt;img loading="lazy" src="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-5.gif" alt="loading-5" srcset="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-5.gif?size=small, https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-5.gif?size=medium 1.5x, https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-5.gif?size=large 2x" data-title="loading-.gif" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/>&lt;/a>&lt;figcaption class="image-caption">loading-5&lt;/figcaption>
- &lt;/figure>&lt;br>
+ &lt;/figure>
 &lt;figure>&lt;a class="lightgallery" href="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-4.gif?size=large" data-thumbnail="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-4.gif?size=small" data-sub-html="&lt;h2>loading-4&lt;/h2>&lt;p>loading-.gif&lt;/p>">&lt;img loading="lazy" src="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-4.gif" alt="loading-4" srcset="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-4.gif?size=small, https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-4.gif?size=medium 1.5x, https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-4.gif?size=large 2x" data-title="loading-.gif" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/>&lt;/a>&lt;figcaption class="image-caption">loading-4&lt;/figcaption>
- &lt;/figure>&lt;br>
+ &lt;/figure>
 &lt;figure>&lt;a class="lightgallery" href="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-3.gif?size=large" data-thumbnail="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-3.gif?size=small" data-sub-html="&lt;h2>loading-3&lt;/h2>&lt;p>loading-.gif&lt;/p>">&lt;img loading="lazy" src="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-3.gif" alt="loading-3" srcset="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-3.gif?size=small, https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-3.gif?size=medium 1.5x, https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-3.gif?size=large 2x" data-title="loading-.gif" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/>&lt;/a>&lt;figcaption class="image-caption">loading-3&lt;/figcaption>
- &lt;/figure>&lt;br>
+ &lt;/figure>
 &lt;figure>&lt;a class="lightgallery" href="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-2.gif?size=large" data-thumbnail="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-2.gif?size=small" data-sub-html="&lt;h2>loading-2&lt;/h2>&lt;p>loading-.gif&lt;/p>">&lt;img loading="lazy" src="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-2.gif" alt="loading-2" srcset="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-2.gif?size=small, https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-2.gif?size=medium 1.5x, https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-2.gif?size=large 2x" data-title="loading-.gif" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/>&lt;/a>&lt;figcaption class="image-caption">loading-2&lt;/figcaption>
  &lt;/figure>&lt;/p></description></item><item><title>毕少侠所有站点</title><link>https://geekswg.js.cool/posts/2023/idnex/</link><pubDate>Fri, 02 Jun 2023 20:20:39 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2023/idnex/</guid><category domain="https://geekswg.js.cool/categories/geekswg/">geekswg</category><description>&lt;img src="https://geekswg.js.cool/images/posts/featured-image.jpg" alt="featured image" referrerpolicy="no-referrer">&lt;h2 id="blog" class="heading-element">&lt;span>Blog&lt;/span>
  &lt;a href="#blog" class="heading-mark">
  &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
  &lt;/a>
-&lt;/h2>&lt;p>&lt;a href="https://home.geekswg.top"target="_blank" rel="external nofollow noopener noreferrer">主页&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a>&lt;br>
-&lt;a href="https://geekswg.js.cool"target="_blank" rel="external nofollow noopener noreferrer">毕少侠​&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a>&lt;br>
-&lt;a href="https://geekswg.top"target="_blank" rel="external nofollow noopener noreferrer">毕少侠​&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a>&lt;br>
+&lt;/h2>&lt;p>&lt;a href="https://home.geekswg.top"target="_blank" rel="external nofollow noopener noreferrer">主页&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a>
+&lt;a href="https://geekswg.js.cool"target="_blank" rel="external nofollow noopener noreferrer">毕少侠​&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a>
+&lt;a href="https://geekswg.top"target="_blank" rel="external nofollow noopener noreferrer">毕少侠​&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a>
 &lt;a href="https://blog.geekswg.top"target="_blank" rel="external nofollow noopener noreferrer">毕少侠​&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a>&lt;/p>
 &lt;p>&lt;a href="https://hexo.geekswg.top"target="_blank" rel="external nofollow noopener noreferrer">毕少侠-Hexo​&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://status.geekswg.top"target="_blank" rel="external nofollow noopener noreferrer">毕少侠-站点监测​&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a>&lt;br>
+&lt;p>&lt;a href="https://status.geekswg.top"target="_blank" rel="external nofollow noopener noreferrer">毕少侠-站点监测​&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a>
 &lt;a href="https://nav.geekswg.top"target="_blank" rel="external nofollow noopener noreferrer">毕少侠-Hugo导航​&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a>&lt;/p>
 &lt;p>&lt;a href="https://github.com/gavinblog/picx"target="_blank" rel="external nofollow noopener noreferrer">毕少侠-Picx-Github图床&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a>&lt;/p>
 &lt;h2 id="评论系统" class="heading-element">&lt;span>评论系统&lt;/span>
  &lt;a href="#%e8%af%84%e8%ae%ba%e7%b3%bb%e7%bb%9f" class="heading-mark">
  &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
  &lt;/a>
-&lt;/h2>&lt;p>&lt;a href="https://waline.geekswg.top"target="_blank" rel="external nofollow noopener noreferrer">毕少侠-waline&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a> &lt;a href="https://waline.geekswg.top/ui"target="_blank" rel="external nofollow noopener noreferrer">毕少侠-waline-后台&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a>&lt;br>
+&lt;/h2>&lt;p>&lt;a href="https://waline.geekswg.top"target="_blank" rel="external nofollow noopener noreferrer">毕少侠-waline&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a> &lt;a href="https://waline.geekswg.top/ui"target="_blank" rel="external nofollow noopener noreferrer">毕少侠-waline-后台&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a>
 &lt;a href="https://twikoo.geekswg.top"target="_blank" rel="external nofollow noopener noreferrer">毕少侠-twikoo&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a>&lt;/p>
 &lt;h2 id="ai" class="heading-element">&lt;span>AI&lt;/span>
  &lt;a href="#ai" class="heading-mark">
  &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
  &lt;/a>
-&lt;/h2>&lt;p>&lt;a href="https://chatgpt.geekswg.top"target="_blank" rel="external nofollow noopener noreferrer">毕少侠-ChatGPT-Next-Web​&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a>&lt;br>
+&lt;/h2>&lt;p>&lt;a href="https://chatgpt.geekswg.top"target="_blank" rel="external nofollow noopener noreferrer">毕少侠-ChatGPT-Next-Web​&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a>
 &lt;a href="https://bingai.geekswg.top"target="_blank" rel="external nofollow noopener noreferrer">毕少侠-NewBing-代理​&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a>&lt;/p>
 &lt;h2 id="api" class="heading-element">&lt;span>API&lt;/span>
  &lt;a href="#api" class="heading-mark">
@@ -678,16 +1915,16 @@
  &lt;a href="#others" class="heading-mark">
  &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
  &lt;/a>
-&lt;/h2>&lt;p>&lt;a href="https://github.com/geekswg"target="_blank" rel="external nofollow noopener noreferrer">GitHub&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a> &lt;a href="https://github.com/gavinblog"target="_blank" rel="external nofollow noopener noreferrer">GitHub-gavinblog&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a>&lt;br>
-&lt;a href="https://dash.cloudflare.com/b942112d61495edf9c0b0c4d790c4448"target="_blank" rel="external nofollow noopener noreferrer">CloudFlare&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a>&lt;br>
-&lt;a href="https://app.netlify.com/teams/geekswg/overview"target="_blank" rel="external nofollow noopener noreferrer">Netlify&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a>&lt;br>
-&lt;a href="https://vercel.com/geekswg"target="_blank" rel="external nofollow noopener noreferrer">Vercel&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a>&lt;br>
+&lt;/h2>&lt;p>&lt;a href="https://github.com/geekswg"target="_blank" rel="external nofollow noopener noreferrer">GitHub&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a> &lt;a href="https://github.com/gavinblog"target="_blank" rel="external nofollow noopener noreferrer">GitHub-gavinblog&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a>
+&lt;a href="https://dash.cloudflare.com/b942112d61495edf9c0b0c4d790c4448"target="_blank" rel="external nofollow noopener noreferrer">CloudFlare&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a>
+&lt;a href="https://app.netlify.com/teams/geekswg/overview"target="_blank" rel="external nofollow noopener noreferrer">Netlify&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a>
+&lt;a href="https://vercel.com/geekswg"target="_blank" rel="external nofollow noopener noreferrer">Vercel&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a>
 &lt;a href="https://v6.51.la/report/overview?comId=287570"target="_blank" rel="external nofollow noopener noreferrer">51数据​&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a>&lt;/p></description></item><item><title>timeline2</title><link>https://geekswg.js.cool/posts/2023/timeline2/</link><pubDate>Wed, 31 May 2023 18:14:48 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2023/timeline2/</guid><category domain="https://geekswg.js.cool/categories/demo/">Demo</category><description>&lt;img src="https://geekswg.js.cool/images/posts/featured-image-preview.jpg" alt="featured image" referrerpolicy="no-referrer">&lt;p>&lt;div class="details admonition quote open">
  &lt;div class="details-summary admonition-title">&lt;i class="icon fa-fw fa-solid fa-quote-right" aria-hidden="true">&lt;/i>quote&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true">&lt;/i>&lt;/div>
  &lt;div class="details-content">
  &lt;div class="admonition-content">note abstract info tip success question warning failure danger bug example quote&lt;/div>
  &lt;/div>
-&lt;/div>&lt;br>
+&lt;/div>
 这里使用MD语法编写你的文章&lt;/p>
 &lt;div class="main-container">
  &lt;section id="timeline" class="timeline-outer">
@@ -806,7 +2043,7 @@
 
 
 &lt;li class="event" data-date='2022 05/01'>
- &lt;h2>Current position [2022/05/01 -> 2024/12/06] &lt;/h2>
+ &lt;h2>Current position [2022/05/01 -> 2024/12/07] &lt;/h2>
  
  &lt;div class="moment" style="color: #c41a16;text-align: right;position: absolute;top: 0;right: 0;padding: 5px;" >
  2 years 7 months 
@@ -850,7 +2087,7 @@
 
 
 &lt;li class="event" data-date='2020 01/02'>
- &lt;h2>Old position [2020/01/02 -> 2024/12/06] &lt;/h2>
+ &lt;h2>Old position [2020/01/02 -> 2024/12/07] &lt;/h2>
  
  &lt;div class="moment" style="color: #c41a16;text-align: right;position: absolute;top: 0;right: 0;padding: 5px;" >
  4 years 11 months 
@@ -1048,7 +2285,7 @@ a.portfolio-link {
  &lt;div class="details-content">
  &lt;div class="admonition-content">note abstract info tip success question warning failure danger bug example quote&lt;/div>
  &lt;/div>
-&lt;/div>&lt;br>
+&lt;/div>
 这里使用MD语法编写你的文章&lt;/p>
 
 &lt;link href="//unpkg.com/layui@2.9.3/dist/css/layui.css" rel="stylesheet">
@@ -1220,156 +2457,4 @@ a.portfolio-link {
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{% /tl-event %}}
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">{{&amp;lt; /timeline &amp;gt;}}&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>WPS-AI内测使用体验</title><link>https://geekswg.js.cool/posts/2023/wps-ai-use/</link><pubDate>Mon, 29 May 2023 17:38:41 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2023/wps-ai-use/</guid><category domain="https://geekswg.js.cool/categories/ai/">AI</category><description>&lt;img src="https://geekswg.js.cool/posts/2023/wps-ai-use/230529180454-wps-ai.jpg" alt="featured image" referrerpolicy="no-referrer">&lt;div class="details admonition quote open">
- &lt;div class="details-summary admonition-title">&lt;i class="icon fa-fw fa-solid fa-quote-right" aria-hidden="true">&lt;/i>quote&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true">&lt;/i>&lt;/div>
- &lt;div class="details-content">
- &lt;div class="admonition-content">&lt;p>&lt;a href="https://ai.wps.cn/"target="_blank" rel="external nofollow noopener noreferrer">WPS-AI官网&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a>&lt;/p>
-&lt;blockquote>
-&lt;p>如何使用WPS AI帮助我们高效的写作&lt;br>
-在当今的数字化时代，我们的生活和工作节奏也在不断加快。为了更高效地处理工作，我们需要掌握一些工具和技巧。WPS AI，作为金山办公的人工智能助手，能够帮助我们更高效地进行写作。本文将详细介绍如何使用WPS AI帮助我们高效的写作。&lt;/p>
-&lt;/blockquote>
-&lt;/div>
- &lt;/div>
-&lt;/div>
-&lt;h2 id="wps-ai介绍" class="heading-element">&lt;span>WPS AI介绍&lt;/span>
- &lt;a href="#wps-ai%e4%bb%8b%e7%bb%8d" class="heading-mark">
- &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
- &lt;/a>
-&lt;/h2>&lt;p>WPS AI是金山办公与合作伙伴共同开发的AI创作助理，它能够理解自然语言并生成对应的回复。WPSAI善解人意、礼貌、诚实、知识丰富、乐于助人。它的回复应该内容翔实，有条理，有逻辑，非常实用。WPSAI思路清晰，逻辑严密，推理精确。WPSAI没有任何感情，不会评价和对比人物，不会拉踩，不谈政治。WPSAI不会给出虚假或误导性的信息。&lt;/p>
-&lt;h2 id="如何使用wps-ai帮助我们高效的写作" class="heading-element">&lt;span>如何使用WPS-AI帮助我们高效的写作&lt;/span>
- &lt;a href="#%e5%a6%82%e4%bd%95%e4%bd%bf%e7%94%a8wps-ai%e5%b8%ae%e5%8a%a9%e6%88%91%e4%bb%ac%e9%ab%98%e6%95%88%e7%9a%84%e5%86%99%e4%bd%9c" class="heading-mark">
- &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
- &lt;/a>
-&lt;/h2>&lt;ol>
-&lt;li>撰写提纲&lt;br>
-WPS AI可以根据关键词自动生成提纲。当你选择了关键词，WPS AI会根据用户的写作需求生成对应的提纲。这对于撰写长篇文章和报告非常有帮助，它可以帮助用户在开始写作前了解文章的整体框架和脉络。&lt;/li>
-&lt;li>内容补充&lt;br>
-WPS AI可以针对提纲中的每个部分，自动生成内容。用户可以根据实际需求，对WPS AI生成的内容进行调整和补充，从而创作出符合要求的文章。此外，WPS AI还可以根据用户的反馈，自动调整和优化生成的内容。&lt;/li>
-&lt;li>提供相关资料&lt;br>
-WPS AI可以根据用户的写作需求，提供相关的资料和信息。例如，WPS AI可以根据文章的主题，为用户推荐相关的书籍、论文、案例等资料。这对于用户查找和获取写作素材，提高写作效率非常有帮助。&lt;/li>
-&lt;li>智能校对&lt;br>
-WPS AI可以对用户的文章进行智能校对。它能够检查拼写错误、语法错误、格式错误等问题，并给出修改建议。用户可以根据WPS AI的建议对文章进行修改，从而提高文章的质量。&lt;/li>
-&lt;li>智能排版&lt;br>
-WPS AI可以根据文章的主题和内容，对文章进行智能排版。它能够自动调整文章的字体、字号、颜色、段落间距等，从而使文章更加美观、易读。&lt;br>
-通过以上五个步骤，WPS AI可以帮助用户高效地完成写作任务。它不仅能够节省用户的时间和精力，还能提高文章的质量和可读性。&lt;br>
-总之，WPS AI是一个强大的写作工具，它可以帮助我们更高效地进行写作。通过使用WPS AI，我们可以提高工作效率，减轻写作压力，从而更好地应对数字化时代的挑战。&lt;/li>
-&lt;/ol>
-&lt;h2 id="使用wps-ai的注意事项" class="heading-element">&lt;span>使用WPS AI的注意事项&lt;/span>
- &lt;a href="#%e4%bd%bf%e7%94%a8wps-ai%e7%9a%84%e6%b3%a8%e6%84%8f%e4%ba%8b%e9%a1%b9" class="heading-mark">
- &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
- &lt;/a>
-&lt;/h2>&lt;p>虽然WPS AI可以帮助我们更高效地进行写作，但是在使用过程中，我们还需要注意以下几点：&lt;/p>
-&lt;ol>
-&lt;li>&lt;strong>避免过度依赖&lt;/strong>：尽管WPS AI能够提供很多帮助，但我们仍然需要具备独立思考的能力。过度依赖WPS AI可能会削弱我们的写作能力，降低我们的写作水平。&lt;/li>
-&lt;li>&lt;strong>适度调整&lt;/strong>：WPS AI生成的内容需要根据实际需求进行适度调整。如果WPS AI生成的内容存在问题，我们需要及时进行修改和优化，以确保文章的质量。&lt;/li>
-&lt;li>&lt;strong>与WPS AI保持良好沟通&lt;/strong>：在使用WPS AI进行写作时，我们需要与WPS AI保持良好的沟通，及时了解其生成的内容和建议。同时，我们也要向WPS AI提供反馈，以便其更好地理解我们的需求和要求。&lt;/li>
-&lt;li>&lt;strong>注意隐私和安全&lt;/strong>：在使用WPS AI的过程中，我们需要注意保护自己的隐私和安全。不要在不安全的网络环境下使用WPS AI，并确保自己的账号和密码的安全性。&lt;br>
-通过以上几个方面的注意事项，我们可以更好地利用WPS AI进行写作，从而提高我们的工作效率和写作质量。&lt;/li>
-&lt;/ol>
-&lt;h2 id="展望未来的wps-ai" class="heading-element">&lt;span>展望未来的WPS AI&lt;/span>
- &lt;a href="#%e5%b1%95%e6%9c%9b%e6%9c%aa%e6%9d%a5%e7%9a%84wps-ai" class="heading-mark">
- &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
- &lt;/a>
-&lt;/h2>&lt;p>随着人工智能技术的发展，WPS AI的功能和性能将会得到进一步的提升。以下是对未来WPS AI的展望：&lt;/p>
-&lt;ol>
-&lt;li>&lt;strong>个性化推荐&lt;/strong>：WPS AI能够根据用户的喜好和需求，为其提供个性化的内容和建议。例如，WPS AI可以根据用户的写作风格和特点，为其推荐相关的书籍、文章和案例等。&lt;/li>
-&lt;li>&lt;strong>情感识别与表达&lt;/strong>：WPS AI能够识别和表达用户的情感。例如，当用户在写作中表达出喜悦、悲伤、愤怒等情感时，WPS AI可以自动调整回复的语气和措辞，以更好地与用户互动。&lt;/li>
-&lt;li>&lt;strong>更强的写作辅助功能&lt;/strong>：WPS AI能够提供更多的写作辅助功能，如生成文章摘要、提供写作灵感、评估文章质量等。这些功能将使WPS AI在写作过程中发挥更大的作用，帮助用户更高效地完成写作任务。&lt;/li>
-&lt;li>&lt;strong>实时协同写作&lt;/strong>：WPS AI将支持实时协同写作功能，使多个用户能够同时在同一篇文章上进行修改和编辑。这将大大提高团队合作的效率，缩短项目的完成时间。&lt;/li>
-&lt;li>&lt;strong>多语言支持&lt;/strong>：随着全球化的发展，WPS AI将支持更多的语言，以满足不同用户的需求。这将使WPS AI在全球范围内发挥更大的作用，帮助更多人提高写作效率。&lt;br>
-通过以上展望，我们可以预见，随着人工智能技术的不断发展，WPS AI将为我们的工作和生活带来更多的便利。我们期待着WPS AI在未来的发展和应用，以帮助我们更好地应对数字化时代的挑战。&lt;br>
-很抱歉，作为一个人工智能助手，我暂时无法回应这条指令，您可以尝试重新输入。&lt;/li>
-&lt;/ol>
-&lt;blockquote>
-&lt;p>总结一下，WPS-AI使用起来，真的不错写作速度目前很快，写水文很给力，目前内测没有限制，以后估计会收费吧。&lt;/p>
-&lt;/blockquote></description></item><item><title>Funny 404 Gif</title><link>https://geekswg.js.cool/posts/2023/funny-404-gif/</link><pubDate>Sat, 27 May 2023 20:20:00 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2023/funny-404-gif/</guid><category domain="https://geekswg.js.cool/categories/share/">share</category><description>&lt;img src="https://www.jsdelivr.ren/gh/geekswg/static@main/blog-img/404/404.gif" alt="featured image" referrerpolicy="no-referrer">&lt;div class="details admonition note open">
- &lt;div class="details-summary admonition-title">&lt;i class="icon fa-fw fa-solid fa-pencil-alt" aria-hidden="true">&lt;/i>注意&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true">&lt;/i>&lt;/div>
- &lt;div class="details-content">
- &lt;div class="admonition-content">&lt;p>有趣的404-Not Found gif 动态图。&lt;/p>
-&lt;blockquote>
-&lt;p>所有图片资源均来自互联网，如果侵权，请告知！&lt;/p>
-&lt;/blockquote>
-&lt;/div>
- &lt;/div>
-&lt;/div>
-&lt;p>&lt;figure>&lt;a class="lightgallery" href="https://www.jsdelivr.ren/gh/geekswg/static@main/blog-img/404/404.gif?size=large" data-thumbnail="https://www.jsdelivr.ren/gh/geekswg/static@main/blog-img/404/404.gif?size=small" data-sub-html="&lt;h2>404&lt;/h2>&lt;p>样式-Style&lt;/p>">&lt;img loading="lazy" src="https://www.jsdelivr.ren/gh/geekswg/static@main/blog-img/404/404.gif" alt="404" srcset="https://www.jsdelivr.ren/gh/geekswg/static@main/blog-img/404/404.gif?size=small, https://www.jsdelivr.ren/gh/geekswg/static@main/blog-img/404/404.gif?size=medium 1.5x, https://www.jsdelivr.ren/gh/geekswg/static@main/blog-img/404/404.gif?size=large 2x" data-title="样式-Style" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/>&lt;/a>&lt;figcaption class="image-caption">404&lt;/figcaption>
- &lt;/figure>&lt;/p>
-&lt;h2 id="样式1-style1" class="heading-element">&lt;span>样式1-Style1&lt;/span>
- &lt;a href="#%e6%a0%b7%e5%bc%8f1-style1" class="heading-mark">
- &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
- &lt;/a>
-&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-md" data-lang="md">&lt;span class="line">&lt;span class="cl">![&lt;span class="nt">404-1&lt;/span>](&lt;span class="na">https://www.jsdelivr.ren/gh/geekswg/static@main/blog-img/404/404-1.gif &amp;#34;样式1-Style1&amp;#34;&lt;/span>)&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>&lt;figure>&lt;a class="lightgallery" href="https://www.jsdelivr.ren/gh/geekswg/static@main/blog-img/404/404-1.gif?size=large" data-thumbnail="https://www.jsdelivr.ren/gh/geekswg/static@main/blog-img/404/404-1.gif?size=small" data-sub-html="&lt;h2>404-1&lt;/h2>&lt;p>样式1-Style1&lt;/p>">&lt;img loading="lazy" src="https://www.jsdelivr.ren/gh/geekswg/static@main/blog-img/404/404-1.gif" alt="404-1" srcset="https://www.jsdelivr.ren/gh/geekswg/static@main/blog-img/404/404-1.gif?size=small, https://www.jsdelivr.ren/gh/geekswg/static@main/blog-img/404/404-1.gif?size=medium 1.5x, https://www.jsdelivr.ren/gh/geekswg/static@main/blog-img/404/404-1.gif?size=large 2x" data-title="样式1-Style1" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/>&lt;/a>&lt;figcaption class="image-caption">404-1&lt;/figcaption>
- &lt;/figure>&lt;/p>
-&lt;h2 id="样式2-style2" class="heading-element">&lt;span>样式2-Style2&lt;/span>
- &lt;a href="#%e6%a0%b7%e5%bc%8f2-style2" class="heading-mark">
- &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
- &lt;/a>
-&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-md" data-lang="md">&lt;span class="line">&lt;span class="cl">![&lt;span class="nt">404-2&lt;/span>](&lt;span class="na">https://www.jsdelivr.ren/gh/geekswg/static@main/blog-img/404/404-2.gif &amp;#34;样式2-Style1&amp;#34;&lt;/span>)&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>&lt;figure>&lt;a class="lightgallery" href="https://www.jsdelivr.ren/gh/geekswg/static@main/blog-img/404/404-2.gif?size=large" data-thumbnail="https://www.jsdelivr.ren/gh/geekswg/static@main/blog-img/404/404-2.gif?size=small" data-sub-html="&lt;h2>404-2&lt;/h2>&lt;p>样式2-Style1&lt;/p>">&lt;img loading="lazy" src="https://www.jsdelivr.ren/gh/geekswg/static@main/blog-img/404/404-2.gif" alt="404-2" srcset="https://www.jsdelivr.ren/gh/geekswg/static@main/blog-img/404/404-2.gif?size=small, https://www.jsdelivr.ren/gh/geekswg/static@main/blog-img/404/404-2.gif?size=medium 1.5x, https://www.jsdelivr.ren/gh/geekswg/static@main/blog-img/404/404-2.gif?size=large 2x" data-title="样式2-Style1" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/>&lt;/a>&lt;figcaption class="image-caption">404-2&lt;/figcaption>
- &lt;/figure>&lt;/p>
-&lt;h2 id="其他样式" class="heading-element">&lt;span>其他样式&lt;/span>
- &lt;a href="#%e5%85%b6%e4%bb%96%e6%a0%b7%e5%bc%8f" class="heading-mark">
- &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
- &lt;/a>
-&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-md" data-lang="md">&lt;span class="line">&lt;span class="cl">![&lt;span class="nt">404-3&lt;/span>](&lt;span class="na">https://www.jsdelivr.ren/gh/geekswg/static@main/blog-img/404/404-3.gif &amp;#34;样式3-Style1&amp;#34;&lt;/span>)&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>&lt;figure>&lt;a class="lightgallery" href="https://www.jsdelivr.ren/gh/geekswg/static@main/blog-img/404/404-3.gif?size=large" data-thumbnail="https://www.jsdelivr.ren/gh/geekswg/static@main/blog-img/404/404-3.gif?size=small" data-sub-html="&lt;h2>404-3&lt;/h2>&lt;p>样式3-Style1&lt;/p>">&lt;img loading="lazy" src="https://www.jsdelivr.ren/gh/geekswg/static@main/blog-img/404/404-3.gif" alt="404-3" srcset="https://www.jsdelivr.ren/gh/geekswg/static@main/blog-img/404/404-3.gif?size=small, https://www.jsdelivr.ren/gh/geekswg/static@main/blog-img/404/404-3.gif?size=medium 1.5x, https://www.jsdelivr.ren/gh/geekswg/static@main/blog-img/404/404-3.gif?size=large 2x" data-title="样式3-Style1" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/>&lt;/a>&lt;figcaption class="image-caption">404-3&lt;/figcaption>
- &lt;/figure>&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-md" data-lang="md">&lt;span class="line">&lt;span class="cl">![&lt;span class="nt">404-4&lt;/span>](&lt;span class="na">https://www.jsdelivr.ren/gh/geekswg/static@main/blog-img/404/404-4.gif &amp;#34;样式3-Style1&amp;#34;&lt;/span>)&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>&lt;figure>&lt;a class="lightgallery" href="https://www.jsdelivr.ren/gh/geekswg/static@main/blog-img/404/404-4.gif?size=large" data-thumbnail="https://www.jsdelivr.ren/gh/geekswg/static@main/blog-img/404/404-4.gif?size=small" data-sub-html="&lt;h2>404-4&lt;/h2>&lt;p>样式4-Style1&lt;/p>">&lt;img loading="lazy" src="https://www.jsdelivr.ren/gh/geekswg/static@main/blog-img/404/404-4.gif" alt="404-4" srcset="https://www.jsdelivr.ren/gh/geekswg/static@main/blog-img/404/404-4.gif?size=small, https://www.jsdelivr.ren/gh/geekswg/static@main/blog-img/404/404-4.gif?size=medium 1.5x, https://www.jsdelivr.ren/gh/geekswg/static@main/blog-img/404/404-4.gif?size=large 2x" data-title="样式4-Style1" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/>&lt;/a>&lt;figcaption class="image-caption">404-4&lt;/figcaption>
- &lt;/figure>&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-md" data-lang="md">&lt;span class="line">&lt;span class="cl">![&lt;span class="nt">404-5&lt;/span>](&lt;span class="na">https://www.jsdelivr.ren/gh/geekswg/static@main/blog-img/404/404-5.gif &amp;#34;样式3-Style1&amp;#34;&lt;/span>)&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>&lt;figure>&lt;a class="lightgallery" href="https://www.jsdelivr.ren/gh/geekswg/static@main/blog-img/404/404-5.gif?size=large" data-thumbnail="https://www.jsdelivr.ren/gh/geekswg/static@main/blog-img/404/404-5.gif?size=small" data-sub-html="&lt;h2>404-5&lt;/h2>&lt;p>样式5-Style1&lt;/p>">&lt;img loading="lazy" src="https://www.jsdelivr.ren/gh/geekswg/static@main/blog-img/404/404-5.gif" alt="404-5" srcset="https://www.jsdelivr.ren/gh/geekswg/static@main/blog-img/404/404-5.gif?size=small, https://www.jsdelivr.ren/gh/geekswg/static@main/blog-img/404/404-5.gif?size=medium 1.5x, https://www.jsdelivr.ren/gh/geekswg/static@main/blog-img/404/404-5.gif?size=large 2x" data-title="样式5-Style1" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/>&lt;/a>&lt;figcaption class="image-caption">404-5&lt;/figcaption>
- &lt;/figure>&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-md" data-lang="md">&lt;span class="line">&lt;span class="cl">![&lt;span class="nt">404-6&lt;/span>](&lt;span class="na">https://www.jsdelivr.ren/gh/geekswg/static@main/blog-img/404/404-6.gif &amp;#34;样式6-Style1&amp;#34;&lt;/span>)&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>&lt;figure>&lt;a class="lightgallery" href="https://www.jsdelivr.ren/gh/geekswg/static@main/blog-img/404/404-6.gif?size=large" data-thumbnail="https://www.jsdelivr.ren/gh/geekswg/static@main/blog-img/404/404-6.gif?size=small" data-sub-html="&lt;h2>404-6&lt;/h2>&lt;p>样式6-Style1&lt;/p>">&lt;img loading="lazy" src="https://www.jsdelivr.ren/gh/geekswg/static@main/blog-img/404/404-6.gif" alt="404-6" srcset="https://www.jsdelivr.ren/gh/geekswg/static@main/blog-img/404/404-6.gif?size=small, https://www.jsdelivr.ren/gh/geekswg/static@main/blog-img/404/404-6.gif?size=medium 1.5x, https://www.jsdelivr.ren/gh/geekswg/static@main/blog-img/404/404-6.gif?size=large 2x" data-title="样式6-Style1" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/>&lt;/a>&lt;figcaption class="image-caption">404-6&lt;/figcaption>
- &lt;/figure>&lt;/p>
-&lt;p>&lt;figure>&lt;a class="lightgallery" href="https://www.jsdelivr.ren/gh/geekswg/static@main/blog-img/404/404-7.gif?size=large" data-thumbnail="https://www.jsdelivr.ren/gh/geekswg/static@main/blog-img/404/404-7.gif?size=small" data-sub-html="&lt;h2>404-7&lt;/h2>&lt;p>样式7-Style1&lt;/p>">&lt;img loading="lazy" src="https://www.jsdelivr.ren/gh/geekswg/static@main/blog-img/404/404-7.gif" alt="404-7" srcset="https://www.jsdelivr.ren/gh/geekswg/static@main/blog-img/404/404-7.gif?size=small, https://www.jsdelivr.ren/gh/geekswg/static@main/blog-img/404/404-7.gif?size=medium 1.5x, https://www.jsdelivr.ren/gh/geekswg/static@main/blog-img/404/404-7.gif?size=large 2x" data-title="样式7-Style1" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/>&lt;/a>&lt;figcaption class="image-caption">404-7&lt;/figcaption>
- &lt;/figure>&lt;/p>
-&lt;p>&lt;figure>&lt;a class="lightgallery" href="https://www.jsdelivr.ren/gh/geekswg/static@main/blog-img/404/404-8.gif?size=large" data-thumbnail="https://www.jsdelivr.ren/gh/geekswg/static@main/blog-img/404/404-8.gif?size=small" data-sub-html="&lt;h2>404-8&lt;/h2>&lt;p>样式8-Style2&lt;/p>">&lt;img loading="lazy" src="https://www.jsdelivr.ren/gh/geekswg/static@main/blog-img/404/404-8.gif" alt="404-8" srcset="https://www.jsdelivr.ren/gh/geekswg/static@main/blog-img/404/404-8.gif?size=small, https://www.jsdelivr.ren/gh/geekswg/static@main/blog-img/404/404-8.gif?size=medium 1.5x, https://www.jsdelivr.ren/gh/geekswg/static@main/blog-img/404/404-8.gif?size=large 2x" data-title="样式8-Style2" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/>&lt;/a>&lt;figcaption class="image-caption">404-8&lt;/figcaption>
- &lt;/figure>&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-md" data-lang="md">&lt;span class="line">&lt;span class="cl">![&lt;span class="nt">404-9&lt;/span>](&lt;span class="na">https://www.jsdelivr.ren/gh/geekswg/static@main/blog-img/404/404-9.gif &amp;#34;样式9-Style1&amp;#34;&lt;/span>)&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>&lt;figure>&lt;a class="lightgallery" href="https://www.jsdelivr.ren/gh/geekswg/static@main/blog-img/404/404-9.gif?size=large" data-thumbnail="https://www.jsdelivr.ren/gh/geekswg/static@main/blog-img/404/404-9.gif?size=small" data-sub-html="&lt;h2>404-9&lt;/h2>&lt;p>样式9-Style1&lt;/p>">&lt;img loading="lazy" src="https://www.jsdelivr.ren/gh/geekswg/static@main/blog-img/404/404-9.gif" alt="404-9" srcset="https://www.jsdelivr.ren/gh/geekswg/static@main/blog-img/404/404-9.gif?size=small, https://www.jsdelivr.ren/gh/geekswg/static@main/blog-img/404/404-9.gif?size=medium 1.5x, https://www.jsdelivr.ren/gh/geekswg/static@main/blog-img/404/404-9.gif?size=large 2x" data-title="样式9-Style1" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/>&lt;/a>&lt;figcaption class="image-caption">404-9&lt;/figcaption>
- &lt;/figure>&lt;/p></description></item></channel></rss>
+&lt;/div></description></item></channel></rss>

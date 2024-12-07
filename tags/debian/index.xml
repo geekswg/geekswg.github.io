@@ -8,7 +8,7 @@
  &lt;div class="details-content">
  &lt;div class="admonition-content">note abstract info tip success question warning failure danger bug example quote&lt;/div>
  &lt;/div>
-&lt;/div>&lt;br>
+&lt;/div>
 刚刚入手debian11,记录使用中遇到的一些常用命令。&lt;/p></description></item><item><title>Debian从稳定版切换到testing版</title><link>https://geekswg.js.cool/posts/2023/debian-testing/</link><pubDate>Sun, 05 Mar 2023 14:50:31 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2023/debian-testing/</guid><category domain="https://geekswg.js.cool/categories/linux/">linux</category><description>&lt;div class="details admonition tip open">
  &lt;div class="details-summary admonition-title">&lt;i class="icon fa-fw fa-regular fa-lightbulb" aria-hidden="true">&lt;/i>技巧&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true">&lt;/i>&lt;/div>
  &lt;div class="details-content">

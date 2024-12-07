@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>New Bing - 标签 | 毕少侠</title><link>https://geekswg.js.cool/tags/new-bing/</link><description>博客：探索、发现、分享 By geekswg-[毕少侠]</description><generator>Hugo 0.139.3 &amp; FixIt v0.3.16-fda3fa66</generator><language>zh-CN</language><managingEditor>geekswg@qq.com (geekswg)</managingEditor><webMaster>geekswg@qq.com (geekswg)</webMaster><copyright>geekswg &amp; 毕少侠</copyright><lastBuildDate>Thu, 07 Mar 2024 17:47:10 +0800</lastBuildDate><atom:link href="https://geekswg.js.cool/tags/new-bing/index.xml" rel="self" type="application/rss+xml"/><item><title>New Bing 国内正常访问方法</title><link>https://geekswg.js.cool/posts/2023/new-bing-visit/</link><pubDate>Sat, 18 Mar 2023 16:49:11 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2023/new-bing-visit/</guid><category domain="https://geekswg.js.cool/categories/ai/">AI</category><description>&lt;div class="details admonition quote open">
  &lt;div class="details-summary admonition-title">&lt;i class="icon fa-fw fa-solid fa-quote-right" aria-hidden="true">&lt;/i>quote&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true">&lt;/i>&lt;/div>
  &lt;div class="details-content">
- &lt;div class="admonition-content">记录国内正常网络环境直接访问New Bing的方法。&lt;br>
-之前的插件方法已经失效&lt;br>
-截止目前以下方法可正常访问，使用 &lt;a href="https://github.com/oldj/SwitchHosts"target="_blank" rel="external nofollow noopener noreferrer">SwitchHosts&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a> 插件&lt;br>
+ &lt;div class="admonition-content">记录国内正常网络环境直接访问New Bing的方法。
+之前的插件方法已经失效
+截止目前以下方法可正常访问，使用 &lt;a href="https://github.com/oldj/SwitchHosts"target="_blank" rel="external nofollow noopener noreferrer">SwitchHosts&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a> 插件
 note abstract info tip success question warning failure danger bug example quote&lt;/div>
  &lt;/div>
 &lt;/div>
@@ -11,8 +11,8 @@ note abstract info tip success question warning failure danger bug example quote
  &lt;a href="#%e5%89%8d%e8%a8%80" class="heading-mark">
  &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
  &lt;/a>
-&lt;/h2>&lt;p>最近百度文心一言发布了，还在内测申请，&lt;a href="https://yiyan.baidu.com/welcome"target="_blank" rel="external nofollow noopener noreferrer">申请地址&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a>,不知道个人需要多长时间可以通过申请。&lt;br>
-最近的AI搜索引擎比较火，我之前申请的new bing体验了，还是比较厉害的，现在又升级了，对话限制提高到了15次对了。不过国内的网络不能直接访问bing.com/new,这一点比较难受，今天在晚上看到一个工具可以解决，国内直接访问new bing的方法。&lt;br>
+&lt;/h2>&lt;p>最近百度文心一言发布了，还在内测申请，&lt;a href="https://yiyan.baidu.com/welcome"target="_blank" rel="external nofollow noopener noreferrer">申请地址&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a>,不知道个人需要多长时间可以通过申请。
+最近的AI搜索引擎比较火，我之前申请的new bing体验了，还是比较厉害的，现在又升级了，对话限制提高到了15次对了。不过国内的网络不能直接访问bing.com/new,这一点比较难受，今天在晚上看到一个工具可以解决，国内直接访问new bing的方法。
 &lt;div class="details admonition tip open">
  &lt;div class="details-summary admonition-title">&lt;i class="icon fa-fw fa-regular fa-lightbulb" aria-hidden="true">&lt;/i>技巧&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true">&lt;/i>&lt;/div>
  &lt;div class="details-content">
