@@ -32,13 +32,7 @@ aiConfig = {}
       aiSmmaryData(aiConfig);
     },
     pjaxInit:(aiConfig)=>{
-      if (!aiConfig.enableAIPathRegex.test(location.pathname)) {
-        //alert("当前页面不支持AI摘要功能")
-        return;
-      }
-      AISmmary.initStyle();
-      AISmmary.initDiv(aiConfig);
-      AISmmary.fetchAIData(aiConfig);
+      AISmmary.init(aiConfig);
     },
     init:(aiConfig)=>{
       aiConfig.aiApi = aiConfig.aiApi || "https://qw.geekswg.top"
