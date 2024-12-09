@@ -18,7 +18,7 @@ aiConfig = {}
       style.innerHTML = AISmmary.styleHtml;
       document.head.appendChild(style);
     },
-    divHtml:'<div id="summary-wrapper"><div id="title"><span id="summary-post" class="name"><span class="icon-robot">🤖</span><span class="text">文章摘要 </span><span class="icon-up">2</span> </span><span id="ai-logo" class="logo">QwenGPT</span></div><div id="post-ai-result" class="post-ai-result"><span id="post-ai-result-text" lass="text"><span id="result-loading">加载中...</span></span></div><div id="meta"><span class="tip">此内容根据文章生成，并经过人工审核，仅用于文章内容的解释与总结</span> <a class="report" href="mailto:admin@hesiy.cn" id="aiReport">投诉</a></div></div>',
+    divHtml:'<div id="summary-wrapper"><div id="title"><span id="summary-post" class="name"><span class="icon-robot">🤖</span><span class="text">文章摘要 </span><span class="icon-up"></span> </span><span id="ai-logo" class="logo">QwenGPT</span></div><div id="post-ai-result" class="post-ai-result"><span id="post-ai-result-text" lass="text"><span id="result-loading">加载中...</span></span></div><div id="meta"><span class="tip">此内容根据文章生成，并经过人工审核，仅用于文章内容的解释与总结</span> <a class="report" href="mailto:admin@hesiy.cn" id="aiReport">投诉</a></div></div>',
     initDiv:(aiConfig)=>{
       ele = document.querySelector(aiConfig.aiSelector);
       ele.insertAdjacentHTML('beforebegin',AISmmary.divHtml);
