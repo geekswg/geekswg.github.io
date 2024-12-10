@@ -20,7 +20,7 @@
 
 |Key | value |
 | ------ | ----------- |
-|Build Command    | tsC|
+|Build Command    | tsc |
 |Output Directory | ./dist |
 |Install Command  | pnpm install |
 
