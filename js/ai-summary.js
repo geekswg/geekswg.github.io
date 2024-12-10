@@ -120,7 +120,7 @@ aiConfig = {}
 
         index++;
 
-        typingTimeout = setTimeout(() => typeWriter(index, text), 80); // 调整打字速度
+        typingTimeout = setTimeout(() => typeWriter(index, text), 40); // 调整打字速度
         aiConfig.typingTimeout = typingTimeout;
       } else {
         aiLogoCursor.classList.remove("typing");
