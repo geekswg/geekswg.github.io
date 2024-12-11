@@ -1,12 +1,11 @@
 // live2d_path 参数建议使用绝对路径
 //const live2d_path = "./";
-const live2d_path = "/live2d-widget/";
-
+const live2d_path = "https://unpkg.com/live2dapi-pub@latest/";
+const custom_path = "/live2d-widget/"
 // 封装异步加载资源的方法
 function loadExternalResource(url, type) {
 	return new Promise((resolve, reject) => {
 		let tag;
-
 		if (type === "css") {
 			tag = document.createElement("link");
 			tag.rel = "stylesheet";
@@ -36,28 +35,28 @@ if (screen.width >= 768) {
 			isLocalModel: true, // 使用本地模型
 			waifuPath: live2d_path + "waifu-tips.json",
 			modelsPath: live2d_path + "model",
-			modelListPath: live2d_path + "model/model_list.json",
+			modelListPath: live2d_path + "model_list_custom.json",
 			tools: ["hitokoto", "asteroids", "switch-model", "switch-texture", "photo", "info", "quit"]
 		});
 	});
 }
 
-console.log(`
-  く__,.ヘヽ.        /  ,ー､ 〉
-           ＼ ', !-─‐-i  /  /´
-           ／｀ｰ'       L/／｀ヽ､
-         /   ／,   /|   ,   ,       ',
-       ｲ   / /-‐/  ｉ  L_ ﾊ ヽ!   i
-        ﾚ ﾍ 7ｲ｀ﾄ   ﾚ'ｧ-ﾄ､!ハ|   |
-          !,/7 '0'     ´0iソ|    |
-          |.从"    _     ,,,, / |./    |
-          ﾚ'| i＞.､,,__  _,.イ /   .i   |
-            ﾚ'| | / k_７_/ﾚ'ヽ,  ﾊ.  |
-              | |/i 〈|/   i  ,.ﾍ |  i  |
-             .|/ /  ｉ：    ﾍ!    ＼  |
-              kヽ>､ﾊ    _,.ﾍ､    /､!
-              !'〈//｀Ｔ´', ＼ ｀'7'ｰr'
-              ﾚ'ヽL__|___i,___,ンﾚ|ノ
-                  ﾄ-,/  |___./
-                  'ｰ'    !_,.:
-`);
+// console.log(`
+//   く__,.ヘヽ.        /  ,ー､ 〉
+//            ＼ ', !-─‐-i  /  /´
+//            ／｀ｰ'       L/／｀ヽ､
+//          /   ／,   /|   ,   ,       ',
+//        ｲ   / /-‐/  ｉ  L_ ﾊ ヽ!   i
+//         ﾚ ﾍ 7ｲ｀ﾄ   ﾚ'ｧ-ﾄ､!ハ|   |
+//           !,/7 '0'     ´0iソ|    |
+//           |.从"    _     ,,,, / |./    |
+//           ﾚ'| i＞.､,,__  _,.イ /   .i   |
+//             ﾚ'| | / k_７_/ﾚ'ヽ,  ﾊ.  |
+//               | |/i 〈|/   i  ,.ﾍ |  i  |
+//              .|/ /  ｉ：    ﾍ!    ＼  |
+//               kヽ>､ﾊ    _,.ﾍ､    /､!
+//               !'〈//｀Ｔ´', ＼ ｀'7'ｰr'
+//               ﾚ'ヽL__|___i,___,ンﾚ|ノ
+//                   ﾄ-,/  |___./
+//                   'ｰ'    !_,.:
+// `);
