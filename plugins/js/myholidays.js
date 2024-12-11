@@ -145,7 +145,7 @@ MyHoliday = {
 
 
     h = MyHoliday.init();
-    console.table(h);
+    //console.table(h);
     h.forEach(function (s) {
         document.getElementById('holiday').innerHTML += s + '<br/>';
     });
