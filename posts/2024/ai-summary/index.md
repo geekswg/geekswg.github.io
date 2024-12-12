@@ -56,8 +56,8 @@
 &lt;/script&gt;
 ```
 &gt; [!NOTICE] 说明
-&gt; 以上js代码只要来自FloatSheep,稍作修改调整
-&gt; 其中 aiConfig.aiSelector 可以在浏览器中按`F12`然后`Ctrl&#43;Shitf&#43;C`，点击你需要生成内容摘要的页面元素，然后复制选择器，例`#content`。
+&gt; 以上js代码主要来自`FloatSheep`的项目[FloatSheep/Qwen-Post-Summary](https://github.com/FloatSheep/Qwen-Post-Summary/),稍作修改调整
+&gt; 其中 aiConfig.aiSelector 可以在浏览器中按`F12`然后`Ctrl&#43;Shift&#43;C`，点击你需要生成内容摘要的页面元素，然后`复制`-&gt;`复制Selector`，例`#content`。
 
 ## 预览效果
 
