@@ -1,7 +1,8 @@
 // live2d_path 参数建议使用绝对路径
-//const live2d_path = "./";
-const live2d_path = "https://unpkg.com/live2dapi-pub@latest/";
-const custom_path = "/live2d-widget/"
+//const live2d_path = "./"; https://npmmirror.com/ https://s4.zstatic.net/npm/
+//https://npmmirror.com/live2dapi-pub@latest/  s4.zstatic.net/npm/
+const live2d_path = "https://s4.zstatic.net/npm/live2dapi-pub@latest/";
+const custom_path = "https://geekswg.js.cool/live2d-api/"
 // 封装异步加载资源的方法
 function loadExternalResource(url, type) {
 	return new Promise((resolve, reject) => {
