@@ -116,8 +116,8 @@ aiConfig = {}
       if (index < text.length) {
         // 在光标前面插入文本
         const cursor = document.querySelector(".ai-cursor");
-        cursor.insertAdjacentText("beforebegin", text.charAt(index));
-
+        if(cursor)
+          cursor.insertAdjacentText("beforebegin", text.charAt(index));
         index++;
 
         typingTimeout = setTimeout(() => typeWriter(index, text), 40); // 调整打字速度
