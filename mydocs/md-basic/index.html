@@ -510,8 +510,8 @@ line 3 of code
       .post-author img{
         display: unset !important;
       }
-      img:not([style*="display"]) {
-        display: unset;
+      img:not([style*="display"],.fixit-decryptor-loading) {
+        display: unset !important;
       }
       .content ul{
         padding-inline-start: 30px !important;
