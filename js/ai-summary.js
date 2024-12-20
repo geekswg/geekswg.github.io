@@ -34,6 +34,7 @@ aiConfig = {}
     pjaxInit:(aiConfig)=>{
       clearTimeout(aiConfig.typingTimeout);
       AISmmary.init(aiConfig);
+      addScrollListener();
     },
     init:(aiConfig)=>{
       aiConfig.aiApi = aiConfig.aiApi || "https://qw.geekswg.top"
@@ -238,3 +239,28 @@ aiConfig = {}
       location.href = `https://geekswg.js.cool/posts/2024/ai-summary/`;
     });
   };
+
+function addScrollListener() {
+    // 节流函数
+    throttle = function (func, wait) {
+      let lastTime = 0;
+      return function(...args) {
+        const now = Date.now();
+        if (now - lastTime >= wait) {
+          func.apply(this, args);
+          lastTime = now;
+        }
+      };
+    }
+    // 监听目标div的top值
+    const targetDiv = document.querySelector('#summary-wrapper');
+    window.addEventListener('scroll', throttle(() => {
+      const rect = targetDiv.getBoundingClientRect();
+      if (rect.top <= 60) {
+        // top值小于60时的处理
+        targetDiv.classList.add('minimized');
+      } else {
+        targetDiv.classList.remove('minimized');
+      }
+    }, 100));
+}
