@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>我的相册 | 毕少侠</title><link>https://geekswg.js.cool/gallery/</link><description>博客：探索、发现、分享 By geekswg-[毕少侠]</description><generator>Hugo 0.139.4 &amp; FixIt v0.3.17-036cbb41</generator><language>zh-CN</language><managingEditor>geekswg@qq.com (geekswg)</managingEditor><webMaster>geekswg@qq.com (geekswg)</webMaster><copyright>geekswg &amp; 毕少侠</copyright><lastBuildDate>Sat, 21 Dec 2024 00:18:05 +0800</lastBuildDate><atom:link href="https://geekswg.js.cool/gallery/index.xml" rel="self" type="application/rss+xml"/><item><title>Hello-Gallery</title><link>https://geekswg.js.cool/gallery/hello/</link><pubDate>Thu, 07 Nov 2024 22:41:00 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/gallery/hello/</guid><description>&lt;h2 id="hello-gallery" class="heading-element">&lt;span>Hello-Gallery&lt;/span>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>我的相册 | 毕少侠</title><link>https://geekswg.js.cool/gallery/</link><description>博客：探索、发现、分享 By geekswg-[毕少侠]</description><generator>Hugo 0.139.4 &amp; FixIt v0.3.17-036cbb41</generator><language>zh-CN</language><managingEditor>geekswg@qq.com (geekswg)</managingEditor><webMaster>geekswg@qq.com (geekswg)</webMaster><copyright>geekswg &amp; 毕少侠</copyright><lastBuildDate>Sat, 21 Dec 2024 12:05:24 +0800</lastBuildDate><atom:link href="https://geekswg.js.cool/gallery/index.xml" rel="self" type="application/rss+xml"/><item><title>Hello-Gallery</title><link>https://geekswg.js.cool/gallery/hello/</link><pubDate>Thu, 07 Nov 2024 22:41:00 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/gallery/hello/</guid><description>&lt;h2 id="hello-gallery" class="heading-element">&lt;span>Hello-Gallery&lt;/span>
  &lt;a href="#hello-gallery" class="heading-mark">
  &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
  &lt;/a>
@@ -109,41 +109,59 @@
  &lt;img src="https://via.placeholder.com/600x600" alt="Image 6" class="w-full h-full object-cover rounded-lg">
  &lt;/div>
 &lt;/div>
-&lt;/div></description></item><item><title/><link>https://geekswg.js.cool/gallery/t/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/gallery/t/</guid><description>&lt;!DOCTYPE html>
-&lt;html>
-&lt;head>
- &lt;style>
- .ai-summary {
- width: 300px;
- padding: 20px;
- background: #f0f0f0;
- border-radius: 8px;
- position: sticky;
- top: 80px;
+&lt;/div></description></item><item><title/><link>https://geekswg.js.cool/gallery/t/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/gallery/t/</guid><description>&lt;style>
+ .aside-collection {
  transition: all 0.3s ease;
  }
-
- .ai-summary.minimized {
- width: 50px;
- height: 50px;
+ 
+ @media screen and (max-width: 768px) {
+ .aside-collection {
+ position: fixed;
+ right: -300px;
+ top: 60px;
+ width: 300px;
+ background: #fff;
+ height: calc(100vh - 60px);
+ z-index: 999;
+ padding: 20px;
+ box-shadow: -2px 0 8px rgba(0,0,0,0.1);
+ }
+ 
+ .aside-collection.show {
+ right: 0;
+ }
+ 
+ .aside-toggle {
+ display: block;
+ position: fixed;
+ right: 10px;
+ top: 70px;
+ width: 40px;
+ height: 40px;
+ background: #fff;
  border-radius: 50%;
- overflow: hidden;
- padding: 0;
+ box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+ z-index: 1000;
  cursor: pointer;
  }
- .ai-summary.minimized:hover {
- width: 300px;
- height: auto;
- border-radius: 8px;
- padding: 20px;
  }
-
- .content {
- height: 2000px; /* For demo scrolling */
+ 
+ [data-theme="dark"] .aside-collection {
+ background: #252627;
  }
  &lt;/style>
-&lt;/head>
-&lt;body>
- &lt;div class="ai-summary">
- &lt;h3>AI Summary&lt;/h3>
- &lt;p>This is the AI generated summary of your article. It will transform into a circle when you scroll down.&lt;/p></description></item></channel></rss>
+ 
+ &lt;div class="aside-toggle" onclick="toggleAside()">
+ &lt;i class="fas fa-bars">&lt;/i>
+ &lt;/div>
+ 
+ &lt;div class="aside-collection">
+ &lt;!-- 原有的aside内容 -->
+ ...existing code...
+ &lt;/div>
+ 
+ &lt;script>
+ function toggleAside() {
+ document.querySelector('.aside-collection').classList.toggle('show');
+ }
+ &lt;/script></description></item></channel></rss>

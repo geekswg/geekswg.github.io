@@ -1,60 +1,61 @@
 # 
 
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-  &lt;style&gt;
-    .ai-summary {
+&lt;style&gt;
+  .aside-collection {
+    transition: all 0.3s ease;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .aside-collection {
+      position: fixed;
+      right: -300px;
+      top: 60px;
       width: 300px;
+      background: #fff;
+      height: calc(100vh - 60px);
+      z-index: 999;
       padding: 20px;
-      background: #f0f0f0;
-      border-radius: 8px;
-      position: sticky;
-      top: 80px;
-      transition: all 0.3s ease;
+      box-shadow: -2px 0 8px rgba(0,0,0,0.1);
     }
-
-    .ai-summary.minimized {
-      width: 50px;
-      height: 50px;
+  
+    .aside-collection.show {
+      right: 0;
+    }
+  
+    .aside-toggle {
+      display: block;
+      position: fixed;
+      right: 10px;
+      top: 70px;
+      width: 40px;
+      height: 40px;
+      background: #fff;
       border-radius: 50%;
-      overflow: hidden;
-      padding: 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      z-index: 1000;
       cursor: pointer;
     }
-    .ai-summary.minimized:hover {
-      width: 300px;
-      height: auto;
-      border-radius: 8px;
-      padding: 20px;
-    }
-
-    .content {
-      height: 2000px; /* For demo scrolling */
-    }
+  }
+  
+  [data-theme=&#34;dark&#34;] .aside-collection {
+    background: #252627;
+  }
   &lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;div class=&#34;ai-summary&#34;&gt;
-    &lt;h3&gt;AI Summary&lt;/h3&gt;
-    &lt;p&gt;This is the AI generated summary of your article. It will transform into a circle when you scroll down.&lt;/p&gt;
+  
+  &lt;div class=&#34;aside-toggle&#34; onclick=&#34;toggleAside()&#34;&gt;
+    &lt;i class=&#34;fas fa-bars&#34;&gt;&lt;/i&gt;
   &lt;/div&gt;
-  &lt;div class=&#34;content&#34;&gt;
-    &lt;!-- Main content here --&gt;
+  
+  &lt;div class=&#34;aside-collection&#34;&gt;
+    &lt;!-- 原有的aside内容 --&gt;
+    ...existing code...
   &lt;/div&gt;
-
+  
   &lt;script&gt;
-    window.addEventListener(&#39;scroll&#39;, function() {
-      const summary = document.querySelector(&#39;.ai-summary&#39;);
-      if (window.scrollY &gt; 100) {
-        summary.classList.add(&#39;minimized&#39;);
-      } else {
-        summary.classList.remove(&#39;minimized&#39;);
-      }
-    });
+  function toggleAside() {
+    document.querySelector(&#39;.aside-collection&#39;).classList.toggle(&#39;show&#39;);
+  }
   &lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
 
 ---
 
