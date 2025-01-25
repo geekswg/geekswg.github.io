@@ -17,7 +17,7 @@ git config --global http.sslVerify false
 
 ## 快速上手
 
-``` bash
+```bash
 # 快速开始命令
 git init
 git add README.md
