@@ -18,6 +18,20 @@
 
 &gt; 文件位置 /assets/css/_custom.scss
 
+### 自定义字体
+
+在`/assets/css/_custom.scss`中添加以下代码即可自定义字体，推荐[中文网字计划](https://chinese-font.netlify.app/zh-cn/cdn/)中挑选自己喜欢字体。
+```css
+// 引入字体 https://chinese-font.netlify.app/zh-cn/cdn/
+@import url(&#39;https://chinese-fonts-cdn.deno.dev/packages/lxgwwenkai/dist/LXGWWenKai-Light/result.css&#39;);
+// 自定义字体
+html,body {
+   font-family: &#34;LXGW WenKai Light&#34;;
+   font-weight: normal;
+   font-size: 1rem;
+}
+```
+
 ### div滚动条样式
 ```css
 /************************** div 滚动条样式设定 **************************/

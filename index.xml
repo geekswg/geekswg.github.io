@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>毕少侠</title><link>https://geekswg.js.cool/</link><description>博客：探索、发现、分享 By geekswg-[毕少侠]</description><generator>Hugo 0.142.0 &amp; FixIt v0.3.17-8b402129</generator><language>zh-CN</language><managingEditor>geekswg@qq.com (geekswg)</managingEditor><webMaster>geekswg@qq.com (geekswg)</webMaster><copyright>geekswg &amp; 毕少侠</copyright><lastBuildDate>Thu, 12 Dec 2024 13:01:20 +0800</lastBuildDate><atom:link href="https://geekswg.js.cool/index.xml" rel="self" type="application/rss+xml"/><item><title>Markdown基本语法</title><link>https://geekswg.js.cool/mydocs/md-basic/</link><pubDate>Sat, 07 Dec 2024 08:52:46 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/mydocs/md-basic/</guid><category domain="https://geekswg.js.cool/categories/repost/">repost</category><description>&lt;p>这篇文章提供了可以在 Hugo 的文章中使用的基本 Markdown 语法示例。&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>毕少侠</title><link>https://geekswg.js.cool/</link><description>博客：探索、发现、分享 By geekswg-[毕少侠]</description><generator>Hugo 0.143.1 &amp; FixIt v0.3.17-8b402129</generator><language>zh-CN</language><managingEditor>geekswg@qq.com (geekswg)</managingEditor><webMaster>geekswg@qq.com (geekswg)</webMaster><copyright>geekswg &amp; 毕少侠</copyright><lastBuildDate>Thu, 12 Dec 2024 13:01:20 +0800</lastBuildDate><atom:link href="https://geekswg.js.cool/index.xml" rel="self" type="application/rss+xml"/><item><title>Markdown基本语法</title><link>https://geekswg.js.cool/mydocs/md-basic/</link><pubDate>Sat, 07 Dec 2024 08:52:46 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/mydocs/md-basic/</guid><category domain="https://geekswg.js.cool/categories/repost/">repost</category><description>&lt;p>这篇文章提供了可以在 Hugo 的文章中使用的基本 Markdown 语法示例。&lt;/p>
 &lt;!-- markdownlint-disable-file -->
 &lt;div class="details admonition note open">
  &lt;div class="details-summary admonition-title">&lt;i class="icon fa-fw fa-solid fa-pencil-alt" aria-hidden="true">&lt;/i>注意&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true">&lt;/i>&lt;/div>
@@ -26,8 +26,7 @@
 而不会看起来像被标签或格式说明所标记。
 虽然 Markdown 的语法受到几种现有的文本到 HTML 转换工具的影响，
 但 Markdown 语法的最大灵感来源是纯文本电子邮件的格式。&lt;/p>
-&lt;div id="id-1">&amp;ndash; &lt;em>John Gruber&lt;/em>&lt;/div>
-&lt;/blockquote>
+&lt;div id="id-1">&amp;ndash; &lt;em>John Gruber&lt;/em>&lt;/div>&lt;/blockquote>
 &lt;p>话不多说，我们来回顾一下 Markdown 的主要语法以及生成的 HTML 样式！&lt;/p>
 &lt;div class="details admonition tip open">
  &lt;div class="details-summary admonition-title">&lt;i class="icon fa-fw fa-regular fa-lightbulb" aria-hidden="true">&lt;/i>技巧&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true">&lt;/i>&lt;/div>
@@ -296,8 +295,7 @@
 &lt;/div>
 &lt;/div>&lt;p>呈现的输出效果如下：&lt;/p>
 &lt;blockquote>
-&lt;p>&lt;strong>Fusion Drive&lt;/strong> combines a hard drive with a flash storage (solid-state drive) and presents it as a single logical volume with the space of both drives combined.&lt;/p>
-&lt;/blockquote>
+&lt;p>&lt;strong>Fusion Drive&lt;/strong> combines a hard drive with a flash storage (solid-state drive) and presents it as a single logical volume with the space of both drives combined.&lt;/p>&lt;/blockquote>
 &lt;p>输出的 HTML 看起来像这样：&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -334,9 +332,7 @@
 Nunc augue augue, aliquam non hendrerit ac, commodo vel nisi.&lt;/p>
 &lt;blockquote>
 &lt;p>Sed adipiscing elit vitae augue consectetur a gravida nunc vehicula. Donec auctor
-odio non est accumsan facilisis. Aliquam id turpis in dolor tincidunt mollis ac eu diam.&lt;/p>
-&lt;/blockquote>
-&lt;/blockquote>
+odio non est accumsan facilisis. Aliquam id turpis in dolor tincidunt mollis ac eu diam.&lt;/p>&lt;/blockquote>&lt;/blockquote>
 &lt;h2 id="列表" class="heading-element">&lt;span>列表&lt;/span>
  &lt;a href="#%e5%88%97%e8%a1%a8" class="heading-mark">
  &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
@@ -583,8 +579,7 @@ odio non est accumsan facilisis. Aliquam id turpis in dolor tincidunt mollis ac 
  &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
  &lt;/a>
 &lt;/h3>&lt;blockquote>
-&lt;p>❌ 不推荐使用。&lt;/p>
-&lt;/blockquote>
+&lt;p>❌ 不推荐使用。&lt;/p>&lt;/blockquote>
 &lt;p>将几行代码缩进至少四个空格，例如：&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -632,8 +627,7 @@ line 3 of code
  &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
  &lt;/a>
 &lt;/h3>&lt;blockquote>
-&lt;p>✅ 推荐使用。&lt;/p>
-&lt;/blockquote>
+&lt;p>✅ 推荐使用。&lt;/p>&lt;/blockquote>
 &lt;p>使用 &amp;ldquo;围栏&amp;rdquo; &lt;code>```&lt;/code> 来生成一段带有语言属性的代码块。&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -1235,8 +1229,7 @@ line 3 of code
 &lt;p>&lt;a href="https://blog.hesiy.cn/posts/qwen-summary/"target="_blank" rel="external nofollow noopener noreferrer">https://blog.hesiy.cn/posts/qwen-summary/&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a>&lt;/p>
 &lt;p>&lt;a href="https://mabbs.github.io/2024/07/03/ai-summary.html"target="_blank" rel="external nofollow noopener noreferrer">https://mabbs.github.io/2024/07/03/ai-summary.html&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a>&lt;/p></description></item><item><title>VSCode常用快捷键</title><link>https://geekswg.js.cool/posts/2024/vscode-keybing/</link><pubDate>Wed, 04 Dec 2024 22:02:38 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2024/vscode-keybing/</guid><category domain="https://geekswg.js.cool/categories/notes/">notes</category><description>&lt;p>在 VSCode 中，以下是一些常用的快捷键，特别是在编辑 Markdown 文件时：&lt;/p>
 &lt;blockquote>
-&lt;p>这些快捷键可以大大提高你在 VSCode 中编辑 Markdown 文件时的效率。&lt;/p>
-&lt;/blockquote>
+&lt;p>这些快捷键可以大大提高你在 VSCode 中编辑 Markdown 文件时的效率。&lt;/p>&lt;/blockquote>
 &lt;h2 id="基本编辑快捷键" class="heading-element">&lt;span>基本编辑快捷键：&lt;/span>
  &lt;a href="#%e5%9f%ba%e6%9c%ac%e7%bc%96%e8%be%91%e5%bf%ab%e6%8d%b7%e9%94%ae" class="heading-mark">
  &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
@@ -1375,8 +1368,7 @@ line 3 of code
  &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
  &lt;/a>
 &lt;/h2>&lt;blockquote>
-&lt;p>PJAX实现有两大版本，一种是基于&lt;code>JavaScript&lt;/code>的版本，另一种是基于&lt;code>jQuery&lt;/code>的版本。&lt;/p>
-&lt;/blockquote>
+&lt;p>PJAX实现有两大版本，一种是基于&lt;code>JavaScript&lt;/code>的版本，另一种是基于&lt;code>jQuery&lt;/code>的版本。&lt;/p>&lt;/blockquote>
 &lt;ul>
 &lt;li>&lt;a href="https://github.com/MoOx/pjax"target="_blank" rel="external nofollow noopener noreferrer">MoOx/pjax&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a> 基于&lt;code>JavaScript&lt;/code>的版本，推荐使用！&lt;/li>
 &lt;li>&lt;a href="https://github.com/defunkt/jquery-pjax"target="_blank" rel="external nofollow noopener noreferrer">defunkt/jquery-pjax&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a>、&lt;a href="https://github.com/welefen/pjax"target="_blank" rel="external nofollow noopener noreferrer">welefen/pjax&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a>。依赖&lt;code>jQuery&lt;/code>，不推荐使用。&lt;/li>
@@ -1547,8 +1539,7 @@ line 3 of code
 &lt;li>需要加载大量动态资源时。&lt;/li>
 &lt;/ul>
 &lt;blockquote>
-&lt;p>例如：网站页面贴边的音乐播放器，我在切换页面时，不需要重新加载音乐播放器，只需要重新加载页面中改变的部分即可。&lt;/p>
-&lt;/blockquote></description></item><item><title>Layui Shortcodes Demo</title><link>https://geekswg.js.cool/posts/2024/layui-shortcodes-demo/</link><pubDate>Wed, 03 Jan 2024 09:35:22 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2024/layui-shortcodes-demo/</guid><category domain="https://geekswg.js.cool/categories/demo/">Demo</category><description>&lt;img src="https://geekswg.js.cool/images/posts/featured-image-preview.jpg" alt="featured image" referrerpolicy="no-referrer">&lt;div class="details admonition note open">
+&lt;p>例如：网站页面贴边的音乐播放器，我在切换页面时，不需要重新加载音乐播放器，只需要重新加载页面中改变的部分即可。&lt;/p>&lt;/blockquote></description></item><item><title>Layui Shortcodes Demo</title><link>https://geekswg.js.cool/posts/2024/layui-shortcodes-demo/</link><pubDate>Wed, 03 Jan 2024 09:35:22 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2024/layui-shortcodes-demo/</guid><category domain="https://geekswg.js.cool/categories/demo/">Demo</category><description>&lt;img src="https://geekswg.js.cool/images/posts/featured-image-preview.jpg" alt="featured image" referrerpolicy="no-referrer">&lt;div class="details admonition note open">
  &lt;div class="details-summary admonition-title">&lt;i class="icon fa-fw fa-solid fa-pencil-alt" aria-hidden="true">&lt;/i>注意&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true">&lt;/i>&lt;/div>
  &lt;div class="details-content">
  &lt;div class="admonition-content">这是介绍一个依赖layui的shortcodes示例，的实现和使用方法&lt;/div>
@@ -1594,8 +1585,7 @@ line 3 of code
 &lt;/div>&lt;/div>
  
  &lt;div class="layui-tab-item">&lt;blockquote>
-&lt;p>自定义shortcodes，实现tabs功能，自定义&lt;code>shortcodes&lt;/code>请参考&lt;a href="https://gohugo.io/templates/shortcode-templates/"target="_blank" rel="external nofollow noopener noreferrer">官方文档&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a>&lt;/p>
-&lt;/blockquote>
+&lt;p>自定义shortcodes，实现tabs功能，自定义&lt;code>shortcodes&lt;/code>请参考&lt;a href="https://gohugo.io/templates/shortcode-templates/"target="_blank" rel="external nofollow noopener noreferrer">官方文档&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a>&lt;/p>&lt;/blockquote>
 &lt;p>在&lt;code>/lauout/shortcodes/&lt;/code>目录下创建&lt;code>layui-tabs.html&lt;/code> 和 &lt;code>layui-tab.html&lt;/code> 文件，内容如下：&lt;/p>
 &lt;div class="highlight" title="layui-tabs.html">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -1792,8 +1782,7 @@ line 3 of code
  &lt;h3 class="layui-timeline-title">2023-11-03&lt;/h3>
 &lt;pre>&lt;code>&amp;lt;blockquote&amp;gt;
 &lt;/code>&lt;/pre>
-&lt;p>hello world&lt;/p>
-&lt;/blockquote>
+&lt;p>hello world&lt;/p>&lt;/blockquote>
  &lt;/div>
 &lt;/div>
 &lt;/div>
@@ -1846,8 +1835,7 @@ line 3 of code
  &lt;h3 class="layui-timeline-title">2023-11-03&lt;/h3>
  
  &lt;blockquote>
-&lt;p>hello world&lt;/p>
-&lt;/blockquote>
+&lt;p>hello world&lt;/p>&lt;/blockquote>
 
  
  &lt;/div>
@@ -1856,8 +1844,7 @@ line 3 of code
 
 &lt;/div></description></item><item><title>Loading Gif</title><link>https://geekswg.js.cool/posts/2023/loading-gif/</link><pubDate>Wed, 07 Jun 2023 19:54:12 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2023/loading-gif/</guid><category domain="https://geekswg.js.cool/categories/share/">share</category><description>&lt;img src="https://testingcf.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-6.gif" alt="featured image" referrerpolicy="no-referrer">&lt;p>loading.gif 透明加载动画&lt;/p>
 &lt;blockquote>
-&lt;p>大部分来源于网站 &lt;a href="https://www.bing.com/images/search?q=loading&amp;amp;qs=n&amp;amp;form=QBILPG&amp;amp;sp=-1&amp;amp;lq=0&amp;amp;pq=loading&amp;amp;sc=10-7&amp;amp;cvid=23A7D80EB520465F9CD6951D4825FF8F&amp;amp;ghsh=0&amp;amp;ghacc=0&amp;amp;first=1"target="_blank" rel="external nofollow noopener noreferrer">Bing&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a> 和 &lt;a href="https://icons8.com/preloaders/en/search/windows%2010"target="_blank" rel="external nofollow noopener noreferrer">icos8&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a> ,如有侵权，请联系删除&lt;/p>
-&lt;/blockquote>
+&lt;p>大部分来源于网站 &lt;a href="https://www.bing.com/images/search?q=loading&amp;amp;qs=n&amp;amp;form=QBILPG&amp;amp;sp=-1&amp;amp;lq=0&amp;amp;pq=loading&amp;amp;sc=10-7&amp;amp;cvid=23A7D80EB520465F9CD6951D4825FF8F&amp;amp;ghsh=0&amp;amp;ghacc=0&amp;amp;first=1"target="_blank" rel="external nofollow noopener noreferrer">Bing&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a> 和 &lt;a href="https://icons8.com/preloaders/en/search/windows%2010"target="_blank" rel="external nofollow noopener noreferrer">icos8&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a> ,如有侵权，请联系删除&lt;/p>&lt;/blockquote>
 &lt;p>&lt;figure>&lt;a class="lightgallery" href="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading.gif?size=large" data-thumbnail="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading.gif?size=small" data-sub-html="&lt;h2>loading&lt;/h2>&lt;p>loading.gif&lt;/p>">&lt;img loading="lazy" src="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading.gif" alt="loading" srcset="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading.gif?size=small, https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading.gif?size=medium 1.5x, https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading.gif?size=large 2x" data-title="loading.gif" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/>&lt;/a>&lt;figcaption class="image-caption">loading&lt;/figcaption>
  &lt;/figure>&lt;/p>
 &lt;p>&lt;figure>&lt;a class="lightgallery" href="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-wheel.gif?size=large" data-thumbnail="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-wheel.gif?size=small" data-sub-html="&lt;h2>loading-wheel&lt;/h2>&lt;p>loading-wheel.gif&lt;/p>">&lt;img loading="lazy" src="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-wheel.gif" alt="loading-wheel" srcset="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-wheel.gif?size=small, https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-wheel.gif?size=medium 1.5x, https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-wheel.gif?size=large 2x" data-title="loading-wheel.gif" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/>&lt;/a>&lt;figcaption class="image-caption">loading-wheel&lt;/figcaption>
@@ -1975,8 +1962,7 @@ line 3 of code
  &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
  &lt;/a>
 &lt;/h2>&lt;blockquote>
-&lt;p>测试md 语法支持&lt;/p>
-&lt;/blockquote>
+&lt;p>测试md 语法支持&lt;/p>&lt;/blockquote>
 
  &lt;/div>
 &lt;/li>
@@ -2040,10 +2026,10 @@ line 3 of code
 
 
 &lt;li class="event" data-date='2022 05/01'>
- &lt;h2>Current position [2022/05/01 -> 2025/01/25] &lt;/h2>
+ &lt;h2>Current position [2022/05/01 -> 2025/02/08] &lt;/h2>
  
  &lt;div class="moment" style="color: #c41a16;text-align: right;position: absolute;top: 0;right: 0;padding: 5px;" >
- 2 years 8 months 
+ 2 years 9 months 
  &lt;/div>
  
  &lt;div>
@@ -2084,10 +2070,10 @@ line 3 of code
 
 
 &lt;li class="event" data-date='2020 01/02'>
- &lt;h2>Old position [2020/01/02 -> 2025/01/25] &lt;/h2>
+ &lt;h2>Old position [2020/01/02 -> 2025/02/08] &lt;/h2>
  
  &lt;div class="moment" style="color: #c41a16;text-align: right;position: absolute;top: 0;right: 0;padding: 5px;" >
- 5 years 
+ 5 years 1 month 
  &lt;/div>
  
  &lt;div>
@@ -2328,8 +2314,7 @@ a.portfolio-link {
  &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
  &lt;/a>
 &lt;/h2>&lt;blockquote>
-&lt;p>测试md 语法支持&lt;/p>
-&lt;/blockquote>
+&lt;p>测试md 语法支持&lt;/p>&lt;/blockquote>
 
  
  &lt;/div>
