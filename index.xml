@@ -1,4 +1,84 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>毕少侠</title><link>https://geekswg.js.cool/</link><description>博客：探索、发现、分享 By geekswg-[毕少侠]</description><generator>Hugo 0.143.1 &amp; FixIt v0.3.17-8b402129</generator><language>zh-CN</language><managingEditor>geekswg@qq.com (geekswg)</managingEditor><webMaster>geekswg@qq.com (geekswg)</webMaster><copyright>geekswg &amp; 毕少侠</copyright><lastBuildDate>Thu, 12 Dec 2024 13:01:20 +0800</lastBuildDate><atom:link href="https://geekswg.js.cool/index.xml" rel="self" type="application/rss+xml"/><item><title>Markdown基本语法</title><link>https://geekswg.js.cool/mydocs/md-basic/</link><pubDate>Sat, 07 Dec 2024 08:52:46 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/mydocs/md-basic/</guid><category domain="https://geekswg.js.cool/categories/repost/">repost</category><description>&lt;p>这篇文章提供了可以在 Hugo 的文章中使用的基本 Markdown 语法示例。&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>毕少侠</title><link>https://geekswg.js.cool/</link><description>博客：探索、发现、分享 By geekswg-[毕少侠]</description><generator>Hugo 0.145.0 &amp; FixIt v0.3.17-e2afa113</generator><language>zh-CN</language><managingEditor>geekswg@qq.com (geekswg)</managingEditor><webMaster>geekswg@qq.com (geekswg)</webMaster><copyright>geekswg &amp; 毕少侠</copyright><lastBuildDate>Sun, 06 Apr 2025 17:58:11 +0800</lastBuildDate><atom:link href="https://geekswg.js.cool/index.xml" rel="self" type="application/rss+xml"/><item><title>LX-Music洛雪音乐助手</title><link>https://geekswg.js.cool/posts/2025/share-lxmusic/</link><pubDate>Sun, 06 Apr 2025 16:45:38 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2025/share-lxmusic/</guid><category domain="https://geekswg.js.cool/categories/%E5%88%86%E4%BA%AB/">分享</category><description>&lt;h2 id="什么是-lx-music" class="heading-element">&lt;span>什么是 LX-Music？&lt;/span>
+ &lt;a href="#%e4%bb%80%e4%b9%88%e6%98%af-lx-music" class="heading-mark">
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
+ &lt;/a>
+&lt;/h2>&lt;p>LX-Music（洛雪音乐助手）是一款免费且开源的音乐查找工具，支持多平台使用。它可以帮助用户快速搜索和下载来自多个音乐平台的歌曲，提供高质量的音乐体验。&lt;/p>
+&lt;h3 id="主要功能" class="heading-element">&lt;span>主要功能&lt;/span>
+ &lt;a href="#%e4%b8%bb%e8%a6%81%e5%8a%9f%e8%83%bd" class="heading-mark">
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
+ &lt;/a>
+&lt;/h3>&lt;ul>
+&lt;li>&lt;strong>多平台搜索&lt;/strong>：支持多个音乐平台的歌曲搜索。&lt;/li>
+&lt;li>&lt;strong>高音质下载&lt;/strong>：提供多种音质选择，满足不同需求。&lt;/li>
+&lt;li>&lt;strong>简洁界面&lt;/strong>：用户界面简洁直观，易于操作。&lt;/li>
+&lt;li>&lt;strong>开源免费&lt;/strong>：完全免费，代码开源，安全可靠。&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h2 id="如何使用-lx-music" class="heading-element">&lt;span>如何使用 LX-Music？&lt;/span>
+ &lt;a href="#%e5%a6%82%e4%bd%95%e4%bd%bf%e7%94%a8-lx-music" class="heading-mark">
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
+ &lt;/a>
+&lt;/h2>&lt;ol>
+&lt;li>
+&lt;p>&lt;strong>下载与安装&lt;/strong>&lt;br>
+前往 &lt;a href="https://github.com/lyswhut/lx-music-desktop"target="_blank" rel="external nofollow noopener noreferrer">LX-Music 的 GitHub 仓库&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a> 下载适合您操作系统的安装包，并按照提示完成安装。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>搜索音乐&lt;/strong>&lt;br>
+打开软件后，在搜索框中输入歌曲名称、歌手或专辑名称，点击搜索按钮。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>播放与下载&lt;/strong>&lt;br>
+在搜索结果中选择您想要的歌曲，可以直接播放或点击下载按钮保存到本地。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>设置音质&lt;/strong>&lt;br>
+在设置中选择您偏好的音质选项，确保最佳的听觉体验。&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;hr>
+&lt;div class="alert alert-warning">&lt;p class="alert-title">&lt;svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">&lt;path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086.0l6.082 11.378A1.75 1.75.0 0114.082 15H1.918A1.75 1.75.0 01.375 12.425zm1.763.707a.25.25.0 00-.44.0L1.698 13.132a.25.25.0 00.22.368h12.164a.25.25.0 00.22-.368zm.53 3.996v2.5a.75.75.0 01-1.5.0v-2.5a.75.75.0 011.5.0zM9 11a1 1 0 11-2 0 1 1 0 012 0z"/>&lt;/svg>警告&lt;/p>&lt;p>请勿将下载的音乐用于商业用途，仅供个人学习和欣赏。
+使用过程中请遵守相关法律法规，尊重版权。&lt;/p>&lt;/div>&lt;h2 id="注意事项" class="heading-element">&lt;span>注意事项&lt;/span>
+ &lt;a href="#%e6%b3%a8%e6%84%8f%e4%ba%8b%e9%a1%b9" class="heading-mark">
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
+ &lt;/a>
+&lt;/h2>&lt;div class="alert alert-warning">&lt;p class="alert-title">&lt;svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">&lt;path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086.0l6.082 11.378A1.75 1.75.0 0114.082 15H1.918A1.75 1.75.0 01.375 12.425zm1.763.707a.25.25.0 00-.44.0L1.698 13.132a.25.25.0 00.22.368h12.164a.25.25.0 00.22-.368zm.53 3.996v2.5a.75.75.0 01-1.5.0v-2.5a.75.75.0 011.5.0zM9 11a1 1 0 11-2 0 1 1 0 012 0z"/>&lt;/svg>警告&lt;/p>&lt;p>LX Music只是一个空壳软件需要添加自定义音源才能正常的播放和下载音乐！&lt;/p>&lt;/div>&lt;h3 id="音源设置" class="heading-element">&lt;span>音源设置&lt;/span>
+ &lt;a href="#%e9%9f%b3%e6%ba%90%e8%ae%be%e7%bd%ae" class="heading-mark">
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
+ &lt;/a>
+&lt;/h3>&lt;div class="alert alert-tip">&lt;p class="alert-title">&lt;svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">&lt;path d="M8 1.5c-2.363.0-4 1.69-4 3.75.0.984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621 1.49a.75.75.0 01-1.484.211c-.04-.282-.163-.547-.37-.847a8.456 8.456.0 00-.542-.68c-.084-.1-.173-.205-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25 2.5 2.31 4.863.0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259-.095.115-.184.22-.268.319-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.751.751.0 01-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848.075-.088.147-.173.213-.253.561-.679.985-1.32.985-2.304.0-2.06-1.637-3.75-4-3.75zM5.75 12h4.5a.75.75.0 010 1.5h-4.5a.75.75.0 010-1.5zM6 15.25a.75.75.0 01.75-.75h2.5a.75.75.0 010 1.5h-2.5A.75.75.0 016 15.25z"/>&lt;/svg>提示&lt;/p>&lt;p>在软件&lt;code>设置&lt;/code>、&lt;code>基本设置&lt;/code>、&lt;code>自定义源&lt;/code>、&lt;code>自定义源管理&lt;/code>、然后选择&lt;code>在线导入&lt;/code> 或者 &lt;code>本地导入&lt;/code>两种方式导入你的自定义音源，&lt;/p>&lt;/div>&lt;h3 id="音源分享" class="heading-element">&lt;span>音源分享&lt;/span>
+ &lt;a href="#%e9%9f%b3%e6%ba%90%e5%88%86%e4%ba%ab" class="heading-mark">
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
+ &lt;/a>
+&lt;/h3>&lt;ol>
+&lt;li>Huibq_lxmusic源
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">https://fastly.jsdelivr.net/gh/Huibq/keep-alive/render_api.js&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;li>六音
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">https://ghproxy.net/https://raw.githubusercontent.com/pdone/lx-music-source/main/sixyin/latest.js&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;li>Flower
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">https://ghproxy.net/https://raw.githubusercontent.com/pdone/lx-music-source/main/flower/latest.js&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;/ol></description></item><item><title>Markdown基本语法</title><link>https://geekswg.js.cool/mydocs/md-basic/</link><pubDate>Sat, 07 Dec 2024 08:52:46 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/mydocs/md-basic/</guid><category domain="https://geekswg.js.cool/categories/repost/">repost</category><description>&lt;p>这篇文章提供了可以在 Hugo 的文章中使用的基本 Markdown 语法示例。&lt;/p>
 &lt;!-- markdownlint-disable-file -->
 &lt;div class="details admonition note open">
  &lt;div class="details-summary admonition-title">&lt;i class="icon fa-fw fa-solid fa-pencil-alt" aria-hidden="true">&lt;/i>注意&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true">&lt;/i>&lt;/div>
@@ -1070,7 +1150,7 @@ line 3 of code
 &lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">![&lt;span class="nt">Minion&lt;/span>](&lt;span class="na">https://octodex.github.com/images/minion.png&lt;/span>)&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>&lt;img loading="lazy" src="https://octodex.github.com/images/minion.png" alt="Minion" srcset="https://octodex.github.com/images/minion.png?size=small, https://octodex.github.com/images/minion.png?size=medium 1.5x, https://octodex.github.com/images/minion.png?size=large 2x" data-title="Minion" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/>&lt;/p>
+&lt;/div>&lt;p>&lt;img loading="lazy" src='https://octodex.github.com/images/minion.png' alt="Minion">&lt;/p>
 &lt;p>或者：&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -1079,7 +1159,7 @@ line 3 of code
 &lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">![&lt;span class="nt">Alt text&lt;/span>](&lt;span class="na">https://octodex.github.com/images/stormtroopocat.jpg &amp;#34;The Stormtroopocat&amp;#34;&lt;/span>)&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>&lt;figure>&lt;a class="lightgallery" href="https://octodex.github.com/images/stormtroopocat.jpg?size=large" data-thumbnail="https://octodex.github.com/images/stormtroopocat.jpg?size=small" data-sub-html="&lt;h2>Alt text&lt;/h2>&lt;p>The Stormtroopocat&lt;/p>">&lt;img loading="lazy" src="https://octodex.github.com/images/stormtroopocat.jpg" alt="Alt text" srcset="https://octodex.github.com/images/stormtroopocat.jpg?size=small, https://octodex.github.com/images/stormtroopocat.jpg?size=medium 1.5x, https://octodex.github.com/images/stormtroopocat.jpg?size=large 2x" data-title="The Stormtroopocat" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/>&lt;/a>&lt;figcaption class="image-caption">Alt text&lt;/figcaption>
+&lt;/div>&lt;p>&lt;figure>&lt;a class="lightgallery" href="https://octodex.github.com/images/stormtroopocat.jpg" title="The Stormtroopocat" data-thumbnail="https://octodex.github.com/images/stormtroopocat.jpg" data-sub-html="&lt;h2>Alt text&lt;/h2>&lt;p>The Stormtroopocat&lt;/p>">&lt;img loading="lazy" src='https://octodex.github.com/images/stormtroopocat.jpg' alt="Alt text">&lt;/a>&lt;figcaption class="image-caption">The Stormtroopocat&lt;/figcaption>
  &lt;/figure>&lt;/p>
 &lt;p>像链接一样，图片也具有引用式的语法：&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -1089,7 +1169,7 @@ line 3 of code
 &lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">![Alt text][id]&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>&lt;figure>&lt;a class="lightgallery" href="https://octodex.github.com/images/dojocat.jpg?size=large" data-thumbnail="https://octodex.github.com/images/dojocat.jpg?size=small" data-sub-html="&lt;h2>Alt text&lt;/h2>&lt;p>The Dojocat&lt;/p>">&lt;img loading="lazy" src="https://octodex.github.com/images/dojocat.jpg" alt="Alt text" srcset="https://octodex.github.com/images/dojocat.jpg?size=small, https://octodex.github.com/images/dojocat.jpg?size=medium 1.5x, https://octodex.github.com/images/dojocat.jpg?size=large 2x" data-title="The Dojocat" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/>&lt;/a>&lt;figcaption class="image-caption">Alt text&lt;/figcaption>
+&lt;/div>&lt;p>&lt;figure>&lt;a class="lightgallery" href="https://octodex.github.com/images/dojocat.jpg" title="The Dojocat" data-thumbnail="https://octodex.github.com/images/dojocat.jpg" data-sub-html="&lt;h2>Alt text&lt;/h2>&lt;p>The Dojocat&lt;/p>">&lt;img loading="lazy" src='https://octodex.github.com/images/dojocat.jpg' alt="Alt text">&lt;/a>&lt;figcaption class="image-caption">The Dojocat&lt;/figcaption>
  &lt;/figure>&lt;/p>
 &lt;p>稍后在文档中提供参考内容，用来定义 URL 的位置：&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -1132,7 +1212,7 @@ line 3 of code
  &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
  &lt;/a>
 &lt;/h3>&lt;p>&lt;code>Settings&lt;/code>、&lt;code>Build &amp;amp; Development Settings&lt;/code> 配置如下
-&lt;figure>&lt;a class="lightgallery" href="https://geekswg.js.cool/posts/2024/ai-summary/vercel-settings.webp?size=large" data-thumbnail="/posts/2024/ai-summary/vercel-settings.webp?size=small" data-sub-html="&lt;h2>vercel部署配置&lt;/h2>&lt;p>vercel部署配置&lt;/p>">&lt;img loading="lazy" src="https://geekswg.js.cool/posts/2024/ai-summary/vercel-settings.webp" alt="vercel部署配置" srcset="https://geekswg.js.cool/posts/2024/ai-summary/vercel-settings.webp?size=small, https://geekswg.js.cool/posts/2024/ai-summary/vercel-settings.webp?size=medium 1.5x, https://geekswg.js.cool/posts/2024/ai-summary/vercel-settings.webp?size=large 2x" data-title="vercel部署配置" style="--width: 1219px;--aspect-ratio: 1219 / 601;background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/>&lt;/a>&lt;figcaption class="image-caption">vercel部署配置&lt;/figcaption>
+&lt;figure>&lt;a class="lightgallery" href="https://geekswg.js.cool/posts/2024/ai-summary/vercel-settings.webp" title="vercel部署配置" data-thumbnail="/posts/2024/ai-summary/vercel-settings.webp" data-sub-html="&lt;h2>vercel部署配置&lt;/h2>&lt;p>vercel部署配置&lt;/p>">&lt;img loading="lazy" src='https://geekswg.js.cool/posts/2024/ai-summary/vercel-settings.webp' alt="vercel部署配置" height="601" width="1219">&lt;/a>&lt;figcaption class="image-caption">vercel部署配置&lt;/figcaption>
  &lt;/figure>&lt;/p>
 &lt;table>
  &lt;thead>
@@ -1219,7 +1299,7 @@ line 3 of code
  &lt;a href="#%e9%a2%84%e8%a7%88%e6%95%88%e6%9e%9c" class="heading-mark">
  &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
  &lt;/a>
-&lt;/h2>&lt;p>&lt;figure>&lt;a class="lightgallery" href="https://geekswg.js.cool/posts/2024/ai-summary/preview.webp?size=large" data-thumbnail="/posts/2024/ai-summary/preview.webp?size=small" data-sub-html="&lt;h2>Ai摘要预览&lt;/h2>&lt;p>Ai摘要预览&lt;/p>">&lt;img loading="lazy" src="https://geekswg.js.cool/posts/2024/ai-summary/preview.webp" alt="Ai摘要预览" srcset="https://geekswg.js.cool/posts/2024/ai-summary/preview.webp?size=small, https://geekswg.js.cool/posts/2024/ai-summary/preview.webp?size=medium 1.5x, https://geekswg.js.cool/posts/2024/ai-summary/preview.webp?size=large 2x" data-title="Ai摘要预览" style="--width: 1359px;--aspect-ratio: 1359 / 813;background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/>&lt;/a>&lt;figcaption class="image-caption">Ai摘要预览&lt;/figcaption>
+&lt;/h2>&lt;p>&lt;figure>&lt;a class="lightgallery" href="https://geekswg.js.cool/posts/2024/ai-summary/preview.webp" title="Ai摘要预览" data-thumbnail="/posts/2024/ai-summary/preview.webp" data-sub-html="&lt;h2>Ai摘要预览&lt;/h2>&lt;p>Ai摘要预览&lt;/p>">&lt;img loading="lazy" src='https://geekswg.js.cool/posts/2024/ai-summary/preview.webp' alt="Ai摘要预览" height="813" width="1359">&lt;/a>&lt;figcaption class="image-caption">Ai摘要预览&lt;/figcaption>
  &lt;/figure>&lt;/p>
 &lt;h2 id="参考文章" class="heading-element">&lt;span>参考文章&lt;/span>
  &lt;a href="#%e5%8f%82%e8%80%83%e6%96%87%e7%ab%a0" class="heading-mark">
@@ -1845,27 +1925,27 @@ line 3 of code
 &lt;/div></description></item><item><title>Loading Gif</title><link>https://geekswg.js.cool/posts/2023/loading-gif/</link><pubDate>Wed, 07 Jun 2023 19:54:12 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2023/loading-gif/</guid><category domain="https://geekswg.js.cool/categories/share/">share</category><description>&lt;img src="https://testingcf.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-6.gif" alt="featured image" referrerpolicy="no-referrer">&lt;p>loading.gif 透明加载动画&lt;/p>
 &lt;blockquote>
 &lt;p>大部分来源于网站 &lt;a href="https://www.bing.com/images/search?q=loading&amp;amp;qs=n&amp;amp;form=QBILPG&amp;amp;sp=-1&amp;amp;lq=0&amp;amp;pq=loading&amp;amp;sc=10-7&amp;amp;cvid=23A7D80EB520465F9CD6951D4825FF8F&amp;amp;ghsh=0&amp;amp;ghacc=0&amp;amp;first=1"target="_blank" rel="external nofollow noopener noreferrer">Bing&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a> 和 &lt;a href="https://icons8.com/preloaders/en/search/windows%2010"target="_blank" rel="external nofollow noopener noreferrer">icos8&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true">&lt;/i>&lt;/a> ,如有侵权，请联系删除&lt;/p>&lt;/blockquote>
-&lt;p>&lt;figure>&lt;a class="lightgallery" href="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading.gif?size=large" data-thumbnail="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading.gif?size=small" data-sub-html="&lt;h2>loading&lt;/h2>&lt;p>loading.gif&lt;/p>">&lt;img loading="lazy" src="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading.gif" alt="loading" srcset="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading.gif?size=small, https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading.gif?size=medium 1.5x, https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading.gif?size=large 2x" data-title="loading.gif" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/>&lt;/a>&lt;figcaption class="image-caption">loading&lt;/figcaption>
+&lt;p>&lt;figure>&lt;a class="lightgallery" href="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading.gif" title="loading.gif" data-thumbnail="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading.gif" data-sub-html="&lt;h2>loading&lt;/h2>&lt;p>loading.gif&lt;/p>">&lt;img loading="lazy" src='https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading.gif' alt="loading">&lt;/a>&lt;figcaption class="image-caption">loading.gif&lt;/figcaption>
  &lt;/figure>&lt;/p>
-&lt;p>&lt;figure>&lt;a class="lightgallery" href="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-wheel.gif?size=large" data-thumbnail="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-wheel.gif?size=small" data-sub-html="&lt;h2>loading-wheel&lt;/h2>&lt;p>loading-wheel.gif&lt;/p>">&lt;img loading="lazy" src="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-wheel.gif" alt="loading-wheel" srcset="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-wheel.gif?size=small, https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-wheel.gif?size=medium 1.5x, https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-wheel.gif?size=large 2x" data-title="loading-wheel.gif" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/>&lt;/a>&lt;figcaption class="image-caption">loading-wheel&lt;/figcaption>
+&lt;p>&lt;figure>&lt;a class="lightgallery" href="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-wheel.gif" title="loading-wheel.gif" data-thumbnail="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-wheel.gif" data-sub-html="&lt;h2>loading-wheel&lt;/h2>&lt;p>loading-wheel.gif&lt;/p>">&lt;img loading="lazy" src='https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-wheel.gif' alt="loading-wheel">&lt;/a>&lt;figcaption class="image-caption">loading-wheel.gif&lt;/figcaption>
  &lt;/figure>
-&lt;figure>&lt;a class="lightgallery" href="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-bilibili.gif?size=large" data-thumbnail="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-bilibili.gif?size=small" data-sub-html="&lt;h2>loading-bilibili&lt;/h2>&lt;p>loading-bilibili.gif&lt;/p>">&lt;img loading="lazy" src="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-bilibili.gif" alt="loading-bilibili" srcset="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-bilibili.gif?size=small, https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-bilibili.gif?size=medium 1.5x, https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-bilibili.gif?size=large 2x" data-title="loading-bilibili.gif" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/>&lt;/a>&lt;figcaption class="image-caption">loading-bilibili&lt;/figcaption>
+&lt;figure>&lt;a class="lightgallery" href="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-bilibili.gif" title="loading-bilibili.gif" data-thumbnail="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-bilibili.gif" data-sub-html="&lt;h2>loading-bilibili&lt;/h2>&lt;p>loading-bilibili.gif&lt;/p>">&lt;img loading="lazy" src='https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-bilibili.gif' alt="loading-bilibili">&lt;/a>&lt;figcaption class="image-caption">loading-bilibili.gif&lt;/figcaption>
  &lt;/figure>
-&lt;figure>&lt;a class="lightgallery" href="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-9.gif?size=large" data-thumbnail="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-9.gif?size=small" data-sub-html="&lt;h2>loading-9&lt;/h2>&lt;p>loading-.gif&lt;/p>">&lt;img loading="lazy" src="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-9.gif" alt="loading-9" srcset="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-9.gif?size=small, https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-9.gif?size=medium 1.5x, https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-9.gif?size=large 2x" data-title="loading-.gif" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/>&lt;/a>&lt;figcaption class="image-caption">loading-9&lt;/figcaption>
+&lt;figure>&lt;a class="lightgallery" href="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-9.gif" title="loading-.gif" data-thumbnail="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-9.gif" data-sub-html="&lt;h2>loading-9&lt;/h2>&lt;p>loading-.gif&lt;/p>">&lt;img loading="lazy" src='https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-9.gif' alt="loading-9">&lt;/a>&lt;figcaption class="image-caption">loading-.gif&lt;/figcaption>
  &lt;/figure>
-&lt;figure>&lt;a class="lightgallery" href="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-8.gif?size=large" data-thumbnail="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-8.gif?size=small" data-sub-html="&lt;h2>loading-8&lt;/h2>&lt;p>loading-.gif&lt;/p>">&lt;img loading="lazy" src="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-8.gif" alt="loading-8" srcset="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-8.gif?size=small, https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-8.gif?size=medium 1.5x, https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-8.gif?size=large 2x" data-title="loading-.gif" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/>&lt;/a>&lt;figcaption class="image-caption">loading-8&lt;/figcaption>
+&lt;figure>&lt;a class="lightgallery" href="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-8.gif" title="loading-.gif" data-thumbnail="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-8.gif" data-sub-html="&lt;h2>loading-8&lt;/h2>&lt;p>loading-.gif&lt;/p>">&lt;img loading="lazy" src='https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-8.gif' alt="loading-8">&lt;/a>&lt;figcaption class="image-caption">loading-.gif&lt;/figcaption>
  &lt;/figure>
-&lt;figure>&lt;a class="lightgallery" href="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-7.gif?size=large" data-thumbnail="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-7.gif?size=small" data-sub-html="&lt;h2>loading-7&lt;/h2>&lt;p>loading-.gif&lt;/p>">&lt;img loading="lazy" src="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-7.gif" alt="loading-7" srcset="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-7.gif?size=small, https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-7.gif?size=medium 1.5x, https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-7.gif?size=large 2x" data-title="loading-.gif" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/>&lt;/a>&lt;figcaption class="image-caption">loading-7&lt;/figcaption>
+&lt;figure>&lt;a class="lightgallery" href="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-7.gif" title="loading-.gif" data-thumbnail="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-7.gif" data-sub-html="&lt;h2>loading-7&lt;/h2>&lt;p>loading-.gif&lt;/p>">&lt;img loading="lazy" src='https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-7.gif' alt="loading-7">&lt;/a>&lt;figcaption class="image-caption">loading-.gif&lt;/figcaption>
  &lt;/figure>
-&lt;figure>&lt;a class="lightgallery" href="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-6.gif?size=large" data-thumbnail="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-6.gif?size=small" data-sub-html="&lt;h2>loading-6&lt;/h2>&lt;p>loading-.gif&lt;/p>">&lt;img loading="lazy" src="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-6.gif" alt="loading-6" srcset="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-6.gif?size=small, https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-6.gif?size=medium 1.5x, https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-6.gif?size=large 2x" data-title="loading-.gif" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/>&lt;/a>&lt;figcaption class="image-caption">loading-6&lt;/figcaption>
+&lt;figure>&lt;a class="lightgallery" href="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-6.gif" title="loading-.gif" data-thumbnail="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-6.gif" data-sub-html="&lt;h2>loading-6&lt;/h2>&lt;p>loading-.gif&lt;/p>">&lt;img loading="lazy" src='https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-6.gif' alt="loading-6">&lt;/a>&lt;figcaption class="image-caption">loading-.gif&lt;/figcaption>
  &lt;/figure>
-&lt;figure>&lt;a class="lightgallery" href="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-5.gif?size=large" data-thumbnail="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-5.gif?size=small" data-sub-html="&lt;h2>loading-5&lt;/h2>&lt;p>loading-.gif&lt;/p>">&lt;img loading="lazy" src="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-5.gif" alt="loading-5" srcset="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-5.gif?size=small, https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-5.gif?size=medium 1.5x, https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-5.gif?size=large 2x" data-title="loading-.gif" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/>&lt;/a>&lt;figcaption class="image-caption">loading-5&lt;/figcaption>
+&lt;figure>&lt;a class="lightgallery" href="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-5.gif" title="loading-.gif" data-thumbnail="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-5.gif" data-sub-html="&lt;h2>loading-5&lt;/h2>&lt;p>loading-.gif&lt;/p>">&lt;img loading="lazy" src='https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-5.gif' alt="loading-5">&lt;/a>&lt;figcaption class="image-caption">loading-.gif&lt;/figcaption>
  &lt;/figure>
-&lt;figure>&lt;a class="lightgallery" href="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-4.gif?size=large" data-thumbnail="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-4.gif?size=small" data-sub-html="&lt;h2>loading-4&lt;/h2>&lt;p>loading-.gif&lt;/p>">&lt;img loading="lazy" src="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-4.gif" alt="loading-4" srcset="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-4.gif?size=small, https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-4.gif?size=medium 1.5x, https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-4.gif?size=large 2x" data-title="loading-.gif" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/>&lt;/a>&lt;figcaption class="image-caption">loading-4&lt;/figcaption>
+&lt;figure>&lt;a class="lightgallery" href="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-4.gif" title="loading-.gif" data-thumbnail="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-4.gif" data-sub-html="&lt;h2>loading-4&lt;/h2>&lt;p>loading-.gif&lt;/p>">&lt;img loading="lazy" src='https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-4.gif' alt="loading-4">&lt;/a>&lt;figcaption class="image-caption">loading-.gif&lt;/figcaption>
  &lt;/figure>
-&lt;figure>&lt;a class="lightgallery" href="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-3.gif?size=large" data-thumbnail="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-3.gif?size=small" data-sub-html="&lt;h2>loading-3&lt;/h2>&lt;p>loading-.gif&lt;/p>">&lt;img loading="lazy" src="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-3.gif" alt="loading-3" srcset="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-3.gif?size=small, https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-3.gif?size=medium 1.5x, https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-3.gif?size=large 2x" data-title="loading-.gif" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/>&lt;/a>&lt;figcaption class="image-caption">loading-3&lt;/figcaption>
+&lt;figure>&lt;a class="lightgallery" href="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-3.gif" title="loading-.gif" data-thumbnail="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-3.gif" data-sub-html="&lt;h2>loading-3&lt;/h2>&lt;p>loading-.gif&lt;/p>">&lt;img loading="lazy" src='https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-3.gif' alt="loading-3">&lt;/a>&lt;figcaption class="image-caption">loading-.gif&lt;/figcaption>
  &lt;/figure>
-&lt;figure>&lt;a class="lightgallery" href="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-2.gif?size=large" data-thumbnail="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-2.gif?size=small" data-sub-html="&lt;h2>loading-2&lt;/h2>&lt;p>loading-.gif&lt;/p>">&lt;img loading="lazy" src="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-2.gif" alt="loading-2" srcset="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-2.gif?size=small, https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-2.gif?size=medium 1.5x, https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-2.gif?size=large 2x" data-title="loading-.gif" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/>&lt;/a>&lt;figcaption class="image-caption">loading-2&lt;/figcaption>
+&lt;figure>&lt;a class="lightgallery" href="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-2.gif" title="loading-.gif" data-thumbnail="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-2.gif" data-sub-html="&lt;h2>loading-2&lt;/h2>&lt;p>loading-.gif&lt;/p>">&lt;img loading="lazy" src='https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-2.gif' alt="loading-2">&lt;/a>&lt;figcaption class="image-caption">loading-.gif&lt;/figcaption>
  &lt;/figure>&lt;/p></description></item><item><title>毕少侠所有站点</title><link>https://geekswg.js.cool/posts/2023/idnex/</link><pubDate>Fri, 02 Jun 2023 20:20:39 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2023/idnex/</guid><category domain="https://geekswg.js.cool/categories/geekswg/">geekswg</category><description>&lt;img src="https://geekswg.js.cool/images/posts/featured-image.jpg" alt="featured image" referrerpolicy="no-referrer">&lt;h2 id="blog" class="heading-element">&lt;span>Blog&lt;/span>
  &lt;a href="#blog" class="heading-mark">
  &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
@@ -2026,10 +2106,10 @@ line 3 of code
 
 
 &lt;li class="event" data-date='2022 05/01'>
- &lt;h2>Current position [2022/05/01 -> 2025/02/08] &lt;/h2>
+ &lt;h2>Current position [2022/05/01 -> 2025/04/06] &lt;/h2>
  
  &lt;div class="moment" style="color: #c41a16;text-align: right;position: absolute;top: 0;right: 0;padding: 5px;" >
- 2 years 9 months 
+ 2 years 11 months 
  &lt;/div>
  
  &lt;div>
@@ -2070,10 +2150,10 @@ line 3 of code
 
 
 &lt;li class="event" data-date='2020 01/02'>
- &lt;h2>Old position [2020/01/02 -> 2025/02/08] &lt;/h2>
+ &lt;h2>Old position [2020/01/02 -> 2025/04/06] &lt;/h2>
  
  &lt;div class="moment" style="color: #c41a16;text-align: right;position: absolute;top: 0;right: 0;padding: 5px;" >
- 5 years 1 month 
+ 5 years 3 months 
  &lt;/div>
  
  &lt;div>
@@ -2262,181 +2342,5 @@ a.portfolio-link {
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">I worked here 1
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{% /tl-event2 %}}
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">{{&lt;span class="p">&amp;lt;&lt;/span> &lt;span class="p">/&lt;/span>&lt;span class="nt">timeline2&lt;/span> &lt;span class="p">&amp;gt;&lt;/span>}}&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div></description></item><item><title>Timeline</title><link>https://geekswg.js.cool/posts/2023/timeline/</link><pubDate>Tue, 30 May 2023 18:14:48 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2023/timeline/</guid><category domain="https://geekswg.js.cool/categories/demo/">Demo</category><description>&lt;img src="https://geekswg.js.cool/images/posts/featured-image-preview.jpg" alt="featured image" referrerpolicy="no-referrer">&lt;p>&lt;div class="details admonition quote open">
- &lt;div class="details-summary admonition-title">&lt;i class="icon fa-fw fa-solid fa-quote-right" aria-hidden="true">&lt;/i>quote&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true">&lt;/i>&lt;/div>
- &lt;div class="details-content">
- &lt;div class="admonition-content">note abstract info tip success question warning failure danger bug example quote&lt;/div>
- &lt;/div>
-&lt;/div>
-这里使用MD语法编写你的文章&lt;/p>
-
-&lt;link href="//unpkg.com/layui@2.9.3/dist/css/layui.css" rel="stylesheet">
-
-&lt;div class="layui-timeline">
-
- 
-
-
-
- 
-
-
-
- 
- 
- 
- 
- 
- 
- 
- 
-
- 
- 
- 
- 
-
-
-
-
- 
-
-
-
-&lt;div class="layui-timeline-item">
- &lt;i class="layui-icon layui-timeline-axis">&lt;/i>
- &lt;div class="layui-timeline-content layui-text">
- &lt;h3 class="layui-timeline-title">标题&lt;/h3>
- 
- &lt;h2 id="你好" class="heading-element">&lt;span>你好&lt;/span>
- &lt;a href="#%e4%bd%a0%e5%a5%bd" class="heading-mark">
- &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
- &lt;/a>
-&lt;/h2>&lt;blockquote>
-&lt;p>测试md 语法支持&lt;/p>&lt;/blockquote>
-
- 
- &lt;/div>
-&lt;/div>
-
-
-
- 
-
-
-
-
-
- 
- 
- 
- 
- 
- 
- 
- 
-
- 
- 
- 
- 
-
-
-
-
- 
-
-
-
-&lt;div class="layui-timeline-item">
- &lt;i class="layui-icon layui-timeline-axis">&lt;/i>
- &lt;div class="layui-timeline-content layui-text">
- &lt;h3 class="layui-timeline-title">Current position&lt;/h3>
- 
- &lt;p>I&amp;rsquo;m working here 2&lt;/p>
-
- 
- &lt;/div>
-&lt;/div>
-
-
-
- 
-
-
-
-
-
- 
- 
- 
- 
- 
- 
- 
- 
-
- 
- 
- 
- 
-
-
-
-
- 
-
-
-
-&lt;div class="layui-timeline-item">
- &lt;i class="layui-icon layui-timeline-axis">&lt;/i>
- &lt;div class="layui-timeline-content layui-text">
- &lt;h3 class="layui-timeline-title">Old position&lt;/h3>
- 
- &lt;p>I worked here 1&lt;/p>
-
- 
- &lt;/div>
-&lt;/div>
-
-
-
-&lt;/div>
-
-&lt;h2 id="使用demo-timeline" class="heading-element">&lt;span>使用demo-timeline&lt;/span>
- &lt;a href="#%e4%bd%bf%e7%94%a8demo-timeline" class="heading-mark">
- &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
- &lt;/a>
-&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
-&lt;/span>&lt;span class="lnt"> 2
-&lt;/span>&lt;span class="lnt"> 3
-&lt;/span>&lt;span class="lnt"> 4
-&lt;/span>&lt;span class="lnt"> 5
-&lt;/span>&lt;span class="lnt"> 6
-&lt;/span>&lt;span class="lnt"> 7
-&lt;/span>&lt;span class="lnt"> 8
-&lt;/span>&lt;span class="lnt"> 9
-&lt;/span>&lt;span class="lnt">10
-&lt;/span>&lt;span class="lnt">11
-&lt;/span>&lt;span class="lnt">12
-&lt;/span>&lt;span class="lnt">13
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">{{&amp;lt; timeline &amp;gt;}}
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">{{% tl-event title=&amp;#34;标题&amp;#34; from=&amp;#34;2023-05-21&amp;#34; to=&amp;#34;2023-05-22&amp;#34; %}}
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">## 你好
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;gt; 测试md 语法支持
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{% /tl-event %}}
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{% tl-event title=&amp;#34;Current position&amp;#34; to=&amp;#34;2023-02-01&amp;#34; from=&amp;#34;2022-05-01&amp;#34; %}}
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">I&amp;#39;m working here 2
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{% /tl-event %}}
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">I worked here 1
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{% /tl-event %}}
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">{{&amp;lt; /timeline &amp;gt;}}&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item></channel></rss>
