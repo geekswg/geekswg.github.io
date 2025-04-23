@@ -1,15 +1,15 @@
 # 我的第一个域名
 
-&gt; 终于买了我的人生中第一个域名。 [geekswg.top](https://geekswg.top/)
-&gt; 用于个人博客使用，花费 $1.88美元，支付宝支付，折合人民币 ￥13.01
-&lt;!--more--&gt;
+> 终于买了我的人生中第一个域名。 [geekswg.top](https://geekswg.top/)
+> 用于个人博客使用，花费 $1.88美元，支付宝支付，折合人民币 ￥13.01
+<!--more-->
 
 前端时间苦于，github自带的[Github Pages](https://geekswg.github.io/) 提供二级域名，经常访问不了，而且速度比较慢。就下决心买了个域名。
 
 ## 域名购买
 
 域名购买商 ：[Namesilo](https://www.namesilo.com/)
-&gt; Bing搜索了好长时间，选择他的原因。
+> Bing搜索了好长时间，选择他的原因。
 
 1. 便宜，相对稳定靠谱。
 2. 国外域名，不用备案。
@@ -41,7 +41,7 @@ Namesilo供应商可支持50个子域名。
 [hexo.geekswg.top](https://hexo.geekswg.top/)
 [blog.geekswg.top](https://blog.geekswg.top/)
 
-&gt; 注意事项
+> 注意事项
 使用 `CloudFlare` 导致网站「重定向的次数过多」解决方案
 
 在 CloudFlare 的 SSL/TLS 菜单里将「SSL/TLS 加密模式」设置为完全（Strict）即可。

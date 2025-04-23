@@ -1,11 +1,11 @@
 # Electron是什么？
 
-{{&lt; admonition quote &#34;申明&#34; &gt;}}
+{{< admonition quote "申明" >}}
 这一片关于ChatGPT的文章，由AI工具Cursor写作
 作者: [Cursor](https://www.cursor.so/)
-{{&lt; /admonition &gt;}}
-&lt;!--more--&gt;
-&gt; `Ctrl &#43; K`: 使用md写一篇管理electron的博文，并且告诉我如何学习他。
+{{< /admonition >}}
+<!--more-->
+> `Ctrl + K`: 使用md写一篇管理electron的博文，并且告诉我如何学习他。
 
 ## 管理Electron
 

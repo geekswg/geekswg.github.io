@@ -4,7 +4,7 @@
 
     我的第一个Hugo博客。
 
-&gt; hello Hugo
+> hello Hugo
 
 [我的博客发布地址](https://geekswg.github.io/)
 
@@ -18,7 +18,7 @@
 ## 语法
 
 markdown 语法
-&lt;!--more--&gt;
+<!--more-->
 
 ---
 

@@ -1,35 +1,35 @@
 # New Bing 国内正常访问方法
 
-{{&lt; admonition quote &#34;quote&#34; true &gt;}}
+{{< admonition quote "quote" true >}}
 记录国内正常网络环境直接访问New Bing的方法。
 之前的插件方法已经失效
 截止目前以下方法可正常访问，使用 [SwitchHosts](https://github.com/oldj/SwitchHosts) 插件
 note abstract info tip success question warning failure danger bug example quote
-{{&lt; /admonition &gt;}}
+{{< /admonition >}}
 
 ## 前言
 最近百度文心一言发布了，还在内测申请，[申请地址](https://yiyan.baidu.com/welcome),不知道个人需要多长时间可以通过申请。
 最近的AI搜索引擎比较火，我之前申请的new bing体验了，还是比较厉害的，现在又升级了，对话限制提高到了15次对了。不过国内的网络不能直接访问bing.com/new,这一点比较难受，今天在晚上看到一个工具可以解决，国内直接访问new bing的方法。
-{{&lt; admonition tip &gt;}}
+{{< admonition tip >}}
 前提你已经通过new bing 的waitlist，不然你还是用不上new bing哟！
-{{&lt; /admonition &gt;}}
-&lt;!--more--&gt;
+{{< /admonition >}}
+<!--more-->
 ## 方法
 
-&gt; 使用 [SwitchHosts](https://github.com/oldj/SwitchHosts)
+> 使用 [SwitchHosts](https://github.com/oldj/SwitchHosts)
 SwitchHosts 是一个管理、切换多个 hosts 方案的工具。 它是一个免费开源软件，支持 Windows、Mac、Linux 三大桌面操作系统。
 * 快速切换 Hosts 方案
 * Hosts 语法高亮
 * 支持从网络加载远程 Hosts 配置
 * 可从系统菜单栏图标快速切换 Hosts
 
-{{&lt; admonition info&gt;}}
+{{< admonition info>}}
 下载后 注意使用 **管理员身份运行**
 新增-本地-确定，然后在右边输入以下配置hosts方案
 操作如下图
-{{&lt;/ admonition &gt;}}
+{{</ admonition >}}
 
-![配置](230318-switchhosts.png &#34;配置&#34;)
+![配置](230318-switchhosts.png "配置")
 
 
 ```hosts
@@ -55,7 +55,7 @@ SwitchHosts 是一个管理、切换多个 hosts 方案的工具。 它是一个
 接下来就可以正常在浏览器输入 https://www.bing.com/new
 就能愉快的和new bing玩耍了。
 
-![new bing](230318164630-new-bing.png &#34;new bing chat&#34;)
+![new bing](230318164630-new-bing.png "new bing chat")
 
 
 ---

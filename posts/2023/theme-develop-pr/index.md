@@ -1,11 +1,11 @@
 # Fixit-Theme修改和PR过程
 
-{{&lt; admonition &gt;}}
+{{< admonition >}}
 记录一次修改fixit主题代码，并pr的过程
 note abstract info tip success question warning failure danger bug example quote
-{{&lt; /admonition &gt;}}
+{{< /admonition >}}
 
-&lt;!--more--&gt;
+<!--more-->
 
 ## fork项目
 
@@ -22,7 +22,7 @@ fork源项目到自己github仓库。
 ## 编译运行 
 
 在主题下根目录运行 `npm run babel`
-&gt; 前提是要安装 node.js 环境
+> 前提是要安装 node.js 环境
 
 ## 测试
 

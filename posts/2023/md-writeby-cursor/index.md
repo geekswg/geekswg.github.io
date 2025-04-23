@@ -1,10 +1,10 @@
 # 关于ChatGPT
 
-{{&lt; admonition quote &#34;申明&#34; &gt;}}
+{{< admonition quote "申明" >}}
 这一片关于ChatGPT的文章，由AI工具Cursor写作
 作者: [Cursor](https://www.cursor.so/)
-{{&lt; /admonition &gt;}}
-&lt;!--more--&gt;
+{{< /admonition >}}
+<!--more-->
 
 ## ChatGPT
 

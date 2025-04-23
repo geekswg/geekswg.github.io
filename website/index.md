@@ -2,9 +2,9 @@
 
 
 
-&lt;!-- When you set data `friends.yml` in `yourProject/data/` directory, it will be automatically loaded here. --&gt;
+<!-- When you set data `friends.yml` in `yourProject/data/` directory, it will be automatically loaded here. -->
 ---
-&lt;!-- You can define additional content below for this page. --&gt;
+<!-- You can define additional content below for this page. -->
 ## 示例信息
 
 ```yaml
@@ -16,13 +16,13 @@
 
 ## Friendly Reminder
 
-{{&lt; admonition info &#34;Notice&#34; true &gt;}}
+{{< admonition info "Notice" true >}}
 1. If you want to exchange link, please leave a comment in the above format. (personal non-commercial blogs / websites only)
 2. :(fa-solid fa-exclamation-triangle): Website failure, stop maintenance and improper content may be unlinked!
-3. Those websites that do not respect other people&#39;s labor achievements, reprint without source, or malicious acts, please do not come to exchange.
-{{&lt; /admonition &gt;}}
+3. Those websites that do not respect other people's labor achievements, reprint without source, or malicious acts, please do not come to exchange.
+{{< /admonition >}}
 
-&lt;style&gt;
+<style>
   .preview-link {
     position: relative;
     text-decoration: none;
@@ -44,34 +44,34 @@
     width: 100%;
     height: 100%;
 }
-&lt;/style&gt;
-&lt;script&gt;
-  document.addEventListener(&#34;DOMContentLoaded&#34;, function () {
-    const previewBox = document.getElementById(&#34;previewBox&#34;);
-    const previewImage = document.getElementById(&#34;previewImage&#34;);
+</style>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const previewBox = document.getElementById("previewBox");
+    const previewImage = document.getElementById("previewImage");
 
-    document.querySelectorAll(&#34;.preview-link&#34;).forEach(link =&gt; {
-        link.addEventListener(&#34;mouseenter&#34;, (e) =&gt; {
-            const imageSrc = link.getAttribute(&#34;data-preview&#34;);
+    document.querySelectorAll(".preview-link").forEach(link => {
+        link.addEventListener("mouseenter", (e) => {
+            const imageSrc = link.getAttribute("data-preview");
             previewImage.src = imageSrc;
-            previewBox.style.display = &#34;block&#34;;
+            previewBox.style.display = "block";
         });
 
-        link.addEventListener(&#34;mousemove&#34;, (e) =&gt; {
+        link.addEventListener("mousemove", (e) => {
             previewBox.style.top = `${e.pageY-150}px`;
             previewBox.style.left = `${e.pageX-150}px`;
         });
 
-        link.addEventListener(&#34;mouseleave&#34;, () =&gt; {
-            previewBox.style.display = &#34;none&#34;;
+        link.addEventListener("mouseleave", () => {
+            previewBox.style.display = "none";
         });
     });
 });
-&lt;/script&gt;
+</script>
 
 
 ---
 
-> 作者:   
+> 作者: <no value>  
 > URL: https://geekswg.js.cool/website/  
 

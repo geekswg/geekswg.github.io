@@ -1,10 +1,10 @@
 # 关于Docker
 
-&gt; 这一片关于Docker的文章，由AI工具Cursor写作
+> 这一片关于Docker的文章，由AI工具Cursor写作
 作者: [Cursor](https://www.cursor.so/)
-`Ctrl &#43; K`: 使用md写一篇1万字的关于docker的博文
+`Ctrl + K`: 使用md写一篇1万字的关于docker的博文
 
-&lt;!--more--&gt;
+<!--more-->
 
 # Docker: 从入门到精通
 
@@ -41,7 +41,7 @@ $ sudo apt-get install apt-transport-https ca-certificates curl gnupg lsb-releas
 然后，添加 Docker 的 GPG 密钥：
 
 ```bash
-$ curl -fsSL https://download.docker.com$ sudo apt-key add -$ sudo add-apt-repository &#34;deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable&#34;
+$ curl -fsSL https://download.docker.com$ sudo apt-key add -$ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
 $ sudo apt-get update
 ```
 

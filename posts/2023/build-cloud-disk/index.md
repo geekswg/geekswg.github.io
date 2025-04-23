@@ -1,14 +1,14 @@
 # Build Cloud Disk - CloudReve
 
-{{&lt; admonition &gt;}}
+{{< admonition >}}
 今天介绍一下非常好用的私有云网盘系统。
 以 跨平|的方式组织你的文件。Cloudreve 可助你即刻构建出兼备自用或公用的网盘服务，通过多种存储策略的支持、虚拟文件系统等特性实现灵活的文件管理体验。
-{{&lt; /admonition &gt;}}
+{{< /admonition >}}
 
-&lt;!--more--&gt;
+<!--more-->
 [CloudReve官网地址](https://cloudreve.org/)
 
-现在的网盘吧，动不动就限速，内容还得需要审核，NAS把又太笨重了，自己搭一个私有云网盘，所有的权限都在自己手中放心，要是想其他人也可能访问，一个公网ip&#43;【自定义域名】就ok了。
+现在的网盘吧，动不动就限速，内容还得需要审核，NAS把又太笨重了，自己搭一个私有云网盘，所有的权限都在自己手中放心，要是想其他人也可能访问，一个公网ip+【自定义域名】就ok了。
 Cloudreve 可以让您快速搭建起公私兼备的网盘系统。Cloudreve 在底层支持不同的云存储平台，用户在实际使用时无须关心物理存储方式。你可以使用 Cloudreve 搭建个人用网盘、文件分享系统，亦或是针对大小团体的公有云系统。
 
 ## 为什么推荐CloudReve
@@ -20,7 +20,7 @@ Cloudreve 可以让您快速搭建起公私兼备的网盘系统。Cloudreve 在
 
 ## 快速开始
 
-&gt; 本来想写个教程的，但是把官网写的太好，太详细。[官方教程](https://docs.cloudreve.org/getting-started/install)
+> 本来想写个教程的，但是把官网写的太好，太详细。[官方教程](https://docs.cloudreve.org/getting-started/install)
 
 记录点注意事项：
 
@@ -30,7 +30,7 @@ Cloudreve 可以让您快速搭建起公私兼备的网盘系统。Cloudreve 在
 
 ## 遇到的问题
 
-&gt; 文档预览，内网预览 docs，无法使用
+> 文档预览，内网预览 docs，无法使用
 
 解决方案：
 1. 使用 [kkFileView](https://kkview.cn/) ,文档预览来替换。

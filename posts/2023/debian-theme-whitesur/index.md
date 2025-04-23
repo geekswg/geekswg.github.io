@@ -1,10 +1,10 @@
 # Debian Theme Whitesur
 
-{{&lt; admonition quote &#34;quote&#34; true &gt;}}
+{{< admonition quote "quote" true >}}
 通过安装主题，让你的linux看起来非常炫酷。
-{{&lt; /admonition &gt;}}
+{{< /admonition >}}
 
-&lt;!--more--&gt;
+<!--more-->
 
 ## whiteSur 主题
 
@@ -12,7 +12,7 @@
 
 ### 预览效果
 
-![whiteSur主题](230316181427-debian-theme-whiteSur.png &#34;whiteSur主题&#34;)
+![whiteSur主题](230316181427-debian-theme-whiteSur.png "whiteSur主题")
 
 ## 安装主题
 
@@ -25,7 +25,7 @@
 下载的时候下载：https://github.com/vinceliuice/WhiteSur-icon-theme/archive/refs/tags/2022-08-30.tar.gz
 安装方法，解压后 `./install`，非常简单。
 
-![whiteSur图标](debian-theme-whiteSur-icons.png &#34;whiteSur图标&#34;)
+![whiteSur图标](debian-theme-whiteSur-icons.png "whiteSur图标")
 
 ## 安装plank dock栏
 
@@ -34,15 +34,15 @@ plank的安装非常简单：
 ```bash
 sudo apt install plank
 ```
-&gt; plank主题地址
+> plank主题地址
 地址1：https://www.gnome-look.org/p/1399398/
 github地址：[下载地址](https://github.com/x64Bits/plank-themes)
-&gt; 使用方法：
+> 使用方法：
 解压后，在终端打开，复制主题文件夹到plank主题目录。
 ```bash
-cp &#39;Big Sur Dark&#39;/ -r ~/.local/share/plank/themes
+cp 'Big Sur Dark'/ -r ~/.local/share/plank/themes
 ```
-启动plank:  `plank &amp;`
+启动plank:  `plank &`
 
 ## linux添加自启动
 为了每次启动能够正常使用plank,将plank添加到 linux自启动程序中。
@@ -73,8 +73,8 @@ sudo gedite /etc/init.d/my-starter.sh
     # Description: Leanote start
     ### END INIT INFO
     
-    #开机启动 plank &amp;
-    nohup plank &amp;
+    #开机启动 plank &
+    nohup plank &
 
     exit 0
 ```

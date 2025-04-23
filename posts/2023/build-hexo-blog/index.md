@@ -9,7 +9,7 @@
 4. 初始化Hexo
 5. 选择主题
 6. 发布文章
-&lt;!--more--&gt;
+<!--more-->
 
 ## 前置环境
 
@@ -19,10 +19,10 @@
 
 ## Hexo安装与配置
 
-1. 初始化站点 `hexo init &lt;folder&gt;`
+1. 初始化站点 `hexo init <folder>`
 2. 进入个目录 `cd folder`
-3. 新建文章 `hexo new &lt;title&gt;`
-4. 启动Hexo站点 `hexo clean &amp;&amp; hexo g &amp;&amp; hexo s`
+3. 新建文章 `hexo new <title>`
+4. 启动Hexo站点 `hexo clean && hexo g && hexo s`
 
 ### 上传到github
 
@@ -30,7 +30,7 @@
 
 [hexo博客地址](https://hexo.geekswg.top/)
 
-&gt; 使用 Hexo主题  [hexo-theme-anzhiyu](https://github.com/fixit-theme/hexo-theme-anzhiyu.git)
+> 使用 Hexo主题  [hexo-theme-anzhiyu](https://github.com/fixit-theme/hexo-theme-anzhiyu.git)
 文档地址：https://anzhiy.cn/tags/AnZhiYu/
 
 配置地址：[传送地址](https://github.com/gavinblog/blog-anzhiyu/blob/master/_config.anzhiyu.yml)
@@ -52,7 +52,7 @@ env:
 
 jobs:
   blog-cicd:
-    name: Hexo blog build &amp; deploy
+    name: Hexo blog build & deploy
     runs-on: ubuntu-latest # 使用最新的 Ubuntu 系统作为编译部署的环境
 
     steps:
@@ -65,7 +65,7 @@ jobs:
       # 设置 node.js 环境
       uses: actions/setup-node@v1
       with:
-        node-version: &#39;16.x&#39;
+        node-version: '16.x'
 
     # 下载网站源码
     - name: Cache node modules
@@ -73,7 +73,7 @@ jobs:
       uses: actions/cache@v1
       with:
         path: ~/.npm
-        key: ${{ runner.os }}-node-${{ hashFiles(&#39;**/package-lock.json&#39;) }}
+        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
 
     # 安装依赖
     - name: Install hexo dependencies
@@ -111,12 +111,12 @@ jobs:
 
 
         # 以下配置可忽略，测试功能
-        user_name: &#39;github-actions[bot]&#39;
-        user_email: &#39;github-actions[bot]@users.noreply.github.com&#39;
+        user_name: 'github-actions[bot]'
+        user_email: 'github-actions[bot]@users.noreply.github.com'
         commit_message: ${{ github.event.head_commit.message }}
         #full_commit_message: ${{ github.event.head_commit.message }}
         tag_name: ${{ steps.prepare_tag.outputs.DEPLOY_TAG_NAME }}
-        tag_message: &#39;Deployment ${{ github.ref_name }}&#39;
+        tag_message: 'Deployment ${{ github.ref_name }}'
         #cname: github.com
 
 ```

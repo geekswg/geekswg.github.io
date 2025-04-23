@@ -1,6 +1,6 @@
 # 
 
-&lt;style&gt;
+<style>
   .aside-collection {
     transition: all 0.3s ease;
   }
@@ -37,28 +37,28 @@
     }
   }
   
-  [data-theme=&#34;dark&#34;] .aside-collection {
+  [data-theme="dark"] .aside-collection {
     background: #252627;
   }
-  &lt;/style&gt;
+  </style>
   
-  &lt;div class=&#34;aside-toggle&#34; onclick=&#34;toggleAside()&#34;&gt;
-    &lt;i class=&#34;fas fa-bars&#34;&gt;&lt;/i&gt;
-  &lt;/div&gt;
+  <div class="aside-toggle" onclick="toggleAside()">
+    <i class="fas fa-bars"></i>
+  </div>
   
-  &lt;div class=&#34;aside-collection&#34;&gt;
-    &lt;!-- 原有的aside内容 --&gt;
+  <div class="aside-collection">
+    <!-- 原有的aside内容 -->
     ...existing code...
-  &lt;/div&gt;
+  </div>
   
-  &lt;script&gt;
+  <script>
   function toggleAside() {
-    document.querySelector(&#39;.aside-collection&#39;).classList.toggle(&#39;show&#39;);
+    document.querySelector('.aside-collection').classList.toggle('show');
   }
-  &lt;/script&gt;
+  </script>
 
 ---
 
-> 作者:   
+> 作者: <no value>  
 > URL: https://geekswg.js.cool/gallery/t/  
 

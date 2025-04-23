@@ -1,45 +1,45 @@
 # Timeline2
 
-{{&lt; admonition quote &#34;quote&#34; &gt;}}
+{{< admonition quote "quote" >}}
 note abstract info tip success question warning failure danger bug example quote
-{{&lt; /admonition &gt;}}
+{{< /admonition >}}
 这里使用MD语法编写你的文章
-&lt;!--more--&gt;
+<!--more-->
 
-{{&lt; timeline2 &gt;}}
+{{< timeline2 >}}
 
-    {{% tl-event2 title=&#34;标题&#34; from=&#34;2023-05-21&#34; to=&#34;2023-05-22&#34; %}}
+    {{% tl-event2 title="标题" from="2023-05-21" to="2023-05-22" %}}
 ## 你好
 
-&gt; 测试md 语法支持
+> 测试md 语法支持
     {{% /tl-event2 %}}
 
-    {{% tl-event2 title=&#34;Current position&#34; from=&#34;2022-05-01&#34;  %}}
-I&#39;m working here 2
+    {{% tl-event2 title="Current position" from="2022-05-01"  %}}
+I'm working here 2
     {{% /tl-event2 %}}
 
-    {{% tl-event2 title=&#34;Old position&#34; from=&#34;2020-01-02&#34;  %}}
+    {{% tl-event2 title="Old position" from="2020-01-02"  %}}
 I worked here 1
     {{% /tl-event2 %}}
 
-{{&lt; /timeline2 &gt;}}
+{{< /timeline2 >}}
 
 ## 使用demo-timeline2
 
-```html { title=&#34;timeline2-demo&#34; }
-{{&lt;/* timeline2 */&gt;}}
-{{%/* tl-event2 title=&#34;标题&#34; from=&#34;2023-05-21&#34; to=&#34;2023-05-22&#34; */%}}
+```html { title="timeline2-demo" }
+{{</* timeline2 */>}}
+{{%/* tl-event2 title="标题" from="2023-05-21" to="2023-05-22" */%}}
 ## 你好
-&gt; 测试md 语法支持
+> 测试md 语法支持
     {{%/* /tl-event2 */%}}
 
-    {{%/* tl-event2 title=&#34;Current position&#34; to=&#34;2023-02-01&#34; from=&#34;2022-05-01&#34;  */%}}
-I&#39;m working here 2
+    {{%/* tl-event2 title="Current position" to="2023-02-01" from="2022-05-01"  */%}}
+I'm working here 2
     {{%/* /tl-event2 */%}}
 
 I worked here 1
     {{%/* /tl-event2 */%}}
-{{&lt;/* /timeline2 */&gt;}}
+{{</* /timeline2 */>}}
 ```
 
 
