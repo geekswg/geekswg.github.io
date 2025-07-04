@@ -2106,7 +2106,7 @@ line 3 of code
 
 
 &lt;li class="event" data-date='2022 05/01'>
- &lt;h2>Current position [2022/05/01 -> 2025/07/01] &lt;/h2>
+ &lt;h2>Current position [2022/05/01 -> 2025/07/04] &lt;/h2>
  
  &lt;div class="moment" style="color: #c41a16;text-align: right;position: absolute;top: 0;right: 0;padding: 5px;" >
  3 years 2 months 
@@ -2150,7 +2150,7 @@ line 3 of code
 
 
 &lt;li class="event" data-date='2020 01/02'>
- &lt;h2>Old position [2020/01/02 -> 2025/07/01] &lt;/h2>
+ &lt;h2>Old position [2020/01/02 -> 2025/07/04] &lt;/h2>
  
  &lt;div class="moment" style="color: #c41a16;text-align: right;position: absolute;top: 0;right: 0;padding: 5px;" >
  5 years 6 months 
