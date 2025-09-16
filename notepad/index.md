@@ -23,6 +23,6 @@ tip: 👆 点击上面随机播放音乐☝️
 
 ---
 
-> 作者: <no value>  
+> 作者: [geekswg](https://github.com/geekswg)  
 > URL: https://geekswg.js.cool/notepad/  
 
