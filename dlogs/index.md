@@ -18,9 +18,7 @@ dlogs:
       href: https://geekswg.js.cool
       time: 时间
       loc: 地点
-      aplayer:
-        server: tencent
-        id: 000kfFVO09uRDB
+      
       pics:
         - src: /images/ 
   ```

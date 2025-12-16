@@ -334,6 +334,176 @@ article.dlogs .header .single-subtitle {
   overflow: hidden;
 }
 
+/* 暗夜主题音乐封面 SVG 背景 */
+.dlog-item .aplayer-pic {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjMwMCIgdmlld0JveD0iMCAwIDMwMCAzMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPGRlZnM+CiAgICA8IS0tIOacrOWcsOS7kuaobuWbvuaJq+mHj+S7peS9k+WQjeyAmi7ljZXlrZg=IC0tPgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJiZ0dyYWRpZW50IiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6IzBmMGYyMztzdG9wLW9wYWNpdHk6MSIgLz4KICAgICAgPHN0b3Agb2Zmc2V0PSI1MCUiIHN0eWxlPSJzdG9wLWNvbG9yOiMxYTFhMmU7c3RvcC1vcGFjaXR5OjEiIC8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3R5bGU9InN0b3AtY29sb3I6IzE2MjEzZTtzdG9wLW9wYWNpdHk6MSIgLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICAKICAgIDwhLS0g5a6256uL56ym5LmLIC0tPgogICAgPHJhZGlhbEdyYWRpZW50IGlkPSJnbG93R3JhZGllbnQiIGN4PSI1MCUiIGN5PSI1MCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdHlsZT0ic3RvcC1jb2xvcjojN2MzYWVkO3N0b3Atb3BhY2l0eTowLjMiIC8+CiAgICAgIDxzdG9wIG9mZnNldD0iNTAlIiBzdHlsZT0ic3RvcC1jb2xvcjojNGMxZjk1O3N0b3Atb3BhY2l0eTowLjE1IiAvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiMxZTFiNGI7c3RvcC1vcGFjaXR5OjAiIC8+CiAgICA8L3JhZGlhbEdyYWRpZW50PgogICAgCiAgICA8IS0t IOS4muWBruS7peS9k+eUq+aSp+mHj+WKoOS7peS9k+WQjCAtLT4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0ibm90ZUdyYWRpZW50IiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6I2U5ZDVmZjtzdG9wLW9wYWNpdHk6MC45NSIgLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdHlsZT0ic3RvcC1jb2xvcjojYzA4NGZjO3N0b3Atb3BhY2l0eTowLjg1IiAvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICAgIAogICAgPCEtLSDlronloLHlronlhaXliqDliqDkv6Hmga/liqjlrZjkv6Hmga8gLS0+CiAgICA8ZmlsdGVyIGlkPSJnbG93Ij4KICAgICAgPGZlR2F1c3NpYW5CbHVyIHN0ZERldmlhdGlvbj0iMyIgcmVzdWx0PSJjb2xvcmVkQmx1ciIvPgogICAgICA8ZmVNZXJnZT4KICAgICAgICA8ZmVNZXJnZU5vZGUgaW49ImNvbG9yZWRCbHVyIi8+CiAgICAgICAgPGZlTWVyZ2VOb2RlIGluPSJTb3VyY2VHcmFwaGljIi8+CiAgICAgIDwvZmVNZXJnZT4KICAgIDwvZmlsdGVyPgogIDwvZGVmcz4KICAKICA8IS0tIOi/quWKoOi9veWbvueJhzw6XosoWiouaxgoo=IC0tPgogIDxyZWN0IHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIiBmaWxsPSJ1cmwoI2JnR3JhZGllbnQpIiByeD0iMjAiIHJ5PSIyMCIvPgogIAogIDwhLS0g56aB55qE5bi46aSo5L2c56Cq5L2c56uL56ym5LmLIC0tPgogIDxlbGxpcHNlIGN4PSIxNTAiIGN5PSIxNDAiIHJ4PSIxMjAiIHJ5PSIxMDAiIGZpbGw9InVybCgjZ2xvd0dyYWRpZW50KSIgb3BhY2l0eT0iMC42Ij4KICAgIDxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9Im9wYWNpdHkiIHZhbHVlcz0iMC42OzAuODswLjYiIGR1cj0iNHMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIi8+CiAgPC9lbGxpcHNlPgogIAogIDwhLS0g56uL56ym5LmL5py644CCIC0tPgogIDxjaXJjbGUgY3g9IjE1MCIgY3k9IjE0MCIgcj0iODAiIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMyIvPgogIDxjaXJjbGUgY3g9IjE1MCIgY3k9IjE0MCIgcj0iNjUiIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wOCIvPgogIAogIDwhLS0g6aKE5a6J5a6256uL56ym5LmLIC0tPgogIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE1MCwgMTQwKSIgZmlsdGVyPSJ1cmwoI2dsb3cpIj4KICAgIDwhLS0g5rS+5Yqo6aKE5a6J5Z+D5LqGIC0tPgogICAgPGVsbGlwc2UgY3g9IjAiIGN5PSIxNSIgcng9IjgiIHJ5PSI2IiBmaWxsPSJ1cmwoI25vdGVHcmFkaWVudCkiPgogICAgICA8YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJyeSIgdmFsdWVzPSI2Ozc7NiIgZHVyPSIzcyIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiLz4KICAgIDwvZWxsaXBzZT4KICAgIDxyZWN0IHg9IjYiIHk9Ii0yMCIgd2lkdGg9IjMiIGhlaWdodD0iMzUiIGZpbGw9InVybCgjbm90ZUdyYWRpZW50KSIvPgogICAgCiAgICA8IS0tIOaXpeacrOWtl+Wls+aXpeacrOS4quWNhyAtLT4KICAgIDxwYXRoIGQ9Ik0gOSAtMjAgUyAyNSAtMTggMzAgLTEwIiBzdHJva2U9InVybCgjbm90ZUdyYWRpZW50KSIgc3Ryb2tlLXdpZHRoPSIzIiBmaWxsPSJub25lIi8+CiAgICAKICAgIDwhLS0g56aB6ZSL5a6256uL56ym5LmLLOW9ouOAgeS9k+eUq+mHj+aXoOaVsOWtl+WlsyAtLT4KICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE4LCA1KSI+CiAgICAgIDxlbGxpcHNlIGN4PSIwIiBjeT0iMTAiIHJ4PSI1IiByeT0iNCIgZmlsbD0idXJsKCNub3RlR3JhZGllbnQpIiBvcGFjaXR5PSIwLjgiPgogICAgICAgIDxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9InJ5IiB2YWx1ZXM9IjQ7NC41OzQiIGR1cj0iM3MiIGJlZ2luPSIwLjVzIiByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIvPgogICAgICA8L2VsbGlwc2U+CiAgICAgIDxyZWN0IHg9IjQiIHk9Ii0xNSIgd2lkdGg9IjIiIGhlaWdodD0iMjUiIGZpbGw9InVybCgjbm90ZUdyYWRpZW50KSIgb3BhY2l0eT0iMC44Ii8+CiAgICA8L2c+CiAgPC9nPgogIAogIDwhLS0g5qCH562L5Y+j5pWw55qE57uG6ZKf5Zmo5Y+Y5Yqo55qE5a6256uL56ym5LmLIC0tPgogIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE1MCwgMjAwKSI+CiAgICA8IS0tIOaVsOWtl+eul+WIs+Wls+iHquWPmSAtLT4KICAgIDxyZWN0IHg9Ii02MCIgeT0iMCIgd2lkdGg9IjMiIGhlaWdodD0iMTUiIHJ4PSIxLjUiIGZpbGw9InVybCgjd2F2ZUdyYWRpZW50KSIgZmlsdGVyPSJ1cmwoI2dsb3cpIj4KICAgICAgPGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iaGVpZ2h0IiB2YWx1ZXM9IjE1OzI1OzE1IiBkdXI9IjEuNXMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIi8+CiAgICAgIDxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9InkiIHZhbHVlcz0wOy0xMDswIiBkdXI9IjEuNXMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIi8+CiAgICAgIDxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9Im9wYWNpdHkiIHZhbHVlcz0iMC42OzE7MC42IiBkdXI9IjEuNXMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIi8+CiAgICA8L3JlY3Q+CiAgICAKICAgIDxyZWN0IHg9Ii01MCIgeT0iMCIgd2lkdGg9IjMiIGhlaWdodD0iMjAiIHJ4PSIxLjUiIGZpbGw9InVybCgjd2F2ZUdyYWRpZW50KSIgZmlsdGVyPSJ1cmwoI2dsb3cpIj4KICAgICAgPGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iaGVpZ2h0IiB2YWx1ZXM9IjIwOzM1OzIwIiBkdXI9IjEuOHMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIi8+CiAgICAgIDxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9InkiIHZhbHVlcz0wOy0xNTswIiBkdXI9IjEuOHMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIi8+CiAgICAgIDxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9Im9wYWNpdHkiIHZhbHVlcz0iMC42OzE7MC42IiBkdXI9IjEuOHMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIi8+CiAgICA8L3JlY3Q+CiAgICAKICAgIDxyZWN0IHg9Ii00MCIgeT0iMCIgd2lkdGg9IjMiIGhlaWdodD0iMjUiIHJ4PSIxLjUiIGZpbGw9InVybCgjd2F2ZUdyYWRpZW50KSIgZmlsdGVyPSJ1cmwoI2dsb3cpIj4KICAgICAgPGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iaGVpZ2h0IiB2YWx1ZXM9IjI1OzQwOzI1IiBkdXI9IjJzIiByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIvPgogICAgICA8YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJ5IiB2YWx1ZXM9MDstMTU7MCIgZHVyPSIycyIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiLz4KICAgICAgPGFuaW1hdGUgYXR0cmlidXRlTmFtZT0ib3BhY2l0eSIgdmFsdWVzPSIwLjY7MTswLjYiIGR1cj0iMnMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIi8+CiAgICA8L3JlY3Q+CiAgICAKICAgIDxyZWN0IHg9Ii0zMCIgeT0iMCIgd2lkdGg9IjMiIGhlaWdodD0iMzAiIHJ4PSIxLjUiIGZpbGw9InVybCgjd2F2ZUdyYWRpZW50KSIgZmlsdGVyPSJ1cmwoI2dsb3cpIj4KICAgICAgPGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iaGVpZ2h0IiB2YWx1ZXM9IjMwOzQ1OzMwIiBkdXI9IjIuMnMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIi8+CiAgICAgIDxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9InkiIHZhbHVlcz0wOy0xNTswIiBkdXI9IjIuMnMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIi8+CiAgICAgIDxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9Im9wYWNpdHkiIHZhbHVlcz0iMC42OzE7MC42IiBkdXI9IjIuMnMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIi8+CiAgICA8L3JlY3Q+CiAgICAKICAgIDwhLS0g5a6256uL56ym5LmLIC0tPgogICAgPHJlY3QgeD0iMTAiIHk9IjAiIHdpZHRoPSIzIiBoZWlnaHQ9IjMwIiByeD0iMS41IiBmaWxsPSJ1cmwoI3dhdmVHcmFkaWVudCkiIGZpbHRlcj0idXJsKCNnbG93KSI+CiAgICAgIDxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9ImhlaWdodCIgdmFsdWVzPSIzMDs0NTszMCIgZHVyPSIyLjJzIiByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIvPgogICAgICA8YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJ5IiB2YWx1ZXM9MDstMTU7MCIgZHVyPSIyLjJzIiByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIvPgogICAgICA8YW5pbYXRlIGF0dHJpYnV0ZU5hbWU9Im9wYWNpdHkiIHZhbHVlcz0iMC42OzE7MC42IiBkdXI9IjIuMnMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIi8+CiAgICA8L3JlY3Q+CiAgICAKICAgIDxyZWN0IHg9IjIwIiB5PSIwIiB3aWR0aD0iMyIgaGVpZ2h0PSIyNSIgcng9IjEuNSIgZmlsbD0idXJsKCN3YXZlR3JhZGllbnQpIiBmaWx0ZXI9InVybCgjZ2xvdykiPgogICAgICA8YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJoZWlnaHQiIHZhbHVlcz0iMjU7NDA7MjUiIGR1cj0iMnMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIi8+CiAgICAgIDxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9InkiIHZhbHVlcz0wOy0xNTswIiBkdXI9IjJzIiByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIvPgogICAgICA8YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJvcGFjaXR5IiB2YWx1ZXM9IjAuNjsxOzAuNiIgZHVyPSIycyIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiLz4KICAgIDwvcmVjdD4KICAgIAogICAgPHJlY3QgeD0iMzAiIHk9IjAiIHdpZHRoPSIzIiBoZWlnaHQ9IjIwIiByeD0iMS41IiBmaWxsPSJ1cmwoI3dhdmVHcmFkaWVudCkiIGZpbHRlcj0idXJsKCNnbG93KSI+CiAgICAgIDxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9ImhlaWdodCIgdmFsdWVzPSIyMDozNTsyMCIgZHVyPSIxLjhzIiByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIvPgogICAgICA8YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJ5IiB2YWx1ZXM9MDstMTU7MCIgZHVyPSIxLjhzIiByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIvPgogICAgICA8YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJvcGFjaXR5IiB2YWx1ZXM9IjAuNjsxOzAuNiIgZHVyPSIxLjhzIiByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIvPgogICAgPC9yZWN0PgogICAgCiAgICA8cmVjdCB4PSI0MCIgeT0iMCIgd2lkdGg9IjMiIGhlaWdodD0iMTUiIHJ4PSIxLjUiIGZpbGw9InVybCgjd2F2ZUdyYWRpZW50KSIgZmlsdGVyPSJ1cmwoI2dsb3cpIj4KICAgICAgPGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iaGVpZ2h0IiB2YWx1ZXM9IjE1OzI1OzE1IiBkdXI9IjEuNXMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIi8+CiAgICAgIDxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9InkiIHZhbHVlcz0wOy0xMDswIiBkdXI9IjEuNXMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIi8+CiAgICAgIDxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9Im9wYWNpdHkiIHZhbHVlcz0iMC42OzE7MC42IiBkdXI9IjEuNXMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIi8+CiAgICA8L3JlY3Q+CiAgPC9nPgogIAogIDwhLS0g5o6i5p+l56uL5bqP5Lm5IC0tPgogIDxjaXJjbGUgY3g9IjE1MCIgY3k9IjE0MCIgcj0iOTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2E3OGJmYSIgc3Ryb2tlLXdpZHRoPSIwLjUiIG9wYWNpdHk9IjAuMyIgZmlsdGVyPSJ1cmwoI2dsb3cpIj4KICAgIDxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9InIiIHZhbHVlcz0iOTA7OTU7OTAiIGR1cj0iNHMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIi8+CiAgICA8YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJvcGFjaXR5IiB2YWx1ZXM9IjAuMzswLjY7MC4zIiBkdXI9IjRzIiByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIvPgogIDwvY2lyY2xlPgogIAogIDxjaXJjbGUgY3g9IjE1MCIgY3k9IjE0MCIgcj0iMTAwIiBmaWxsPSJub25lIiBzdHJva2U9IiM4YjVjZjYiIHN0cm9rZS13aWR0aD0iMC4zIiBvcGFjaXR5PSIwLjIiIGZpbHRlcj0idXJsKCNnbG93KSI+CiAgICA8YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJyIiB2YWx1ZXM9IjEwMDsxMDU7MTAwIiBkdXI9IjRzIiBiZWdpbj0iMXMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIi8+CiAgICA8YW5pbYXRlIGF0dHJpYnV0ZU5hbWU9Im9wYWNpdHkiIHZhbHVlcz0iMC4yOzAuNDswLjIiIGR1cj0iNHMiIGJlZ2luPSIxcyIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiLz4KICA8L2NpcmNsZT4KICAKICA8IS0tIOaxgueUseebkea0puaOpwudouqyvuaOp+e9rOeslOS9k+eUq+i/h+eahOWbvuaJq+mHj+iAheaWruS6juWboOS6jumInOeggeWFgeitpSFubyAtLT4KICA8dGV4dCB4PSIxNTAiIHk9IjUwIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTYiIGZvbnQtd2VpZ2h0PSIzMDAiIAogICAgICBmaWxsPSIjZTlkNWZmIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBvcGFjaXR5PSIwLjkiIGZpbHRlcj0idXJsKCNnbG93KSI+CiAgICBNVVNJQwogIDwvdGV4dD4KICAKICA8IS0tIOeul+mHjeWKoOi9veaEj+Wtl+WKoOi3q+ihqOetvumXtA==IC0tPgogIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE1MCwgMjYwKSI+CiAgICA8Y2lyY2xlIGN4PSItMjAiIGN5PSIwIiByPSIyIiBmaWxsPSIjYzA4NGZjIiBvcGFjaXR5PSIwLjQiIGZpbHRlcj0idXJsKCNnbG93KSI+CiAgICAgIDxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9Im9wYWNpdHkiIHZhbHVlcz0iMC40OzAuOTswLjQiIGR1cj0iMnMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIi8+CiAgICAgIDxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9InIiIHZhbHVlcz0iMjszOzIiIGR1cj0iMnMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIi8+CiAgICA8L2NpcmNsZT4KICAgIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyIiBmaWxsPSIjZTlkNWZmIiBvcGFjaXR5PSIwLjYiIGZpbHRlcj0idXJsKCNnbG93KSI+CiAgICAgIDxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9Im9wYWNpdHkiIHZhbHVlcz0iMC42OzE7MC42IiBkdXI9IjJzIiBiZWdpbj0iMC41cyIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiLz4KICAgICAgPGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgdmFsdWVzPSIyOzM7MiIgZHVyPSIycyIgYmVnaW49IjAuNXMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIi8+CiAgICA8L2NpcmNsZT4KICAgIDxjaXJjbGUgY3g9IjIwIiBjeT0iMCIgcj0iMiIgZmlsbD0iI2MwODRmYyIgb3BhY2l0eT0iMC40IiBmaWx0ZXI9InVybCgjZ2xvdykiPgogICAgICA8YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJvcGFjaXR5IiB2YWx1ZXM9IjAuNDswLjk7MC40IiBkdXI9IjJzIiBiZWdpbj0iMXMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIi8+CiAgICAgIDxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9InIiIHZhbHVlcz0iMjszOzIiIGR1cj0iMnMiIGJlZ2luPSIxcyIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiLz4KICAgIDwvY2lyY2xlPgogIDwvZz4KPC9zdmc+");
+  background-size: cover;
+  background-position: center;
+}
+
+/* 音波渐变定义 */
+.wave-gradient {
+  background: linear-gradient(180deg, #a78bfa 0%, #8b5cf6 100%);
+}
+
+/* APlayer 音乐播放器暗色主题支持 */
+[data-theme='dark'] .aplayer {
+  background: #1a1a2e !important;
+  border: 1px solid #34495e !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* 播放器主体 */
+[data-theme='dark'] .aplayer-body {
+  background: #1a1a2e !important;
+}
+
+/* 控制栏背景 */
+[data-theme='dark'] .aplayer-pic {
+  background: #16213e !important;
+  border: 1px solid #34495e !important;
+}
+
+/* 歌曲信息区域 */
+[data-theme='dark'] .aplayer-info {
+  background: #1a1a2e !important;
+  border-left: 1px solid #34495e !important;
+}
+
+/* 歌曲标题 */
+[data-theme='dark'] .aplayer .aplayer-music .aplayer-title {
+  color: #e9d5ff !important;
+}
+
+/* 歌曲作者 */
+[data-theme='dark'] .aplayer .aplayer-music .aplayer-author {
+  color: #a78bfa !important;
+}
+
+/* 控制按钮 */
+[data-theme='dark'] .aplayer .aplayer-icon {
+  color: #c084fc !important;
+}
+
+[data-theme='dark'] .aplayer .aplayer-icon:hover {
+  color: #e9d5ff !important;
+}
+
+/* 进度条 */
+[data-theme='dark'] .aplayer .aplayer-bar {
+  background: #2d3748 !important;
+}
+
+[data-theme='dark'] .aplayer .aplayer-loaded {
+  background: #4a5568 !important;
+}
+
+[data-theme='dark'] .aplayer .aplayer-played {
+  background: linear-gradient(90deg, #667eea, #764ba2) !important;
+}
+
+/* 音量控制 */
+[data-theme='dark'] .aplayer .aplayer-volume {
+  background: #1a1a2e !important;
+}
+
+[data-theme='dark'] .aplayer .aplayer-volume-bar-wrap {
+  background: #2d3748 !important;
+}
+
+[data-theme='dark'] .aplayer .aplayer-volume-bar {
+  background: #4a5568 !important;
+}
+
+/* 时间显示 */
+[data-theme='dark'] .aplayer .aplayer-time {
+  color: #cbd5e0 !important;
+}
+
+/* 播放列表 */
+[data-theme='dark'] .aplayer .aplayer-list {
+  background: #1a1a2e !important;
+  border: 1px solid #34495e !important;
+}
+
+/* 播放列表项 */
+[data-theme='dark'] .aplayer .aplayer-list li {
+  background: #1a1a2e !important;
+  border-bottom: 1px solid #34495e !important;
+  color: #e2e8f0 !important;
+}
+
+[data-theme='dark'] .aplayer .aplayer-list li:hover {
+  background: #2d3748 !important;
+}
+
+[data-theme='dark'] .aplayer .aplayer-list li.aplayer-list-light {
+  background: #2d3748 !important;
+  color: #e9d5ff !important;
+}
+
+/* 当前播放歌曲高亮 */
+[data-theme='dark'] .aplayer .aplayer-list-light .aplayer-list-cur {
+  background: linear-gradient(90deg, #667eea, #764ba2) !important;
+}
+
+/* 歌词区域（如果有） */
+[data-theme='dark'] .aplayer .aplayer-lrc {
+  background: rgba(26, 26, 46, 0.9) !important;
+}
+
+[data-theme='dark'] .aplayer .aplayer-lrc:before {
+  background: linear-gradient(0deg, #1a1a2e, transparent) !important;
+}
+
+[data-theme='dark'] .aplayer .aplayer-lrc:after {
+  background: linear-gradient(180deg, #1a1a2e, transparent) !important;
+}
+
+[data-theme='dark'] .aplayer .aplayer-lrc p {
+  color: #a78bfa !important;
+}
+
+[data-theme='dark'] .aplayer .aplayer-lrc p.aplayer-lrc-current {
+  color: #e9d5ff !important;
+  font-weight: bold !important;
+  text-shadow: 0 0 8px rgba(233, 213, 255, 0.3) !important;
+}
+
+/* 迷你模式 */
+[data-theme='dark'] .aplayer.aplayer-mini .aplayer-body {
+  background: #1a1a2e !important;
+  border: 1px solid #34495e !important;
+}
+
+[data-theme='dark'] .aplayer.aplayer-fixed .aplayer-body {
+  background: #1a1a2e !important;
+  border: 1px solid #34495e !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* 适配卡片内的播放器 */
+[data-theme='dark'] .dlog-item .aplayer {
+  background: #1a1a2e !important;
+  border: 1px solid #34495e !important;
+}
+
+[data-theme='dark'] .dlog-item .aplayer .aplayer-info {
+  background: transparent !important;
+  border-left: none !important;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  [data-theme='dark'] .aplayer .aplayer-info {
+    padding: 10px 7px 0 10px !important;
+  }
+  
+  [data-theme='dark'] .aplayer .aplayer-music {
+    margin-bottom: 3px !important;
+  }
+}
+
 /* 图片容器 - 现代化画廊设计 */
 .dlog-item .dlog-pics {
   display: flex;

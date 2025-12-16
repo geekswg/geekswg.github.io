@@ -1,0 +1,57 @@
+<svg width="200" height="150" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    @keyframes pulse {
+      0% { opacity: 0.3; transform: scale(0.95); }
+      50% { opacity: 0.7; transform: scale(1.05); }
+      100% { opacity: 0.3; transform: scale(0.95); }
+    }
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-5px); }
+      100% { transform: translateY(0px); }
+    }
+    @keyframes rotate {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    .image-icon { 
+      animation: pulse 2s ease-in-out infinite; 
+      fill: #ccc;
+    }
+    .error-text { 
+      animation: float 3s ease-in-out infinite; 
+      fill: #999;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      font-weight: bold;
+    }
+    .broken-line {
+      stroke: #ff6b6b;
+      stroke-width: 2;
+      stroke-dasharray: 5,5;
+      animation: rotate 4s linear infinite;
+    }
+  </style>
+  
+  <!-- 背景 -->
+  <rect width="200" height="150" fill="#f8f9fa" rx="10"/>
+  
+  <!-- 图片图标 -->
+  <g class="image-icon">
+    <rect x="60" y="40" width="80" height="60" rx="5" fill="#e9ecef" stroke="#dee2e6" stroke-width="1"/>
+    <circle cx="100" cy="60" r="8" fill="#adb5bd"/>
+    <rect x="70" y="75" width="60" height="4" rx="2" fill="#adb5bd"/>
+    <rect x="80" y="85" width="40" height="4" rx="2" fill="#adb5bd"/>
+  </g>
+  
+  <!-- 断裂线 -->
+  <line x1="75" y1="45" x2="125" y2="95" class="broken-line"/>
+  
+  <!-- 错误文本 -->
+  <text x="100" y="120" text-anchor="middle" class="error-text">图片加载失败</text>
+  
+  <!-- 404图标 -->
+  <g transform="translate(100, 135) scale(0.8)">
+    <text x="0" y="0" text-anchor="middle" fill="#ff6b6b" font-family="Arial" font-size="12" font-weight="bold">404</text>
+  </g>
+</svg>
