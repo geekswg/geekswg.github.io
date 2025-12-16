@@ -90,6 +90,7 @@ class RestInPeace {
   const rip = new RestInPeace();
 
   document.addEventListener('DOMContentLoaded', () => {
+    rip.init();
     /** 
     rip.init();
     const today = Lunar.fromDate(new Date());

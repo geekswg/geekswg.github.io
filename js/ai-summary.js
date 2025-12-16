@@ -254,6 +254,9 @@ function addScrollListener() {
     }
     // 监听目标div的top值
     const targetDiv = document.querySelector('#summary-wrapper');
+    if (!targetDiv) {
+      return;
+    }
     window.addEventListener('scroll', throttle(() => {
       const rect = targetDiv.getBoundingClientRect();
       if (rect.top <= 60) {

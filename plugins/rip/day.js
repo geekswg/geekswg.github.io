@@ -26,7 +26,7 @@ if (m == 7 && dd == 7) {
 if (m == 12 && dd == 13) {
     htmlGrayScale();
     if (sessionStorage.getItem("isPopupWindow") != "1") {
-        Swal.fire("今天是南京大屠杀" + (y - 1937).toString() + "周年纪念日\n🪔勿忘国耻，振兴中华🪔");
+        Swal.fire("今天是南京大屠杀死难者国家公祭日" + (y - 1937).toString() + "周年纪念日\n🪔勿忘国耻，振兴中华🪔");
         sessionStorage.setItem("isPopupWindow", "1");
     }
 }
