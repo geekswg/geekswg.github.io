@@ -19,8 +19,7 @@
 }
 
 .home.posts .home-avatar .santa-hat{
-  width: 28%;
-  max-width: 28vh;
+  width: 30%;
   height: auto;
   z-index: 1;
   translate: var(--fi-santa-hat-offset, 0 0);
@@ -29,7 +28,12 @@
   top: 1vh;
   left: 40%;
   animation: jiggle 0.4s ease-in-out;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
   pointer-events: none;
+  background: transparent !important;
+  border-radius: 0 !important;
 }
 /* .home.posts .home-avatar .santa-hat + img {
   filter: drop-shadow(0.5px -0.5px 1px rgba(var(--fi-santa-hat-shadow, 0, 0, 0), 0.6));
