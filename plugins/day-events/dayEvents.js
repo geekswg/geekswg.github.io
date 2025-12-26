@@ -89,16 +89,16 @@ class DayEvents {
       timer: 1000 * 10,
     });
   }
-  showSantaHat(event) {
-    console.log('Merry Christmas~')
-    this.loadCSS(`${DayEvents.BASE_URL}/santa/santa-hat.fixit.css`);
+  showEventImg(event) {
+    console.log(event.info);
+    this.loadCSS(`${DayEvents.BASE_URL}/eventImg.fixit.css`);
     const logos = document.querySelectorAll('.header-wrapper .logo, .home.posts .home-avatar img')
     logos?.forEach((logo) => {
-      const hat = document.createElement('img')
-      hat.src = `${DayEvents.BASE_URL}/santa/santa-hat.svg`
-      hat.alt = 'Santa Hat'
-      hat.classList.add('santa-hat')
-      logo.parentNode?.insertBefore(hat, logo)
+      const hat = document.createElement('img');
+      hat.src = DayEvents.BASE_URL + '/imgs/' + event.img;
+      hat.alt = '节日装饰';
+      hat.classList.add('event-img');
+      logo.parentNode?.insertBefore(hat, logo);
     })
   }
   //动态加载css
@@ -141,7 +141,7 @@ class DayEvents {
   handleCustomOperation(operation, event) {
     const operations = {
       "showMessage": () => this.showMessage(event),
-      "showSantaHat": () => this.showSantaHat(event),
+      "showEventImg": () => this.showEventImg(event),
       "rip": () => this.htmlGrayScale(event),
       "showSnow": () => this.startSnowEffect(event)
     };

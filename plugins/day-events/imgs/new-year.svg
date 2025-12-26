@@ -1,0 +1,44 @@
+<svg width="42" height="20" viewBox="0 0 42 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="absolute">
+  <!-- 背景装饰带 -->
+  <rect x="2" y="6" width="38" height="8" rx="1" fill="#DC143C" opacity="0.9"/>
+  
+  <!-- Happy New Year 文字 - 正确的大小写 -->
+  <text x="21" y="11" font-family="Georgia, serif" font-size="3.2" font-weight="500" text-anchor="middle" fill="#FFD700" style="letter-spacing: 0.6px;">
+    Happy New Year
+  </text>
+  
+  <!-- 左侧星星装饰 -->
+  <path d="M4 6L4.3 7L5.3 6.5L4.3 6L4 5L3.7 6L2.7 6.5L3.7 7L4 6Z" fill="#FFD700"/>
+  <path d="M6 8L6.2 8.6L6.8 8.3L6.2 8L6 7.4L5.8 8L5.2 8.3L5.8 8.6L6 8Z" fill="#FFD700"/>
+  
+  <!-- 右侧星星装饰 -->
+  <path d="M38 6L38.3 7L39.3 6.5L38.3 6L38 5L37.7 6L36.7 6.5L37.7 7L38 6Z" fill="#FFD700"/>
+  <path d="M36 8L36.2 8.6L36.8 8.3L36.2 8L36 7.4L35.8 8L35.2 8.3L35.8 8.6L36 8Z" fill="#FFD700"/>
+  
+  <!-- 上方装饰线 -->
+  <path d="M10 4L11 5L31 5L32 4" stroke="#FFD700" stroke-width="1" fill="none" opacity="0.7"/>
+  
+  <!-- 下方装饰线 -->
+  <path d="M10 16L11 15L31 15L32 16" stroke="#FFD700" stroke-width="1" fill="none" opacity="0.7"/>
+  
+  <!-- 左侧烟花效果 -->
+  <circle cx="1" cy="10" r="0.8" fill="#FFD700" opacity="0.8"/>
+  <path d="M1 9L0.5 8.5M1 9L1.5 8.5M1 9L0.5 9.5M1 9L1.5 9.5M1 9L0 10M1 9L2 10" stroke="#FFD700" stroke-width="0.5"/>
+  
+  <!-- 右侧烟花效果 -->
+  <circle cx="41" cy="10" r="0.8" fill="#FFD700" opacity="0.8"/>
+  <path d="M41 9L40.5 8.5M41 9L41.5 8.5M41 9L40.5 9.5M41 9L41.5 9.5M41 9L40 10M41 9L42 10" stroke="#FFD700" stroke-width="0.5"/>
+  
+  <!-- 装饰圆点 -->
+  <circle cx="13" cy="3" r="0.5" fill="#FFD700"/>
+  <circle cx="21" cy="2.5" r="0.6" fill="#FFD700"/>
+  <circle cx="29" cy="3" r="0.5" fill="#FFD700"/>
+  
+  <circle cx="13" cy="17" r="0.5" fill="#FFD700"/>
+  <circle cx="21" cy="17.5" r="0.6" fill="#FFD700"/>
+  <circle cx="29" cy="17" r="0.5" fill="#FFD700"/>
+  
+  <!-- 底部彩带效果 -->
+  <path d="M0 18Q10.5 16 21 18Q31.5 16 42 18" stroke="#FFD700" stroke-width="0.5" fill="none" opacity="0.6"/>
+  <path d="M0 19Q10.5 17 21 19Q31.5 17 42 19" stroke="#DC143C" stroke-width="0.5" fill="none" opacity="0.6"/>
+</svg>
