@@ -1,4 +1,136 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>毕少侠</title><link>https://geekswg.js.cool/</link><description>博客：探索、发现、分享 By geekswg-[毕少侠]</description><generator>Hugo 0.153.2 &amp; FixIt v0.4.0-alpha.3-20251224074056-4fec1cda</generator><language>zh-CN</language><managingEditor>geekswg@qq.com (geekswg)</managingEditor><webMaster>geekswg@qq.com (geekswg)</webMaster><copyright>geekswg &amp; 毕少侠</copyright><lastBuildDate>Sun, 06 Apr 2025 18:14:26 +0800</lastBuildDate><atom:link href="https://geekswg.js.cool/index.xml" rel="self" type="application/rss+xml"/><item><title>LX-Music洛雪音乐助手</title><link>https://geekswg.js.cool/posts/2025/share-lxmusic/</link><pubDate>Sun, 06 Apr 2025 16:45:38 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2025/share-lxmusic/</guid><category domain="https://geekswg.js.cool/categories/%E5%88%86%E4%BA%AB/">分享</category><description>&lt;h2 class="heading-element" id="什么是-lx-music"&gt;&lt;span&gt;什么是 LX-Music？&lt;/span&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>毕少侠</title><link>https://geekswg.js.cool/</link><description>博客：探索、发现、分享 By geekswg-[毕少侠]</description><generator>Hugo 0.153.2 &amp; FixIt v0.4.0-alpha.3-20251224074056-4fec1cda</generator><language>zh-CN</language><managingEditor>geekswg@qq.com (geekswg)</managingEditor><webMaster>geekswg@qq.com (geekswg)</webMaster><copyright>geekswg &amp; 毕少侠</copyright><lastBuildDate>Fri, 26 Dec 2025 20:28:22 +0800</lastBuildDate><atom:link href="https://geekswg.js.cool/index.xml" rel="self" type="application/rss+xml"/><item><title>飞牛NAS之Docker</title><link>https://geekswg.js.cool/posts/2025/fn-docker/</link><pubDate>Fri, 26 Dec 2025 20:01:24 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2025/fn-docker/</guid><category domain="https://geekswg.js.cool/categories/nas/">NAS</category><description>&lt;p&gt;最近飞牛NAS发布了正式版系统，经过一段时间的使用，发现飞牛NAS的Docker功能还是很强大的，支持Docker和Docker-compose两种方式来部署应用。本文将分享一些我在飞牛NAS上使用Docker的经验和技巧。&lt;/p&gt;
+&lt;h2 class="heading-element" id="什么是docker"&gt;&lt;span&gt;什么是Docker？&lt;/span&gt;
+ &lt;a href="#%e4%bb%80%e4%b9%88%e6%98%afdocker" class="heading-mark"&gt;
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
+ &lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;Docker是一种开源的应用容器引擎，允许开发者将应用程序及其依赖打包成一个标准化的容器，然后发布到任何流行的Linux机器上，也可以实现虚拟化。Docker容器是完全使用沙箱机制，相互之间不会有任何接口。优点是：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;便携性&lt;/strong&gt;：可以轻松地在不同环境中部署和运行应用程序。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;隔离性&lt;/strong&gt;：每个容器都是独立的，互不干扰。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;一致性&lt;/strong&gt;：确保应用程序在不同环境下的行为一致。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;资源效率&lt;/strong&gt;：容器共享主机内核，资源利用率高。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;快速启动&lt;/strong&gt;：容器启动速度快，适合弹性伸缩。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;安全性&lt;/strong&gt;：容器内置安全机制，避免了系统漏洞。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 class="heading-element" id="飞牛nas上的docker"&gt;&lt;span&gt;飞牛NAS上的Docker&lt;/span&gt;
+ &lt;a href="#%e9%a3%9e%e7%89%9bnas%e4%b8%8a%e7%9a%84docker" class="heading-mark"&gt;
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
+ &lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;飞牛NAS支持Docker和Docker-compose两种方式来部署应用。下面将详细介绍如何在飞牛NAS上使用Docker。&lt;/p&gt;
+&lt;h2 class="heading-element" id="使用docker部署应用"&gt;&lt;span&gt;使用Docker部署应用&lt;/span&gt;
+ &lt;a href="#%e4%bd%bf%e7%94%a8docker%e9%83%a8%e7%bd%b2%e5%ba%94%e7%94%a8" class="heading-mark"&gt;
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
+ &lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;飞牛已经内置了Docker，可以直接使用。非常方便。以下是使用Docker部署应用的步骤：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;登录飞牛NAS管理界面&lt;/strong&gt;：使用管理员账号登录飞牛NAS的Web管理界面。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;打开Docker应用&lt;/strong&gt;：在应用市场中找到Docker应用并打开。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;创建Docker容器&lt;/strong&gt;：在Docker应用中创建一个新的容器。填写容器名称、镜像名称、端口映射等信息，然后点击“创建”按钮。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;管理Docker容器&lt;/strong&gt;：创建完成后，可以在Docker应用中看到已创建的容器。可以启动、停止、删除容器，也可以查看容器的日志和资源使用情况。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 class="heading-element" id="使用docker-compose部署应用"&gt;&lt;span&gt;使用Docker-compose部署应用&lt;/span&gt;
+ &lt;a href="#%e4%bd%bf%e7%94%a8docker-compose%e9%83%a8%e7%bd%b2%e5%ba%94%e7%94%a8" class="heading-mark"&gt;
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
+ &lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;分享一些我在飞牛NAS上使用Docker-compose安装的一些好用，好玩，使用的Docker应用。&lt;/p&gt;
+&lt;h3 class="heading-element" id="homepage"&gt;&lt;span&gt;HomePage&lt;/span&gt;
+ &lt;a href="#homepage" class="heading-mark"&gt;
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
+ &lt;/a&gt;
+&lt;/h3&gt;&lt;p&gt;&lt;a href="https://github.com/gethomepage/homepage" target="_blank" rel="external nofollow noopener noreferrer"&gt;homepage&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;是一个非常好用的个人主页应用，可以快速搭建一个漂亮的个人主页。使用Docker-compose部署HomePage的步骤如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;services:
+ homepage:
+ image: ghcr.io/gethomepage/homepage:latest
+ container_name: homepage
+ restart: always
+ ports:
+ - 4000:4000
+ volumes:
+ - ./config:/app/config # Make sure your local config directory exists
+ - ./icons:/app/public/icons
+ - ./images:/app/public/images
+ - /var/run/docker.sock:/var/run/docker.sock # (optional) For docker integrations
+ # 映射磁盘读权限
+ - /vol2:/volume2:ro
+ - /vol3:/volume3:ro
+ environment:
+ PORT: 4000
+ HOMEPAGE_ALLOWED_HOSTS: homepage.geekswg.dpdns.org,192.168.129.130:4000 # required, may need port. See gethomepage.dev/installation/#homepage_allowed_hosts
+ #PUID: 1000
+ #PGID: 1001
+ OPENWEATHERMAP_API_KEY: ce254243db8384604ce5a48124ad2ac6&lt;/code&gt;&lt;/pre&gt;&lt;h3 class="heading-element" id="cloudflare隧道"&gt;&lt;span&gt;Cloudflare隧道&lt;/span&gt;
+ &lt;a href="#cloudflare%e9%9a%a7%e9%81%93" class="heading-mark"&gt;
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
+ &lt;/a&gt;
+&lt;/h3&gt;&lt;p&gt;&lt;a href="https://github.com/cloudflare/cloudflared" target="_blank" rel="external nofollow noopener noreferrer"&gt;cloudflared&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;Cloudflare隧道，可以将本地服务通过Cloudflare的网络暴露到公网。使用Docker-compose部署Cloudflare隧道的步骤如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;version: &amp;#39;3.8&amp;#39;
+services:
+ cloudflared: 
+ image: cloudflare/cloudflared:latest
+ container_name: cf-tunnel
+ restart: always
+ network_mode: host
+ command: tunnel --no-autoupdate run --token &amp;lt;your_token_here&amp;gt;&amp;lt;/your_token_here&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;h3 class="heading-element" id="fndesk"&gt;&lt;span&gt;FnDesk&lt;/span&gt;
+ &lt;a href="#fndesk" class="heading-mark"&gt;
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
+ &lt;/a&gt;
+&lt;/h3&gt;&lt;p&gt;&lt;a href="https://github.com/IMGZCQ/fndesk" target="_blank" rel="external nofollow noopener noreferrer"&gt;FnDesk&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;是一个第三方的飞牛桌面管理软件,fndesk 飞牛桌面管理工具
+实在太强大！我的飞牛我做主,多处自定样式主题美化,桌面图标任君摆布,让飞牛成为你的导航页，收藏夹,Docker应用入口&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;services:
+ fndesk: #Compose项目名称
+ container_name: fndesk #docker容器名称
+ image: imgzcq/fndesk:latest #镜像名称
+ restart: always #容器自动启动应用配置
+ ports:
+ - 9990:9990 #冒号左边修改自定义端口
+ - 9991:9991 # HTTPS端口
+ volumes:
+ - /usr/trim/www:/fnw #不能改！
+ - /usr/trim/share/.restore:/res #不能改！
+ - /usr/local/apps/@appcenter/trim.media:/trim.media
+ # ↑ v0.73起开放影视个性化需加入此项
+ - ./deskdata:/deskdata #冒号左边的可以改但不建议 &lt;/code&gt;&lt;/pre&gt;&lt;div class="alert alert-tip"&gt;&lt;p class="alert-title"&gt;&lt;svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"&gt;&lt;path d="M8 1.5c-2.363.0-4 1.69-4 3.75.0.984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621 1.49a.75.75.0 01-1.484.211c-.04-.282-.163-.547-.37-.847a8.456 8.456.0 00-.542-.68c-.084-.1-.173-.205-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25 2.5 2.31 4.863.0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259-.095.115-.184.22-.268.319-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.751.751.0 01-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848.075-.088.147-.173.213-.253.561-.679.985-1.32.985-2.304.0-2.06-1.637-3.75-4-3.75zM5.75 12h4.5a.75.75.0 010 1.5h-4.5a.75.75.0 010-1.5zM6 15.25a.75.75.0 01.75-.75h2.5a.75.75.0 010 1.5h-2.5A.75.75.0 016 15.25z"/&gt;&lt;/svg&gt;提示&lt;/p&gt;&lt;p&gt;由于Docker限制，目前Docker版本已经停更，推荐安装fpk飞牛应用版本，功能更强大&lt;/p&gt;&lt;/div&gt;&lt;h3 class="heading-element" id="docker-copilot"&gt;&lt;span&gt;docker-copilot&lt;/span&gt;
+ &lt;a href="#docker-copilot" class="heading-mark"&gt;
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
+ &lt;/a&gt;
+&lt;/h3&gt;&lt;p&gt;&lt;a href="https://github.com/onlyLTY/dockerCopilot" target="_blank" rel="external nofollow noopener noreferrer"&gt;docker-copilot&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;是一个第三方的Docker管理工具，可以通过Web界面管理Docker容器。使用Docker-compose部署docker-copilot的步骤如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;services:
+ dockercopilot:
+ container_name: docker-copilot
+ restart: always
+ privileged: true
+ network_mode: bridge
+ ports:
+ - 12712:12712
+ volumes:
+ - /var/run/docker.sock:/var/run/docker.sock
+ - ./data:/data
+ environment:
+ - TZ=Asia/Shanghai
+ - DOCKER_HOST=unix:///var/run/docker.sock
+ - secretKey=your_password #密码，不少于八位且非纯数字
+ image: 0nlylty/dockercopilot:latest-dev&lt;/code&gt;&lt;/pre&gt;&lt;h3 class="heading-element" id="持续更新中"&gt;&lt;span&gt;持续更新中&lt;/span&gt;
+ &lt;a href="#%e6%8c%81%e7%bb%ad%e6%9b%b4%e6%96%b0%e4%b8%ad" class="heading-mark"&gt;
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
+ &lt;/a&gt;
+&lt;/h3&gt;&lt;p&gt;最近一直在折腾各种Docker应用，发现了很多实用的工具和方法，后续会继续分享更多经验。&lt;/p&gt;
+&lt;!-- 
+&gt; [!NOTE]
+&gt; 突出显示用户应考虑的信息，即使只是浏览也应考虑。
+
+&gt; [!TIP]
+&gt; 可选信息，可帮助用户取得更大的成功。
+
+&gt; [!IMPORTANT]
+&gt; 用户成功所需的关键信息。
+
+&gt; [!WARNING]
+&gt; 由于存在潜在风险，需要用户立即关注的关键内容。
+
+&gt; [!CAUTION]
+&gt; 操作的潜在负面后果。
+这里使用MD语法编写你的文章 
+--&gt;</description></item><item><title>LX-Music洛雪音乐助手</title><link>https://geekswg.js.cool/posts/2025/share-lxmusic/</link><pubDate>Sun, 06 Apr 2025 16:45:38 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2025/share-lxmusic/</guid><category domain="https://geekswg.js.cool/categories/%E5%88%86%E4%BA%AB/">分享</category><description>&lt;h2 class="heading-element" id="什么是-lx-music"&gt;&lt;span&gt;什么是 LX-Music？&lt;/span&gt;
  &lt;a href="#%e4%bb%80%e4%b9%88%e6%98%af-lx-music" class="heading-mark"&gt;
  &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
  &lt;/a&gt;
@@ -1251,346 +1383,4 @@ https://github.com/kubernetes/website/blob/main/layouts/shortcodes/tabs.html
 &lt;a href="https://dash.cloudflare.com/b942112d61495edf9c0b0c4d790c4448" target="_blank" rel="external nofollow noopener noreferrer"&gt;CloudFlare&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;
 &lt;a href="https://app.netlify.com/teams/geekswg/overview" target="_blank" rel="external nofollow noopener noreferrer"&gt;Netlify&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;
 &lt;a href="https://vercel.com/geekswg" target="_blank" rel="external nofollow noopener noreferrer"&gt;Vercel&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;
-&lt;a href="https://v6.51.la/report/overview?comId=287570" target="_blank" rel="external nofollow noopener noreferrer"&gt;51数据​&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/p&gt;</description></item><item><title>timeline2</title><link>https://geekswg.js.cool/posts/2023/timeline2/</link><pubDate>Wed, 31 May 2023 18:14:48 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2023/timeline2/</guid><category domain="https://geekswg.js.cool/categories/demo/">Demo</category><description>&lt;img src="https://geekswg.js.cool/images/posts/featured-image-preview.jpg" alt="featured image" referrerpolicy="no-referrer"&gt;&lt;p&gt;&lt;div class="details admonition quote open"&gt;
- &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-solid fa-quote-right" aria-hidden="true"&gt;&lt;/i&gt;quote&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;
- &lt;div class="details-content"&gt;
- &lt;div class="admonition-content"&gt;note abstract info tip success question warning failure danger bug example quote&lt;/div&gt;
- &lt;/div&gt;
-&lt;/div&gt;
-这里使用MD语法编写你的文章&lt;/p&gt;
-&lt;div class="main-container"&gt;
- &lt;section id="timeline" class="timeline-outer"&gt;
- &lt;div class="container" id="content"&gt;
- &lt;div class="row"&gt;
- &lt;div class="col s12 m12 l12"&gt;
- &lt;ul class="timeline"&gt;
-
- 
-
- 
-
-
-
- 
-
-
-
- 
- 
- 
- 
- 
- 
- 
- 
-
- 
- 
- 
- 
-
-
-
-
- 
-
-
-
-
-&lt;li class="event" data-date='2023 05/21'&gt;
- &lt;h2&gt;标题 [2023/05/21 -&gt; 2023/05/22] &lt;/h2&gt;
- 
- &lt;div class="moment" id="moment" style="color: #c41a16;text-align: right;position: absolute;top: 0;right: 0;padding: 5px;" &gt;
- 
- &lt;/div&gt;
- 
- &lt;div&gt;
- &lt;h2 class="heading-element" id="你好"&gt;&lt;span&gt;你好&lt;/span&gt;
- &lt;a href="#%e4%bd%a0%e5%a5%bd" class="heading-mark"&gt;
- &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
- &lt;/a&gt;
-&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;测试md 语法支持&lt;/p&gt;
-&lt;/blockquote&gt;
-
- &lt;/div&gt;
-&lt;/li&gt;
-
-
-
-
-&lt;script&gt;
- function non0plural(number, name) {
- if (number == 0) {
- return ""
- }
- if (number &gt; 1) {
- return number + " " + name + "s"
- }
- return number + " " +name
- }
-
- el = document.querySelector("#moment");
- function refresh() {
- start = dayjs("2023-05-21")
- now = dayjs()
-
- total_months = now.diff(start, "M", true)
- months = total_months % 12;
- days = now.diff(start, "day", true);
- years = Math.floor((total_months) / 12)
- el.innerHTML = non0plural(years,"year")+" " + non0plural(months.toFixed(2),"month")
- + "&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;" + non0plural(days.toFixed(6),"day");
- }
- window.setInterval(refresh, 1000); 
-&lt;/script&gt;
-
-
- 
-
-
-
-
-
- 
- 
- 
- 
- 
- 
- 
- 
-
- 
- 
- 
- 
-
-
-
-
- 
-
-
-
-
-&lt;li class="event" data-date='2022 05/01'&gt;
- &lt;h2&gt;Current position [2022/05/01 -&gt; 2025/12/26] &lt;/h2&gt;
- 
- &lt;div class="moment" style="color: #c41a16;text-align: right;position: absolute;top: 0;right: 0;padding: 5px;" &gt;
- 3 years 7 months 
- &lt;/div&gt;
- 
- &lt;div&gt;
- &lt;p&gt;I&amp;rsquo;m working here 2&lt;/p&gt;
-
- &lt;/div&gt;
-&lt;/li&gt;
-
-
-
-
- 
-
-
-
-
-
- 
- 
- 
- 
- 
- 
- 
- 
-
- 
- 
- 
- 
-
-
-
-
- 
-
-
-
-
-&lt;li class="event" data-date='2020 01/02'&gt;
- &lt;h2&gt;Old position [2020/01/02 -&gt; 2025/12/26] &lt;/h2&gt;
- 
- &lt;div class="moment" style="color: #c41a16;text-align: right;position: absolute;top: 0;right: 0;padding: 5px;" &gt;
- 5 years 11 months 
- &lt;/div&gt;
- 
- &lt;div&gt;
- &lt;p&gt;I worked here 1&lt;/p&gt;
-
- &lt;/div&gt;
-&lt;/li&gt;
-
-
-
-
-
-
- &lt;/ul&gt;
- &lt;/div&gt;
- &lt;/div&gt;
- &lt;/div&gt;
- &lt;/section&gt;
-&lt;/div&gt;
-
-
-&lt;script src="https://geekswg.js.cool/js/dayjs.min.js"&gt;&lt;/script&gt;
-&lt;style&gt;
- 
-
- 
- 
-
-
-section.timeline-outer {
- width: 80%;
- margin: 0 auto;
-}
-
-h1.header {
- font-size: 50px;
- line-height: 70px;
-}
- 
-
-.timeline {
- border-left: 8px solid #42A5F5;
- border-bottom-right-radius: 2px;
- border-top-right-radius: 2px;
- box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
- 
- margin: 50px auto;
- letter-spacing: 0.5px;
- position: relative;
- line-height: 1.4em;
- padding: 20px;
- list-style: none !important;
- text-align: left;
-}
-
-.timeline h1,
-.timeline h2,
-.timeline h3 {
- font-size: 1.4em;
-}
-
-.timeline .event {
- border-bottom: 1px solid rgba(160, 160, 160, 0.2);
- padding-bottom: 15px;
- margin-bottom: 20px;
- position: relative;
-}
-
-.timeline .event:last-of-type {
- padding-bottom: 0;
- margin-bottom: 0;
- border: none;
-}
-
-.timeline .event:before,
-.timeline .event:after {
- position: absolute;
- display: block;
- top: 0;
-}
-
-.timeline .event:before {
- left: -177.5px;
- color: #212121;
- content: attr(data-date);
- text-align: right;
- font-weight: 100;
- 
- font-size: 16px;
- min-width: 120px;
-}
-
-.timeline .event:after {
- box-shadow: 0 0 0 8px #42A5F5;
- left: -50px;
- background: #212121; 
- border-radius: 50%;
- height: 11px;
- width: 11px;
- content: "";
- top: 5px;
-}
- 
- 
-
-@media (max-width: 945px) {
- .timeline .event::before {
- left: 0.5px;
- top: 20px;
- min-width: 0;
- font-size: 13px;
- }
- .timeline h3 {
- font-size: 16px;
- }
- .timeline p {
- padding-top: 20px;
- }
- section.lab h3.card-title {
- padding: 5px;
- font-size: 16px
- }
-}
-
-@media (max-width: 768px) {
- .timeline .event::before {
- left: 0.5px;
- top: 20px;
- min-width: 0;
- font-size: 13px;
- }
- .timeline .event:nth-child(1)::before,
- .timeline .event:nth-child(3)::before,
- .timeline .event:nth-child(5)::before {
- top: 38px;
- }
- .timeline h3 {
- font-size: 16px;
- }
- .timeline p {
- padding-top: 20px;
- }
-}
- 
-
-a.portfolio-link {
- margin: 0 auto;
- display: block;
- text-align: center;
-}
-
-&lt;/style&gt;
-
-
-&lt;h2 class="heading-element" id="使用demo-timeline2"&gt;&lt;span&gt;使用demo-timeline2&lt;/span&gt;
- &lt;a href="#%e4%bd%bf%e7%94%a8demo-timeline2" class="heading-mark"&gt;
- &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
- &lt;/a&gt;
-&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;{{&amp;lt; timeline2 &amp;gt;}}
-{{% tl-event2 title=&amp;#34;标题&amp;#34; from=&amp;#34;2023-05-21&amp;#34; to=&amp;#34;2023-05-22&amp;#34; %}}
-## 你好
-&amp;gt; 测试md 语法支持
- {{% /tl-event2 %}}
-
- {{% tl-event2 title=&amp;#34;Current position&amp;#34; to=&amp;#34;2023-02-01&amp;#34; from=&amp;#34;2022-05-01&amp;#34; %}}
-I&amp;#39;m working here 2
- {{% /tl-event2 %}}
-
-I worked here 1
- {{% /tl-event2 %}}
-{{&amp;lt; /timeline2 &amp;gt;}}&lt;/code&gt;&lt;/pre&gt;</description></item></channel></rss>
+&lt;a href="https://v6.51.la/report/overview?comId=287570" target="_blank" rel="external nofollow noopener noreferrer"&gt;51数据​&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/p&gt;</description></item></channel></rss>
