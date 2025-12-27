@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>毕少侠</title><link>https://geekswg.js.cool/</link><description>博客：探索、发现、分享 By geekswg-[毕少侠]</description><generator>Hugo 0.153.2 &amp; FixIt v0.4.0-alpha.3-20251224074056-4fec1cda</generator><language>zh-CN</language><managingEditor>geekswg@qq.com (geekswg)</managingEditor><webMaster>geekswg@qq.com (geekswg)</webMaster><copyright>geekswg &amp; 毕少侠</copyright><lastBuildDate>Fri, 26 Dec 2025 20:28:22 +0800</lastBuildDate><atom:link href="https://geekswg.js.cool/index.xml" rel="self" type="application/rss+xml"/><item><title>飞牛NAS之Docker</title><link>https://geekswg.js.cool/posts/2025/fn-docker/</link><pubDate>Fri, 26 Dec 2025 20:01:24 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2025/fn-docker/</guid><category domain="https://geekswg.js.cool/categories/nas/">NAS</category><description>&lt;p&gt;最近飞牛NAS发布了正式版系统，经过一段时间的使用，发现飞牛NAS的Docker功能还是很强大的，支持Docker和Docker-compose两种方式来部署应用。本文将分享一些我在飞牛NAS上使用Docker的经验和技巧。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>毕少侠</title><link>https://geekswg.js.cool/</link><description>博客：探索、发现、分享 By geekswg-[毕少侠]</description><generator>Hugo 0.153.3 &amp; FixIt v0.4.0-alpha.3-20251224074056-4fec1cda</generator><language>zh-CN</language><managingEditor>geekswg@qq.com (geekswg)</managingEditor><webMaster>geekswg@qq.com (geekswg)</webMaster><copyright>geekswg &amp; 毕少侠</copyright><lastBuildDate>Sat, 27 Dec 2025 13:24:38 +0800</lastBuildDate><atom:link href="https://geekswg.js.cool/index.xml" rel="self" type="application/rss+xml"/><item><title>飞牛NAS之Docker</title><link>https://geekswg.js.cool/posts/2025/fn-docker/</link><pubDate>Fri, 26 Dec 2025 20:01:24 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2025/fn-docker/</guid><category domain="https://geekswg.js.cool/categories/nas/">NAS</category><description>&lt;p&gt;最近飞牛NAS发布了正式版系统，经过一段时间的使用，发现飞牛NAS的Docker功能还是很强大的，支持Docker和Docker-compose两种方式来部署应用。本文将分享一些我在飞牛NAS上使用Docker的经验和技巧。&lt;/p&gt;
 &lt;h2 class="heading-element" id="什么是docker"&gt;&lt;span&gt;什么是Docker？&lt;/span&gt;
  &lt;a href="#%e4%bb%80%e4%b9%88%e6%98%afdocker" class="heading-mark"&gt;
  &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
@@ -37,7 +37,7 @@
  &lt;a href="#homepage" class="heading-mark"&gt;
  &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
  &lt;/a&gt;
-&lt;/h3&gt;&lt;p&gt;&lt;a href="https://github.com/gethomepage/homepage" target="_blank" rel="external nofollow noopener noreferrer"&gt;homepage&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;是一个非常好用的个人主页应用，可以快速搭建一个漂亮的个人主页。使用Docker-compose部署HomePage的步骤如下：&lt;/p&gt;
+&lt;/h3&gt;&lt;p&gt;&lt;a href="https://gethomepage.dev/" target="_blank" rel="external nofollow noopener noreferrer"&gt;HomePage&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;是一个非常好用的私人应用&lt;a href="https://github.com/gethomepage/homepage" target="_blank" rel="external nofollow noopener noreferrer"&gt;主页导航开源项目&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;，自定义程度较高，集成了丰富的插件，集成Docker状态监控。使用Docker-compose部署HomePage的步骤如下：&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;services:
  homepage:
  image: ghcr.io/gethomepage/homepage:latest
@@ -62,7 +62,8 @@
  &lt;a href="#cloudflare%e9%9a%a7%e9%81%93" class="heading-mark"&gt;
  &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
  &lt;/a&gt;
-&lt;/h3&gt;&lt;p&gt;&lt;a href="https://github.com/cloudflare/cloudflared" target="_blank" rel="external nofollow noopener noreferrer"&gt;cloudflared&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;Cloudflare隧道，可以将本地服务通过Cloudflare的网络暴露到公网。使用Docker-compose部署Cloudflare隧道的步骤如下：&lt;/p&gt;
+&lt;/h3&gt;&lt;p&gt;&lt;a href="https://github.com/cloudflare/cloudflared" target="_blank" rel="external nofollow noopener noreferrer"&gt;cloudflared&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;Cloudflare隧道，非常好用的内外穿透工具，简单易用，可以将本地服务通过Cloudflare的网络暴露到公网。缺点是大陆访问的速度偏慢，整体比较稳定，一条隧道可以添加n个公共路由，十分强大。
+使用Docker-compose部署Cloudflare隧道的步骤如下：&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;version: &amp;#39;3.8&amp;#39;
 services:
  cloudflared: 
@@ -109,7 +110,53 @@ services:
  - TZ=Asia/Shanghai
  - DOCKER_HOST=unix:///var/run/docker.sock
  - secretKey=your_password #密码，不少于八位且非纯数字
- image: 0nlylty/dockercopilot:latest-dev&lt;/code&gt;&lt;/pre&gt;&lt;h3 class="heading-element" id="持续更新中"&gt;&lt;span&gt;持续更新中&lt;/span&gt;
+ image: 0nlylty/dockercopilot:latest-dev&lt;/code&gt;&lt;/pre&gt;&lt;h3 class="heading-element" id="gotab标签页"&gt;&lt;span&gt;GoTab标签页&lt;/span&gt;
+ &lt;a href="#gotab%e6%a0%87%e7%ad%be%e9%a1%b5" class="heading-mark"&gt;
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
+ &lt;/a&gt;
+&lt;/h3&gt;&lt;p&gt;&lt;a href="https://www.gotab.cn/" target="_blank" rel="external nofollow noopener noreferrer"&gt;GoTab标签页&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;是一个非常好用的标签页导航工具,可以&lt;a href="https://github.com/dengxiwang/gotab-personal" target="_blank" rel="external nofollow noopener noreferrer"&gt;本地私有部署&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;，虽然后端不开源但功能强大，支持自定义背景、图标和布局。使用Docker-compose部署GoTab标签页的步骤如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;services:
+ gotab-mysql:
+ image: mysql:8.0.44
+ container_name: gotab-mysql
+ command: --default-authentication-plugin=mysql_native_password
+ restart: unless-stopped
+ environment:
+ MYSQL_ROOT_PASSWORD: myroot # 修改为你的root密码
+ # 创建一个默认数据库，如果不需要可以注释掉这行
+ MYSQL_DATABASE: gotab
+ # 创建一个MySQL用户，如果不需要可以注释掉这行
+ MYSQL_USER: gotab
+ # MySQL用户的密码，如果不需要可以注释掉这行
+ MYSQL_PASSWORD: gotab123
+ MYSQL_DEFAULT_AUTH: mysql_native_password # 新增：强制原生密码认证
+ ports:
+ - &amp;#34;3306:3306&amp;#34;
+ volumes:
+ - mysql_data:/var/lib/mysql
+ gotab-server:
+ image: doxwant/gotab:latest
+ container_name: gotab-server
+ ports:
+ - &amp;#34;9001:8080&amp;#34; # 映射主机的 8080 端口到容器的 8080 端口
+ volumes:
+ # 挂载上传文件目录，用于持久化存储用户上传的文件（根据实际修改）
+ - ./uploads:/app/uploads
+ # 挂载资源存储目录，用于保存程序运行过程中产生的资源文件（根据实际修改）
+ - ./sourceStore:/app/sourceStore
+ # 挂载配置文件 config.toml 到容器内部
+ # 使用 bind 模式将主机当前目录下的 config.toml 挂载到容器内的 /app/config.toml（根据实际修改）
+ - type: bind
+ source: ./config.toml
+ target: /app/config.toml
+
+ environment:
+ - TZ=Asia/Shanghai
+ - SERVER_PORT=8080 # 设置服务监听的端口为 8080
+ restart: unless-stopped # 容器退出时自动重启
+ #network_mode: host # 使用主机网络模式（注意：在 Docker Desktop 上不支持）
+volumes:
+ mysql_data: {}&lt;/code&gt;&lt;/pre&gt;&lt;h3 class="heading-element" id="持续更新中"&gt;&lt;span&gt;持续更新中&lt;/span&gt;
  &lt;a href="#%e6%8c%81%e7%bb%ad%e6%9b%b4%e6%96%b0%e4%b8%ad" class="heading-mark"&gt;
  &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
  &lt;/a&gt;

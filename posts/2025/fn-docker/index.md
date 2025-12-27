@@ -32,7 +32,7 @@ Docker是一种开源的应用容器引擎，允许开发者将应用程序及�
 
 ### HomePage
 
-[homepage](https://github.com/gethomepage/homepage)是一个非常好用的个人主页应用，可以快速搭建一个漂亮的个人主页。使用Docker-compose部署HomePage的步骤如下：
+[HomePage](https://gethomepage.dev/)是一个非常好用的私人应用[主页导航开源项目](https://github.com/gethomepage/homepage)，自定义程度较高，集成了丰富的插件，集成Docker状态监控。使用Docker-compose部署HomePage的步骤如下：
 
 ```yml
 services:
@@ -60,7 +60,8 @@ services:
 
 ### Cloudflare隧道
 
-[cloudflared](https://github.com/cloudflare/cloudflared)Cloudflare隧道，可以将本地服务通过Cloudflare的网络暴露到公网。使用Docker-compose部署Cloudflare隧道的步骤如下：
+[cloudflared](https://github.com/cloudflare/cloudflared)Cloudflare隧道，非常好用的内外穿透工具，简单易用，可以将本地服务通过Cloudflare的网络暴露到公网。缺点是大陆访问的速度偏慢，整体比较稳定，一条隧道可以添加n个公共路由，十分强大。
+使用Docker-compose部署Cloudflare隧道的步骤如下：
 
 ```yml
 version: '3.8'
@@ -118,6 +119,54 @@ services:
       - DOCKER_HOST=unix:///var/run/docker.sock
       - secretKey=your_password #密码，不少于八位且非纯数字
     image: 0nlylty/dockercopilot:latest-dev
+```
+### GoTab标签页
+
+[GoTab标签页](https://www.gotab.cn/)是一个非常好用的标签页导航工具,可以[本地私有部署](https://github.com/dengxiwang/gotab-personal)，虽然后端不开源但功能强大，支持自定义背景、图标和布局。使用Docker-compose部署GoTab标签页的步骤如下：
+
+```yml
+services:
+  gotab-mysql:
+    image: mysql:8.0.44
+    container_name: gotab-mysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: myroot  # 修改为你的root密码
+      # 创建一个默认数据库，如果不需要可以注释掉这行
+      MYSQL_DATABASE: gotab
+      # 创建一个MySQL用户，如果不需要可以注释掉这行
+      MYSQL_USER: gotab
+      # MySQL用户的密码，如果不需要可以注释掉这行
+      MYSQL_PASSWORD: gotab123
+      MYSQL_DEFAULT_AUTH: mysql_native_password  # 新增：强制原生密码认证
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+  gotab-server:
+    image: doxwant/gotab:latest
+    container_name: gotab-server
+    ports:
+      - "9001:8080" # 映射主机的 8080 端口到容器的 8080 端口
+    volumes:
+      # 挂载上传文件目录，用于持久化存储用户上传的文件（根据实际修改）
+      - ./uploads:/app/uploads
+      # 挂载资源存储目录，用于保存程序运行过程中产生的资源文件（根据实际修改）
+      - ./sourceStore:/app/sourceStore
+      # 挂载配置文件 config.toml 到容器内部
+      # 使用 bind 模式将主机当前目录下的 config.toml 挂载到容器内的 /app/config.toml（根据实际修改）
+      - type: bind
+        source: ./config.toml
+        target: /app/config.toml
+
+    environment:
+      - TZ=Asia/Shanghai
+      - SERVER_PORT=8080 # 设置服务监听的端口为 8080
+    restart: unless-stopped # 容器退出时自动重启
+    #network_mode: host # 使用主机网络模式（注意：在 Docker Desktop 上不支持）
+volumes:
+  mysql_data: {}
 ```
 
 ### 持续更新中
