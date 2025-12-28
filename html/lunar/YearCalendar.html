@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>农历年历</title>
+    <script src="lunar.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f5f5f5;
+        }
+
+        .calendar * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .calendar {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            width: 1110px;
+            position: relative;
+        }
+
+        .calendar .start {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            border: 1px solid #646cff;
+            border-radius: 6px;
+            overflow: hidden;
+            z-index: 10;
+        }
+
+        .calendar .start a {
+            padding: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            color: #333;
+            display: inline-block;
+        }
+
+        .calendar .start a.active {
+            background: #646cff;
+            color: #ffffff;
+        }
+
+        .calendar .title {
+            font-size: 15px;
+            color: #606266;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .calendar .title input {
+            border: 1px solid #D7D9E0;
+            padding: 7px;
+            border-radius: 6px;
+            background: #FFFFFF;
+            width: 100px;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .calendar .body {
+            overflow: hidden;
+        }
+
+        .calendar .body ul {
+            position: relative;
+            display: block;
+            width: 350px;
+            height: 334px;
+            float: left;
+            list-style: none;
+            background-color: #FAFAFA;
+            margin: 10px;
+        }
+
+        .calendar .body ul h3 {
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 80px;
+            width: 100%;
+            height: 334px;
+            text-align: center;
+            line-height: 334px;
+            color: #333;
+            opacity: 0.1;
+            filter: alpha(opacity=10);
+        }
+
+        .calendar .body ul li {
+            position: relative;
+            float: left;
+            width: 50px;
+            height: 50px;
+            cursor: default;
+            color: #444;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            font-size: 14px;
+        }
+
+        .calendar .body ul li i {
+            display: block;
+            font-size: 9px;
+            font-style: normal;
+            color: #999999;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        .calendar .body ul li u {
+            font-size: 9px;
+            font-style: normal;
+            text-decoration: none;
+            position: absolute;
+            right: 4px;
+            top: 0;
+            color: #333;
+        }
+
+        .calendar .body ul li.week {
+            height: 34px;
+            line-height: 33px;
+            font-size: 12px;
+            color: #333333;
+            border-bottom: 1px solid #E3E3E3;
+        }
+
+        .calendar .body ul li.rest u {
+            color: #5CB85C;
+        }
+
+        .calendar .body ul li.festival i {
+            color: #D02F12;
+        }
+
+        .calendar .body ul li.today {
+            font-weight: bold;
+            color: #1f80a9;
+        }
+
+        .calendar .body ul li.today i {
+            color: #1f80a9;
+        }
+
+        .calendar .body ul li.other {
+            opacity: 0.3;
+        }
+    </style>
+</head>
+<body>
+    <div class="calendar" id="app">
+        <div class="start">
+            <a id="start0" onclick="setStart(0)">周日起</a>
+            <a id="start1" onclick="setStart(1)">周一起</a>
+            <a id="start6" onclick="setStart(6)">周六起</a>
+        </div>
+        <div class="title">
+            <input type="text" id="yearInput" placeholder="阳历年">
+        </div>
+        <div class="body" id="body">
+        </div>
+    </div>
+
+    <script>
+        class Day {
+            constructor() {
+                this.day = '';
+                this.text = '';
+                this.isFestival = false;
+                this.isToday = false;
+                this.isHoliday = false;
+                this.isRest = false;
+                this.isCurrentMonth = false;
+            }
+        }
+
+        class Month {
+            constructor() {
+                this.month = 0;
+                this.days = [];
+            }
+        }
+
+        const now = Solar.fromDate(new Date());
+        
+        const state = {
+            year: now.getYear(),
+            weekStart: 0,
+            heads: new Array(),
+            months: new Array()
+        };
+
+        function buildDay(d, month) {
+            const lunar = d.getLunar();
+            const day = new Day();
+            day.day = d.getDay() + '';
+            let text = lunar.getDayInChinese();
+            let festivals = d.getFestivals();
+            if (festivals.length > 0) {
+                text = festivals[0];
+                day.isFestival = true;
+            }
+            festivals = lunar.getFestivals();
+            if (festivals.length > 0) {
+                text = festivals[0];
+                day.isFestival = true;
+            }
+            if (1 === lunar.getDay()) {
+                text = lunar.getMonthInChinese() + '月';
+                day.isFestival = false;
+            }
+            const jq = lunar.getJieQi();
+            if (jq) {
+                text = jq;
+                day.isFestival = true;
+            }
+            day.text = text;
+            if (d.toYmd() === now.toYmd()) {
+                day.isToday = true;
+            }
+            const h = HolidayUtil.getHoliday(d.getYear(), d.getMonth(), d.getDay());
+            if (h) {
+                day.isHoliday = true;
+                day.isRest = !h.isWork();
+            }
+            day.isCurrentMonth = d.getMonth() == month;
+            return day;
+        }
+
+        function render() {
+            const heads = ['日', '一', '二', '三', '四', '五', '六'];
+            state.heads = heads.slice(state.weekStart).concat(heads.slice(0, state.weekStart));
+            
+            const year = SolarYear.fromYear(parseInt(state.year + '', 10));
+            const months = [];
+            
+            year.getMonths().forEach(m => {
+                const month = new Month();
+                month.month = m.getMonth();
+                const weeks = m.getWeeks(state.weekStart);
+                weeks.forEach(w => {
+                    w.getDays().forEach(d => {
+                        month.days.push(buildDay(d, month.month));
+                    });
+                });
+                months.push(month);
+            });
+            
+            state.months = months;
+            
+            // 更新DOM
+            const body = document.getElementById('body');
+            body.innerHTML = '';
+            
+            months.forEach(month => {
+                const ul = document.createElement('ul');
+                
+                // 添加月份标题
+                const h3 = document.createElement('h3');
+                h3.textContent = month.month;
+                ul.appendChild(h3);
+                
+                // 添加星期头部
+                state.heads.forEach(head => {
+                    const li = document.createElement('li');
+                    li.className = 'week';
+                    li.textContent = head;
+                    ul.appendChild(li);
+                });
+                
+                // 添加日期
+                month.days.forEach(day => {
+                    const li = document.createElement('li');
+                    li.textContent = day.day;
+                    
+                    if (day.isFestival) li.classList.add('festival');
+                    if (day.isToday) li.classList.add('today');
+                    if (day.isRest) li.classList.add('rest');
+                    if (!day.isCurrentMonth) li.classList.add('other');
+                    
+                    const i = document.createElement('i');
+                    i.textContent = day.text;
+                    li.appendChild(i);
+                    
+                    if (day.isHoliday) {
+                        const u = document.createElement('u');
+                        u.textContent = day.isRest ? '休' : '班';
+                        li.appendChild(u);
+                    }
+                    
+                    ul.appendChild(li);
+                });
+                
+                body.appendChild(ul);
+            });
+        }
+
+        function setStart(start) {
+            state.weekStart = start;
+            
+            // 更新激活状态
+            document.getElementById('start0').classList.remove('active');
+            document.getElementById('start1').classList.remove('active');
+            document.getElementById('start6').classList.remove('active');
+            
+            if (start === 0) {
+                document.getElementById('start0').classList.add('active');
+            } else if (start === 1) {
+                document.getElementById('start1').classList.add('active');
+            } else if (start === 6) {
+                document.getElementById('start6').classList.add('active');
+            }
+            
+            render();
+        }
+
+        // 初始化年份输入
+        document.getElementById('yearInput').value = state.year;
+        document.getElementById('yearInput').addEventListener('change', function() {
+            state.year = parseInt(this.value) || new Date().getFullYear();
+            render();
+        });
+
+        // 初始化周开始状态
+        setStart(0);
+
+        // 初始渲染
+        render();
+    </script>
+</body>
+</html>

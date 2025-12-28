@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>农历周历</title>
+    <script src="lunar.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f5f5f5;
+        }
+
+        .calendar * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .calendar {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            overflow: hidden;
+            color: #303133;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .calendar a {
+            color: #409EFF;
+            text-decoration: none;
+        }
+
+        .calendar div.title {
+            height: 48px;
+            line-height: 48px;
+            font-size: 22px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            color: #606266;
+            padding: 0 20px;
+            background: #fff;
+        }
+
+        .calendar div.title div.year {
+            color: #303133;
+        }
+
+        .calendar div.title div.month {
+            width: 120px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .calendar div.title div.month a {
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .calendar div.body {
+            background: #FAFCFF;
+            border-left: 1px solid #CDD0D6;
+            border-top: 1px solid #CDD0D6;
+            overflow: hidden;
+            width: 831px;
+        }
+
+        .calendar div.body ul {
+            list-style: none;
+        }
+
+        .calendar div.body ul li {
+            position: relative;
+            display: block;
+            float: left;
+            width: 90px;
+            height: 300px;
+            border-right: 1px solid #CDD0D6;
+            border-bottom: 1px solid #CDD0D6;
+            font-size: 26px;
+            padding-top: 20px;
+            overflow: hidden;
+        }
+
+        .calendar div.body ul li i {
+            position: absolute;
+            display: block;
+            right: 5px;
+            top: 80px;
+            font-style: normal;
+            width: 12px;
+            font-size: 12px;
+            color: #909399;
+        }
+
+        .calendar div.body ul li b {
+            position: absolute;
+            display: block;
+            right: 5px;
+            top: 25px;
+            font-weight: normal;
+            width: 12px;
+            font-size: 12px;
+            color: #606266;
+        }
+
+        .calendar div.body ul li.icon {
+            width: 200px;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .calendar div.body ul li.icon img {
+            width: 200px;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .calendar div.body ul li.festival i {
+            color: #F56C6C;
+        }
+
+        .calendar div.body ul li.today {
+            color: #E6A23C;
+            font-weight: bold;
+        }
+
+        .calendar div.body ul li.today i {
+            color: #E6A23C;
+        }
+    </style>
+</head>
+<body>
+    <div class="calendar" id="app">
+        <div class="title">
+            <div class="year" id="yearDisplay"></div>
+            <div class="month">
+                <a href="javascript:void(0);" onclick="onPrevWeek()">&lt;</a>
+                <span id="weekDisplay"></span>
+                <a href="javascript:void(0);" onclick="onNextWeek()">&gt;</a>
+            </div>
+        </div>
+        <div class="body">
+            <ul id="weekUl">
+                <li class="icon" id="iconLi">
+                    <div style="width: 200px; height: 300px; display: flex; align-items: center; justify-content: center; color: #909399; font-size: 16px;">
+                        节气图片
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        class Day {
+            constructor() {
+                this.week = '';
+                this.day = '';
+                this.text = '';
+                this.jieQi = '';
+                this.isFestival = false;
+                this.isToday = false;
+            }
+        }
+
+        const now = Solar.fromDate(new Date());
+        
+        // 节气名称列表，用于显示对应图片
+        const JIE_QI_NAMES = [
+            '冬至', '小寒', '大寒', '立春', '雨水', '惊蛰', 
+            '春分', '清明', '谷雨', '立夏', '小满', '芒种', 
+            '夏至', '小暑', '大暑', '立秋', '处暑', '白露', 
+            '秋分', '寒露', '霜降', '立冬', '小雪', '大雪'
+        ];
+
+        // 图片路径变量
+        const IMG_PATH = 'imgs/';
+        
+        // 节气图片路径
+        const JIE_QI_IMAGES = {
+            '冬至': IMG_PATH + 'dong_zhi.webp',
+            '小寒': IMG_PATH + 'xiao_han.webp',
+            '大寒': IMG_PATH + 'da_han.webp',
+            '立春': IMG_PATH + 'li_chun.webp',
+            '雨水': IMG_PATH + 'yu_shui.webp',
+            '惊蛰': IMG_PATH + 'jing_zhe.webp',
+            '春分': IMG_PATH + 'chun_fen.webp',
+            '清明': IMG_PATH + 'qing_ming.webp',
+            '谷雨': IMG_PATH + 'gu_yu.webp',
+            '立夏': IMG_PATH + 'li_xia.webp',
+            '小满': IMG_PATH + 'xiao_man.webp',
+            '芒种': IMG_PATH + 'mang_zhong.webp',
+            '夏至': IMG_PATH + 'xia_zhi.webp',
+            '小暑': IMG_PATH + 'xiao_shu.webp',
+            '大暑': IMG_PATH + 'da_shu.webp',
+            '立秋': IMG_PATH + 'li_qiu.webp',
+            '处暑': IMG_PATH + 'chu_shu.webp',
+            '白露': IMG_PATH + 'bai_lu.webp',
+            '秋分': IMG_PATH + 'qiu_fen.webp',
+            '寒露': IMG_PATH + 'han_lu.webp',
+            '霜降': IMG_PATH + 'shuang_jiang.webp',
+            '立冬': IMG_PATH + 'li_dong.webp',
+            '小雪': IMG_PATH + 'xiao_xue.webp',
+            '大雪': IMG_PATH + 'da_xue.webp'
+        };
+        
+        const state = {
+            year: now.getYear(),
+            month: now.getMonth(),
+            day: now.getDay(),
+            weekIndex: 1,
+            weekStart: 1,
+            heads: ['一', '二', '三', '四', '五', '六', '日'],
+            icon: '',
+            days: new Array()
+        };
+
+        function buildDay(d) {
+            const day = new Day();
+            day.day = (d.getDay() < 10 ? '0' : '') + d.getDay();
+            const lunar = d.getLunar();
+            let text = lunar.getMonthInChinese() + '月' + lunar.getDayInChinese();
+            let festivals = d.getFestivals();
+            if (festivals.length > 0) {
+                text = festivals[0];
+                day.isFestival = true;
+            }
+            festivals = lunar.getFestivals();
+            if (festivals.length > 0) {
+                text = festivals[0];
+                day.isFestival = true;
+            }
+            const jq = lunar.getJieQi();
+            if (jq) {
+                text = jq;
+                day.isFestival = true;
+            }
+            day.text = text;
+            day.week = d.getWeekInChinese();
+            if (d.toString() === now.toString()) {
+                day.isToday = true;
+            }
+            day.jieQi = lunar.getPrevJieQi(true).getName();
+            return day;
+        }
+
+        function render() {
+            const week = SolarWeek.fromYmd(state.year, state.month, state.day, state.weekStart);
+            state.weekIndex = week.getIndexInYear();
+            const days = [];
+            let jq = '';
+            let count = 0;
+            
+            week.getDays().forEach(d => {
+                const day = buildDay(d);
+                if (jq == '') {
+                    jq = day.jieQi;
+                }
+                if (day.jieQi == jq) {
+                    count++;
+                } else if (count < 4) {
+                    jq = day.jieQi;
+                }
+                days.push(day);
+            });
+            
+            state.icon = JIE_QI_IMAGES[jq] || '';
+            state.days = days;
+            
+            // 更新年份显示
+            document.getElementById('yearDisplay').textContent = state.year;
+            
+            // 更新周数显示
+            document.getElementById('weekDisplay').textContent = `第 ${state.weekIndex} 周`;
+            
+            // 更新节气图标
+            const iconLi = document.getElementById('iconLi');
+            if (state.icon) {
+                iconLi.innerHTML = `<img src="${state.icon}" alt="${jq}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div style="width: 200px; height: 300px; display: none; align-items: center; justify-content: center; color: #909399; font-size: 16px; flex-direction: column;">
+                        <div style="font-size: 24px; margin-bottom: 10px;">${jq}</div>
+                        <div>节气图片</div>
+                    </div>`;
+            } else {
+                iconLi.innerHTML = `<div style="width: 200px; height: 300px; display: flex; align-items: center; justify-content: center; color: #909399; font-size: 16px; flex-direction: column;">
+                    <div style="font-size: 24px; margin-bottom: 10px;">${jq || '节气'}</div>
+                    <div>节气图片</div>
+                </div>`;
+            }
+            
+            // 更新日期列表
+            const weekUl = document.getElementById('weekUl');
+            // 保留第一个图标元素，清除其余的
+            while (weekUl.children.length > 1) {
+                weekUl.removeChild(weekUl.lastChild);
+            }
+            
+            state.days.forEach(day => {
+                const li = document.createElement('li');
+                li.textContent = day.day;
+                
+                if (day.isFestival) li.classList.add('festival');
+                if (day.isToday) li.classList.add('today');
+                
+                const i = document.createElement('i');
+                i.textContent = day.text;
+                li.appendChild(i);
+                
+                const b = document.createElement('b');
+                b.textContent = '周' + day.week;
+                li.appendChild(b);
+                
+                weekUl.appendChild(li);
+            });
+        }
+
+        function onPrevWeek() {
+            const week = SolarWeek.fromYmd(state.year, state.month, state.day, state.weekStart).next(-1, false);
+            if (week.getYear() !== state.year) {
+                state.month = 12;
+                state.day = 31;
+            } else {
+                state.month = week.getMonth();
+                state.day = week.getDay();
+            }
+            state.year = week.getYear();
+            render();
+        }
+
+        function onNextWeek() {
+            const week = SolarWeek.fromYmd(state.year, state.month, state.day, state.weekStart).next(1, false);
+            if (week.getYear() !== state.year) {
+                state.month = 1;
+                state.day = 1;
+            } else {
+                state.month = week.getMonth();
+                state.day = week.getDay();
+            }
+            state.year = week.getYear();
+            render();
+        }
+
+        // 初始渲染
+        render();
+    </script>
+</body>
+</html>

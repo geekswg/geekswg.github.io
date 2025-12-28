@@ -1,0 +1,3290 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>万能日历</title>
+    <script src="lunar.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Microsoft YaHei', 'PingFang SC', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .main-container {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(20px);
+            display: flex;
+            gap: 30px;
+            padding: 30px;
+            max-width: 1400px;
+            width: 100%;
+            backdrop-filter: blur(10px);
+        }
+
+        .calendar-section {
+            flex: 2;
+        }
+
+        .detail-section {
+            flex: 1;
+            min-width: 350px;
+            max-width: 400px;
+            display: flex;
+            flex-direction: column;
+        }
+
+
+
+
+
+        .calendar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: linear-gradient(135deg, #4ECDC4, #44A08D);
+            border-radius: 15px;
+            color: white;
+        }
+
+        .nav-btn {
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .festival-selector {
+            position: relative;
+            display: inline-block;
+        }
+
+        .festival-toggle {
+            background: linear-gradient(135deg, #9C27B0, #7B1FA2);
+            border: 1px solid #9C27B0;
+        }
+
+        .festival-toggle:hover {
+            background: linear-gradient(135deg, #7B1FA2, #9C27B0);
+        }
+
+        .theme-selector {
+            position: relative;
+            display: inline-block;
+        }
+
+        .theme-toggle {
+            background: linear-gradient(135deg, #2196F3, #1976D2);
+            border: 1px solid #2196F3;
+        }
+
+        .theme-toggle:hover {
+            background: linear-gradient(135deg, #1976D2, #2196F3);
+        }
+
+        .theme-dropdown {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: white;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+            padding: 8px;
+            min-width: 140px;
+            z-index: 1000;
+            display: none;
+            margin-top: 5px;
+        }
+
+        .theme-dropdown.show {
+            display: block;
+        }
+
+        .theme-option {
+            display: flex;
+            align-items: center;
+            padding: 8px 12px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border-radius: 6px;
+            font-size: 13px;
+            gap: 8px;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .theme-option:hover {
+            background-color: #f0f0f0;
+            color: #1976D2;
+        }
+
+        .theme-option.active {
+            background-color: #1976D2;
+            color: white;
+            font-weight: bold;
+        }
+
+        .theme-icon {
+            font-size: 16px;
+            min-width: 20px;
+        }
+
+        .festival-dropdown {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: white;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+            padding: 12px;
+            min-width: 140px;
+            z-index: 1000;
+            display: none;
+            margin-top: 5px;
+        }
+
+        .festival-dropdown.show {
+            display: block;
+        }
+
+        .festival-option {
+            display: flex;
+            align-items: center;
+            padding: 6px 8px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border-radius: 4px;
+            font-size: 13px;
+            color: #333;
+        }
+
+        .festival-option:hover {
+            background-color: #f0f0f0;
+        }
+
+        .festival-option input[type="checkbox"] {
+            margin-right: 8px;
+            transform: scale(1.1);
+        }
+
+        .festival-option span {
+            color: #333;
+            user-select: none;
+        }
+
+        .today-btn {
+            background: linear-gradient(135deg, #FF6B6B, #E6A23C);
+            border: 1px solid #FF6B6B;
+        }
+
+        .today-btn:hover {
+            background: linear-gradient(135deg, #E6A23C, #FF6B6B);
+            transform: translateY(-2px);
+        }
+
+        .date-selector {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .year-input, .month-select {
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            color: #333;
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            min-width: 80px;
+        }
+
+        .year-input {
+            min-width: 100px;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        .month-select {
+            font-size: 14px;
+        }
+
+        .year-input::-webkit-inner-spin-button, .year-input::-webkit-outer-spin-button {
+            opacity: 1;
+        }
+
+        .year-input:focus, .month-select:focus {
+            background: white;
+            border-color: white;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
+        }
+
+        .year-input::placeholder {
+            color: #999;
+            font-weight: normal;
+        }
+
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 15px;
+        }
+
+        .weekday {
+            text-align: center;
+            padding: 15px 0;
+            font-weight: bold;
+            color: #4ECDC4;
+            font-size: 16px;
+            border-bottom: 2px solid #4ECDC4;
+        }
+
+        .calendar-day {
+            aspect-ratio: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: white;
+            border: 2px solid #e9ecef;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .calendar-day.weekend {
+            background: linear-gradient(135deg, #fff9e6, #ffe6cc);
+            border-color: #ffcc80;
+        }
+
+        /* 鼠标悬停提示框样式 */
+        .date-tooltip {
+            position: fixed;
+            background: rgba(255, 255, 255, 0.98);
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            min-width: 320px;
+            max-width: 400px;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            display: none;
+            font-family: 'Microsoft YaHei', 'PingFang SC', sans-serif;
+            /* 固定在右下角 */
+            right: 20px;
+            bottom: 20px;
+            left: auto;
+            top: auto;
+        }
+
+        .date-tooltip.show {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .tooltip-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .tooltip-date {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .tooltip-lunar {
+            font-size: 14px;
+            color: #666;
+            margin-top: 2px;
+        }
+
+        .tooltip-jieqi {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+            padding: 8px 12px;
+            background: linear-gradient(135deg, #f0f8ff, #e6f3ff);
+            border-radius: 8px;
+            border-left: 3px solid #4ECDC4;
+        }
+
+        .tooltip-jieqi img {
+            width: 80px;
+            height: 80px;
+            border-radius: 8px;
+            margin-right: 15px;
+            object-fit: cover;
+            border: 2px solid rgba(78, 205, 196, 0.3);
+        }
+
+        .tooltip-jieqi-info {
+            flex: 1;
+        }
+
+        .tooltip-jieqi-name {
+            font-weight: bold;
+            color: #4ECDC4;
+            font-size: 14px;
+        }
+
+        .tooltip-jieqi-desc {
+            font-size: 12px;
+            color: #666;
+            margin-top: 2px;
+        }
+
+        /* 三伏三九样式 */
+        .tooltip-fu-jiu {
+            margin: 10px 0;
+            padding: 8px 12px;
+            background: linear-gradient(135deg, #fff8f0, #fff0e6);
+            border-radius: 8px;
+            border-left: 3px solid #FFA500;
+        }
+
+        .tooltip-fu-jiu-title {
+            font-size: 13px;
+            font-weight: bold;
+            color: #FFA500;
+            margin-bottom: 6px;
+        }
+
+        .tooltip-fu-jiu-content {
+            display: flex;
+            gap: 10px;
+        }
+
+        #tooltipFu, #tooltipJiu {
+            flex: 1;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            text-align: center;
+        }
+
+        #tooltipFu {
+            background: rgba(255, 107, 107, 0.1);
+            color: #FF6B6B;
+            border: 1px solid rgba(255, 107, 107, 0.3);
+        }
+
+        #tooltipJiu {
+            background: rgba(78, 205, 196, 0.1);
+            color: #4ECDC4;
+            border: 1px solid rgba(78, 205, 196, 0.3);
+        }
+
+        .tooltip-festivals {
+            margin: 10px 0;
+        }
+
+        .tooltip-festival-title {
+            font-size: 14px;
+            font-weight: bold;
+            color: #FF6B6B;
+            margin-bottom: 8px;
+        }
+
+        .tooltip-festival-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .tooltip-festival-item {
+            background: linear-gradient(135deg, #fff0f0, #ffe6e6);
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 11px;
+            color: #d63384;
+            border: 1px solid #ffcccc;
+        }
+
+        /* 日期计算信息样式 */
+        .tooltip-date-info {
+            margin: 12px 0;
+            padding: 10px;
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            border-radius: 6px;
+            border-left: 2px solid #9C27B0;
+            font-size: 11px;
+        }
+
+        .date-info-row {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 4px;
+        }
+
+        .date-info-item {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 2px;
+            margin-bottom: 0;
+        }
+
+        .date-info-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .info-label {
+            color: #666;
+            font-weight: normal;
+        }
+
+        .info-value {
+            color: #9C27B0;
+            font-weight: bold;
+            background: rgba(156, 39, 176, 0.1);
+            padding: 1px 4px;
+            border-radius: 3px;
+            min-width: 20px;
+            text-align: center;
+            margin: 0 2px;
+        }
+
+        .tooltip-holiday {
+            margin: 10px 0;
+            padding: 8px 12px;
+            background: linear-gradient(135deg, #f0fff0, #e6ffe6);
+            border-radius: 8px;
+            border-left: 3px solid #5CB85C;
+        }
+
+        .tooltip-holiday.rest {
+            background: linear-gradient(135deg, #f0fff0, #e6ffe6);
+            border-left-color: #5CB85C;
+        }
+
+        .tooltip-holiday.work {
+            background: linear-gradient(135deg, #fff8e6, #fff0cc);
+            border-left-color: #E6A23C;
+        }
+
+        .tooltip-holiday-symbol {
+            font-weight: bold;
+            font-size: 14px;
+            margin-right: 6px;
+        }
+
+        .tooltip-holiday-name {
+            font-weight: bold;
+            font-size: 13px;
+        }
+
+        .calendar-day:hover {
+            border-color: #4ECDC4;
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(78, 205, 196, 0.3);
+            z-index: 10;
+        }
+
+        .calendar-day.selected {
+            background: linear-gradient(135deg, #4ECDC4, #44A08D);
+            color: white;
+            border-color: #4ECDC4;
+        }
+
+        .calendar-day.other-month {
+            opacity: 0.4;
+            background: #f8f9fa;
+        }
+
+        .calendar-day.today {
+            background: linear-gradient(135deg, #FF6B6B, #E6A23C);
+            color: white;
+            border-color: #FF6B6B;
+            font-weight: bold;
+        }
+
+        .day-number {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 3px;
+        }
+
+        .lunar-day {
+            font-size: 11px;
+            color: #666;
+            text-align: center;
+        }
+
+        .festival-tag {
+            position: absolute;
+            top: 2px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #FF6B6B;
+            color: white;
+            font-size: 9px;
+            padding: 1px 4px;
+            border-radius: 8px;
+            font-weight: bold;
+            z-index: 10;
+            white-space: nowrap;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            pointer-events: none; /* 防止拦截鼠标事件 */
+        }
+
+        .festival-tag:hover {
+            transform: translateX(-50%) scale(1.1);
+            box-shadow: 0 2px 8px rgba(255, 107, 107, 0.4);
+            z-index: 11;
+        }
+
+        .jieqi-tag {
+            position: absolute;
+            bottom: 2px;
+            left: 2px;
+            background: #4ECDC4;
+            color: white;
+            font-size: 8px;
+            padding: 1px 4px;
+            border-radius: 5px;
+            z-index: 10;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .jieqi-tag:hover {
+            transform: scale(1.1);
+            box-shadow: 0 2px 8px rgba(78, 205, 196, 0.4);
+            z-index: 11;
+        }
+
+        /* 三九信息标签 - 放在右下角 */
+        .fu-jiu-tag {
+            position: absolute;
+            bottom: 2px;
+            right: 2px;
+            background: #FFA500;
+            color: white;
+            font-size: 7px;
+            padding: 1px 3px;
+            border-radius: 4px;
+            z-index: 10;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            font-weight: bold;
+        }
+
+        .fu-jiu-tag:hover {
+            transform: scale(1.1);
+            box-shadow: 0 2px 8px rgba(255, 165, 0, 0.4);
+            z-index: 11;
+        }
+
+
+
+        .holiday-tag {
+            position: absolute;
+            top: 2px;
+            right: 2px;
+            color: white;
+            font-size: 9px;
+            padding: 1px 4px;
+            border-radius: 8px;
+            font-weight: bold;
+            z-index: 10;
+            white-space: nowrap;
+            pointer-events: none; /* 防止拦截鼠标事件 */
+        }
+
+
+
+        .empty-state {
+            text-align: center;
+            color: #999;
+            font-style: italic;
+            padding: 40px 20px;
+        }
+
+        .huangli {
+            background: white;
+            padding: 8px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .solar-date {
+            font-size: 14px;
+            font-weight: bold;
+            color: #4ECDC4;
+            margin: 0;
+            text-align: left;
+            background: linear-gradient(135deg, #f0f8ff, #e6f3ff);
+            padding: 4px 8px;
+            border-radius: 0 6px 6px 0;
+            border-left: 3px solid #4ECDC4;
+            align-self: flex-start;
+        }
+
+        #md {
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+            text-align: center;
+            margin: 0;
+        }
+
+        #ymd {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+            justify-content: center;
+            margin: 0;
+        }
+
+        #ymd i {
+            background: linear-gradient(135deg, #4ECDC4, #44A08D);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-style: normal;
+        }
+
+        .nayin, .chongsha, .pengzu {
+            display: flex;
+            align-items: center;
+            margin-bottom: 4px;
+            padding: 4px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .nayin b, .chongsha b, .pengzu b {
+            color: #4ECDC4;
+            font-size: 13px;
+            margin-right: 10px;
+            min-width: 40px;
+        }
+
+        .nayin i, .chongsha i, .pengzu i {
+            color: #666;
+            font-size: 12px;
+            font-style: normal;
+        }
+
+        .fangwei-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 6px;
+            padding: 4px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .fangwei-item {
+            flex: 1;
+            text-align: center;
+            padding: 4px;
+        }
+
+        .fangwei-item b {
+            display: block;
+            color: #4ECDC4;
+            font-size: 11px;
+            margin-bottom: 2px;
+        }
+
+        .fangwei-item i {
+            display: block;
+            color: #666;
+            font-size: 11px;
+            font-style: normal;
+        }
+
+        .festival-section {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #e9ecef;
+        }
+
+        .festival-title {
+            font-size: 14px;
+            font-weight: bold;
+            color: #4ECDC4;
+            margin-bottom: 10px;
+        }
+
+        .jieqi-status-container {
+            margin-bottom: 10px;
+        }
+
+        .jieqi-status {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-size: 13px;
+            margin-bottom: 5px;
+            line-height: 1.4;
+        }
+
+        .jieqi-status.today {
+            background: linear-gradient(135deg, #4ECDC4, #44A08D);
+            color: white;
+            font-weight: bold;
+        }
+
+        .jieqi-status.upcoming {
+            background: linear-gradient(135deg, #fff3cd, #ffeaa7);
+            color: #856404;
+        }
+
+        .festival-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .festival-item {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            padding: 6px 12px;
+            border-radius: 15px;
+            font-size: 12px;
+            color: #666;
+        }
+
+        .festival-item.jieqi {
+            background: linear-gradient(135deg, #4ECDC4, #44A08D);
+            color: white;
+        }
+
+        .festival-item.holiday {
+            background: linear-gradient(135deg, #FF6B6B, #E6A23C);
+            color: white;
+        }
+
+        .upcoming-section {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #e9ecef;
+        }
+
+        .upcoming-title {
+            font-size: 14px;
+            font-weight: bold;
+            color: #FF6B6B;
+            margin-bottom: 10px;
+        }
+
+        .upcoming-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .upcoming-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(135deg, #fff3cd, #ffeaa7);
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-size: 13px;
+            transition: transform 0.2s ease;
+        }
+
+        .upcoming-item:hover {
+            transform: translateX(5px);
+        }
+
+        .upcoming-name {
+            color: #856404;
+            font-weight: bold;
+        }
+
+        .upcoming-days {
+            color: #d63384;
+            font-weight: bold;
+            background: rgba(255, 255, 255, 0.5);
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 11px;
+        }
+
+        /* 节假日样式 */
+        .holiday-section {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #e9ecef;
+        }
+
+        .holiday-title {
+            font-size: 14px;
+            font-weight: bold;
+            color: #5CB85C;
+            margin-bottom: 10px;
+        }
+
+        .holiday-status {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 13px;
+            line-height: 1.4;
+        }
+
+        .holiday-status.rest {
+            background: linear-gradient(135deg, #5CB85C, #4CAE4C);
+            color: white;
+        }
+
+        .holiday-status.work {
+            background: linear-gradient(135deg, #E6A23C, #D68910);
+            color: white;
+        }
+
+        .holiday-icon {
+            font-size: 16px;
+            margin-right: 8px;
+        }
+
+        .holiday-symbol {
+            font-size: 18px;
+            font-weight: bold;
+            margin-right: 8px;
+            background: rgba(255, 255, 255, 0.3);
+            padding: 2px 6px;
+            border-radius: 4px;
+            min-width: 24px;
+            text-align: center;
+        }
+
+        .holiday-name {
+            font-weight: bold;
+            margin-right: 8px;
+        }
+
+        .holiday-type {
+            font-size: 12px;
+            opacity: 0.9;
+        }
+
+        .weekstart-selector {
+            display: flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 2px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .weekstart-option {
+            padding: 6px 12px;
+            cursor: pointer;
+            border-radius: 16px;
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.8);
+            transition: all 0.3s ease;
+            user-select: none;
+            white-space: nowrap;
+        }
+
+        .weekstart-option.active {
+            background: white;
+            color: #2196F3;
+            font-weight: bold;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .weekstart-option:hover:not(.active) {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .yishen-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            gap: 10px;
+        }
+
+        #yi, #ji {
+            flex: 2;
+            margin: 0;
+            padding: 8px 6px;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            min-height: 110px;
+        }
+
+        #jshen, #xshen {
+            flex: 1;
+            margin: 0;
+            padding: 10px;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            min-height: 120px;
+        }
+
+        .yiji-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
+            gap: 2px;
+            align-items: start;
+            justify-items: center;
+        }
+
+        .shen-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4px;
+            align-items: start;
+        }
+
+        .yiji {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+        }
+
+        .yiji b, #jshen b {
+            color: #4ECDC4;
+            font-size: 1rem;
+            margin-right: 8px;
+            display: block;
+            margin-bottom: 6px;
+            text-align: center;
+        }
+
+        .yiji.ji {
+            background: linear-gradient(135deg, #ffe6e6, #ffcccc);
+        }
+
+        .yiji.ji b, #xshen b {
+            color: #FF6B6B;
+            font-size: 1rem;
+            margin-right: 8px;
+            display: block;
+            margin-bottom: 6px;
+            text-align: center;
+        }
+
+        .yiji i {
+            color: #666;
+            font-size: 10px;
+            font-style: normal;
+            text-align: center;
+            padding: 2px 4px;
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 3px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            white-space: nowrap;
+            min-width: fit-content;
+            max-width: 100%;
+            box-sizing: border-box;
+            line-height: 1.2;
+        }
+
+        .shen i {
+            color: #666;
+            font-size: 10px;
+            font-style: normal;
+            text-align: center;
+            padding: 2px 3px;
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 3px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            width: 100%;
+            box-sizing: border-box;
+            line-height: 1.2;
+        }
+
+        #jshen {
+            background: linear-gradient(135deg, #f0f8ff, #e6f3ff);
+        }
+
+        #xshen {
+            background: linear-gradient(135deg, #fff5f5, #ffe6e6);
+        }
+
+        @media (max-width: 1024px) {
+            .main-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .detail-section {
+                width: 100%;
+                max-width: none;
+            }
+        }
+
+        /* 深色主题样式 */
+        body.dark-theme {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        }
+
+        body.dark-theme .main-container {
+            background: rgba(30, 30, 46, 0.95);
+            color: #e0e0e0;
+        }
+
+        body.dark-theme .calendar-header {
+            background: linear-gradient(135deg, #2196F3, #1976D2);
+        }
+
+        body.dark-theme .nav-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+        }
+
+        body.dark-theme .nav-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        body.dark-theme .year-input, 
+        body.dark-theme .month-select {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+        }
+
+        body.dark-theme .year-input:focus, 
+        body.dark-theme .month-select:focus {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 255, 255, 0.4);
+        }
+
+        body.dark-theme .calendar-grid {
+            background: rgba(30, 30, 46, 0.8);
+        }
+
+        body.dark-theme .calendar-day {
+            background: rgba(50, 50, 70, 0.8);
+            border: 2px solid #4a5568;
+            color: #e0e0e0;
+        }
+
+        body.dark-theme .calendar-day:hover {
+            border-color: #2196F3;
+            box-shadow: 0 5px 15px rgba(33, 150, 243, 0.3);
+        }
+
+        body.dark-theme .calendar-day.weekend:hover {
+            border-color: #b8860b;
+            box-shadow: 0 5px 15px rgba(184, 134, 11, 0.3);
+        }
+
+        body.dark-theme .calendar-day.selected {
+            background: linear-gradient(135deg, #2196F3, #1976D2);
+            border-color: #2196F3;
+        }
+
+        body.dark-theme .calendar-day.today {
+            background: linear-gradient(135deg, #FF6B6B, #E6A23C);
+            border-color: #FF6B6B;
+        }
+
+        body.dark-theme .calendar-day.weekend {
+            background: linear-gradient(135deg, #3d3220, #4a3920);
+            border-color: #b8860b;
+        }
+
+        body.dark-theme .weekday {
+            color: #2196F3;
+            border-bottom-color: #2196F3;
+        }
+
+        body.dark-theme .lunar-day {
+            color: #a0a0a0;
+        }
+
+        body.dark-theme .date-tooltip {
+            background: rgba(30, 30, 46, 0.98);
+            border: 1px solid #4a5568;
+            color: #e0e0e0;
+        }
+
+        body.dark-theme .tooltip-date-info {
+            background: linear-gradient(135deg, #2d3748, #1a202c);
+            border-left-color: #2196F3;
+        }
+
+        body.dark-theme .info-label {
+            color: #a0a0a0;
+        }
+
+        body.dark-theme .info-value {
+            color: #2196F3;
+            background: rgba(33, 150, 243, 0.1);
+        }
+
+        body.dark-theme .huangli {
+            background: rgba(30, 30, 46, 0.9);
+            color: #e0e0e0;
+        }
+
+        body.dark-theme .solar-date {
+            background: linear-gradient(135deg, #1e3a8a, #1e40af);
+            color: white;
+            border-left-color: #2196F3;
+        }
+
+        body.dark-theme .yiji {
+            background: linear-gradient(135deg, #2d3748, #1a202c);
+        }
+
+        body.dark-theme .yiji.ji {
+            background: linear-gradient(135deg, #4a1a1a, #2d1818);
+        }
+
+        body.dark-theme .yiji i,
+        body.dark-theme .shen i {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #a0a0a0;
+        }
+
+        body.dark-theme .festival-dropdown,
+        body.dark-theme .theme-dropdown {
+            background: #2d3748;
+            border: 1px solid #4a5568;
+        }
+
+        body.dark-theme .festival-option,
+        body.dark-theme .theme-option {
+            color: #e0e0e0;
+        }
+
+        body.dark-theme .festival-option:hover,
+        body.dark-theme .theme-option:hover {
+            background-color: #4a5568;
+        }
+
+        body.dark-theme .festival-option span,
+        body.dark-theme .theme-option span {
+            color: #e0e0e0;
+        }
+
+        /* 主题切换动画 */
+        body {
+            transition: background 0.3s ease;
+        }
+
+        .main-container,
+        .calendar-day,
+        .date-tooltip,
+        .huangli,
+        .tooltip-date-info,
+        .yiji,
+        .festival-dropdown,
+        .theme-dropdown {
+            transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+        }
+
+        @media (max-width: 768px) {
+            .main-container {
+                padding: 20px;
+                gap: 20px;
+            }
+
+            .calendar-grid {
+                gap: 5px;
+                padding: 15px;
+            }
+
+            .day-number {
+                font-size: 16px;
+            }
+
+            .detail-panel {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <section class="calendar-section">
+            <div class="calendar-header">
+                <button class="nav-btn" onclick="changeMonth(-1)">上月</button>
+                <div class="date-selector">
+                    <input type="number" class="year-input" id="yearInput" placeholder="年份" min="1900" max="2100" onchange="updateCalendar()">
+                    <select class="month-select" id="monthSelect" onchange="updateCalendar()">
+                        <option value="1">一月</option>
+                        <option value="2">二月</option>
+                        <option value="3">三月</option>
+                        <option value="4">四月</option>
+                        <option value="5">五月</option>
+                        <option value="6">六月</option>
+                        <option value="7">七月</option>
+                        <option value="8">八月</option>
+                        <option value="9">九月</option>
+                        <option value="10">十月</option>
+                        <option value="11">十一月</option>
+                        <option value="12">十二月</option>
+                    </select>
+                </div>
+                <div class="festival-selector">
+                    <button class="nav-btn festival-toggle" onclick="toggleFestivalSelector()">节日</button>
+                    <div class="festival-dropdown" id="festivalDropdown">
+                        <label class="festival-option">
+                            <input type="checkbox" id="showSolarFestivals" onchange="updateFestivalSettings()" checked>
+                            <span>阳历节日</span>
+                        </label>
+                        <label class="festival-option">
+                            <input type="checkbox" id="showLunarFestivals" onchange="updateFestivalSettings()" checked>
+                            <span>农历节日</span>
+                        </label>
+                        <label class="festival-option">
+                            <input type="checkbox" id="showJieqi" onchange="updateFestivalSettings()" checked>
+                            <span>节气</span>
+                        </label>
+                        <label class="festival-option">
+                            <input type="checkbox" id="showWeekFestivals" onchange="updateFestivalSettings()" checked>
+                            <span>星期节日</span>
+                        </label>
+                        <label class="festival-option">
+                            <input type="checkbox" id="showOtherFestivals" onchange="updateFestivalSettings()">
+                            <span>其他节日</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="weekstart-selector">
+                    <div class="weekstart-option active" data-value="1" onclick="toggleWeekStart(1)">周一</div>
+                    <div class="weekstart-option" data-value="0" onclick="toggleWeekStart(0)">周日</div>
+                </div>
+                <div class="theme-selector">
+                    <button class="nav-btn theme-toggle" onclick="toggleThemeSelector()">主题</button>
+                    <div class="theme-dropdown" id="themeDropdown">
+                        <div class="theme-option" data-theme="light" onclick="setTheme('light')">
+                            <span class="theme-icon">☀️</span>
+                            <span>浅色模式</span>
+                        </div>
+                        <div class="theme-option" data-theme="dark" onclick="setTheme('dark')">
+                            <span class="theme-icon">🌙</span>
+                            <span>深色模式</span>
+                        </div>
+                        <div class="theme-option" data-theme="system" onclick="setTheme('system')">
+                            <span class="theme-icon">💻</span>
+                            <span>跟随系统</span>
+                        </div>
+                    </div>
+                </div>
+                <button class="nav-btn today-btn" onclick="goToToday()">今天</button>
+                <button class="nav-btn" onclick="changeMonth(1)">下月</button>
+            </div>
+            <div class="calendar-grid" id="calendarGrid">
+                <!-- 星期标题 -->
+                <div class="weekday">日</div>
+                <div class="weekday">一</div>
+                <div class="weekday">二</div>
+                <div class="weekday">三</div>
+                <div class="weekday">四</div>
+                <div class="weekday">五</div>
+                <div class="weekday">六</div>
+                <!-- 日期将通过JavaScript生成 -->
+            </div>
+        </section>
+
+        <aside class="detail-section">
+            <div id="detailPanel" class="huangli">
+                <div class="empty-state">
+                    <p>📅 正在加载黄历信息...</p>
+                    <p style="margin-top: 10px; font-size: 14px;">请稍候</p>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <!-- 日期提示框 -->
+    <div id="dateTooltip" class="date-tooltip">
+        <div class="tooltip-header">
+            <div>
+                <div class="tooltip-date" id="tooltipSolarDate"></div>
+                <div class="tooltip-lunar" id="tooltipLunarDate"></div>
+            </div>
+        </div>
+        
+        <!-- 日期计算信息 -->
+        <div class="tooltip-date-info" id="tooltipDateInfo" style="display: none;">
+            <div class="date-info-row">
+                <div class="date-info-item">
+                    <span class="info-label">第</span>
+                    <span class="info-value" id="tooltipWeekOfYear"></span>
+                    <span class="info-label">周/剩</span>
+                    <span class="info-value" id="tooltipWeeksRemaining"></span>
+                    <span class="info-label">周</span>
+                </div>
+                <div class="date-info-item">
+                    <span class="info-label">共</span>
+                    <span class="info-value" id="tooltipTotalWeeks"></span>
+                    <span class="info-label">周</span>
+                </div>
+            </div>
+            <div class="date-info-row">
+                <div class="date-info-item">
+                    <span class="info-label">第</span>
+                    <span class="info-value" id="tooltipDayOfYear"></span>
+                    <span class="info-label">天/剩</span>
+                    <span class="info-value" id="tooltipDaysRemaining"></span>
+                    <span class="info-label">天</span>
+                </div>
+                <div class="date-info-item">
+                    <span class="info-label">共</span>
+                    <span class="info-value" id="tooltipTotalDays"></span>
+                    <span class="info-label">天</span>
+                </div>
+            </div>
+            <div class="date-info-item">
+                <span class="info-label">下个节日：</span>
+                <span class="info-value" id="tooltipNextFestival"></span>
+            </div>
+        </div>
+        
+        <div id="tooltipJieqi" class="tooltip-jieqi" style="display: none;">
+            <img id="tooltipJieqiImg" src="" alt="">
+            <div class="tooltip-jieqi-info">
+                <div class="tooltip-jieqi-name" id="tooltipJieqiName"></div>
+                <div class="tooltip-jieqi-desc" id="tooltipJieqiDesc"></div>
+            </div>
+        </div>
+        <div id="tooltipFuJiu" class="tooltip-fu-jiu" style="display: none;">
+            <div class="tooltip-fu-jiu-title">传统节气</div>
+            <div class="tooltip-fu-jiu-content">
+                <div id="tooltipFu"></div>
+                <div id="tooltipJiu"></div>
+            </div>
+        </div>
+        <div id="tooltipHoliday" class="tooltip-holiday" style="display: none;">
+            <span class="tooltip-holiday-symbol" id="tooltipHolidaySymbol"></span>
+            <span class="tooltip-holiday-name" id="tooltipHolidayName"></span>
+        </div>
+        <div id="tooltipFestivals" class="tooltip-festivals" style="display: none;">
+            <div class="tooltip-festival-title">节日</div>
+            <div class="tooltip-festival-list" id="tooltipFestivalList"></div>
+        </div>
+    </div>
+
+    <script>
+        // 全局状态
+        const state = {
+            currentDate: new Date(),
+            selectedDate: null,
+            currentYear: new Date().getFullYear(),
+            currentMonth: new Date().getMonth() + 1,
+            weekStart: 0, // 0=周日开始, 1=周一开始
+            festivalSettings: {
+                showSolarFestivals: true,   // 阳历节日
+                showLunarFestivals: true,   // 农历节日
+                showJieqi: true,            // 节气
+                showOtherFestivals: false,  // 其他节日（道教、佛教等）
+                showWeekFestivals: true     // 按星期的节日
+            }
+        };
+
+        // 节气数据
+        const jieqiData = {
+            '立春': '#4ECDC4', '雨水': '#4ECDC4', '惊蛰': '#4ECDC4', '春分': '#4ECDC4',
+            '清明': '#4ECDC4', '谷雨': '#4ECDC4', '立夏': '#FF6B6B', '小满': '#FF6B6B',
+            '芒种': '#FF6B6B', '夏至': '#FF6B6B', '小暑': '#FF6B6B', '大暑': '#FF6B6B',
+            '立秋': '#E6A23C', '处暑': '#E6A23C', '白露': '#E6A23C', '秋分': '#E6A23C',
+            '寒露': '#E6A23C', '霜降': '#E6A23C', '立冬': '#764ba2', '小雪': '#764ba2',
+            '大雪': '#764ba2', '冬至': '#764ba2', '小寒': '#764ba2', '大寒': '#764ba2'
+        };
+
+        // 节气描述信息
+        const jieqiDesc = {
+            '立春': '春季开始，万物复苏，天气渐暖',
+            '雨水': '降雨开始，雨量渐增，春意盎然',
+            '惊蛰': '春雷始鸣，蛰虫惊醒，生机勃勃',
+            '春分': '昼夜平分，春暖花开，播种时节',
+            '清明': '天气清朗，草木繁茂，扫墓祭祖',
+            '谷雨': '雨生百谷，作物生长，春耕忙碌',
+            '立夏': '夏季开始，气温升高，万物生长',
+            '小满': '麦类等夏熟作物籽粒开始饱满',
+            '芒种': '有芒作物成熟，晚谷播种时节',
+            '夏至': '白昼最长，盛夏来临，炎热开始',
+            '小暑': '天气开始炎热，但还未到最热',
+            '大暑': '一年中最热的时期，酷热难耐',
+            '立秋': '秋季开始，天气转凉，收获时节',
+            '处暑': '炎热天气结束，暑气消退',
+            '白露': '天气转凉，露水凝结，秋意渐浓',
+            '秋分': '昼夜平分，秋高气爽，丰收季节',
+            '寒露': '露水已寒，气温下降，秋深露重',
+            '霜降': '天气渐冷，开始降霜，秋去冬来',
+            '立冬': '冬季开始，万物收藏，天气寒冷',
+            '小雪': '开始降雪，但雪量不大',
+            '大雪': '降雪增多，地面可能积雪',
+            '冬至': '白昼最短，黑夜最长，数九开始',
+            '小寒': '天气寒冷，但还未到最冷',
+            '大寒': '一年中最冷的时期，严寒刺骨'
+        };
+
+        // 节气图片路径配置
+        const JIEQI_IMAGE_PATH = 'imgs/';
+        
+        // 节气图片文件名映射
+        const jieqiImageFiles = {
+            '立春': 'li_chun.webp',
+            '雨水': 'yu_shui.webp',
+            '惊蛰': 'jing_zhe.webp',
+            '春分': 'chun_fen.webp',
+            '清明': 'qing_ming.webp',
+            '谷雨': 'gu_yu.webp',
+            '立夏': 'li_xia.webp',
+            '小满': 'xiao_man.webp',
+            '芒种': 'mang_zhong.webp',
+            '夏至': 'xia_zhi.webp',
+            '小暑': 'xiao_shu.webp',
+            '大暑': 'da_shu.webp',
+            '立秋': 'li_qiu.webp',
+            '处暑': 'chu_shu.webp',
+            '白露': 'bai_lu.webp',
+            '秋分': 'qiu_fen.webp',
+            '寒露': 'han_lu.webp',
+            '霜降': 'shuang_jiang.webp',
+            '立冬': 'li_dong.webp',
+            '小雪': 'xiao_xue.webp',
+            '大雪': 'da_xue.webp',
+            '冬至': 'dong_zhi.webp',
+            '小寒': 'xiao_han.webp',
+            '大寒': 'da_han.webp'
+        };
+        
+        // 获取节气完整图片路径的函数
+        function getJieqiImagePath(jieqiName) {
+            const fileName = jieqiImageFiles[jieqiName];
+            return fileName ? JIEQI_IMAGE_PATH + fileName : '';
+        }
+
+        // 初始化日历
+        function init() {
+            // 检查lunar.js是否加载完成
+            if (typeof Solar === 'undefined') {
+                console.error('lunar.js 未加载完成');
+                return;
+            }
+            initializeSelectors();
+            initializeWeekStartSettings();
+            initializeFestivalSettings();
+            initializeThemeSettings();
+            renderCalendar();
+            // 默认显示今天的黄历信息
+            showToday();
+            
+            // 自动检查当前月份是否有三九信息并给出提示
+            setTimeout(checkFuJiuInfo, 1000);
+        }
+        
+        // 手动计算三九信息
+        function calculateManualJiuInfo(solar) {
+            try {
+                // 获取冬至日期
+                const dongzhi = Lunar.fromYmd(solar.getYear(), 12, 1).getJieQiTable()['冬至'];
+                if (!dongzhi) return null;
+                
+                // 获取冬至日期（兼容不同版本）
+                let dongzhiDate;
+                if (typeof dongzhi.getSolar === 'function') {
+                    dongzhiDate = dongzhi.getSolar();
+                } else if (dongzhi.getYear && dongzhi.getMonth && dongzhi.getDay) {
+                    dongzhiDate = Solar.fromYmd(dongzhi.getYear(), dongzhi.getMonth(), dongzhi.getDay());
+                } else {
+                    return null;
+                }
+                
+                // 计算从冬至开始的天数
+                const daysAfterDongzhi = solar.subtract(dongzhiDate);
+                
+                // 如果天数小于0，说明在冬至前，没有三九信息
+                if (daysAfterDongzhi < 0) return null;
+                
+                // 计算属于第几个九天
+                const jiuNumber = Math.floor(daysAfterDongzhi / 9) + 1;
+                
+                // 三九共9个九天，超过81天则没有三九信息
+                if (jiuNumber > 9) return null;
+                
+                // 返回三九信息
+                const jiuNames = ['一九', '二九', '三九', '四九', '五九', '六九', '七九', '八九', '九九'];
+                const currentDayInJiu = daysAfterDongzhi % 9 + 1;
+                
+                return {
+                    jiu: jiuNames[jiuNumber - 1],
+                    dayInJiu: currentDayInJiu,
+                    fullText: `${jiuNames[jiuNumber - 1]}第${currentDayInJiu}天`
+                };
+                
+            } catch (error) {
+                console.warn('手动计算三九信息失败:', error);
+                return null;
+            }
+        }
+
+        // 检查当前月份三九信息并给出智能提示
+        function checkFuJiuInfo() {
+            if (typeof Solar === 'undefined') return;
+            
+            const daysInMonth = SolarUtil.getDaysOfMonth(state.currentYear, state.currentMonth);
+            let hasFuJiu = false;
+            
+            for (let day = 1; day <= daysInMonth; day++) {
+                try {
+                    const solar = Solar.fromYmd(state.currentYear, state.currentMonth, day);
+                    const lunar = solar.getLunar();
+                    
+                    // 调试信息
+                    console.log(`${state.currentYear}-${state.currentMonth}-${day} 三九信息检查:`);
+                    
+                    // 检查三伏
+                    if (lunar.getFu) {
+                        const fu = lunar.getFu();
+                        console.log('三伏:', fu);
+                        if (fu) {
+                            hasFuJiu = true;
+                            break;
+                        }
+                    }
+                    
+                    // 检查三九（使用新的getShuJiu方法）
+                    if (lunar.getShuJiu) {
+                        const shuJiu = lunar.getShuJiu();
+                        console.log('数九对象:', shuJiu);
+                        if (shuJiu) {
+                            console.log('数九名称:', shuJiu.getName());
+                            console.log('数九天数:', shuJiu.getIndex());
+                            hasFuJiu = true;
+                            break;
+                        }
+                    }
+                    
+                    // 兼容旧的三九方法
+                    if (lunar.getJiu) {
+                        const jiu = lunar.getJiu();
+                        console.log('三九:', jiu);
+                        if (jiu) {
+                            hasFuJiu = true;
+                            break;
+                        }
+                    }
+                    
+                    // 尝试其他可能的三九信息获取方法
+                    console.log('lunar对象属性:', Object.keys(lunar));
+                    
+                    // 检查是否有其他三九相关属性
+                    if (lunar.fu) {
+                        console.log('三伏(属性):', lunar.fu);
+                    }
+                    if (lunar.jiu) {
+                        console.log('三九(属性):', lunar.jiu);
+                    }
+                    
+                    // 检查节气信息，看是否包含三九
+                    const jieQi = lunar.getJieQi();
+                    console.log('节气:', jieQi);
+                    
+                    // 检查节气表
+                    const jieQiTable = lunar.getJieQiTable ? lunar.getJieQiTable() : {};
+                    console.log('节气表:', jieQiTable);
+                    
+                    // 手动计算三九信息
+                    const manualJiuInfo = calculateManualJiuInfo(solar);
+                    console.log('手动计算三九信息:', manualJiuInfo);
+                    if (manualJiuInfo) {
+                        hasFuJiu = true;
+                        break;
+                    }
+                } catch (error) {
+                    console.warn(`获取${state.currentYear}年${state.currentMonth}月${day}日信息失败:`, error);
+                    continue;
+                }
+            }
+            
+            if (!hasFuJiu) {
+                // 根据当前月份给出智能提示
+                let message = '';
+                const currentMonth = state.currentMonth;
+                
+                if (currentMonth >= 1 && currentMonth <= 2) {
+                    message = '当前是冬季，但未检测到三九信息。\n三九通常从冬至后开始，建议检查当前年份的冬至日期。';
+                } else if (currentMonth >= 12) {
+                    message = '当前是冬季，但未检测到三九信息。\n三九通常从冬至后开始，建议检查当前年份的冬至日期。';
+                } else if (currentMonth >= 6 && currentMonth <= 8) {
+                    message = '当前是夏季，可以查看三伏信息。\n三九信息通常在冬季（12月-2月）出现。';
+                } else {
+                    message = '当前月份不是三九或三伏的季节。\n三九信息通常在冬季（12月-2月）出现。';
+                }
+                
+                // 检查冬至日期
+                try {
+                    const dongzhi = Lunar.fromYmd(state.currentYear, 12, 1).getJieQiTable()['冬至'];
+                    if (dongzhi) {
+                        // 尝试不同的获取方式
+                        let dongzhiDate;
+                        if (typeof dongzhi.getSolar === 'function') {
+                            dongzhiDate = dongzhi.getSolar();
+                        } else if (dongzhi.toString) {
+                            dongzhiDate = dongzhi.toString();
+                        } else {
+                            dongzhiDate = dongzhi;
+                        }
+                        message += `\n\n${state.currentYear}年冬至：${dongzhiDate}`;
+                        message += '\n数九从冬至后开始，共81天。';
+                    }
+                } catch (error) {
+                    console.warn('获取冬至信息失败:', error);
+                }
+                
+                console.log('三九信息提示：', message);
+                
+                // 在页面底部显示提示信息
+                const infoDiv = document.createElement('div');
+                infoDiv.className = 'fu-jiu-hint';
+                infoDiv.innerHTML = `
+                    <div style="background: #fff3cd; border: 1px solid #ffeaa7; border-radius: 5px; padding: 10px; margin: 10px 0; font-size: 12px; color: #856404;">
+                        <strong>📅 三九信息提示：</strong> ${message.replace(/\\n/g, '<br>')}
+                        <br><button onclick="this.parentElement.parentElement.remove()" style="margin-left: 10px; background: #ffc107; border: none; padding: 2px 8px; border-radius: 3px; cursor: pointer;">关闭</button>
+                    </div>
+                `;
+                
+                const calendarDiv = document.getElementById('calendar');
+                if (calendarDiv) {
+                    calendarDiv.appendChild(infoDiv);
+                }
+            }
+        }
+
+        // 显示今天的黄历信息
+        function showToday() {
+            const today = new Date();
+            state.selectedDate = today;
+            showDetail(today);
+            
+            // 选中今天的日期
+            setTimeout(() => {
+                document.querySelectorAll('.calendar-day').forEach(el => {
+                    el.classList.remove('selected');
+                    if (el.classList.contains('today')) {
+                        el.classList.add('selected');
+                    }
+                });
+            }, 100);
+        }
+
+        // 初始化选择器
+        function initializeSelectors() {
+            const yearInput = document.getElementById('yearInput');
+            const monthSelect = document.getElementById('monthSelect');
+            
+            // 设置当前选中的年月
+            if (yearInput) yearInput.value = state.currentYear;
+            if (monthSelect) monthSelect.value = state.currentMonth;
+            
+            // 添加回车键监听
+            if (yearInput) {
+                yearInput.addEventListener('keypress', function(e) {
+                    if (e.key === 'Enter') {
+                        updateCalendar();
+                    }
+                });
+            }
+        }
+
+        // 渲染日历
+        function renderCalendar() {
+            updateHeader();
+            renderCalendarGrid();
+        }
+
+        // 更新头部
+        function updateHeader() {
+            const yearInput = document.getElementById('yearInput');
+            const monthSelect = document.getElementById('monthSelect');
+            
+            // 同步选择器状态
+            if (yearInput) yearInput.value = state.currentYear;
+            if (monthSelect) monthSelect.value = state.currentMonth;
+        }
+
+        // 更新日历（从选择器调用）
+        function updateCalendar() {
+            const yearInput = document.getElementById('yearInput');
+            const monthSelect = document.getElementById('monthSelect');
+            
+            if (yearInput && monthSelect) {
+                const year = parseInt(yearInput.value);
+                const month = parseInt(monthSelect.value);
+                
+                // 验证年份范围
+                if (year && year >= 1900 && year <= 2100 && month >= 1 && month <= 12) {
+                    state.currentYear = year;
+                    state.currentMonth = month;
+                    renderCalendar();
+                    // 清空详情面板
+                    const detailPanel = document.getElementById('detailPanel');
+                    if (detailPanel) {
+                        detailPanel.innerHTML = '<div class="empty-state"><p>请选择日期查看黄历信息</p></div>';
+                    }
+                } else {
+                    // 恢复有效值
+                    yearInput.value = state.currentYear;
+                    monthSelect.value = state.currentMonth;
+                }
+            }
+        }
+
+        // 渲染日历网格（使用lunar.js功能）
+        function renderCalendarGrid() {
+            const grid = document.getElementById('calendarGrid');
+            
+            // 更新星期标题
+            updateWeekdayHeaders(grid);
+
+            // 使用lunar.js获取当月信息
+            let firstDay, lastDay, firstWeekDay, daysInMonth;
+            
+            if (typeof Solar !== 'undefined') {
+                try {
+                    // 使用Solar.fromYmd创建当月第一天
+                    firstDay = Solar.fromYmd(state.currentYear, state.currentMonth, 1);
+                    // 获取当月天数
+                    daysInMonth = SolarUtil.getDaysOfMonth(state.currentYear, state.currentMonth);
+                    // 获取当月最后一天
+                    lastDay = Solar.fromYmd(state.currentYear, state.currentMonth, daysInMonth);
+                    // 获取第一天是星期几
+                    firstWeekDay = firstDay.getWeek();
+                } catch (error) {
+                    console.warn('使用lunar.js获取月份信息失败，使用原生方法:', error);
+                    // 降级到原生方法
+                    firstDay = new Date(state.currentYear, state.currentMonth - 1, 1);
+                    lastDay = new Date(state.currentYear, state.currentMonth, 0);
+                    firstWeekDay = firstDay.getDay();
+                    daysInMonth = lastDay.getDate();
+                }
+            } else {
+                // 如果lunar.js未加载，使用原生方法
+                firstDay = new Date(state.currentYear, state.currentMonth - 1, 1);
+                lastDay = new Date(state.currentYear, state.currentMonth, 0);
+                firstWeekDay = firstDay.getDay();
+                daysInMonth = lastDay.getDate();
+            }
+
+            // 计算需要添加的空白日期数量
+            let emptyDaysCount;
+            if (state.weekStart === 0) {
+                // 周日开始
+                emptyDaysCount = firstWeekDay;
+            } else {
+                // 周一开始
+                emptyDaysCount = firstWeekDay === 0 ? 6 : firstWeekDay - 1;
+            }
+
+            // 添加上个月末的日期
+            const prevMonth = state.currentMonth === 1 ? 12 : state.currentMonth - 1;
+            const prevMonthYear = state.currentMonth === 1 ? state.currentYear - 1 : state.currentYear;
+            const prevMonthDays = SolarUtil ? SolarUtil.getDaysOfMonth(prevMonthYear, prevMonth) : new Date(prevMonthYear, prevMonth, 0).getDate();
+            
+            for (let i = emptyDaysCount - 1; i >= 0; i--) {
+                const prevMonthDay = prevMonthDays - i;
+                const dayElement = createCalendarDay(prevMonthDay, true); // true表示是上个月
+                grid.appendChild(dayElement);
+            }
+
+            // 添加当月日期
+            for (let day = 1; day <= daysInMonth; day++) {
+                const dayElement = createCalendarDay(day);
+                grid.appendChild(dayElement);
+            }
+
+            // 添加下个月初的日期
+            const totalCells = 7 * 6; // 6行7列
+            const remainingCells = totalCells - (emptyDaysCount + daysInMonth);
+            // 确保不超过当前周的最后一天
+            const daysToAdd = Math.min(remainingCells, 7 - ((emptyDaysCount + daysInMonth) % 7));
+            for (let day = 1; day <= daysToAdd; day++) {
+                const dayElement = createCalendarDay(day, false, true); // true表示是下个月
+                grid.appendChild(dayElement);
+            }
+        }
+
+        // 更新星期标题
+        function updateWeekdayHeaders(grid) {
+            // 清空网格
+            grid.innerHTML = '';
+            
+            let weekdayHeaders;
+            if (state.weekStart === 0) {
+                // 周日开始：日一二三四五六
+                weekdayHeaders = ['日', '一', '二', '三', '四', '五', '六'];
+            } else {
+                // 周一开始：一二三四五六日
+                weekdayHeaders = ['一', '二', '三', '四', '五', '六', '日'];
+            }
+            
+            // 添加星期标题
+            weekdayHeaders.forEach(day => {
+                const div = document.createElement('div');
+                div.className = 'weekday';
+                div.textContent = day;
+                grid.appendChild(div);
+            });
+        }
+
+        // 创建空白日期元素
+        function createEmptyDay() {
+            const div = document.createElement('div');
+            div.className = 'calendar-day other-month';
+            return div;
+        }
+
+
+
+        // 计算日期信息
+        function calculateDateInfo(date) {
+            try {
+                // 优先使用lunar.js内置函数
+                let solar;
+                let totalWeeks = 52; // 默认值
+                let totalDays = 365; // 默认值
+                
+                if (typeof Solar !== 'undefined') {
+                    try {
+                        solar = Solar.fromDate(date);
+                        // 获取一年总天数（考虑闰年）
+                        totalDays = SolarUtil.getDaysOfYear(solar.getYear());
+                        // 计算总周数（ISO周标准）- 使用原生JavaScript处理
+                        const lastDateOfYear = new Date(solar.getYear(), 11, 31);
+                        totalWeeks = getWeekNumber(lastDateOfYear);
+                    } catch (error) {
+                        console.warn('使用lunar.js计算日期信息失败，使用原生方法:', error);
+                    }
+                }
+                
+                // 使用原生JavaScript计算日期信息
+                const year = date.getFullYear();
+                const startOfYear = new Date(year, 0, 1);
+                const endOfYear = new Date(year, 11, 31);
+                
+                // 计算一年中的第几天
+                const dayOfYear = Math.floor((date - startOfYear) / (1000 * 60 * 60 * 24)) + 1;
+                
+                // 计算一年剩余天数
+                const daysRemaining = Math.floor((endOfYear - date) / (1000 * 60 * 60 * 24));
+                
+                // 计算一年中的第几周（ISO周）
+                const weekOfYear = getWeekNumber(date);
+                
+                // 计算一年剩余周数（确保不为负数）
+                const lastWeekOfYear = getWeekNumber(endOfYear);
+                const weeksRemaining = Math.max(0, lastWeekOfYear - weekOfYear);
+                
+                // 查找下一个节日
+                let nextFestival = findNextFestival(date);
+                
+                return {
+                    dayOfYear,
+                    daysRemaining,
+                    weekOfYear,
+                    weeksRemaining,
+                    totalWeeks,
+                    totalDays,
+                    nextFestival
+                };
+            } catch (error) {
+                console.warn('计算日期信息失败:', error);
+                return {
+                    dayOfYear: 0,
+                    daysRemaining: 0,
+                    weekOfYear: 0,
+                    weeksRemaining: 0,
+                    nextFestival: '暂无'
+                };
+            }
+        }
+        
+        // 获取ISO周数
+        function getWeekNumber(date) {
+            const d = new Date(date);
+            d.setHours(0, 0, 0, 0);
+            
+            // 获取当年的第一个周四
+            const jan1 = new Date(d.getFullYear(), 0, 1);
+            const firstThursday = new Date(jan1);
+            firstThursday.setDate(jan1.getDate() + (11 - jan1.getDay()) % 7);
+            
+            // 获取日期所在周的周四
+            const weekThursday = new Date(d);
+            weekThursday.setDate(d.getDate() + (11 - d.getDay()) % 7);
+            
+            // 计算周数
+            const diffTime = weekThursday - firstThursday;
+            const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+            const weekNumber = Math.floor(diffDays / 7) + 1;
+            
+            // 处理跨年情况
+            if (weekNumber === 0) {
+                // 属于上一年的最后一周
+                return getWeekNumber(new Date(d.getFullYear() - 1, 11, 31));
+            } else if (weekNumber === 53) {
+                // 检查是否真的有53周
+                const dec31 = new Date(d.getFullYear(), 11, 31);
+                const dec31Thursday = new Date(dec31);
+                dec31Thursday.setDate(dec31.getDate() + (11 - dec31.getDay()) % 7);
+                
+                if (weekThursday.getTime() === dec31Thursday.getTime()) {
+                    return 53;
+                } else {
+                    return 1; // 属于下一年第一周
+                }
+            }
+            
+            return weekNumber;
+        }
+        
+        // 查找下一个节日
+        function findNextFestival(date) {
+            if (typeof Solar === 'undefined') {
+                return '暂无';
+            }
+            
+            try {
+                const solar = Solar.fromDate(date);
+                
+                // 查找未来30天内的节日
+                for (let i = 1; i <= 30; i++) {
+                    const futureSolar = solar.next(i);
+                    const futureLunar = futureSolar.getLunar();
+                    
+                    const solarFestivals = futureSolar.getFestivals ? futureSolar.getFestivals() : [];
+                    const lunarFestivals = futureLunar.getFestivals ? futureLunar.getFestivals() : [];
+                    
+                    if (solarFestivals.length > 0 || lunarFestivals.length > 0) {
+                        const festival = solarFestivals[0] || lunarFestivals[0];
+                        return `${festival} (${i}天后)`;
+                    }
+                }
+                
+                return '暂无';
+            } catch (error) {
+                return '暂无';
+            }
+        }
+
+        // 显示日期提示框
+        function showDateTooltip(element, date) {
+            const tooltip = document.getElementById('dateTooltip');
+            if (!tooltip) {
+                console.log('未找到弹框元素');
+                return;
+            }
+            
+            // 添加显示类
+            tooltip.classList.add('show');
+            
+            if (typeof Solar === 'undefined') {
+                console.log('lunar.js 未加载');
+                return;
+            }
+            
+            try {
+                const solar = Solar.fromDate(date);
+                const lunar = solar.getLunar ? solar.getLunar() : null;
+                
+                if (!lunar) return;
+                
+                // 使用固定右下角位置，移除动态位置计算
+                // 弹框现在固定在右下角，不需要动态位置计算
+                tooltip.style.left = '';
+                tooltip.style.top = '';
+                
+                // 更新内容
+                // 公历日期
+                const weekDays = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
+                const weekDay = weekDays[date.getDay()];
+                document.getElementById('tooltipSolarDate').textContent = 
+                    `${solar.getYear()}年${solar.getMonth()}月${solar.getDay()}日 ${weekDay}`;
+                
+                // 农历日期 - 格式：乙巳蛇年 冬月（十月）初九
+                let lunarText = '';
+                
+                // 获取年份干支和生肖
+                const yearGanZhi = lunar.getYearInGanZhi ? lunar.getYearInGanZhi() : '';
+                const yearShengXiao = lunar.getYearShengXiao ? lunar.getYearShengXiao() : '';
+                
+                // 获取月份
+                const monthInChinese = lunar.getMonthInChinese ? lunar.getMonthInChinese() : '';
+                
+                // 获取天数
+                const dayInChinese = lunar.getDayInChinese ? lunar.getDayInChinese() : '';
+                
+                // 构建农历显示格式
+                if (yearGanZhi && yearShengXiao) {
+                    lunarText = `${yearGanZhi}${yearShengXiao}年 `;
+                }
+                
+                if (monthInChinese) {
+                    lunarText += monthInChinese + '月';
+                }
+                
+                if (dayInChinese) {
+                    lunarText += dayInChinese;
+                }
+                
+                document.getElementById('tooltipLunarDate').textContent = lunarText;
+                
+                // 显示日期计算信息
+                const dateInfo = calculateDateInfo(date);
+                const dateInfoElement = document.getElementById('tooltipDateInfo');
+                if (dateInfo) {
+                    dateInfoElement.style.display = 'block';
+                    document.getElementById('tooltipWeekOfYear').textContent = dateInfo.weekOfYear;
+                    document.getElementById('tooltipWeeksRemaining').textContent = dateInfo.weeksRemaining;
+                    document.getElementById('tooltipTotalWeeks').textContent = dateInfo.totalWeeks;
+                    document.getElementById('tooltipDayOfYear').textContent = dateInfo.dayOfYear;
+                    document.getElementById('tooltipDaysRemaining').textContent = dateInfo.daysRemaining;
+                    document.getElementById('tooltipTotalDays').textContent = dateInfo.totalDays;
+                    document.getElementById('tooltipNextFestival').textContent = dateInfo.nextFestival;
+                } else {
+                    dateInfoElement.style.display = 'none';
+                }
+                
+                // 检查节气
+                const jieqi = lunar.getJieQi ? lunar.getJieQi() : null;
+                const jieqiElement = document.getElementById('tooltipJieqi');
+                if (jieqi && jieqiDesc[jieqi] && state.festivalSettings.showJieqi) {
+                    jieqiElement.style.display = 'flex';
+                    document.getElementById('tooltipJieqiName').textContent = jieqi;
+                    document.getElementById('tooltipJieqiDesc').textContent = jieqiDesc[jieqi];
+                    
+                    // 设置节气图片
+                    const imgElement = document.getElementById('tooltipJieqiImg');
+                    const jieqiImagePath = getJieqiImagePath(jieqi);
+                    if (jieqiImagePath) {
+                        imgElement.src = jieqiImagePath;
+                        imgElement.alt = jieqi;
+                    } else {
+                        // 如果图片不存在，使用默认图片
+                        imgElement.src = '';
+                    }
+                } else {
+                    jieqiElement.style.display = 'none';
+                }
+                
+                // 检查三伏、三九
+                const fuJiuElement = document.getElementById('tooltipFuJiu');
+                let hasFuJiu = false;
+                let fuText = '';
+                let jiuText = '';
+                
+                // 检查三伏
+                if (lunar.getFu) {
+                    const fu = lunar.getFu();
+                    if (fu) {
+                        hasFuJiu = true;
+                        fuText = fu;
+                    }
+                }
+                
+                // 检查三九（使用新的getShuJiu方法）
+                if (lunar.getShuJiu) {
+                    const shuJiu = lunar.getShuJiu();
+                    if (shuJiu) {
+                        hasFuJiu = true;
+                        jiuText = shuJiu.getName() + '第' + shuJiu.getIndex() + '天';
+                    }
+                }
+                
+                // 兼容旧的三九方法
+                if (lunar.getJiu) {
+                    const jiu = lunar.getJiu();
+                    if (jiu) {
+                        hasFuJiu = true;
+                        jiuText = jiu;
+                    }
+                }
+                
+                // 只有当有节气设置且确实有三伏三九信息时才显示
+                if (state.festivalSettings.showJieqi && hasFuJiu) {
+                    fuJiuElement.style.display = 'block';
+                    
+                    // 设置三伏信息，如果没有三伏则清空
+                    document.getElementById('tooltipFu').textContent = fuText || '';
+                    document.getElementById('tooltipJiu').textContent = jiuText || '';
+                    
+                    // 如果其中一个没有内容，隐藏对应的div
+                    const tooltipFu = document.getElementById('tooltipFu');
+                    const tooltipJiu = document.getElementById('tooltipJiu');
+                    
+                    if (!fuText) {
+                        tooltipFu.style.display = 'none';
+                    } else {
+                        tooltipFu.style.display = 'block';
+                    }
+                    
+                    if (!jiuText) {
+                        tooltipJiu.style.display = 'none';
+                    } else {
+                        tooltipJiu.style.display = 'block';
+                    }
+                    
+                    // 如果两者都没有内容，隐藏整个传统节气部分
+                    if (!fuText && !jiuText) {
+                        fuJiuElement.style.display = 'none';
+                    }
+                } else {
+                    fuJiuElement.style.display = 'none';
+                }
+                
+                // 检查节假日
+                const holidayElement = document.getElementById('tooltipHoliday');
+                if (typeof HolidayUtil !== 'undefined') {
+                    const holidayInfo = HolidayUtil.getHoliday(solar.getYear(), solar.getMonth(), solar.getDay());
+                    if (holidayInfo) {
+                        holidayElement.style.display = 'block';
+                        holidayElement.className = `tooltip-holiday ${holidayInfo.isWork() ? 'work' : 'rest'}`;
+                        document.getElementById('tooltipHolidaySymbol').textContent = holidayInfo.isWork() ? '班' : '休';
+                        document.getElementById('tooltipHolidayName').textContent = holidayInfo.getName();
+                    } else {
+                        holidayElement.style.display = 'none';
+                    }
+                } else {
+                    holidayElement.style.display = 'none';
+                }
+                
+                // 检查节日
+                const festivalsElement = document.getElementById('tooltipFestivals');
+                const festivalListElement = document.getElementById('tooltipFestivalList');
+                festivalListElement.innerHTML = '';
+                
+                let allFestivals = [];
+                
+                // 根据设置获取相应类型的节日
+                if (state.festivalSettings.showSolarFestivals) {
+                    const solarFestivals = solar.getFestivals ? solar.getFestivals() : [];
+                    allFestivals = allFestivals.concat(solarFestivals);
+                }
+                
+                if (state.festivalSettings.showLunarFestivals) {
+                    const lunarFestivals = lunar.getFestivals ? lunar.getFestivals() : [];
+                    allFestivals = allFestivals.concat(lunarFestivals);
+                }
+                
+                if (state.festivalSettings.showOtherFestivals) {
+                    const otherFestivals = lunar.getOtherFestivals ? lunar.getOtherFestivals() : [];
+                    allFestivals = allFestivals.concat(otherFestivals);
+                }
+                
+                // 获取星期节日
+                if (state.festivalSettings.showWeekFestivals && typeof SolarUtil !== 'undefined' && SolarUtil.WEEK_FESTIVAL) {
+                    const week = solar.getWeek();
+                    const weekInMonth = Math.ceil(solar.getDay() / 7);
+                    const weekKey1 = solar.getMonth() + '-' + weekInMonth + '-' + week;
+                    const weekKey2 = solar.getMonth() + '-0-' + week;
+                    
+                    const addedFestivals = new Set(allFestivals);
+                    
+                    if (SolarUtil.WEEK_FESTIVAL[weekKey1]) {
+                        const festival = SolarUtil.WEEK_FESTIVAL[weekKey1];
+                        if (!addedFestivals.has(festival)) {
+                            allFestivals.push(festival);
+                        }
+                    }
+                    if (SolarUtil.WEEK_FESTIVAL[weekKey2]) {
+                        const festival = SolarUtil.WEEK_FESTIVAL[weekKey2];
+                        if (!addedFestivals.has(festival)) {
+                            allFestivals.push(festival);
+                        }
+                    }
+                }
+                
+                // 显示节日列表
+                if (allFestivals.length > 0) {
+                    festivalsElement.style.display = 'block';
+                    allFestivals.forEach(festival => {
+                        const festivalItem = document.createElement('div');
+                        festivalItem.className = 'tooltip-festival-item';
+                        festivalItem.textContent = festival;
+                        festivalListElement.appendChild(festivalItem);
+                    });
+                } else {
+                    festivalsElement.style.display = 'none';
+                }
+                
+                // 显示提示框
+                tooltip.classList.add('show');
+                
+            } catch (error) {
+                console.warn('显示日期提示框失败:', error);
+            }
+        }
+
+        // 隐藏日期提示框
+        function hideDateTooltip() {
+            const tooltip = document.getElementById('dateTooltip');
+            if (tooltip) {
+                tooltip.classList.remove('show');
+            }
+        }
+
+        // 创建日历日期元素
+        function createCalendarDay(day, isPrevMonth = false, isNextMonth = false) {
+            const div = document.createElement('div');
+            
+            // 设置日期类名
+            if (isPrevMonth || isNextMonth) {
+                div.className = 'calendar-day other-month';
+            } else {
+                div.className = 'calendar-day';
+            }
+
+            // 计算实际日期
+            let date;
+            if (isPrevMonth) {
+                // 上个月末的日期
+                date = new Date(state.currentYear, state.currentMonth - 2, day);
+            } else if (isNextMonth) {
+                // 下个月初的日期
+                date = new Date(state.currentYear, state.currentMonth, day);
+            } else {
+                // 当前月的日期
+                date = new Date(state.currentYear, state.currentMonth - 1, day);
+            }
+            
+            // 添加日期标识属性
+            div.setAttribute('data-date', date.toDateString());
+            
+            div.onclick = () => selectDate(date);
+
+            // 添加鼠标悬停事件
+            let hoverTimer;
+            div.addEventListener('mouseenter', () => {
+                hoverTimer = setTimeout(() => {
+                    showDateTooltip(div, date);
+                }, 500); // 0.5秒后显示提示框
+            });
+            
+            div.addEventListener('mouseleave', () => {
+                clearTimeout(hoverTimer);
+                hideDateTooltip();
+            });
+            
+            // 判断是否为周末
+            const dayOfWeek = date.getDay();
+            if ((state.weekStart === 0 && (dayOfWeek === 0 || dayOfWeek === 6)) || // 周日开始：周日=0，周六=6
+                (state.weekStart === 1 && (dayOfWeek === 6 || dayOfWeek === 0))) { // 周一开始：周六=6，周日=0
+                div.classList.add('weekend');
+            }
+            
+            // 日期数字
+            const dayNumber = document.createElement('div');
+            dayNumber.className = 'day-number';
+            dayNumber.textContent = day;
+            
+            // 如果是非当前月的日期，添加透明度效果
+            if (isPrevMonth || isNextMonth) {
+                dayNumber.style.opacity = '0.5';
+            }
+            
+            div.appendChild(dayNumber);
+
+            // 如果lunar.js未加载，只显示公历日期
+            if (typeof Solar === 'undefined') {
+                return div;
+            }
+            
+            try {
+                const solar = Solar.fromDate(date);
+                const lunar = solar.getLunar ? solar.getLunar() : null;
+
+                if (lunar) {
+                    // 农历日期
+                    const lunarDay = document.createElement('div');
+                    lunarDay.className = 'lunar-day';
+                    
+                    // 如果是非当前月的日期，农历日期也添加透明度
+                    if (isPrevMonth || isNextMonth) {
+                        lunarDay.style.opacity = '0.5';
+                    }
+                    
+                    lunarDay.textContent = lunar.getDayInChinese ? lunar.getDayInChinese() : '';
+                    div.appendChild(lunarDay);
+
+                    // 检查节日
+                    checkAndAddFestival(div, solar, lunar);
+                }
+            } catch (error) {
+                console.warn('获取农历信息失败:', error);
+            }
+
+            // 检查是否今天
+            const today = new Date();
+            if (date.toDateString() === today.toDateString()) {
+                div.classList.add('today');
+            }
+
+            // 检查选中状态
+            if (state.selectedDate && 
+                date.toDateString() === state.selectedDate.toDateString()) {
+                div.classList.add('selected');
+            }
+
+            return div;
+        }
+
+
+
+        // 检查并添加节日标记
+        function checkAndAddFestival(div, solar, lunar) {
+            let hasTag = false;
+
+            // 检查节气
+            const jieqi = lunar.getJieQi ? lunar.getJieQi() : null;
+            // 检查节气是否有效（不为空且不是null/undefined）
+            if (jieqi && jieqi.trim() !== '' && state.festivalSettings.showJieqi) {
+                const tag = document.createElement('div');
+                tag.className = 'jieqi-tag';
+                // getJieQi() 直接返回节气名称字符串
+                tag.textContent = jieqi;
+                tag.title = jieqi; // 鼠标悬停显示完整节气名称
+                tag.style.background = jieqiData[jieqi] || '#4ECDC4';
+                div.appendChild(tag);
+                hasTag = true;
+            }
+
+            // 检查三伏、三九等特殊节气
+            if (state.festivalSettings.showJieqi) {
+                // 检查三伏
+                if (lunar.getFu) {
+                    const fu = lunar.getFu();
+                    if (fu) {
+                        const fuTag = document.createElement('div');
+                        fuTag.className = 'fu-jiu-tag';
+                        fuTag.textContent = fu;
+                        fuTag.title = fu;
+                        div.appendChild(fuTag);
+                        hasTag = true;
+                    }
+                }
+                
+                // 检查三九（使用新的getShuJiu方法）
+                if (lunar.getShuJiu) {
+                    const shuJiu = lunar.getShuJiu();
+                    if (shuJiu) {
+                        const jiuTag = document.createElement('div');
+                        jiuTag.className = 'fu-jiu-tag';
+                        jiuTag.textContent = shuJiu.getName();
+                        jiuTag.title = shuJiu.getName() + '第' + shuJiu.getIndex() + '天';
+                        div.appendChild(jiuTag);
+                        hasTag = true;
+                    }
+                }
+                
+                // 兼容旧的三九方法
+                if (lunar.getJiu) {
+                    const jiu = lunar.getJiu();
+                    if (jiu) {
+                        const jiuTag = document.createElement('div');
+                        jiuTag.className = 'fu-jiu-tag';
+                        jiuTag.textContent = jiu;
+                        jiuTag.title = jiu;
+                        div.appendChild(jiuTag);
+                        hasTag = true;
+                    }
+                }
+                
+                // 移除了手动计算部分，只有当lunar.js返回真实的三九信息时才显示标签
+            }
+
+            // 检查节假日
+            let holidayInfo = null;
+            if (typeof HolidayUtil !== 'undefined') {
+                holidayInfo = HolidayUtil.getHoliday(solar.getYear(), solar.getMonth(), solar.getDay());
+            }
+            
+            // 检查普通节日
+            const solarFestivals = solar.getFestivals ? solar.getFestivals() : [];
+            const lunarFestivals = lunar.getFestivals ? lunar.getFestivals() : [];
+            const otherFestivals = lunar.getOtherFestivals ? lunar.getOtherFestivals() : [];
+            
+            // 获取星期节日
+            let weekFestivals = [];
+            if (typeof SolarUtil !== 'undefined' && SolarUtil.WEEK_FESTIVAL && state.festivalSettings.showWeekFestivals) {
+                const week = solar.getWeek();
+                const weekInMonth = Math.ceil(solar.getDay() / 7);
+                const weekKey1 = solar.getMonth() + '-' + weekInMonth + '-' + week;
+                const weekKey2 = solar.getMonth() + '-0-' + week;
+                
+                // 使用Set来避免重复添加同一个节日
+                const addedFestivals = new Set();
+                
+                if (SolarUtil.WEEK_FESTIVAL[weekKey1]) {
+                    const festival = SolarUtil.WEEK_FESTIVAL[weekKey1];
+                    if (!addedFestivals.has(festival)) {
+                        weekFestivals.push(festival);
+                        addedFestivals.add(festival);
+                    }
+                }
+                if (SolarUtil.WEEK_FESTIVAL[weekKey2]) {
+                    const festival = SolarUtil.WEEK_FESTIVAL[weekKey2];
+                    if (!addedFestivals.has(festival)) {
+                        weekFestivals.push(festival);
+                        addedFestivals.add(festival);
+                    }
+                }
+            }
+            
+            let festivals = [];
+            
+            // 使用Set来避免所有类型的重复节日
+            const addedFestivals = new Set();
+            
+            // 根据设置筛选节日类型
+            if (state.festivalSettings.showSolarFestivals) {
+                solarFestivals.forEach(festival => {
+                    if (!addedFestivals.has(festival)) {
+                        festivals.push(festival);
+                        addedFestivals.add(festival);
+                    }
+                });
+            }
+            if (state.festivalSettings.showLunarFestivals) {
+                lunarFestivals.forEach(festival => {
+                    if (!addedFestivals.has(festival)) {
+                        festivals.push(festival);
+                        addedFestivals.add(festival);
+                    }
+                });
+            }
+            if (state.festivalSettings.showOtherFestivals) {
+                otherFestivals.forEach(festival => {
+                    if (!addedFestivals.has(festival)) {
+                        festivals.push(festival);
+                        addedFestivals.add(festival);
+                    }
+                });
+            }
+            // 星期节日已经处理过重复，但这里也要检查
+            weekFestivals.forEach(festival => {
+                if (!addedFestivals.has(festival)) {
+                    festivals.push(festival);
+                    addedFestivals.add(festival);
+                }
+            });
+            
+            // 如果有节假日，在右上角显示"休"或"班"
+            if (holidayInfo) {
+                const holidayTag = document.createElement('div');
+                holidayTag.className = 'holiday-tag';
+                
+                // 简化显示：休息日显示"休"，调休日显示"班"
+                if (holidayInfo.isWork()) {
+                    holidayTag.textContent = '班';
+                    holidayTag.style.background = '#E6A23C'; // 调休日 - 橙色
+                } else {
+                    holidayTag.textContent = '休';
+                    holidayTag.style.background = '#5CB85C'; // 休息日 - 绿色
+                }
+                
+                // 添加节假日名称作为提示
+                holidayTag.title = holidayInfo.getName();
+                
+                div.appendChild(holidayTag);
+                hasTag = true;
+            }
+            
+            // 如果有普通节日，在顶部中间显示节日名称
+            if (festivals.length > 0) {
+                // 获取所有节日名称用于tooltip
+                const allFestivalNames = festivals.join('、');
+                
+                // 为每个节日创建单独的标签
+                festivals.forEach((festivalName, index) => {
+                    const festivalTag = document.createElement('div');
+                    festivalTag.className = 'festival-tag';
+                    
+                    // 显示第一个节日标签在顶部，其他的稍微偏移
+                    if (index === 0) {
+                        festivalTag.style.top = '2px';
+                    } else {
+                        festivalTag.style.top = (2 + index * 12) + 'px';
+                    }
+                    
+                    // 简化显示名称
+                    let displayName = festivalName;
+                    if (festivalName.length > 3) {
+                        // 简化节日名称显示
+                        if (festivalName.includes('节')) {
+                            displayName = festivalName.replace('节', '');
+                        }
+                        if (displayName.length > 3) {
+                            displayName = displayName.substring(0, 3);
+                        }
+                    }
+                    
+                    festivalTag.textContent = displayName;
+                    festivalTag.title = festivalName; // 鼠标悬停显示完整名称
+                    festivalTag.style.background = '#FF6B6B'; // 普通节日 - 红色
+                    
+                    div.appendChild(festivalTag);
+                    hasTag = true;
+                });
+                
+                // 如果有多个节日，添加一个显示全部的tooltip
+                if (festivals.length > 1) {
+                    div.title = allFestivalNames;
+                }
+            }
+
+            return hasTag;
+        }
+
+
+
+        // 选择日期
+        function selectDate(date) {
+            state.selectedDate = date;
+            
+            // 更新选中状态
+            document.querySelectorAll('.calendar-day').forEach(el => {
+                el.classList.remove('selected');
+            });
+            
+            // 如果点击的是非当前月的日期，需要切换到相应月份
+            const clickedYear = date.getFullYear();
+            const clickedMonth = date.getMonth() + 1;
+            
+            if (clickedYear !== state.currentYear || clickedMonth !== state.currentMonth) {
+                state.currentYear = clickedYear;
+                state.currentMonth = clickedMonth;
+                
+                // 重新渲染日历
+                renderCalendar();
+                
+                // 延迟选中日期，确保日历已经渲染完成
+                setTimeout(() => {
+                    document.querySelectorAll('.calendar-day').forEach(el => {
+                        if (el.getAttribute('data-date') === date.toDateString()) {
+                            el.classList.add('selected');
+                        }
+                    });
+                    // 显示详细信息
+                    showDetail(date);
+                }, 100);
+            } else {
+                // 当前月的日期，直接选中
+                event.target.classList.add('selected');
+                // 显示详细信息
+                showDetail(date);
+            }
+        }
+
+        // 获取节气详细信息
+        function getJieqiDetail(date) {
+            if (typeof Solar === 'undefined') return null;
+            
+            try {
+                const solar = Solar.fromDate(date);
+                const lunar = solar.getLunar ? solar.getLunar() : null;
+                
+                if (!lunar) return null;
+                
+                const currentJieqi = lunar.getJieQi ? lunar.getJieQi() : null;
+                
+                // 获取当前节气状态
+                const isTodayJieqi = currentJieqi !== null && currentJieqi !== '';
+                
+                // 计算距离下个节气的天数
+                let daysToNextJieqi = null;
+                let nextJieqiName = null;
+                
+                // 查找下个节气
+                let checkDate = new Date(date);
+                for (let i = 1; i <= 45; i++) { // 最多往后查找45天
+                    checkDate.setDate(checkDate.getDate() + 1);
+                    const checkSolar = Solar.fromDate(checkDate);
+                    const checkLunar = checkSolar.getLunar ? checkSolar.getLunar() : null;
+                    if (checkLunar) {
+                        const checkJieqi = checkLunar.getJieQi ? checkLunar.getJieQi() : null;
+                        if (checkJieqi) {
+                            nextJieqiName = checkJieqi;
+                            daysToNextJieqi = i;
+                            break;
+                        }
+                    }
+                }
+                
+                return {
+                    currentJieqi: currentJieqi || '',
+                    nextJieqi: nextJieqiName,
+                    daysToNextJieqi,
+                    isTodayJieqi
+                };
+            } catch (error) {
+                console.error('获取节气详细信息失败:', error);
+                return null;
+            }
+        }
+
+        // 获取即将到来的节日预告
+        function getUpcomingFestivals(date) {
+            if (typeof Solar === 'undefined') return [];
+            
+            const upcomingFestivals = [];
+            let checkDate = new Date(date);
+            
+            // 查找未来365天内的节日
+            for (let i = 1; i <= 365; i++) {
+                checkDate.setDate(checkDate.getDate() + 1);
+                
+                try {
+                    const checkSolar = Solar.fromDate(checkDate);
+                    const checkLunar = checkSolar.getLunar ? checkSolar.getLunar() : null;
+                    
+                    if (checkLunar) {
+                        let allFestivals = [];
+                        
+                        // 根据设置获取相应类型的节日
+                        if (state.festivalSettings.showSolarFestivals) {
+                            const solarFestivals = checkSolar.getFestivals ? checkSolar.getFestivals() : [];
+                            allFestivals = allFestivals.concat(solarFestivals);
+                        }
+                        
+                        if (state.festivalSettings.showLunarFestivals) {
+                            const lunarFestivals = checkLunar.getFestivals ? checkLunar.getFestivals() : [];
+                            allFestivals = allFestivals.concat(lunarFestivals);
+                        }
+                        
+                        if (state.festivalSettings.showOtherFestivals) {
+                            const otherFestivals = checkLunar.getOtherFestivals ? checkLunar.getOtherFestivals() : [];
+                            allFestivals = allFestivals.concat(otherFestivals);
+                        }
+                        
+                        // 获取星期节日
+                        if (state.festivalSettings.showWeekFestivals && typeof SolarUtil !== 'undefined' && SolarUtil.WEEK_FESTIVAL) {
+                            const week = checkSolar.getWeek();
+                            const weekInMonth = Math.ceil(checkSolar.getDay() / 7);
+                            const weekKey1 = checkSolar.getMonth() + '-' + weekInMonth + '-' + week;
+                            const weekKey2 = checkSolar.getMonth() + '-0-' + week;
+                            
+                            // 使用Set来避免重复添加同一个节日
+                            const addedFestivals = new Set(allFestivals);
+                            
+                            if (SolarUtil.WEEK_FESTIVAL[weekKey1]) {
+                                const festival = SolarUtil.WEEK_FESTIVAL[weekKey1];
+                                if (!addedFestivals.has(festival)) {
+                                    allFestivals.push(festival);
+                                    addedFestivals.add(festival);
+                                }
+                            }
+                            if (SolarUtil.WEEK_FESTIVAL[weekKey2]) {
+                                const festival = SolarUtil.WEEK_FESTIVAL[weekKey2];
+                                if (!addedFestivals.has(festival)) {
+                                    allFestivals.push(festival);
+                                    addedFestivals.add(festival);
+                                }
+                            }
+                        }
+                        
+                        // 获取节气
+                        if (state.festivalSettings.showJieqi) {
+                            const jieqi = checkLunar.getJieQi ? checkLunar.getJieQi() : null;
+                            if (jieqi) {
+                                allFestivals.push(jieqi);
+                            }
+                        }
+                        
+                        // 如果有节日或节气
+                        if (allFestivals.length > 0) {
+                            for (const festival of allFestivals) {
+                                // 避免重复添加同一天的节日
+                                const exists = upcomingFestivals.some(f => 
+                                    f.name === festival && f.days === i
+                                );
+                                if (!exists) {
+                                    upcomingFestivals.push({
+                                        name: festival,
+                                        days: i,
+                                        date: new Date(checkDate)
+                                    });
+                                }
+                            }
+                        }
+                    }
+                } catch (error) {
+                    console.warn('获取节日信息失败:', error);
+                }
+                
+                // 如果已经找到足够的节日就停止搜索
+                if (upcomingFestivals.length >= 10) break;
+            }
+            
+            // 按天数排序，取前3个
+            return upcomingFestivals
+                .sort((a, b) => a.days - b.days)
+                .slice(0, 3);
+        }
+
+        // 获取节日信息
+        function getFestivalInfo(date) {
+            if (typeof Solar === 'undefined') return { jieqi: [], holidays: [] };
+            
+            try {
+                const solar = Solar.fromDate(date);
+                const lunar = solar.getLunar ? solar.getLunar() : null;
+                
+                if (!lunar) return { jieqi: [], holidays: [] };
+                
+                const jieqi = lunar.getJieQi ? lunar.getJieQi() : null;
+                const solarFestivals = solar.getFestivals ? solar.getFestivals() : [];
+                const lunarFestivals = lunar.getFestivals ? lunar.getFestivals() : [];
+                
+                // getJieQi() 直接返回节气名称字符串
+                return {
+                    jieqi: jieqi ? [jieqi] : [],
+                    holidays: [...solarFestivals, ...lunarFestivals]
+                };
+            } catch (error) {
+                return { jieqi: [], holidays: [] };
+            }
+        }
+
+        // 显示详细信息
+        function showDetail(date) {
+            if (typeof Solar === 'undefined') {
+                console.error('lunar.js 未加载');
+                return;
+            }
+            
+            try {
+                const solar = Solar.fromDate(date);
+                const lunar = solar.getLunar ? solar.getLunar() : null;
+                
+                if (!lunar) {
+                    console.error('无法获取农历信息');
+                    return;
+                }
+
+            const detailPanel = document.getElementById('detailPanel');
+            
+            // 干支信息
+            const yearGanZhi = lunar.getYearInGanZhi();
+            const monthGanZhi = lunar.getMonthInGanZhi();
+            const dayGanZhi = lunar.getDayInGanZhi();
+            const yearShengXiao = lunar.getYearShengXiao();
+
+            // 获取星期
+            const weekDays = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
+            const weekDay = weekDays[solar.getWeek()];
+
+            // 获取宜忌信息
+            const yi = lunar.getDayYi();
+            const ji = lunar.getDayJi();
+
+            // 获取纳音五行
+            const nayin = lunar.getDayNaYin ? lunar.getDayNaYin() : '获取中';
+
+            // 获取冲煞
+            const xiongsha = lunar.getDayXiongSha ? lunar.getDayXiongSha() : [];
+            const chongsha = xiongsha.length > 0 ? xiongsha.join(' ') : '冲煞信息获取中';
+
+            // 获取彭祖百忌
+            const pengzuGan = lunar.getPengZuGan ? lunar.getPengZuGan() : '';
+            const pengzuZhi = lunar.getPengZuZhi ? lunar.getPengZuZhi() : '';
+            const pengzu = (pengzuGan && pengzuZhi) ? pengzuGan + ' ' + pengzuZhi : '彭祖百忌获取中';
+
+            // 获取神煞
+            const jishen = lunar.getDayJiShen ? lunar.getDayJiShen() : [];
+            const xiongshen = lunar.getDayXiongSha ? lunar.getDayXiongSha() : [];
+
+            // 获取方位
+            const xishen = lunar.getDayPositionXi ? lunar.getDayPositionXi() : null;
+            const xishenDesc = xishen && lunar.getDayPositionXiDesc ? lunar.getDayPositionXiDesc() : '';
+            const fushen = lunar.getDayPositionFu ? lunar.getDayPositionFu() : null;
+            const fushenDesc = fushen && lunar.getDayPositionFuDesc ? lunar.getDayPositionFuDesc() : '';
+            const caishen = lunar.getDayPositionCai ? lunar.getDayPositionCai() : null;
+            const caishenDesc = caishen && lunar.getDayPositionCaiDesc ? lunar.getDayPositionCaiDesc() : '';
+
+
+
+            // 获取节日信息
+            const festivalInfo = getFestivalInfo(date);
+            
+            // 获取节假日信息
+            let holidayInfo = null;
+            let holidayHTML = '';
+            if (typeof HolidayUtil !== 'undefined') {
+                holidayInfo = HolidayUtil.getHoliday(solar.getYear(), solar.getMonth(), solar.getDay());
+                if (holidayInfo) {
+                    const isWorkDay = holidayInfo.isWork();
+                    const statusText = isWorkDay ? '调休上班' : '法定休息';
+                    const statusIcon = isWorkDay ? '🏢' : '🏖️';
+                    const statusSymbol = isWorkDay ? '班' : '休';
+                    
+                    holidayHTML = `
+                        <div class="holiday-section">
+                            <div class="holiday-title">公休安排</div>
+                            <div class="holiday-status ${isWorkDay ? 'work' : 'rest'}">
+                                <span class="holiday-symbol">${statusSymbol}</span>
+                                <span class="holiday-icon">${statusIcon}</span>
+                                <span class="holiday-name">${holidayInfo.getName()}</span>
+                                <span class="holiday-type">${statusText}</span>
+                            </div>
+                        </div>
+                    `;
+                }
+            }
+            
+
+            
+            // 获取即将到来的节日预告
+            const upcomingFestivals = getUpcomingFestivals(date);
+            let upcomingHTML = '';
+            if (upcomingFestivals.length > 0) {
+                upcomingHTML = `
+                    <div class="upcoming-section">
+                        <div class="upcoming-title">预告</div>
+                        <div class="upcoming-list">
+                            ${upcomingFestivals.map(festival => `
+                                <div class="upcoming-item">
+                                    <div class="upcoming-name">${festival.name}</div>
+                                    <div class="upcoming-days">还有${festival.days}天</div>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                `;
+            }
+
+            // 格式化阳历日期
+            const solarYear = date.getFullYear();
+            const solarMonth = date.getMonth() + 1;
+            const solarDay = date.getDate();
+            const solarDateStr = `${solarYear}年${solarMonth}月${solarDay}日`;
+            
+            detailPanel.innerHTML = `
+                <div class="huangli">
+                    <div class="solar-date">${solarDateStr}</div>
+                    <div id="md">农历${lunar.getMonthInChinese()}月${lunar.getDayInChinese()}</div>
+                    <div id="ymd">
+                        <i>${yearGanZhi}${yearShengXiao}年</i>
+                        <i>${monthGanZhi}月</i>
+                        <i>${dayGanZhi}日</i>
+                        <i>${weekDay}</i>
+                    </div>
+                    <div class="nayin"><b>五行</b><i id="nayin">${nayin}</i></div>
+                    <div class="chongsha"><b>冲煞</b><i id="chongsha">${chongsha}</i></div>
+                    <div class="pengzu"><b>彭祖</b><i id="pengzu">${pengzu}</i></div>
+                    <div class="fangwei-container">
+                        <div class="fangwei-item">
+                            <b>喜神</b>
+                            <i id="xishen">${xishenDesc || '获取中'}</i>
+                        </div>
+                        <div class="fangwei-item">
+                            <b>福神</b>
+                            <i id="fushen">${fushenDesc || '获取中'}</i>
+                        </div>
+                        <div class="fangwei-item">
+                            <b>财神</b>
+                            <i id="caishen">${caishenDesc || '获取中'}</i>
+                        </div>
+                    </div>
+                    <div class="yishen-container">
+                        <div class="yiji" id="yi">
+                            <b>宜</b>
+                            <div class="yiji-content">
+                                ${yi.map(item => `<i>${item}</i>`).join('')}
+                            </div>
+                        </div>
+                        <div class="yiji ji" id="ji">
+                            <b>忌</b>
+                            <div class="yiji-content">
+                                ${ji.map(item => `<i>${item}</i>`).join('')}
+                            </div>
+                        </div>
+                        <div class="shen" id="jshen">
+                            <b>吉神</b>
+                            <div class="shen-content">
+                                ${jishen.map(item => `<i>${item}</i>`).join('')}
+                            </div>
+                        </div>
+                        <div class="shen" id="xshen">
+                            <b>凶神</b>
+                            <div class="shen-content">
+                                ${xiongshen.map(item => `<i>${item}</i>`).join('')}
+                            </div>
+                        </div>
+                    </div>
+                    ${holidayHTML}
+                    ${upcomingHTML}
+                </div>
+            `;
+
+            // 添加动画效果
+            detailPanel.style.animation = 'none';
+            setTimeout(() => {
+                detailPanel.style.animation = 'slideIn 0.3s ease-out';
+            }, 10);
+            } catch (error) {
+                console.error('显示黄历信息时出错:', error);
+                detailPanel.innerHTML = '<div class="empty-state"><p>加载黄历信息失败</p></div>';
+            }
+        }
+
+        // 切换月份
+        function changeMonth(direction) {
+            state.currentMonth += direction;
+            
+            if (state.currentMonth > 12) {
+                state.currentMonth = 1;
+                state.currentYear++;
+            } else if (state.currentMonth < 1) {
+                state.currentMonth = 12;
+                state.currentYear--;
+            }
+            
+            renderCalendar();
+        }
+
+        // 跳转到今天
+        function goToToday() {
+            const today = new Date();
+            state.currentYear = today.getFullYear();
+            state.currentMonth = today.getMonth() + 1;
+            
+            renderCalendar();
+            // 延迟选中今天，确保日历已经渲染完成
+            setTimeout(() => {
+                showToday();
+            }, 100);
+        }
+
+        // 添加CSS动画
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes slideIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // 初始化周起始日设置
+        function initializeWeekStartSettings() {
+            // 从localStorage加载设置
+            const savedWeekStart = localStorage.getItem('weekStart');
+            if (savedWeekStart) {
+                try {
+                    state.weekStart = parseInt(savedWeekStart);
+                    updateWeekStartUI();
+                } catch (error) {
+                    console.warn('加载周起始日设置失败:', error);
+                }
+            } else {
+                // 默认周一为激活状态
+                state.weekStart = 1;
+                updateWeekStartUI();
+            }
+        }
+
+        // 切换周起始日
+        function toggleWeekStart(value) {
+            state.weekStart = value;
+            
+            // 保存设置到localStorage
+            localStorage.setItem('weekStart', state.weekStart.toString());
+            
+            // 更新UI
+            updateWeekStartUI();
+            
+            // 重新渲染日历
+            renderCalendar();
+        }
+
+        // 更新周起始日UI状态
+        function updateWeekStartUI() {
+            const options = document.querySelectorAll('.weekstart-option');
+            options.forEach(option => {
+                const value = parseInt(option.getAttribute('data-value'));
+                if (value === state.weekStart) {
+                    option.classList.add('active');
+                } else {
+                    option.classList.remove('active');
+                }
+            });
+        }
+
+        // 初始化节日设置
+        function initializeFestivalSettings() {
+            // 从localStorage加载设置
+            const savedSettings = localStorage.getItem('festivalSettings');
+            if (savedSettings) {
+                try {
+                    const settings = JSON.parse(savedSettings);
+                    Object.assign(state.festivalSettings, settings);
+                    
+                    // 更新checkbox状态
+                    Object.keys(settings).forEach(key => {
+                        const checkbox = document.getElementById(key);
+                        if (checkbox) {
+                            checkbox.checked = settings[key];
+                        }
+                    });
+                } catch (error) {
+                    console.warn('加载节日设置失败:', error);
+                }
+            }
+        }
+
+        // 切换节日选择器显示
+        function toggleFestivalSelector() {
+            const dropdown = document.getElementById('festivalDropdown');
+            if (dropdown) {
+                dropdown.classList.toggle('show');
+                
+                // 点击其他地方关闭下拉菜单
+                document.addEventListener('click', closeFestivalSelector);
+            }
+        }
+
+        // 关闭节日选择器
+        function closeFestivalSelector(event) {
+            const dropdown = document.getElementById('festivalDropdown');
+            const toggle = document.querySelector('.festival-toggle');
+            
+            if (dropdown && !dropdown.contains(event.target) && event.target !== toggle) {
+                dropdown.classList.remove('show');
+                document.removeEventListener('click', closeFestivalSelector);
+            }
+        }
+
+        // 更新节日设置
+        function updateFestivalSettings() {
+            const checkboxes = ['showSolarFestivals', 'showLunarFestivals', 'showJieqi', 'showWeekFestivals', 'showOtherFestivals'];
+            
+            checkboxes.forEach(id => {
+                const checkbox = document.getElementById(id);
+                if (checkbox) {
+                    state.festivalSettings[id] = checkbox.checked;
+                }
+            });
+            
+            // 保存设置到localStorage
+            localStorage.setItem('festivalSettings', JSON.stringify(state.festivalSettings));
+            
+            // 重新渲染日历
+            renderCalendar();
+        }
+
+
+
+        // 测试函数：显示当前月份所有包含三九信息的日期
+        function showFuJiuDates() {
+            if (typeof Solar === 'undefined') {
+                alert('lunar.js 未加载完成');
+                return;
+            }
+            
+            const daysInMonth = SolarUtil.getDaysOfMonth(state.currentYear, state.currentMonth);
+            let fuJiuDates = [];
+            
+            for (let day = 1; day <= daysInMonth; day++) {
+                try {
+                    const solar = Solar.fromYmd(state.currentYear, state.currentMonth, day);
+                    const lunar = solar.getLunar();
+                    
+                    // 检查三伏
+                    if (lunar.getFu) {
+                        const fu = lunar.getFu();
+                        if (fu) {
+                            fuJiuDates.push(`${state.currentYear}年${state.currentMonth}月${day}日 - ${fu}`);
+                        }
+                    }
+                    
+                    // 检查三九（使用新的getShuJiu方法）
+                    if (lunar.getShuJiu) {
+                        const shuJiu = lunar.getShuJiu();
+                        if (shuJiu) {
+                            fuJiuDates.push(`${state.currentYear}年${state.currentMonth}月${day}日 - ${shuJiu.getName()}第${shuJiu.getIndex()}天`);
+                        }
+                    }
+                    
+                    // 兼容旧的三九方法
+                    if (lunar.getJiu) {
+                        const jiu = lunar.getJiu();
+                        if (jiu) {
+                            fuJiuDates.push(`${state.currentYear}年${state.currentMonth}月${day}日 - ${jiu}`);
+                        }
+                    }
+                } catch (error) {
+                    console.warn(`获取${state.currentYear}年${state.currentMonth}月${day}日信息失败:`, error);
+                }
+            }
+            
+            if (fuJiuDates.length > 0) {
+                alert('当前月份包含三九信息的日期：\n\n' + fuJiuDates.join('\n'));
+            } else {
+                // 智能提示：根据当前月份给出建议
+                let suggestion = '';
+                if (state.currentMonth >= 3 && state.currentMonth <= 8) {
+                    suggestion = '\n\n提示：三九信息通常在冬季（12月-2月）出现。\n建议切换到冬季月份查看三九信息。';
+                } else if (state.currentMonth >= 6 && state.currentMonth <= 8) {
+                    suggestion = '\n\n提示：当前是夏季，三伏信息通常在夏季出现。\n建议查看三伏信息或切换到冬季查看三九信息。';
+                } else {
+                    suggestion = '\n\n提示：三九信息通常在冬至后开始出现。\n建议检查当前年份的冬至日期是否正确。';
+                }
+                
+                // 检查冬至是否在当前月份
+                try {
+                    const dongzhi = Lunar.fromYmd(state.currentYear, 12, 1).getJieQiTable()['冬至'];
+                    if (dongzhi) {
+                        // 尝试不同的获取方式
+                        let dongzhiDate, dongzhiMonth;
+                        if (typeof dongzhi.getSolar === 'function') {
+                            dongzhiDate = dongzhi.getSolar();
+                            dongzhiMonth = dongzhiDate.getMonth();
+                        } else if (dongzhi.getMonth) {
+                            dongzhiMonth = dongzhi.getMonth();
+                            dongzhiDate = dongzhi;
+                        } else {
+                            // 如果无法获取月份信息，直接显示日期
+                            dongzhiDate = dongzhi.toString ? dongzhi.toString() : dongzhi;
+                            suggestion += `\n\n冬至日期：${dongzhiDate}，数九从这一天开始。`;
+                            return;
+                        }
+                        
+                        if (dongzhiMonth + 1 === state.currentMonth) {
+                            suggestion += `\n\n冬至日期：${dongzhiDate.toString()}，数九从这一天开始。`;
+                        }
+                    }
+                } catch (error) {
+                    console.warn('获取冬至信息失败:', error);
+                }
+                
+                alert('当前月份没有三九信息' + suggestion);
+            }
+        }
+
+        // 切换主题选择器显示
+        function toggleThemeSelector() {
+            const dropdown = document.getElementById('themeDropdown');
+            if (dropdown) {
+                dropdown.classList.toggle('show');
+                
+                // 点击其他地方关闭下拉菜单
+                document.addEventListener('click', closeThemeSelector);
+            }
+        }
+
+        // 关闭主题选择器
+        function closeThemeSelector(event) {
+            const dropdown = document.getElementById('themeDropdown');
+            const toggle = document.querySelector('.theme-toggle');
+            
+            if (dropdown && !dropdown.contains(event.target) && event.target !== toggle) {
+                dropdown.classList.remove('show');
+                document.removeEventListener('click', closeThemeSelector);
+            }
+        }
+
+        // 设置主题
+        function setTheme(theme) {
+            // 移除所有主题类
+            document.body.classList.remove('light-theme', 'dark-theme');
+            
+            if (theme === 'dark') {
+                document.body.classList.add('dark-theme');
+            } else if (theme === 'light') {
+                // 浅色主题不需要额外类名
+            } else if (theme === 'system') {
+                // 检测系统主题偏好
+                if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                    document.body.classList.add('dark-theme');
+                }
+            }
+            
+            // 保存主题设置到localStorage
+            localStorage.setItem('theme', theme);
+            
+            // 更新UI状态
+            updateThemeUI(theme);
+            
+            // 关闭下拉菜单
+            const dropdown = document.getElementById('themeDropdown');
+            if (dropdown) {
+                dropdown.classList.remove('show');
+            }
+        }
+
+        // 更新主题UI状态
+        function updateThemeUI(activeTheme) {
+            const options = document.querySelectorAll('.theme-option');
+            options.forEach(option => {
+                const theme = option.getAttribute('data-theme');
+                if (theme === activeTheme) {
+                    option.classList.add('active');
+                } else {
+                    option.classList.remove('active');
+                }
+            });
+        }
+
+        // 初始化主题设置
+        function initializeThemeSettings() {
+            // 从localStorage加载设置，默认使用"跟随系统"
+            const savedTheme = localStorage.getItem('theme');
+            const theme = savedTheme || 'system';
+            setTheme(theme);
+        }
+
+        // 页面加载完成后初始化
+        document.addEventListener('DOMContentLoaded', init);
+    </script>
+</body>
+</html>

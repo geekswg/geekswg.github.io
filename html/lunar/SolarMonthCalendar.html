@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>阳历月历</title>
+    <script src="lunar.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f5f5f5;
+        }
+
+        .calendar * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .calendar {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            background: #fff;
+        }
+
+        .calendar a {
+            color: #409EFF;
+            text-decoration: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .calendar div.title {
+            height: 48px;
+            line-height: 48px;
+            font-size: 15px;
+            color: #606266;
+            width: 500px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .calendar div.title .date-inputs {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .calendar div.title .nav-btn, .calendar div.title .today-btn {
+            color: #409EFF;
+            text-decoration: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .calendar div.title .date-inputs input, .calendar div.title .date-inputs select {
+            border: 1px solid #D7D9E0;
+            padding: 7px;
+            border-radius: 6px;
+            background: #FFFFFF;
+            text-align: center;
+            font-size: 14px;
+            margin: 0 5px;
+        }
+
+        .calendar div.title .date-inputs input {
+            width: 80px;
+        }
+
+        .calendar div.title .date-inputs select {
+            width: 60px;
+        }
+
+        .calendar div.title .today-btn {
+            font-size: 12px;
+            margin-right: 8px;
+        }
+
+        .calendar div.body {
+            overflow: hidden;
+            width: 725px;
+            border-right: 1px solid #DDD;
+            border-bottom: 1px solid #DDD;
+        }
+
+        .calendar div.body li {
+            position: relative;
+            display: block;
+            float: left;
+            width: 98px;
+            text-align: center;
+            border-left: 1px solid #DDD;
+            border-top: 1px solid #DDD;
+            overflow: hidden;
+        }
+
+        .calendar div.body ul {
+            list-style: none;
+        }
+
+        .calendar div.body ul li {
+            float: left;
+        }
+
+        .calendar div.body ul li.first {
+            width: 136px;
+        }
+
+        .calendar div.body ul.week li {
+            height: 45px;
+            line-height: 45px;
+            color: #252525;
+            background-color: #EEE;
+            font-size: 14px;
+        }
+
+        .calendar div.body ul.day li {
+            height: 86px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #1F80A9;
+            padding-top: 16px;
+        }
+
+        .calendar div.body ul.day li i {
+            display: block;
+            font-style: normal;
+            font-size: 13px;
+            color: #8C8C8C;
+            padding: 0 10px;
+            line-height: 13px;
+        }
+
+        .calendar div.body ul.day li u {
+            font-size: 12px;
+            font-style: normal;
+            text-decoration: none;
+            color: #FFF;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 26px;
+            height: 26px;
+            text-align: center;
+            line-height: 26px;
+        }
+
+        .calendar div.body ul.day li u::before {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            border: 20px solid #D9534F;
+            border-left-color: transparent;
+            border-bottom-color: transparent;
+            z-index: -1;
+        }
+
+        .calendar div.body ul.day li.row {
+            width: 38px;
+            color: #A0A0A0;
+            font-size: 14px;
+            padding-top: 24px;
+            font-weight: normal;
+            overflow: hidden;
+        }
+
+        .calendar div.body ul.day li.other {
+            color: #AAA;
+        }
+
+        .calendar div.body ul.day li.other * {
+            filter: alpha(opacity=40);
+            -moz-opacity: 0.4;
+            opacity: 0.4;
+        }
+
+        .calendar div.body ul.day li.festival i {
+            color: #D02F12;
+            font-size: 9px;
+        }
+
+        .calendar div.body ul.day li.rest u::before {
+            border-right-color: #5CB85C;
+            border-top-color: #5CB85C;
+        }
+
+        .calendar div.body ul.day li.today {
+            background: #E6A23C;
+            color: #FFFFFF;
+        }
+
+        .calendar div.body ul.day li.today i {
+            color: #FFFFFF;
+        }
+
+        .calendar div.body ul.day li.today u {
+            color: #FFFFFF;
+        }
+    </style>
+</head>
+<body>
+    <div class="calendar" id="app">
+        <div class="title">
+            <a href="javascript:void(0);" onclick="onPrevMonth()" class="nav-btn">&lt;</a>
+            <div class="date-inputs">
+                <input type="number" id="yearInput" min="1900" max="2100">年
+                <select id="monthSelect">
+                    <option value="1">1月</option>
+                    <option value="2">2月</option>
+                    <option value="3">3月</option>
+                    <option value="4">4月</option>
+                    <option value="5">5月</option>
+                    <option value="6">6月</option>
+                    <option value="7">7月</option>
+                    <option value="8">8月</option>
+                    <option value="9">9月</option>
+                    <option value="10">10月</option>
+                    <option value="11">11月</option>
+                    <option value="12">12月</option>
+                </select>
+            </div>
+            <a href="javascript:void(0);" onclick="onNextMonth()" class="nav-btn">&gt;</a>
+            <a href="javascript:void(0);" onclick="onToday()" class="today-btn">&lt;今天&gt;</a>
+        </div>
+        <div class="body">
+            <ul class="week" id="weekUl"></ul>
+            <div id="weeksContainer"></div>
+        </div>
+    </div>
+
+    <script>
+        class Day {
+            constructor() {
+                this.day = 0;
+                this.text = '';
+                this.isFestival = false;
+                this.isToday = false;
+                this.isOther = false;
+                this.isHoliday = false;
+                this.isRest = false;
+            }
+        }
+
+        class Week {
+            constructor() {
+                this.index = 0;
+                this.days = [];
+            }
+        }
+
+        const now = Solar.fromDate(new Date());
+        
+        const state = {
+            year: now.getYear(),
+            month: now.getMonth(),
+            weekStart: 1,
+            heads: ['一', '二', '三', '四', '五', '六', '日'],
+            weeks: new Array()
+        };
+
+        function buildDay(d) {
+            const lunar = d.getLunar();
+            const day = new Day();
+            day.day = d.getDay();
+            let text = lunar.getDayInChinese();
+            if (1 === lunar.getDay()) {
+                text = lunar.getMonthInChinese() + '月';
+            }
+            let otherFestivals = d.getOtherFestivals();
+            if (otherFestivals.length > 0) {
+                text = otherFestivals[0];
+                day.isFestival = true;
+            }
+            otherFestivals = lunar.getOtherFestivals();
+            if (otherFestivals.length > 0) {
+                text = otherFestivals[0];
+                day.isFestival = true;
+            }
+            let festivals = d.getFestivals();
+            if (festivals.length > 0) {
+                text = festivals[0];
+                day.isFestival = true;
+            }
+            festivals = lunar.getFestivals();
+            if (festivals.length > 0) {
+                text = festivals[0];
+                day.isFestival = true;
+            }
+            const jq = lunar.getJieQi();
+            if (jq) {
+                text = jq;
+                day.isFestival = true;
+            }
+            day.text = text;
+            if (d.toYmd() === now.toYmd()) {
+                day.isToday = true;
+            }
+            if (d.getMonth() !== state.month) {
+                day.isOther = true;
+            }
+            const h = HolidayUtil.getHoliday(d.getYear(), d.getMonth(), d.getDay());
+            if (h) {
+                day.isHoliday = true;
+                day.isRest = !h.isWork();
+            }
+            return day;
+        }
+
+        function render() {
+            const month = SolarMonth.fromYm(state.year, state.month);
+            const weeks = [];
+            
+            month.getWeeks(state.weekStart).forEach(w => {
+                const week = new Week();
+                week.index = w.getIndexInYear();
+                const days = [];
+                w.getDays().forEach(d => {
+                    days.push(buildDay(d));
+                });
+                week.days = days;
+                weeks.push(week);
+            });
+            
+            state.weeks = weeks;
+            
+            // 更新年月输入框
+            document.getElementById('yearInput').value = state.year;
+            document.getElementById('monthSelect').value = state.month;
+            
+            // 更新星期头部
+            const weekUl = document.getElementById('weekUl');
+            weekUl.innerHTML = '';
+            
+            state.heads.forEach((head, index) => {
+                const li = document.createElement('li');
+                if (index === 0) {
+                    li.className = 'first';
+                }
+                li.textContent = '星期' + head;
+                weekUl.appendChild(li);
+            });
+            
+            // 更新周内容
+            const weeksContainer = document.getElementById('weeksContainer');
+            weeksContainer.innerHTML = '';
+            
+            weeks.forEach(week => {
+                const ul = document.createElement('ul');
+                ul.className = 'day';
+                
+                // 周数列
+                const rowLi = document.createElement('li');
+                rowLi.className = 'row';
+                rowLi.innerHTML = `${week.index}<br>周`;
+                ul.appendChild(rowLi);
+                
+                // 每天的数据
+                week.days.forEach(day => {
+                    const li = document.createElement('li');
+                    li.textContent = day.day;
+                    
+                    if (day.isFestival) li.classList.add('festival');
+                    if (day.isToday) li.classList.add('today');
+                    if (day.isOther) li.classList.add('other');
+                    if (day.isRest) li.classList.add('rest');
+                    
+                    const i = document.createElement('i');
+                    i.textContent = day.text;
+                    li.appendChild(i);
+                    
+                    if (day.isHoliday) {
+                        const u = document.createElement('u');
+                        u.textContent = day.isRest ? '休' : '班';
+                        li.appendChild(u);
+                    }
+                    
+                    ul.appendChild(li);
+                });
+                
+                weeksContainer.appendChild(ul);
+            });
+        }
+
+        function onPrevMonth() {
+            const month = SolarMonth.fromYm(state.year, state.month).next(-1);
+            state.year = month.getYear();
+            state.month = month.getMonth();
+            render();
+        }
+
+        function onNextMonth() {
+            const month = SolarMonth.fromYm(state.year, state.month).next(1);
+            state.year = month.getYear();
+            state.month = month.getMonth();
+            render();
+        }
+
+        function onToday() {
+            state.year = now.getYear();
+            state.month = now.getMonth();
+            render();
+        }
+
+
+
+        // 初始化事件监听器
+        function initializeEventListeners() {
+            // 年份输入框事件
+            document.getElementById('yearInput').addEventListener('change', function() {
+                const year = parseInt(this.value);
+                if (year >= 1900 && year <= 2100) {
+                    state.year = year;
+                    render();
+                } else {
+                    this.value = state.year;
+                }
+            });
+
+            // 月份选择框事件
+            document.getElementById('monthSelect').addEventListener('change', function() {
+                state.month = parseInt(this.value);
+                render();
+            });
+        }
+
+        // 初始渲染
+        render();
+        initializeEventListeners();
+    </script>
+</body>
+</html>

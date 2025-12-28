@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>农历月历</title>
+    <script src="lunar.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f5f5f5;
+        }
+
+        .calendar * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .calendar {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            overflow: hidden;
+            color: #303133;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            background: #fff;
+        }
+
+        .calendar a {
+            color: #409EFF;
+            text-decoration: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .calendar div.title {
+            height: 48px;
+            line-height: 48px;
+            font-size: 15px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            color: #606266;
+            width: 630px;
+        }
+
+        .calendar div.title .lunar-title {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 20px;
+            flex: 1;
+        }
+
+        .calendar div.title .lunar-title div.month {
+            width: 140px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .calendar div.title .solar-inputs {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .calendar div.title input, .calendar div.title select {
+            border: 1px solid #D7D9E0;
+            padding: 4px;
+            border-radius: 4px;
+            background: #FFFFFF;
+            text-align: center;
+            font-size: 12px;
+        }
+
+        .calendar div.title input {
+            width: 60px;
+        }
+
+        .calendar div.title select {
+            width: 60px;
+        }
+
+        .calendar div.body {
+            border-left: 1px solid #CDD0D6;
+            border-top: 1px solid #CDD0D6;
+            overflow: hidden;
+            clear: both;
+        }
+
+        .calendar div.body ul {
+            list-style: none;
+            width: 630px;
+        }
+
+        .calendar div.body ul li {
+            float: left;
+            width: 90px;
+            border-right: 1px solid #CDD0D6;
+            border-bottom: 1px solid #CDD0D6;
+        }
+
+        .calendar div.body ul.week li {
+            height: 36px;
+            line-height: 36px;
+            background: #F5F7FA;
+            font-size: 12px;
+        }
+
+        .calendar div.body ul.day li {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 70px;
+            font-size: 16px;
+        }
+
+        .calendar div.body ul.day li i {
+            font-style: normal;
+            display: block;
+            font-size: 15px;
+            color: #909399;
+        }
+
+        .calendar div.body ul.day li b {
+            position: absolute;
+            left: 5px;
+            top: 15px;
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+            font-weight: normal;
+            color: #FFFFFF;
+            font-size: 10px;
+            background: #E6A23C;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .calendar div.body ul.day li u {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            width: 16px;
+            height: 16px;
+            line-height: 16px;
+            font-weight: normal;
+            color: #FFFFFF;
+            font-size: 9px;
+            background: #ff0025;
+            text-decoration: none;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .calendar div.body ul.day li u.qi {
+            background: #003cff;
+        }
+
+        .calendar div.body ul.day li.festival i {
+            color: #409EFF;
+        }
+    </style>
+</head>
+<body>
+    <div class="calendar" id="app">
+        <div class="title">
+            <div class="lunar-title">
+                <div id="yearDisplay"></div>
+                <div class="solar-inputs">
+                    <input type="number" id="solarYearInput" min="1900" max="2100" placeholder="阳历年">年
+                    <select id="solarMonthSelect">
+                        <option value="1">1月</option>
+                        <option value="2">2月</option>
+                        <option value="3">3月</option>
+                        <option value="4">4月</option>
+                        <option value="5">5月</option>
+                        <option value="6">6月</option>
+                        <option value="7">7月</option>
+                        <option value="8">8月</option>
+                        <option value="9">9月</option>
+                        <option value="10">10月</option>
+                        <option value="11">11月</option>
+                        <option value="12">12月</option>
+                    </select>
+                </div>
+                <div class="month">
+                    <a href="javascript:void(0);" onclick="onPrevMonth()">&lt;</a>
+                    <span id="monthDisplay"></span>
+                    <a href="javascript:void(0);" onclick="onNextMonth()">&gt;</a>
+                </div>
+            </div>
+        </div>
+        <div class="body">
+            <ul class="week" id="weekUl"></ul>
+            <ul class="day" id="dayUl"></ul>
+        </div>
+    </div>
+
+    <script>
+        class Day {
+            constructor() {
+                this.lunarDay = '';
+                this.text = '';
+                this.isFestival = false;
+                this.isToday = false;
+                this.isJie = false;
+                this.isQi = false;
+            }
+        }
+
+        const now = Lunar.fromDate(new Date());
+        
+        const state = {
+            year: now.getYear(),
+            month: now.getMonth(),
+            yearInChinese: '',
+            yearInGanZhi: '',
+            yearShengXiao: '',
+            monthInChinese: '',
+            monthInGanZhi: '',
+            weekStart: 0,
+            heads: ['日', '一', '二', '三', '四', '五', '六'],
+            days: new Array()
+        };
+
+        let monthInGanZhi = '';
+
+        function buildDay(d) {
+            const day = new Day();
+            let lunarDay = d.getDayInChinese();
+            if (1 === d.getDay()) {
+                lunarDay = d.getMonthInChinese() + '月';
+            }
+            const gz = d.getMonthInGanZhi();
+            if (monthInGanZhi !== '' && monthInGanZhi !== gz) {
+                lunarDay = gz;
+            }
+            monthInGanZhi = gz;
+            day.lunarDay = lunarDay;
+            const solar = d.getSolar();
+            let text = solar.getDay() + '';
+            if (1 == solar.getDay()) {
+                text = solar.getMonth() + '月';
+            }
+            const otherFestivals = d.getOtherFestivals();
+            if (otherFestivals.length > 0) {
+                text = otherFestivals[0];
+                day.isFestival = true;
+            }
+            const festivals = d.getFestivals();
+            if (festivals.length > 0) {
+                text = festivals[0];
+                day.isFestival = true;
+            }
+            const jq = d.getCurrentJieQi();
+            if (jq) {
+                text = jq.getName();
+                day.isFestival = true;
+                day.isJie = jq.isJie();
+                day.isQi = jq.isQi();
+            }
+            day.text = text;
+            if (d.toString() === now.toString()) {
+                day.isToday = true;
+            }
+            return day;
+        }
+
+        function render() {
+            const month = LunarMonth.fromYm(state.year, state.month);
+            const size = month.getDayCount();
+            const days = [];
+            const lunar = Lunar.fromYmd(state.year, state.month, 1);
+            const blankDay = new Day();
+            
+            // 添加月初前的空白
+            for (let i = 0; i < lunar.getWeek(); i++) {
+                days.push(blankDay);
+            }
+            
+            days.push(buildDay(lunar));
+            let lastWeek = 0;
+            
+            for (let i = 1; i < size; i++) {
+                const d = lunar.next(i);
+                lastWeek = d.getWeek();
+                days.push(buildDay(d));
+            }
+            
+            // 添加月末后的空白
+            for (let i = 0; i < 6 - lastWeek; i++) {
+                days.push(blankDay);
+            }
+            
+            state.days = days;
+            state.yearInChinese = lunar.getYearInChinese();
+            state.yearInGanZhi = lunar.getYearInGanZhi();
+            state.yearShengXiao = lunar.getYearShengXiao();
+            state.monthInChinese = lunar.getMonthInChinese();
+            state.monthInGanZhi = month.getGanZhi();
+            
+            // 更新农历标题显示
+            document.getElementById('yearDisplay').textContent = 
+                `${state.yearInChinese} ${state.yearInGanZhi}(${state.yearShengXiao})年`;
+            document.getElementById('monthDisplay').textContent = 
+                `${state.monthInChinese}月(${state.monthInGanZhi})`;
+            
+            // 更新阳历输入框
+            updateSolarInputs();
+            
+            // 更新星期头部
+            const weekUl = document.getElementById('weekUl');
+            weekUl.innerHTML = '';
+            state.heads.forEach(head => {
+                const li = document.createElement('li');
+                li.textContent = '星期' + head;
+                weekUl.appendChild(li);
+            });
+            
+            // 更新日期
+            const dayUl = document.getElementById('dayUl');
+            dayUl.innerHTML = '';
+            state.days.forEach(day => {
+                const li = document.createElement('li');
+                li.textContent = day.lunarDay;
+                
+                if (day.isFestival) li.classList.add('festival');
+                
+                const i = document.createElement('i');
+                i.textContent = day.text;
+                li.appendChild(i);
+                
+                if (day.isToday) {
+                    const b = document.createElement('b');
+                    b.textContent = '今';
+                    li.appendChild(b);
+                }
+                
+                if (day.isJie || day.isQi) {
+                    const u = document.createElement('u');
+                    u.textContent = day.isJie ? '节' : '气';
+                    if (day.isQi) u.classList.add('qi');
+                    li.appendChild(u);
+                }
+                
+                dayUl.appendChild(li);
+            });
+        }
+
+        function updateSolarInputs() {
+            // 获取当前农历月份对应的阳历月份
+            const lunarDate = Lunar.fromYmd(state.year, state.month, 1);
+            const solarDate = lunarDate.getSolar();
+            document.getElementById('solarYearInput').value = solarDate.getYear();
+            document.getElementById('solarMonthSelect').value = solarDate.getMonth();
+        }
+
+        function onPrevMonth() {
+            monthInGanZhi = '';
+            const month = LunarMonth.fromYm(state.year, state.month).next(-1);
+            state.year = month.getYear();
+            state.month = month.getMonth();
+            render();
+        }
+
+        function onNextMonth() {
+            monthInGanZhi = '';
+            const month = LunarMonth.fromYm(state.year, state.month).next(1);
+            state.year = month.getYear();
+            state.month = month.getMonth();
+            render();
+        }
+
+        function onSolarDateChange() {
+            const solarYear = parseInt(document.getElementById('solarYearInput').value);
+            const solarMonth = parseInt(document.getElementById('solarMonthSelect').value);
+            
+            if (solarYear && solarMonth) {
+                const solarDate = Solar.fromYmd(solarYear, solarMonth, 1);
+                const lunarDate = solarDate.getLunar();
+                
+                monthInGanZhi = '';
+                state.year = lunarDate.getYear();
+                state.month = lunarDate.getMonth();
+                render();
+            }
+        }
+
+        function initializeEventListeners() {
+            document.getElementById('solarYearInput').addEventListener('change', onSolarDateChange);
+            document.getElementById('solarMonthSelect').addEventListener('change', onSolarDateChange);
+        }
+
+        // 初始渲染
+        render();
+        initializeEventListeners();
+    </script>
+</body>
+</html>

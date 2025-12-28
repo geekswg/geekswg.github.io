@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>农历日历</title>
+    <script src="lunar.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f5f5f5;
+        }
+
+        .calendar * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .calendar {
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 16px;
+            margin: 0;
+            box-sizing: border-box;
+            border: 2px solid #4E6EF2;
+            display: flex;
+            height: 465px;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .container {
+            padding-top: 14px;
+        }
+
+        .bar {
+            position: relative;
+            display: flex;
+            height: 30px;
+            padding: 0 10px;
+            margin-bottom: 24px;
+        }
+
+        .bar div {
+            position: relative;
+            flex: 1;
+        }
+
+        .bar div.button {
+            position: absolute;
+            right: 0;
+            width: 68px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            background: #F5F5F6;
+            border-radius: 6px;
+            color: #333;
+            cursor: pointer;
+            font-size: 13px;
+        }
+
+        .bar input, .bar select {
+            border: 1px solid #D7D9E0;
+            box-sizing: border-box;
+            padding: 7px;
+            border-radius: 6px;
+            line-height: 1;
+            cursor: pointer;
+            position: relative;
+            background: #FFFFFF;
+            width: 80px;
+            margin-right: 6px;
+            text-align: center;
+        }
+
+        .bar select {
+            appearance: none;
+        }
+
+        ul, ol {
+            list-style: none;
+            width: 448px;
+        }
+
+        ul.head li {
+            float: left;
+            width: 64px;
+            height: 36px;
+            font-size: 13px;
+        }
+
+        ul.body ol li {
+            float: left;
+            width: 64px;
+            position: relative;
+            height: 60px;
+            padding: 2px;
+            cursor: pointer;
+        }
+
+        ul.body ol li div.inner {
+            padding: 4px;
+            border-radius: 6px;
+            border: 2px solid transparent;
+        }
+
+        ul.body ol li div.inner b {
+            display: block;
+            font-weight: normal;
+            height: 22px;
+            font-size: 18px;
+            color: #000;
+        }
+
+        ul.body ol li div.inner i {
+            display: block;
+            font-style: normal;
+            color: #333;
+            font-size: 12px;
+        }
+
+        ul.body ol li div.inner u {
+            position: absolute;
+            text-decoration: none;
+            left: 7px;
+            top: 7px;
+            color: #626675;
+            font-size: 12px;
+            line-height: 12px;
+        }
+
+        ul.body ol li.other {
+            filter: alpha(opacity=40);
+            opacity: 0.4;
+        }
+
+        ul.body ol li:hover div.inner {
+            border: 2px solid #BDBFC8;
+        }
+
+        ul.body ol li.selected div.inner {
+            border: 2px solid #BDBFC8;
+        }
+
+        ul.body ol li.holiday div.inner {
+            background: #f5f5f6;
+        }
+
+        ul.body ol li.holiday.rest div.inner {
+            background: #FDE3E4;
+        }
+
+        ul.body ol li.rest div.inner b {
+            color: #F73131;
+        }
+
+        ul.body ol li.rest div.inner u {
+            color: #F73131;
+        }
+
+        ul.body ol li.today div.inner {
+            border: 2px solid #4E6EF2 !important;
+        }
+
+        .side {
+            background: #4E6EF2;
+            width: 112px;
+            color: #fff;
+        }
+
+        .side .ymd {
+            line-height: 45px;
+            font-size: 13px;
+        }
+
+        .side .day {
+            position: relative;
+            width: 80px;
+            height: 80px;
+            margin: 0 auto;
+            line-height: 80px;
+            font-size: 52px;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 12px;
+        }
+
+        .side .lunar {
+            margin-top: 6px;
+        }
+
+        .side .lunar div {
+            font-size: 13px;
+            line-height: 21px;
+        }
+
+        .side .festival {
+            position: relative;
+            margin-top: 13px;
+            padding-left: 22px;
+            padding-right: 14px;
+            text-align: justify;
+            color: #FFF;
+            font-size: 12px;
+            line-height: 16px;
+        }
+
+        .side .festival::before {
+            content: '';
+            position: absolute;
+            top: 6px;
+            left: 16px;
+            width: 3px;
+            height: 3px;
+            background: #fff;
+            border-radius: 50%;
+        }
+
+        .side .yiji {
+            position: relative;
+            margin-top: 12px;
+            padding-top: 12px;
+            background: rgba(255, 255, 255, 0.15);
+            height: 80%;
+        }
+
+        .side .yiji .yi {
+            float: left;
+            width: 50%;
+        }
+
+        .side .yiji .yi div {
+            font-size: 12px;
+            line-height: 20px;
+        }
+
+        .side .yiji .ji {
+            float: right;
+            width: 50%;
+        }
+
+        .side .yiji .ji div {
+            font-size: 12px;
+            line-height: 20px;
+        }
+
+        .side .yiji b {
+            display: block;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            margin: 0 auto;
+            font-style: normal;
+            font-size: 24px;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="calendar" id="app">
+        <div class="container">
+            <div class="bar">
+                <div>
+                    <input type="number" id="yearInput">年
+                </div>
+                <div>
+                    <select id="monthSelect"></select>
+                </div>
+                <div>
+                    <select id="holidaySelect">
+                        <option value="0">假期安排</option>
+                    </select>
+                </div>
+                <div>
+                    <div class="button" onclick="onBack()">返回今天</div>
+                </div>
+            </div>
+            <ul class="head" id="headUl"></ul>
+            <ul class="body" id="bodyUl"></ul>
+        </div>
+        <div class="side">
+            <div class="ymd" id="ymdDiv"></div>
+            <div class="day" id="dayDiv"></div>
+            <div class="lunar" id="lunarDiv"></div>
+            <div class="festival" id="festivalDiv"></div>
+            <div class="yiji">
+                <div class="yi">
+                    <b>宜</b>
+                    <div id="yiDiv"></div>
+                </div>
+                <div class="ji">
+                    <b>忌</b>
+                    <div id="jiDiv"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        class Day {
+            constructor() {
+                this.month = 0;
+                this.day = 0;
+                this.lunarDay = '';
+                this.lunarMonth = '';
+                this.yearGanZhi = '';
+                this.yearShengXiao = '';
+                this.monthGanZhi = '';
+                this.dayGanZhi = '';
+                this.ymd = '';
+                this.desc = '';
+                this.isToday = false;
+                this.isSelected = false;
+                this.isRest = false;
+                this.isHoliday = false;
+                this.festivals = [];
+                this.yi = [];
+                this.ji = [];
+            }
+        }
+
+        class Week {
+            constructor() {
+                this.days = [];
+            }
+        }
+
+        class Month {
+            constructor() {
+                this.heads = [];
+                this.weeks = [];
+            }
+        }
+
+        class Holiday {
+            constructor() {
+                this.name = '';
+                this.month = 0;
+            }
+        }
+
+        const now = Solar.fromDate(new Date());
+        
+        const state = {
+            year: now.getYear(),
+            month: now.getMonth(),
+            weekStart: 1,
+            selected: new Day(),
+            data: new Month(),
+            holidays: new Array(),
+            holidayMonth: 0
+        };
+
+        function buildDay(d) {
+            const ymd = d.toYmd();
+            const lunar = d.getLunar();
+            const day = new Day();
+            day.month = d.getMonth();
+            day.day = d.getDay();
+            day.lunarMonth = lunar.getMonthInChinese();
+            day.lunarDay = lunar.getDayInChinese();
+            day.yearGanZhi = lunar.getYearInGanZhi();
+            day.yearShengXiao = lunar.getYearShengXiao();
+            day.monthGanZhi = lunar.getMonthInGanZhi();
+            day.dayGanZhi = lunar.getDayInGanZhi();
+            day.ymd = ymd;
+            day.isToday = ymd == now.toYmd();
+            day.isSelected = ymd == state.selected.ymd;
+            if (day.isToday && state.selected.day === 0) {
+                state.selected = day;
+            }
+            const solarFestivals = d.getFestivals();
+            solarFestivals.forEach(f => {
+                day.festivals.push(f);
+            });
+            d.getOtherFestivals().forEach(f => {
+                day.festivals.push(f);
+            });
+            lunar.getFestivals().forEach(f => {
+                day.festivals.push(f);
+            });
+            lunar.getOtherFestivals().forEach(f => {
+                day.festivals.push(f);
+            });
+            let rest = false;
+            if (d.getWeek() === 6 || d.getWeek() === 0) {
+                rest = true;
+            }
+            const holiday = HolidayUtil.getHoliday(ymd);
+            if (holiday) {
+                rest = !holiday.isWork();
+            }
+            day.isHoliday = !!holiday;
+            day.isRest = rest;
+            day.yi = lunar.getDayYi();
+            day.ji = lunar.getDayJi();
+            let desc = lunar.getDayInChinese();
+            const jq = lunar.getJieQi();
+            if (jq) {
+                desc = jq;
+            } else if (lunar.getDay() === 1) {
+                desc = lunar.getMonthInChinese() + '月';
+            } else if (solarFestivals.length > 0) {
+                const f = solarFestivals[0];
+                if (f.length < 4) {
+                    desc = f;
+                }
+            }
+            day.desc = desc;
+            return day;
+        }
+
+        function render() {
+            const month = new Month();
+            const weeks = [];
+            const solarWeeks = SolarMonth.fromYm(parseInt(state.year + '', 10), parseInt(state.month + '', 10)).getWeeks(state.weekStart);
+            solarWeeks.forEach(w => {
+                weeks.push(w);
+            });
+            while (weeks.length < 6) {
+                weeks.push(weeks[weeks.length - 1].next(1, false));
+            }
+            
+            // 清空并重新构建头部和身体
+            const headUl = document.getElementById('headUl');
+            const bodyUl = document.getElementById('bodyUl');
+            headUl.innerHTML = '';
+            bodyUl.innerHTML = '';
+            
+            weeks.forEach(w => {
+                const week = new Week();
+                const heads = [];
+                w.getDays().forEach(d => {
+                    heads.push(d.getWeekInChinese());
+                    week.days.push(buildDay(d));
+                });
+                
+                if (month.heads.length === 0) {
+                    month.heads = heads;
+                }
+                month.weeks.push(week);
+            });
+            
+            state.data = month;
+            
+            // 渲染头部
+            month.heads.forEach(head => {
+                const li = document.createElement('li');
+                li.textContent = head;
+                headUl.appendChild(li);
+            });
+            
+            // 渲染日历身体
+            month.weeks.forEach(week => {
+                const li = document.createElement('li');
+                const ol = document.createElement('ol');
+                
+                week.days.forEach(day => {
+                    const dayLi = document.createElement('li');
+                    dayLi.onclick = () => onSelect(day);
+                    
+                    if (day.isToday) dayLi.classList.add('today');
+                    if (day.isSelected) dayLi.classList.add('selected');
+                    if (day.month != state.month) dayLi.classList.add('other');
+                    if (day.isRest) dayLi.classList.add('rest');
+                    if (day.isHoliday) dayLi.classList.add('holiday');
+                    
+                    const innerDiv = document.createElement('div');
+                    innerDiv.className = 'inner';
+                    
+                    const b = document.createElement('b');
+                    b.textContent = day.day;
+                    innerDiv.appendChild(b);
+                    
+                    const i = document.createElement('i');
+                    i.textContent = day.desc;
+                    innerDiv.appendChild(i);
+                    
+                    if (day.isHoliday) {
+                        const u = document.createElement('u');
+                        u.textContent = day.isRest ? '休' : '班';
+                        innerDiv.appendChild(u);
+                    }
+                    
+                    dayLi.appendChild(innerDiv);
+                    ol.appendChild(dayLi);
+                });
+                
+                li.appendChild(ol);
+                bodyUl.appendChild(li);
+            });
+            
+            // 渲染假期
+            const holidays = [];
+            HolidayUtil.getHolidays(state.year).forEach(h => {
+                const holiday = new Holiday();
+                holiday.name = h.getName();
+                holiday.month = parseInt(h.getTarget().substring(5, 7), 10);
+                const exists = holidays.some(a => {
+                    return a.name == holiday.name;
+                });
+                if (!exists) {
+                    holidays.push(holiday);
+                }
+            });
+            state.holidays = holidays;
+            
+            // 更新假期选择器
+            const holidaySelect = document.getElementById('holidaySelect');
+            holidaySelect.innerHTML = '<option value="0">假期安排</option>';
+            holidays.forEach(h => {
+                const option = document.createElement('option');
+                option.value = h.month;
+                option.textContent = h.name;
+                holidaySelect.appendChild(option);
+            });
+            
+            updateSidePanel();
+        }
+
+        function onSelect(day) {
+            state.selected = day;
+            render();
+        }
+
+        function onBack() {
+            state.holidayMonth = 0;
+            state.year = now.getYear();
+            state.month = now.getMonth();
+            state.selected = buildDay(now);
+            render();
+        }
+
+        function updateSidePanel() {
+            document.getElementById('ymdDiv').textContent = state.selected.ymd;
+            document.getElementById('dayDiv').textContent = state.selected.day;
+            
+            const lunarDiv = document.getElementById('lunarDiv');
+            lunarDiv.innerHTML = `
+                <div>${state.selected.lunarMonth}月 ${state.selected.lunarDay}</div>
+                <div>${state.selected.yearGanZhi}年 ${state.selected.yearShengXiao}</div>
+                <div>${state.selected.monthGanZhi}月 ${state.selected.dayGanZhi}日</div>
+            `;
+            
+            const festivalDiv = document.getElementById('festivalDiv');
+            festivalDiv.innerHTML = '';
+            state.selected.festivals.forEach(f => {
+                const div = document.createElement('div');
+                div.className = 'festival';
+                div.textContent = f;
+                festivalDiv.appendChild(div);
+            });
+            
+            const yiDiv = document.getElementById('yiDiv');
+            yiDiv.innerHTML = '';
+            state.selected.yi.forEach(f => {
+                const div = document.createElement('div');
+                div.textContent = f;
+                yiDiv.appendChild(div);
+            });
+            
+            const jiDiv = document.getElementById('jiDiv');
+            jiDiv.innerHTML = '';
+            state.selected.ji.forEach(f => {
+                const div = document.createElement('div');
+                div.textContent = f;
+                jiDiv.appendChild(div);
+            });
+        }
+
+        // 初始化年份输入
+        document.getElementById('yearInput').value = state.year;
+        document.getElementById('yearInput').addEventListener('change', function() {
+            state.year = parseInt(this.value);
+            render();
+        });
+
+        // 初始化月份选择器
+        const monthSelect = document.getElementById('monthSelect');
+        for (let i = 1; i <= 12; i++) {
+            const option = document.createElement('option');
+            option.value = i;
+            option.textContent = i + '月';
+            monthSelect.appendChild(option);
+        }
+        monthSelect.value = state.month;
+        monthSelect.addEventListener('change', function() {
+            state.month = parseInt(this.value);
+            render();
+        });
+
+        // 初始化假期选择器
+        document.getElementById('holidaySelect').addEventListener('change', function() {
+            const month = parseInt(this.value, 10);
+            if (month > 0) {
+                state.month = month;
+                render();
+            }
+        });
+
+        // 初始渲染
+        render();
+    </script>
+</body>
+</html>
