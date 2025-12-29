@@ -43,7 +43,7 @@ class DayEvents {
 
   eventHandler(events) {
 
-    console.clear()
+    //console.clear()
     console.table(events);
     //alert(sessionStorage.getItem("isPopupWindow"));
     /** 
