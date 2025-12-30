@@ -626,19 +626,22 @@
             position: absolute;
             top: 2px;
             right: 2px;
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
+            color: white;
+            font-size: 9px;
+            padding: 1px 4px;
+            border-radius: 8px;
+            font-weight: bold;
             z-index: 10;
+            white-space: nowrap;
             pointer-events: none;
         }
 
-        /* 休假用绿色圆点 */
+        /* 休假用绿色 */
         .holiday-tag.rest {
             background: #5CB85C;
         }
 
-        /* 调休用黄色圆点 */
+        /* 调休用黄色 */
         .holiday-tag.work {
             background: #E6A23C;
         }
@@ -1229,6 +1232,7 @@
                 font-size: 0;
                 top: 2px;
                 right: 2px;
+                color: transparent;
             }
 
             .holiday-tag.rest {
