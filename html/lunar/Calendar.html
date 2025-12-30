@@ -626,14 +626,21 @@
             position: absolute;
             top: 2px;
             right: 2px;
-            color: white;
-            font-size: 9px;
-            padding: 1px 4px;
-            border-radius: 8px;
-            font-weight: bold;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
             z-index: 10;
-            white-space: nowrap;
-            pointer-events: none; /* 防止拦截鼠标事件 */
+            pointer-events: none;
+        }
+
+        /* 休假用绿色圆点 */
+        .holiday-tag.rest {
+            background: #5CB85C;
+        }
+
+        /* 调休用黄色圆点 */
+        .holiday-tag.work {
+            background: #E6A23C;
         }
 
 
@@ -1058,7 +1065,275 @@
             }
         }
 
-        /* 深色主题样式 */
+        /* 手机端优化 */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            .main-container {
+                padding: 15px;
+                gap: 15px;
+                border-radius: 15px;
+            }
+
+            .calendar-section {
+                width: 100%;
+            }
+
+            .detail-section {
+                min-width: auto;
+                max-width: none;
+            }
+
+            /* 日历头部优化 */
+            .calendar-header {
+                flex-wrap: wrap;
+                gap: 8px;
+                padding: 12px;
+                justify-content: center;
+            }
+
+            .nav-btn {
+                padding: 6px 10px;
+                font-size: 12px;
+            }
+
+            .today-btn {
+                padding: 6px 10px;
+            }
+
+            /* 日期选择器区域 - 上月/下月/年月在同一行 */
+            .date-selector {
+                display: flex;
+                align-items: center;
+                gap: 6px;
+                flex-shrink: 0;
+            }
+
+            .mobile-prev-btn {
+                padding: 6px 10px;
+                font-size: 12px;
+            }
+
+            .year-input {
+                width: 60px !important;
+                min-width: 60px !important;
+                font-size: 13px;
+                padding: 5px 6px;
+                text-align: center;
+            }
+
+            .month-select {
+                font-size: 11px;
+                padding: 5px 6px;
+            }
+
+            .mobile-next-btn {
+                padding: 6px 10px;
+                font-size: 12px;
+            }
+
+            /* 隐藏原始的上月下月按钮 */
+            .nav-btn[onclick="changeMonth(-1)"]:not(.mobile-prev-btn),
+            .nav-btn[onclick="changeMonth(1)"]:not(.mobile-next-btn) {
+                display: none;
+            }
+
+            .today-btn {
+                order: 1;
+            }
+
+            .festival-selector,
+            .theme-selector,
+            .weekstart-selector {
+                order: 2;
+            }
+
+            /* 星期选择器简化 */
+            .weekstart-selector {
+                padding: 2px;
+            }
+
+            .weekstart-option {
+                padding: 4px 8px;
+                font-size: 11px;
+            }
+
+            /* 日历网格优化 */
+            .calendar-grid {
+                gap: 4px;
+                padding: 10px;
+                border-radius: 10px;
+            }
+
+            .weekday {
+                padding: 8px 0;
+                font-size: 12px;
+            }
+
+            .calendar-day {
+                border-width: 1px;
+                border-radius: 8px;
+                padding: 0;
+                aspect-ratio: 1;
+                min-height: 40px;
+            }
+
+            .day-number {
+                font-size: 14px;
+                margin-bottom: 2px;
+                line-height: 1.2;
+            }
+
+            .lunar-day {
+                font-size: 9px;
+                line-height: 1.1;
+            }
+
+            /* 标签优化 - 移动端节日标签缩小，避免遮挡日期 */
+            .festival-tag {
+                font-size: 2px;
+                padding: 0;
+                top: 1px;
+                max-width: calc(100% - 4px);
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                transform: translateX(-50%);
+                left: 50%;
+                right: auto;
+                border-radius: 3px;
+                line-height: 1;
+                min-height: 8px;
+                background: transparent;
+                z-index: 1; /* 节日标签层级更低 */
+            }
+
+            .day-number {
+                position: relative;
+                z-index: 2; /* 日期数字层级更高 */
+            }
+
+            .jieqi-tag,
+            .fu-jiu-tag {
+                display: none;
+            }
+
+            /* 手机端休假用小圆点显示 */
+            .holiday-tag {
+                width: 7px;
+                height: 7px;
+                border-radius: 50%;
+                padding: 0;
+                font-size: 0;
+                top: 2px;
+                right: 2px;
+            }
+
+            .holiday-tag.rest {
+                background: #5CB85C;
+            }
+
+            .holiday-tag.work {
+                background: #E6A23C;
+            }
+
+            /* 黄历详情面板优化 */
+            #detailPanel {
+                padding: 12px;
+            }
+
+            .solar-date {
+                font-size: 13px;
+            }
+
+            .nayin b, .chongsha b, .pengzu b {
+                font-size: 11px;
+            }
+
+            .nayin i, .chongsha i, .pengzu i {
+                font-size: 10px;
+            }
+
+            #yi, #ji, #jshen, #xshen {
+                min-height: auto;
+                padding: 6px;
+            }
+
+            .yiji i, .shen i {
+                font-size: 9px;
+            }
+
+            /* 提示框优化 */
+            .date-tooltip {
+                position: fixed;
+                left: 10px !important;
+                right: 10px !important;
+                bottom: 10px !important;
+                top: auto !important;
+                max-width: none !important;
+                min-width: auto !important;
+                padding: 15px;
+            }
+
+            .tooltip-header {
+                margin-bottom: 10px;
+            }
+
+            .tooltip-date {
+                font-size: 16px;
+            }
+
+            .tooltip-lunar {
+                font-size: 12px;
+            }
+
+            /* 空状态优化 */
+            .empty-state {
+                padding: 20px 10px;
+                font-size: 13px;
+            }
+
+            /* 节日和主题下拉菜单优化 */
+            .festival-dropdown,
+            .theme-dropdown {
+                position: fixed;
+                left: 10px;
+                right: 10px;
+                width: auto;
+                min-width: auto;
+                max-width: none;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+
+        /* 超小屏幕优化 */
+        @media (max-width: 360px) {
+            .main-container {
+                padding: 10px;
+            }
+
+            .calendar-day {
+                min-height: 35px;
+            }
+
+            .day-number {
+                font-size: 12px;
+            }
+
+            .lunar-day {
+                font-size: 8px;
+            }
+
+            .festival-tag,
+            .jieqi-tag,
+            .holiday-tag,
+            .fu-jiu-tag {
+                display: none;
+            }
+        }
         body.dark-theme {
             background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
         }
@@ -1240,6 +1515,26 @@
             .detail-panel {
                 padding: 20px;
             }
+
+            /* 提示消息样式 */
+            .toast-message {
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: rgba(0, 0, 0, 0.8);
+                color: white;
+                padding: 12px 24px;
+                border-radius: 8px;
+                font-size: 14px;
+                z-index: 9999;
+                animation: toastFade 0.3s ease;
+            }
+
+            @keyframes toastFade {
+                from { opacity: 0; transform: translate(-50%, -50%) scale(0.9); }
+                to { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+            }
         }
     </style>
 </head>
@@ -1247,7 +1542,7 @@
     <div class="main-container">
         <section class="calendar-section">
             <div class="calendar-header">
-                <button class="nav-btn" onclick="changeMonth(-1)">上月</button>
+                <button class="nav-btn mobile-prev-btn" onclick="changeMonth(-1)">上月</button>
                 <div class="date-selector">
                     <input type="number" class="year-input" id="yearInput" placeholder="年份" min="1900" max="2100" onchange="updateCalendar()">
                     <select class="month-select" id="monthSelect" onchange="updateCalendar()">
@@ -1265,6 +1560,7 @@
                         <option value="12">十二月</option>
                     </select>
                 </div>
+                <button class="nav-btn mobile-next-btn" onclick="changeMonth(1)">下月</button>
                 <div class="festival-selector">
                     <button class="nav-btn festival-toggle" onclick="toggleFestivalSelector()">节日</button>
                     <div class="festival-dropdown" id="festivalDropdown">
@@ -1312,7 +1608,6 @@
                     </div>
                 </div>
                 <button class="nav-btn today-btn" onclick="goToToday()">今天</button>
-                <button class="nav-btn" onclick="changeMonth(1)">下月</button>
             </div>
             <div class="calendar-grid" id="calendarGrid">
                 <!-- 星期标题 -->
@@ -2584,23 +2879,23 @@
         // 选择日期
         function selectDate(date) {
             state.selectedDate = date;
-            
+
             // 更新选中状态
             document.querySelectorAll('.calendar-day').forEach(el => {
                 el.classList.remove('selected');
             });
-            
+
             // 如果点击的是非当前月的日期，需要切换到相应月份
             const clickedYear = date.getFullYear();
             const clickedMonth = date.getMonth() + 1;
-            
+
             if (clickedYear !== state.currentYear || clickedMonth !== state.currentMonth) {
                 state.currentYear = clickedYear;
                 state.currentMonth = clickedMonth;
-                
+
                 // 重新渲染日历
                 renderCalendar();
-                
+
                 // 延迟选中日期，确保日历已经渲染完成
                 setTimeout(() => {
                     document.querySelectorAll('.calendar-day').forEach(el => {
@@ -2617,6 +2912,131 @@
                 // 显示详细信息
                 showDetail(date);
             }
+
+            // 复制详情内容到剪贴板
+            copyDetailToClipboard(date);
+        }
+
+        // 复制黄历详情到剪贴板
+        function copyDetailToClipboard(date) {
+            if (typeof Solar === 'undefined') return;
+
+            try {
+                const solar = Solar.fromDate(date);
+                const lunar = solar.getLunar ? solar.getLunar() : null;
+
+                if (!lunar) return;
+
+                // 干支信息
+                const yearGanZhi = lunar.getYearInGanZhi();
+                const monthGanZhi = lunar.getMonthInGanZhi();
+                const dayGanZhi = lunar.getDayInGanZhi();
+                const yearShengXiao = lunar.getYearShengXiao();
+
+                // 获取星期
+                const weekDays = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
+                const weekDay = weekDays[solar.getWeek()];
+
+                // 获取宜忌信息
+                const yi = lunar.getDayYi ? lunar.getDayYi() : [];
+                const ji = lunar.getDayJi ? lunar.getDayJi() : [];
+
+                // 获取纳音五行
+                const nayin = lunar.getDayNaYin ? lunar.getDayNaYin() : '获取中';
+
+                // 获取冲煞
+                const xiongsha = lunar.getDayXiongSha ? lunar.getDayXiongSha() : null;
+                const chongsha = (xiongsha && xiongsha.length > 0) ? xiongsha.join(' ') : '冲煞信息获取中';
+
+                // 获取彭祖百忌
+                const pengzuGan = lunar.getPengZuGan ? lunar.getPengZuGan() : '';
+                const pengzuZhi = lunar.getPengZuZhi ? lunar.getPengZuZhi() : '';
+                const pengzu = (pengzuGan && pengzuZhi) ? pengzuGan + ' ' + pengzuZhi : '彭祖百忌获取中';
+
+                // 获取神煞
+                const jishen = lunar.getDayJiShen ? lunar.getDayJiShen() : [];
+                const xiongshen = lunar.getDayXiongSha ? lunar.getDayXiongSha() : [];
+
+                // 获取方位
+                const xishenDesc = lunar.getDayPositionXiDesc ? lunar.getDayPositionXiDesc() : '';
+                const fushenDesc = lunar.getDayPositionFuDesc ? lunar.getDayPositionFuDesc() : '';
+                const caishenDesc = lunar.getDayPositionCaiDesc ? lunar.getDayPositionCaiDesc() : '';
+
+                // 获取节日信息
+                const festivalInfo = getFestivalInfo(date);
+                let festivalText = '';
+                if (festivalInfo && festivalInfo.solarFestivals && festivalInfo.lunarFestivals) {
+                    if (festivalInfo.solarFestivals.length > 0 || festivalInfo.lunarFestivals.length > 0) {
+                        const allFestivals = [...festivalInfo.solarFestivals, ...festivalInfo.lunarFestivals];
+                        festivalText = '\n【节日】' + allFestivals.join('、');
+                    }
+                }
+
+                // 节气
+                const jieqi = solar.getJieQi ? solar.getJieQi() : null;
+                let jieqiText = '';
+                if (jieqi) {
+                    jieqiText = '\n【节气】' + jieqi;
+                }
+
+                // 格式化阳历日期
+                const solarYear = date.getFullYear();
+                const solarMonth = date.getMonth() + 1;
+                const solarDay = date.getDate();
+                const solarDateStr = `${solarYear}年${solarMonth}月${solarDay}日`;
+
+                // 组装文本内容
+                const textToCopy = `【日期】${solarDateStr} ${weekDay}
+【农历】${lunar.getYearInGanZhi()}${yearShengXiao}年 ${lunar.getMonthInChinese()}月${lunar.getDayInChinese()}日
+【干支】${yearGanZhi}${monthGanZhi}${dayGanZhi}
+【五行】${nayin}
+【冲煞】${chongsha}
+【彭祖】${pengzu}
+【喜神】${xishenDesc || '无'}
+【福神】${fushenDesc || '无'}
+【财神】${caishenDesc || '无'}
+【宜】${yi.join(' ')}
+【忌】${ji.join(' ')}
+【吉神】${jishen.join(' ') || '无'}
+【凶神】${xiongshen.join(' ') || '无'}${festivalText}${jieqiText}`;
+
+                // 复制到剪贴板
+                navigator.clipboard.writeText(textToCopy).then(() => {
+                    showToast('已复制到剪贴板');
+                }).catch(err => {
+                    console.error('复制失败:', err);
+                    // 降级方案
+                    const textarea = document.createElement('textarea');
+                    textarea.value = textToCopy;
+                    document.body.appendChild(textarea);
+                    textarea.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(textarea);
+                    showToast('已复制到剪贴板');
+                });
+            } catch (error) {
+                console.error('复制详情时出错:', error);
+            }
+        }
+
+        // 显示提示信息
+        function showToast(message) {
+            // 移除旧的提示
+            const oldToast = document.querySelector('.toast-message');
+            if (oldToast) {
+                oldToast.remove();
+            }
+
+            // 创建新提示
+            const toast = document.createElement('div');
+            toast.className = 'toast-message';
+            toast.textContent = message;
+            document.body.appendChild(toast);
+
+            // 2秒后移除
+            setTimeout(() => {
+                toast.remove();
+            }, 2000);
         }
 
         // 获取节气详细信息
