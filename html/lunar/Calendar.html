@@ -1519,26 +1519,26 @@
             .detail-panel {
                 padding: 20px;
             }
+        }
 
-            /* 提示消息样式 */
-            .toast-message {
-                position: fixed;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                background: rgba(0, 0, 0, 0.8);
-                color: white;
-                padding: 12px 24px;
-                border-radius: 8px;
-                font-size: 14px;
-                z-index: 9999;
-                animation: toastFade 0.3s ease;
-            }
+        /* 提示消息样式 - 顶部中间显示 */
+        .toast-message {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 14px;
+            z-index: 9999;
+            animation: toastFade 0.3s ease;
+        }
 
-            @keyframes toastFade {
-                from { opacity: 0; transform: translate(-50%, -50%) scale(0.9); }
-                to { opacity: 1; transform: translate(-50%, -50%) scale(1); }
-            }
+        @keyframes toastFade {
+            from { opacity: 0; transform: translateX(-50%) translateY(-10px); }
+            to { opacity: 1; transform: translateX(-50%) translateY(0); }
         }
     </style>
 </head>
