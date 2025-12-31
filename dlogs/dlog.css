@@ -448,6 +448,379 @@ article.dlogs .header .single-subtitle {
   background: linear-gradient(180deg, #1a1a2e, transparent) !important;
 }
 
+/* ==============================
+   原生 HTML5 音频播放器样式
+   ============================== */
+
+.dlog-audio-player {
+  margin: 0.8rem 0;
+  border-radius: 16px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.35);
+  transition: all 0.3s ease;
+}
+
+.dlog-audio-player:hover {
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.45);
+  transform: translateY(-2px);
+}
+
+.audio-container {
+  background: rgba(255, 255, 255, 0.98);
+  padding: 0.8rem 1rem;
+}
+
+/* 音频信息区域 */
+.audio-info {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.audio-cover {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.audio-icon {
+  font-size: 1.4rem;
+  animation: bounce 2s ease-in-out infinite;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+}
+
+.audio-details {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.audio-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1a202c;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  letter-spacing: 0.3px;
+}
+
+.audio-time {
+  font-size: 0.9rem;
+  color: #718096;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.time-separator {
+  color: #cbd5e0;
+}
+
+/* 控制区域 */
+.audio-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.control-btn {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: transparent;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+  padding: 0;
+}
+
+.control-btn:hover {
+  background: rgba(102, 126, 234, 0.1);
+  transform: scale(1.1);
+}
+
+.control-btn:active {
+  transform: scale(0.95);
+}
+
+.control-btn svg {
+  width: 18px;
+  height: 18px;
+  fill: #667eea;
+  transition: fill 0.3s ease;
+}
+
+.control-btn:hover svg {
+  fill: #764ba2;
+}
+
+.play-btn {
+  width: 44px;
+  height: 44px;
+}
+
+.play-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* 进度条容器 */
+.progress-container {
+  flex: 1;
+  min-width: 0;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 6px;
+  background: #e2e8f0;
+  border-radius: 3px;
+  cursor: pointer;
+  position: relative;
+  transition: height 0.2s ease;
+}
+
+.progress-bar:hover {
+  height: 8px;
+}
+
+.progress-fill {
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  border-radius: 3px;
+  position: relative;
+  transition: width 0.1s linear;
+}
+
+.progress-handle {
+  position: absolute;
+  top: 50%;
+  width: 14px;
+  height: 14px;
+  background: white;
+  border: 2px solid #667eea;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  cursor: grab;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.progress-handle:hover {
+  transform: translate(-50%, -50%) scale(1.2);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.progress-handle:active {
+  cursor: grabbing;
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.volume-btn {
+  width: 36px;
+  height: 36px;
+  background: transparent;
+}
+
+.volume-btn:hover {
+  background: rgba(102, 126, 234, 0.1);
+}
+
+.volume-btn svg {
+  fill: #718096;
+}
+
+.volume-btn:hover svg {
+  fill: #667eea;
+}
+
+/* 隐藏原生 audio 元素 */
+.native-audio {
+  display: none;
+}
+
+/* 暗色主题下的音频播放器 */
+[data-theme='dark'] .audio-container {
+  background: rgba(45, 55, 72, 0.98);
+}
+
+[data-theme='dark'] .audio-title {
+  color: #f7fafc;
+}
+
+[data-theme='dark'] .audio-time {
+  color: #cbd5e0;
+}
+
+[data-theme='dark'] .time-separator {
+  color: #4a5568;
+}
+
+[data-theme='dark'] .progress-bar {
+  background: #4a5568;
+}
+
+[data-theme='dark'] .progress-bar:hover {
+  background: #5a6578;
+}
+
+[data-theme='dark'] .volume-btn {
+  background: transparent;
+}
+
+[data-theme='dark'] .volume-btn:hover {
+  background: rgba(102, 126, 234, 0.2);
+}
+
+[data-theme='dark'] .volume-btn svg {
+  fill: #a0aec0;
+}
+
+[data-theme='dark'] .volume-btn:hover svg {
+  fill: #9f7aea;
+}
+
+[data-theme='dark'] .control-btn svg {
+  fill: #9f7aea;
+}
+
+[data-theme='dark'] .control-btn:hover svg {
+  fill: #667eea;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .dlog-audio-player {
+    margin: 0.6rem 0;
+  }
+
+  .audio-container {
+    padding: 0.7rem 0.8rem;
+  }
+
+  .audio-cover {
+    width: 42px;
+    height: 42px;
+  }
+
+  .audio-icon {
+    font-size: 1.2rem;
+  }
+
+  .audio-title {
+    font-size: 1rem;
+  }
+
+  .audio-time {
+    font-size: 0.85rem;
+  }
+
+  .control-btn {
+    width: 36px;
+    height: 36px;
+  }
+
+  .control-btn svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .play-btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .play-btn svg {
+    width: 18px;
+    height: 18px;
+    fill: #667eea;
+  }
+
+  .play-btn:hover svg {
+    fill: #764ba2;
+  }
+
+  .progress-bar {
+    height: 5px;
+  }
+
+  .progress-bar:hover {
+    height: 6px;
+  }
+
+  .progress-handle {
+    width: 12px;
+    height: 12px;
+  }
+
+  .volume-btn {
+    width: 32px;
+    height: 32px;
+  }
+
+  .volume-btn svg {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .audio-info {
+    gap: 0.6rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .audio-cover {
+    width: 38px;
+    height: 38px;
+  }
+
+  .audio-title {
+    font-size: 0.95rem;
+  }
+
+  .control-btn {
+    width: 32px;
+    height: 32px;
+  }
+
+  .play-btn {
+    width: 36px;
+    height: 36px;
+  }
+
+  .progress-handle {
+    width: 10px;
+    height: 10px;
+  }
+}
+
 [data-theme='dark'] .aplayer .aplayer-lrc p {
   color: #a78bfa !important;
 }
