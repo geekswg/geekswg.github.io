@@ -25,7 +25,7 @@
 
 /* DLog 页面主容器 - 宽屏布局 */
 article.dlogs {
-  width: 98%;
+  width: 95%;
   margin: 0 auto;
   padding: 1rem;
 }
@@ -453,49 +453,49 @@ article.dlogs .header .single-subtitle {
    ============================== */
 
 .dlog-audio-player {
-  margin: 0.8rem 0;
-  border-radius: 16px;
+  margin: 0.4rem 0;
+  border-radius: 10px;
   overflow: hidden;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.35);
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.12) 0%, rgba(118, 75, 162, 0.12) 100%);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(102, 126, 234, 0.15);
+  box-shadow: 0 1px 4px rgba(102, 126, 234, 0.1);
   transition: all 0.3s ease;
 }
 
 .dlog-audio-player:hover {
-  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.45);
-  transform: translateY(-2px);
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.18) 0%, rgba(118, 75, 162, 0.18) 100%);
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.18);
+  border-color: rgba(102, 126, 234, 0.25);
 }
 
 .audio-container {
-  background: rgba(255, 255, 255, 0.98);
-  padding: 0.8rem 1rem;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 0.4rem 0.6rem;
 }
 
-/* 音频信息区域 */
+/* 音频信息区域 - 超紧凑布局 */
 .audio-info {
   display: flex;
   align-items: center;
-  gap: 0.8rem;
-  margin-bottom: 0.8rem;
+  gap: 0.5rem;
+  margin-bottom: 0.4rem;
 }
 
 .audio-cover {
   flex-shrink: 0;
-  width: 48px;
-  height: 48px;
-  border-radius: 12px;
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
+  background: transparent;
 }
 
 .audio-icon {
-  font-size: 1.4rem;
+  font-size: 0.95rem;
   animation: bounce 2s ease-in-out infinite;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
 }
 
 @keyframes bounce {
@@ -503,7 +503,7 @@ article.dlogs .header .single-subtitle {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-2px);
+    transform: translateY(-1.5px);
   }
 }
 
@@ -512,56 +512,57 @@ article.dlogs .header .single-subtitle {
   min-width: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.2rem;
+  gap: 0.1rem;
 }
 
 .audio-title {
-  font-size: 1.1rem;
+  font-size: 0.75rem;
   font-weight: 600;
   color: #1a202c;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  letter-spacing: 0.3px;
+  letter-spacing: 0.15px;
 }
 
 .audio-time {
-  font-size: 0.9rem;
+  font-size: 0.65rem;
   color: #718096;
   display: flex;
   align-items: center;
-  gap: 0.3rem;
+  gap: 0.2rem;
 }
 
 .time-separator {
   color: #cbd5e0;
+  font-size: 0.6rem;
 }
 
-/* 控制区域 */
+/* 控制区域 - 超紧凑布局 */
 .audio-controls {
   display: flex;
   align-items: center;
-  gap: 0.8rem;
+  gap: 0.5rem;
 }
 
 .control-btn {
-  width: 40px;
-  height: 40px;
+  width: 28px;
+  height: 28px;
   border: none;
   background: transparent;
-  border-radius: 50%;
+  border-radius: 6px;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
   flex-shrink: 0;
   padding: 0;
 }
 
 .control-btn:hover {
-  background: rgba(102, 126, 234, 0.1);
-  transform: scale(1.1);
+  background: rgba(102, 126, 234, 0.08);
+  transform: scale(1.05);
 }
 
 .control-btn:active {
@@ -569,10 +570,10 @@ article.dlogs .header .single-subtitle {
 }
 
 .control-btn svg {
-  width: 18px;
-  height: 18px;
+  width: 12px;
+  height: 12px;
   fill: #667eea;
-  transition: fill 0.3s ease;
+  transition: fill 0.2s ease;
 }
 
 .control-btn:hover svg {
@@ -580,16 +581,27 @@ article.dlogs .header .single-subtitle {
 }
 
 .play-btn {
-  width: 44px;
-  height: 44px;
+  width: 30px;
+  height: 30px;
+  background: transparent;
 }
 
 .play-btn svg {
-  width: 20px;
-  height: 20px;
+  width: 13px;
+  height: 13px;
+  fill: #667eea;
 }
 
-/* 进度条容器 */
+.play-btn:hover {
+  background: rgba(102, 126, 234, 0.1);
+  transform: scale(1.08);
+}
+
+.play-btn:hover svg {
+  fill: #764ba2;
+}
+
+/* 进度条容器 - 超紧凑布局 */
 .progress-container {
   flex: 1;
   min-width: 0;
@@ -613,7 +625,7 @@ article.dlogs .header .single-subtitle {
   width: 0%;
   height: 100%;
   background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
-  border-radius: 3px;
+  border-radius: 1.5px;
   position: relative;
   transition: width 0.1s linear;
 }
@@ -621,35 +633,35 @@ article.dlogs .header .single-subtitle {
 .progress-handle {
   position: absolute;
   top: 50%;
-  width: 14px;
-  height: 14px;
+  width: 8px;
+  height: 8px;
   background: white;
   border: 2px solid #667eea;
   border-radius: 50%;
   transform: translate(-50%, -50%);
   cursor: grab;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .progress-handle:hover {
-  transform: translate(-50%, -50%) scale(1.2);
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+  transform: translate(-50%, -50%) scale(1.15);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
 }
 
 .progress-handle:active {
   cursor: grabbing;
-  transform: translate(-50%, -50%) scale(1.1);
+  transform: translate(-50%, -50%) scale(1.05);
 }
 
 .volume-btn {
-  width: 36px;
-  height: 36px;
+  width: 26px;
+  height: 26px;
   background: transparent;
 }
 
 .volume-btn:hover {
-  background: rgba(102, 126, 234, 0.1);
+  background: rgba(102, 126, 234, 0.06);
 }
 
 .volume-btn svg {
@@ -666,16 +678,25 @@ article.dlogs .header .single-subtitle {
 }
 
 /* 暗色主题下的音频播放器 */
+[data-theme='dark'] .dlog-audio-player {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.18) 0%, rgba(118, 75, 162, 0.18) 100%);
+  border-color: rgba(159, 122, 234, 0.25);
+}
+
 [data-theme='dark'] .audio-container {
-  background: rgba(45, 55, 72, 0.98);
+  background: rgba(30, 41, 59, 0.95);
+}
+
+[data-theme='dark'] .audio-cover {
+  background: transparent;
 }
 
 [data-theme='dark'] .audio-title {
-  color: #f7fafc;
+  color: #e2e8f0;
 }
 
 [data-theme='dark'] .audio-time {
-  color: #cbd5e0;
+  color: #a0aec0;
 }
 
 [data-theme='dark'] .time-separator {
@@ -695,7 +716,7 @@ article.dlogs .header .single-subtitle {
 }
 
 [data-theme='dark'] .volume-btn:hover {
-  background: rgba(102, 126, 234, 0.2);
+  background: rgba(102, 126, 234, 0.12);
 }
 
 [data-theme='dark'] .volume-btn svg {
@@ -714,56 +735,67 @@ article.dlogs .header .single-subtitle {
   fill: #667eea;
 }
 
+[data-theme='dark'] .play-btn {
+  background: transparent;
+}
+
+[data-theme='dark'] .play-btn:hover {
+  background: rgba(159, 122, 234, 0.12);
+}
+
+[data-theme='dark'] .play-btn svg {
+  fill: #9f7aea;
+}
+
+[data-theme='dark'] .play-btn:hover svg {
+  fill: #667eea;
+}
+
 /* 响应式调整 */
 @media (max-width: 768px) {
   .dlog-audio-player {
-    margin: 0.6rem 0;
+    margin: 0.35rem 0;
   }
 
   .audio-container {
-    padding: 0.7rem 0.8rem;
+    padding: 0.35rem 0.5rem;
   }
 
   .audio-cover {
-    width: 42px;
-    height: 42px;
+    width: 26px;
+    height: 26px;
   }
 
   .audio-icon {
-    font-size: 1.2rem;
-  }
-
-  .audio-title {
-    font-size: 1rem;
-  }
-
-  .audio-time {
     font-size: 0.85rem;
   }
 
+  .audio-title {
+    font-size: 0.7rem;
+  }
+
+  .audio-time {
+    font-size: 0.6rem;
+  }
+
   .control-btn {
-    width: 36px;
-    height: 36px;
+    width: 24px;
+    height: 24px;
   }
 
   .control-btn svg {
-    width: 16px;
-    height: 16px;
+    width: 10px;
+    height: 10px;
   }
 
   .play-btn {
-    width: 40px;
-    height: 40px;
+    width: 26px;
+    height: 26px;
   }
 
   .play-btn svg {
-    width: 18px;
-    height: 18px;
-    fill: #667eea;
-  }
-
-  .play-btn:hover svg {
-    fill: #764ba2;
+    width: 11px;
+    height: 11px;
   }
 
   .progress-bar {
@@ -771,53 +803,89 @@ article.dlogs .header .single-subtitle {
   }
 
   .progress-bar:hover {
-    height: 6px;
+    height: 7px;
   }
 
   .progress-handle {
-    width: 12px;
-    height: 12px;
+    width: 6px;
+    height: 6px;
   }
 
   .volume-btn {
-    width: 32px;
-    height: 32px;
+    width: 22px;
+    height: 22px;
   }
 
   .volume-btn svg {
-    width: 14px;
-    height: 14px;
+    width: 10px;
+    height: 10px;
   }
 }
 
 @media (max-width: 480px) {
   .audio-info {
-    gap: 0.6rem;
-    margin-bottom: 0.6rem;
+    gap: 0.4rem;
+    margin-bottom: 0.35rem;
   }
 
   .audio-cover {
-    width: 38px;
-    height: 38px;
+    width: 24px;
+    height: 24px;
+  }
+
+  .audio-icon {
+    font-size: 0.8rem;
   }
 
   .audio-title {
-    font-size: 0.95rem;
+    font-size: 0.65rem;
+  }
+
+  .audio-time {
+    font-size: 0.55rem;
   }
 
   .control-btn {
-    width: 32px;
-    height: 32px;
+    width: 22px;
+    height: 22px;
+  }
+
+  .control-btn svg {
+    width: 9px;
+    height: 9px;
   }
 
   .play-btn {
-    width: 36px;
-    height: 36px;
+    width: 24px;
+    height: 24px;
+  }
+
+  .play-btn svg {
+    width: 10px;
+    height: 10px;
+  }
+
+  .progress-bar {
+    height: 4px;
+  }
+
+  .progress-bar:hover {
+    height: 6px;
   }
 
   .progress-handle {
-    width: 10px;
-    height: 10px;
+    width: 5px;
+    height: 5px;
+  }
+
+  .volume-btn {
+    width: 20px;
+    height: 20px;
+  }
+
+  .volume-btn svg {
+    width: 9px;
+    height: 9px;
   }
 }
 
