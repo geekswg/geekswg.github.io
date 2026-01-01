@@ -31,7 +31,6 @@
             padding: 30px;
             max-width: 1400px;
             width: 100%;
-            backdrop-filter: blur(10px);
         }
 
         .calendar-section {
@@ -308,6 +307,43 @@
             bottom: 20px;
             left: auto;
             top: auto;
+        }
+
+        .tooltip-copy-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: linear-gradient(135deg, #4ECDC4, #44A08D);
+            border: none;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            z-index: 1001;
+            pointer-events: auto;
+            box-shadow: 0 2px 8px rgba(78, 205, 196, 0.3);
+            user-select: none;
+            -webkit-tap-highlight-color: transparent;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            user-select: none;
+            touch-action: manipulation;
+            min-width: 44px;
+            min-height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .tooltip-copy-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 3px 12px rgba(78, 205, 196, 0.4);
+        }
+
+        .tooltip-copy-btn:active {
+            transform: scale(0.95);
         }
 
         .date-tooltip.show {
@@ -1265,6 +1301,14 @@
                 padding: 6px;
             }
 
+            /* 吉神、凶神标题居中且在一行显示 */
+            .yiji b, #jshen b, .yiji.ji b, #xshen b {
+                text-align: center !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                white-space: nowrap !important;
+            }
+
             .yiji i, .shen i {
                 font-size: 9px;
             }
@@ -1429,6 +1473,10 @@
             border-left-color: #2196F3;
         }
 
+        body.dark-theme .tooltip-copy-btn {
+            background: linear-gradient(135deg, #2196F3, #1976D2);
+        }
+
         body.dark-theme .info-label {
             color: #a0a0a0;
         }
@@ -1585,7 +1633,7 @@
                             <span>星期节日</span>
                         </label>
                         <label class="festival-option">
-                            <input type="checkbox" id="showOtherFestivals" onchange="updateFestivalSettings()">
+                            <input type="checkbox" id="showOtherFestivals" onchange="updateFestivalSettings()" checked>
                             <span>其他节日</span>
                         </label>
                     </div>
@@ -1638,6 +1686,7 @@
 
     <!-- 日期提示框 -->
     <div id="dateTooltip" class="date-tooltip">
+        <button class="tooltip-copy-btn" onclick="copyTooltipContent()" title="复制全部">📋</button>
         <div class="tooltip-header">
             <div>
                 <div class="tooltip-date" id="tooltipSolarDate"></div>
@@ -1717,7 +1766,7 @@
                 showSolarFestivals: true,   // 阳历节日
                 showLunarFestivals: true,   // 农历节日
                 showJieqi: true,            // 节气
-                showOtherFestivals: false,  // 其他节日（道教、佛教等）
+                showOtherFestivals: true,   // 其他节日（包括周恩来逝世纪念日、中国人民警察节等）
                 showWeekFestivals: true     // 按星期的节日
             }
         };
@@ -2497,25 +2546,19 @@
                 festivalListElement.innerHTML = '';
                 
                 let allFestivals = [];
-                
-                // 根据设置获取相应类型的节日
-                if (state.festivalSettings.showSolarFestivals) {
-                    const solarFestivals = solar.getFestivals ? solar.getFestivals() : [];
-                    allFestivals = allFestivals.concat(solarFestivals);
-                }
-                
-                if (state.festivalSettings.showLunarFestivals) {
-                    const lunarFestivals = lunar.getFestivals ? lunar.getFestivals() : [];
-                    allFestivals = allFestivals.concat(lunarFestivals);
-                }
-                
-                if (state.festivalSettings.showOtherFestivals) {
-                    const otherFestivals = lunar.getOtherFestivals ? lunar.getOtherFestivals() : [];
-                    allFestivals = allFestivals.concat(otherFestivals);
-                }
-                
+
+                // 提示框始终显示所有节日，不受设置限制
+                const solarFestivals = solar.getFestivals ? solar.getFestivals() : [];
+                allFestivals = allFestivals.concat(solarFestivals);
+
+                const lunarFestivals = lunar.getFestivals ? lunar.getFestivals() : [];
+                allFestivals = allFestivals.concat(lunarFestivals);
+
+                const otherFestivals = solar.getOtherFestivals ? solar.getOtherFestivals() : [];
+                allFestivals = allFestivals.concat(otherFestivals);
+
                 // 获取星期节日
-                if (state.festivalSettings.showWeekFestivals && typeof SolarUtil !== 'undefined' && SolarUtil.WEEK_FESTIVAL) {
+                if (typeof SolarUtil !== 'undefined' && SolarUtil.WEEK_FESTIVAL) {
                     const week = solar.getWeek();
                     const weekInMonth = Math.ceil(solar.getDay() / 7);
                     const weekKey1 = solar.getMonth() + '-' + weekInMonth + '-' + week;
@@ -2566,6 +2609,236 @@
             }
         }
 
+        // 复制提示框全部内容
+        function copyTooltipContent() {
+            console.log('复制按钮被点击');
+
+            const tooltip = document.getElementById('dateTooltip');
+            if (!tooltip) {
+                console.log('找不到提示框元素');
+                return;
+            }
+
+            // 提取格式化的文本内容
+            const content = formatTooltipContent();
+            console.log('复制的内容:', content);
+
+            if (!content.trim()) {
+                showToast('没有可复制的内容');
+                return;
+            }
+
+            console.log('开始复制...');
+
+            // 优先使用传统方法，在移动端更可靠
+            const textarea = document.createElement('textarea');
+            textarea.value = content;
+            textarea.style.position = 'fixed';
+            textarea.style.opacity = '0';
+            textarea.style.top = '0';
+            textarea.style.left = '0';
+            textarea.style.width = '1px';
+            textarea.style.height = '1px';
+            textarea.style.border = 'none';
+            textarea.style.outline = 'none';
+            textarea.style.boxShadow = 'none';
+            textarea.style.background = 'transparent';
+            textarea.style.padding = '0';
+            textarea.style.margin = '0';
+            textarea.readOnly = true; // 提升移动端兼容性
+            document.body.appendChild(textarea);
+
+            // 在iOS上需要特殊处理
+            const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+
+            if (isIOS) {
+                // iOS 使用 range 选择方式
+                const range = document.createRange();
+                range.selectNodeContents(textarea);
+                const selection = window.getSelection();
+                selection.removeAllRanges();
+                selection.addRange(range);
+                textarea.setSelectionRange(0, 999999);
+            } else {
+                // 其他设备使用传统方式
+                textarea.select();
+                textarea.setSelectionRange(0, 999999);
+            }
+
+            try {
+                // 优先尝试现代 API
+                if (navigator.clipboard && window.isSecureContext) {
+                    navigator.clipboard.writeText(content).then(() => {
+                        console.log('Clipboard API 复制成功');
+                        showToast('已复制全部内容');
+                    }).catch(err => {
+                        console.warn('Clipboard API 失败，尝试降级方案:', err);
+                        // 降级到 execCommand
+                        const success = document.execCommand('copy');
+                        console.log('降级复制结果:', success);
+                        if (success) {
+                            showToast('已复制全部内容');
+                        } else {
+                            showToast('复制失败');
+                        }
+                    });
+                } else {
+                    // 直接使用 execCommand
+                    const success = document.execCommand('copy');
+                    console.log('execCommand 复制结果:', success);
+                    if (success) {
+                        showToast('已复制全部内容');
+                    } else {
+                        showToast('复制失败');
+                    }
+                }
+            } catch (e) {
+                console.error('复制失败:', e);
+                showToast('复制失败');
+            }
+
+            // 延迟移除 textarea，确保复制操作完成
+            setTimeout(() => {
+                document.body.removeChild(textarea);
+            }, 100);
+        }
+
+        // 格式化提示框内容为【标题】信息格式
+        function formatTooltipContent() {
+            const tooltip = document.getElementById('dateTooltip');
+            if (!tooltip) return '';
+
+            let content = '';
+
+            // 获取阳历日期
+            const solarDate = document.getElementById('tooltipSolarDate');
+            if (solarDate && solarDate.textContent.trim()) {
+                content += `【公历】${solarDate.textContent.trim()}\n`;
+            }
+
+            // 获取农历日期
+            const lunarDate = document.getElementById('tooltipLunarDate');
+            if (lunarDate && lunarDate.textContent.trim()) {
+                content += `【农历】${lunarDate.textContent.trim()}\n`;
+            }
+
+            // 获取日期计算信息
+            const dateInfo = document.getElementById('tooltipDateInfo');
+            if (dateInfo && dateInfo.style.display !== 'none') {
+                const weekOfYear = document.getElementById('tooltipWeekOfYear');
+                const weeksRemaining = document.getElementById('tooltipWeeksRemaining');
+                const totalWeeks = document.getElementById('tooltipTotalWeeks');
+                const dayOfYear = document.getElementById('tooltipDayOfYear');
+                const daysRemaining = document.getElementById('tooltipDaysRemaining');
+                const totalDays = document.getElementById('tooltipTotalDays');
+                const nextFestival = document.getElementById('tooltipNextFestival');
+
+                if (weekOfYear && weekOfYear.textContent.trim()) {
+                    content += `【周数】第${weekOfYear.textContent.trim()}周/剩${weeksRemaining.textContent.trim()}周（共${totalWeeks.textContent.trim()}周）\n`;
+                }
+                if (dayOfYear && dayOfYear.textContent.trim()) {
+                    content += `【天数】第${dayOfYear.textContent.trim()}天/剩${daysRemaining.textContent.trim()}天（共${totalDays.textContent.trim()}天）\n`;
+                }
+                if (nextFestival && nextFestival.textContent.trim()) {
+                    content += `【下个节日】${nextFestival.textContent.trim()}\n`;
+                }
+            }
+
+            // 获取节气信息
+            const jieqi = document.getElementById('tooltipJieqi');
+            if (jieqi && jieqi.style.display !== 'none') {
+                const jieqiName = document.getElementById('tooltipJieqiName');
+                const jieqiDesc = document.getElementById('tooltipJieqiDesc');
+                if (jieqiName && jieqiName.textContent.trim()) {
+                    content += `【节气】${jieqiName.textContent.trim()}`;
+                    if (jieqiDesc && jieqiDesc.textContent.trim()) {
+                        content += ` - ${jieqiDesc.textContent.trim()}`;
+                    }
+                    content += '\n';
+                }
+            }
+
+            // 获取三伏三九信息
+            const fuJiu = document.getElementById('tooltipFuJiu');
+            if (fuJiu && fuJiu.style.display !== 'none') {
+                const fu = document.getElementById('tooltipFu');
+                const jiu = document.getElementById('tooltipJiu');
+                if (fu && fu.textContent.trim()) {
+                    content += `【三伏】${fu.textContent.trim()}\n`;
+                }
+                if (jiu && jiu.textContent.trim()) {
+                    content += `【三九】${jiu.textContent.trim()}\n`;
+                }
+            }
+
+            // 获取节假日信息
+            const holiday = document.getElementById('tooltipHoliday');
+            if (holiday && holiday.style.display !== 'none') {
+                const holidayName = document.getElementById('tooltipHolidayName');
+                if (holidayName && holidayName.textContent.trim()) {
+                    content += `【节假日】${holidayName.textContent.trim()}\n`;
+                }
+            }
+
+            // 获取节日列表
+            const festivals = document.getElementById('tooltipFestivals');
+            if (festivals && festivals.style.display !== 'none') {
+                const festivalList = document.getElementById('tooltipFestivalList');
+                if (festivalList && festivalList.textContent.trim()) {
+                    const festivalItems = festivalList.querySelectorAll('.tooltip-festival-item');
+                    if (festivalItems.length > 0) {
+                        content += '【节日】';
+                        const festivalNames = Array.from(festivalItems).map(item => item.textContent.trim()).join('、');
+                        content += festivalNames + '\n';
+                    } else {
+                        content += `【节日】${festivalList.textContent.trim()}\n`;
+                    }
+                }
+            }
+
+            return content.trim();
+        }
+
+
+
+        // 显示提示消息
+        function showToast(message) {
+            console.log('显示提示:', message);
+
+            // 移除已存在的提示
+            const existingToast = document.querySelector('.toast-message');
+            if (existingToast) {
+                existingToast.remove();
+            }
+
+            const toast = document.createElement('div');
+            toast.className = 'toast-message';
+            toast.textContent = message;
+            toast.style.position = 'fixed';
+            toast.style.top = '20px';
+            toast.style.left = '50%';
+            toast.style.transform = 'translateX(-50%)';
+            toast.style.background = 'rgba(0, 0, 0, 0.8)';
+            toast.style.color = 'white';
+            toast.style.padding = '12px 24px';
+            toast.style.borderRadius = '8px';
+            toast.style.fontSize = '14px';
+            toast.style.zIndex = '99999';
+            toast.style.animation = 'toastFade 0.3s ease';
+
+            document.body.appendChild(toast);
+            console.log('提示已添加到DOM');
+
+            setTimeout(() => {
+                console.log('准备移除提示');
+                toast.style.animation = 'toastFade 0.3s ease reverse';
+                setTimeout(() => {
+                    console.log('移除提示');
+                    toast.remove();
+                }, 3000);
+            }, 2000);
+        }
+
         // 创建日历日期元素
         function createCalendarDay(day, isPrevMonth = false, isNextMonth = false) {
             const div = document.createElement('div');
@@ -2605,7 +2878,7 @@
             
             div.addEventListener('mouseleave', () => {
                 clearTimeout(hoverTimer);
-                hideDateTooltip();
+                // 移除自动隐藏功能，提示框将保持显示直到用户点击其他地方
             });
             
             // 判断是否为周末
@@ -2744,7 +3017,18 @@
             // 检查普通节日
             const solarFestivals = solar.getFestivals ? solar.getFestivals() : [];
             const lunarFestivals = lunar.getFestivals ? lunar.getFestivals() : [];
-            const otherFestivals = lunar.getOtherFestivals ? lunar.getOtherFestivals() : [];
+            const otherFestivals = solar.getOtherFestivals ? solar.getOtherFestivals() : [];
+
+            // 调试信息
+            if (solar.getMonth() === 0 && (solar.getDay() === 8 || solar.getDay() === 10)) {
+                console.log('调试信息:', {
+                    solarDate: `${solar.getYear()}-${solar.getMonth() + 1}-${solar.getDay()}`,
+                    solarFestivals,
+                    lunarFestivals,
+                    otherFestivals,
+                    showOtherFestivals: state.festivalSettings.showOtherFestivals
+                });
+            }
             
             // 获取星期节日
             let weekFestivals = [];
@@ -2836,19 +3120,19 @@
             if (festivals.length > 0) {
                 // 获取所有节日名称用于tooltip
                 const allFestivalNames = festivals.join('、');
-                
+
                 // 为每个节日创建单独的标签
                 festivals.forEach((festivalName, index) => {
                     const festivalTag = document.createElement('div');
                     festivalTag.className = 'festival-tag';
-                    
+
                     // 显示第一个节日标签在顶部，其他的稍微偏移
                     if (index === 0) {
                         festivalTag.style.top = '2px';
                     } else {
                         festivalTag.style.top = (2 + index * 12) + 'px';
                     }
-                    
+
                     // 简化显示名称
                     let displayName = festivalName;
                     if (festivalName.length > 3) {
@@ -2860,15 +3144,15 @@
                             displayName = displayName.substring(0, 3);
                         }
                     }
-                    
+
                     festivalTag.textContent = displayName;
                     festivalTag.title = festivalName; // 鼠标悬停显示完整名称
                     festivalTag.style.background = '#FF6B6B'; // 普通节日 - 红色
-                    
+
                     div.appendChild(festivalTag);
                     hasTag = true;
                 });
-                
+
                 // 如果有多个节日，添加一个显示全部的tooltip
                 if (festivals.length > 1) {
                     div.title = allFestivalNames;
@@ -2966,18 +3250,60 @@
                 const fushenDesc = lunar.getDayPositionFuDesc ? lunar.getDayPositionFuDesc() : '';
                 const caishenDesc = lunar.getDayPositionCaiDesc ? lunar.getDayPositionCaiDesc() : '';
 
-                // 获取节日信息
-                const festivalInfo = getFestivalInfo(date);
+                // 获取节日信息（包括阳历节日、农历节日、其他节日、星期节日和节气）
                 let festivalText = '';
-                if (festivalInfo && festivalInfo.solarFestivals && festivalInfo.lunarFestivals) {
-                    if (festivalInfo.solarFestivals.length > 0 || festivalInfo.lunarFestivals.length > 0) {
-                        const allFestivals = [...festivalInfo.solarFestivals, ...festivalInfo.lunarFestivals];
-                        festivalText = '\n【节日】' + allFestivals.join('、');
+                let allFestivals = [];
+
+                // 阳历节日
+                if (solar.getFestivals) {
+                    const solarFestivals = solar.getFestivals();
+                    allFestivals = allFestivals.concat(solarFestivals);
+                }
+
+                // 农历节日
+                if (lunar.getFestivals) {
+                    const lunarFestivals = lunar.getFestivals();
+                    allFestivals = allFestivals.concat(lunarFestivals);
+                }
+
+                // 其他节日（包括周恩来逝世纪念日、中国人民警察节等）
+                if (solar.getOtherFestivals) {
+                    const otherFestivals = solar.getOtherFestivals();
+                    allFestivals = allFestivals.concat(otherFestivals);
+                }
+
+                // 星期节日
+                if (typeof SolarUtil !== 'undefined' && SolarUtil.WEEK_FESTIVAL) {
+                    const week = solar.getWeek();
+                    const weekInMonth = Math.ceil(solar.getDay() / 7);
+                    const weekKey1 = solar.getMonth() + '-' + weekInMonth + '-' + week;
+                    const weekKey2 = solar.getMonth() + '-0-' + week;
+
+                    const addedFestivals = new Set(allFestivals);
+
+                    if (SolarUtil.WEEK_FESTIVAL[weekKey1]) {
+                        const festival = SolarUtil.WEEK_FESTIVAL[weekKey1];
+                        if (!addedFestivals.has(festival)) {
+                            allFestivals.push(festival);
+                            addedFestivals.add(festival);
+                        }
+                    }
+                    if (SolarUtil.WEEK_FESTIVAL[weekKey2]) {
+                        const festival = SolarUtil.WEEK_FESTIVAL[weekKey2];
+                        if (!addedFestivals.has(festival)) {
+                            allFestivals.push(festival);
+                            addedFestivals.add(festival);
+                        }
                     }
                 }
 
+                // 添加节日文本
+                if (allFestivals.length > 0) {
+                    festivalText = '\n【节日】' + allFestivals.join('、');
+                }
+
                 // 节气
-                const jieqi = solar.getJieQi ? solar.getJieQi() : null;
+                const jieqi = lunar.getJieQi ? lunar.getJieQi() : null;
                 let jieqiText = '';
                 if (jieqi) {
                     jieqiText = '\n【节气】' + jieqi;
@@ -3024,24 +3350,7 @@
         }
 
         // 显示提示信息
-        function showToast(message) {
-            // 移除旧的提示
-            const oldToast = document.querySelector('.toast-message');
-            if (oldToast) {
-                oldToast.remove();
-            }
 
-            // 创建新提示
-            const toast = document.createElement('div');
-            toast.className = 'toast-message';
-            toast.textContent = message;
-            document.body.appendChild(toast);
-
-            // 2秒后移除
-            setTimeout(() => {
-                toast.remove();
-            }, 2000);
-        }
 
         // 获取节气详细信息
         function getJieqiDetail(date) {
@@ -3120,7 +3429,7 @@
                         }
                         
                         if (state.festivalSettings.showOtherFestivals) {
-                            const otherFestivals = checkLunar.getOtherFestivals ? checkLunar.getOtherFestivals() : [];
+                            const otherFestivals = checkSolar.getOtherFestivals ? checkSolar.getOtherFestivals() : [];
                             allFestivals = allFestivals.concat(otherFestivals);
                         }
                         
@@ -3531,17 +3840,17 @@
         // 更新节日设置
         function updateFestivalSettings() {
             const checkboxes = ['showSolarFestivals', 'showLunarFestivals', 'showJieqi', 'showWeekFestivals', 'showOtherFestivals'];
-            
+
             checkboxes.forEach(id => {
                 const checkbox = document.getElementById(id);
                 if (checkbox) {
                     state.festivalSettings[id] = checkbox.checked;
                 }
             });
-            
+
             // 保存设置到localStorage
             localStorage.setItem('festivalSettings', JSON.stringify(state.festivalSettings));
-            
+
             // 重新渲染日历
             renderCalendar();
         }
