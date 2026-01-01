@@ -3,24 +3,18 @@
 
 ## 我的日常记录
 
-```yml
-dlogs:
-  layout: "default"
-  pagination:
-    enabled: true
-    itemsPerPage: 12
-    showFirstLast: true
-    showPrevNext: true
-  list:
-    - typ:
-      sub: 主题
-      txt: 内容
-      href: https://geekswg.js.cool
-      time: 时间
-      loc: 地点
-      
-      pics:
-        - src: /images/ 
+[去更新日常](https://github.com/geekswg/blogFixit/edit/master/content/dlogs/index.md)
+
+```yaml
+    - type: music
+      sub: 午后音乐分享
+      txt: 发现了一首非常好听的歌曲，旋律优美，歌词深刻。音乐是生活的调味剂，能够让平淡的日子变得精彩。
+      time: 2024-12-09T15:20:00+08:00
+      loc: 咖啡厅
+      audio:
+        src: audio/Dream It Possible - Delacey.mp3
+      imgs:
+        - src: imgs/1.webp
   ```
 
 ---
