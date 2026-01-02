@@ -14,11 +14,14 @@
 
         body {
             font-family: 'Microsoft YaHei', 'PingFang SC', sans-serif;
-            min-height: 100vh;
+            height: 100vh;
+            width: 100vw;
+            margin: 0;
+            overflow: hidden;
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 20px;
+            padding: 10px;
         }
 
         .main-container {
@@ -27,22 +30,28 @@
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
             backdrop-filter: blur(20px);
             display: flex;
-            gap: 30px;
-            padding: 30px;
-            max-width: 1400px;
+            gap: 20px;
+            padding: 20px;
+            max-width: 100%;
             width: 100%;
+            max-height: calc(100vh - 20px);
+            overflow: hidden;
         }
 
         .calendar-section {
             flex: 2;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
         }
 
         .detail-section {
             flex: 1;
-            min-width: 350px;
-            max-width: 400px;
+            min-width: 300px;
+            max-width: 450px;
             display: flex;
             flex-direction: column;
+            overflow: auto;
         }
 
 
@@ -53,11 +62,12 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 30px;
-            padding: 20px;
+            margin-bottom: 15px;
+            padding: 15px;
             background: linear-gradient(135deg, #4ECDC4, #44A08D);
             border-radius: 15px;
             color: white;
+            flex-shrink: 0;
         }
 
         .nav-btn {
@@ -253,23 +263,26 @@
         .calendar-grid {
             display: grid;
             grid-template-columns: repeat(7, 1fr);
-            gap: 10px;
+            grid-auto-rows: 1fr;
+            gap: 8px;
             background: rgba(255, 255, 255, 0.8);
-            padding: 20px;
+            padding: 15px;
             border-radius: 15px;
+            overflow: auto;
+            flex: 1;
         }
 
         .weekday {
             text-align: center;
-            padding: 15px 0;
+            padding: 10px 0;
             font-weight: bold;
             color: #4ECDC4;
-            font-size: 16px;
+            font-size: 14px;
             border-bottom: 2px solid #4ECDC4;
         }
 
         .calendar-day {
-            aspect-ratio: 1;
+            min-height: 40px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -579,13 +592,13 @@
         }
 
         .day-number {
-            font-size: 18px;
+            font-size: 16px;
             font-weight: bold;
-            margin-bottom: 3px;
+            margin-bottom: 2px;
         }
 
         .lunar-day {
-            font-size: 11px;
+            font-size: 10px;
             color: #666;
             text-align: center;
         }
@@ -1108,12 +1121,17 @@
         @media (max-width: 768px) {
             body {
                 padding: 10px;
+                height: auto;
+                min-height: 100vh;
+                overflow: auto;
             }
 
             .main-container {
                 padding: 15px;
                 gap: 15px;
                 border-radius: 15px;
+                max-height: none;
+                overflow: visible;
             }
 
             .calendar-section {
@@ -1201,8 +1219,8 @@
 
             /* 日历网格优化 */
             .calendar-grid {
-                gap: 4px;
-                padding: 10px;
+                gap: 2px;
+                padding: 2px;
                 border-radius: 10px;
             }
 
@@ -1551,21 +1569,23 @@
 
         @media (max-width: 768px) {
             .main-container {
-                padding: 20px;
-                gap: 20px;
+                padding: 2px;
+                gap: 2px;
+                max-height: none;
+                overflow: visible;
             }
 
             .calendar-grid {
-                gap: 5px;
-                padding: 15px;
+                gap: 2px;
+                padding: 2px;
             }
 
             .day-number {
-                font-size: 16px;
+                font-size: 14px;
             }
 
             .detail-panel {
-                padding: 20px;
+                padding: 2px;
             }
         }
 
@@ -1860,7 +1880,11 @@
             renderCalendar();
             // 默认显示今天的黄历信息
             showToday();
-            
+
+            // 初始化提示框隐藏事件
+            initTooltipClickHandler();
+            initTouchHandler();
+
             // 自动检查当前月份是否有三九信息并给出提示
             setTimeout(checkFuJiuInfo, 1000);
         }
@@ -2260,7 +2284,7 @@
                 // 计算一年剩余天数
                 const daysRemaining = Math.floor((endOfYear - date) / (1000 * 60 * 60 * 24));
                 
-                // 计算一年中的第几周（ISO周）
+                // 计算一年中的第几周（中国习惯）
                 const weekOfYear = getWeekNumber(date);
                 
                 // 计算一年剩余周数（确保不为负数）
@@ -2291,42 +2315,29 @@
             }
         }
         
-        // 获取ISO周数
+        // 获取周数（中国习惯：从1月1日所在周开始计算）
         function getWeekNumber(date) {
             const d = new Date(date);
             d.setHours(0, 0, 0, 0);
-            
-            // 获取当年的第一个周四
-            const jan1 = new Date(d.getFullYear(), 0, 1);
-            const firstThursday = new Date(jan1);
-            firstThursday.setDate(jan1.getDate() + (11 - jan1.getDay()) % 7);
-            
-            // 获取日期所在周的周四
-            const weekThursday = new Date(d);
-            weekThursday.setDate(d.getDate() + (11 - d.getDay()) % 7);
-            
+
+            const year = d.getFullYear();
+            const month = d.getMonth(); // 0-11
+            const day = d.getDate();
+
+            // 创建该年1月1日
+            const jan1 = new Date(year, 0, 1);
+            const jan1Day = jan1.getDay(); // 0=周日, 1=周一, ..., 6=周六
+
+            // 计算从1月1日到目标日期的天数
+            const daysSinceJan1 = Math.floor((d - jan1) / (1000 * 60 * 60 * 24));
+
             // 计算周数
-            const diffTime = weekThursday - firstThursday;
-            const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
-            const weekNumber = Math.floor(diffDays / 7) + 1;
-            
-            // 处理跨年情况
-            if (weekNumber === 0) {
-                // 属于上一年的最后一周
-                return getWeekNumber(new Date(d.getFullYear() - 1, 11, 31));
-            } else if (weekNumber === 53) {
-                // 检查是否真的有53周
-                const dec31 = new Date(d.getFullYear(), 11, 31);
-                const dec31Thursday = new Date(dec31);
-                dec31Thursday.setDate(dec31.getDate() + (11 - dec31.getDay()) % 7);
-                
-                if (weekThursday.getTime() === dec31Thursday.getTime()) {
-                    return 53;
-                } else {
-                    return 1; // 属于下一年第一周
-                }
-            }
-            
+            // 如果1月1日是周日(0)，则从该天开始计算第一周
+            // 如果1月1日是周一(1)，则从该天开始计算第一周
+            // 如果1月1日是周六(6)，则该周只有1月1日一天，算是第1周
+            // 计算公式：(天数 + 1月1日的星期几 - 1) / 7 + 1
+            const weekNumber = Math.floor((daysSinceJan1 + jan1Day) / 7) + 1;
+
             return weekNumber;
         }
         
@@ -2609,6 +2620,43 @@
             }
         }
 
+        // 初始化全局点击事件 - 点击其他地方隐藏提示框
+        function initTooltipClickHandler() {
+            const tooltip = document.getElementById('dateTooltip');
+            if (!tooltip) return;
+
+            // 点击页面其他地方时隐藏提示框
+            document.addEventListener('click', (event) => {
+                // 如果点击的不是提示框内部，也不是日历日期，则隐藏
+                if (!tooltip.contains(event.target) && !event.target.closest('.calendar-day')) {
+                    hideDateTooltip();
+                }
+            });
+        }
+
+        // 初始化触摸滑动事件 - 滑动时隐藏提示框
+        function initTouchHandler() {
+            let touchStartY = 0;
+            let touchStartX = 0;
+
+            document.addEventListener('touchstart', (event) => {
+                touchStartY = event.touches[0].clientY;
+                touchStartX = event.touches[0].clientX;
+            }, { passive: true });
+
+            document.addEventListener('touchmove', (event) => {
+                const touchY = event.touches[0].clientY;
+                const touchX = event.touches[0].clientX;
+                const deltaY = Math.abs(touchY - touchStartY);
+                const deltaX = Math.abs(touchX - touchStartX);
+
+                // 滑动距离超过 10px 时隐藏提示框
+                if (deltaY > 10 || deltaX > 10) {
+                    hideDateTooltip();
+                }
+            }, { passive: true });
+        }
+
         // 复制提示框全部内容
         function copyTooltipContent() {
             console.log('复制按钮被点击');
@@ -2866,7 +2914,13 @@
             // 添加日期标识属性
             div.setAttribute('data-date', date.toDateString());
             
-            div.onclick = () => selectDate(date);
+            div.onclick = () => {
+                selectDate(date);
+                // 移动端点击时显示提示框
+                if (window.innerWidth <= 768) {
+                    showDateTooltip(div, date);
+                }
+            };
 
             // 添加鼠标悬停事件
             let hoverTimer;
@@ -2878,7 +2932,7 @@
             
             div.addEventListener('mouseleave', () => {
                 clearTimeout(hoverTimer);
-                // 移除自动隐藏功能，提示框将保持显示直到用户点击其他地方
+                // PC端不自动隐藏提示框，需要点击其他地方才隐藏
             });
             
             // 判断是否为周末
