@@ -30,6 +30,30 @@ Docker是一种开源的应用容器引擎，允许开发者将应用程序及�
 
 分享一些我在飞牛NAS上使用Docker-compose安装的一些好用，好玩，使用的Docker应用。
 
+### Jellyfin
+[Jellyfin](https://jellyfin.org/)是一个开源的媒体管理系统，支持流媒体播放和媒体库管理,支持视频，音乐，照片，电子书，电视直播，基本上可以All In One,非常好用,而且100%免费，支持web，android，ios，tv，智能电视等设备。使用Docker-compose部署Jellyfin的步骤如下：
+
+```yml{title="docker-compose.yml"}
+services:
+  jellyfin:
+    image: nyanmisaka/jellyfin:latest
+    container_name: jellyfin
+    restart: unless-stopped
+    environment:
+      - PUID=0
+      - PGID=0
+      - TZ=Asia/Shanghai
+    volumes:
+      - ./config:/config  #配置路径，根据实际路径填写
+      - ./cache:/cache  #缓存路径，根据实际路径填写
+      - /:/media  #媒体文件路径，根据实际路径填写
+    ports:
+      - 3722:8096
+      - 8920:8920
+    devices:
+      - /dev/dri:/dev/dri
+```
+
 ### HomePage
 
 [HomePage](https://gethomepage.dev/)是一个非常好用的私人应用[主页导航开源项目](https://github.com/gethomepage/homepage)，自定义程度较高，集成了丰富的插件，集成Docker状态监控。使用Docker-compose部署HomePage的步骤如下：
@@ -167,6 +191,30 @@ services:
     #network_mode: host # 使用主机网络模式（注意：在 Docker Desktop 上不支持）
 volumes:
   mysql_data: {}
+```
+
+### Omnibox
+[Omnibox](https://hub.docker.com/r/lampon/omnibox) 它是一款支持网盘资源、多源影视、直播和电视资源的家庭影视,可在线播放，支持tvbox源。
+使用Docker-compose部署Omnibox的步骤如下：
+```yml
+services:
+   omnibox:
+      image: docker.1ms.run/lampon/omnibox:latest
+      container_name: omnibox
+      restart: always
+      environment:
+         - TZ=Asia/Shanghai
+      ports:
+         - "7023:7023" # 冒号左侧可自定
+      volumes:
+         - ./omnibox/data:/app/data # 将本地的 ./omnibox/data 目录挂载到容器的 /app/data 目录
+      #network_mode: host
+      # 这一段PanSou也要加上重新创建一下，后文会提及
+      networks:
+        - media-net
+networks:
+  media-net:
+    driver: bridge # 使用默认的桥接网络驱动
 ```
 
 ### 持续更新中
