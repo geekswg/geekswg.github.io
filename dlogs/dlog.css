@@ -189,6 +189,8 @@ article.dlogs .header .single-subtitle {
 .dlog-item .dlog-type-movie::before { content: "🎬"; }
 .dlog-item .dlog-type-plan::before { content: "📋"; }
 .dlog-item .dlog-type-design::before { content: "🎨"; }
+.dlog-item .dlog-type-share::before { content: "🔗"; }
+.dlog-item .dlog-type-code::before { content: "💻"; }
 
 /* 音乐类型特殊效果 */
 .dlog-item .dlog-type-music::before {
@@ -223,15 +225,9 @@ article.dlogs .header .single-subtitle {
   width: 40px;
 }
 
-.dlog-item h3::before {
-  content: '📝';
-  font-size: 1rem;
-  transition: transform 0.3s ease;
-}
-
-.dlog-item:hover h3::before {
-  transform: rotate(10deg) scale(1.1);
-}
+/* 移除这个规则,因为它会覆盖根据 type 设置的图标 */
+/* .dlog-item h3::before { content: '📝'; font-size: 1rem; transition: transform 0.3s ease; } */
+/* .dlog-item:hover h3::before { transform: rotate(10deg) scale(1.1); } */
 
 /* 副标题 - 简洁设计 */
 .dlog-item .dlog-sub {
@@ -1010,6 +1006,8 @@ article.dlogs .header .single-subtitle {
 
 
 /* 特殊状态样式 - 更丰富的图标变化 */
+/* 注释掉这些规则,让 type 类名控制的图标优先显示 */
+/*
 .dlog-item:nth-child(even) h3::before {
   content: '🎯';
 }
@@ -1029,6 +1027,7 @@ article.dlogs .header .single-subtitle {
 .dlog-item:nth-child(11n) h3::before {
   content: '🎨';
 }
+*/
 
 /* 不同类型卡片的特殊背景效果 */
 .dlog-item:has(h3::before) {
