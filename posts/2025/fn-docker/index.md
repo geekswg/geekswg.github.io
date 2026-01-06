@@ -26,6 +26,51 @@ Docker是一种开源的应用容器引擎，允许开发者将应用程序及�
 3. **创建Docker容器**：在Docker应用中创建一个新的容器。填写容器名称、镜像名称、端口映射等信息，然后点击“创建”按钮。
 4. **管理Docker容器**：创建完成后，可以在Docker应用中看到已创建的容器。可以启动、停止、删除容器，也可以查看容器的日志和资源使用情况。
 
+## Docker-Compose.yml配置说明
+
+Docker-compose.yml配置文件是Docker Compose的核心配置文件，用于定义Docker容器的运行环境。下面是Docker-compose.yml配置文件的基本结构：
+```yml
+version: '3'  # 指定Docker Compose文件的版本
+services:  # 定义服务
+  service_name:  # 服务名称
+    image: image_name:tag  # 指定使用的Docker镜像和标签
+    container_name: container_name  # 指定容器名称
+    restart: unless-stopped  # 容器重启策略
+    environment:  # 环境变量
+      - KEY=VALUE
+    volumes:  # 数据卷映射
+      - host_path:container_path
+    ports:  # 端口映射
+      - "host_port:container_port"
+    networks:  # 网络配置
+      - network_name
+```
+### 配置说明
+
+| 配置项 | 说明 | 可选值 |
+| --- | --- | --- |
+| version | 指定Docker Compose文件的版本 | 3, 3.1, 3.2, 3.3, 3.4, 3.5, 3.6, 3.7, 3.8, 3.9 |
+| services | 定义服务 |  |
+| service_name | 服务名称 | 自定义 |
+| image | 指定使用的Docker镜像和标签 | 镜像名称:标签 |
+| container_name | 指定容器名称 | 自定义 |
+| restart | 容器重启策略 | always, unless-stopped, on-failure, no |
+| environment | 环境变量 | 键值对 |
+| volumes | 数据卷映射 | 主机路径:容器路径 |
+| ports | 端口映射 | 主机端口:容器端口 |
+| networks | 网络配置 | 网络名称 |
+| network_name | 网络名称 | 自定义 |
+| driver | 网络驱动 | bridge, host, overlay |
+| driver_opts | 网络驱动选项 | 键值对 |
+| deploy | 部署配置 | replicas, update_config, restart_policy |
+| resources | 资源限制 | limits, reservations |
+| limits | 资源限制 | cpus, memory |
+| reservations | 资源保留 | cpus, memory |
+| replicas | 副本数量 | 整数 |
+| update_config | 更新配置 | parallel, rolling_update |
+| restart_policy | 重启策略 | always, unless-stopped, on-failure, no |
+
+
 ## 使用Docker-compose部署应用
 
 分享一些我在飞牛NAS上使用Docker-compose安装的一些好用，好玩，使用的Docker应用。

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>毕少侠</title><link>https://geekswg.js.cool/</link><description>博客：探索、发现、分享 By geekswg-[毕少侠]</description><generator>Hugo 0.154.2 &amp; FixIt v0.4.0</generator><language>zh-CN</language><managingEditor>geekswg@qq.com (geekswg)</managingEditor><webMaster>geekswg@qq.com (geekswg)</webMaster><copyright>geekswg &amp; 毕少侠</copyright><lastBuildDate>Sun, 04 Jan 2026 23:47:10 +0800</lastBuildDate><atom:link href="https://geekswg.js.cool/index.xml" rel="self" type="application/rss+xml"/><item><title>飞牛NAS之Docker</title><link>https://geekswg.js.cool/posts/2025/fn-docker/</link><pubDate>Fri, 26 Dec 2025 20:01:24 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2025/fn-docker/</guid><category domain="https://geekswg.js.cool/categories/nas/">NAS</category><description>&lt;p&gt;最近飞牛NAS发布了正式版系统，经过一段时间的使用，发现飞牛NAS的Docker功能还是很强大的，支持Docker和Docker-compose两种方式来部署应用。本文将分享一些我在飞牛NAS上使用Docker的经验和技巧。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>毕少侠</title><link>https://geekswg.js.cool/</link><description>博客：探索、发现、分享 By geekswg-[毕少侠]</description><generator>Hugo 0.154.2 &amp; FixIt v0.4.0</generator><language>zh-CN</language><managingEditor>geekswg@qq.com (geekswg)</managingEditor><webMaster>geekswg@qq.com (geekswg)</webMaster><copyright>geekswg &amp; 毕少侠</copyright><lastBuildDate>Tue, 06 Jan 2026 22:39:36 +0800</lastBuildDate><atom:link href="https://geekswg.js.cool/index.xml" rel="self" type="application/rss+xml"/><item><title>飞牛NAS之Docker</title><link>https://geekswg.js.cool/posts/2025/fn-docker/</link><pubDate>Fri, 26 Dec 2025 20:01:24 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2025/fn-docker/</guid><category domain="https://geekswg.js.cool/categories/nas/">NAS</category><description>&lt;p&gt;最近飞牛NAS发布了正式版系统，经过一段时间的使用，发现飞牛NAS的Docker功能还是很强大的，支持Docker和Docker-compose两种方式来部署应用。本文将分享一些我在飞牛NAS上使用Docker的经验和技巧。&lt;/p&gt;
 &lt;h2 class="heading-element" id="什么是docker"&gt;&lt;span&gt;什么是Docker？&lt;/span&gt;
  &lt;a href="#%e4%bb%80%e4%b9%88%e6%98%afdocker" class="heading-mark"&gt;
  &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
@@ -28,6 +28,139 @@
 &lt;li&gt;&lt;strong&gt;创建Docker容器&lt;/strong&gt;：在Docker应用中创建一个新的容器。填写容器名称、镜像名称、端口映射等信息，然后点击“创建”按钮。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;管理Docker容器&lt;/strong&gt;：创建完成后，可以在Docker应用中看到已创建的容器。可以启动、停止、删除容器，也可以查看容器的日志和资源使用情况。&lt;/li&gt;
 &lt;/ol&gt;
+&lt;h2 class="heading-element" id="docker-composeyml配置说明"&gt;&lt;span&gt;Docker-Compose.yml配置说明&lt;/span&gt;
+ &lt;a href="#docker-composeyml%e9%85%8d%e7%bd%ae%e8%af%b4%e6%98%8e" class="heading-mark"&gt;
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
+ &lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;Docker-compose.yml配置文件是Docker Compose的核心配置文件，用于定义Docker容器的运行环境。下面是Docker-compose.yml配置文件的基本结构：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;version: &amp;#39;3&amp;#39; # 指定Docker Compose文件的版本
+services: # 定义服务
+ service_name: # 服务名称
+ image: image_name:tag # 指定使用的Docker镜像和标签
+ container_name: container_name # 指定容器名称
+ restart: unless-stopped # 容器重启策略
+ environment: # 环境变量
+ - KEY=VALUE
+ volumes: # 数据卷映射
+ - host_path:container_path
+ ports: # 端口映射
+ - &amp;#34;host_port:container_port&amp;#34;
+ networks: # 网络配置
+ - network_name&lt;/code&gt;&lt;/pre&gt;&lt;h3 class="heading-element" id="配置说明"&gt;&lt;span&gt;配置说明&lt;/span&gt;
+ &lt;a href="#%e9%85%8d%e7%bd%ae%e8%af%b4%e6%98%8e" class="heading-mark"&gt;
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
+ &lt;/a&gt;
+&lt;/h3&gt;&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;配置项&lt;/th&gt;
+ &lt;th&gt;说明&lt;/th&gt;
+ &lt;th&gt;可选值&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;version&lt;/td&gt;
+ &lt;td&gt;指定Docker Compose文件的版本&lt;/td&gt;
+ &lt;td&gt;3, 3.1, 3.2, 3.3, 3.4, 3.5, 3.6, 3.7, 3.8, 3.9&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;services&lt;/td&gt;
+ &lt;td&gt;定义服务&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;service_name&lt;/td&gt;
+ &lt;td&gt;服务名称&lt;/td&gt;
+ &lt;td&gt;自定义&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;image&lt;/td&gt;
+ &lt;td&gt;指定使用的Docker镜像和标签&lt;/td&gt;
+ &lt;td&gt;镜像名称:标签&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;container_name&lt;/td&gt;
+ &lt;td&gt;指定容器名称&lt;/td&gt;
+ &lt;td&gt;自定义&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;restart&lt;/td&gt;
+ &lt;td&gt;容器重启策略&lt;/td&gt;
+ &lt;td&gt;always, unless-stopped, on-failure, no&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;environment&lt;/td&gt;
+ &lt;td&gt;环境变量&lt;/td&gt;
+ &lt;td&gt;键值对&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;volumes&lt;/td&gt;
+ &lt;td&gt;数据卷映射&lt;/td&gt;
+ &lt;td&gt;主机路径:容器路径&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;ports&lt;/td&gt;
+ &lt;td&gt;端口映射&lt;/td&gt;
+ &lt;td&gt;主机端口:容器端口&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;networks&lt;/td&gt;
+ &lt;td&gt;网络配置&lt;/td&gt;
+ &lt;td&gt;网络名称&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;network_name&lt;/td&gt;
+ &lt;td&gt;网络名称&lt;/td&gt;
+ &lt;td&gt;自定义&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;driver&lt;/td&gt;
+ &lt;td&gt;网络驱动&lt;/td&gt;
+ &lt;td&gt;bridge, host, overlay&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;driver_opts&lt;/td&gt;
+ &lt;td&gt;网络驱动选项&lt;/td&gt;
+ &lt;td&gt;键值对&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;deploy&lt;/td&gt;
+ &lt;td&gt;部署配置&lt;/td&gt;
+ &lt;td&gt;replicas, update_config, restart_policy&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;resources&lt;/td&gt;
+ &lt;td&gt;资源限制&lt;/td&gt;
+ &lt;td&gt;limits, reservations&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;limits&lt;/td&gt;
+ &lt;td&gt;资源限制&lt;/td&gt;
+ &lt;td&gt;cpus, memory&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;reservations&lt;/td&gt;
+ &lt;td&gt;资源保留&lt;/td&gt;
+ &lt;td&gt;cpus, memory&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;replicas&lt;/td&gt;
+ &lt;td&gt;副本数量&lt;/td&gt;
+ &lt;td&gt;整数&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;update_config&lt;/td&gt;
+ &lt;td&gt;更新配置&lt;/td&gt;
+ &lt;td&gt;parallel, rolling_update&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;restart_policy&lt;/td&gt;
+ &lt;td&gt;重启策略&lt;/td&gt;
+ &lt;td&gt;always, unless-stopped, on-failure, no&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
 &lt;h2 class="heading-element" id="使用docker-compose部署应用"&gt;&lt;span&gt;使用Docker-compose部署应用&lt;/span&gt;
  &lt;a href="#%e4%bd%bf%e7%94%a8docker-compose%e9%83%a8%e7%bd%b2%e5%ba%94%e7%94%a8" class="heading-mark"&gt;
  &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
@@ -1474,5 +1607,4 @@ https://github.com/kubernetes/website/blob/main/layouts/shortcodes/tabs.html
 &lt;/h2&gt;&lt;p&gt;&lt;a href="https://github.com/geekswg" target="_blank" rel="external nofollow noopener noreferrer"&gt;GitHub&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt; &lt;a href="https://github.com/gavinblog" target="_blank" rel="external nofollow noopener noreferrer"&gt;GitHub-gavinblog&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;
 &lt;a href="https://dash.cloudflare.com/b942112d61495edf9c0b0c4d790c4448" target="_blank" rel="external nofollow noopener noreferrer"&gt;CloudFlare&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;
 &lt;a href="https://app.netlify.com/teams/geekswg/overview" target="_blank" rel="external nofollow noopener noreferrer"&gt;Netlify&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;
-&lt;a href="https://vercel.com/geekswg" target="_blank" rel="external nofollow noopener noreferrer"&gt;Vercel&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;
-&lt;a href="https://v6.51.la/report/overview?comId=287570" target="_blank" rel="external nofollow noopener noreferrer"&gt;51数据​&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/p&gt;</description></item></channel></rss>
+&lt;a href="https://vercel.com/geekswg" target="_blank" rel="external nofollow noopener noreferrer"&gt;Vercel&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/p&gt;</description></item></channel></rss>
