@@ -40,8 +40,108 @@
 
 ## 朋友圈
 
-<div id="friend-posts" style="display: flex;flex-direction: row; flex-wrap: wrap;  ">
+<div id="friend-posts" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; padding: 10px 0; position: relative; z-index: 100;">
 </div>
+
+<style>
+  /* 朋友圈文章卡片样式 */
+  #friend-posts a {
+    display: block;
+    text-decoration: none;
+    background: var(--card-background);
+    border: 1px solid var(--card-border-color);
+    border-radius: 12px;
+    padding: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    pointer-events: auto !important;
+    z-index: 100 !important;
+    position: relative;
+    cursor: pointer;
+  }
+
+  #friend-posts a:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    border-color: var(--primary-color);
+  }
+
+  #friend-posts a:active {
+    transform: scale(0.98);
+  }
+
+  #friend-posts a h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--card-text-color);
+    margin: 0 0 10px 0;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    pointer-events: none;
+  }
+
+  #friend-posts a p {
+    font-size: 13px;
+    color: var(--card-text-secondary);
+    margin: 5px 0;
+    line-height: 1.6;
+    pointer-events: none;
+  }
+
+  #friend-posts a p.author {
+    color: var(--primary-color);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+  }
+
+  #friend-posts a p.author::before {
+    content: "👤";
+    margin-right: 5px;
+  }
+
+  #friend-posts a p.date {
+    color: var(--card-text-tertiary);
+    display: flex;
+    align-items: center;
+  }
+
+  #friend-posts a p.date::before {
+    content: "📅";
+    margin-right: 5px;
+  }
+
+  /* 确保朋友圈区域可点击 */
+  #friend-posts {
+    pointer-events: auto;
+    z-index: 100 !important;
+    position: relative;
+  }
+
+  /* 移动端适配 */
+  @media (max-width: 768px) {
+    #friend-posts {
+      grid-template-columns: 1fr !important;
+      gap: 15px !important;
+    }
+
+    #friend-posts a {
+      padding: 15px;
+    }
+
+    #friend-posts a h4 {
+      font-size: 14px;
+    }
+
+    #friend-posts a p {
+      font-size: 12px;
+    }
+  }
+</style>
 
 ## 随机文章
 
@@ -77,11 +177,11 @@ function rssPosts (rssURl,postCount,allPosts){
         //alert('eles.length=>'+ eles.length);
         let count = eles.length > postCount ? postCount : eles.length;
         for(let i=0; i<count; i++){
-          let title = eles[i].getElementsByTagName('title')[0].innerHTML;
-          let link = eles[i].getElementsByTagName('link')[0].innerHTML;
-          let description = eles[i].getElementsByTagName('description')[0].innerHTML;
-          let pubDate = eles[i].getElementsByTagName('pubDate')[0].innerHTML;
-          let author = eles[i].getElementsByTagName('author')[0].innerHTML;
+          let title = eles[i].getElementsByTagName('title')[0]?.innerHTML || '无标题';
+          let link = eles[i].getElementsByTagName('link')[0]?.innerHTML || '#';
+          let description = eles[i].getElementsByTagName('description')[0]?.innerHTML || '';
+          let pubDate = eles[i].getElementsByTagName('pubDate')[0]?.innerHTML || new Date().toISOString();
+          let author = eles[i].getElementsByTagName('author')[0]?.innerHTML || '未知作者';
           let post = {};
           post.title = title;
           post.link = link;
@@ -96,11 +196,12 @@ function rssPosts (rssURl,postCount,allPosts){
 }
 function appendShowPost(eleID,post){
   let ele = document.getElementById(eleID);
-  ele.innerHTML = ele.innerHTML + 
-  '<div style="width:200px;"><a href="'
-  + post.link + '"> <h4>'+ post.title +'</h4><p>'+ post.author +'</p><p>'+ formatDateStr(post.pubDate) +'</p>'
-  //+'<p>'+ post.description.slice(0.20) + '</p>'
-  +'</a></div>';
+  ele.innerHTML = ele.innerHTML +
+  '<a href="' + post.link + '" target="_blank" rel="noopener noreferrer">' +
+  '<h4>' + post.title + '</h4>' +
+  '<p class="author">' + post.author + '</p>' +
+  '<p class="date">' + formatDateStr(post.pubDate) + '</p>' +
+  '</a>';
 }
 
 function formatDateStr(str){
@@ -136,21 +237,24 @@ function xml2String(xmlObject) {
     position: relative;
     text-decoration: none;
     color: #3498db;
-}
-.preview-box {
+  }
+
+  .preview-box {
     display: none; /* 默认隐藏 */
-    position: absolute;
+    position: fixed;
     width: 200px;
     height: 150px;
     border: 1px solid #ddd;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     background-color: #fff;
-    z-index: 10;
-}
-.preview-box img {
+    z-index: 9999;
+    pointer-events: none;
+  }
+
+  .preview-box img {
     width: 100%;
     height: 100%;
-}
+  }
 </style>
 <script>
   document.addEventListener("DOMContentLoaded", function () {

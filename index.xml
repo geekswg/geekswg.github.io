@@ -1,4 +1,76 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>毕少侠</title><link>https://geekswg.js.cool/</link><description>博客：探索、发现、分享 By geekswg-[毕少侠]</description><generator>Hugo 0.154.3 &amp; FixIt v0.4.0</generator><language>zh-CN</language><managingEditor>geekswg@qq.com (geekswg)</managingEditor><webMaster>geekswg@qq.com (geekswg)</webMaster><copyright>geekswg &amp; 毕少侠</copyright><lastBuildDate>Tue, 06 Jan 2026 22:39:36 +0800</lastBuildDate><atom:link href="https://geekswg.js.cool/index.xml" rel="self" type="application/rss+xml"/><item><title>飞牛NAS之Docker</title><link>https://geekswg.js.cool/posts/2025/fn-docker/</link><pubDate>Fri, 26 Dec 2025 20:01:24 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2025/fn-docker/</guid><category domain="https://geekswg.js.cool/categories/nas/">NAS</category><description>&lt;p&gt;最近飞牛NAS发布了正式版系统，经过一段时间的使用，发现飞牛NAS的Docker功能还是很强大的，支持Docker和Docker-compose两种方式来部署应用。本文将分享一些我在飞牛NAS上使用Docker的经验和技巧。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>毕少侠</title><link>https://geekswg.js.cool/</link><description>博客：探索、发现、分享 By geekswg-[毕少侠]</description><generator>Hugo 0.154.3 &amp; FixIt v0.4.0</generator><language>zh-CN</language><managingEditor>geekswg@qq.com (geekswg)</managingEditor><webMaster>geekswg@qq.com (geekswg)</webMaster><copyright>geekswg &amp; 毕少侠</copyright><lastBuildDate>Fri, 09 Jan 2026 19:07:55 +0800</lastBuildDate><atom:link href="https://geekswg.js.cool/index.xml" rel="self" type="application/rss+xml"/><item><title>Cloudflare隧道加速</title><link>https://geekswg.js.cool/posts/2026/cf-tunnel-speedup/</link><pubDate>Fri, 09 Jan 2026 00:26:47 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2026/cf-tunnel-speedup/</guid><category domain="https://geekswg.js.cool/categories/nas/">NAS</category><description>&lt;p&gt;记录Cloudflare隧道加速配置过程中的一些细节和注意事项。我们都知道赛博活佛Cloudflare隧道是一个非常好用且操作简单的内外穿透工具，但是由于隧道线路在国内访问速度极慢，Cloudflare隧道加速（国内优选IP）可以帮助我们提高网站的访问速度和稳定性。&lt;/p&gt;
+&lt;h2 class="heading-element" id="先决条件"&gt;&lt;span&gt;先决条件&lt;/span&gt;
+ &lt;a href="#%e5%85%88%e5%86%b3%e6%9d%a1%e4%bb%b6" class="heading-mark"&gt;
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
+ &lt;/a&gt;
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;已注册Cloudflare账号，已安装Cloudflare Tunnel客户端&lt;/li&gt;
+&lt;li&gt;要求有两个域名并且已托管在Cloudflare，一个用于加速，一个用于正常访问&lt;/li&gt;
+&lt;li&gt;Cloudflare账号开通了自定义&lt;code&gt;SSL/TLS-自定义主机名&lt;/code&gt;功能，推荐使用&lt;a href="https://www.paypal.com/" target="_blank" rel="external nofollow noopener noreferrer"&gt;paypal&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;账户激活，实名后绑卡后即可开通，无需付费。&lt;/li&gt;
+&lt;li&gt;一个Cloudflare 国内IP优选服务解析,推荐使用 &lt;a href="https://saas.sin.fan/" target="_blank" rel="external nofollow noopener noreferrer"&gt;SIN&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;优选IP服务。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 class="heading-element" id="开始配置"&gt;&lt;span&gt;开始配置&lt;/span&gt;
+ &lt;a href="#%e5%bc%80%e5%a7%8b%e9%85%8d%e7%bd%ae" class="heading-mark"&gt;
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
+ &lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;下面就以 &lt;code&gt;main.com&lt;/code&gt;, &lt;code&gt;huituiyuan.com&lt;/code&gt;,为例，分别为主域名和回退源域名，配置Cloudflare隧道加回源到国内优选IP，来实现国内加速访问。
+主要为三个步骤：&lt;/p&gt;
+&lt;p&gt;&lt;a href="#%e8%ae%be%e7%bd%ae%e5%9b%9e%e9%80%80%e6%ba%90"&gt;设置回退源&lt;/a&gt; 、&lt;a href="#%e9%85%8d%e7%bd%ae%e4%bc%98%e9%80%89ip%e6%9c%8d%e5%8a%a1"&gt;配置优选IP服务&lt;/a&gt;
+、&lt;a href="#%e9%85%8d%e7%bd%ae%e4%b8%bb%e5%9f%9f%e5%90%8d"&gt;配置主域名&lt;/a&gt;&lt;/p&gt;
+&lt;h3 class="heading-element" id="设置回退源"&gt;&lt;span&gt;设置回退源&lt;/span&gt;
+ &lt;a href="#%e8%ae%be%e7%bd%ae%e5%9b%9e%e9%80%80%e6%ba%90" class="heading-mark"&gt;
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
+ &lt;/a&gt;
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;a.main.com&lt;/code&gt; 为主域名的cf隧道服务，&lt;code&gt;a.huituiyuan.com&lt;/code&gt;为回退源域名，cf隧道服务配置为 http://localhost ,不要填写端口。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;登录Cloudflare，选择域名huituiyuan.com，进入&amp;quot;SSL/TLS&amp;quot;设置面。确保已开启&amp;quot;自定义主机名&amp;quot;功能，并配置相应的SSL证书。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;自定义主机名&lt;/code&gt;配置页面，选择&amp;quot;添加自定义主机名&amp;quot;,填写&lt;code&gt;a.main.com&lt;/code&gt;其他默认，点击&amp;quot;添加自定义主机名&amp;quot;完成。完成后下方会添加一条自定义主机名记录，&lt;code&gt;证书状态&lt;/code&gt;和&lt;code&gt;主机名状态&lt;/code&gt;都为&lt;code&gt;有效&lt;/code&gt;才表示配置成功,点击记录按照提示要求去&lt;code&gt;a.main.com&lt;/code&gt;添加txt记录完成验证即可。&lt;a href="#%e9%85%8d%e7%bd%ae%e4%b8%bb%e5%9f%9f%e5%90%8d"&gt;配置主域名&lt;/a&gt;会详细说明&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;自定义主机名&lt;/code&gt;配置页面，回退源添加&lt;code&gt;a.huituiyuan.com&lt;/code&gt;，添加完成。回退源状态为&lt;code&gt;有效&lt;/code&gt;才表示配置成功。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 class="heading-element" id="配置优选ip服务"&gt;&lt;span&gt;配置优选IP服务&lt;/span&gt;
+ &lt;a href="#%e9%85%8d%e7%bd%ae%e4%bc%98%e9%80%89ip%e6%9c%8d%e5%8a%a1" class="heading-mark"&gt;
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
+ &lt;/a&gt;
+&lt;/h3&gt;&lt;p&gt;在&lt;code&gt;huituiyuan.com&lt;/code&gt;域名下，添加&lt;code&gt;cname&lt;/code&gt;记录，&lt;code&gt;cdn.huituiyuan.com&lt;/code&gt;，指向优选IP服务提供的域名，例如 &lt;code&gt;saas.sin.fan&lt;/code&gt;关闭小黄云加速。&lt;/p&gt;
+&lt;h3 class="heading-element" id="配置主域名"&gt;&lt;span&gt;配置主域名&lt;/span&gt;
+ &lt;a href="#%e9%85%8d%e7%bd%ae%e4%b8%bb%e5%9f%9f%e5%90%8d" class="heading-mark"&gt;
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
+ &lt;/a&gt;
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;在&lt;code&gt;main.com&lt;/code&gt;域名下，按照&lt;code&gt;设置回退源&lt;/code&gt;中第2步的,&lt;code&gt;自定义主机名&lt;/code&gt;记录,要求配置，添加相应的&lt;code&gt;txt&lt;/code&gt;记录完成DNS配置,完成自定义主机名状态验证。按要求配置自定义主机名的 DCV 委派。
+自定义主机名的 DCV 委派,在main.com域名下添加cname记录，
+&lt;code&gt;_acme-challenge.main.com&lt;/code&gt;指向&lt;code&gt;main.com.yourcode.dcv.cloudflare.com&lt;/code&gt;
+（通配符自定义主机名）证书，而无需在每个续订期间手动放置 TXT 令牌。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;a.main.com&lt;/code&gt;的DNS记录修改&lt;code&gt;cname&lt;/code&gt;记录，指向&lt;code&gt;cdn.huituiyuan.com&lt;/code&gt;,关闭小黄云加速。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 class="heading-element" id="测试访问"&gt;&lt;span&gt;测试访问&lt;/span&gt;
+ &lt;a href="#%e6%b5%8b%e8%af%95%e8%ae%bf%e9%97%ae" class="heading-mark"&gt;
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
+ &lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;配置完成后，等待DNS解析生效，通常需要几分钟到数即可生效。然后访问&lt;code&gt;a.main.com&lt;/code&gt;，检查是否能够正常访问，并且速度是否有所提升。
+可以使用&lt;a href="https://ping.chinaz.com/" target="_blank" rel="external nofollow noopener noreferrer"&gt;ping.cn&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;等工具测试访问速度。
+测试结果显示，访问速度从原来的几秒提升到了几十毫秒，速度提升了数倍。&lt;/p&gt;
+&lt;div class="details admonition note open disabled"&gt;
+ &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-solid fa-pencil-alt" aria-hidden="true"&gt;&lt;/i&gt;~&lt;/div&gt;
+ &lt;div class="details-content"&gt;
+ &lt;div class="admonition-content"&gt;&lt;p&gt;CF隧道优选加速，只能提高国内访问速度，并不了提高CF隧道自身提供免费的带宽和流量限制！&lt;/p&gt;&lt;/div&gt;
+ &lt;/div&gt;
+&lt;/div&gt;&lt;!-- 
+&gt; [!TIP]
+&gt; 可选信息，可帮助用户取得更大的成功。
+
+&gt; [!IMPORTANT]
+&gt; 用户成功所需的关键信息。
+
+&gt; [!WARNING]
+&gt; 由于存在潜在风险，需要用户立即关注的关键内容。
+
+&gt; [!CAUTION]
+&gt; 操作的潜在负面后果。
+这里使用MD语法编写你的文章
+--&gt;</description></item><item><title>飞牛NAS之Docker</title><link>https://geekswg.js.cool/posts/2025/fn-docker/</link><pubDate>Fri, 26 Dec 2025 20:01:24 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2025/fn-docker/</guid><category domain="https://geekswg.js.cool/categories/nas/">NAS</category><description>&lt;p&gt;最近飞牛NAS发布了正式版系统，经过一段时间的使用，发现飞牛NAS的Docker功能还是很强大的，支持Docker和Docker-compose两种方式来部署应用。本文将分享一些我在飞牛NAS上使用Docker的经验和技巧。&lt;/p&gt;
 &lt;h2 class="heading-element" id="什么是docker"&gt;&lt;span&gt;什么是Docker？&lt;/span&gt;
  &lt;a href="#%e4%bb%80%e4%b9%88%e6%98%afdocker" class="heading-mark"&gt;
  &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
@@ -1571,40 +1643,4 @@ https://github.com/kubernetes/website/blob/main/layouts/shortcodes/tabs.html
 &lt;figure&gt;&lt;a class="lightgallery" target="_blank" href="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-3.gif" title="loading-.gif" data-thumbnail="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-3.gif" data-sub-html="&lt;h2&gt;loading-3&lt;/h2&gt;&lt;p&gt;loading-.gif&lt;/p&gt;"&gt;&lt;img loading="lazy" src='https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-3.gif' alt="loading-3"&gt;&lt;/a&gt;&lt;figcaption class="image-caption"&gt;loading-.gif&lt;/figcaption&gt;
  &lt;/figure&gt;
 &lt;figure&gt;&lt;a class="lightgallery" target="_blank" href="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-2.gif" title="loading-.gif" data-thumbnail="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-2.gif" data-sub-html="&lt;h2&gt;loading-2&lt;/h2&gt;&lt;p&gt;loading-.gif&lt;/p&gt;"&gt;&lt;img loading="lazy" src='https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/loading/loading-2.gif' alt="loading-2"&gt;&lt;/a&gt;&lt;figcaption class="image-caption"&gt;loading-.gif&lt;/figcaption&gt;
- &lt;/figure&gt;&lt;/p&gt;</description></item><item><title>毕少侠所有站点</title><link>https://geekswg.js.cool/posts/2023/idnex/</link><pubDate>Fri, 02 Jun 2023 20:20:39 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2023/idnex/</guid><category domain="https://geekswg.js.cool/categories/geekswg/">geekswg</category><description>&lt;img src="https://geekswg.js.cool/images/posts/featured-image.jpg" alt="featured image" referrerpolicy="no-referrer"&gt;&lt;h2 class="heading-element" id="blog"&gt;&lt;span&gt;Blog&lt;/span&gt;
- &lt;a href="#blog" class="heading-mark"&gt;
- &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
- &lt;/a&gt;
-&lt;/h2&gt;&lt;p&gt;&lt;a href="https://home.geekswg.top" target="_blank" rel="external nofollow noopener noreferrer"&gt;主页&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;
-&lt;a href="https://geekswg.js.cool" target="_blank" rel="external nofollow noopener noreferrer"&gt;毕少侠​&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;
-&lt;a href="https://geekswg.top" target="_blank" rel="external nofollow noopener noreferrer"&gt;毕少侠​&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;
-&lt;a href="https://blog.geekswg.top" target="_blank" rel="external nofollow noopener noreferrer"&gt;毕少侠​&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://hexo.geekswg.top" target="_blank" rel="external nofollow noopener noreferrer"&gt;毕少侠-Hexo​&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://status.geekswg.top" target="_blank" rel="external nofollow noopener noreferrer"&gt;毕少侠-站点监测​&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;
-&lt;a href="https://nav.geekswg.top" target="_blank" rel="external nofollow noopener noreferrer"&gt;毕少侠-Hugo导航​&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://github.com/gavinblog/picx" target="_blank" rel="external nofollow noopener noreferrer"&gt;毕少侠-Picx-Github图床&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h2 class="heading-element" id="评论系统"&gt;&lt;span&gt;评论系统&lt;/span&gt;
- &lt;a href="#%e8%af%84%e8%ae%ba%e7%b3%bb%e7%bb%9f" class="heading-mark"&gt;
- &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
- &lt;/a&gt;
-&lt;/h2&gt;&lt;p&gt;&lt;a href="https://waline.geekswg.top" target="_blank" rel="external nofollow noopener noreferrer"&gt;毕少侠-waline&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt; &lt;a href="https://waline.geekswg.top/ui" target="_blank" rel="external nofollow noopener noreferrer"&gt;毕少侠-waline-后台&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;
-&lt;a href="https://twikoo.geekswg.top" target="_blank" rel="external nofollow noopener noreferrer"&gt;毕少侠-twikoo&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h2 class="heading-element" id="ai"&gt;&lt;span&gt;AI&lt;/span&gt;
- &lt;a href="#ai" class="heading-mark"&gt;
- &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
- &lt;/a&gt;
-&lt;/h2&gt;&lt;p&gt;&lt;a href="https://chatgpt.geekswg.top" target="_blank" rel="external nofollow noopener noreferrer"&gt;毕少侠-ChatGPT-Next-Web​&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;
-&lt;a href="https://bingai.geekswg.top" target="_blank" rel="external nofollow noopener noreferrer"&gt;毕少侠-NewBing-代理​&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h2 class="heading-element" id="api"&gt;&lt;span&gt;API&lt;/span&gt;
- &lt;a href="#api" class="heading-mark"&gt;
- &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
- &lt;/a&gt;
-&lt;/h2&gt;&lt;p&gt;&lt;a href="https://api-meting.geekswg.top/api" target="_blank" rel="external nofollow noopener noreferrer"&gt;meting_api&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h2 class="heading-element" id="others"&gt;&lt;span&gt;Others&lt;/span&gt;
- &lt;a href="#others" class="heading-mark"&gt;
- &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
- &lt;/a&gt;
-&lt;/h2&gt;&lt;p&gt;&lt;a href="https://github.com/geekswg" target="_blank" rel="external nofollow noopener noreferrer"&gt;GitHub&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt; &lt;a href="https://github.com/gavinblog" target="_blank" rel="external nofollow noopener noreferrer"&gt;GitHub-gavinblog&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;
-&lt;a href="https://dash.cloudflare.com/b942112d61495edf9c0b0c4d790c4448" target="_blank" rel="external nofollow noopener noreferrer"&gt;CloudFlare&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;
-&lt;a href="https://app.netlify.com/teams/geekswg/overview" target="_blank" rel="external nofollow noopener noreferrer"&gt;Netlify&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;
-&lt;a href="https://vercel.com/geekswg" target="_blank" rel="external nofollow noopener noreferrer"&gt;Vercel&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/p&gt;</description></item></channel></rss>
+ &lt;/figure&gt;&lt;/p&gt;</description></item></channel></rss>
