@@ -16,7 +16,7 @@
       {
         "id": "2",
         "name": "📝 添加",
-        "url": "https://github.com/geekswg/blogFixit/edit/master/static/html/tools/html-dev-tool/datasource.json",
+        "url": "https://github.com/geekswg/blog-fixit/edit/master/static/html/tools/html-dev-tool/datasource.json",
         "sort": 1,
         "target": "_blank",
         "description": "✏️维护在线工具列表"

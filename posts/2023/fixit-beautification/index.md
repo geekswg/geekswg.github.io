@@ -594,7 +594,7 @@ keywords = ["geekswg","毕少侠","博客","Github","Hugo", "LoveIt","FixIt"]
 defaultTheme = "auto"
 # public git repo url only then enableGitInfo is true
 # 公共 git 仓库路径，仅在 enableGitInfo 设为 true 时有效
-gitRepo = "https://github.com/geekswg/blogFixit"
+gitRepo = "https://github.com/geekswg/blog-fixit"
 # which hash function used for SRI, when empty, no SRI is used ["sha256", "sha384", "sha512", "md5"]
 # 哪种哈希函数用来 SRI, 为空时表示不使用 SRI ["sha256", "sha384", "sha512", "md5"]
 fingerprint = ""
@@ -1265,7 +1265,7 @@ disableThemeInject = false
 # 在左上角或者右上角显示 GitHub 开源链接 since v0.2.14
 [githubCorner]
   enable = true
-  permalink = "https://github.com/geekswg/blogFixit/"
+  permalink = "https://github.com/geekswg/blog-fixit/"
   title = "在 GitHub 查看代码"
   position = "left" # ["left", "right"]
 

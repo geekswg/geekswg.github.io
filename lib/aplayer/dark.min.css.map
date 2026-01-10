@@ -1,7 +1,7 @@
 {
 	"version": 3,
 	"file": "dark.min.css",
-	"sourceRoot": "/home/runner/work/blogFixit/blogFixit",
+	"sourceRoot": "/home/runner/work/blog-fixit/blog-fixit",
 	"sources": [
 		"themes/FixIt/assets/lib/aplayer/dark.scss"
 	],

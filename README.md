@@ -11,7 +11,7 @@
 |CloudFlare|[https://geekswg.pages.dev](https://geekswg.pages.dev)|
 |Hexo-Blog|[https://geekswg-hexo.netlify.app](https://geekswg-hexo.netlify.app)|
 
-[预览](https://geekswg.github.io/) | [源码](https://github.com/geekswg/blogFixit)
+[预览](https://geekswg.github.io/) | [源码](https://github.com/geekswg/blog-fixit)
 </div>
 
 ## Content management

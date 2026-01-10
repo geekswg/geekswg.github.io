@@ -1,7 +1,7 @@
 {
 	"version": 3,
 	"file": "config.min.css",
-	"sourceRoot": "/home/runner/work/blogFixit/blogFixit",
+	"sourceRoot": "/home/runner/work/blog-fixit/blog-fixit",
 	"sources": [
 		"themes/FixIt/assets/css/config.template.scss",
 		"themes/FixIt/assets/css/_variables.scss",

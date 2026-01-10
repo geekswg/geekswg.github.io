@@ -3,7 +3,7 @@
 
 ## 我的日常记录
 
-[去更新日常](https://github.com/geekswg/blogFixit/edit/master/content/dlogs/index.md)
+[去更新日常](https://github.com/geekswg/blog-fixit/edit/master/content/dlogs/index.md)
 
 ```yaml
     - type: music

@@ -33,8 +33,8 @@ iTab 新标签页iTab新标签页，小组件，起始页，标签页，日历�
 ### ⏱️2023/03/04 00:16
 
 {{< admonition bug "bug" true >}}
-Cloning into 'blogFixit'...
-fatal: unable to access 'https://github.com/geekswg/blogFixit.git/': SSL certificate problem: unable to get local issuer certificate
+Cloning into 'blog-fixit'...
+fatal: unable to access 'https://github.com/geekswg/blog-fixit.git/': SSL certificate problem: unable to get local issuer certificate
 {{< /admonition >}}
 
 > 解决方法：
