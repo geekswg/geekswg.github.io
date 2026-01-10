@@ -345,3 +345,17 @@ new Ribbons({
     ribbonCount: 5,
     parallaxAmount: -0.99
 });
+options = {
+        id: "bgCanvas",//画板Id
+        backgroundColor: "#1f1f1f",//画板背景
+        colorSaturation: "80%",//纯度
+        colorBrightness: "60%",//亮度
+        colorAlpha: 0.65,//透明度
+        colorCycleSpeed: 6,//丝带不同块之间的色彩变化量
+        verticalPosition: "center",//丝带相对于屏幕的初始位置：top/min 屏幕最上方，middle|center 中间，bottom|max 屏幕最下面
+        horizontalSpeed: 200,//丝带水平方向移动速度参数（会乘以一个随机值）
+        ribbonCount: 3,//同一时间丝带总条数
+        strokeSize: 0,//公共边路径样式
+        parallaxAmount: -0.5,//滚动偏移参数，-1表示不偏移，0表示基于丝带只出现在页面最上面
+        animateSections: true//丝带块是否偏移，显得有动感
+};
