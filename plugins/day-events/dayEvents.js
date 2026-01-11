@@ -34,7 +34,7 @@ class DayEvents {
       );
       const eventEndDate = new Date(eventStart.getTime() +(event.duration) * 24 * 60 * 60 * 1000);
       //console.clear();
-      console.log(event.title + "=>"+"Duration: " + eventStart + " to " + eventEndDate);
+      //console.log(event.title + "=>"+"Duration: " + eventStart + " to " + eventEndDate);
       return (now >= eventStart && now < eventEndDate);
     });
 
