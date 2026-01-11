@@ -32,8 +32,9 @@ class DayEvents {
         (eventMonth === '*' ? today.month : eventMonth) - 1,
         eventDate === '*' ? today.date : eventDate
       );
-      const eventEndDate = new Date(eventStart.getTime() +(event.duration+1) * 24 * 60 * 60 * 1000);
-      //console.log(event.title + "=>"+"Duration: " + eventStart + " to " + eventEndDate);
+      const eventEndDate = new Date(eventStart.getTime() +(event.duration) * 24 * 60 * 60 * 1000);
+      //console.clear();
+      console.log(event.title + "=>"+"Duration: " + eventStart + " to " + eventEndDate);
       return (now >= eventStart && now < eventEndDate);
     });
 

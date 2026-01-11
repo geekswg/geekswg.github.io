@@ -22,12 +22,13 @@
   width: 28vh;
   height: auto;
   z-index: 1;
-  translate: var(--fi-event-img-offset, 0 0);
   transform: rotate(10deg);
+
+  translate: var(--fi-event-img-offset, 8px 2px);
   position: absolute;
-  left: 40%;
-  top: 1rem;
   animation: jiggle 0.4s ease-in-out;
+  
+
   border: none !important;
   outline: none !important;
   box-shadow: none !important;
