@@ -22,52 +22,7 @@
 3. Those websites that do not respect other people's labor achievements, reprint without source, or malicious acts, please do not come to exchange.
 {{< /admonition >}}
 
-<style>
-  .preview-link {
-    position: relative;
-    text-decoration: none;
-    color: #3498db;
-}
 
-.preview-box {
-    display: none; /* 默认隐藏 */
-    position: absolute;
-    width: 200px;
-    height: 150px;
-    border: 1px solid #ddd;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    background-color: #fff;
-    z-index: 10;
-}
-
-.preview-box img {
-    width: 100%;
-    height: 100%;
-}
-</style>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const previewBox = document.getElementById("previewBox");
-    const previewImage = document.getElementById("previewImage");
-
-    document.querySelectorAll(".preview-link").forEach(link => {
-        link.addEventListener("mouseenter", (e) => {
-            const imageSrc = link.getAttribute("data-preview");
-            previewImage.src = imageSrc;
-            previewBox.style.display = "block";
-        });
-
-        link.addEventListener("mousemove", (e) => {
-            previewBox.style.top = `${e.pageY-150}px`;
-            previewBox.style.left = `${e.pageX-150}px`;
-        });
-
-        link.addEventListener("mouseleave", () => {
-            previewBox.style.display = "none";
-        });
-    });
-});
-</script>
 
 
 ---
