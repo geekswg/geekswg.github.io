@@ -9,6 +9,23 @@ const RENDERER = {
   MAX_INTERVAL_COUNT: 50,
   INIT_HEIGHT_RATE: 0.5,
   THRESHOLD: 50,
+  FISH_COLOR: '#ff0000', // 鱼的颜色，可以修改为其他颜色
+  FISH_BACKGROUND_LIGHT: 'rgb(0 119 190 / 8%)',
+  FISH_BACKGROUND_DARK: 'rgb(255 255 255 / 8%)',
+  FISH_STYLE: `
+    .footer {
+      position: relative;
+    }
+    #flyfish {
+      position: absolute;
+      width: 100%;
+      height: 230px;
+      overflow: hidden;
+      left: 0;
+      bottom: 0;
+      z-index: -1;
+      pointer-events: none;
+    }`,
 
   init: function () {
     this.setParameters();
@@ -27,22 +44,12 @@ const RENDERER = {
     this.points = [];
     this.fishes = [];
     this.watchIds = [];
-    //document.querySelector('#footer').appendChild(this.container);
-    document.body.appendChild(this.container);
+    document.querySelector('.footer').appendChild(this.container);
+    //document.body.appendChild(this.container);
   },
   setStyle: function () {
     const style = document.createElement("style");
-    style.innerHTML = `
-    #flyfish {
-      position: fixed;
-      width: 100%;
-      height: 260px;
-      overflow: hidden;
-      left: 0;
-      bottom: 0;
-      z-index: -1;
-      pointer-events: none;
-    }`;
+    style.innerHTML = this.FISH_STYLE;
     document.querySelector("head").appendChild(style);
   },
   createSurfacePoints: function () {
@@ -176,11 +183,10 @@ const RENDERER = {
       self.context.clearRect(0, 0, self.width, self.height);
       // 这里利用 FixIt 主题的 isDark 属性来判断是否是暗色主题
       if (fixit.isDark) {
-        self.context.fillStyle = "rgb(255 255 255 / 10%)";
+        self.context.fillStyle = self.FISH_BACKGROUND_DARK;
       } else {
-        self.context.fillStyle = "#e6e5f8";
+        self.context.fillStyle = self.FISH_BACKGROUND_LIGHT;
       }
-
       for (let i = 0, count = self.fishes.length; i < count; i++) {
         self.fishes[i].render(self.context);
       }
@@ -358,7 +364,7 @@ FISH.prototype = {
     context.translate(this.x, this.y);
     context.rotate(Math.PI + Math.atan2(this.vy, this.vx));
     context.scale(1, this.direction ? 1 : -1);
-    context.fillStyle = "red";
+    context.fillStyle = this.renderer.FISH_COLOR;
     context.beginPath();
     context.moveTo(-30, 0);
     context.bezierCurveTo(-20, 15, 15, 10, 40, 0);

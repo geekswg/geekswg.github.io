@@ -1,0 +1,238 @@
+@charset "UTF-8";
+
+@media(max-width: 730px) {
+    :root {
+        --ypb-bodyMargin:20px
+    }
+}
+
+.headerLink a {
+    color: unset!important
+}
+
+.article-content div ul {
+    margin-top: -.5rem
+}
+
+.tag-cloud-tags {
+    margin: 10px 0
+}
+
+.tag-cloud-tags a {
+    display: inline-block;
+    position: relative;
+    margin: 5px 10px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    -webkit-transition: all ease-out .3s;
+    -moz-transition: all ease-out .3s;
+    -o-transition: all ease-out .3s;
+    transition: all ease-out .3s;
+    text-decoration: none
+}
+
+.tags-shields {
+    display: flex;
+    height: 20px;
+    line-height: 20px;
+    overflow: hidden;
+    align-items: center;
+    border-radius: 4px
+}
+
+.tags-shields-before {
+    font-size: 12px;
+    padding: 0 4px 0 6px;
+    background-color: #595959;
+    color: #fff;
+    display: inline-block;
+    vertical-align: middle
+}
+
+.tags-shields-after {
+    font-size: 10px;
+    padding: 0 6px 0 4px;
+    background-color: #0274b5;
+    color: #fff;
+    display: inline-block;
+    vertical-align: middle
+}
+
+.tags-count-1 {
+    background-color: #0274b5
+}
+
+.tags-count-2 {
+    background-color: #3b8dbf
+}
+
+.tags-count-3 {
+    background-color: #8ab802
+}
+
+.tags-count-4 {
+    background-color: green
+}
+
+.tags-count-5 {
+    background-color: #dab226
+}
+
+.tags-count-6 {
+    background-color: #e77334
+}
+
+.tags-count-7 {
+    background-color: #cc5640
+}
+
+.tags-count-8 {
+    background-color: #e6adb7
+}
+
+.tags-count-9 {
+    background-color: #740174
+}
+
+.tags-count-10,.tags-count-11,.tags-count-12,.tags-count-13,.tags-count-14,.tags-count-15,.tags-count-16,.tags-count-17,.tags-count-18,.tags-count-19 {
+    background-color: orange
+}
+
+.tags-count-20,.tags-count-21,.tags-count-22,.tags-count-23,.tags-count-24,.tags-count-25,.tags-count-26,.tags-count-27,.tags-count-28,.tags-count-29 {
+    background-color: #ff4500
+}
+
+.tags-count-30,.tags-count-31,.tags-count-32,.tags-count-33,.tags-count-34,.tags-count-35,.tags-count-36,.tags-count-37,.tags-count-38,.tags-count-39,.tags-count-40,.tags-count-41,.tags-count-42,.tags-count-43,.tags-count-44,.tags-count-45,.tags-count-46,.tags-count-47,.tags-count-48,.tags-count-49,.tags-count-50 {
+    background-color: red
+}
+
+.bar-chart {
+    height: 20rem;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 2%;
+    align-items: end;
+    padding-inline:2%;padding-block:1.5rem;position: relative;
+    isolation: isolate
+}
+
+.bar-chart::after {
+    content: "";
+    position: absolute;
+    inset: 1.5rem 0;
+    z-index: -1;
+    background-image: repeating-linear-gradient(to top,transparent 0 calc(calc(100%/10) - 1px),currentcolor 0 calc(100%/10));
+    box-shadow: 0 1px currentcolor;
+    opacity: .125
+}
+
+.bar-chart>.item {
+    height: calc(1% * var(--val));
+    width: 100%;
+    background-color: #2563eb;
+    position: relative;
+    animation: item-height 1s ease forwards
+}
+
+@keyframes item-height {
+    from {
+        height: 0
+    }
+}
+
+.bar-chart>.item>* {
+    position: absolute;
+    text-align: center
+}
+
+.bar-chart>.item>.label {
+    inset: 100% 0 auto 0
+}
+
+.bar-chart>.item>.value {
+    inset: auto 0 100% 0
+}
+
+.stats-cards a {
+    font-weight: 600
+}
+
+/* Dark Theme Adaptation */
+[data-theme='dark'] .bar-chart::after {
+    opacity: .25;
+    color: #71717a
+}
+
+[data-theme='dark'] .bar-chart>.item {
+    background-color: #3b82f6
+}
+
+[data-theme='dark'] .tag-cloud-tags a:hover {
+    filter: brightness(1.2)
+}
+
+/* Stat cards icon styles */
+.stats-icon-bg {
+    background: linear-gradient(to bottom right, #dbeafe, #dbeafe)
+}
+
+.stats-icon-color {
+    color: #2563eb
+}
+
+[data-theme='dark'] .stats-icon-bg {
+    background: linear-gradient(to bottom right, #1e3a8a, #1e40af) !important
+}
+
+[data-theme='dark'] .stats-icon-color {
+    color: #60a5fa !important
+}
+
+/* Override Tailwind bg-zinc-50 and bg-zinc-100 */
+.grid.grid-cols-2 > div {
+    background-color: #fafafa !important
+}
+
+[data-theme='dark'] .grid.grid-cols-2 > div {
+    background-color: #1c2128 !important
+}
+
+/* Dark theme border optimization - reduce border width for better dark mode appearance */
+[data-theme='dark'] .border {
+    border-width: 0.5px !important;
+    border-color: #374151 !important;
+}
+
+/* Specific optimization for stat cards in dark theme */
+[data-theme='dark'] .grid.grid-cols-2 > div,
+[data-theme='dark'] .grid.md\:grid-cols-4 > div {
+    border-color: #374151 !important;
+    border-width: 0.5px !important;
+}
+
+/* Fix for GitHub/Steam/Analytics cards in dark theme */
+[data-theme='dark'] .stats-cards .bg-zinc-50 {
+    background-color: #111827 !important;
+}
+
+[data-theme='dark'] .stats-cards .bg-zinc-100 {
+    background-color: #1f2937 !important;
+}
+
+/* Ensure text colors are properly adjusted for dark theme */
+[data-theme='dark'] .text-zinc-600 {
+    color: #d1d5db !important;
+}
+
+[data-theme='dark'] .text-zinc-700 {
+    color: #e5e7eb !important;
+}
+
+[data-theme='dark'] .text-zinc-900 {
+    color: #f9fafb !important;
+}
+
+/* Fix for specific text elements in cards */
+[data-theme='dark'] .stats-cards .text-zinc-500 {
+    color: #9ca3af !important;
+}
