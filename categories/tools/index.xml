@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>工具 - 分类 | 毕少侠</title><link>https://geekswg.js.cool/categories/tools/</link><description>博客：探索、发现、分享 By geekswg-[毕少侠]</description><generator>Hugo 0.154.5 &amp; FixIt v0.4.0</generator><language>zh-CN</language><managingEditor>geekswg@qq.com (geekswg)</managingEditor><webMaster>geekswg@qq.com (geekswg)</webMaster><copyright>geekswg &amp; 毕少侠</copyright><lastBuildDate>Tue, 13 Jan 2026 02:17:45 +0800</lastBuildDate><atom:link href="https://geekswg.js.cool/categories/tools/index.xml" rel="self" type="application/rss+xml"/><item><title>LX-Music洛雪音乐助手</title><link>https://geekswg.js.cool/posts/2025/share-lxmusic/</link><pubDate>Sun, 06 Apr 2025 16:45:38 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2025/share-lxmusic/</guid><category domain="https://geekswg.js.cool/categories/tools/">工具</category><description>&lt;h2 class="heading-element" id="什么是-lx-music"&gt;&lt;span&gt;什么是 LX-Music？&lt;/span&gt;
+ &lt;a href="#%e4%bb%80%e4%b9%88%e6%98%af-lx-music" class="heading-mark"&gt;
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
+ &lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;LX-Music（&lt;a href="https://lxmusic.toside.cn/download" target="_blank" rel="external nofollow noopener noreferrer"&gt;洛雪音乐助手&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;）是一款免费且开源的音乐查找工具，支持多平台使用。它可以帮助用户快速搜索和下载来自多个音乐平台的歌曲，提供高质量的音乐体验。&lt;/p&gt;</description></item><item><title>Funny 404 Gif</title><link>https://geekswg.js.cool/posts/2023/funny-404-gif/</link><pubDate>Sat, 27 May 2023 20:20:00 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2023/funny-404-gif/</guid><category domain="https://geekswg.js.cool/categories/tools/">工具</category><description>&lt;div class="details admonition note open"&gt;
+ &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-solid fa-pencil-alt" aria-hidden="true"&gt;&lt;/i&gt;注意&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;
+ &lt;div class="details-content"&gt;
+ &lt;div class="admonition-content"&gt;&lt;p&gt;有趣的404-Not Found gif 动态图。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;所有图片资源均来自互联网，如果侵权，请告知！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/div&gt;
+ &lt;/div&gt;
+&lt;/div&gt;</description></item><item><title>VSCode插件推荐</title><link>https://geekswg.js.cool/posts/2023/vscode-plugins/</link><pubDate>Sat, 11 Mar 2023 22:36:21 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2023/vscode-plugins/</guid><category domain="https://geekswg.js.cool/categories/tools/">工具</category><description>&lt;h1 class="heading-element" id="vscode插件推荐"&gt;&lt;span&gt;VSCode插件推荐&lt;/span&gt;
+ &lt;a href="#vscode%e6%8f%92%e4%bb%b6%e6%8e%a8%e8%8d%90" class="heading-mark"&gt;
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
+ &lt;/a&gt;
+&lt;/h1&gt;&lt;p&gt;Visual Studio Code的强大之处在于其丰富的插件生态系统。本文推荐一些实用的VSCode插件。&lt;/p&gt;</description></item><item><title>实用网站链接合集</title><link>https://geekswg.js.cool/posts/2023/site-links/</link><pubDate>Sat, 11 Mar 2023 22:36:21 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2023/site-links/</guid><category domain="https://geekswg.js.cool/categories/tools/">工具</category><description>&lt;h1 class="heading-element" id="实用网站链接合集"&gt;&lt;span&gt;实用网站链接合集&lt;/span&gt;
+ &lt;a href="#%e5%ae%9e%e7%94%a8%e7%bd%91%e7%ab%99%e9%93%be%e6%8e%a5%e5%90%88%e9%9b%86" class="heading-mark"&gt;
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
+ &lt;/a&gt;
+&lt;/h1&gt;&lt;p&gt;本文收集整理各类实用的网站和在线工具，方便日常使用和参考。&lt;/p&gt;</description></item><item><title>实用资源分享</title><link>https://geekswg.js.cool/posts/2023/share-resources/</link><pubDate>Sat, 11 Mar 2023 22:36:21 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2023/share-resources/</guid><category domain="https://geekswg.js.cool/categories/tools/">工具</category><description>&lt;h1 class="heading-element" id="实用资源分享"&gt;&lt;span&gt;实用资源分享&lt;/span&gt;
+ &lt;a href="#%e5%ae%9e%e7%94%a8%e8%b5%84%e6%ba%90%e5%88%86%e4%ba%ab" class="heading-mark"&gt;
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
+ &lt;/a&gt;
+&lt;/h1&gt;&lt;p&gt;本文分享各类实用的工具、软件和在线资源，帮助提高工作效率和生活质量。&lt;/p&gt;</description></item><item><title>分享VSCode插件</title><link>https://geekswg.js.cool/posts/2023/share-vscode-plugins/</link><pubDate>Sat, 04 Mar 2023 15:34:45 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2023/share-vscode-plugins/</guid><category domain="https://geekswg.js.cool/categories/tools/">工具</category><description>&lt;div class="details admonition warning open"&gt;
+ &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-solid fa-exclamation-triangle" aria-hidden="true"&gt;&lt;/i&gt;申明&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;
+ &lt;div class="details-content"&gt;
+ &lt;div class="admonition-content"&gt;所有分享资源来自互联网，如有侵权请告知，会立即删除
+note abstract info tip success question warning failure danger bug example quote&lt;/div&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;分享 VSCode 插件，提升编码效率，插件侠篇。
+&lt;div class="details admonition tip open"&gt;
+ &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-regular fa-lightbulb" aria-hidden="true"&gt;&lt;/i&gt;技巧&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;
+ &lt;div class="details-content"&gt;
+ &lt;div class="admonition-content"&gt;小技巧：vscode插件栏目中，热门标签类目下的插件都是比较优秀和好用的插件，不知道用什么插件时去哪里可以发现很多宝藏的插件！推荐里面也能找到你想要的，微软这方面做的还是非常不错的。&lt;/div&gt;
+ &lt;/div&gt;
+&lt;/div&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</description></item><item><title>ShareAnything-分享一切</title><link>https://geekswg.js.cool/posts/2023/share/</link><pubDate>Wed, 01 Mar 2023 08:52:54 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2023/share/</guid><category domain="https://geekswg.js.cool/categories/tools/">工具</category><description>&lt;div class="details admonition warning open"&gt;
+ &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-solid fa-exclamation-triangle" aria-hidden="true"&gt;&lt;/i&gt;申明&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;
+ &lt;div class="details-content"&gt;
+ &lt;div class="admonition-content"&gt;所有分享资源来自互联网，如有侵权请告知，会立即删除
+note abstract info tip success question warning failure danger bug example quote&lt;/div&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;分享 音乐、软件、网站等一切我觉得好玩或者有用的资源&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class="details admonition info open"&gt;
+ &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-solid fa-circle-info" aria-hidden="true"&gt;&lt;/i&gt;信息&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;
+ &lt;div class="details-content"&gt;
+ &lt;div class="admonition-content"&gt;软件都是我用过的，大家可以放心食用，不给任何产品推广。
+Do no evil ！&lt;/div&gt;
+ &lt;/div&gt;
+&lt;/div&gt;</description></item></channel></rss>

@@ -18,11 +18,11 @@
 `Settings`、`Build & Development Settings` 配置如下
 ![vercel部署配置](vercel-settings.webp "vercel部署配置") 
 
-|Key | value |
-| ------ | ----------- |
-|Build Command    | tsc |
-|Output Directory | ./dist |
-|Install Command  | pnpm install |
+||Key | value |
+|| ------ | ----------- |
+||Build Command    | tsc |
+||Output Directory | ./dist |
+||Install Command  | pnpm install |
 
 ### 配置Storage
 `Storage`、`Creatre Database`、`Upstash`、`Upstash KV`、然后一路保存即可。
@@ -68,9 +68,7 @@
 
 https://blog.hesiy.cn/posts/qwen-summary/
 
-https://mabbs.github.io/2024/07/03/ai-summary.html 
-
-
+https://mabbs.github.io/2024/07/03/ai-summary.html
 
 ---
 

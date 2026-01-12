@@ -29,8 +29,6 @@
 > [!NOTE]
 > 刚刚生成的UUID请妥善保管，用于后续访问时输入，如果忘记可以去Cloudflare Pages项目设置中查看，或者重新新生成一个配置，重新修改配置后需要重新部署才能生效。
 
-
-
 ---
 
 > 作者: [geekswg](https://github.com/geekswg)  

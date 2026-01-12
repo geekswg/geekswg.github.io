@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>毕少侠</title><link>https://geekswg.js.cool/</link><description>博客：探索、发现、分享 By geekswg-[毕少侠]</description><generator>Hugo 0.154.5 &amp; FixIt v0.4.0</generator><language>zh-CN</language><managingEditor>geekswg@qq.com (geekswg)</managingEditor><webMaster>geekswg@qq.com (geekswg)</webMaster><copyright>geekswg &amp; 毕少侠</copyright><lastBuildDate>Sun, 11 Jan 2026 17:31:47 +0800</lastBuildDate><atom:link href="https://geekswg.js.cool/index.xml" rel="self" type="application/rss+xml"/><item><title>Cloudflare部署CFnew终端</title><link>https://geekswg.js.cool/posts/2026/cf-new/</link><pubDate>Sun, 11 Jan 2026 16:40:02 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2026/cf-new/</guid><category domain="https://geekswg.js.cool/categories/cloudflare/">cloudflare</category><description>&lt;p&gt;&lt;a href="https://github.com/byJoey/cfnew" target="_blank" rel="external nofollow noopener noreferrer"&gt;CFnew&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt; - 终端 v2.9&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>毕少侠</title><link>https://geekswg.js.cool/</link><description>博客：探索、发现、分享 By geekswg-[毕少侠]</description><generator>Hugo 0.154.5 &amp; FixIt v0.4.0</generator><language>zh-CN</language><managingEditor>geekswg@qq.com (geekswg)</managingEditor><webMaster>geekswg@qq.com (geekswg)</webMaster><copyright>geekswg &amp; 毕少侠</copyright><lastBuildDate>Tue, 13 Jan 2026 02:17:45 +0800</lastBuildDate><atom:link href="https://geekswg.js.cool/index.xml" rel="self" type="application/rss+xml"/><item><title>Cloudflare部署CFnew终端</title><link>https://geekswg.js.cool/posts/2026/cf-new/</link><pubDate>Sun, 11 Jan 2026 16:40:02 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2026/cf-new/</guid><category domain="https://geekswg.js.cool/categories/tutorial/">tutorial</category><description>&lt;p&gt;&lt;a href="https://github.com/byJoey/cfnew" target="_blank" rel="external nofollow noopener noreferrer"&gt;CFnew&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt; - 终端 v2.9&lt;/p&gt;
 &lt;h2 class="heading-element" id="介绍"&gt;&lt;span&gt;介绍&lt;/span&gt;
  &lt;a href="#%e4%bb%8b%e7%bb%8d" class="heading-mark"&gt;
  &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
@@ -456,7 +456,7 @@ networks:
 &gt; [!CAUTION]
 &gt; 操作的潜在负面后果。
 这里使用MD语法编写你的文章 
---&gt;</description></item><item><title>LX-Music洛雪音乐助手</title><link>https://geekswg.js.cool/posts/2025/share-lxmusic/</link><pubDate>Sun, 06 Apr 2025 16:45:38 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2025/share-lxmusic/</guid><category domain="https://geekswg.js.cool/categories/%E5%88%86%E4%BA%AB/">分享</category><description>&lt;h2 class="heading-element" id="什么是-lx-music"&gt;&lt;span&gt;什么是 LX-Music？&lt;/span&gt;
+--&gt;</description></item><item><title>LX-Music洛雪音乐助手</title><link>https://geekswg.js.cool/posts/2025/share-lxmusic/</link><pubDate>Sun, 06 Apr 2025 16:45:38 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2025/share-lxmusic/</guid><category domain="https://geekswg.js.cool/categories/tools/">工具</category><description>&lt;h2 class="heading-element" id="什么是-lx-music"&gt;&lt;span&gt;什么是 LX-Music？&lt;/span&gt;
  &lt;a href="#%e4%bb%80%e4%b9%88%e6%98%af-lx-music" class="heading-mark"&gt;
  &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
  &lt;/a&gt;
@@ -515,7 +515,7 @@ networks:
 &lt;pre&gt;&lt;code&gt;https://ghproxy.net/https://raw.githubusercontent.com/pdone/lx-music-source/main/sixyin/latest.js&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
 &lt;li&gt;Flower
 &lt;pre&gt;&lt;code&gt;https://ghproxy.net/https://raw.githubusercontent.com/pdone/lx-music-source/main/flower/latest.js&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;/ol&gt;</description></item><item><title>Markdown基本语法</title><link>https://geekswg.js.cool/mydocs/md-basic/</link><pubDate>Sat, 07 Dec 2024 08:52:46 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/mydocs/md-basic/</guid><category domain="https://geekswg.js.cool/categories/repost/">repost</category><description>&lt;p&gt;这篇文章提供了可以在 Hugo 的文章中使用的基本 Markdown 语法示例。&lt;/p&gt;
+&lt;/ol&gt;</description></item><item><title>Markdown基本语法</title><link>https://geekswg.js.cool/posts/2024/md-basic/</link><pubDate>Sat, 07 Dec 2024 08:52:46 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2024/md-basic/</guid><category domain="https://geekswg.js.cool/categories/docs/">文档</category><description>&lt;p&gt;这篇文章提供了可以在 Hugo 的文章中使用的基本 Markdown 语法示例。&lt;/p&gt;
 &lt;!-- markdownlint-disable-file --&gt;
 &lt;div class="details admonition note open"&gt;
  &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-solid fa-pencil-alt" aria-hidden="true"&gt;&lt;/i&gt;注意&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;
@@ -1103,7 +1103,7 @@ Content for chapter one.&lt;/code&gt;&lt;/pre&gt;&lt;div class="details admoniti
 &lt;p&gt;这是一个带标签的脚注&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;/div&gt;</description></item><item><title>给你的网站添加AI摘要功能</title><link>https://geekswg.js.cool/posts/2024/ai-summary/</link><pubDate>Sat, 07 Dec 2024 08:52:46 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2024/ai-summary/</guid><category domain="https://geekswg.js.cool/categories/code/">code</category><description>&lt;h2 class="heading-element" id="功能实现"&gt;&lt;span&gt;功能实现&lt;/span&gt;
+&lt;/div&gt;</description></item><item><title>给你的网站添加AI摘要功能</title><link>https://geekswg.js.cool/posts/2024/ai-summary/</link><pubDate>Sat, 07 Dec 2024 08:52:46 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2024/ai-summary/</guid><category domain="https://geekswg.js.cool/categories/dev/">开发</category><description>&lt;h2 class="heading-element" id="功能实现"&gt;&lt;span&gt;功能实现&lt;/span&gt;
  &lt;a href="#%e5%8a%9f%e8%83%bd%e5%ae%9e%e7%8e%b0" class="heading-mark"&gt;
  &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
  &lt;/a&gt;
@@ -1200,61 +1200,87 @@ Content for chapter one.&lt;/code&gt;&lt;/pre&gt;&lt;div class="details admoniti
  &lt;/a&gt;
 &lt;/h2&gt;&lt;p&gt;本文参考了以下文章&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://blog.hesiy.cn/posts/qwen-summary/" target="_blank" rel="external nofollow noopener noreferrer"&gt;https://blog.hesiy.cn/posts/qwen-summary/&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://mabbs.github.io/2024/07/03/ai-summary.html" target="_blank" rel="external nofollow noopener noreferrer"&gt;https://mabbs.github.io/2024/07/03/ai-summary.html&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/p&gt;</description></item><item><title>VSCode常用快捷键</title><link>https://geekswg.js.cool/posts/2024/vscode-keybing/</link><pubDate>Wed, 04 Dec 2024 22:02:38 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2024/vscode-keybing/</guid><category domain="https://geekswg.js.cool/categories/notes/">notes</category><description>&lt;p&gt;在 VSCode 中，以下是一些常用的快捷键，特别是在编辑 Markdown 文件时：&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;这些快捷键可以大大提高你在 VSCode 中编辑 Markdown 文件时的效率。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 class="heading-element" id="基本编辑快捷键"&gt;&lt;span&gt;基本编辑快捷键：&lt;/span&gt;
- &lt;a href="#%e5%9f%ba%e6%9c%ac%e7%bc%96%e8%be%91%e5%bf%ab%e6%8d%b7%e9%94%ae" class="heading-mark"&gt;
+&lt;p&gt;&lt;a href="https://mabbs.github.io/2024/07/03/ai-summary.html" target="_blank" rel="external nofollow noopener noreferrer"&gt;https://mabbs.github.io/2024/07/03/ai-summary.html&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/p&gt;</description></item><item><title>给你的网站添加AI摘要功能</title><link>https://geekswg.js.cool/posts/2024/ai-summary/</link><pubDate>Sat, 07 Dec 2024 08:52:46 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2024/ai-summary/</guid><category domain="https://geekswg.js.cool/categories/theme/">theme</category><description>&lt;h2 class="heading-element" id="功能实现"&gt;&lt;span&gt;功能实现&lt;/span&gt;
+ &lt;a href="#%e5%8a%9f%e8%83%bd%e5%ae%9e%e7%8e%b0" class="heading-mark"&gt;
  &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
  &lt;/a&gt;
-&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;打开文件&lt;/strong&gt;: &lt;code&gt;Ctrl + O&lt;/code&gt; (Windows/Linux) 或 &lt;code&gt;Cmd + O&lt;/code&gt; (Mac)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;保存文件&lt;/strong&gt;: &lt;code&gt;Ctrl + S&lt;/code&gt; 或 &lt;code&gt;Cmd + S&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;撤销操作&lt;/strong&gt;: &lt;code&gt;Ctrl + Z&lt;/code&gt; 或 &lt;code&gt;Cmd + Z&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;重做操作&lt;/strong&gt;: &lt;code&gt;Ctrl + Shift + Z&lt;/code&gt; 或 &lt;code&gt;Cmd + Shift + Z&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;剪切&lt;/strong&gt;: &lt;code&gt;Ctrl + X&lt;/code&gt; 或 &lt;code&gt;Cmd + X&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;复制&lt;/strong&gt;: &lt;code&gt;Ctrl + C&lt;/code&gt; 或 &lt;code&gt;Cmd + C&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;粘贴&lt;/strong&gt;: &lt;code&gt;Ctrl + V&lt;/code&gt; 或 &lt;code&gt;Cmd + V&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;删除当前行&lt;/strong&gt;: &lt;code&gt;Ctrl + Shift + K&lt;/code&gt; 或 &lt;code&gt;Cmd + Shift + K&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;选择当前行&lt;/strong&gt;: &lt;code&gt;Ctrl + L&lt;/code&gt; 或 &lt;code&gt;Cmd + L&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;选择当前单词&lt;/strong&gt;: &lt;code&gt;Ctrl + D&lt;/code&gt; 或 &lt;code&gt;Cmd + D&lt;/code&gt; (连续按可以选中所有相同的单词)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 class="heading-element" id="markdown-相关快捷键"&gt;&lt;span&gt;Markdown 相关快捷键：&lt;/span&gt;
- &lt;a href="#markdown-%e7%9b%b8%e5%85%b3%e5%bf%ab%e6%8d%b7%e9%94%ae" class="heading-mark"&gt;
+&lt;/h2&gt;&lt;p&gt;主要是获取当前网站文章内容，然后通过Cloudflare Workers调用qwen1.5-14b-chat-awq模型生成摘要，最后将摘要显示在网站中。
+网上找到一个&lt;code&gt;FloatSheep&lt;/code&gt;大佬编写的项目&lt;a href="https://github.com/FloatSheep/Qwen-Post-Summary/" target="_blank" rel="external nofollow noopener noreferrer"&gt;FloatSheep/Qwen-Post-Summary&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;正好可以满足我的需求，于是我就直接使用了。&lt;/p&gt;
+&lt;h2 class="heading-element" id="后端部署"&gt;&lt;span&gt;后端部署&lt;/span&gt;
+ &lt;a href="#%e5%90%8e%e7%ab%af%e9%83%a8%e7%bd%b2" class="heading-mark"&gt;
  &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
  &lt;/a&gt;
-&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;预览 Markdown&lt;/strong&gt;: &lt;code&gt;Ctrl + Shift + V&lt;/code&gt; 或 &lt;code&gt;Cmd + Shift + V&lt;/code&gt; (显示 Markdown 预览)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;分屏显示编辑和预览&lt;/strong&gt;: &lt;code&gt;Ctrl + \&lt;/code&gt; 或 &lt;code&gt;Cmd + \&lt;/code&gt; (分屏编辑，&lt;code&gt;Ctrl + 1&lt;/code&gt; 和 &lt;code&gt;Ctrl + 2&lt;/code&gt; 切换编辑器)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;插入链接&lt;/strong&gt;: &lt;code&gt;Ctrl + K&lt;/code&gt;，然后按 &lt;code&gt;Ctrl + V&lt;/code&gt; 或 &lt;code&gt;Cmd + V&lt;/code&gt; （插入链接）&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;插入图片&lt;/strong&gt;: &lt;code&gt;Ctrl + Shift + P&lt;/code&gt; 或 &lt;code&gt;Cmd + Shift + P&lt;/code&gt; 输入 &amp;ldquo;Insert Image&amp;rdquo;，并选择相应选项&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;粗体&lt;/strong&gt;: &lt;code&gt;Ctrl + B&lt;/code&gt; 或 &lt;code&gt;Cmd + B&lt;/code&gt; (选中并加粗)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;斜体&lt;/strong&gt;: &lt;code&gt;Ctrl + I&lt;/code&gt; 或 &lt;code&gt;Cmd + I&lt;/code&gt; (选中并斜体)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;无序列表&lt;/strong&gt;: &lt;code&gt;Ctrl + Shift + 8&lt;/code&gt; 或 &lt;code&gt;Cmd + Shift + 8&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;有序列表&lt;/strong&gt;: &lt;code&gt;Ctrl + Shift + 7&lt;/code&gt; 或 &lt;code&gt;Cmd + Shift + 7&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;引用块&lt;/strong&gt;: &lt;code&gt;Ctrl + Shift + &amp;gt;&lt;/code&gt; 或 &lt;code&gt;Cmd + Shift + &amp;gt;&lt;/code&gt; (插入引用块)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 class="heading-element" id="查找和导航"&gt;&lt;span&gt;查找和导航：&lt;/span&gt;
- &lt;a href="#%e6%9f%a5%e6%89%be%e5%92%8c%e5%af%bc%e8%88%aa" class="heading-mark"&gt;
+&lt;/h2&gt;&lt;h3 class="heading-element" id="cloudflare-workers部署千问模型"&gt;&lt;span&gt;Cloudflare Workers部署千问模型&lt;/span&gt;
+ &lt;a href="#cloudflare-workers%e9%83%a8%e7%bd%b2%e5%8d%83%e9%97%ae%e6%a8%a1%e5%9e%8b" class="heading-mark"&gt;
  &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
  &lt;/a&gt;
-&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;查找&lt;/strong&gt;: &lt;code&gt;Ctrl + F&lt;/code&gt; 或 &lt;code&gt;Cmd + F&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;替换&lt;/strong&gt;: &lt;code&gt;Ctrl + H&lt;/code&gt; 或 &lt;code&gt;Cmd + H&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;跳转到行号&lt;/strong&gt;: &lt;code&gt;Ctrl + G&lt;/code&gt; 或 &lt;code&gt;Cmd + G&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;打开命令面板&lt;/strong&gt;: &lt;code&gt;Ctrl + Shift + P&lt;/code&gt; 或 &lt;code&gt;Cmd + Shift + P&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;切换文件&lt;/strong&gt;: &lt;code&gt;Ctrl + P&lt;/code&gt; 或 &lt;code&gt;Cmd + P&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 class="heading-element" id="工作区和视图快捷键"&gt;&lt;span&gt;工作区和视图快捷键：&lt;/span&gt;
- &lt;a href="#%e5%b7%a5%e4%bd%9c%e5%8c%ba%e5%92%8c%e8%a7%86%e5%9b%be%e5%bf%ab%e6%8d%b7%e9%94%ae" class="heading-mark"&gt;
+&lt;/h3&gt;&lt;p&gt;在&lt;a href="https://dash.cloudflare.com/" target="_blank" rel="external nofollow noopener noreferrer"&gt;Cloudflare控制台&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;，选择&lt;code&gt;Workers 和Pages&lt;/code&gt;，依次点击&lt;code&gt;创建&lt;/code&gt;、从模板分类&lt;code&gt;AI&lt;/code&gt;、&lt;code&gt;LLM APP&lt;/code&gt;，输入你的项目名称，点击&lt;code&gt;部署&lt;/code&gt;后，复制&lt;a href="https://github.com/FloatSheep/Qwen-Post-Summary/blob/vercel/worker/worker.js" target="_blank" rel="external nofollow noopener noreferrer"&gt;worker.js&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;,粘贴到刚刚创建&lt;code&gt;index。js&lt;/code&gt;中，然后点击&lt;code&gt;部署&lt;/code&gt;。如果&lt;a href="https://qw.geekswg.workers.dev/" target="_blank" rel="external nofollow noopener noreferrer"&gt;预览页面&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;显示出&lt;code&gt;Method Not Allowed&lt;/code&gt;，表示已经部署成功。&lt;/p&gt;
+&lt;p&gt;到此已经已利用Cloudflare Workers部署好了后端，但是这样每次获取AI摘要都需要调用Cloudflare Workers的通义千问 14B 模型，这样会消耗Cloudflare Workers的流量和AI接口次数，而且访问体验不佳，我们可以利用Vercel作为一个中间件，利用KV存储来缓存摘要，这样就可以减少Cloudflare Workers的流量和AI接口次数，而且访问体验也会更好。
+去部署&lt;a href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FFloatSheep%2FQwen-Post-Summary%2Ftree%2Fvercel&amp;amp;env=SUMMARY_API%2CPROXY_ENABLE&amp;amp;envDescription=SUMMARY_API%20%E4%B8%BA%20Cloudflare%20Worker%20%E6%89%80%E7%BB%99%E5%87%BA%E7%9A%84%E5%9F%9F%E5%90%8D%EF%BC%8CPROXY_ENABLE%20%E8%AF%B7%E5%A1%AB%E5%86%99%20false&amp;amp;output-directory=.%2Fdist" target="_blank" rel="external nofollow noopener noreferrer"&gt;Vercel中间服务&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;
+其中&lt;code&gt;SUMMARY_API&lt;/code&gt;为刚刚CloudFlare Workers部署成功地址，&lt;code&gt;PROXY_ENABLE&lt;/code&gt;为是否启用代理，填&lt;code&gt;false&lt;/code&gt;即可。&lt;/p&gt;
+&lt;h3 class="heading-element" id="vercel部署项目配置"&gt;&lt;span&gt;vercel部署项目配置&lt;/span&gt;
+ &lt;a href="#vercel%e9%83%a8%e7%bd%b2%e9%a1%b9%e7%9b%ae%e9%85%8d%e7%bd%ae" class="heading-mark"&gt;
  &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
  &lt;/a&gt;
-&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;打开侧边栏&lt;/strong&gt;: &lt;code&gt;Ctrl + B&lt;/code&gt; 或 &lt;code&gt;Cmd + B&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;切换集成终端&lt;/strong&gt;: &lt;code&gt;Ctrl + `` 或 &lt;/code&gt;Cmd + `` (反引号)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;显示问题面板&lt;/strong&gt;: &lt;code&gt;Ctrl + Shift + M&lt;/code&gt; 或 &lt;code&gt;Cmd + Shift + M&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>飞牛NAS的安装与使用体验</title><link>https://geekswg.js.cool/posts/2024/fnnas/</link><pubDate>Mon, 11 Nov 2024 14:54:12 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2024/fnnas/</guid><category domain="https://geekswg.js.cool/categories/linux/">linux</category><description>&lt;img src="https://geekswg.js.cool/images/posts/featured-image-preview.jpg" alt="featured image" referrerpolicy="no-referrer"&gt;&lt;h2 class="heading-element" id="前言"&gt;&lt;span&gt;前言&lt;/span&gt;
+&lt;/h3&gt;&lt;p&gt;&lt;code&gt;Settings&lt;/code&gt;、&lt;code&gt;Build &amp;amp; Development Settings&lt;/code&gt; 配置如下
+&lt;figure&gt;&lt;a class="lightgallery" target="_blank" href="vercel-settings.webp" title="vercel部署配置" data-thumbnail="vercel-settings.webp" data-sub-html="&lt;h2&gt;vercel部署配置&lt;/h2&gt;&lt;p&gt;vercel部署配置&lt;/p&gt;"&gt;&lt;img loading="lazy" src='vercel-settings.webp' alt="vercel部署配置"&gt;&lt;/a&gt;&lt;figcaption class="image-caption"&gt;vercel部署配置&lt;/figcaption&gt;
+ &lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;||Key | value |
+|| &amp;mdash;&amp;mdash; | &amp;mdash;&amp;mdash;&amp;mdash;&amp;ndash; |
+||Build Command | tsc |
+||Output Directory | ./dist |
+||Install Command | pnpm install |&lt;/p&gt;
+&lt;h3 class="heading-element" id="配置storage"&gt;&lt;span&gt;配置Storage&lt;/span&gt;
+ &lt;a href="#%e9%85%8d%e7%bd%aestorage" class="heading-mark"&gt;
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
+ &lt;/a&gt;
+&lt;/h3&gt;&lt;p&gt;&lt;code&gt;Storage&lt;/code&gt;、&lt;code&gt;Creatre Database&lt;/code&gt;、&lt;code&gt;Upstash&lt;/code&gt;、&lt;code&gt;Upstash KV&lt;/code&gt;、然后一路保存即可。&lt;/p&gt;
+&lt;h3 class="heading-element" id="重新部署vercel项目"&gt;&lt;span&gt;重新部署Vercel项目&lt;/span&gt;
+ &lt;a href="#%e9%87%8d%e6%96%b0%e9%83%a8%e7%bd%b2vercel%e9%a1%b9%e7%9b%ae" class="heading-mark"&gt;
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
+ &lt;/a&gt;
+&lt;/h3&gt;&lt;p&gt;&lt;code&gt;Deployments&lt;/code&gt;、&lt;code&gt;Redeploy&lt;/code&gt;、重新部署项目。&lt;/p&gt;
+&lt;p&gt;后端接口预览地址：&lt;a href="https://qw.geekswg.top/" target="_blank" rel="external nofollow noopener noreferrer"&gt;https://qw.geekswg.top/&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;div class="alert alert-important"&gt;&lt;p class="alert-title"&gt;&lt;svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"&gt;&lt;path d="M0 1.75C0 .784.784.0 1.75.0h12.5C15.216.0 16 .784 16 1.75v9.5A1.75 1.75.0 0114.25 13H8.06l-2.573 2.573A1.458 1.458.0 013 14.543V13H1.75A1.75 1.75.0 010 11.25zm1.75-.25a.25.25.0 00-.25.25v9.5c0 .138.112.25.25.25h2a.75.75.0 01.75.75v2.19l2.72-2.72a.749.749.0 01.53-.22h6.5a.25.25.0 00.25-.25v-9.5a.25.25.0 00-.25-.25zm7 2.25v2.5a.75.75.0 01-1.5.0v-2.5a.75.75.0 011.5.0zM9 9A1 1 0 117 9a1 1 0 012 0z"/&gt;&lt;/svg&gt;重要&lt;/p&gt;&lt;p&gt;由于Vecel自带域名国内无法正常访问，所以需要将自己域名解析到Vecel的域名上，点击Domains添加自定义域名即可。&lt;/p&gt;&lt;/div&gt;&lt;p&gt;接下来就是前端调用后端接口获取摘要了。&lt;/p&gt;
+&lt;h2 class="heading-element" id="前端使用"&gt;&lt;span&gt;前端使用&lt;/span&gt;
+ &lt;a href="#%e5%89%8d%e7%ab%af%e4%bd%bf%e7%94%a8" class="heading-mark"&gt;
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
+ &lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;前端页面使用&lt;a href="http://geekswg.js.cool/js/ai-summary.js" target="_blank" rel="external nofollow noopener noreferrer"&gt;ai-summary.js&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt; 调用后端接口获取摘要，并显示在页面中，理论上可以在任何html页面中应用该代码使用ai摘要功能。
+例代码如下&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;script src=&amp;#34;/js/ai-summary.js&amp;#34; &amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script&amp;gt;
+ //ai摘要接口地址 项目 
+ aiConfig.aiApi = &amp;#34;https://qw.geekswg.top&amp;#34;
+ //需要ai摘要的页面内容的选择器
+ aiConfig.aiSelector = &amp;#39;#content&amp;#39;;
+ //投诉链接
+ aiConfig.reportUrl = &amp;#34;mailto:geekswg@qq.cn?subject=文章摘要投诉&amp;amp;body=投诉网址：=&amp;#34;&amp;#43;location.href;
+ //正则表达式启用ai摘要的路径
+ aiConfig.enableAIPathRegex = /^\/(posts|mydocs)\//; 
+ aiConfig.aiGPTDesc = &amp;#39;我是一个基于通义千问大语言模型（LLM）的AI摘要工具，它可以帮助你快速生成文章摘要，提高阅读体验。&amp;#39;;
+ document.addEventListener(&amp;#34;DOMContentLoaded&amp;#34;, () =&amp;gt; {
+ AISmmary.init(aiConfig);
+ });
+&amp;lt;/script&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;div class="details admonition notice open disabled"&gt;
+ &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-solid fa-pencil-alt" aria-hidden="true"&gt;&lt;/i&gt;说明&lt;/div&gt;
+ &lt;div class="details-content"&gt;
+ &lt;div class="admonition-content"&gt;&lt;p&gt;以上js代码主要来自&lt;code&gt;FloatSheep&lt;/code&gt;的项目&lt;a href="https://github.com/FloatSheep/Qwen-Post-Summary/" target="_blank" rel="external nofollow noopener noreferrer"&gt;FloatSheep/Qwen-Post-Summary&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;,稍作修改调整
+其中 aiConfig.aiSelector 可以在浏览器中按&lt;code&gt;F12&lt;/code&gt;然后&lt;code&gt;Ctrl+Shift+C&lt;/code&gt;，点击你需要生成内容摘要的页面元素，然后&lt;code&gt;复制&lt;/code&gt;-&amp;gt;&lt;code&gt;复制Selector&lt;/code&gt;，例&lt;code&gt;#content&lt;/code&gt;。&lt;/p&gt;&lt;/div&gt;
+ &lt;/div&gt;
+&lt;/div&gt;&lt;h2 class="heading-element" id="预览效果"&gt;&lt;span&gt;预览效果&lt;/span&gt;
+ &lt;a href="#%e9%a2%84%e8%a7%88%e6%95%88%e6%9e%9c" class="heading-mark"&gt;
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
+ &lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;&lt;figure&gt;&lt;a class="lightgallery" target="_blank" href="preview.webp" title="Ai摘要预览" data-thumbnail="preview.webp" data-sub-html="&lt;h2&gt;Ai摘要预览&lt;/h2&gt;&lt;p&gt;Ai摘要预览&lt;/p&gt;"&gt;&lt;img loading="lazy" src='preview.webp' alt="Ai摘要预览"&gt;&lt;/a&gt;&lt;figcaption class="image-caption"&gt;Ai摘要预览&lt;/figcaption&gt;
+ &lt;/figure&gt;&lt;/p&gt;
+&lt;h2 class="heading-element" id="参考文章"&gt;&lt;span&gt;参考文章&lt;/span&gt;
+ &lt;a href="#%e5%8f%82%e8%80%83%e6%96%87%e7%ab%a0" class="heading-mark"&gt;
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
+ &lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;本文参考了以下文章&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://blog.hesiy.cn/posts/qwen-summary/" target="_blank" rel="external nofollow noopener noreferrer"&gt;https://blog.hesiy.cn/posts/qwen-summary/&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://mabbs.github.io/2024/07/03/ai-summary.html" target="_blank" rel="external nofollow noopener noreferrer"&gt;https://mabbs.github.io/2024/07/03/ai-summary.html&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/p&gt;</description></item><item><title>飞牛NAS的安装与使用体验</title><link>https://geekswg.js.cool/posts/2024/fnnas/</link><pubDate>Mon, 11 Nov 2024 14:54:12 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2024/fnnas/</guid><category domain="https://geekswg.js.cool/categories/tutorial/">tutorial</category><description>&lt;img src="https://geekswg.js.cool/images/posts/featured-image-preview.jpg" alt="featured image" referrerpolicy="no-referrer"&gt;&lt;h2 class="heading-element" id="前言"&gt;&lt;span&gt;前言&lt;/span&gt;
  &lt;a href="#%e5%89%8d%e8%a8%80" class="heading-mark"&gt;
  &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
  &lt;/a&gt;
@@ -1324,7 +1350,7 @@ Content for chapter one.&lt;/code&gt;&lt;/pre&gt;&lt;div class="details admoniti
  &lt;a href="#%e6%80%bb%e7%bb%93" class="heading-mark"&gt;
  &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
  &lt;/a&gt;
-&lt;/h2&gt;&lt;p&gt;飞牛NAS作为一款新兴的国产NAS系统，以其免费、易用和高兼容性的特点，为DIY NAS用户提供了一个不错的选择。安装过程简单，界面友好，功能全面，无论是新手还是有一定经验的用户，都能快速上手并享受到NAS带来的便利。虽然在某些高级功能上还有待完善，但官方积极的更新和社区的支持，让人对其未来充满期待。&lt;/p&gt;</description></item><item><title>Hugo添加Pjax功能支持</title><link>https://geekswg.js.cool/posts/2024/hugo-pjax-support/</link><pubDate>Wed, 28 Feb 2024 18:38:31 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2024/hugo-pjax-support/</guid><category domain="https://geekswg.js.cool/categories/code/">code</category><description>&lt;img src="https://geekswg.js.cool/posts/2024/hugo-pjax-support/cover.webp" alt="featured image" referrerpolicy="no-referrer"&gt;&lt;p&gt;&lt;div class="details admonition note open"&gt;
+&lt;/h2&gt;&lt;p&gt;飞牛NAS作为一款新兴的国产NAS系统，以其免费、易用和高兼容性的特点，为DIY NAS用户提供了一个不错的选择。安装过程简单，界面友好，功能全面，无论是新手还是有一定经验的用户，都能快速上手并享受到NAS带来的便利。虽然在某些高级功能上还有待完善，但官方积极的更新和社区的支持，让人对其未来充满期待。&lt;/p&gt;</description></item><item><title>Hugo添加Pjax功能支持</title><link>https://geekswg.js.cool/posts/2024/hugo-pjax-support/</link><pubDate>Wed, 28 Feb 2024 18:38:31 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2024/hugo-pjax-support/</guid><category domain="https://geekswg.js.cool/categories/theme/">theme</category><description>&lt;img src="https://geekswg.js.cool/posts/2024/hugo-pjax-support/cover.webp" alt="featured image" referrerpolicy="no-referrer"&gt;&lt;p&gt;&lt;div class="details admonition note open"&gt;
  &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-solid fa-pencil-alt" aria-hidden="true"&gt;&lt;/i&gt;注意&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;
  &lt;div class="details-content"&gt;
  &lt;div class="admonition-content"&gt;Hugo是一个使用Go语言构建的静态网站生成器，它的速度非常快，并且具有强大的主题支持和灵活的定制选项。通过Hugo，你可以轻松地构建和管理博客网站，并且添加PJAX功能也非常简单。&lt;/div&gt;
@@ -1435,7 +1461,7 @@ function pjax_js_reload(js_url, callback) {
 &lt;/ul&gt;
 &lt;blockquote&gt;
 &lt;p&gt;例如：网站页面贴边的音乐播放器，我在切换页面时，不需要重新加载音乐播放器，只需要重新加载页面中改变的部分即可。&lt;/p&gt;
-&lt;/blockquote&gt;</description></item><item><title>Layui Shortcodes Demo</title><link>https://geekswg.js.cool/posts/2024/layui-shortcodes-demo/</link><pubDate>Wed, 03 Jan 2024 09:35:22 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2024/layui-shortcodes-demo/</guid><category domain="https://geekswg.js.cool/categories/demo/">Demo</category><description>&lt;img src="https://geekswg.js.cool/images/posts/featured-image-preview.jpg" alt="featured image" referrerpolicy="no-referrer"&gt;&lt;div class="details admonition note open"&gt;
+&lt;/blockquote&gt;</description></item><item><title>Layui Shortcodes Demo</title><link>https://geekswg.js.cool/posts/2024/layui-shortcodes-demo/</link><pubDate>Wed, 03 Jan 2024 09:35:22 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2024/layui-shortcodes-demo/</guid><category domain="https://geekswg.js.cool/categories/theme/">theme</category><description>&lt;img src="https://geekswg.js.cool/images/posts/featured-image-preview.jpg" alt="featured image" referrerpolicy="no-referrer"&gt;&lt;div class="details admonition note open"&gt;
  &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-solid fa-pencil-alt" aria-hidden="true"&gt;&lt;/i&gt;注意&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;
  &lt;div class="details-content"&gt;
  &lt;div class="admonition-content"&gt;这是介绍一个依赖layui的shortcodes示例，的实现和使用方法&lt;/div&gt;
