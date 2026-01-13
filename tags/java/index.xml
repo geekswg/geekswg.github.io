@@ -1,4 +1,125 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Java - 标签 | 毕少侠</title><link>https://geekswg.js.cool/tags/java/</link><description>博客：探索、发现、分享 By geekswg-[毕少侠]</description><generator>Hugo 0.154.5 &amp; FixIt v0.4.0</generator><language>zh-CN</language><managingEditor>geekswg@qq.com (geekswg)</managingEditor><webMaster>geekswg@qq.com (geekswg)</webMaster><copyright>geekswg &amp; 毕少侠</copyright><lastBuildDate>Tue, 13 Jan 2026 12:31:22 +0000</lastBuildDate><atom:link href="https://geekswg.js.cool/tags/java/index.xml" rel="self" type="application/rss+xml"/><item><title>Idea JAVA开发工具快速上手-常用快捷键汇总</title><link>https://geekswg.js.cool/posts/2020/idea-java%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B-%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE%E6%B1%87%E6%80%BB/</link><pubDate>Sun, 21 Jun 2020 15:48:00 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2020/idea-java%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B-%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE%E6%B1%87%E6%80%BB/</guid><category domain="https://geekswg.js.cool/categories/cnblog/">cnblog</category><description>&lt;h1&gt;前言：&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Java - 标签 | 毕少侠</title><link>https://geekswg.js.cool/tags/java/</link><description>博客：探索、发现、分享 By geekswg-[毕少侠]</description><generator>Hugo 0.154.5 &amp; FixIt v0.4.0</generator><language>zh-CN</language><managingEditor>geekswg@qq.com (geekswg)</managingEditor><webMaster>geekswg@qq.com (geekswg)</webMaster><copyright>geekswg &amp; 毕少侠</copyright><lastBuildDate>Tue, 13 Jan 2026 15:17:06 +0000</lastBuildDate><atom:link href="https://geekswg.js.cool/tags/java/index.xml" rel="self" type="application/rss+xml"/><item><title>spring通过bean名称,方法名,反射调用服务</title><link>https://geekswg.js.cool/posts/2021/spring%E9%80%9A%E8%BF%87bean%E5%90%8D%E7%A7%B0%E6%96%B9%E6%B3%95%E5%90%8D%E5%8F%8D%E5%B0%84%E8%B0%83%E7%94%A8%E6%9C%8D%E5%8A%A1/</link><pubDate>Sun, 12 Sep 2021 07:46:00 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2021/spring%E9%80%9A%E8%BF%87bean%E5%90%8D%E7%A7%B0%E6%96%B9%E6%B3%95%E5%90%8D%E5%8F%8D%E5%B0%84%E8%B0%83%E7%94%A8%E6%9C%8D%E5%8A%A1/</guid><category domain="https://geekswg.js.cool/categories/cnblog/">cnblog</category><description>&lt;blockquote&gt;
+&lt;p&gt;示例代码&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code&gt;import org.springframework.beans.BeansException;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.ApplicationContextAware;
+import org.springframework.util.ReflectionUtils;
+
+import java.lang.reflect.Method;
+
+public class SpringReflectUtils implements ApplicationContextAware {
+ /**
+ * Spring容器 spring应用上下文对象
+ */
+ private static ApplicationContext applicationContext;
+
+ @Override
+ public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
+ SpringReflectUtils.applicationContext = applicationContext;
+ }
+
+ /**
+ * 对象名称获取spring bean对象
+ * @param name
+ * @return
+ * @throws BeansException
+ */
+ public static Object getBean(String name) throws BeansException {
+ return applicationContext.getBean(name);
+ }
+
+ /**
+ * 根据 服务名称 ，方法名 反射调用 spring bean 中的 方法
+ * @param serviceName 服务名
+ * @param methodName 方法名
+ * @param params 参数
+ * @return
+ * @throws Exception
+ */
+ public static Object springInvokeMethod(String serviceName, String methodName, Object[] params) throws Exception {
+ Object service = getBean(serviceName);
+ Class&amp;lt;? extends Object&amp;gt;[] paramClass = null;
+ if (params != null) {
+ int paramsLength = params.length;
+ paramClass = new Class[paramsLength];
+ for (int i = 0; i &amp;lt; paramsLength; i&amp;#43;&amp;#43;) {
+ paramClass[i] = params[i].getClass();
+ }
+ }
+ // 找到方法
+ Method method = ReflectionUtils.findMethod(service.getClass(), methodName, paramClass);
+ // 执行方法
+ return ReflectionUtils.invokeMethod(method, service, params);
+ }
+}&lt;/code&gt;&lt;/pre&gt;</description></item><item><title>xStream实现XML字符串与对象直接的转换</title><link>https://geekswg.js.cool/posts/2020/xstream%E5%AE%9E%E7%8E%B0xml%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%8E%E5%AF%B9%E8%B1%A1%E7%9B%B4%E6%8E%A5%E7%9A%84%E8%BD%AC%E6%8D%A2/</link><pubDate>Sat, 01 Aug 2020 11:09:00 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2020/xstream%E5%AE%9E%E7%8E%B0xml%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%8E%E5%AF%B9%E8%B1%A1%E7%9B%B4%E6%8E%A5%E7%9A%84%E8%BD%AC%E6%8D%A2/</guid><category domain="https://geekswg.js.cool/categories/cnblog/">cnblog</category><description>&lt;div class="cnblogs_code"&gt;
+&lt;pre&gt;&lt;span style="color: #008000;"&gt;/**&lt;/span&gt;&lt;span style="color: #008000;"&gt;
+ * TODO 使用xStream 实现xml字符和对象之间的转换
+ * &amp;lt;p&amp;gt;
+ * &amp;lt;!-- &lt;/span&gt;&lt;span style="color: #008000; text-decoration: underline;"&gt;https://mvnrepository.com/artifact/com.thoughtworks.xstream/xstream&lt;/span&gt;&lt;span style="color: #008000;"&gt; --&amp;gt;
+ * &amp;lt;!-- xml字符串，对象之间互转 --&amp;gt;
+ * &amp;lt;dependency&amp;gt;
+ * &amp;lt;groupId&amp;gt;com.thoughtworks.xstream&amp;lt;/groupId&amp;gt;
+ * &amp;lt;artifactId&amp;gt;xstream&amp;lt;/artifactId&amp;gt;
+ * &amp;lt;version&amp;gt;${xstream.version}&amp;lt;/version&amp;gt;
+ * &amp;lt;/dependency&amp;gt;
+ *
+ * &lt;/span&gt;&lt;span style="color: #808080;"&gt;@author&lt;/span&gt;&lt;span style="color: #008000;"&gt;: geekswg@qq.com
+ * &lt;/span&gt;&lt;span style="color: #808080;"&gt;@since&lt;/span&gt;&lt;span style="color: #008000;"&gt;: 2020/8/1 10:31
+ &lt;/span&gt;&lt;span style="color: #008000;"&gt;*/&lt;/span&gt;
+&lt;span style="color: #0000ff;"&gt;public&lt;/span&gt; &lt;span style="color: #0000ff;"&gt;class&lt;/span&gt;&lt;span style="color: #000000;"&gt; XmlUtils {
+&lt;pre&gt;&lt;code&gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff;&amp;quot;&amp;gt;private&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff;&amp;quot;&amp;gt;static&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff;&amp;quot;&amp;gt;final&amp;lt;/span&amp;gt; XStream xStreamHelper = &amp;lt;span style=&amp;quot;color: #0000ff;&amp;quot;&amp;gt;new&amp;lt;/span&amp;gt; XStream(&amp;lt;span style=&amp;quot;color: #0000ff;&amp;quot;&amp;gt;new&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #000000;&amp;quot;&amp;gt; StaxDriver());
+&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #008000;&amp;quot;&amp;gt;//&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #008000;&amp;quot;&amp;gt; 初始化配置&amp;lt;/span&amp;gt;
+&amp;lt;span style=&amp;quot;color: #0000ff;&amp;quot;&amp;gt;static&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #000000;&amp;quot;&amp;gt; {
+ XStream.setupDefaultSecurity(xStreamHelper);
+ xStreamHelper.allowTypesByWildcard(&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff;&amp;quot;&amp;gt;new&amp;lt;/span&amp;gt; String[]{&amp;quot;org.demo.springcloud.**&amp;quot;&amp;lt;span style=&amp;quot;color: #000000;&amp;quot;&amp;gt;});
+ xStreamHelper.ignoreUnknownElements();&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #008000;&amp;quot;&amp;gt;//&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #008000;&amp;quot;&amp;gt;忽略未知节点&amp;lt;/span&amp;gt;
+ xStreamHelper.autodetectAnnotations(&amp;lt;span style=&amp;quot;color: #0000ff;&amp;quot;&amp;gt;true&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #000000;&amp;quot;&amp;gt;);
+}
+
+&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff;&amp;quot;&amp;gt;public&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff;&amp;quot;&amp;gt;static&amp;lt;/span&amp;gt; &amp;amp;lt;T&amp;amp;gt; T xmlToBean(String xmlStr, Class&amp;amp;lt;?&amp;amp;gt;&amp;lt;span style=&amp;quot;color: #000000;&amp;quot;&amp;gt; clazz) {
+ xStreamHelper.ignoreUnknownElements();&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #008000;&amp;quot;&amp;gt;//&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #008000;&amp;quot;&amp;gt;忽略未知节点&amp;lt;/span&amp;gt;
+ xStreamHelper.autodetectAnnotations(&amp;lt;span style=&amp;quot;color: #0000ff;&amp;quot;&amp;gt;true&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #000000;&amp;quot;&amp;gt;);
+ xStreamHelper.processAnnotations(clazz);
+ &amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff;&amp;quot;&amp;gt;return&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #000000;&amp;quot;&amp;gt; (T) xStreamHelper.fromXML(xmlStr);
+}
+
+&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff;&amp;quot;&amp;gt;public&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff;&amp;quot;&amp;gt;static&amp;lt;/span&amp;gt; &amp;amp;lt;T&amp;amp;gt; T xmlToBean(File xmlFile, Class&amp;amp;lt;?&amp;amp;gt;&amp;lt;span style=&amp;quot;color: #000000;&amp;quot;&amp;gt; clazz) {
+ xStreamHelper.processAnnotations(clazz);
+ &amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff;&amp;quot;&amp;gt;return&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #000000;&amp;quot;&amp;gt; (T) xStreamHelper.fromXML(xmlFile);
+}
+
+&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff;&amp;quot;&amp;gt;public&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff;&amp;quot;&amp;gt;static&amp;lt;/span&amp;gt; &amp;amp;lt;T&amp;amp;gt;&amp;lt;span style=&amp;quot;color: #000000;&amp;quot;&amp;gt; String beanToXmlStr(T t) {
+ &amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff;&amp;quot;&amp;gt;return&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #000000;&amp;quot;&amp;gt; xStreamHelper.toXML(t);
+}
+
+&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff;&amp;quot;&amp;gt;public&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff;&amp;quot;&amp;gt;static&amp;lt;/span&amp;gt; &amp;amp;lt;T&amp;amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff;&amp;quot;&amp;gt;boolean&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #000000;&amp;quot;&amp;gt; beanToXml(T t, String filePath){
+ &amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff;&amp;quot;&amp;gt;boolean&amp;lt;/span&amp;gt; flag = &amp;lt;span style=&amp;quot;color: #0000ff;&amp;quot;&amp;gt;true&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #000000;&amp;quot;&amp;gt;;
+ &amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff;&amp;quot;&amp;gt;try&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #000000;&amp;quot;&amp;gt; {
+ FileWriter fileWriter &amp;lt;/span&amp;gt;= &amp;lt;span style=&amp;quot;color: #0000ff;&amp;quot;&amp;gt;new&amp;lt;/span&amp;gt; FileWriter(&amp;lt;span style=&amp;quot;color: #0000ff;&amp;quot;&amp;gt;new&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #000000;&amp;quot;&amp;gt; File(filePath));
+ fileWriter.write(xStreamHelper.toXML(t));
+ fileWriter.flush();
+ fileWriter.close();
+ } &amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff;&amp;quot;&amp;gt;catch&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #000000;&amp;quot;&amp;gt; (IOException e) {
+ flag &amp;lt;/span&amp;gt;= &amp;lt;span style=&amp;quot;color: #0000ff;&amp;quot;&amp;gt;false&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #000000;&amp;quot;&amp;gt;;
+ e.printStackTrace();
+ }&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff;&amp;quot;&amp;gt;finally&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #000000;&amp;quot;&amp;gt; {
+ &amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff;&amp;quot;&amp;gt;return&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #000000;&amp;quot;&amp;gt; flag;
+ }
+}
+
+&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff;&amp;quot;&amp;gt;public&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff;&amp;quot;&amp;gt;static&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;quot;color: #0000ff;&amp;quot;&amp;gt;void&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #000000;&amp;quot;&amp;gt; main(String[] args) {
+ BsBankInfo bsBankInfo &amp;lt;/span&amp;gt;= &amp;lt;span style=&amp;quot;color: #0000ff;&amp;quot;&amp;gt;new&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #000000;&amp;quot;&amp;gt; BsBankInfo();
+ bsBankInfo.setBankName(&amp;lt;/span&amp;gt;&amp;quot;中国建设银行&amp;quot;&amp;lt;span style=&amp;quot;color: #000000;&amp;quot;&amp;gt;);
+ bsBankInfo.setBankNo(&amp;lt;/span&amp;gt;&amp;quot;b10001&amp;quot;&amp;lt;span style=&amp;quot;color: #000000;&amp;quot;&amp;gt;);
+
+ String xmlStr &amp;lt;/span&amp;gt;=&amp;lt;span style=&amp;quot;color: #000000;&amp;quot;&amp;gt; beanToXmlStr(bsBankInfo);
+ System.out.println(&amp;lt;/span&amp;gt;&amp;quot;===&amp;amp;gt;&amp;quot; +&amp;lt;span style=&amp;quot;color: #000000;&amp;quot;&amp;gt; xmlStr);
+ System.out.println(xmlToBean(xmlStr, BsBankInfo.&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #0000ff;&amp;quot;&amp;gt;class&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #000000;&amp;quot;&amp;gt;).toString());
+ System.out.println(beanToXml(bsBankInfo, &amp;lt;/span&amp;gt;&amp;quot;d:/t.xml&amp;quot;&amp;lt;span style=&amp;quot;color: #000000;&amp;quot;&amp;gt;));
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;}&lt;/span&gt;&lt;/pre&gt;&lt;/p&gt;</description></item><item><title>Idea JAVA开发工具快速上手-常用快捷键汇总</title><link>https://geekswg.js.cool/posts/2020/idea-java%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B-%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE%E6%B1%87%E6%80%BB/</link><pubDate>Sun, 21 Jun 2020 15:48:00 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2020/idea-java%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B-%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE%E6%B1%87%E6%80%BB/</guid><category domain="https://geekswg.js.cool/categories/cnblog/">cnblog</category><description>&lt;h1&gt;前言：&lt;/h1&gt;
 &lt;p&gt;之前一直使用Eclipse 系列开发IDE工具，由于eclipse是开源的所以，一般情况，eclipse基本上每一个java入门者的首选开发工具，其次 Myeclipse。不过现在越来越多的人使用了 Idea&amp;nbsp;&lt;a href="http://www.baidu.com/link?url=ZzIbccyrnyov-S3NYm5PTnke8Xxa45NQ8EtvLT-Ahe86EaGHhnAZOErXA2ZWXf_p" target="_blank" data-click="{
 			'F':'778317EA',
 			'F1':'9D73F1E4',

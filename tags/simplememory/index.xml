@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>SimpleMemory - 标签 | 毕少侠</title><link>https://geekswg.js.cool/tags/simplememory/</link><description>博客：探索、发现、分享 By geekswg-[毕少侠]</description><generator>Hugo 0.154.5 &amp; FixIt v0.4.0</generator><language>zh-CN</language><managingEditor>geekswg@qq.com (geekswg)</managingEditor><webMaster>geekswg@qq.com (geekswg)</webMaster><copyright>geekswg &amp; 毕少侠</copyright><lastBuildDate>Tue, 13 Jan 2026 15:17:06 +0000</lastBuildDate><atom:link href="https://geekswg.js.cool/tags/simplememory/index.xml" rel="self" type="application/rss+xml"/><item><title>Cnblogs-Theme-SimpleMemory 主题配置</title><link>https://geekswg.js.cool/posts/2023/%E4%B8%BB%E9%A2%98cnblogs-theme-simplememory-2023-04-30/</link><pubDate>Sun, 30 Apr 2023 10:17:00 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2023/%E4%B8%BB%E9%A2%98cnblogs-theme-simplememory-2023-04-30/</guid><category domain="https://geekswg.js.cool/categories/cnblog/">cnblog</category><description>&lt;h2 class="heading-element" id="前言"&gt;&lt;span&gt;前言&lt;/span&gt;
+ &lt;a href="#%e5%89%8d%e8%a8%80" class="heading-mark"&gt;
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
+ &lt;/a&gt;
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;好久没来看CnBlog,准备更换一下主题，就记录下原主题，并感谢作者提供的这么好看的主题。
+主题文档地址：&lt;a href="https://bndong.github.io/Cnblogs-Theme-SimpleMemory/v2/" target="_blank" rel="external nofollow noopener noreferrer"&gt;Cnblogs-Theme-SimpleMemory&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/p&gt;</description></item><item><title>CNBLog主题配置</title><link>https://geekswg.js.cool/posts/2021/%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/</link><pubDate>Wed, 25 Aug 2021 22:30:00 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2021/%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/</guid><category domain="https://geekswg.js.cool/categories/cnblog/">cnblog</category><description>&lt;h1&gt;主题信息&lt;/h1&gt;
+&lt;p&gt;主题作者：&lt;a href="https://www.cnblogs.com/bndong" target="_blank"&gt;https://www.cnblogs.com/bndong&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;主题文档：&lt;a href="https://bndong.github.io/Cnblogs-Theme-SimpleMemory/v2/#/"&gt;简介 - Document (bndong.github.io)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;主题源码：&lt;a href="https://gitee.com/dbnuo/Cnblogs-Theme-SimpleMemory"&gt;Cnblogs-Theme-SimpleMemory: Cnblogs theme / Basic theme : SimpleMemory (gitee.com)&lt;/a&gt;&lt;/p&gt;
+&lt;h1&gt;博客侧边栏公告&amp;nbsp;&lt;/h1&gt;
+&lt;div class="cnblogs_code"&gt;
+&lt;pre&gt;&amp;lt;script type="text/javascript"&amp;gt;&lt;span style="color: #000000;"&gt;
+ window.cnblogsConfig &lt;/span&gt;=&lt;span style="color: #000000;"&gt; {
+ cnzz: &lt;/span&gt;"1280245132", &lt;span style="color: #008000;"&gt;//&lt;/span&gt;&lt;span style="color: #008000;"&gt;网站统计&lt;/span&gt;
+&lt;span style="color: #000000;"&gt; info: {
+ name: &lt;/span&gt;'独行侠', &lt;span style="color: #008000;"&gt;//&lt;/span&gt;&lt;span style="color: #008000;"&gt; 用户名&lt;/span&gt;
+ startDate: '2010-01-01', &lt;span style="color: #008000;"&gt;//&lt;/span&gt;&lt;span style="color: #008000;"&gt; 入园时间，年-月-日。入园时间查看方法：鼠标停留园龄时间上，会显示入园时间&lt;/span&gt;
+ avatar: 'https://geekswg.gitee.io/static/img/mine.jpg', &lt;span style="color: #008000;"&gt;//&lt;/span&gt;&lt;span style="color: #008000;"&gt; 用户头像&lt;/span&gt;
+ blogIcon: 'https://geekswg.gitee.io/static/img/favicon.ico'&lt;span style="color: #000000;"&gt;,
+ },
+ sidebar: { &lt;/span&gt;&lt;span style="color: #008000;"&gt;//&lt;/span&gt;&lt;span style="color: #008000;"&gt; 列表数据 ['导航名称', '链接', 'icon']&lt;/span&gt;
+&lt;span style="color: #000000;"&gt; navList: [
+ [&lt;/span&gt;'我的博客', 'https://geekswg.gitee.io/music', 'icon-github'&lt;span style="color: #000000;"&gt;],
+ [&lt;/span&gt;'我的码云', 'https://gitee.com/geekswg', 'icon-gitee'&lt;span style="color: #000000;"&gt;],
+ [&lt;/span&gt;'给我写信', 'https://gitee.com/geekswg', 'icon-logo_QQ'&lt;span style="color: #000000;"&gt;],
+ [&lt;/span&gt;'音乐后台', 'https://player.ilt.me/admin/user/login', 'icon-logo_ie'&lt;span style="color: #000000;"&gt;],
+ ],
+ customList: {
+ &lt;/span&gt;"标题一": { &lt;span style="color: #008000;"&gt;//&lt;/span&gt;&lt;span style="color: #008000;"&gt; 标题&lt;/span&gt;
+ "data": [ &lt;span style="color: #008000;"&gt;//&lt;/span&gt;&lt;span style="color: #008000;"&gt; 列表数据 ['列表', '链接']&lt;/span&gt;
+ ['我的博客1', 'https://www.cnblogs.com/geekswg/'&lt;span style="color: #000000;"&gt;],
+ [&lt;/span&gt;'我的博客2', 'https://www.cnblogs.com/geekswg/'&lt;span style="color: #000000;"&gt;],
+ [&lt;/span&gt;'我的博客3', 'https://www.cnblogs.com/geekswg/'&lt;span style="color: #000000;"&gt;],
+ ],
+ &lt;/span&gt;"icon": "icon-brush_fill" &lt;span style="color: #008000;"&gt;//&lt;/span&gt;&lt;span style="color: #008000;"&gt; 配置图标，参考文档：定制化/字体图标库&lt;/span&gt;
+&lt;span style="color: #000000;"&gt; },
+ &lt;/span&gt;"标题二": { &lt;span style="color: #008000;"&gt;//&lt;/span&gt;&lt;span style="color: #008000;"&gt; 标题&lt;/span&gt;
+ "data": [ &lt;span style="color: #008000;"&gt;//&lt;/span&gt;&lt;span style="color: #008000;"&gt; 列表数据 ['列表', '链接']&lt;/span&gt;
+ ['我的博客6', 'https://www.cnblogs.com/geekswg/'&lt;span style="color: #000000;"&gt;],
+ [&lt;/span&gt;'我的博客7', 'https://www.cnblogs.com/geekswg/'&lt;span style="color: #000000;"&gt;],
+ [&lt;/span&gt;'我的博客8', 'https://www.cnblogs.com/geekswg/'&lt;span style="color: #000000;"&gt;],
+ ],
+ &lt;/span&gt;"icon": "icon-brush_fill" &lt;span style="color: #008000;"&gt;//&lt;/span&gt;&lt;span style="color: #008000;"&gt; 配置图标，参考文档：定制化/字体图标库&lt;/span&gt;
+&lt;span style="color: #000000;"&gt; },
+ },
+ },
+ footer: {&lt;/span&gt;&lt;span style="color: #008000;"&gt;//&lt;/span&gt;&lt;span style="color: #008000;"&gt;页脚&lt;/span&gt;
+&lt;span style="color: #000000;"&gt; text: {
+ left: &lt;/span&gt;'但行好事'&lt;span style="color: #000000;"&gt;,
+ right: &lt;/span&gt;'莫问前程'&lt;span style="color: #000000;"&gt;,
+ iconFont: {
+ icon: &lt;/span&gt;"icon-xl"&lt;span style="color: #000000;"&gt;,
+ color: &lt;/span&gt;"red"&lt;span style="color: #000000;"&gt;,
+ fontSize: &lt;/span&gt;"18px"&lt;span style="color: #000000;"&gt;
+ }
+ },
+ style: &lt;/span&gt;3&lt;span style="color: #000000;"&gt;,
+ },
+ links: {&lt;/span&gt;&lt;span style="color: #008000;"&gt;//&lt;/span&gt;&lt;span style="color: #008000;"&gt;友链&lt;/span&gt;
+&lt;span style="color: #000000;"&gt; footer: [
+ [&lt;/span&gt;"BNDong", 'https://www.cnblogs.com/bndong'&lt;span style="color: #000000;"&gt;],
+ [&lt;/span&gt;"申请坑位", 'https://msg.cnblogs.com/send/geekswg'&lt;span style="color: #000000;"&gt;],
+ [&lt;/span&gt;"申请坑位", 'https://msg.cnblogs.com/send/geekswg'&lt;span style="color: #000000;"&gt;],
+ ],
+ },
+ rtMenu: {&lt;/span&gt;&lt;span style="color: #008000;"&gt;//&lt;/span&gt;&lt;span style="color: #008000;"&gt;二维码&lt;/span&gt;
+ qrCode: 'https://geekswg.gitee.io/SimpleMemory/imgs/myQRcode.png'&lt;span style="color: #000000;"&gt;,
+ reward: {
+ alipay: &lt;/span&gt;'https://geekswg.gitee.io/SimpleMemory/imgs/QRcode-alipay.png'&lt;span style="color: #000000;"&gt;,
+ wechatpay: &lt;/span&gt;'https://geekswg.gitee.io/SimpleMemory/imgs/QRCode-wechat.jpg'&lt;span style="color: #000000;"&gt;
+ },
+ downScrollDom: &lt;/span&gt;'#blog_post_info_block'&lt;span style="color: #000000;"&gt;,
+ },
+ switchDayNight: { &lt;/span&gt;&lt;span style="color: #008000;"&gt;//&lt;/span&gt;&lt;span style="color: #008000;"&gt;夜间模式切换&lt;/span&gt;
+ enable: &lt;span style="color: #0000ff;"&gt;true&lt;/span&gt;, &lt;span style="color: #008000;"&gt;//&lt;/span&gt;&lt;span style="color: #008000;"&gt; 是否开启日/夜间模式切换按钮&lt;/span&gt;
+ nightMode: &lt;span style="color: #0000ff;"&gt;false&lt;/span&gt;, &lt;span style="color: #008000;"&gt;//&lt;/span&gt;&lt;span style="color: #008000;"&gt; 强制夜间模式 （版本 &amp;gt;= v2.0.6）&lt;/span&gt;
+ auto: { &lt;span style="color: #008000;"&gt;//&lt;/span&gt;&lt;span style="color: #008000;"&gt; 自动切换相关配置&lt;/span&gt;
+ enable: &lt;span style="color: #0000ff;"&gt;false&lt;/span&gt;, &lt;span style="color: #008000;"&gt;//&lt;/span&gt;&lt;span style="color: #008000;"&gt; 开启自动切换&lt;/span&gt;
+ dayHour: 5, &lt;span style="color: #008000;"&gt;//&lt;/span&gt;&lt;span style="color: #008000;"&gt; 日间模式开始时间，整数型，24小时制&lt;/span&gt;
+ nightHour: 20 &lt;span style="color: #008000;"&gt;//&lt;/span&gt;&lt;span style="color: #008000;"&gt; 夜间模式开始时间，整数型，24小时制&lt;/span&gt;
+&lt;span style="color: #000000;"&gt; }
+ },
+ animate: {&lt;/span&gt;&lt;span style="color: #008000;"&gt;//&lt;/span&gt;&lt;span style="color: #008000;"&gt;动画&lt;/span&gt;
+&lt;span style="color: #000000;"&gt; homeBanner: {
+ enable: &lt;/span&gt;&lt;span style="color: #0000ff;"&gt;true&lt;/span&gt;, &lt;span style="color: #008000;"&gt;//&lt;/span&gt;&lt;span style="color: #008000;"&gt; 是否开启动效&lt;/span&gt;
+&lt;span style="color: #000000;"&gt; options: {
+ radius: &lt;/span&gt;50&lt;span style="color: #000000;"&gt;,
+ density: &lt;/span&gt;0.2&lt;span style="color: #000000;"&gt;,
+ color: &lt;/span&gt;'random', &lt;span style="color: #008000;"&gt;//&lt;/span&gt;&lt;span style="color: #008000;"&gt; 颜色设置，&amp;ldquo;random&amp;rdquo; 为随机颜色&lt;/span&gt;
+ clearOffset: 0.3&lt;span style="color: #000000;"&gt;
+ }
+ },
+ articleBanner: {
+ enable: &lt;/span&gt;&lt;span style="color: #0000ff;"&gt;true&lt;/span&gt;&lt;span style="color: #000000;"&gt;,
+ },
+ background: {
+ enable: &lt;/span&gt;&lt;span style="color: #0000ff;"&gt;true&lt;/span&gt;&lt;span style="color: #000000;"&gt;,
+ options: {
+ colorSaturation: &lt;/span&gt;"60%"&lt;span style="color: #000000;"&gt;,
+ colorBrightness: &lt;/span&gt;"50%"&lt;span style="color: #000000;"&gt;,
+ colorAlpha: &lt;/span&gt;0.5&lt;span style="color: #000000;"&gt;,
+ colorCycleSpeed: &lt;/span&gt;5&lt;span style="color: #000000;"&gt;,
+ verticalPosition: &lt;/span&gt;"random"&lt;span style="color: #000000;"&gt;,
+ horizontalSpeed: &lt;/span&gt;200&lt;span style="color: #000000;"&gt;,
+ ribbonCount: &lt;/span&gt;3&lt;span style="color: #000000;"&gt;,
+ strokeSize: &lt;/span&gt;0&lt;span style="color: #000000;"&gt;,
+ parallaxAmount: &lt;/span&gt;-0.2&lt;span style="color: #000000;"&gt;,
+ animateSections: &lt;/span&gt;&lt;span style="color: #0000ff;"&gt;true&lt;/span&gt;&lt;span style="color: #000000;"&gt;
+ }
+ },
+ },
+ articleSuffix: {
+ copyrightHtml: &lt;/span&gt;"版权..."&lt;span style="color: #000000;"&gt;,
+ aboutHtml: &lt;/span&gt;"I am a good person"&lt;span style="color: #000000;"&gt;,
+ },
+ loading:{&lt;/span&gt;&lt;span style="color: #008000;"&gt;//&lt;/span&gt;&lt;span style="color: #008000;"&gt;载入页&lt;/span&gt;
+&lt;span style="color: #000000;"&gt; rebound: {
+ tension: &lt;/span&gt;14&lt;span style="color: #000000;"&gt;,
+ friction: &lt;/span&gt;10&lt;span style="color: #000000;"&gt;
+ },
+ spinner: {
+ id: &lt;/span&gt;'spinner'&lt;span style="color: #000000;"&gt;,
+ radius: &lt;/span&gt;90&lt;span style="color: #000000;"&gt;,
+ sides: &lt;/span&gt;5&lt;span style="color: #000000;"&gt;,
+ depth: &lt;/span&gt;8&lt;span style="color: #000000;"&gt;,
+ colors: {
+ background: &lt;/span&gt;'#00272C'&lt;span style="color: #000000;"&gt;,
+ stroke: &lt;/span&gt;&lt;span style="color: #0000ff;"&gt;null&lt;/span&gt;&lt;span style="color: #000000;"&gt;,
+ base: &lt;/span&gt;&lt;span style="color: #0000ff;"&gt;null&lt;/span&gt;&lt;span style="color: #000000;"&gt;,
+ child: &lt;/span&gt;'#02C39A'&lt;span style="color: #000000;"&gt;
+ },
+ alwaysForward: &lt;/span&gt;&lt;span style="color: #0000ff;"&gt;true&lt;/span&gt;, &lt;span style="color: #008000;"&gt;//&lt;/span&gt;&lt;span style="color: #008000;"&gt; When false the spring will reverse normally.&lt;/span&gt;
+ restAt: &lt;span style="color: #0000ff;"&gt;null&lt;/span&gt;, &lt;span style="color: #008000;"&gt;//&lt;/span&gt;&lt;span style="color: #008000;"&gt; A number from 0.1 to 0.9 || null for full rotation&lt;/span&gt;
+ renderBase: &lt;span style="color: #0000ff;"&gt;false&lt;/span&gt;&lt;span style="color: #000000;"&gt;
+ },
+ },
+ progressBar: { &lt;/span&gt;&lt;span style="color: #008000;"&gt;//&lt;/span&gt;&lt;span style="color: #008000;"&gt;顶部进度条样式&lt;/span&gt;
+ color : '#77b6ff'&lt;span style="color: #000000;"&gt;,
+ height : &lt;/span&gt;'5px'&lt;span style="color: #000000;"&gt;,
+ duration: &lt;/span&gt;0.5&lt;span style="color: #000000;"&gt;,
+ },
+ code: {
+ type: &lt;/span&gt;'hljs'&lt;span style="color: #000000;"&gt;,
+ options: {
+ line: &lt;/span&gt;&lt;span style="color: #0000ff;"&gt;true&lt;/span&gt;&lt;span style="color: #000000;"&gt;,
+ macStyle: &lt;/span&gt;&lt;span style="color: #0000ff;"&gt;true&lt;/span&gt;&lt;span style="color: #000000;"&gt;,
+ maxHeight: &lt;/span&gt;'70vh'&lt;span style="color: #000000;"&gt;,
+ hljs: {
+ theme: &lt;/span&gt;'atom-one-dark-reasonable'&lt;span style="color: #000000;"&gt;,
+ languages: [],
+&lt;pre&gt;&lt;code&gt; },
+ },
+ },
+}
+
+&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #008000;&amp;quot;&amp;gt;//&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;quot;color: #008000;&amp;quot;&amp;gt; 友链配置&amp;lt;/span&amp;gt;
+window.cnblogsConfig.links.page =&amp;lt;span style=&amp;quot;color: #000000;&amp;quot;&amp;gt; [{
+ name: &amp;lt;/span&amp;gt;'我的博客'&amp;lt;span style=&amp;quot;color: #000000;&amp;quot;&amp;gt;,
+ introduction: &amp;lt;/span&amp;gt;'IT技术类博客'&amp;lt;span style=&amp;quot;color: #000000;&amp;quot;&amp;gt;,
+ avatar: &amp;lt;/span&amp;gt;'https://blog.dbnuo.com/images/avatar.gif'&amp;lt;span style=&amp;quot;color: #000000;&amp;quot;&amp;gt;,
+ url: &amp;lt;/span&amp;gt;'https://geekswg.gitee.io/music'&amp;lt;span style=&amp;quot;color: #000000;&amp;quot;&amp;gt;
+ },
+ {
+ name: &amp;lt;/span&amp;gt;'BNDong'&amp;lt;span style=&amp;quot;color: #000000;&amp;quot;&amp;gt;,
+ introduction: &amp;lt;/span&amp;gt;'IT技术类博客'&amp;lt;span style=&amp;quot;color: #000000;&amp;quot;&amp;gt;,
+ avatar: &amp;lt;/span&amp;gt;'https://blog.dbnuo.com/images/avatar.gif'&amp;lt;span style=&amp;quot;color: #000000;&amp;quot;&amp;gt;,
+ url: &amp;lt;/span&amp;gt;'https://geekswg.gitee.io/music'&amp;lt;span style=&amp;quot;color: #000000;&amp;quot;&amp;gt;
+ },
+];
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;/span&gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&amp;ldquo;&lt;a href="https://cdn.jsdelivr.net/gh/BNDong/Cnblogs-Theme-SimpleMemory@v2.0.7/dist/simpleMemory.js%22" target="_blank" rel="external nofollow noopener noreferrer"&gt;https://cdn.jsdelivr.net/gh/BNDong/Cnblogs-Theme-SimpleMemory@v2.0.7/dist/simpleMemory.js"&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt; defer&amp;gt;&amp;lt;/script&amp;gt;&lt;/pre&gt;&lt;/p&gt;</description></item></channel></rss>
