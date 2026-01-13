@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>IntelliJ IDEA - 标签 | 毕少侠</title><link>https://geekswg.js.cool/tags/intellij-idea/</link><description>博客：探索、发现、分享 By geekswg-[毕少侠]</description><generator>Hugo 0.154.5 &amp; FixIt v0.4.0</generator><language>zh-CN</language><managingEditor>geekswg@qq.com (geekswg)</managingEditor><webMaster>geekswg@qq.com (geekswg)</webMaster><copyright>geekswg &amp; 毕少侠</copyright><lastBuildDate>Tue, 13 Jan 2026 12:31:22 +0000</lastBuildDate><atom:link href="https://geekswg.js.cool/tags/intellij-idea/index.xml" rel="self" type="application/rss+xml"/><item><title>Idea JAVA开发工具快速上手-常用快捷键汇总</title><link>https://geekswg.js.cool/posts/2020/idea-java%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B-%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE%E6%B1%87%E6%80%BB/</link><pubDate>Sun, 21 Jun 2020 15:48:00 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2020/idea-java%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B-%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE%E6%B1%87%E6%80%BB/</guid><category domain="https://geekswg.js.cool/categories/cnblog/">cnblog</category><description>&lt;h1&gt;前言：&lt;/h1&gt;
+&lt;p&gt;之前一直使用Eclipse 系列开发IDE工具，由于eclipse是开源的所以，一般情况，eclipse基本上每一个java入门者的首选开发工具，其次 Myeclipse。不过现在越来越多的人使用了 Idea&amp;nbsp;&lt;a href="http://www.baidu.com/link?url=ZzIbccyrnyov-S3NYm5PTnke8Xxa45NQ8EtvLT-Ahe86EaGHhnAZOErXA2ZWXf_p" target="_blank" data-click="{
+			'F':'778317EA',
+			'F1':'9D73F1E4',
+			'F2':'4CA6DD6B',
+			'F3':'54E5263F',
+			'T':'1592723193',
+						'y':'76EE6FEC'
+												}"&gt;IntelliJ&amp;nbsp;IDEA&lt;/a&gt;&amp;nbsp;开发工具。我之前也下载使用过，不过由于不习惯它的 快捷键 和 周围同事 都使用 myeclipse ，所以我也就放弃了。由于现在的同事都比较偏爱使用 Idea ，然后我也接抱着试试的态度，重新 上手使用了，没过几天我就 深深的爱上这个 IDE 工具，现在已经欲罢不能了，尤其熟悉了它的快捷键后，就会发现它十分方便智能，提示十分到位。&lt;/p&gt;</description></item></channel></rss>
