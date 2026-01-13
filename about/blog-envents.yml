@@ -1,0 +1,22 @@
+events:
+  - timestamp: 2026-01-06T15:04:05+08:00
+    content: "域名：购入十年域名[342901.xyz](342901.xyz)备用"
+    type: primary
+  - timestamp: 2023-04-12T15:04:05+08:00
+    content: "其他：加入[萌ICP备20231992号](https://icp.gov.moe/?keyword=20231992)"
+    type: secondary
+  - timestamp: 2022-12-11T15:04:05+08:00
+    content: "迁移：由于bug和主题停更，改用[FixIt](https://github.com/hugo-fixit/FixIt)主题，并迁移数据"
+    type: primary
+  - timestamp: 2021-09-16T15:04:05+08:00
+    content: "域名：使用[geekswg.js.cool](geekswg.js.cool)作为博客主域名"
+    type: primary
+  - timestamp: 2020-10-11T15:04:05+08:00
+    content: "框架：学习go语言时，改用`Hugo`搭建，并使用[LoveIt](https://github.com/dillonzq/LoveIt)主题"
+    type: success
+  - timestamp: 2012-11-11T15:04:05+08:00
+    content: "框架：使用`Hexo`搭建了第一个博客，托管在Github Pages"
+    type: success
+  - timestamp: 2006-01-02T15:04:05+08:00
+    content: "诞辰：由于过于久远不记得了，就以 go 的时间格式作为诞辰日"
+    type: danger

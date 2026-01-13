@@ -1,8 +1,30 @@
 # 关于-About
 
+{{< typeit code=java >}}
+public class HelloWorld {
+    public static void main(String []args) {
+        System.out.println("Hello World");
+    }
+}
+{{< /typeit >}}
 
-<!--more-->
-{{< typeit >}}
+## 网站大事件
+
+```timeline {file="blog-envents.yml",reverse=false,animation=true}
+```
+
+## 关于本站
+
+本站使用`Hugo`框架 & `FixIt`主题构建的静态网站，`Github Action`工作流自动构建生成，托管在`Github Pages`，`Cloudflare Pages`。
+
+## 关于我
+
+一个游荡于互联网江湖的`90后`城墟猿，俗称`码农`。擅长`Ctrl` + `C` / `V` , `面向AI`编程技术。
+
+- Email: [geekswg@qq.com](mailto://geekswg@qq.com)
+- Github: [geekswg](https://github.com/geekswg)
+<!-- 
+{{< typeit loop=false >}}
 <center>
 <span  style='font-family: MMT,"沐目体";font-size:20px;font-weight:bold;color:#009966;' >
 莫笑少年江湖梦，谁不少年梦江湖。曾经年少立志三千里，如今踌躇百步无寸功。
@@ -13,11 +35,11 @@
 </span>
 </center>
 {{< /typeit >}}
+-->
 
-
-<!-- metingJs 音乐插件 -->
+<!-- metingJs 音乐插件 
 {{< music auto="https://y.qq.com/n/yqq/playlist/8138088068.html" fixed=false list-folded=true autoplay=true volume="0.5" order="random" loop="all"  >}}
-
+-->
 <!-- 
 > typeit 示例
 
@@ -36,24 +58,20 @@
 ``` 
 -->
 
----
-
-<div align="center">
-  
-  <!-- dynamic typing effect 动态打字效果 -->
+  <!-- dynamic typing effect 动态打字效果 
   <div align="center">
     <a href="https://geekswg.js.cool"><img src="https://readme-typing-svg.demolab.com?font=Pacifico&weight=600&duration=3000&pause=1000&center=true&vCenter=true&width=435&lines=Hello+World;Talk+is+Cheap%2C+Show+Me+the+Code" alt="Typing SVG" /></a>
   </div>
+  -->
 
-  <!-- knock code pictures 敲代码的图片 -->
+<!-- knock code pictures 敲代码的图片 
   <img src="https://cdn.jsdelivr.net/gh/geekswg/geekswg/assets/images/coding.gif" /><br>
+ -->
 
- 
-
-<!-- Snake Code Contribution Map 贪吃蛇代码贡献图 -->
+<!-- Snake Code Contribution Map 贪吃蛇代码贡献图
 <img src="https://cdn.jsdelivr.net/gh/geekswg/geekswg@snake/github-contribution-grid-snake.svg" />
+ -->
 
-</div>
 
 
 ---
