@@ -1,16 +1,11 @@
 # 关于-About
 
-{{< typeit code=java >}}
-public class HelloWorld {
-    public static void main(String []args) {
-        System.out.println("Hello World");
-    }
-}
-{{< /typeit >}}
+
+![Talk is Cheap,Show Me your Code](https://readme-typing-svg.demolab.com?font=Pacifico&weight=600&duration=3000&pause=1000&center=true&vCenter=true&width=435&lines=Hello+World;Talk+is+Cheap%2C+Show+Me+your+Code "Talk is Cheap,Show Me your Code")
 
 ## 网站大事件
 
-```timeline {file="blog-envents.yml",reverse=false,animation=true}
+```timeline {file="blog-envents.yml",reverse=true,animation=true}
 ```
 
 ## 关于本站

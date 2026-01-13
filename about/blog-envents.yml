@@ -1,6 +1,6 @@
 events:
   - timestamp: 2026-01-06T15:04:05+08:00
-    content: "域名：购入十年域名[342901.xyz](342901.xyz)备用"
+    content: "域名：购入十年域名[342901.xyz](https://blog.342901.xyz/)备用"
     type: primary
   - timestamp: 2023-04-12T15:04:05+08:00
     content: "其他：加入[萌ICP备20231992号](https://icp.gov.moe/?keyword=20231992)"
