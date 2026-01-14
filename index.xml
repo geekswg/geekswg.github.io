@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>毕少侠</title><link>https://geekswg.js.cool/</link><description>博客：探索、发现、分享 By geekswg-[毕少侠]</description><generator>Hugo 0.154.5 &amp; FixIt v0.4.0</generator><language>zh-CN</language><managingEditor>geekswg@qq.com (geekswg)</managingEditor><webMaster>geekswg@qq.com (geekswg)</webMaster><copyright>geekswg &amp; 毕少侠</copyright><lastBuildDate>Tue, 13 Jan 2026 02:17:45 +0800</lastBuildDate><atom:link href="https://geekswg.js.cool/index.xml" rel="self" type="application/rss+xml"/><item><title>Cloudflare部署CFnew终端</title><link>https://geekswg.js.cool/posts/2026/cf-new/</link><pubDate>Sun, 11 Jan 2026 16:40:02 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2026/cf-new/</guid><category domain="https://geekswg.js.cool/categories/tutorial/">tutorial</category><description>&lt;p&gt;&lt;a href="https://github.com/byJoey/cfnew" target="_blank" rel="external nofollow noopener noreferrer"&gt;CFnew&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt; - 终端 v2.9&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>毕少侠</title><link>https://geekswg.js.cool/</link><description>博客：探索、发现、分享 By geekswg-[毕少侠]</description><generator>Hugo 0.154.5 &amp; FixIt v0.4.2-20260114101213-fdfd7721</generator><language>zh-CN</language><managingEditor>geekswg@qq.com (geekswg)</managingEditor><webMaster>geekswg@qq.com (geekswg)</webMaster><copyright>geekswg &amp; 毕少侠</copyright><lastBuildDate>Tue, 13 Jan 2026 02:17:45 +0800</lastBuildDate><atom:link href="https://geekswg.js.cool/index.xml" rel="self" type="application/rss+xml"/><item><title>Cloudflare部署CFnew终端</title><link>https://geekswg.js.cool/posts/2026/cf-new/</link><pubDate>Sun, 11 Jan 2026 16:40:02 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2026/cf-new/</guid><category domain="https://geekswg.js.cool/categories/tutorial/">tutorial</category><description>&lt;p&gt;&lt;a href="https://github.com/byJoey/cfnew" target="_blank" rel="external nofollow noopener noreferrer"&gt;CFnew&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt; - 终端 v2.9&lt;/p&gt;
 &lt;h2 class="heading-element" id="介绍"&gt;&lt;span&gt;介绍&lt;/span&gt;
  &lt;a href="#%e4%bb%8b%e7%bb%8d" class="heading-mark"&gt;
  &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
@@ -81,9 +81,7 @@
 &lt;/h2&gt;&lt;p&gt;配置完成后，等待DNS解析生效，通常需要几分钟到数即可生效。然后访问&lt;code&gt;a.main.com&lt;/code&gt;，检查是否能够正常访问，并且速度是否有所提升。
 可以使用&lt;a href="https://ping.chinaz.com/" target="_blank" rel="external nofollow noopener noreferrer"&gt;ping.cn&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;等工具测试访问速度。
 测试结果显示，访问速度从原来的几秒提升到了几十毫秒，速度提升了数倍。&lt;/p&gt;
-&lt;div class="details admonition note open disabled"&gt;
- &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-solid fa-pencil-alt" aria-hidden="true"&gt;&lt;/i&gt;~&lt;/div&gt;
- &lt;div class="details-content"&gt;
+&lt;div class="details admonition note open disabled"&gt;&lt;div class="details-content"&gt;
  &lt;div class="admonition-content"&gt;&lt;p&gt;CF隧道优选加速，只能提高国内访问速度，并不了提高CF隧道自身提供免费的带宽和流量限制！&lt;/p&gt;&lt;/div&gt;
  &lt;/div&gt;
 &lt;/div&gt;&lt;!-- 
@@ -518,8 +516,7 @@ networks:
 &lt;/ol&gt;</description></item><item><title>Markdown基本语法</title><link>https://geekswg.js.cool/posts/2024/md-basic/</link><pubDate>Sat, 07 Dec 2024 08:52:46 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2024/md-basic/</guid><category domain="https://geekswg.js.cool/categories/docs/">文档</category><description>&lt;p&gt;这篇文章提供了可以在 Hugo 的文章中使用的基本 Markdown 语法示例。&lt;/p&gt;
 &lt;!-- markdownlint-disable-file --&gt;
 &lt;div class="details admonition note open"&gt;
- &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-solid fa-pencil-alt" aria-hidden="true"&gt;&lt;/i&gt;注意&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;
- &lt;div class="details-content"&gt;
+ &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-solid fa-pencil-alt" aria-hidden="true"&gt;&lt;/i&gt;注意&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;&lt;div class="details-content"&gt;
  &lt;div class="admonition-content"&gt;&lt;p&gt;这篇文章借鉴了一篇很棒的 &lt;a href="http://learn.getgrav.org/content/markdown" target="_blank" rel="external nofollow noopener noreferrer"&gt;来自 Grav 的文章&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;。&lt;/p&gt;
 &lt;p&gt;如果你想了解 &lt;strong&gt;FixIt&lt;/strong&gt; 主题的扩展 Markdown 语法，请阅读 [扩展 Markdown 语法页面]。&lt;/p&gt;
 &lt;/div&gt;
@@ -547,8 +544,7 @@ networks:
 &lt;/blockquote&gt;
 &lt;p&gt;话不多说，我们来回顾一下 Markdown 的主要语法以及生成的 HTML 样式！&lt;/p&gt;
 &lt;div class="details admonition tip open"&gt;
- &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-regular fa-lightbulb" aria-hidden="true"&gt;&lt;/i&gt;技巧&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;
- &lt;div class="details-content"&gt;
+ &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-regular fa-lightbulb" aria-hidden="true"&gt;&lt;/i&gt;技巧&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;&lt;div class="details-content"&gt;
  &lt;div class="admonition-content"&gt;&lt;i class="fa-regular fa-bookmark fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&amp;nbsp;将此页保存为书签，以备将来参考！&lt;/div&gt;
  &lt;/div&gt;
 &lt;/div&gt;
@@ -567,8 +563,7 @@ networks:
 &amp;lt;h4&amp;gt;h4 标题&amp;lt;/h4&amp;gt;
 &amp;lt;h5&amp;gt;h5 标题&amp;lt;/h5&amp;gt;
 &amp;lt;h6&amp;gt;h6 标题&amp;lt;/h6&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;div class="details admonition note open"&gt;
- &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-solid fa-pencil-alt" aria-hidden="true"&gt;&lt;/i&gt;标题 ID&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;
- &lt;div class="details-content"&gt;
+ &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-solid fa-pencil-alt" aria-hidden="true"&gt;&lt;/i&gt;标题 ID&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;&lt;div class="details-content"&gt;
  &lt;div class="admonition-content"&gt;&lt;p&gt;要添加自定义标题 ID, 请在与标题相同的行中将自定义 ID 放在花括号中：&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;### 一个很棒的标题 {#custom-id}&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;输出的 HTML 看起来像这样：&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;&amp;lt;h3 id=&amp;#34;custom-id&amp;#34;&amp;gt;一个很棒的标题&amp;lt;/h3&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -783,8 +778,7 @@ odio non est accumsan facilisis. Aliquam id turpis in dolor tincidunt mollis ac 
  &amp;lt;li&amp;gt;Aenean sit amet erat nunc&amp;lt;/li&amp;gt;
  &amp;lt;li&amp;gt;Eget porttitor lorem&amp;lt;/li&amp;gt;
 &amp;lt;/ol&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;div class="details admonition tip open"&gt;
- &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-regular fa-lightbulb" aria-hidden="true"&gt;&lt;/i&gt;技巧&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;
- &lt;div class="details-content"&gt;
+ &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-regular fa-lightbulb" aria-hidden="true"&gt;&lt;/i&gt;技巧&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;&lt;div class="details-content"&gt;
  &lt;div class="admonition-content"&gt;&lt;p&gt;如果你对每一项使用 &lt;code&gt;1.&lt;/code&gt;, Markdown 将自动为每一项编号。例如：&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;1. Lorem ipsum dolor sit amet
 1. Consectetur adipiscing elit
@@ -909,8 +903,7 @@ grunt.initConfig({
  }
  }
 };&lt;/code&gt;&lt;/pre&gt;&lt;div class="details admonition note open"&gt;
- &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-solid fa-pencil-alt" aria-hidden="true"&gt;&lt;/i&gt;注意&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;
- &lt;div class="details-content"&gt;
+ &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-solid fa-pencil-alt" aria-hidden="true"&gt;&lt;/i&gt;注意&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;&lt;div class="details-content"&gt;
  &lt;div class="admonition-content"&gt;&lt;strong&gt;Hugo&lt;/strong&gt; 文档中的 &lt;a href="https://gohugo.io/content-management/syntax-highlighting/" target="_blank" rel="external nofollow noopener noreferrer"&gt;语法高亮页面&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt; 介绍了有关语法高亮的更多信息，
 包括语法高亮的 shortcode。&lt;/div&gt;
  &lt;/div&gt;
@@ -970,8 +963,7 @@ grunt.initConfig({
  &amp;lt;/tr&amp;gt;
  &amp;lt;/tbody&amp;gt;
 &amp;lt;/table&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;div class="details admonition note"&gt;
- &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-solid fa-pencil-alt" aria-hidden="true"&gt;&lt;/i&gt;文本右对齐或居中对齐&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;
- &lt;div class="details-content"&gt;
+ &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-solid fa-pencil-alt" aria-hidden="true"&gt;&lt;/i&gt;文本右对齐或居中对齐&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;&lt;div class="details-content"&gt;
  &lt;div class="admonition-content"&gt;&lt;p&gt;在任何标题下方的破折号右侧添加冒号将使该列的文本右对齐，在任何标题下方的破折号两边添加冒号将使该列的对齐文本居中。&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;| Option | Description |
 |:------:| -----------:|
@@ -1057,8 +1049,7 @@ Content for chapter one.
 
 ## Chapter 3 &amp;lt;a id=&amp;#34;chapter-3&amp;#34;&amp;gt;&amp;lt;/a&amp;gt;
 Content for chapter one.&lt;/code&gt;&lt;/pre&gt;&lt;div class="details admonition note open"&gt;
- &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-solid fa-pencil-alt" aria-hidden="true"&gt;&lt;/i&gt;注意&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;
- &lt;div class="details-content"&gt;
+ &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-solid fa-pencil-alt" aria-hidden="true"&gt;&lt;/i&gt;注意&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;&lt;div class="details-content"&gt;
  &lt;div class="admonition-content"&gt;定位标记的位置几乎是任意的。因为它们并不引人注目，所以它们通常被放在同一行了。&lt;/div&gt;
  &lt;/div&gt;
 &lt;/div&gt;
@@ -1183,8 +1174,7 @@ Content for chapter one.&lt;/code&gt;&lt;/pre&gt;&lt;div class="details admoniti
  AISmmary.init(aiConfig);
  });
 &amp;lt;/script&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;div class="details admonition notice open disabled"&gt;
- &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-solid fa-pencil-alt" aria-hidden="true"&gt;&lt;/i&gt;说明&lt;/div&gt;
- &lt;div class="details-content"&gt;
+ &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-solid fa-pencil-alt" aria-hidden="true"&gt;&lt;/i&gt;说明&lt;/div&gt;&lt;div class="details-content"&gt;
  &lt;div class="admonition-content"&gt;&lt;p&gt;以上js代码主要来自&lt;code&gt;FloatSheep&lt;/code&gt;的项目&lt;a href="https://github.com/FloatSheep/Qwen-Post-Summary/" target="_blank" rel="external nofollow noopener noreferrer"&gt;FloatSheep/Qwen-Post-Summary&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;,稍作修改调整
 其中 aiConfig.aiSelector 可以在浏览器中按&lt;code&gt;F12&lt;/code&gt;然后&lt;code&gt;Ctrl+Shift+C&lt;/code&gt;，点击你需要生成内容摘要的页面元素，然后&lt;code&gt;复制&lt;/code&gt;-&amp;gt;&lt;code&gt;复制Selector&lt;/code&gt;，例&lt;code&gt;#content&lt;/code&gt;。&lt;/p&gt;&lt;/div&gt;
  &lt;/div&gt;
@@ -1263,8 +1253,7 @@ Content for chapter one.&lt;/code&gt;&lt;/pre&gt;&lt;div class="details admoniti
  AISmmary.init(aiConfig);
  });
 &amp;lt;/script&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;div class="details admonition notice open disabled"&gt;
- &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-solid fa-pencil-alt" aria-hidden="true"&gt;&lt;/i&gt;说明&lt;/div&gt;
- &lt;div class="details-content"&gt;
+ &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-solid fa-pencil-alt" aria-hidden="true"&gt;&lt;/i&gt;说明&lt;/div&gt;&lt;div class="details-content"&gt;
  &lt;div class="admonition-content"&gt;&lt;p&gt;以上js代码主要来自&lt;code&gt;FloatSheep&lt;/code&gt;的项目&lt;a href="https://github.com/FloatSheep/Qwen-Post-Summary/" target="_blank" rel="external nofollow noopener noreferrer"&gt;FloatSheep/Qwen-Post-Summary&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;,稍作修改调整
 其中 aiConfig.aiSelector 可以在浏览器中按&lt;code&gt;F12&lt;/code&gt;然后&lt;code&gt;Ctrl+Shift+C&lt;/code&gt;，点击你需要生成内容摘要的页面元素，然后&lt;code&gt;复制&lt;/code&gt;-&amp;gt;&lt;code&gt;复制Selector&lt;/code&gt;，例&lt;code&gt;#content&lt;/code&gt;。&lt;/p&gt;&lt;/div&gt;
  &lt;/div&gt;
@@ -1351,8 +1340,7 @@ Content for chapter one.&lt;/code&gt;&lt;/pre&gt;&lt;div class="details admoniti
  &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
  &lt;/a&gt;
 &lt;/h2&gt;&lt;p&gt;飞牛NAS作为一款新兴的国产NAS系统，以其免费、易用和高兼容性的特点，为DIY NAS用户提供了一个不错的选择。安装过程简单，界面友好，功能全面，无论是新手还是有一定经验的用户，都能快速上手并享受到NAS带来的便利。虽然在某些高级功能上还有待完善，但官方积极的更新和社区的支持，让人对其未来充满期待。&lt;/p&gt;</description></item><item><title>Hugo添加Pjax功能支持</title><link>https://geekswg.js.cool/posts/2024/hugo-pjax-support/</link><pubDate>Wed, 28 Feb 2024 18:38:31 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2024/hugo-pjax-support/</guid><category domain="https://geekswg.js.cool/categories/theme/">theme</category><description>&lt;img src="https://geekswg.js.cool/posts/2024/hugo-pjax-support/cover.webp" alt="featured image" referrerpolicy="no-referrer"&gt;&lt;p&gt;&lt;div class="details admonition note open"&gt;
- &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-solid fa-pencil-alt" aria-hidden="true"&gt;&lt;/i&gt;注意&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;
- &lt;div class="details-content"&gt;
+ &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-solid fa-pencil-alt" aria-hidden="true"&gt;&lt;/i&gt;注意&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;&lt;div class="details-content"&gt;
  &lt;div class="admonition-content"&gt;Hugo是一个使用Go语言构建的静态网站生成器，它的速度非常快，并且具有强大的主题支持和灵活的定制选项。通过Hugo，你可以轻松地构建和管理博客网站，并且添加PJAX功能也非常简单。&lt;/div&gt;
  &lt;/div&gt;
 &lt;/div&gt;
@@ -1462,8 +1450,7 @@ function pjax_js_reload(js_url, callback) {
 &lt;blockquote&gt;
 &lt;p&gt;例如：网站页面贴边的音乐播放器，我在切换页面时，不需要重新加载音乐播放器，只需要重新加载页面中改变的部分即可。&lt;/p&gt;
 &lt;/blockquote&gt;</description></item><item><title>Layui Shortcodes Demo</title><link>https://geekswg.js.cool/posts/2024/layui-shortcodes-demo/</link><pubDate>Wed, 03 Jan 2024 09:35:22 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2024/layui-shortcodes-demo/</guid><category domain="https://geekswg.js.cool/categories/theme/">theme</category><description>&lt;img src="https://geekswg.js.cool/images/posts/featured-image-preview.jpg" alt="featured image" referrerpolicy="no-referrer"&gt;&lt;div class="details admonition note open"&gt;
- &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-solid fa-pencil-alt" aria-hidden="true"&gt;&lt;/i&gt;注意&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;
- &lt;div class="details-content"&gt;
+ &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-solid fa-pencil-alt" aria-hidden="true"&gt;&lt;/i&gt;注意&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;&lt;div class="details-content"&gt;
  &lt;div class="admonition-content"&gt;这是介绍一个依赖layui的shortcodes示例，的实现和使用方法&lt;/div&gt;
  &lt;/div&gt;
 &lt;/div&gt;

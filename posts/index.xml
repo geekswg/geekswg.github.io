@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>博客 | 毕少侠</title><link>https://geekswg.js.cool/posts/</link><description>博客：探索、发现、分享 By geekswg-[毕少侠]</description><generator>Hugo 0.154.5 &amp; FixIt v0.4.0</generator><language>zh-CN</language><managingEditor>geekswg@qq.com (geekswg)</managingEditor><webMaster>geekswg@qq.com (geekswg)</webMaster><copyright>geekswg &amp; 毕少侠</copyright><lastBuildDate>Wed, 14 Jan 2026 13:11:09 +0000</lastBuildDate><atom:link href="https://geekswg.js.cool/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Cloudflare部署CFnew终端</title><link>https://geekswg.js.cool/posts/2026/cf-new/</link><pubDate>Sun, 11 Jan 2026 16:40:02 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2026/cf-new/</guid><category domain="https://geekswg.js.cool/categories/tutorial/">tutorial</category><description>&lt;p&gt;&lt;a href="https://github.com/byJoey/cfnew" target="_blank" rel="external nofollow noopener noreferrer"&gt;CFnew&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt; - 终端 v2.9&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>博客 | 毕少侠</title><link>https://geekswg.js.cool/posts/</link><description>博客：探索、发现、分享 By geekswg-[毕少侠]</description><generator>Hugo 0.154.5 &amp; FixIt v0.4.2-20260114101213-fdfd7721</generator><language>zh-CN</language><managingEditor>geekswg@qq.com (geekswg)</managingEditor><webMaster>geekswg@qq.com (geekswg)</webMaster><copyright>geekswg &amp; 毕少侠</copyright><lastBuildDate>Wed, 14 Jan 2026 15:23:58 +0000</lastBuildDate><atom:link href="https://geekswg.js.cool/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Cloudflare部署CFnew终端</title><link>https://geekswg.js.cool/posts/2026/cf-new/</link><pubDate>Sun, 11 Jan 2026 16:40:02 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2026/cf-new/</guid><category domain="https://geekswg.js.cool/categories/tutorial/">tutorial</category><description>&lt;p&gt;&lt;a href="https://github.com/byJoey/cfnew" target="_blank" rel="external nofollow noopener noreferrer"&gt;CFnew&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt; - 终端 v2.9&lt;/p&gt;
 &lt;h2 class="heading-element" id="介绍"&gt;&lt;span&gt;介绍&lt;/span&gt;
  &lt;a href="#%e4%bb%8b%e7%bb%8d" class="heading-mark"&gt;
  &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
@@ -38,14 +38,12 @@
  &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
  &lt;/a&gt;
 &lt;/h2&gt;&lt;p&gt;随着数字化生活的发展，个人数据的存储和管理变得越来越重要。NAS（网络附加存储）作为一种便捷的数据存储解决方案，受到了越来越多用户的青睐。最近，一款名为&lt;a href="https://www.fnnas.com/" target="_blank" rel="external nofollow noopener noreferrer"&gt;飞牛NAS&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;的国产系统引起了广泛关注，它以其免费、易用和高兼容性的特点，成为了DIY NAS领域的新星。本文将分享飞牛NAS的安装过程和使用体验，希望能为想要尝试DIY NAS的用户提供一些参考。&lt;/p&gt;</description></item><item><title>Hugo添加Pjax功能支持</title><link>https://geekswg.js.cool/posts/2024/hugo-pjax-support/</link><pubDate>Wed, 28 Feb 2024 18:38:31 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2024/hugo-pjax-support/</guid><category domain="https://geekswg.js.cool/categories/theme/">theme</category><description>&lt;p&gt;&lt;div class="details admonition note open"&gt;
- &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-solid fa-pencil-alt" aria-hidden="true"&gt;&lt;/i&gt;注意&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;
- &lt;div class="details-content"&gt;
+ &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-solid fa-pencil-alt" aria-hidden="true"&gt;&lt;/i&gt;注意&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;&lt;div class="details-content"&gt;
  &lt;div class="admonition-content"&gt;Hugo是一个使用Go语言构建的静态网站生成器，它的速度非常快，并且具有强大的主题支持和灵活的定制选项。通过Hugo，你可以轻松地构建和管理博客网站，并且添加PJAX功能也非常简单。&lt;/div&gt;
  &lt;/div&gt;
 &lt;/div&gt;
 当你希望你的博客网站加载更快、更平滑，同时又想要保持简洁的用户体验时，&lt;code&gt;PJAX&lt;/code&gt;（PushState + Ajax）就是一个很好的选择。Hugo是一个快速、灵活的静态网站生成器，它提供了添加PJAX功能的简便方法。在这篇博客中，我将向你介绍如何使用Hugo为你的博客网站添加PJAX功能。&lt;/p&gt;</description></item><item><title>Layui Shortcodes Demo</title><link>https://geekswg.js.cool/posts/2024/layui-shortcodes-demo/</link><pubDate>Wed, 03 Jan 2024 09:35:22 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2024/layui-shortcodes-demo/</guid><category domain="https://geekswg.js.cool/categories/theme/">theme</category><description>&lt;div class="details admonition note open"&gt;
- &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-solid fa-pencil-alt" aria-hidden="true"&gt;&lt;/i&gt;注意&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;
- &lt;div class="details-content"&gt;
+ &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-solid fa-pencil-alt" aria-hidden="true"&gt;&lt;/i&gt;注意&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;&lt;div class="details-content"&gt;
  &lt;div class="admonition-content"&gt;这是介绍一个依赖layui的shortcodes示例，的实现和使用方法&lt;/div&gt;
  &lt;/div&gt;
 &lt;/div&gt;
@@ -61,20 +59,17 @@
 &lt;blockquote&gt;
 &lt;p&gt;大部分来源于网站 &lt;a href="https://www.bing.com/images/search?q=loading&amp;amp;qs=n&amp;amp;form=QBILPG&amp;amp;sp=-1&amp;amp;lq=0&amp;amp;pq=loading&amp;amp;sc=10-7&amp;amp;cvid=23A7D80EB520465F9CD6951D4825FF8F&amp;amp;ghsh=0&amp;amp;ghacc=0&amp;amp;first=1" target="_blank" rel="external nofollow noopener noreferrer"&gt;Bing&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt; 和 &lt;a href="https://icons8.com/preloaders/en/search/windows%2010" target="_blank" rel="external nofollow noopener noreferrer"&gt;icos8&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt; ,如有侵权，请联系删除&lt;/p&gt;
 &lt;/blockquote&gt;</description></item><item><title>timeline2</title><link>https://geekswg.js.cool/posts/2023/timeline2/</link><pubDate>Wed, 31 May 2023 18:14:48 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2023/timeline2/</guid><category domain="https://geekswg.js.cool/categories/theme/">theme</category><description>&lt;p&gt;&lt;div class="details admonition quote open"&gt;
- &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-solid fa-quote-right" aria-hidden="true"&gt;&lt;/i&gt;quote&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;
- &lt;div class="details-content"&gt;
+ &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-solid fa-quote-right" aria-hidden="true"&gt;&lt;/i&gt;quote&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;&lt;div class="details-content"&gt;
  &lt;div class="admonition-content"&gt;note abstract info tip success question warning failure danger bug example quote&lt;/div&gt;
  &lt;/div&gt;
 &lt;/div&gt;
 这里使用MD语法编写你的文章&lt;/p&gt;</description></item><item><title>Timeline</title><link>https://geekswg.js.cool/posts/2023/timeline/</link><pubDate>Tue, 30 May 2023 18:14:48 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2023/timeline/</guid><category domain="https://geekswg.js.cool/categories/theme/">theme</category><description>&lt;p&gt;&lt;div class="details admonition quote open"&gt;
- &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-solid fa-quote-right" aria-hidden="true"&gt;&lt;/i&gt;quote&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;
- &lt;div class="details-content"&gt;
+ &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-solid fa-quote-right" aria-hidden="true"&gt;&lt;/i&gt;quote&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;&lt;div class="details-content"&gt;
  &lt;div class="admonition-content"&gt;note abstract info tip success question warning failure danger bug example quote&lt;/div&gt;
  &lt;/div&gt;
 &lt;/div&gt;
 这里使用MD语法编写你的文章&lt;/p&gt;</description></item><item><title>WPS-AI内测使用体验</title><link>https://geekswg.js.cool/posts/2023/wps-ai-use/</link><pubDate>Mon, 29 May 2023 17:38:41 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2023/wps-ai-use/</guid><category domain="https://geekswg.js.cool/categories/ai/">AI</category><description>&lt;div class="details admonition quote open"&gt;
- &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-solid fa-quote-right" aria-hidden="true"&gt;&lt;/i&gt;quote&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;
- &lt;div class="details-content"&gt;
+ &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-solid fa-quote-right" aria-hidden="true"&gt;&lt;/i&gt;quote&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;&lt;div class="details-content"&gt;
  &lt;div class="admonition-content"&gt;&lt;p&gt;&lt;a href="https://ai.wps.cn/" target="_blank" rel="external nofollow noopener noreferrer"&gt;WPS-AI官网&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;如何使用WPS AI帮助我们高效的写作
@@ -83,8 +78,7 @@
 &lt;/div&gt;
  &lt;/div&gt;
 &lt;/div&gt;</description></item><item><title>Funny 404 Gif</title><link>https://geekswg.js.cool/posts/2023/funny-404-gif/</link><pubDate>Sat, 27 May 2023 20:20:00 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2023/funny-404-gif/</guid><category domain="https://geekswg.js.cool/categories/tools/">工具</category><description>&lt;div class="details admonition note open"&gt;
- &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-solid fa-pencil-alt" aria-hidden="true"&gt;&lt;/i&gt;注意&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;
- &lt;div class="details-content"&gt;
+ &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-solid fa-pencil-alt" aria-hidden="true"&gt;&lt;/i&gt;注意&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;&lt;div class="details-content"&gt;
  &lt;div class="admonition-content"&gt;&lt;p&gt;有趣的404-Not Found gif 动态图。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;所有图片资源均来自互联网，如果侵权，请告知！&lt;/p&gt;
@@ -92,13 +86,11 @@
 &lt;/div&gt;
  &lt;/div&gt;
 &lt;/div&gt;</description></item><item><title>Website RIP 效果实现</title><link>https://geekswg.js.cool/posts/2023/website-rip/</link><pubDate>Wed, 24 May 2023 20:42:20 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2023/website-rip/</guid><category domain="https://geekswg.js.cool/categories/dev/">开发</category><description>&lt;div class="details admonition note open"&gt;
- &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-solid fa-pencil-alt" aria-hidden="true"&gt;&lt;/i&gt;注意&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;
- &lt;div class="details-content"&gt;
+ &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-solid fa-pencil-alt" aria-hidden="true"&gt;&lt;/i&gt;注意&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;&lt;div class="details-content"&gt;
  &lt;div class="admonition-content"&gt;我们常常会在百度百科中看到有人去世时，关于ta的百度百科页会变成黑白色，而其他的无影响。这难道是又重新创建或者修改了整个网页的内容吗？那工作量和时间也来不及呀，其实不然，而是有一个属性，只需设置该属性就可以改变一整个网页的色调。&lt;/div&gt;
  &lt;/div&gt;
 &lt;/div&gt;</description></item><item><title>Build Cloud Disk - CloudReve</title><link>https://geekswg.js.cool/posts/2023/build-cloud-disk/</link><pubDate>Sun, 21 May 2023 17:34:32 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2023/build-cloud-disk/</guid><category domain="https://geekswg.js.cool/categories/tutorial/">tutorial</category><description>&lt;div class="details admonition note open"&gt;
- &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-solid fa-pencil-alt" aria-hidden="true"&gt;&lt;/i&gt;注意&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;
- &lt;div class="details-content"&gt;
+ &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-solid fa-pencil-alt" aria-hidden="true"&gt;&lt;/i&gt;注意&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;&lt;div class="details-content"&gt;
  &lt;div class="admonition-content"&gt;今天介绍一下非常好用的私有云网盘系统。
 以 跨平|的方式组织你的文件。Cloudreve 可助你即刻构建出兼备自用或公用的网盘服务，通过多种存储策略的支持、虚拟文件系统等特性实现灵活的文件管理体验。&lt;/div&gt;
  &lt;/div&gt;
@@ -133,26 +125,22 @@
  &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
  &lt;/a&gt;
 &lt;/h2&gt;&lt;p&gt;&lt;figure&gt;&lt;a class="lightgallery" target="_blank" href="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/cod19/21-room.jpg" title="21号楼平面图" data-thumbnail="https://cdn.jsdelivr.net/gh/geekswg/static@main/blog-img/cod19/21-room.jpg" data-sub-html="&lt;h2&gt;21-room&lt;/h2&gt;&lt;p&gt;21号楼平面图&lt;/p&gt;</description></item><item><title>Cursor帮我写的代码</title><link>https://geekswg.js.cool/posts/2023/code-writed-by-cursor/</link><pubDate>Sun, 26 Mar 2023 18:30:40 +0800</pubDate><guid>https://geekswg.js.cool/posts/2023/code-writed-by-cursor/</guid><category domain="https://geekswg.js.cool/categories/ai/">AI</category><description>&lt;div class="details admonition note open"&gt;
- &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-solid fa-pencil-alt" aria-hidden="true"&gt;&lt;/i&gt;申明&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;
- &lt;div class="details-content"&gt;
+ &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-solid fa-pencil-alt" aria-hidden="true"&gt;&lt;/i&gt;申明&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;&lt;div class="details-content"&gt;
  &lt;div class="admonition-content"&gt;记录由AI工具帮忙写的代码，越来越离不开Cusor了。
 作者: &lt;a href="https://www.cursor.so/" target="_blank" rel="external nofollow noopener noreferrer"&gt;Cursor&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/div&gt;
  &lt;/div&gt;
 &lt;/div&gt;</description></item><item><title>Electron是什么？</title><link>https://geekswg.js.cool/posts/2023/cursor-electron/</link><pubDate>Sun, 26 Mar 2023 18:30:40 +0800</pubDate><guid>https://geekswg.js.cool/posts/2023/cursor-electron/</guid><category domain="https://geekswg.js.cool/categories/ai/">AI</category><description>&lt;div class="details admonition quote open"&gt;
- &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-solid fa-quote-right" aria-hidden="true"&gt;&lt;/i&gt;申明&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;
- &lt;div class="details-content"&gt;
+ &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-solid fa-quote-right" aria-hidden="true"&gt;&lt;/i&gt;申明&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;&lt;div class="details-content"&gt;
  &lt;div class="admonition-content"&gt;这一片关于ChatGPT的文章，由AI工具Cursor写作
 作者: &lt;a href="https://www.cursor.so/" target="_blank" rel="external nofollow noopener noreferrer"&gt;Cursor&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/div&gt;
  &lt;/div&gt;
 &lt;/div&gt;</description></item><item><title>关于ChatGPT</title><link>https://geekswg.js.cool/posts/2023/md-writeby-cursor/</link><pubDate>Sun, 26 Mar 2023 18:30:40 +0800</pubDate><guid>https://geekswg.js.cool/posts/2023/md-writeby-cursor/</guid><category domain="https://geekswg.js.cool/categories/ai/">AI</category><description>&lt;div class="details admonition quote open"&gt;
- &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-solid fa-quote-right" aria-hidden="true"&gt;&lt;/i&gt;申明&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;
- &lt;div class="details-content"&gt;
+ &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-solid fa-quote-right" aria-hidden="true"&gt;&lt;/i&gt;申明&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;&lt;div class="details-content"&gt;
  &lt;div class="admonition-content"&gt;这一片关于ChatGPT的文章，由AI工具Cursor写作
 作者: &lt;a href="https://www.cursor.so/" target="_blank" rel="external nofollow noopener noreferrer"&gt;Cursor&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/div&gt;
  &lt;/div&gt;
 &lt;/div&gt;</description></item><item><title>Hugo Shortcode Plugins Live2d</title><link>https://geekswg.js.cool/posts/2023/hugo-shortcode-plugins-live2d/</link><pubDate>Sun, 26 Mar 2023 15:30:06 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2023/hugo-shortcode-plugins-live2d/</guid><category domain="https://geekswg.js.cool/categories/theme/">theme</category><description>&lt;div class="details admonition note open"&gt;
- &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-solid fa-pencil-alt" aria-hidden="true"&gt;&lt;/i&gt;注意&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;
- &lt;div class="details-content"&gt;
+ &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-solid fa-pencil-alt" aria-hidden="true"&gt;&lt;/i&gt;注意&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;&lt;div class="details-content"&gt;
  &lt;div class="admonition-content"&gt;记录一次Hugo主题ShortCode插件集成过程和Shorcode插件的食用方法。
 感谢Fixit主题作者提供方法和指导帮助。
 note abstract info tip success question warning failure danger bug example quote&lt;/div&gt;
@@ -172,8 +160,7 @@ Write, edit, and chat about your code with a pful AI&lt;/p&gt;
 &lt;/h2&gt;&lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;快捷键：&lt;code&gt;Ctrl + K&lt;/code&gt; 输入你的描述，自然语言对话，他就能根据你的描述要求开始写代码了，如果实现代码比较长的话，他可能不会一次性写完代码，写道一半停止了，你继续按快捷键告诉他继续写就可以了。&lt;/p&gt;</description></item><item><title>New Bing 国内正常访问方法</title><link>https://geekswg.js.cool/posts/2023/new-bing-visit/</link><pubDate>Sat, 18 Mar 2023 16:49:11 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2023/new-bing-visit/</guid><category domain="https://geekswg.js.cool/categories/ai/">AI</category><description>&lt;div class="details admonition quote open"&gt;
- &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-solid fa-quote-right" aria-hidden="true"&gt;&lt;/i&gt;quote&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;
- &lt;div class="details-content"&gt;
+ &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-solid fa-quote-right" aria-hidden="true"&gt;&lt;/i&gt;quote&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;&lt;div class="details-content"&gt;
  &lt;div class="admonition-content"&gt;记录国内正常网络环境直接访问New Bing的方法。
 之前的插件方法已经失效
 截止目前以下方法可正常访问，使用 &lt;a href="https://github.com/oldj/SwitchHosts" target="_blank" rel="external nofollow noopener noreferrer"&gt;SwitchHosts&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt; 插件
@@ -187,13 +174,11 @@ note abstract info tip success question warning failure danger bug example quote
 &lt;/h2&gt;&lt;p&gt;最近百度文心一言发布了，还在内测申请，&lt;a href="https://yiyan.baidu.com/welcome" target="_blank" rel="external nofollow noopener noreferrer"&gt;申请地址&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;,不知道个人需要多长时间可以通过申请。
 最近的AI搜索引擎比较火，我之前申请的new bing体验了，还是比较厉害的，现在又升级了，对话限制提高到了15次对了。不过国内的网络不能直接访问bing.com/new,这一点比较难受，今天在晚上看到一个工具可以解决，国内直接访问new bing的方法。
 &lt;div class="details admonition tip open"&gt;
- &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-regular fa-lightbulb" aria-hidden="true"&gt;&lt;/i&gt;技巧&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;
- &lt;div class="details-content"&gt;
+ &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-regular fa-lightbulb" aria-hidden="true"&gt;&lt;/i&gt;技巧&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;&lt;div class="details-content"&gt;
  &lt;div class="admonition-content"&gt;前提你已经通过new bing 的waitlist，不然你还是用不上new bing哟！&lt;/div&gt;
  &lt;/div&gt;
 &lt;/div&gt;&lt;/p&gt;</description></item><item><title>Debian Theme Whitesur</title><link>https://geekswg.js.cool/posts/2023/debian-theme-whitesur/</link><pubDate>Thu, 16 Mar 2023 20:06:36 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2023/debian-theme-whitesur/</guid><category domain="https://geekswg.js.cool/categories/tutorial/">tutorial</category><description>&lt;div class="details admonition quote open"&gt;
- &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-solid fa-quote-right" aria-hidden="true"&gt;&lt;/i&gt;quote&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;
- &lt;div class="details-content"&gt;
+ &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-solid fa-quote-right" aria-hidden="true"&gt;&lt;/i&gt;quote&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;&lt;div class="details-content"&gt;
  &lt;div class="admonition-content"&gt;通过安装主题，让你的linux看起来非常炫酷。&lt;/div&gt;
  &lt;/div&gt;
 &lt;/div&gt;</description></item><item><title>Fixit主题美化指南</title><link>https://geekswg.js.cool/posts/2023/fixit-beautification/</link><pubDate>Sat, 11 Mar 2023 22:36:21 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2023/fixit-beautification/</guid><category domain="https://geekswg.js.cool/categories/theme/">theme</category><description>&lt;h1 class="heading-element" id="fixit主题美化指南"&gt;&lt;span&gt;Fixit主题美化指南&lt;/span&gt;
@@ -225,14 +210,12 @@ note abstract info tip success question warning failure danger bug example quote
  &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
  &lt;/a&gt;
 &lt;/h1&gt;&lt;p&gt;良好的文档风格可以提高文档的可读性和专业性。本文介绍技术文档的编写规范。&lt;/p&gt;</description></item><item><title>去你的广告终结者！干掉51xiaolu.com</title><link>https://geekswg.js.cool/posts/2023/fuck-this-plugin/</link><pubDate>Sat, 11 Mar 2023 21:07:33 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2023/fuck-this-plugin/</guid><category domain="https://geekswg.js.cool/categories/reposts/">reposts</category><description>&lt;div class="details admonition quote open"&gt;
- &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-solid fa-quote-right" aria-hidden="true"&gt;&lt;/i&gt;转载&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;
- &lt;div class="details-content"&gt;
+ &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-solid fa-quote-right" aria-hidden="true"&gt;&lt;/i&gt;转载&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;&lt;div class="details-content"&gt;
  &lt;div class="admonition-content"&gt;本文转载于 ：&lt;a href="https://blog.moeworld.tech/2022/09/03/%e5%8e%bb%e4%bd%a0%e7%9a%84%e5%b9%bf%e5%91%8a%e7%bb%88%e7%bb%93%e8%80%85%ef%bc%81%e5%b9%b2%e6%8e%8951xiaolu-com/" target="_blank" rel="external nofollow noopener noreferrer"&gt;晓空的博客-&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/div&gt;
  &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="details admonition note open"&gt;
- &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-solid fa-pencil-alt" aria-hidden="true"&gt;&lt;/i&gt;注意&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;
- &lt;div class="details-content"&gt;
+ &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-solid fa-pencil-alt" aria-hidden="true"&gt;&lt;/i&gt;注意&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;&lt;div class="details-content"&gt;
  &lt;div class="admonition-content"&gt;今天在调试自己的博客时，发现一个报错信息，来自1111.51xiaolu.com，我会想下我得网站好像从来没有用到这个网址得资源呀。
 经过搜索后发现原来是浏览器安装一个去广告插件干的，简直不敢相信！&lt;/div&gt;
  &lt;/div&gt;
@@ -240,31 +223,26 @@ note abstract info tip success question warning failure danger bug example quote
 &lt;blockquote&gt;
 &lt;p&gt;下面内容来自&lt;a href="https://blog.moeworld.tech/" target="_blank" rel="external nofollow noopener noreferrer"&gt;晓空的博客&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;分析过程，转载学习一下。&lt;/p&gt;
 &lt;/blockquote&gt;</description></item><item><title>中文技术文档的写作规范</title><link>https://geekswg.js.cool/posts/2023/document-style-guide/</link><pubDate>Thu, 09 Mar 2023 14:07:33 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2023/document-style-guide/</guid><category domain="https://geekswg.js.cool/categories/docs/">文档</category><description>&lt;div class="details admonition quote open"&gt;
- &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-solid fa-quote-right" aria-hidden="true"&gt;&lt;/i&gt;转载&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;
- &lt;div class="details-content"&gt;
+ &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-solid fa-quote-right" aria-hidden="true"&gt;&lt;/i&gt;转载&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;&lt;div class="details-content"&gt;
  &lt;div class="admonition-content"&gt;本文转载于 ：&lt;a href="https://lruihao.cn/posts/document-style-guide/" target="_blank" rel="external nofollow noopener noreferrer"&gt;李瑞豪的博客-中文技术文档的写作规范&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/div&gt;
  &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;英语世界里，文档非常受重视，许多公司和组织都有自己的文档规范，清楚地规定写作要求，比如&lt;a href="https://www.microsoftpressstore.com/store/microsoft-manual-of-style-9780735648715" target="_blank" rel="external nofollow noopener noreferrer"&gt;微软&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;、&lt;a href="http://styleguide.mailchimp.com/" target="_blank" rel="external nofollow noopener noreferrer"&gt;MailChimp&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;、&lt;a href="https://help.apple.com/asg/mac/2013/ASG_2013.pdf" target="_blank" rel="external nofollow noopener noreferrer"&gt;Apple&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;、&lt;a href="https://www.amazon.com/dp/B003P8QDFU/ref=dp-kindle-redirect?_encoding=UTF8&amp;amp;btkr=1" target="_blank" rel="external nofollow noopener noreferrer"&gt;Yahoo&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;、&lt;a href="https://docs.docker.com/opensource/doc-style/" target="_blank" rel="external nofollow noopener noreferrer"&gt;docker&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;、&lt;a href="https://struts.apache.org/docs/documentation-style-guide.html" target="_blank" rel="external nofollow noopener noreferrer"&gt;Struts&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt; 等等（维基百科有一份完整的&lt;a href="https://en.wikipedia.org/wiki/List_of_style_guides" target="_blank" rel="external nofollow noopener noreferrer"&gt;清单&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;）。&lt;a href="https://github.com/ruanyf/document-style-guide/blob/master/docs/reference.md" target="_blank" rel="external nofollow noopener noreferrer"&gt;中文的&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;也有不少，但都不令人满意，要么太简单，要么不太适用。&lt;/p&gt;</description></item><item><title>中文技术文档的写作规范</title><link>https://geekswg.js.cool/posts/2023/docs-style-guide/</link><pubDate>Thu, 09 Mar 2023 14:07:33 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2023/docs-style-guide/</guid><category domain="https://geekswg.js.cool/categories/reposts/">reposts</category><description>&lt;div class="details admonition quote open"&gt;
- &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-solid fa-quote-right" aria-hidden="true"&gt;&lt;/i&gt;转载&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;
- &lt;div class="details-content"&gt;
+ &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-solid fa-quote-right" aria-hidden="true"&gt;&lt;/i&gt;转载&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;&lt;div class="details-content"&gt;
  &lt;div class="admonition-content"&gt;本文转载于 ：&lt;a href="https://lruihao.cn/posts/document-style-guide/" target="_blank" rel="external nofollow noopener noreferrer"&gt;李瑞豪的博客-中文技术文档的写作规范&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/div&gt;
  &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;英语世界里，文档非常受重视，许多公司和组织都有自己的文档规范，清楚地规定写作要求，比如&lt;a href="https://www.microsoftpressstore.com/store/microsoft-manual-of-style-9780735648715" target="_blank" rel="external nofollow noopener noreferrer"&gt;微软&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;、&lt;a href="http://styleguide.mailchimp.com/" target="_blank" rel="external nofollow noopener noreferrer"&gt;MailChimp&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;、&lt;a href="https://help.apple.com/asg/mac/2013/ASG_2013.pdf" target="_blank" rel="external nofollow noopener noreferrer"&gt;Apple&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;、&lt;a href="https://www.amazon.com/dp/B003P8QDFU/ref=dp-kindle-redirect?_encoding=UTF8&amp;amp;btkr=1" target="_blank" rel="external nofollow noopener noreferrer"&gt;Yahoo&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;、&lt;a href="https://docs.docker.com/opensource/doc-style/" target="_blank" rel="external nofollow noopener noreferrer"&gt;docker&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;、&lt;a href="https://struts.apache.org/docs/documentation-style-guide.html" target="_blank" rel="external nofollow noopener noreferrer"&gt;Struts&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt; 等等（维基百科有一份完整的&lt;a href="https://en.wikipedia.org/wiki/List_of_style_guides" target="_blank" rel="external nofollow noopener noreferrer"&gt;清单&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;）。&lt;a href="https://github.com/ruanyf/document-style-guide/blob/master/docs/reference.md" target="_blank" rel="external nofollow noopener noreferrer"&gt;中文的&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;也有不少，但都不令人满意，要么太简单，要么不太适用。&lt;/p&gt;</description></item><item><title>Fixit-theme修改和PR过程</title><link>https://geekswg.js.cool/posts/2023/theme-develop-pr/</link><pubDate>Tue, 07 Mar 2023 18:50:58 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2023/theme-develop-pr/</guid><category domain="https://geekswg.js.cool/categories/theme/">theme</category><description>&lt;div class="details admonition note open"&gt;
- &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-solid fa-pencil-alt" aria-hidden="true"&gt;&lt;/i&gt;注意&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;
- &lt;div class="details-content"&gt;
+ &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-solid fa-pencil-alt" aria-hidden="true"&gt;&lt;/i&gt;注意&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;&lt;div class="details-content"&gt;
  &lt;div class="admonition-content"&gt;记录一次修改fixit主题代码，并pr的过程
 note abstract info tip success question warning failure danger bug example quote&lt;/div&gt;
  &lt;/div&gt;
 &lt;/div&gt;</description></item><item><title>Debian从稳定版切换到testing版</title><link>https://geekswg.js.cool/posts/2023/debian-testing/</link><pubDate>Sun, 05 Mar 2023 14:50:31 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2023/debian-testing/</guid><category domain="https://geekswg.js.cool/categories/tutorial/">tutorial</category><description>&lt;div class="details admonition tip open"&gt;
- &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-regular fa-lightbulb" aria-hidden="true"&gt;&lt;/i&gt;技巧&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;
- &lt;div class="details-content"&gt;
+ &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-regular fa-lightbulb" aria-hidden="true"&gt;&lt;/i&gt;技巧&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;&lt;div class="details-content"&gt;
  &lt;div class="admonition-content"&gt;debian升级到testing – 让debian系统永远保持最新的秘诀&lt;/div&gt;
  &lt;/div&gt;
 &lt;/div&gt;</description></item><item><title>分享VSCode插件</title><link>https://geekswg.js.cool/posts/2023/share-vscode-plugins/</link><pubDate>Sat, 04 Mar 2023 15:34:45 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2023/share-vscode-plugins/</guid><category domain="https://geekswg.js.cool/categories/tools/">工具</category><description>&lt;div class="details admonition warning open"&gt;
- &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-solid fa-exclamation-triangle" aria-hidden="true"&gt;&lt;/i&gt;申明&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;
- &lt;div class="details-content"&gt;
+ &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-solid fa-exclamation-triangle" aria-hidden="true"&gt;&lt;/i&gt;申明&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;&lt;div class="details-content"&gt;
  &lt;div class="admonition-content"&gt;所有分享资源来自互联网，如有侵权请告知，会立即删除
 note abstract info tip success question warning failure danger bug example quote&lt;/div&gt;
  &lt;/div&gt;
@@ -272,14 +250,12 @@ note abstract info tip success question warning failure danger bug example quote
 &lt;blockquote&gt;
 &lt;p&gt;分享 VSCode 插件，提升编码效率，插件侠篇。
 &lt;div class="details admonition tip open"&gt;
- &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-regular fa-lightbulb" aria-hidden="true"&gt;&lt;/i&gt;技巧&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;
- &lt;div class="details-content"&gt;
+ &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-regular fa-lightbulb" aria-hidden="true"&gt;&lt;/i&gt;技巧&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;&lt;div class="details-content"&gt;
  &lt;div class="admonition-content"&gt;小技巧：vscode插件栏目中，热门标签类目下的插件都是比较优秀和好用的插件，不知道用什么插件时去哪里可以发现很多宝藏的插件！推荐里面也能找到你想要的，微软这方面做的还是非常不错的。&lt;/div&gt;
  &lt;/div&gt;
 &lt;/div&gt;&lt;/p&gt;
 &lt;/blockquote&gt;</description></item><item><title>ShareAnything-分享一切</title><link>https://geekswg.js.cool/posts/2023/share/</link><pubDate>Wed, 01 Mar 2023 08:52:54 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2023/share/</guid><category domain="https://geekswg.js.cool/categories/tools/">工具</category><description>&lt;div class="details admonition warning open"&gt;
- &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-solid fa-exclamation-triangle" aria-hidden="true"&gt;&lt;/i&gt;申明&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;
- &lt;div class="details-content"&gt;
+ &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-solid fa-exclamation-triangle" aria-hidden="true"&gt;&lt;/i&gt;申明&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;&lt;div class="details-content"&gt;
  &lt;div class="admonition-content"&gt;所有分享资源来自互联网，如有侵权请告知，会立即删除
 note abstract info tip success question warning failure danger bug example quote&lt;/div&gt;
  &lt;/div&gt;
@@ -288,27 +264,23 @@ note abstract info tip success question warning failure danger bug example quote
 &lt;p&gt;分享 音乐、软件、网站等一切我觉得好玩或者有用的资源&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;div class="details admonition info open"&gt;
- &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-solid fa-circle-info" aria-hidden="true"&gt;&lt;/i&gt;信息&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;
- &lt;div class="details-content"&gt;
+ &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-solid fa-circle-info" aria-hidden="true"&gt;&lt;/i&gt;信息&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;&lt;div class="details-content"&gt;
  &lt;div class="admonition-content"&gt;软件都是我用过的，大家可以放心食用，不给任何产品推广。
 Do no evil ！&lt;/div&gt;
  &lt;/div&gt;
 &lt;/div&gt;</description></item><item><title>史上最牛Hello World</title><link>https://geekswg.js.cool/posts/2023/js-hello-world/</link><pubDate>Tue, 28 Feb 2023 17:05:33 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2023/js-hello-world/</guid><category domain="https://geekswg.js.cool/categories/dev/">开发</category><description>&lt;div class="details admonition tip open"&gt;
- &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-regular fa-lightbulb" aria-hidden="true"&gt;&lt;/i&gt;技巧&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;
- &lt;div class="details-content"&gt;
+ &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-regular fa-lightbulb" aria-hidden="true"&gt;&lt;/i&gt;技巧&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;&lt;div class="details-content"&gt;
  &lt;div class="admonition-content"&gt;这是我见过的最niubility的 最神奇的 Hello World!
 hello, world!&lt;/div&gt;
  &lt;/div&gt;
 &lt;/div&gt;</description></item><item><title>日常笔记</title><link>https://geekswg.js.cool/posts/2023/daily-notes/</link><pubDate>Tue, 28 Feb 2023 13:28:09 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2023/daily-notes/</guid><category domain="https://geekswg.js.cool/categories/life/">life</category><description>&lt;div class="details admonition quote open"&gt;
- &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-solid fa-quote-right" aria-hidden="true"&gt;&lt;/i&gt;摘要&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;
- &lt;div class="details-content"&gt;
+ &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-solid fa-quote-right" aria-hidden="true"&gt;&lt;/i&gt;摘要&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;&lt;div class="details-content"&gt;
  &lt;div class="admonition-content"&gt;&lt;pre&gt;&lt;code&gt;记录日常笔记和分享一些有趣的发现，随手记录一些流水账，好记性不如烂笔头。
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;倒叙记录。&lt;/p&gt;&lt;/div&gt;
  &lt;/div&gt;
 &lt;/div&gt;</description></item><item><title>Fixit-快速开始</title><link>https://geekswg.js.cool/posts/2023/hugo-guideline/</link><pubDate>Wed, 22 Feb 2023 20:15:48 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2023/hugo-guideline/</guid><category domain="https://geekswg.js.cool/categories/docs/">文档</category><description>&lt;div class="details admonition note open"&gt;
- &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-solid fa-pencil-alt" aria-hidden="true"&gt;&lt;/i&gt;注意&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;
- &lt;div class="details-content"&gt;
+ &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-solid fa-pencil-alt" aria-hidden="true"&gt;&lt;/i&gt;注意&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;&lt;div class="details-content"&gt;
  &lt;div class="admonition-content"&gt;快速上手Hugo-blog指引。
 记录常用命令，方便查阅。&lt;/div&gt;
  &lt;/div&gt;
