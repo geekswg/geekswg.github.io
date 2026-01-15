@@ -8,7 +8,12 @@ dlogs:
   list:
     - type: life
       txt: 人间烟火味，最抚凡人心！
-    - type: life
+      time: 2026-01-15 18:00
+      loc: 家.厨房
+      imgs:
+        - src: imgs/cook.webp
+    - type: movie
+      time: 2026-01-10
       txt: 斩仙台下我震惊了诸神,这部AI动漫短剧一口气刷完了，让人眼前一亮故事，也震惊了我们这些凡人！
       imgs:
         - src: imgs/斩仙台下我震惊了诸神.webp

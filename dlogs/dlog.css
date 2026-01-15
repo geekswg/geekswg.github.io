@@ -61,13 +61,28 @@ article.dlogs .header .single-subtitle {
   position: relative;
   margin-bottom: 2rem;
   width: 100%;
+  min-height: 200px;
+}
+
+/* 初始隐藏卡片，防止布局前的闪烁 */
+.dlogs-list .dlog-item {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* 布局完成后显示 */
+.dlogs-list .dlog-item[data-layout-complete="true"] {
+  visibility: visible;
+  opacity: 1;
 }
 
 /* DLog 项目样式 - 瀑布流卡片 */
 .dlog-item {
   background: var(--dlog-bg-color);
   border-radius: 12px;
-  padding: 0.8rem 1rem;
+  padding: 0.5rem 0.7rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.06);
   border: 1px solid var(--dlog-border-color);
   transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -145,7 +160,7 @@ article.dlogs .header .single-subtitle {
 
 /* 类型标题 - 简洁设计 */
 .dlog-item h3 {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 600;
   color: var(--dlog-text-color);
   margin: 0;
@@ -157,7 +172,7 @@ article.dlogs .header .single-subtitle {
   position: relative;
   padding: 0;
   min-width: 0;
-  height: 40px;
+  height: 42px;
 }
 
 /* 隐藏标题文字，只显示图标 */
@@ -167,7 +182,7 @@ article.dlogs .header .single-subtitle {
 
 /* 类型图标设计 */
 .dlog-item h3::before {
-  font-size: 1.8rem;
+  font-size: 2rem;
   transition: transform 0.3s ease;
   margin-right: 0.1rem;
   display: flex;
@@ -251,7 +266,7 @@ article.dlogs .header .single-subtitle {
   color: var(--dlog-text-color);
   line-height: 1.5;
   margin-bottom: 0.4rem;
-  font-size: 0.82rem;
+  font-size: 0.9rem;
   position: relative;
   padding-left: 1.2rem;
 }
@@ -280,7 +295,7 @@ article.dlogs .header .single-subtitle {
   flex-direction: column;
   align-items: flex-end;
   gap: 0.02rem;
-  font-size: 0.65rem;
+  font-size: 0.7rem;
   margin-left: 0.5rem;
   min-width: 110px;
   flex-shrink: 0;
@@ -297,7 +312,7 @@ article.dlogs .header .single-subtitle {
   align-items: center;
   justify-content: flex-end;
   opacity: 0.75;
-  font-size: 0.62rem;
+  font-size: 0.68rem;
   letter-spacing: 0.02em;
 }
 
@@ -542,8 +557,8 @@ article.dlogs .header .single-subtitle {
 }
 
 .control-btn {
-  width: 28px;
-  height: 28px;
+  width: 32px;
+  height: 32px;
   border: none;
   background: transparent;
   border-radius: 6px;
@@ -566,8 +581,8 @@ article.dlogs .header .single-subtitle {
 }
 
 .control-btn svg {
-  width: 12px;
-  height: 12px;
+  width: 18px;
+  height: 18px;
   fill: #667eea;
   transition: fill 0.2s ease;
 }
@@ -577,14 +592,14 @@ article.dlogs .header .single-subtitle {
 }
 
 .play-btn {
-  width: 30px;
-  height: 30px;
+  width: 34px;
+  height: 34px;
   background: transparent;
 }
 
 .play-btn svg {
-  width: 13px;
-  height: 13px;
+  width: 20px;
+  height: 20px;
   fill: #667eea;
 }
 
@@ -651,8 +666,8 @@ article.dlogs .header .single-subtitle {
 }
 
 .volume-btn {
-  width: 26px;
-  height: 26px;
+  width: 30px;
+  height: 30px;
   background: transparent;
 }
 
@@ -775,23 +790,23 @@ article.dlogs .header .single-subtitle {
   }
 
   .control-btn {
-    width: 24px;
-    height: 24px;
+    width: 28px;
+    height: 28px;
   }
 
   .control-btn svg {
-    width: 10px;
-    height: 10px;
+    width: 15px;
+    height: 15px;
   }
 
   .play-btn {
-    width: 26px;
-    height: 26px;
+    width: 30px;
+    height: 30px;
   }
 
   .play-btn svg {
-    width: 11px;
-    height: 11px;
+    width: 17px;
+    height: 17px;
   }
 
   .progress-bar {
@@ -808,13 +823,13 @@ article.dlogs .header .single-subtitle {
   }
 
   .volume-btn {
-    width: 22px;
-    height: 22px;
+    width: 26px;
+    height: 26px;
   }
 
   .volume-btn svg {
-    width: 10px;
-    height: 10px;
+    width: 13px;
+    height: 13px;
   }
 }
 
@@ -842,23 +857,23 @@ article.dlogs .header .single-subtitle {
   }
 
   .control-btn {
-    width: 22px;
-    height: 22px;
+    width: 28px;
+    height: 28px;
   }
 
   .control-btn svg {
-    width: 9px;
-    height: 9px;
+    width: 15px;
+    height: 15px;
   }
 
   .play-btn {
-    width: 24px;
-    height: 24px;
+    width: 30px;
+    height: 30px;
   }
 
   .play-btn svg {
-    width: 10px;
-    height: 10px;
+    width: 17px;
+    height: 17px;
   }
 
   .progress-bar {
@@ -875,13 +890,13 @@ article.dlogs .header .single-subtitle {
   }
 
   .volume-btn {
-    width: 20px;
-    height: 20px;
+    width: 26px;
+    height: 26px;
   }
 
   .volume-btn svg {
-    width: 9px;
-    height: 9px;
+    width: 13px;
+    height: 13px;
   }
 }
 
@@ -1069,68 +1084,69 @@ article.dlogs .header .single-subtitle {
   article.dlogs {
     padding: 0.6rem;
   }
-  
+
   article.dlogs .header {
     margin-bottom: 1rem;
   }
-  
+
   article.dlogs .header .single-title {
     font-size: 1.6rem;
   }
-  
+
   article.dlogs .header .single-subtitle {
     font-size: 0.9rem;
   }
-  
+
   .dlog-item {
-    padding: 0.5rem 0.7rem;
+    padding: 0.4rem 0.5rem;
   }
-  
+
   .dlog-item h3 {
-    font-size: 1.4rem;
-    height: 35px;
+    font-size: 1.6rem;
+    height: 38px;
     padding: 0;
   }
-  
+
   .dlog-item h3::before {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     height: 100%;
   }
-  
+
   .dlog-item .dlog-meta .dlog-time,
   .dlog-item .dlog-meta .dlog-loc {
-    height: 20px;
-    font-size: 0.6rem;
+    height: 22px;
+    font-size: 0.65rem;
   }
-  
+
   .dlog-item .dlog-sub {
     font-size: 0.9rem;
   }
-  
+
   .dlog-item .dlog-txt {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
   }
-  
+
+  /* 手机端保持 PC 端的头部布局，时间和地点仍在右侧 */
   .dlog-item .dlog-header {
-    flex-direction: column;
+    flex-direction: row;
     gap: 0.4rem;
-    align-items: stretch;
+    align-items: center;
   }
-  
+
   .dlog-item .dlog-meta {
-    align-items: flex-start;
-    margin-left: 0;
-    min-width: auto;
+    align-items: flex-end;
+    margin-left: 0.5rem;
+    min-width: 110px;
   }
-  
+
   .dlog-item .dlog-pics img {
     height: 80px;
   }
-  
+
   .dlog-item .dlog-pics:has(img:only-child) img {
     height: 120px;
   }
-  
+
 
 }
 
@@ -1138,41 +1154,41 @@ article.dlogs .header .single-subtitle {
   article.dlogs {
     padding: 0.4rem;
   }
-  
+
   .dlog-item {
-    padding: 0.4rem 0.5rem;
+    padding: 0.35rem 0.45rem;
   }
-  
+
   .dlog-item h3 {
-    font-size: 1.2rem;
-    height: 30px;
+    font-size: 1.5rem;
+    height: 36px;
     padding: 0;
   }
-  
+
   .dlog-item h3::before {
-    font-size: 1.4rem;
+    font-size: 1.7rem;
     height: 100%;
   }
-  
+
   .dlog-item .dlog-meta .dlog-time,
   .dlog-item .dlog-meta .dlog-loc {
-    height: 16px;
-    font-size: 0.55rem;
+    height: 22px;
+    font-size: 0.62rem;
   }
-  
+
   .dlog-item .dlog-pics {
     flex-wrap: wrap;
     gap: 0.2rem;
   }
-  
+
   .dlog-item .dlog-pics img {
     height: 70px;
   }
-  
+
   .dlog-item .dlog-pics:has(img:only-child) img {
     height: 100px;
   }
-  
+
 
 }
 

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>抓住猫咪游戏</title>
+    
+    <script src="/js/CatchTheCAT/phaser.min.js"></script>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #game-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="game-container">
+        <div id= "catch-the-cat" ></div>
+        <script src="/js/CatchTheCAT/catch-the-cat.js"></script>
+        <script>
+            window.game = new CatchTheCatGame({
+                w: 11,
+                h: 11,
+                r: 20,
+                initialWallCount: 8,
+                backgroundColor: 0xffffff,
+                parent: 'catch-the-cat',
+                statusBarAlign: 'center',
+                credit: '圈小猫'
+
+            });
+        </script>
+    </div>
+</body>
+</html>
