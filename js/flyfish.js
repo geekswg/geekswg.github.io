@@ -12,6 +12,7 @@ const RENDERER = {
   FISH_COLOR: '#ff0000', // 鱼的颜色，可以修改为其他颜色
   FISH_BACKGROUND_LIGHT: 'rgb(0 119 190 / 8%)',
   FISH_BACKGROUND_DARK: 'rgb(255 255 255 / 8%)',
+  THEME_IS_DARK: false, // 这里假设 fixit.isDark 是一个布尔值，表示当前是否为暗色主题
   FISH_STYLE: `
     .footer {
       position: relative;
@@ -182,7 +183,7 @@ const RENDERER = {
       self.controlStatus();
       self.context.clearRect(0, 0, self.width, self.height);
       // 这里利用 FixIt 主题的 isDark 属性来判断是否是暗色主题
-      if (fixit.isDark) {
+      if (self.THEME_IS_DARK) {
         self.context.fillStyle = self.FISH_BACKGROUND_DARK;
       } else {
         self.context.fillStyle = self.FISH_BACKGROUND_LIGHT;
@@ -415,5 +416,6 @@ FISH.prototype = {
 // };
 
 window.addEventListener("load", function () {
+  RENDERER.THEME_IS_DARK = fixit.isDark; // 假设 fixit.isDark 是一个布尔值，表示当前是否为暗色主题
   RENDERER.init();
 });

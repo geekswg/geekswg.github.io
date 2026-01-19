@@ -1,4 +1,850 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>毕少侠</title><link>https://geekswg.js.cool/</link><description>博客：探索、发现、分享 By geekswg-[毕少侠]</description><generator>Hugo 0.154.5 &amp; FixIt v0.4.2-20260114101213-fdfd7721</generator><language>zh-CN</language><managingEditor>geekswg@qq.com (geekswg)</managingEditor><webMaster>geekswg@qq.com (geekswg)</webMaster><copyright>geekswg &amp; 毕少侠</copyright><lastBuildDate>Tue, 13 Jan 2026 02:17:45 +0800</lastBuildDate><atom:link href="https://geekswg.js.cool/index.xml" rel="self" type="application/rss+xml"/><item><title>Cloudflare部署CFnew终端</title><link>https://geekswg.js.cool/posts/2026/cf-new/</link><pubDate>Sun, 11 Jan 2026 16:40:02 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2026/cf-new/</guid><category domain="https://geekswg.js.cool/categories/tutorial/">tutorial</category><description>&lt;p&gt;&lt;a href="https://github.com/byJoey/cfnew" target="_blank" rel="external nofollow noopener noreferrer"&gt;CFnew&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt; - 终端 v2.9&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>毕少侠</title><link>https://geekswg.js.cool/</link><description>博客：探索、发现、分享 By geekswg-[毕少侠]</description><generator>Hugo 0.154.5 &amp; FixIt v0.4.2-20260114101213-fdfd7721</generator><language>zh-CN</language><managingEditor>geekswg@qq.com (geekswg)</managingEditor><webMaster>geekswg@qq.com (geekswg)</webMaster><copyright>geekswg &amp; 毕少侠</copyright><lastBuildDate>Mon, 19 Jan 2026 20:11:15 +0800</lastBuildDate><atom:link href="https://geekswg.js.cool/index.xml" rel="self" type="application/rss+xml"/><item><title>js的魔法特效</title><link>https://geekswg.js.cool/posts/2026/js-magic/</link><pubDate>Mon, 19 Jan 2026 18:51:00 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2026/js-magic/</guid><category domain="https://geekswg.js.cool/categories/dev/">开发</category><description>&lt;h2 class="heading-element" id="游动的小鱼"&gt;&lt;span&gt;游动的小鱼&lt;/span&gt;
+ &lt;a href="#%e6%b8%b8%e5%8a%a8%e7%9a%84%e5%b0%8f%e9%b1%bc" class="heading-mark"&gt;
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
+ &lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;&lt;a href="javascript:window.scrollTo(0, document.body.scrollHeight);" &gt;查看效果 &lt;/a&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;/**
+ * 源码来自互联网，作者不详
+ * @modified by Lruihao 2024-05-21 移除依赖 jQuery
+ * @description 一个鱼游动的动画效果
+ */
+const RENDERER = {
+ POINT_INTERVAL: 5,
+ FISH_COUNT: 3,
+ MAX_INTERVAL_COUNT: 50,
+ INIT_HEIGHT_RATE: 0.5,
+ THRESHOLD: 50,
+ FISH_COLOR: &amp;#39;#ff0000&amp;#39;, // 鱼的颜色，可以修改为其他颜色，默认置空
+ FISH_BACKGROUND_LIGHT: &amp;#39;rgb(0 119 190 / 8%)&amp;#39;,
+ FISH_BACKGROUND_DARK: &amp;#39;rgb(255 255 255 / 8%)&amp;#39;,
+ THEME_STATE: fixit.isDark, // 这里利用 FixIt 主题的 isDark 属性来判断是否是暗色主题
+ FISH_STYLE: `
+ .footer {
+ position: relative;
+ }
+ #flyfish {
+ position: absolute;
+ width: 100%;
+ height: 230px;
+ overflow: hidden;
+ left: 0;
+ bottom: 0;
+ z-index: -1;
+ pointer-events: none;
+ }`,
+
+ init: function () {
+ this.setParameters();
+ this.setStyle();
+ this.reconstructMethods();
+ this.setup();
+ this.bindEvent();
+ this.render();
+ },
+ setParameters: function () {
+ this.window = window;
+ this.container = document.createElement(&amp;#34;div&amp;#34;);
+ this.container.id = &amp;#34;flyfish&amp;#34;;
+ this.canvas = document.createElement(&amp;#34;canvas&amp;#34;);
+ this.context = this.canvas.getContext(&amp;#34;2d&amp;#34;);
+ this.points = [];
+ this.fishes = [];
+ this.watchIds = [];
+ document.querySelector(&amp;#39;.footer&amp;#39;).appendChild(this.container);
+ //document.body.appendChild(this.container);
+ },
+ setStyle: function () {
+ const style = document.createElement(&amp;#34;style&amp;#34;);
+ style.innerHTML = this.FISH_STYLE;
+ document.querySelector(&amp;#34;head&amp;#34;).appendChild(style);
+ },
+ createSurfacePoints: function () {
+ const count = Math.round(this.width / this.POINT_INTERVAL);
+ this.pointInterval = this.width / (count - 1);
+ this.points.push(new SURFACE_POINT(this, 0));
+
+ for (let i = 1; i &amp;lt; count; i&amp;#43;&amp;#43;) {
+ const point = new SURFACE_POINT(this, i * this.pointInterval),
+ previous = this.points[i - 1];
+
+ point.setPreviousPoint(previous);
+ previous.setNextPoint(point);
+ this.points.push(point);
+ }
+ },
+ reconstructMethods: function () {
+ this.watchWindowSize = this.watchWindowSize.bind(this);
+ this.jdugeToStopResize = this.jdugeToStopResize.bind(this);
+ this.startEpicenter = this.startEpicenter.bind(this);
+ this.moveEpicenter = this.moveEpicenter.bind(this);
+ this.render = this.render.bind(this);
+ },
+ setup: function () {
+ this.points.length = 0;
+ this.fishes.length = 0;
+ this.watchIds.length = 0;
+ this.intervalCount = this.MAX_INTERVAL_COUNT;
+
+ this.containerWidth = this.container.offsetWidth;
+ this.containerHeight = this.container.offsetHeight;
+ this.width = this.containerWidth;
+ this.height = this.containerHeight;
+ this.fishCount =
+ (((this.FISH_COUNT * this.width) / 500) * this.height) / 500;
+ this.canvas.width = this.width;
+ this.canvas.height = this.height;
+ this.reverse = false;
+
+ this.container.appendChild(this.canvas);
+ this.fishes.push(new FISH(this));
+ this.createSurfacePoints();
+ },
+ watchWindowSize: function () {
+ this.clearTimer();
+ this.tmpWidth = this.window.innerWidth;
+ this.tmpHeight = this.window.innerHeight;
+ this.watchIds.push(setTimeout(this.jdugeToStopResize, this.WATCH_INTERVAL));
+ },
+ clearTimer: function () {
+ while (this.watchIds.length &amp;gt; 0) {
+ clearTimeout(this.watchIds.pop());
+ }
+ },
+ jdugeToStopResize: function () {
+ const width = this.window.innerWidth,
+ height = this.window.innerHeight,
+ stopped = width == this.tmpWidth &amp;amp;&amp;amp; height == this.tmpHeight;
+
+ this.tmpWidth = width;
+ this.tmpHeight = height;
+
+ if (stopped) {
+ this.setup();
+ }
+ },
+ bindEvent: function () {
+ const self = this;
+ this.window.addEventListener(&amp;#34;resize&amp;#34;, function () {
+ self.watchWindowSize();
+ });
+ this.container.addEventListener(&amp;#34;mouseenter&amp;#34;, function (event) {
+ self.startEpicenter(event);
+ });
+ this.container.addEventListener(&amp;#34;mousemove&amp;#34;, function (event) {
+ self.moveEpicenter(event);
+ });
+ },
+ getAxis: function (event) {
+ const offset = this.container.getBoundingClientRect();
+
+ return {
+ x: event.clientX - offset.left &amp;#43; this.window.scrollX,
+ y: event.clientY - offset.top &amp;#43; this.window.scrollY,
+ };
+ },
+ startEpicenter: function (event) {
+ this.axis = this.getAxis(event);
+ },
+ moveEpicenter: function (event) {
+ const axis = this.getAxis(event);
+
+ if (!this.axis) {
+ this.axis = axis;
+ }
+ this.generateEpicenter(axis.x, axis.y, axis.y - this.axis.y);
+ this.axis = axis;
+ },
+ generateEpicenter: function (x, y, velocity) {
+ if (
+ y &amp;lt; this.height / 2 - this.THRESHOLD ||
+ y &amp;gt; this.height / 2 &amp;#43; this.THRESHOLD
+ ) {
+ return;
+ }
+ const index = Math.round(x / this.pointInterval);
+
+ if (index &amp;lt; 0 || index &amp;gt;= this.points.length) {
+ return;
+ }
+ this.points[index].interfere(y, velocity);
+ },
+ controlStatus: function () {
+ for (let i = 0, count = this.points.length; i &amp;lt; count; i&amp;#43;&amp;#43;) {
+ this.points[i].updateSelf();
+ }
+ for (let i = 0, count = this.points.length; i &amp;lt; count; i&amp;#43;&amp;#43;) {
+ this.points[i].updateNeighbors();
+ }
+ if (this.fishes.length &amp;lt; this.fishCount) {
+ if (--this.intervalCount == 0) {
+ this.intervalCount = this.MAX_INTERVAL_COUNT;
+ this.fishes.push(new FISH(this));
+ }
+ }
+ },
+ render: function () {
+ const self = this;
+ function renderFrame() {
+ self.controlStatus();
+ self.context.clearRect(0, 0, self.width, self.height);
+ if (self.THEME_STATE) {
+ self.context.fillStyle = self.FISH_BACKGROUND_DARK;
+ } else {
+ self.context.fillStyle = self.FISH_BACKGROUND_LIGHT;
+ }
+ for (let i = 0, count = self.fishes.length; i &amp;lt; count; i&amp;#43;&amp;#43;) {
+ self.fishes[i].render(self.context);
+ }
+ self.context.save();
+ self.context.globalCompositeOperation = &amp;#34;xor&amp;#34;;
+ self.context.beginPath();
+ self.context.moveTo(0, self.reverse ? 0 : self.height);
+
+ for (let i = 0, count = self.points.length; i &amp;lt; count; i&amp;#43;&amp;#43;) {
+ self.points[i].render(self.context);
+ }
+ self.context.lineTo(self.width, self.reverse ? 0 : self.height);
+ self.context.closePath();
+ self.context.fill();
+ self.context.restore();
+
+ requestAnimationFrame(renderFrame);
+ }
+ renderFrame();
+ },
+ randomColor: function () {
+ var letters = &amp;#39;0123456789ABCDEF&amp;#39;;
+ var color = &amp;#39;#&amp;#39;;
+ for (var i = 0; i &amp;lt; 6; i&amp;#43;&amp;#43;) {
+ color &amp;#43;= letters[Math.floor(Math.random() * 16)];
+ }
+ return color;
+ }
+};
+
+// SURFACE_POINT class
+function SURFACE_POINT(renderer, x) {
+ this.renderer = renderer;
+ this.x = x;
+ this.init();
+}
+SURFACE_POINT.prototype = {
+ SPRING_CONSTANT: 0.03,
+ SPRING_FRICTION: 0.9,
+ WAVE_SPREAD: 0.3,
+ ACCELARATION_RATE: 0.01,
+
+ init: function () {
+ this.initHeight = this.renderer.height * this.renderer.INIT_HEIGHT_RATE;
+ this.height = this.initHeight;
+ this.fy = 0;
+ this.force = { previous: 0, next: 0 };
+ },
+ setPreviousPoint: function (previous) {
+ this.previous = previous;
+ },
+ setNextPoint: function (next) {
+ this.next = next;
+ },
+ interfere: function (y, velocity) {
+ this.fy =
+ this.renderer.height *
+ this.ACCELARATION_RATE *
+ (this.renderer.height - this.height - y &amp;gt;= 0 ? -1 : 1) *
+ Math.abs(velocity);
+ },
+ updateSelf: function () {
+ this.fy &amp;#43;= this.SPRING_CONSTANT * (this.initHeight - this.height);
+ this.fy *= this.SPRING_FRICTION;
+ this.height &amp;#43;= this.fy;
+ },
+ updateNeighbors: function () {
+ if (this.previous) {
+ this.force.previous =
+ this.WAVE_SPREAD * (this.height - this.previous.height);
+ }
+ if (this.next) {
+ this.force.next = this.WAVE_SPREAD * (this.height - this.next.height);
+ }
+ },
+ render: function (context) {
+ if (this.previous) {
+ this.previous.height &amp;#43;= this.force.previous;
+ this.previous.fy &amp;#43;= this.force.previous;
+ }
+ if (this.next) {
+ this.next.height &amp;#43;= this.force.next;
+ this.next.fy &amp;#43;= this.force.next;
+ }
+ context.lineTo(this.x, this.renderer.height - this.height);
+ },
+};
+
+// FISH class
+function FISH(renderer) {
+ this.renderer = renderer;
+ this.init();
+}
+FISH.prototype = {
+ GRAVITY: 0.5,
+ init: function () {
+ this.direction = Math.random() &amp;lt; 0.5;
+ this.x = this.direction
+ ? this.renderer.width &amp;#43; this.renderer.THRESHOLD
+ : -this.renderer.THRESHOLD;
+ this.previousY = this.y;
+ this.vx = this.getRandomValue(4, 10) * (this.direction ? -1 : 1);
+
+ if (this.renderer.reverse) {
+ this.y = this.getRandomValue(
+ (this.renderer.height * 1) / 10,
+ (this.renderer.height * 4) / 10
+ );
+ this.vy = this.getRandomValue(2, 5);
+ this.ay = this.getRandomValue(0.05, 0.2);
+ } else {
+ this.y = this.getRandomValue(
+ (this.renderer.height * 6) / 10,
+ (this.renderer.height * 9) / 10
+ );
+ this.vy = this.getRandomValue(-5, -2);
+ this.ay = this.getRandomValue(-0.2, -0.05);
+ }
+ this.isOut = false;
+ this.theta = 0;
+ this.phi = 0;
+ },
+ getRandomValue: function (min, max) {
+ return min &amp;#43; (max - min) * Math.random();
+ },
+ controlStatus: function (context) {
+ this.previousY = this.y;
+ this.x &amp;#43;= this.vx;
+ this.y &amp;#43;= this.vy;
+ this.vy &amp;#43;= this.ay;
+
+ if (this.renderer.reverse) {
+ if (this.y &amp;gt; this.renderer.height * this.renderer.INIT_HEIGHT_RATE) {
+ this.vy -= this.GRAVITY;
+ this.isOut = true;
+ } else {
+ if (this.isOut) {
+ this.ay = this.getRandomValue(0.05, 0.2);
+ }
+ this.isOut = false;
+ }
+ } else {
+ if (this.y &amp;lt; this.renderer.height * this.renderer.INIT_HEIGHT_RATE) {
+ this.vy &amp;#43;= this.GRAVITY;
+ this.isOut = true;
+ } else {
+ if (this.isOut) {
+ this.ay = this.getRandomValue(-0.2, -0.05);
+ }
+ this.isOut = false;
+ }
+ }
+ if (!this.isOut) {
+ this.theta &amp;#43;= Math.PI / 20;
+ this.theta %= Math.PI * 2;
+ this.phi &amp;#43;= Math.PI / 30;
+ this.phi %= Math.PI * 2;
+ }
+ this.renderer.generateEpicenter(
+ this.x &amp;#43; (this.direction ? -1 : 1) * this.renderer.THRESHOLD,
+ this.y,
+ this.y - this.previousY
+ );
+
+ if (
+ (this.vx &amp;gt; 0 &amp;amp;&amp;amp; this.x &amp;gt; this.renderer.width &amp;#43; this.renderer.THRESHOLD) ||
+ (this.vx &amp;lt; 0 &amp;amp;&amp;amp; this.x &amp;lt; -this.renderer.THRESHOLD)
+ ) {
+ this.init();
+ }
+ },
+ render: function (context) {
+ 
+ context.save();
+ context.translate(this.x, this.y);
+ context.rotate(Math.PI &amp;#43; Math.atan2(this.vy, this.vx));
+ context.scale(1, this.direction ? 1 : -1);
+ context.fillStyle = this.renderer.FISH_COLOR;
+ context.beginPath();
+ context.moveTo(-30, 0);
+ context.bezierCurveTo(-20, 15, 15, 10, 40, 0);
+ context.bezierCurveTo(15, -10, -20, -15, -30, 0);
+ context.fill();
+
+ context.save();
+ context.translate(40, 0);
+ context.scale(0.9 &amp;#43; 0.2 * Math.sin(this.theta), 1);
+ context.beginPath();
+ context.moveTo(0, 0);
+ context.quadraticCurveTo(5, 10, 20, 8);
+ context.quadraticCurveTo(12, 5, 10, 0);
+ context.quadraticCurveTo(12, -5, 20, -8);
+ context.quadraticCurveTo(5, -10, 0, 0);
+ context.fill();
+ context.restore();
+
+ context.save();
+ context.translate(-3, 0);
+ context.rotate(
+ (Math.PI / 3 &amp;#43; (Math.PI / 10) * Math.sin(this.phi)) *
+ (this.renderer.reverse ? -1 : 1)
+ );
+
+ context.beginPath();
+
+ if (this.renderer.reverse) {
+ context.moveTo(5, 0);
+ context.bezierCurveTo(10, 10, 10, 30, 0, 40);
+ context.bezierCurveTo(-12, 25, -8, 10, 0, 0);
+ } else {
+ context.moveTo(-5, 0);
+ context.bezierCurveTo(-10, -10, -10, -30, 0, -40);
+ context.bezierCurveTo(12, -25, 8, -10, 0, 0);
+ }
+ context.closePath();
+ context.fill();
+ context.restore();
+ context.restore();
+ this.controlStatus(context);
+ 
+ },
+};
+
+// window.onload = function () {
+// RENDERER.init();
+// };
+
+window.addEventListener(&amp;#34;load&amp;#34;, function () {
+ RENDERER.init();
+});&lt;/code&gt;&lt;/pre&gt;&lt;h2 class="heading-element" id="动态彩虹带背景"&gt;&lt;span&gt;动态彩虹带背景&lt;/span&gt;
+ &lt;a href="#%e5%8a%a8%e6%80%81%e5%bd%a9%e8%99%b9%e5%b8%a6%e8%83%8c%e6%99%af" class="heading-mark"&gt;
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
+ &lt;/a&gt;
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;使用方法：直接在html中引入下面的js代码即可。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code&gt;(function (name, factory) {
+ if (typeof window === &amp;#34;object&amp;#34;) {
+ window[name] = factory();
+ }
+})
+ (&amp;#34;Ribbons&amp;#34;, function () {
+ var _w = window, _b = document.body, _d = document.documentElement;
+
+ //随机函数
+ var random = function () {
+ if (arguments.length === 1) {
+ if (Array.isArray(arguments[0])) {
+ var index = Math.round(random(0, arguments[0].length - 1));
+ return arguments[0][index];
+ }
+ return random(0, arguments[0]);
+ } else
+ if (arguments.length === 2) {
+ return Math.random() * (arguments[1] - arguments[0]) &amp;#43; arguments[0];
+ }
+ return 0;
+ };
+
+ //屏幕信息
+ var screenInfo = function (e) {
+ var width = Math.max(0, _w.innerWidth || _d.clientWidth || _b.clientWidth || 0),
+ height = Math.max(0, _w.innerHeight || _d.clientHeight || _b.clientHeight || 0),
+ scrollx = Math.max(0, _w.pageXOffset || _d.scrollLeft || _b.scrollLeft || 0) - (_d.clientLeft || 0),
+ scrolly = Math.max(0, _w.pageYOffset || _d.scrollTop || _b.scrollTop || 0) - (_d.clientTop || 0);
+ return {
+ width: width,
+ height: height,
+ ratio: width / height,
+ centerx: width / 2,
+ centery: height / 2,
+ scrollx: scrollx,
+ scrolly: scrolly
+ };
+ };
+
+ var mouseInfo = function (e) {
+ var screen = screenInfo(e),
+ mousex = e ? Math.max(0, e.pageX || e.clientX || 0) : 0,
+ mousey = e ? Math.max(0, e.pageY || e.clientY || 0) : 0;
+
+ return {
+ mousex: mousex,
+ mousey: mousey,
+ centerx: mousex - screen.width / 2,
+ centery: mousey - screen.height / 2
+ };
+ };
+
+ //点
+ var Point = function (x, y) {
+ this.x = 0;
+ this.y = 0;
+ this.set(x, y);
+ };
+ //点运算
+ Point.prototype = {
+ constructor: Point,
+ set: function (x, y) {
+ this.x = x || 0; this.y = y || 0;
+ },
+ copy: function (point) {
+ this.x = point.x || 0; this.y = point.y || 0; return this;
+ },
+ multiply: function (x, y) {
+ this.x *= x || 1; this.y *= y || 1; return this;
+ },
+ divide: function (x, y) {
+ this.x /= x || 1; this.y /= y || 1; return this;
+ },
+ add: function (x, y) {
+ this.x &amp;#43;= x || 0; this.y &amp;#43;= y || 0; return this;
+ },
+ subtract: function (x, y) {
+ this.x -= x || 0; this.y -= y || 0; return this;
+ },
+ clampX: function (min, max) {
+ this.x = Math.max(min, Math.min(this.x, max)); return this;
+ },
+ clampY: function (min, max) {
+ this.y = Math.max(min, Math.min(this.y, max)); return this;
+ },
+ flipX: function () {
+ this.x *= -1; return this;
+ },
+ flipY: function () {
+ this.y *= -1; return this;
+ }
+ };
+
+ //丝带画板
+ var Factory = function (options) {
+ this._canvas = null;
+ this._context = null;
+ this._sto = null;
+ this._width = 0;
+ this._height = 0;
+ this._scroll = 0;
+ this._ribbons = [];
+ this._options = {
+ id: &amp;#34;bgCanvas&amp;#34;,//画板Id
+ backgroundColor: &amp;#34;transparent&amp;#34;,//画板背景
+ colorSaturation: &amp;#34;80%&amp;#34;,//纯度
+ colorBrightness: &amp;#34;60%&amp;#34;,//亮度
+ colorAlpha: 0.2,//透明度
+ colorCycleSpeed: 6,//丝带不同块之间的色彩变化量
+ verticalPosition: &amp;#34;center&amp;#34;,//丝带相对于屏幕的初始位置：top/min 屏幕最上方，middle|center 中间，bottom|max 屏幕最下面
+ horizontalSpeed: 200,//丝带水平方向移动速度参数（会乘以一个随机值）
+ ribbonCount: 3,//同一时间丝带总条数
+ strokeSize: 0,//公共边路径样式
+ parallaxAmount: -0.5,//滚动偏移参数，-1表示不偏移，0表示基于丝带只出现在页面最上面
+ animateSections: true//丝带块是否偏移，显得有动感
+ };
+ this._onDraw = this._onDraw.bind(this);
+ this._onResize = this._onResize.bind(this);
+ this._onScroll = this._onScroll.bind(this);
+ this.setOptions(options);
+ this.init();
+ };
+ Factory.prototype = {
+ constructor: Factory,
+ setOptions: function (options) {
+ if (typeof options === &amp;#34;object&amp;#34;) {
+ for (var key in options) {
+ if (options.hasOwnProperty(key)) {
+ this._options[key] = options[key];
+ }
+ }
+ }
+ },
+ //初始化
+ init: function () {
+ //初始化画板
+ try {
+ this._canvas = document.createElement(&amp;#34;canvas&amp;#34;);
+ this._canvas.style[&amp;#34;display&amp;#34;] = &amp;#34;block&amp;#34;;
+ this._canvas.style[&amp;#34;position&amp;#34;] = &amp;#34;fixed&amp;#34;;
+ this._canvas.style[&amp;#34;margin&amp;#34;] = &amp;#34;0&amp;#34;;
+ this._canvas.style[&amp;#34;padding&amp;#34;] = &amp;#34;0&amp;#34;;
+ this._canvas.style[&amp;#34;border&amp;#34;] = &amp;#34;0&amp;#34;;
+ this._canvas.style[&amp;#34;outline&amp;#34;] = &amp;#34;0&amp;#34;;
+ this._canvas.style[&amp;#34;left&amp;#34;] = &amp;#34;0&amp;#34;;
+ this._canvas.style[&amp;#34;top&amp;#34;] = &amp;#34;0&amp;#34;;
+ this._canvas.style[&amp;#34;width&amp;#34;] = &amp;#34;100%&amp;#34;;
+ this._canvas.style[&amp;#34;height&amp;#34;] = &amp;#34;100%&amp;#34;;
+ this._canvas.style[&amp;#34;z-index&amp;#34;] = &amp;#34;-10&amp;#34;;
+ this._canvas.style[&amp;#34;background-color&amp;#34;] = this._options.backgroundColor;
+ this._canvas.id = this._options.id;
+ this._onResize();
+ this._context = this._canvas.getContext(&amp;#34;2d&amp;#34;);
+ this._context.clearRect(0, 0, this._width, this._height);
+ this._context.globalAlpha = this._options.colorAlpha;
+ window.addEventListener(&amp;#34;resize&amp;#34;, this._onResize);
+ window.addEventListener(&amp;#34;scroll&amp;#34;, this._onScroll);
+ document.body.appendChild(this._canvas);
+ }
+ catch (e) {
+ console.warn(&amp;#34;Canvas Context Error: &amp;#34; &amp;#43; e.toString());
+ return;
+ }
+ //开始绘画
+ this._onDraw();
+ },
+ //生成一条丝带
+ addRibbon: function () {
+ var dir = Math.round(random(1, 9)) &amp;gt; 5 ? &amp;#34;right&amp;#34; : &amp;#34;left&amp;#34;,//丝带延伸方向
+ stop = 1000,
+ hide = 200,
+ min = 0 - hide,
+ max = this._width &amp;#43; hide,
+ movex = 0,
+ movey = 0,
+ startx = dir === &amp;#34;right&amp;#34; ? min : max,//起始点x左边
+ starty = Math.round(random(0, this._height));//起始点y左边
+
+ //丝带生成的位置
+ if (/^(top|min)$/i.test(this._options.verticalPosition)) {//最上方
+ starty = 0 &amp;#43; hide;
+ } else if (/^(middle|center)$/i.test(this._options.verticalPosition)) {//中间
+ starty = this._height / 2;
+ } else if (/^(bottom|max)$/i.test(this._options.verticalPosition)) {//最下方
+ starty = this._height - hide;
+ }
+
+ if (this._options.parallaxAmount !== 0) {
+ starty &amp;#43;= this._scroll;//加上滚动
+ }
+
+ var ribbon = [],
+ point1 = new Point(startx, starty),
+ point2 = new Point(startx, starty),
+ point3 = null,
+ color = Math.round(random(0, 360)),
+ delay = 0;
+
+ //从起始位置开始生成一条丝带
+ //丝带每个分部都是一个三角形，三点确定一个三角形，相邻三角形有一条公共边
+ while (true) {
+ if (stop &amp;lt;= 0) break;
+ stop--;
+ movex = Math.round((Math.random() * 1 - 0.2) * this._options.horizontalSpeed);
+ movey = Math.round((Math.random() * 1 - 0.5) * (this._height * 0.25));
+ point3 = new Point();
+ point3.copy(point2);
+ if (dir === &amp;#34;right&amp;#34;) {
+ point3.add(movex, movey);
+ if (point2.x &amp;gt;= max) break;
+ } else if (dir === &amp;#34;left&amp;#34;) {
+ point3.subtract(movex, movey);
+ if (point2.x &amp;lt;= min) break;
+ }
+ ribbon.push({
+ //三点
+ point1: new Point(point1.x, point1.y),
+ point2: new Point(point2.x, point2.y),
+ point3: point3,
+ color: color,//丝带颜色
+ delay: delay,//延迟消失
+ dir: dir,//方向
+ alpha: 0,//透明度
+ phase: 0 //随机位移有关参数
+ });
+ //公共边
+ point1.copy(point2);
+ point2.copy(point3);
+ delay &amp;#43;= 4;
+ color &amp;#43;= this._options.colorCycleSpeed;
+ }
+ this._ribbons.push(ribbon);
+ },
+ //绘制一个三角形方块
+ _drawRibbonSection: function (section) {
+ if (section) {
+ if (section.phase &amp;gt;= 1 &amp;amp;&amp;amp; section.alpha &amp;lt;= 0) {
+ return true;
+ }
+ if (section.delay &amp;lt;= 0) {
+ section.phase &amp;#43;= 0.02;
+ section.alpha = Math.sin(section.phase) * 1;
+ section.alpha = section.alpha &amp;lt;= 0 ? 0 : section.alpha;
+ section.alpha = section.alpha &amp;gt;= 1 ? 1 : section.alpha;
+ if (this._options.animateSections) {
+ var mod = Math.sin(1 &amp;#43; section.phase * Math.PI / 2) * 0.1;
+ if (section.dir === &amp;#34;right&amp;#34;) {
+ section.point1.add(mod, 0);
+ section.point2.add(mod, 0);
+ section.point3.add(mod, 0);
+ } else {
+ section.point1.subtract(mod, 0);
+ section.point2.subtract(mod, 0);
+ section.point3.subtract(mod, 0);
+ }
+ section.point1.add(0, mod);
+ section.point2.add(0, mod);
+ section.point3.add(0, mod);
+ }
+ } else {
+ section.delay -= 0.5;
+ }
+ var s = this._options.colorSaturation,
+ l = this._options.colorBrightness,
+ c = &amp;#34;hsla(&amp;#34; &amp;#43; section.color &amp;#43; &amp;#34;, &amp;#34; &amp;#43; s &amp;#43; &amp;#34;, &amp;#34; &amp;#43; l &amp;#43; &amp;#34;, &amp;#34; &amp;#43; section.alpha &amp;#43; &amp;#34; )&amp;#34;;
+
+ //绘制一个方块
+ this._context.save();
+ if (this._options.parallaxAmount !== 0) {
+ this._context.translate(0, this._scroll * this._options.parallaxAmount);
+ }
+ this._context.beginPath();
+ this._context.moveTo(section.point1.x, section.point1.y);
+ this._context.lineTo(section.point2.x, section.point2.y);
+ this._context.lineTo(section.point3.x, section.point3.y);
+ this._context.fillStyle = c;
+ this._context.fill();
+ if (this._options.strokeSize &amp;gt; 0) {
+ this._context.lineWidth = this._options.strokeSize;
+ this._context.strokeStyle = c;
+ this._context.lineCap = &amp;#34;round&amp;#34;;
+ this._context.stroke();
+ }
+ this._context.restore();
+ }
+ return false;
+ },
+ //绘制丝带
+ _onDraw: function () {
+ //清空已经绘制过的丝带
+ for (var i = 0, t = this._ribbons.length; i &amp;lt; t; &amp;#43;&amp;#43;i) {
+ if (!this._ribbons[i]) {
+ this._ribbons.splice(i, 1);
+ }
+ }
+ this._context.clearRect(0, 0, this._width, this._height);//清空画板
+ for (var a = 0; a &amp;lt; this._ribbons.length; &amp;#43;&amp;#43;a) {
+ var ribbon = this._ribbons[a],
+ numSections = ribbon ? ribbon.length : 0,
+ numDone = 0;
+
+ //绘制整条丝带
+ for (var b = 0; b &amp;lt; numSections; &amp;#43;&amp;#43;b) {
+ if (this._drawRibbonSection(ribbon[b])) {
+ numDone&amp;#43;&amp;#43;;
+ }
+ }
+ //丝带已经全部飘过屏幕，设置为null,函数前面会自动清理
+ if (numDone &amp;gt;= numSections) {
+ this._ribbons[a] = null;
+ }
+ }
+ //随机生成一条丝带
+ if (this._ribbons.length &amp;lt; this._options.ribbonCount &amp;amp;&amp;amp; Math.random() &amp;gt; 0.99) {
+ this.addRibbon();
+ }
+
+ //调度交给系统，当需要刷新画板时调用指定的回调函数，用于提高性能
+ requestAnimationFrame(this._onDraw);
+ },
+ //重新设置窗体大小时需要获取窗体大小
+ _onResize: function (e) {
+ var screen = screenInfo(e);
+ this._width = screen.width;
+ this._height = screen.height;
+ if (this._canvas) {
+ this._canvas.width = this._width;
+ this._canvas.height = this._height;
+ if (this._context) {
+ this._context.globalAlpha = this._options.colorAlpha;
+ }
+ }
+ },
+ //滚动时获取滚动距离
+ _onScroll: function (e) {
+ var screen = screenInfo(e);
+ this._scroll = screen.scrolly;
+ }
+ }; return Factory;
+ });
+
+//初始化并绘制
+new Ribbons({
+ ribbonCount: 5,
+ parallaxAmount: -0.99
+});
+options = {
+ id: &amp;#34;bgCanvas&amp;#34;,//画板Id
+ backgroundColor: &amp;#34;#1f1f1f&amp;#34;,//画板背景
+ colorSaturation: &amp;#34;80%&amp;#34;,//纯度
+ colorBrightness: &amp;#34;60%&amp;#34;,//亮度
+ colorAlpha: 0.65,//透明度
+ colorCycleSpeed: 6,//丝带不同块之间的色彩变化量
+ verticalPosition: &amp;#34;center&amp;#34;,//丝带相对于屏幕的初始位置：top/min 屏幕最上方，middle|center 中间，bottom|max 屏幕最下面
+ horizontalSpeed: 200,//丝带水平方向移动速度参数（会乘以一个随机值）
+ ribbonCount: 3,//同一时间丝带总条数
+ strokeSize: 0,//公共边路径样式
+ parallaxAmount: -0.5,//滚动偏移参数，-1表示不偏移，0表示基于丝带只出现在页面最上面
+ animateSections: true//丝带块是否偏移，显得有动感
+};&lt;/code&gt;&lt;/pre&gt;&lt;h2 class="heading-element" id="canvas数字时钟"&gt;&lt;span&gt;canvas数字时钟&lt;/span&gt;
+ &lt;a href="#canvas%e6%95%b0%e5%ad%97%e6%97%b6%e9%92%9f" class="heading-mark"&gt;
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
+ &lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;效果见主页或者侧边栏的数字时钟。&lt;/p&gt;
+&lt;p&gt;使用方法：将下面的html代码放到你想显示数字时钟的位置，并引入canvasTime.js脚本即可,可以通过colckColor参数指定时钟的颜色，如果没有指定，则七种颜色随机生成。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;!-- 数字时钟 --&amp;gt;
+&amp;lt;div class=&amp;#34;aside-custom&amp;#34; &amp;gt;
+ &amp;lt;canvas style=&amp;#34;width:100%;&amp;#34; id=&amp;#34;canvasTime&amp;#34; &amp;gt;当前浏览器不支持canvas，请更换浏览器后再试&amp;lt;/canvas&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;script src=&amp;#34;/js/canvasTime.js?colckColor=red&amp;#34; &amp;gt;&amp;lt;/script&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;a href="https://geekswg.js.cool/js/canvasTime.js"&gt;canvasTime.js脚本源码&lt;/a&gt;&lt;/p&gt;
+&lt;h2 class="heading-element" id="飞舞雪花"&gt;&lt;span&gt;飞舞雪花&lt;/span&gt;
+ &lt;a href="#%e9%a3%9e%e8%88%9e%e9%9b%aa%e8%8a%b1" class="heading-mark"&gt;
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
+ &lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;&lt;a href="javascript:startSnow()"&gt;开始下雪&lt;/a&gt;
+&lt;a href="javascript:stopSnow()"&gt;停止下雪&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;查看源码 &lt;a href="https://geekswg.js.cool/js/flysnow.js"&gt;js/flysnow.js&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;script&gt;
+ function startSnow(){
+ if (!window.snowfall) {
+ loadJS('/js/flysnow.js?snowColor=f00');
+ } else if (!window.snowfall.isRunning) {
+ window.snowfall.toggle();
+ }
+ }
+ function stopSnow(){
+ if (window.snowfall) {
+ window.snowfall.destroy();
+ window.snowfall = null;
+ }
+ }
+ function loadJS(src){
+ var script = document.createElement('script');
+ script.src = src;
+ document.head.appendChild(script);
+ }
+&lt;/script&gt;
+&lt;!--
+&gt; [!NOTE]
+&gt; 突出显示用户应考虑的信息，即使只是浏览也应考虑。
+
+&gt; [!TIP]
+&gt; 可选信息，可帮助用户取得更大的成功。
+
+&gt; [!IMPORTANT]
+&gt; 用户成功所需的关键信息。
+
+&gt; [!WARNING]
+&gt; 由于存在潜在风险，需要用户立即关注的关键内容。
+
+&gt; [!CAUTION]
+&gt; 操作的潜在负面后果。
+这里使用MD语法编写你的文章
+ --&gt;</description></item><item><title>Cloudflare部署CFnew终端</title><link>https://geekswg.js.cool/posts/2026/cf-new/</link><pubDate>Sun, 11 Jan 2026 16:40:02 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2026/cf-new/</guid><category domain="https://geekswg.js.cool/categories/tutorial/">tutorial</category><description>&lt;p&gt;&lt;a href="https://github.com/byJoey/cfnew" target="_blank" rel="external nofollow noopener noreferrer"&gt;CFnew&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt; - 终端 v2.9&lt;/p&gt;
 &lt;h2 class="heading-element" id="介绍"&gt;&lt;span&gt;介绍&lt;/span&gt;
  &lt;a href="#%e4%bb%8b%e7%bb%8d" class="heading-mark"&gt;
  &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
@@ -1449,215 +2295,4 @@ function pjax_js_reload(js_url, callback) {
 &lt;/ul&gt;
 &lt;blockquote&gt;
 &lt;p&gt;例如：网站页面贴边的音乐播放器，我在切换页面时，不需要重新加载音乐播放器，只需要重新加载页面中改变的部分即可。&lt;/p&gt;
-&lt;/blockquote&gt;</description></item><item><title>Layui Shortcodes Demo</title><link>https://geekswg.js.cool/posts/2024/layui-shortcodes-demo/</link><pubDate>Wed, 03 Jan 2024 09:35:22 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2024/layui-shortcodes-demo/</guid><category domain="https://geekswg.js.cool/categories/theme/">theme</category><description>&lt;img src="https://geekswg.js.cool/images/posts/featured-image-preview.jpg" alt="featured image" referrerpolicy="no-referrer"&gt;&lt;div class="details admonition note open"&gt;
- &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-solid fa-pencil-alt" aria-hidden="true"&gt;&lt;/i&gt;注意&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;&lt;div class="details-content"&gt;
- &lt;div class="admonition-content"&gt;这是介绍一个依赖layui的shortcodes示例，的实现和使用方法&lt;/div&gt;
- &lt;/div&gt;
-&lt;/div&gt;
-&lt;h2 class="heading-element" id="为什么使用layui"&gt;&lt;span&gt;为什么使用Layui&lt;/span&gt;
- &lt;a href="#%e4%b8%ba%e4%bb%80%e4%b9%88%e4%bd%bf%e7%94%a8layui" class="heading-mark"&gt;
- &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
- &lt;/a&gt;
-&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;不善前端&lt;/li&gt;
-&lt;li&gt;ui组件全&lt;/li&gt;
-&lt;li&gt;符合我的审美&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 class="heading-element" id="tabs-选项卡"&gt;&lt;span&gt;tabs-选项卡&lt;/span&gt;
- &lt;a href="#tabs-%e9%80%89%e9%a1%b9%e5%8d%a1" class="heading-mark"&gt;
- &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
- &lt;/a&gt;
-&lt;/h2&gt;
-&lt;link href="//unpkg.com/layui@2.9.3/dist/css/layui.css" rel="stylesheet"&gt;
-
-&lt;script src="//unpkg.com/layui@2.9.3/dist/layui.js"&gt;&lt;/script&gt;&lt;div class="layui-tab layui-tab-card" lay-filter="layui-tabs-demo" &gt;
- &lt;ul class="layui-tab-title"&gt;&lt;li class="layui-this" &gt;示例代码&lt;/li&gt;
- 
- &lt;li&gt;实现&lt;/li&gt;&lt;/ul&gt;
- &lt;div class="layui-tab-content"&gt;&lt;div class="layui-tab-item layui-show" &gt;&lt;pre&gt;&lt;code&gt;{{&amp;lt; layui-tabs name=&amp;#34;layui-tabs-2&amp;#34; &amp;gt;}}
- {{% layui-tab title=&amp;#34;t1&amp;#34; %}}
-这是t1内容，支持`MD`语法
- {{% /layui-tab %}}
- {{&amp;lt; layui-tab title=&amp;#34;t2&amp;#34; &amp;gt;}}这是t2的内容{{&amp;lt; /layui-tab &amp;gt;}}
-{{&amp;lt; /layui-tabs &amp;gt;}}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
- 
- &lt;div class="layui-tab-item"&gt;&lt;blockquote&gt;
-&lt;p&gt;自定义shortcodes，实现tabs功能，自定义&lt;code&gt;shortcodes&lt;/code&gt;请参考&lt;a href="https://gohugo.io/templates/shortcode-templates/" target="_blank" rel="external nofollow noopener noreferrer"&gt;官方文档&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;在&lt;code&gt;/lauout/shortcodes/&lt;/code&gt;目录下创建&lt;code&gt;layui-tabs.html&lt;/code&gt; 和 &lt;code&gt;layui-tab.html&lt;/code&gt; 文件，内容如下：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;!-- 引入 layui.css --&amp;gt;
-&amp;lt;link href=&amp;#34;//unpkg.com/layui@2.9.3/dist/css/layui.css&amp;#34; rel=&amp;#34;stylesheet&amp;#34;&amp;gt;
-&amp;lt;!-- 请勿在项目正式环境中引用该 layui.js 地址 --&amp;gt;
-&amp;lt;script src=&amp;#34;//unpkg.com/layui@2.9.3/dist/layui.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt;
-
-{{- .Page.Scratch.Add &amp;#34;tabset-counter&amp;#34; 1 -}}
-{{- $tab_set_id := .Get &amp;#34;name&amp;#34; | default (printf &amp;#34;tabset-%s-%d&amp;#34; (.Page.RelPermalink) (.Page.Scratch.Get &amp;#34;tabset-counter&amp;#34;) ) | anchorize -}}
-{{- $tabs := .Scratch.Get &amp;#34;layui-tabs&amp;#34; -}}
-
-{{- if .Inner -}}{{- /* We don&amp;#39;t use the inner content, but Hugo will complain if we don&amp;#39;t reference it. */ -}}{{- end -}}
-
-&amp;lt;div class=&amp;#34;layui-tab layui-tab-card&amp;#34; lay-filter=&amp;#34;{{ $tab_set_id }}&amp;#34; &amp;gt;
- &amp;lt;ul class=&amp;#34;layui-tab-title&amp;#34;&amp;gt;
- {{- range $i, $e := $tabs -}}
- {{- if (eq $i 0) -}}
- &amp;lt;li class=&amp;#34;layui-this&amp;#34; &amp;gt; {{- trim .title &amp;#34; &amp;#34; -}} &amp;lt;/li&amp;gt;
- {{ else }}
- &amp;lt;li&amp;gt; {{- trim .title &amp;#34; &amp;#34; -}} &amp;lt;/li&amp;gt;
- {{- end -}}
-
- {{- end -}}
- &amp;lt;/ul&amp;gt;
- &amp;lt;div class=&amp;#34;layui-tab-content&amp;#34;&amp;gt;
- {{- range $i, $e := $tabs -}}
-
- {{- if (eq $i 0) -}}
- &amp;lt;div class=&amp;#34;layui-tab-item layui-show&amp;#34; &amp;gt;
- {{- .content -}}
- &amp;lt;/div&amp;gt;
- {{ else }}
- &amp;lt;div class=&amp;#34;layui-tab-item&amp;#34;&amp;gt;
- {{- .content -}}
- &amp;lt;/div&amp;gt;
- {{- end -}}
- {{- end -}}
- 
- &amp;lt;/div&amp;gt;
-&amp;lt;/div&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;blockquote&gt;
-&lt;/blockquote&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;!-- 
-参考 hugo-stellar
-https://github.com/Yharimium/hugo-stellar/blob/main/layouts/shortcodes/mkdocs/tab.html
-https://github.com/kubernetes/website/blob/main/layouts/shortcodes/tabs.html
---&amp;gt;
-
-{{- $title := cond .IsNamedParams (.Get &amp;#34;title&amp;#34;) (.Get 0) | markdownify -}}
-{{- $content := .Inner | safeHTML -}}
-
-{{- if not (.Parent.Scratch.Get &amp;#34;layui-tabs&amp;#34;) -}}
- {{- .Parent.Scratch.Set &amp;#34;layui-tabs&amp;#34; slice -}}
-{{- end -}}
-
-{{- .Parent.Scratch.Add &amp;#34;layui-tabs&amp;#34; (dict &amp;#34;title&amp;#34; $title &amp;#34;content&amp;#34; $content) -}}
-
-&amp;lt;div class=&amp;#34;layui-tab-item&amp;#34;&amp;gt;
-	{{ .Inner }}
-&amp;lt;/div&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;h3 class="heading-element" id="demo"&gt;&lt;span&gt;demo&lt;/span&gt;
- &lt;a href="#demo" class="heading-mark"&gt;
- &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
- &lt;/a&gt;
-&lt;/h3&gt;
-&lt;link href="//unpkg.com/layui@2.9.3/dist/css/layui.css" rel="stylesheet"&gt;
-
-&lt;script src="//unpkg.com/layui@2.9.3/dist/layui.js"&gt;&lt;/script&gt;&lt;div class="layui-tab layui-tab-card" lay-filter="layui-tabs-2" &gt;
- &lt;ul class="layui-tab-title"&gt;&lt;li class="layui-this" &gt;t1&lt;/li&gt;
- 
- &lt;li&gt;t2&lt;/li&gt;&lt;/ul&gt;
- &lt;div class="layui-tab-content"&gt;&lt;div class="layui-tab-item layui-show" &gt;&lt;p&gt;这是t1内容，支持&lt;code&gt;MD&lt;/code&gt;语法&lt;/p&gt;
-&lt;/div&gt;
- 
- &lt;div class="layui-tab-item"&gt;这是t2的内容&lt;/div&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;h2 class="heading-element" id="timeline-时间轴"&gt;&lt;span&gt;timeline-时间轴&lt;/span&gt;
- &lt;a href="#timeline-%e6%97%b6%e9%97%b4%e8%bd%b4" class="heading-mark"&gt;
- &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
- &lt;/a&gt;
-&lt;/h2&gt;
-&lt;link href="//unpkg.com/layui@2.9.3/dist/css/layui.css" rel="stylesheet"&gt;
-
-&lt;script src="//unpkg.com/layui@2.9.3/dist/layui.js"&gt;&lt;/script&gt;&lt;div class="layui-tab layui-tab-card" lay-filter="tabs-timeline" &gt;
- &lt;ul class="layui-tab-title"&gt;&lt;li class="layui-this" &gt;使用&lt;/li&gt;
- 
- &lt;li&gt;效果&lt;/li&gt;
- &lt;li&gt;实现&lt;/li&gt;&lt;/ul&gt;
- &lt;div class="layui-tab-content"&gt;&lt;div class="layui-tab-item layui-show" &gt;&lt;pre&gt;&lt;code&gt;{{&amp;lt; timeline &amp;gt;}}
-{{% tl-event title=&amp;#34;2024-01-03&amp;#34; %}}
-支持`MD`语法
-{{% /tl-event %}}
-{{% tl-event title=&amp;#34;2023-11-03&amp;#34; %}}
-&amp;gt; hello world
-{{% /tl-event %}}
-{{&amp;lt; /timeline &amp;gt;}}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
- 
- &lt;div class="layui-tab-item"&gt;&lt;link href="//unpkg.com/layui@2.9.3/dist/css/layui.css" rel="stylesheet"&gt;
-&lt;div class="layui-timeline"&gt;
-&lt;div class="layui-timeline-item"&gt;
- &lt;i class="layui-icon layui-timeline-axis"&gt;&lt;/i&gt;
- &lt;div class="layui-timeline-content layui-text"&gt;
- &lt;h3 class="layui-timeline-title"&gt;2024-01-03&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;p&amp;gt;支持&amp;lt;code&amp;gt;MD&amp;lt;/code&amp;gt;语法&amp;lt;/p&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
- &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="layui-timeline-item"&gt;
- &lt;i class="layui-icon layui-timeline-axis"&gt;&lt;/i&gt;
- &lt;div class="layui-timeline-content layui-text"&gt;
- &lt;h3 class="layui-timeline-title"&gt;2023-11-03&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;blockquote&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;hello world&lt;/p&gt;
-&lt;/blockquote&gt;
- &lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
- &lt;div class="layui-tab-item"&gt;&lt;p&gt;这里是实现方法&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-
-&lt;link href="//unpkg.com/layui@2.9.3/dist/css/layui.css" rel="stylesheet"&gt;
-
-&lt;div class="layui-timeline"&gt;
-
-
-
-
-
-
-
-
-
-
-
-&lt;div class="layui-timeline-item"&gt;
- &lt;i class="layui-icon layui-timeline-axis"&gt;&lt;/i&gt;
- &lt;div class="layui-timeline-content layui-text"&gt;
- &lt;h3 class="layui-timeline-title"&gt;2024-01-03&lt;/h3&gt;
- 
- &lt;p&gt;支持&lt;code&gt;MD&lt;/code&gt;语法&lt;/p&gt;
-
- 
- &lt;/div&gt;
-&lt;/div&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;div class="layui-timeline-item"&gt;
- &lt;i class="layui-icon layui-timeline-axis"&gt;&lt;/i&gt;
- &lt;div class="layui-timeline-content layui-text"&gt;
- &lt;h3 class="layui-timeline-title"&gt;2023-11-03&lt;/h3&gt;
- 
- &lt;blockquote&gt;
-&lt;p&gt;hello world&lt;/p&gt;
-&lt;/blockquote&gt;
-
- 
- &lt;/div&gt;
-&lt;/div&gt;
-
-
-&lt;/div&gt;</description></item></channel></rss>
+&lt;/blockquote&gt;</description></item></channel></rss>
