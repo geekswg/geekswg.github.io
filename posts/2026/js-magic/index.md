@@ -1,6 +1,8 @@
 # Js的魔法特效
 
 
+记录一些神奇且实用的JavaScript特效，源码来自互联网，部分经过修改和优化。可以直接在博客中使用，无需引入其他库。主要使用javascript和canvas特性实现。
+
 ## 游动的小鱼
 
 <a href="javascript:window.scrollTo(0, document.body.scrollHeight);" >查看效果 </a>
