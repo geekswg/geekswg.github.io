@@ -1,7 +1,7 @@
 
 (function(){ 
 // script.js
-var colors = ["#FF0000", "#FF7F00", "#00FF00", "#0000FF", "#4B0082", "#8B00FF"];
+var colors = ["#FF6B6B", "#4ECDC4", "#45B7D1", "#96CEB4", "#FFEAA7", "#DDA0DD", "#98D8C8"];
 var DEFAULT_COLOR = colors[Math.floor(Math.random() * colors.length)];
 // 获取当前脚本的 URL
 const script = document.currentScript.src;
