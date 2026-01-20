@@ -12,6 +12,7 @@
   --dlog-border-color: #ecf0f1;
   --dlog-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   --dlog-shadow-hover: 0 8px 15px rgba(0, 0, 0, 0.2);
+  --dlog-single-max-height: 320px;
 }
 
 /* 暗色主题变量 */
@@ -764,6 +765,7 @@ article.dlogs .header .single-subtitle {
 
 /* 响应式调整 */
 @media (max-width: 768px) {
+  :root { --dlog-single-max-height: 260px; }
   .dlog-audio-player {
     margin: 0.35rem 0;
   }
@@ -953,17 +955,26 @@ article.dlogs .header .single-subtitle {
   width: 100%;
 }
 
-.dlog-item .dlog-pics img {
+.dlog-item .dlog-pics .dlog-light-item {
   flex: 1;
+  display: block;
+  position: relative;
+  text-decoration: none;
+  cursor: url(/cursor/zoom-in.cur), zoom-in;
+}
+
+.dlog-item .dlog-pics img {
+  width: 100%;
   height: 100px;
   object-fit: cover;
   border-radius: 12px;
   transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  cursor: pointer;
+  cursor: url(/cursor/zoom-in.cur), zoom-in;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   position: relative;
   overflow: hidden;
   min-width: 0;
+  display: block;
 }
 
 .dlog-item .dlog-pics img::before {
@@ -1005,17 +1016,32 @@ article.dlogs .header .single-subtitle {
 }
 
 /* 单张图片特殊处理 - 精美展示 */
-.dlog-item .dlog-pics:has(img:only-child) {
+.dlog-item .dlog-pics-single {
+  display: block;
+  width: 100%;
   margin: 1.2rem 0;
+  gap: 0;
 }
 
-.dlog-item .dlog-pics:has(img:only-child) img {
-  height: 180px;
+.dlog-item .dlog-pics-single .dlog-light-item {
+  width: 100%;
+  display: block;
+  flex: none;
+}
+
+.dlog-item .dlog-pics-single img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  max-height: var(--dlog-single-max-height);
   border-radius: 16px;
+  object-fit: cover;
+  display: block;
 }
 
-.dlog-item .dlog-pics:has(img:only-child) img:hover {
-  height: 190px;
+.dlog-item .dlog-pics-single img:hover {
+  transform: scale(1.03);
+  height: auto;
 }
 
 
@@ -1143,14 +1169,11 @@ article.dlogs .header .single-subtitle {
     height: 80px;
   }
 
-  .dlog-item .dlog-pics:has(img:only-child) img {
-    height: 120px;
-  }
-
 
 }
 
 @media (max-width: 480px) {
+  :root { --dlog-single-max-height: 220px; }
   article.dlogs {
     padding: 0.4rem;
   }
@@ -1183,10 +1206,6 @@ article.dlogs .header .single-subtitle {
 
   .dlog-item .dlog-pics img {
     height: 70px;
-  }
-
-  .dlog-item .dlog-pics:has(img:only-child) img {
-    height: 100px;
   }
 
 

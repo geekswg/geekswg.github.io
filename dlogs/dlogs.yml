@@ -7,6 +7,14 @@ dlogs:
     showPrevNext: true
   list:
     - type: life
+      txt: 2026第一场雪，撒盐空中差可拟，未若柳絮因风起。
+      time: 2026-01-20 07:12
+      loc: 九华山.池州
+      imgs:
+        - src: imgs/2026-snow1.webp
+        - src: imgs/2026-snow2.webp
+        - src: imgs/2026-snow3.webp
+    - type: life
       txt: 人间烟火味，最抚凡人心！
       time: 2026-01-15 18:00
       loc: 家.厨房
