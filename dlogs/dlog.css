@@ -965,8 +965,8 @@ article.dlogs .header .single-subtitle {
 
 .dlog-item .dlog-pics img {
   width: 100%;
-  height: 100px;
-  object-fit: cover;
+  height: 100%;
+  object-fit: fill;
   border-radius: 12px;
   transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   cursor: url(/cursor/zoom-in.cur), zoom-in;
@@ -1166,14 +1166,16 @@ article.dlogs .header .single-subtitle {
   }
 
   .dlog-item .dlog-pics img {
-    height: 80px;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
   }
 
 
 }
 
 @media (max-width: 480px) {
-  :root { --dlog-single-max-height: 220px; }
+  :root { --dlog-single-max-height: 512px; }
   article.dlogs {
     padding: 0.4rem;
   }
@@ -1205,7 +1207,9 @@ article.dlogs .header .single-subtitle {
   }
 
   .dlog-item .dlog-pics img {
-    height: 70px;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
   }
 
 
@@ -1284,11 +1288,11 @@ article.dlogs .header .single-subtitle {
   background: linear-gradient(135deg, var(--dlog-primary-color), var(--dlog-secondary-color));
   color: white;
   text-align: center;
-  padding: 8px 12px;
+  padding: 4px;
   font-size: 0.8rem;
   font-weight: 600;
   transform: translateY(100%);
-  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
               opacity 0.3s ease,
               background 0.3s ease;
   border-radius: 0 0 16px 16px;
@@ -1336,7 +1340,7 @@ article.dlogs .header .single-subtitle {
 }
 
 [data-theme='dark'] .dlog-item:hover .dlog-link-indicator {
-  opacity: 0.5;
+  opacity: 0.8;
   background: linear-gradient(135deg, #50c878, #6366f1);
 }
 
