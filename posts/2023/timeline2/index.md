@@ -1,10 +1,5 @@
 # Timeline2
 
-{{< admonition quote "quote" >}}
-note abstract info tip success question warning failure danger bug example quote
-{{< /admonition >}}
-这里使用MD语法编写你的文章
-<!--more-->
 
 {{< timeline2 >}}
 
