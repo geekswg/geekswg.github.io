@@ -3,6 +3,8 @@
 
 记录一些神奇且实用的JavaScript特效，源码来自互联网，部分经过修改和优化。可以直接在博客中使用，无需引入其他库。主要使用javascript和canvas特性实现。
 
+
+
 ## 游动的小鱼
 
 <a href="javascript:window.scrollTo(0, document.body.scrollHeight);" >查看效果 </a>
@@ -838,6 +840,34 @@ options = {
     var script = document.createElement('script');
     script.src = src;
     document.head.appendChild(script);
+  }
+</script>
+
+
+## 放烟花
+
+预览效果：<a href="javascript:triggerFireworks()">放烟花</a>
+> 查看源码 [js/fireworks.js](/js/fireworks.js)
+
+
+<script>
+  let fireworksLoaded = false;
+  function triggerFireworks(){
+    // 检查烟花脚本是否已加载
+    if (!fireworksLoaded) {
+      // 如果脚本未加载，则加载脚本
+      const script = document.createElement('script');
+      script.src = '/js/fireworks.js';
+      script.onload = function() {
+        fireworksLoaded = true;
+        // 脚本加载完成后调用烟花效果
+        window.startFireworks();
+      };
+      document.head.appendChild(script);
+    } else {
+      // 脚本已加载，直接调用脚本中的函数
+      window.startFireworks();
+    }
   }
 </script>
 
