@@ -147,7 +147,7 @@ const colckColor = urlParams.get('colckColor') || DEFAULT_COLOR;
     ];
 
 var canvas = document.getElementById('canvasTime');
-
+if(!canvas) return;
 if(canvas.getContext){
     var cxt = canvas.getContext('2d');
     //声明canvas的宽高
