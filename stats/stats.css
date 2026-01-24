@@ -257,12 +257,10 @@
     .category {
         flex-direction: column;
     }
-
     .category .labels {
         width: 100% !important;
         order: 2;
     }
-
     .category > div:first-child {
         width: 100% !important;
         order: 1;

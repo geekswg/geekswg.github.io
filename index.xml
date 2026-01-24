@@ -1,4 +1,927 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>毕少侠</title><link>https://geekswg.js.cool/</link><description>博客：探索、发现、分享 By geekswg-[毕少侠]</description><generator>Hugo 0.154.5 &amp; FixIt v0.4.2-20260114101213-fdfd7721</generator><language>zh-CN</language><managingEditor>geekswg@qq.com (geekswg)</managingEditor><webMaster>geekswg@qq.com (geekswg)</webMaster><copyright>geekswg &amp; 毕少侠</copyright><lastBuildDate>Thu, 22 Jan 2026 23:01:02 +0800</lastBuildDate><atom:link href="https://geekswg.js.cool/index.xml" rel="self" type="application/rss+xml"/><item><title>js的魔法特效</title><link>https://geekswg.js.cool/posts/2026/js-magic/</link><pubDate>Mon, 19 Jan 2026 18:51:00 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2026/js-magic/</guid><category domain="https://geekswg.js.cool/categories/dev/">开发</category><description>&lt;p&gt;记录一些神奇且实用的JavaScript特效，源码来自互联网，部分经过修改和优化。可以直接在博客中使用，无需引入其他库。主要使用javascript和canvas特性实现。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>毕少侠</title><link>https://geekswg.js.cool/</link><description>博客：探索、发现、分享 By geekswg-[毕少侠]</description><generator>Hugo 0.154.5 &amp; FixIt v0.4.2-20260114101213-fdfd7721</generator><language>zh-CN</language><managingEditor>geekswg@qq.com (geekswg)</managingEditor><webMaster>geekswg@qq.com (geekswg)</webMaster><copyright>geekswg &amp; 毕少侠</copyright><lastBuildDate>Sat, 24 Jan 2026 16:08:22 +0800</lastBuildDate><atom:link href="https://geekswg.js.cool/index.xml" rel="self" type="application/rss+xml"/><item><title>hugo博客添加数据统计页面</title><link>https://geekswg.js.cool/posts/2026/blog-stats/</link><pubDate>Sat, 24 Jan 2026 15:22:51 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2026/blog-stats/</guid><category domain="https://geekswg.js.cool/categories/theme/">theme</category><description>&lt;p&gt;给你的博客添加统计页面，展示你的博客数据统计信息。&lt;a href="https://geekswg.js.cool/stats/" target="_blank" rel="external nofollow noopener noreferrer"&gt;点击这里&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;预览效果。&lt;/p&gt;
+&lt;div class="alert alert-important"&gt;&lt;p class="alert-title"&gt;&lt;svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"&gt;&lt;path d="M0 1.75C0 .784.784.0 1.75.0h12.5C15.216.0 16 .784 16 1.75v9.5A1.75 1.75.0 0114.25 13H8.06l-2.573 2.573A1.458 1.458.0 013 14.543V13H1.75A1.75 1.75.0 010 11.25zm1.75-.25a.25.25.0 00-.25.25v9.5c0 .138.112.25.25.25h2a.75.75.0 01.75.75v2.19l2.72-2.72a.749.749.0 01.53-.22h6.5a.25.25.0 00.25-.25v-9.5a.25.25.0 00-.25-.25zm7 2.25v2.5a.75.75.0 01-1.5.0v-2.5a.75.75.0 011.5.0zM9 9A1 1 0 117 9a1 1 0 012 0z"/&gt;&lt;/svg&gt;重要&lt;/p&gt;&lt;p&gt;理论上该方法适用于所有hugo博客，但由于每个博客的配置和主题结构不同，可能会存在兼容性问题，请自己适配！已在&lt;a href="https://fixit.lruihao.cn/zh-cn/" target="_blank" rel="external nofollow noopener noreferrer"&gt;Fixit主题&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;下测试通过。&lt;/p&gt;&lt;/div&gt;&lt;h2 class="heading-element" id="思路"&gt;&lt;span&gt;思路&lt;/span&gt;
+ &lt;a href="#%e6%80%9d%e8%b7%af" class="heading-mark"&gt;
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
+ &lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;利用&lt;a href="https://gohugo.io/functions/" target="_blank" rel="external nofollow noopener noreferrer"&gt;hugo&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;内置的功能函数，结合一些js代码实现博客数据的统计展示，包括：文章，页面、分类，标签，友情链接，字数等数据。文章条形图，分类饼图等图表使用svg+js绘制而成。&lt;/p&gt;
+&lt;h2 class="heading-element" id="代码"&gt;&lt;span&gt;代码&lt;/span&gt;
+ &lt;a href="#%e4%bb%a3%e7%a0%81" class="heading-mark"&gt;
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
+ &lt;/a&gt;
+&lt;/h2&gt;&lt;h3 class="heading-element" id="创建统计页面layout文件"&gt;&lt;span&gt;创建统计页面layout文件&lt;/span&gt;
+ &lt;a href="#%e5%88%9b%e5%bb%ba%e7%bb%9f%e8%ae%a1%e9%a1%b5%e9%9d%a2layout%e6%96%87%e4%bb%b6" class="heading-mark"&gt;
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
+ &lt;/a&gt;
+&lt;/h3&gt;&lt;p&gt;在博客根目录下创建&lt;code&gt;layouts/stats.html&lt;/code&gt;文件，内容如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;{{- define &amp;#34;title&amp;#34; -}}
+ {{- .Title }} {{ .Site.Params.titleDelimiter }} {{ .Site.Title -}}
+{{- end -}}
+
+{{- define &amp;#34;content&amp;#34; -}}
+&amp;lt;!-- 引入 stats 样式 --&amp;gt;
+&amp;lt;link rel=&amp;#34;stylesheet&amp;#34; href=&amp;#34;{{ &amp;#34;/stats/stats.css&amp;#34; | relURL }}&amp;#34;&amp;gt;
+
+{{- /* Calculate statistics for rendering */ -}}
+{{- /* Article count */ -}}
+{{ $articleCount := len .Site.RegularPages }}
+{{ if eq $articleCount 0 }}
+ {{ $articleCount = 1 }}
+{{ end }}
+
+{{- /* Page count */ -}}
+{{ $pageCount := len (where .Site.Pages &amp;#34;Type&amp;#34; &amp;#34;=&amp;#34; &amp;#34;page&amp;#34;) }}
+
+{{- /* DLogs count from content/dlogs/dlogs.yml */ -}}
+{{ $dlogsCount := 0 }}
+{{ $dlogsFilePath := &amp;#34;content/dlogs/dlogs.yml&amp;#34; }}
+{{ with os.ReadFile $dlogsFilePath | transform.Unmarshal }}
+ {{ $dlogsData := .dlogs | default . }}
+ {{ with $dlogsData.list }}
+ {{ $dlogsCount = len . }}
+ {{ end }}
+{{ end }}
+{{ $dlogsUrl := default &amp;#34;/dlogs/&amp;#34; }}
+{{ $tagsUrl := default &amp;#34;/tags/&amp;#34; }}
+{{ $categoriesUrl := default &amp;#34;/categories/&amp;#34; }}
+{{ $postsUrl := default &amp;#34;/posts/&amp;#34; }}
+{{ $friendsUrl := default &amp;#34;/friends/&amp;#34; }}
+
+{{- /* Category and tag counts */ -}}
+{{ $categories := slice }}
+{{ $tags := slice }}
+{{ range .Site.RegularPages }}
+ {{ if .Params.categories }}
+ {{ $categories = union $categories .Params.categories }}
+ {{ end }}
+ {{ if .Params.tags }}
+ {{ $tags = union $tags .Params.tags }}
+ {{ end }}
+{{ end }}
+{{ $categoryCount := len $categories }}
+{{ $tagCount := len $tags }}
+
+{{- /* Total word count */ -}}
+{{ $scratch := newScratch }}
+{{ range (where .Site.Pages &amp;#34;Kind&amp;#34; &amp;#34;page&amp;#34;) }}
+ {{ $scratch.Add &amp;#34;total&amp;#34; .WordCount }}
+{{ end }}
+{{ $totalWords := $scratch.Get &amp;#34;total&amp;#34; }}
+
+{{- /* Stats for year/category charts */ -}}
+{{ $stats := slice }}
+{{ range .Site.RegularPages }}
+ {{ $stats = $stats | append (dict &amp;#34;date&amp;#34; .Date &amp;#34;categories&amp;#34; .Params.categories &amp;#34;year&amp;#34; (.Date.Format &amp;#34;2006&amp;#34;) &amp;#34;month&amp;#34; (.Date.Format &amp;#34;2006-01&amp;#34;) &amp;#34;hour&amp;#34; (.Date.Format &amp;#34;15&amp;#34;) &amp;#34;week&amp;#34; (.Date.Format &amp;#34;Monday&amp;#34;) &amp;#34;count&amp;#34; .WordCount &amp;#34;slug&amp;#34; .Slug &amp;#34;title&amp;#34; .Title) }}
+{{ end }}
+
+{{- /* Friends links count */ -}}
+{{ $linkCount := 0 }}
+{{ $friendsFile := site.Data.friends }}
+{{ if $friendsFile }}
+ {{ $linkCount = len $friendsFile }}
+{{ end }}
+
+{{- /* Stats data from stats.json */ -}}
+{{ $steamGameCount := &amp;#34;7&amp;#34; }}
+{{ $steamUrl := &amp;#34;https://steamcommunity.com/id/geekswg&amp;#34; }}
+{{ $githubUrl := &amp;#34;https://github.com/geekswg/blog-fixit&amp;#34; }}
+{{ $totalCommits := 1024 }}
+{{ $lastCommitDate := time.Now.Format &amp;#34;2006-01-02&amp;#34; }}
+{{ $commitHashLong := &amp;#34;master&amp;#34; }}
+{{ $commitHashShort := &amp;#34;master&amp;#34; }}
+{{ $repoSize := 1024000 }} 
+
+{{ with resources.Get &amp;#34;data/stats/stats.json&amp;#34; }}
+ {{ with . | transform.Unmarshal }}
+ {{ $steamGameCount = .steam_game_owner_count | default $steamGameCount }}
+ {{ $steamUrl = .steam_url | default $steamUrl }}
+ {{ $githubUrl = .github_url | default $githubUrl }}
+ {{ $totalCommits = .github_commits | default $totalCommits }}
+ {{ $lastCommitDate = .github_last_commit | default $lastCommitDate }}
+ {{ $commitHashLong = .github_hash_long | default $commitHashLong }}
+ {{ $commitHashShort = .github_hash_short | default $commitHashShort }}
+ {{ $repoSize = .github_repo_size | default $repoSize }}
+ {{ end }}
+{{ end }}
+
+{{- /* Convert repo size from KB to MB/GB */ -}}
+{{ $sizeInMB := div (float $repoSize) 1024 }}
+{{ if ge $sizeInMB 1000 }}
+ {{ $repoSize = printf &amp;#34;%.2f GB&amp;#34; (div $sizeInMB 1024) }}
+{{ else }}
+ {{ $repoSize = printf &amp;#34;%.2f MB&amp;#34; $sizeInMB }}
+{{ end }}
+
+&amp;lt;article class=&amp;#34;page single special&amp;#34;&amp;gt;
+ &amp;lt;div class=&amp;#34;header&amp;#34;&amp;gt;
+ &amp;lt;h1 class=&amp;#34;single-title animate__animated animate__pulse animate__faster&amp;#34;&amp;gt;{{ .Title }}&amp;lt;/h1&amp;gt;
+ &amp;lt;/div&amp;gt;
+
+ &amp;lt;noscript&amp;gt;
+ Please enable JavaScript to view the Stat page.
+ &amp;lt;/noscript&amp;gt;
+
+ &amp;lt;div class=&amp;#34;content&amp;#34; id=&amp;#34;content&amp;#34;&amp;gt;
+ {{ .Content }}
+ &amp;lt;div class=&amp;#34;gap-6 mb-14&amp;#34; data-pagefind-ignore=&amp;#34;all&amp;#34;&amp;gt;
+
+ &amp;lt;div class=&amp;#34;article-content max-w-full mb-20&amp;#34;&amp;gt;
+
+ &amp;lt;div class=&amp;#34;grid grid-cols-2 md:grid-cols-4 gap-3 my-6&amp;#34;&amp;gt;
+ &amp;lt;div class=&amp;#34;bg-zinc rounded-xl shadow-md p-3 border border-zinc-100 dark:border-zinc-700 bg-zinc-50 dark:bg-[#1c2128] transition-colors duration-200&amp;#34;&amp;gt;
+ &amp;lt;div class=&amp;#34;flex justify-between mb-0 items-center&amp;#34;&amp;gt;
+ &amp;lt;h3 class=&amp;#34;text-lg font-medium text-zinc-900 dark:text-zinc-100&amp;#34;&amp;gt;文章&amp;lt;/h3&amp;gt;
+ &amp;lt;div
+ class=&amp;#34;h-8 w-8 rounded-lg stats-icon-bg flex items-center justify-center&amp;#34;&amp;gt;
+ &amp;lt;span class=&amp;#34;stats-icon-color&amp;#34; aria-hidden=&amp;#34;true&amp;#34;&amp;gt;&amp;lt;svg xmlns=&amp;#34;http://www.w3.org/2000/svg&amp;#34; width=&amp;#34;1.5rem&amp;#34; height=&amp;#34;1.5rem&amp;#34; viewBox=&amp;#34;0 0 20 20&amp;#34;&amp;gt;&amp;lt;path fill=&amp;#34;currentColor&amp;#34; d=&amp;#34;M13 0a2 2 0 0 1 2 2H6a2 2 0 0 0-2 2v12a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2z&amp;#34;/&amp;gt;&amp;lt;path fill=&amp;#34;currentColor&amp;#34; d=&amp;#34;M18 5a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2zm-7 5H7V5h4zm5-4h-4V5h4zm0 2h-4V7h4zm0 2h-4V9h4zm0 2H7v-1h9zm0 2H7v-1h9zm0 2H7v-1h9z&amp;#34;/&amp;gt;&amp;lt;/svg&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/div&amp;gt;
+ &amp;lt;/div&amp;gt;
+ &amp;lt;div class=&amp;#34;flex flex-col items-start&amp;#34;&amp;gt;
+ &amp;lt;a href=&amp;#34;{{ $postsUrl }}&amp;#34; class=&amp;#34;text-3xl font-bold text-zinc-900 dark:text-zinc-100 hover:text-zinc-700 dark:hover:text-zinc-300 transition-colors duration-200 no-underline&amp;#34;&amp;gt;{{- lang.FormatNumber 0 (default 0 $articleCount) -}}&amp;lt;/a&amp;gt;
+ &amp;lt;/div&amp;gt;
+ &amp;lt;/div&amp;gt;
+ &amp;lt;div
+ class=&amp;#34;bg-zinc rounded-xl shadow-md p-3 border border-zinc-100 dark:border-zinc-700 bg-zinc-50 dark:bg-[#1c2128] transition-colors duration-200&amp;#34;&amp;gt;
+ &amp;lt;div class=&amp;#34;flex justify-between mb-0 items-center&amp;#34;&amp;gt;
+ &amp;lt;h3 class=&amp;#34;text-lg font-medium&amp;#34;&amp;gt;页面&amp;lt;/h3&amp;gt;
+ &amp;lt;div
+ class=&amp;#34;h-8 w-8 rounded-lg stats-icon-bg flex items-center justify-center&amp;#34;&amp;gt;
+ &amp;lt;span class=&amp;#34;stats-icon-color&amp;#34; aria-hidden=&amp;#34;true&amp;#34;&amp;gt;&amp;lt;svg xmlns=&amp;#34;http://www.w3.org/2000/svg&amp;#34; width=&amp;#34;1.5rem&amp;#34; height=&amp;#34;1.5rem&amp;#34; viewBox=&amp;#34;0 0 48 48&amp;#34;&amp;gt;&amp;lt;g fill=&amp;#34;none&amp;#34; stroke=&amp;#34;currentColor&amp;#34; stroke-linecap=&amp;#34;round&amp;#34; stroke-linejoin=&amp;#34;round&amp;#34; stroke-width=&amp;#34;3&amp;#34;&amp;gt;&amp;lt;path d=&amp;#34;M36.91 3.486c2.546.223 4.45 2.212 4.627 4.762c.225 3.227.463 8.38.463 15.752s-.238 12.525-.463 15.752c-.177 2.55-2.081 4.539-4.627 4.762C34.12 44.76 29.885 45 24 45s-10.121-.24-12.91-.486c-2.546-.223-4.45-2.212-4.627-4.762C6.238 36.525 6 31.372 6 24s.238-12.525.463-15.752c.177-2.55 2.081-4.539 4.627-4.762C13.88 3.24 18.115 3 24 3s10.121.24 12.91.486M42 24H6&amp;#34;/&amp;gt;&amp;lt;path d=&amp;#34;M41.45 40.418c-4.077-4.07-6.887-6.31-8.644-7.521c-1.42-.98-3.172-.82-4.495.29c-1.543 1.293-4.03 3.531-7.811 7.313a183 183 0 0 0-4.217 4.345M18 33a3 3 0 1 1-6 0a3 3 0 0 1 6 0m-5-16h22m-22-6.5h12&amp;#34;/&amp;gt;&amp;lt;/g&amp;gt;&amp;lt;/svg&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/div&amp;gt;
+ &amp;lt;/div&amp;gt;
+ &amp;lt;div class=&amp;#34;flex items-end justify-between&amp;#34;&amp;gt;
+ &amp;lt;div class=&amp;#34;text-3xl font-bold&amp;#34;&amp;gt;{{- $pageCount | default 0 -}}&amp;lt;/div&amp;gt;
+ &amp;lt;/div&amp;gt;
+ &amp;lt;/div&amp;gt;
+ &amp;lt;div class=&amp;#34;bg-zinc rounded-xl shadow-md p-3 border border-zinc-100 dark:border-zinc-700 bg-zinc-50 dark:bg-[#1c2128] transition-colors duration-200&amp;#34;&amp;gt;
+ &amp;lt;div class=&amp;#34;flex justify-between mb-0 items-center&amp;#34;&amp;gt;
+ &amp;lt;h3 class=&amp;#34;text-lg font-medium text-zinc-900 dark:text-zinc-100&amp;#34;&amp;gt;日常&amp;lt;/h3&amp;gt;
+ &amp;lt;div
+ class=&amp;#34;h-8 w-8 rounded-lg stats-icon-bg flex items-center justify-center&amp;#34;&amp;gt;
+ &amp;lt;span class=&amp;#34;stats-icon-color&amp;#34; aria-hidden=&amp;#34;true&amp;#34;&amp;gt;&amp;lt;svg xmlns=&amp;#34;http://www.w3.org/2000/svg&amp;#34; width=&amp;#34;1.5rem&amp;#34; height=&amp;#34;1.5rem&amp;#34; viewBox=&amp;#34;0 0 24 24&amp;#34;&amp;gt;&amp;lt;path fill=&amp;#34;currentColor&amp;#34; d=&amp;#34;M8 5.5a2.5 2.5 0 1 0 0 5a2.5 2.5 0 0 0 0-5M4 8a4 4 0 1 1 8 0a4 4 0 0 1-8 0m13-.5a1.5 1.5 0 1 0 0 3a1.5 1.5 0 0 0 0-3M14 9a3 3 0 1 1 6 0a3 3 0 0 1-6 0M2 16.25A2.25 2.25 0 0 1 4.25 14h7.5A2.25 2.25 0 0 1 14 16.25v.106l-1.509 1.509a3.7 3.7 0 0 0-.97 1.712l-.194.779C10.485 20.75 9.397 21 8 21c-2.828 0-4.39-1.025-5.208-2.195a4.5 4.5 0 0 1-.778-2.07A3 3 0 0 1 2 16.529v-.278m1.5.245v.012l.007.08c.007.074.023.188.055.329c.066.281.198.656.459 1.029C4.514 18.65 5.578 19.5 8 19.5s3.486-.85 3.98-1.555a3 3 0 0 0 .513-1.358l.006-.08l.001-.012v-.245a.75.75 0 0 0-.75-.75h-7.5a.75.75 0 0 0-.75.75zm15.6-3.826l-5.903 5.903a2.7 2.7 0 0 0-.706 1.247l-.458 1.831a1.087 1.087 0 0 0 1.319 1.318l1.83-.457a2.7 2.7 0 0 0 1.248-.707l5.902-5.902A2.286 2.286 0 0 0 19.1 12.67&amp;#34;/&amp;gt;&amp;lt;/svg&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/div&amp;gt;
+ &amp;lt;/div&amp;gt;
+ &amp;lt;div class=&amp;#34;flex flex-col items-start&amp;#34;&amp;gt;
+ &amp;lt;a href=&amp;#34;{{ $dlogsUrl }}&amp;#34; class=&amp;#34;text-3xl font-bold text-zinc-900 dark:text-zinc-100 hover:text-zinc-700 dark:hover:text-zinc-300 transition-colors duration-200 no-underline&amp;#34;&amp;gt;{{- $dlogsCount | default 0 -}}&amp;lt;/a&amp;gt;
+ &amp;lt;/div&amp;gt;
+ &amp;lt;/div&amp;gt;
+ &amp;lt;div class=&amp;#34;bg-zinc rounded-xl shadow-md p-3 border border-zinc-100 dark:border-zinc-700 bg-zinc-50 dark:bg-[#1c2128] transition-colors duration-200&amp;#34;&amp;gt;
+ &amp;lt;div class=&amp;#34;flex justify-between mb-0 items-center&amp;#34;&amp;gt;
+ &amp;lt;h3 class=&amp;#34;text-lg font-medium text-zinc-900 dark:text-zinc-100&amp;#34;&amp;gt;分类列表&amp;lt;/h3&amp;gt;
+ &amp;lt;div
+ class=&amp;#34;h-8 w-8 rounded-lg stats-icon-bg flex items-center justify-center&amp;#34;&amp;gt;
+ &amp;lt;span class=&amp;#34;stats-icon-color&amp;#34; aria-hidden=&amp;#34;true&amp;#34;&amp;gt;&amp;lt;svg xmlns=&amp;#34;http://www.w3.org/2000/svg&amp;#34; width=&amp;#34;1.5rem&amp;#34; height=&amp;#34;1.5rem&amp;#34; viewBox=&amp;#34;0 0 24 24&amp;#34;&amp;gt;&amp;lt;path fill=&amp;#34;currentColor&amp;#34; d=&amp;#34;M10 3H4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1m10 0h-6a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1M10 13H4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-6a1 1 0 0 0-1-1m7 0a4 4 0 1 1-3.995 4.2L13 17l.005-.2A4 4 0 0 1 17 13&amp;#34;/&amp;gt;&amp;lt;/svg&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/div&amp;gt;
+ &amp;lt;/div&amp;gt;
+ &amp;lt;div class=&amp;#34;flex flex-col items-start&amp;#34;&amp;gt;
+ &amp;lt;a href=&amp;#34;{{ $categoriesUrl }}&amp;#34; class=&amp;#34;text-3xl font-bold text-zinc-900 dark:text-zinc-100 hover:text-zinc-700 dark:hover:text-zinc-300 transition-colors duration-200 no-underline&amp;#34;&amp;gt;{{- $categoryCount | default 0 -}}&amp;lt;/a&amp;gt;
+ &amp;lt;/div&amp;gt;
+ &amp;lt;/div&amp;gt;
+ &amp;lt;div
+ class=&amp;#34;bg-zinc rounded-xl shadow-md p-3 border border-zinc-100 dark:border-zinc-700 bg-zinc-50 dark:bg-[#1c2128] transition-colors duration-200&amp;#34;&amp;gt;
+ &amp;lt;div class=&amp;#34;flex justify-between mb-0 items-center&amp;#34;&amp;gt;
+ &amp;lt;h3 class=&amp;#34;text-lg font-medium&amp;#34;&amp;gt;系列文章&amp;lt;/h3&amp;gt;
+ &amp;lt;div
+ class=&amp;#34;h-8 w-8 rounded-lg stats-icon-bg flex items-center justify-center&amp;#34;&amp;gt;
+ &amp;lt;span class=&amp;#34;stats-icon-color&amp;#34; aria-hidden=&amp;#34;true&amp;#34;&amp;gt;&amp;lt;svg xmlns=&amp;#34;http://www.w3.org/2000/svg&amp;#34; width=&amp;#34;1.5rem&amp;#34; height=&amp;#34;1.5rem&amp;#34; viewBox=&amp;#34;0 0 20 20&amp;#34;&amp;gt;&amp;lt;path fill=&amp;#34;currentColor&amp;#34; d=&amp;#34;M13.981 2H6.018s-.996 0-.996 1h9.955c0-1-.996-1-.996-1m2.987 3c0-1-.995-1-.995-1H4.027s-.995 0-.995 1v1h13.936zm1.99 1l-.588-.592V7H1.63V5.408L1.041 6C.452 6.592.03 6.75.267 8c.236 1.246 1.379 8.076 1.549 9c.186 1.014 1.217 1 1.217 1h13.936s1.03.014 1.217-1c.17-.924 1.312-7.754 1.549-9c.235-1.25-.187-1.408-.777-2M14 11.997c0 .554-.449 1.003-1.003 1.003H7.003A1.003 1.003 0 0 1 6 11.997V10h1v2h6v-2h1z&amp;#34;/&amp;gt;&amp;lt;/svg&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/div&amp;gt;
+ &amp;lt;/div&amp;gt;
+ &amp;lt;div class=&amp;#34;flex items-end justify-between&amp;#34;&amp;gt;
+ &amp;lt;div class=&amp;#34;text-3xl font-bold&amp;#34;&amp;gt;3&amp;lt;/div&amp;gt;
+ &amp;lt;/div&amp;gt;
+ &amp;lt;/div&amp;gt;
+ &amp;lt;div class=&amp;#34;bg-zinc rounded-xl shadow-md p-3 border border-zinc-100 dark:border-zinc-700 bg-zinc-50 dark:bg-[#1c2128] transition-colors duration-200&amp;#34;&amp;gt;
+ &amp;lt;div class=&amp;#34;flex justify-between mb-0 items-center&amp;#34;&amp;gt;
+ &amp;lt;h3 class=&amp;#34;text-lg font-medium text-zinc-900 dark:text-zinc-100&amp;#34;&amp;gt;标签&amp;lt;/h3&amp;gt;
+ &amp;lt;div
+ class=&amp;#34;h-8 w-8 rounded-lg stats-icon-bg flex items-center justify-center&amp;#34;&amp;gt;
+ &amp;lt;span class=&amp;#34;stats-icon-color&amp;#34; aria-hidden=&amp;#34;true&amp;#34;&amp;gt;&amp;lt;svg xmlns=&amp;#34;http://www.w3.org/2000/svg&amp;#34; width=&amp;#34;1.5rem&amp;#34; height=&amp;#34;1.5rem&amp;#34; viewBox=&amp;#34;0 0 24 24&amp;#34;&amp;gt;&amp;lt;g fill=&amp;#34;none&amp;#34; stroke=&amp;#34;currentColor&amp;#34; stroke-linecap=&amp;#34;round&amp;#34; stroke-linejoin=&amp;#34;round&amp;#34; stroke-width=&amp;#34;2&amp;#34;&amp;gt;&amp;lt;path d=&amp;#34;M13.172 2a2 2 0 0 1 1.414.586l6.71 6.71a2.4 2.4 0 0 1 0 3.408l-4.592 4.592a2.4 2.4 0 0 1-3.408 0l-6.71-6.71A2 2 0 0 1 6 9.172V3a1 1 0 0 1 1-1zM2 7v6.172a2 2 0 0 0 .586 1.414l6.71 6.71a2.4 2.4 0 0 0 3.191.193&amp;#34;/&amp;gt;&amp;lt;circle cx=&amp;#34;10.5&amp;#34; cy=&amp;#34;6.5&amp;#34; r=&amp;#34;.5&amp;#34; fill=&amp;#34;currentColor&amp;#34;/&amp;gt;&amp;lt;/g&amp;gt;&amp;lt;/svg&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/div&amp;gt;
+ &amp;lt;/div&amp;gt;
+ &amp;lt;div class=&amp;#34;flex flex-col items-start&amp;#34;&amp;gt;
+ &amp;lt;a href=&amp;#34;{{ $tagsUrl }}&amp;#34; class=&amp;#34;text-3xl font-bold text-zinc-900 dark:text-zinc-100 hover:text-zinc-700 dark:hover:text-zinc-300 transition-colors duration-200 no-underline&amp;#34;&amp;gt;{{- lang.FormatNumber 0 (default 0 $tagCount) -}}&amp;lt;/a&amp;gt;
+ &amp;lt;/div&amp;gt;
+ &amp;lt;/div&amp;gt;
+ &amp;lt;div class=&amp;#34;bg-zinc rounded-xl shadow-md p-3 border border-zinc-100 dark:border-zinc-700 bg-zinc-50 dark:bg-[#1c2128] transition-colors duration-200&amp;#34;&amp;gt;
+ &amp;lt;div class=&amp;#34;flex justify-between mb-0 items-center&amp;#34;&amp;gt;
+ &amp;lt;h3 class=&amp;#34;text-lg font-medium text-zinc-900 dark:text-zinc-100&amp;#34;&amp;gt;友情链接&amp;lt;/h3&amp;gt;
+ &amp;lt;div
+ class=&amp;#34;h-8 w-8 rounded-lg stats-icon-bg flex items-center justify-center&amp;#34;&amp;gt;
+ &amp;lt;span class=&amp;#34;stats-icon-color&amp;#34; aria-hidden=&amp;#34;true&amp;#34;&amp;gt;&amp;lt;svg xmlns=&amp;#34;http://www.w3.org/2000/svg&amp;#34; width=&amp;#34;1.5rem&amp;#34; height=&amp;#34;1.3rem&amp;#34; viewBox=&amp;#34;0 0 1792 1536&amp;#34;&amp;gt;&amp;lt;path fill=&amp;#34;currentColor&amp;#34; d=&amp;#34;M1792 1120v320q0 40-28 68t-68 28h-320q-40 0-68-28t-28-68v-320q0-40 28-68t68-28h96V832H960v192h96q40 0 68 28t28 68v320q0 40-28 68t-68 28H736q-40 0-68-28t-28-68v-320q0-40 28-68t68-28h96V832H320v192h96q40 0 68 28t28 68v320q0 40-28 68t-68 28H96q-40 0-68-28t-28-68v-320q0-40 28-68t68-28h96V832q0-52 38-90t90-38h512V512h-96q-40 0-68-28t-28-68V96q0-40 28-68t68-28h320q40 0 68 28t28 68v320q0 40-28 68t-68 28h-96v192h512q52 0 90 38t38 90v192h96q40 0 68 28t28 68&amp;#34;/&amp;gt;&amp;lt;/svg&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/div&amp;gt;
+ &amp;lt;/div&amp;gt;
+ &amp;lt;div class=&amp;#34;flex flex-col items-start&amp;#34;&amp;gt;
+ &amp;lt;a href=&amp;#34;{{ $friendsUrl }}&amp;#34; class=&amp;#34;text-3xl font-bold text-zinc-900 dark:text-zinc-100 hover:text-zinc-700 dark:hover:text-zinc-300 transition-colors duration-200 no-underline&amp;#34;&amp;gt;{{- $linkCount | default 36 -}}&amp;lt;/a&amp;gt;
+ &amp;lt;/div&amp;gt;
+ &amp;lt;/div&amp;gt;
+ &amp;lt;div
+ class=&amp;#34;bg-zinc rounded-xl shadow-md p-3 border border-zinc-100 dark:border-zinc-700 bg-zinc-50 dark:bg-[#1c2128] transition-colors duration-200&amp;#34;&amp;gt;
+ &amp;lt;div class=&amp;#34;flex justify-between mb-0 items-center&amp;#34;&amp;gt;
+ &amp;lt;h3 class=&amp;#34;text-lg font-medium&amp;#34;&amp;gt;博客字数&amp;lt;/h3&amp;gt;
+ &amp;lt;div
+ class=&amp;#34;h-8 w-8 rounded-lg stats-icon-bg flex items-center justify-center&amp;#34;&amp;gt;
+ &amp;lt;span class=&amp;#34;stats-icon-color&amp;#34; aria-hidden=&amp;#34;true&amp;#34;&amp;gt;&amp;lt;svg xmlns=&amp;#34;http://www.w3.org/2000/svg&amp;#34; width=&amp;#34;1.5rem&amp;#34; height=&amp;#34;1.5rem&amp;#34; viewBox=&amp;#34;0 0 256 256&amp;#34;&amp;gt;&amp;lt;path fill=&amp;#34;currentColor&amp;#34; d=&amp;#34;M200 24H72a16 16 0 0 0-16 16v24H40a16 16 0 0 0-16 16v96a16 16 0 0 0 16 16h16v24a16 16 0 0 0 16 16h128a16 16 0 0 0 16-16V40a16 16 0 0 0-16-16m-40 80h40v48h-40ZM72 40h128v48h-40v-8a16 16 0 0 0-16-16H72ZM40 80h104v96H40Zm32 136v-24h72a16 16 0 0 0 16-16v-8h40v48Zm-3.76-62.06l-12-48a8 8 0 1 1 15.52-3.88l6.76 27l6.32-12.66a8 8 0 0 1 14.32 0l6.32 12.66l6.76-27a8 8 0 0 1 15.52 3.88l-12 48a8 8 0 0 1-6.89 6a9 9 0 0 1-.87.05a8 8 0 0 1-7.16-4.42L92 137.89l-8.84 17.69a8 8 0 0 1-14.92-1.64&amp;#34;/&amp;gt;&amp;lt;/svg&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/div&amp;gt;
+ &amp;lt;/div&amp;gt;
+ &amp;lt;div class=&amp;#34;flex items-end justify-between&amp;#34;&amp;gt;
+ &amp;lt;div class=&amp;#34;text-3xl font-bold&amp;#34;&amp;gt;{{- lang.FormatNumber 0 (default 0 $totalWords) -}}&amp;lt;/div&amp;gt;
+ &amp;lt;/div&amp;gt;
+ &amp;lt;/div&amp;gt;
+ &amp;lt;/div&amp;gt;
+
+ &amp;lt;div class=&amp;#34;stats-cards grid grid-cols-1 md:grid-cols-3 gap-4 my-20&amp;#34;&amp;gt;
+ &amp;lt;div
+ class=&amp;#34;bg-zinc-100 dark:bg-zinc-800 rounded-xl shadow-md overflow-hidden transition-colors duration-200 hover:shadow-lg mb-4 flex flex-col h-full&amp;#34;&amp;gt;
+ &amp;lt;div class=&amp;#34;h-32 relative flex-shrink-0&amp;#34;&amp;gt;
+ &amp;lt;div class=&amp;#34;absolute inset-0 bg-gradient-to-b from-zinc-900 to-zinc-600&amp;#34;&amp;gt;
+ &amp;lt;/div&amp;gt;
+ &amp;lt;div class=&amp;#34;absolute inset-0 flex items-center justify-center&amp;#34;&amp;gt;&amp;lt;svg xmlns=&amp;#34;http://www.w3.org/2000/svg&amp;#34; width=&amp;#34;64&amp;#34; height=&amp;#34;64&amp;#34; viewBox=&amp;#34;0 0 128 128&amp;#34;&amp;gt;&amp;lt;path fill=&amp;#34;#ff4088&amp;#34; d=&amp;#34;m71.2 8.5l36.7 21.3c4.3 2.5 7 7.2 7 12.2v43.7c0 5.6-3 10.7-7.8 13.4l-36.4 20.5c-4.8 2.7-10.7 2.7-15.5-.1l-33.5-19.3c-5.3-3-8.5-8.6-8.5-14.7V44.1c0-6.1 3.2-11.8 8.4-15L54.4 8.8c5.1-3.2 11.6-3.3 16.8-.3&amp;#34;/&amp;gt;&amp;lt;path fill=&amp;#34;#c9177e&amp;#34; d=&amp;#34;M63 126c-3.5 0-6.9-.9-10-2.7L19.5 104c-6.6-3.8-10.7-10.9-10.7-18.5V44.1c0-7.7 3.9-14.6 10.4-18.7L52.1 5.1c6.5-4 14.6-4.1 21.2-.3L110 26.1c5.7 3.3 9.2 9.4 9.2 15.9v43.7c0 7.1-3.8 13.7-10 17.2l-36.4 20.5c-3 1.7-6.4 2.6-9.8 2.6m0-115.3c-2.2 0-4.4.6-6.3 1.8l-33 20.3c-4 2.4-6.3 6.7-6.3 11.3v41.5c0 4.5 2.4 8.7 6.3 11l33.5 19.3c3.5 2 7.8 2 11.3.1l36.4-20.5c3.5-2 5.6-5.6 5.6-9.6V42.1c0-3.5-1.9-6.7-4.9-8.5L69 12.3c-1.8-1.1-3.9-1.6-6-1.6&amp;#34;/&amp;gt;&amp;lt;path fill=&amp;#34;#fff&amp;#34; d=&amp;#34;M38.6 96.9V30.5h13.9v24.2h23V30.5h13.9v66.4H75.5v-29h-23v29z&amp;#34;/&amp;gt;&amp;lt;/svg&amp;gt;
+ &amp;lt;/div&amp;gt;
+ &amp;lt;div class=&amp;#34;absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent h-10&amp;#34;&amp;gt;&amp;lt;/div&amp;gt;
+ &amp;lt;div class=&amp;#34;absolute bottom-3 left-4&amp;#34;&amp;gt;
+ &amp;lt;h3 class=&amp;#34;text-xl font-bold text-zinc-50&amp;#34;&amp;gt;Analytics&amp;lt;/h3&amp;gt;
+ &amp;lt;p class=&amp;#34;text-sm text-zinc-200&amp;#34;&amp;gt;&amp;lt;/p&amp;gt;
+ &amp;lt;/div&amp;gt;
+ &amp;lt;/div&amp;gt;
+ &amp;lt;div class=&amp;#34;p-4 bg-zinc-50 dark:bg-zinc-900 flex-grow flex flex-col min-h-0&amp;#34;&amp;gt;
+ &amp;lt;p class=&amp;#34;text-sm text-zinc-600 dark:text-zinc-400 mb-4 line-clamp-2 overflow-x-hidden flex-shrink-0&amp;#34;&amp;gt;已停止使用网站统计工具。&amp;lt;/p&amp;gt;
+ &amp;lt;div class=&amp;#34;flex w-full justify-between items-center gap-2&amp;#34;&amp;gt;
+ &amp;lt;div class=&amp;#34;flex-1 text-center&amp;#34;&amp;gt;
+ &amp;lt;div class=&amp;#34;text-xs text-zinc-500 dark:text-zinc-500&amp;#34;&amp;gt;浏览量&amp;lt;/div&amp;gt;
+ &amp;lt;div class=&amp;#34;font-semibold&amp;#34;&amp;gt;&amp;lt;span class=&amp;#34;line-through decoration-2 cursor-not-allowed text-zinc-400 dark:text-zinc-600&amp;#34;&amp;gt;&amp;amp;nbsp;999&amp;amp;nbsp;&amp;lt;/span&amp;gt;&amp;lt;sup class=&amp;#34;text-zinc-400 dark:text-zinc-600&amp;#34;&amp;gt;&amp;#43;&amp;lt;/sup&amp;gt;&amp;lt;/div&amp;gt;
+ &amp;lt;/div&amp;gt;
+ &amp;lt;div class=&amp;#34;flex-1 text-center&amp;#34;&amp;gt;
+ &amp;lt;div class=&amp;#34;text-xs text-zinc-500 dark:text-zinc-500&amp;#34;&amp;gt;评论数&amp;lt;/div&amp;gt;
+ &amp;lt;div class=&amp;#34;font-semibold&amp;#34;&amp;gt;&amp;lt;span class=&amp;#34;line-through decoration-2 cursor-not-allowed text-zinc-400 dark:text-zinc-600&amp;#34;&amp;gt;&amp;amp;nbsp;999&amp;amp;nbsp;&amp;lt;/span&amp;gt;&amp;lt;sup class=&amp;#34;text-zinc-400 dark:text-zinc-600&amp;#34;&amp;gt;&amp;#43;&amp;lt;/sup&amp;gt;&amp;lt;/div&amp;gt;
+ &amp;lt;/div&amp;gt;
+ &amp;lt;div class=&amp;#34;flex-1 text-center&amp;#34;&amp;gt;
+ &amp;lt;div class=&amp;#34;text-xs text-zinc-500 dark:text-zinc-500&amp;#34;&amp;gt;博客年龄&amp;lt;/div&amp;gt;
+ &amp;lt;div class=&amp;#34;font-semibold inline whitespace-nowrap group relative text-zinc-700 dark:text-zinc-300&amp;#34;&amp;gt;
+ &amp;lt;span class=&amp;#34;truncate max-w-[120px] inline-block align-bottom&amp;#34;&amp;gt;&amp;lt;span id=&amp;#34;stats_blog_online_year&amp;#34;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;
+ &amp;lt;span class=&amp;#34;w-max max-w-sm hidden group-hover:block absolute right-0 bottom-full bg-zinc-900 dark:bg-zinc-700 text-zinc-50 dark:text-zinc-100 text-sm rounded-sm py-2 px-3 shadow-lg z-50 hover:z-50 whitespace-nowrap -translate-y-1.5&amp;#34;&amp;gt;
+ Creation: 2006-01-02 15:04:05 Monday
+ &amp;lt;div class=&amp;#34;absolute top-full right-1/4 transform translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-l-transparent border-r-transparent border-t-zinc-900 dark:border-t-zinc-700&amp;#34;&amp;gt;&amp;lt;/div&amp;gt;
+ &amp;lt;/span&amp;gt;
+ &amp;lt;/div&amp;gt;
+ &amp;lt;/div&amp;gt;
+ &amp;lt;/div&amp;gt;
+ &amp;lt;/div&amp;gt;
+ &amp;lt;/div&amp;gt;
+ &amp;lt;div
+ class=&amp;#34;bg-zinc-100 dark:bg-zinc-800 rounded-xl shadow-md overflow-hidden transition-colors duration-200 hover:shadow-lg mb-4 flex flex-col h-full&amp;#34;&amp;gt;
+ &amp;lt;div class=&amp;#34;h-32 relative flex-shrink-0&amp;#34;&amp;gt;
+ &amp;lt;div class=&amp;#34;absolute inset-0 bg-gradient-to-b from-zinc-900 to-zinc-600&amp;#34;&amp;gt;
+ &amp;lt;/div&amp;gt;
+ &amp;lt;div class=&amp;#34;absolute inset-0 flex items-center justify-center&amp;#34;&amp;gt;&amp;lt;svg xmlns=&amp;#34;http://www.w3.org/2000/svg&amp;#34; width=&amp;#34;64&amp;#34; height=&amp;#34;64&amp;#34; viewBox=&amp;#34;0 0 24 24&amp;#34;&amp;gt;&amp;lt;path fill=&amp;#34;#fff&amp;#34; d=&amp;#34;M12 .297c-6.63 0-12 5.373-12 12c0 5.303 3.438 9.8 8.205 11.385c.6.113.82-.258.82-.577c0-.285-.01-1.04-.015-2.04c-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729c1.205.084 1.838 1.236 1.838 1.236c1.07 1.835 2.809 1.305 3.495.998c.108-.776.417-1.305.76-1.605c-2.665-.3-5.466-1.332-5.466-5.93c0-1.31.465-2.38 1.235-3.22c-.135-.303-.54-1.523.105-3.176c0 0 1.005-.322 3.3 1.23c.96-.267 1.98-.399 3-.405c1.02.006 2.04.138 3 .405c2.28-1.552 3.285-1.23 3.285-1.23c.645 1.653.24 2.873.12 3.176c.765.84 1.23 1.91 1.23 3.22c0 4.61-2.805 5.625-5.475 5.92c.42.36.81 1.096.81 2.22c0 1.606-.015 2.896-.015 3.286c0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12&amp;#34;/&amp;gt;&amp;lt;/svg&amp;gt;
+ &amp;lt;/div&amp;gt;
+ &amp;lt;div class=&amp;#34;absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent h-10&amp;#34;&amp;gt;&amp;lt;/div&amp;gt;
+ &amp;lt;div class=&amp;#34;absolute bottom-3 left-4&amp;#34;&amp;gt;
+ &amp;lt;h3 class=&amp;#34;text-xl font-bold text-zinc-50&amp;#34;&amp;gt;GitHub&amp;lt;/h3&amp;gt;
+ &amp;lt;p class=&amp;#34;text-sm text-zinc-200&amp;#34;&amp;gt;&amp;lt;/p&amp;gt;
+ &amp;lt;/div&amp;gt;
+ &amp;lt;/div&amp;gt;
+ &amp;lt;div class=&amp;#34;p-4 bg-zinc-50 dark:bg-zinc-900 flex-grow flex flex-col min-h-0&amp;#34;&amp;gt;
+ &amp;lt;p class=&amp;#34;flex items-center text-sm text-zinc-600 dark:text-zinc-400 mb-4 line-clamp-2 overflow-x-hidden flex-shrink-0&amp;#34;&amp;gt;Let&amp;#39;s build from here. &amp;lt;svg class=&amp;#34;ml-2 mr-1 inline-block&amp;#34; width=&amp;#34;1em&amp;#34; height=&amp;#34;1em&amp;#34; viewBox=&amp;#34;0 0 512 512&amp;#34;&amp;gt;&amp;lt;path fill=&amp;#34;currentColor&amp;#34; d=&amp;#34;M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6.0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6.0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1.0-6.2-.3-40.4-.3-61.4.0.0-70 15-84.7-29.8.0.0-11.4-29.1-27.8-36.6.0.0-22.9-15.7 1.6-15.4.0.0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5.0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9.0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4.0 33.7-.3 75.4-.3 83.6.0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6.0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9.0-6.2-1.4-2.3-4-3.3-5.6-2&amp;#34;&amp;gt;&amp;lt;/path&amp;gt;&amp;lt;/svg&amp;gt; &amp;lt;a href=&amp;#34;{{ $githubUrl }}/tree/{{- $commitHashLong -}}&amp;#34; target=&amp;#34;_blank&amp;#34; rel=&amp;#34;noopener noreferrer&amp;#34; class=&amp;#34;bg-zinc-200 dark:bg-zinc-700 hover:bg-zinc-300 dark:hover:bg-zinc-600 text-[#0969da] dark:text-blue-400 text-xs! m-0 py-0.5 px-1 whitespace-break-spaces font-normal! rounded-md transition-colors duration-200&amp;#34;&amp;gt;{{- $commitHashShort -}}&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+ &amp;lt;div class=&amp;#34;flex w-full justify-between items-center gap-2&amp;#34;&amp;gt;
+ &amp;lt;div class=&amp;#34;flex-1 text-center&amp;#34;&amp;gt;
+ &amp;lt;div class=&amp;#34;text-xs text-zinc-500 dark:text-zinc-500&amp;#34;&amp;gt;Commits&amp;lt;/div&amp;gt;
+ &amp;lt;div class=&amp;#34;font-semibold text-zinc-700 dark:text-zinc-300&amp;#34;&amp;gt;{{- lang.FormatNumber 0 (default 0 $totalCommits) -}}&amp;lt;/div&amp;gt;
+ &amp;lt;/div&amp;gt;
+ &amp;lt;div class=&amp;#34;flex-1 text-center&amp;#34;&amp;gt;
+ &amp;lt;div class=&amp;#34;text-xs text-zinc-500 dark:text-zinc-500&amp;#34;&amp;gt;Last Commit&amp;lt;/div&amp;gt;
+ &amp;lt;div class=&amp;#34;font-semibold text-zinc-700 dark:text-zinc-300&amp;#34;&amp;gt;&amp;lt;span id=&amp;#34;last-commit-date&amp;#34; data-date=&amp;#34;{{ $lastCommitDate }}&amp;#34;&amp;gt;-&amp;lt;/span&amp;gt;&amp;lt;/div&amp;gt;
+ &amp;lt;/div&amp;gt;
+ &amp;lt;div class=&amp;#34;flex-1 text-center&amp;#34;&amp;gt;
+ &amp;lt;div class=&amp;#34;text-xs text-zinc-500 dark:text-zinc-500&amp;#34;&amp;gt;Repo Size&amp;lt;/div&amp;gt;
+ &amp;lt;div class=&amp;#34;font-semibold text-zinc-700 dark:text-zinc-300&amp;#34;&amp;gt;{{ $repoSize }}&amp;lt;span class=&amp;#34;text-xs text-zinc-400 dark:text-zinc-500&amp;#34;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/div&amp;gt;
+ &amp;lt;/div&amp;gt;
+ &amp;lt;/div&amp;gt;
+ &amp;lt;/div&amp;gt;
+ &amp;lt;/div&amp;gt;
+ &amp;lt;div
+ class=&amp;#34;bg-zinc-100 dark:bg-zinc-800 rounded-xl shadow-md overflow-hidden transition-colors duration-200 hover:shadow-lg mb-4 flex flex-col h-full&amp;#34;&amp;gt;
+ &amp;lt;div class=&amp;#34;h-32 relative flex-shrink-0&amp;#34;&amp;gt;
+ &amp;lt;div class=&amp;#34;absolute inset-0 bg-gradient-to-b from-zinc-900 to-zinc-600&amp;#34;&amp;gt;
+ &amp;lt;/div&amp;gt;
+ &amp;lt;div class=&amp;#34;absolute inset-0 flex items-center justify-center&amp;#34;&amp;gt;&amp;lt;svg width=&amp;#34;64&amp;#34; height=&amp;#34;64&amp;#34; xmlns=&amp;#34;http://www.w3.org/2000/svg&amp;#34; xmlns:xlink=&amp;#34;http://www.w3.org/1999/xlink&amp;#34; xml:space=&amp;#34;preserve&amp;#34; viewBox=&amp;#34;0 0 512 512&amp;#34;&amp;gt;&amp;lt;symbol id=&amp;#34;b&amp;#34; viewBox=&amp;#34;-32 -32 64 64&amp;#34;&amp;gt;&amp;lt;linearGradient id=&amp;#34;a&amp;#34; x1=&amp;#34;7762.648&amp;#34; x2=&amp;#34;7762.648&amp;#34; y1=&amp;#34;-8454.313&amp;#34; y2=&amp;#34;-8453.313&amp;#34; gradientTransform=&amp;#34;matrix(63.931 0 0 64 -496273.844 541044)&amp;#34; gradientUnits=&amp;#34;userSpaceOnUse&amp;#34;&amp;gt;&amp;lt;stop offset=&amp;#34;0&amp;#34; style=&amp;#34;stop-color:#111d2e&amp;#34;/&amp;gt;&amp;lt;stop offset=&amp;#34;.212&amp;#34; style=&amp;#34;stop-color:#051839&amp;#34;/&amp;gt;&amp;lt;stop offset=&amp;#34;.407&amp;#34; style=&amp;#34;stop-color:#0a1b48&amp;#34;/&amp;gt;&amp;lt;stop offset=&amp;#34;.581&amp;#34; style=&amp;#34;stop-color:#132e62&amp;#34;/&amp;gt;&amp;lt;stop offset=&amp;#34;.738&amp;#34; style=&amp;#34;stop-color:#144b7e&amp;#34;/&amp;gt;&amp;lt;stop offset=&amp;#34;.873&amp;#34; style=&amp;#34;stop-color:#136497&amp;#34;/&amp;gt;&amp;lt;stop offset=&amp;#34;1&amp;#34; style=&amp;#34;stop-color:#1387b8&amp;#34;/&amp;gt;&amp;lt;/linearGradient&amp;gt;&amp;lt;path d=&amp;#34;M-30.7 9.2C-26.7 22.4-14.5 32 0 32c17.7 0 32-14.3 32-32S17.7-32 0-32c-17 0-30.9 13.2-32 29.9 2.1 3.5 2.9 5.6 1.3 11.3&amp;#34; style=&amp;#34;fill:url(#a)&amp;#34;/&amp;gt;&amp;lt;path d=&amp;#34;M-1.7-8v.2L-9.5 3.5c-1.3-.1-2.5.2-3.7.7-.5.2-1 .5-1.5.8l-17.2-7.1s-.4 6.5 1.3 11.4l12.2 5c.6 2.7 2.5 5.1 5.2 6.3 4.5 1.9 9.7-.3 11.6-4.8.5-1.2.7-2.4.7-3.7l11.2-8h.3c6.7 0 12.2-5.5 12.2-12.2s-5.4-12.2-12.2-12.2C3.8-20.2-1.7-14.7-1.7-8m-1.8 23c-1.5 3.5-5.5 5.1-9 3.7-1.5-.7-2.8-1.8-3.5-3.4l4 1.6c2.6 1.1 5.5-.1 6.6-2.7s-.1-5.5-2.7-6.6L-12.3 6c1.6-.6 3.4-.6 5 .1 1.7.7 3 2 3.7 3.7s.7 3.5.1 5.2M10.5.1C6 .1 2.4-3.5 2.4-8s3.6-8.1 8.1-8.1 8.1 3.6 8.1 8.1S15 .1 10.5.1M4.4-8c0-3.4 2.7-6.1 6.1-6.1s6.1 2.7 6.1 6.1-2.7 6.1-6.1 6.1S4.4-4.7 4.4-8&amp;#34; style=&amp;#34;fill:#fff&amp;#34;/&amp;gt;&amp;lt;/symbol&amp;gt;&amp;lt;use xlink:href=&amp;#34;#b&amp;#34; width=&amp;#34;64&amp;#34; height=&amp;#34;64&amp;#34; x=&amp;#34;-32&amp;#34; y=&amp;#34;-32&amp;#34; style=&amp;#34;overflow:visible&amp;#34; transform=&amp;#34;matrix(8 0 0 8 256 256)&amp;#34;/&amp;gt;&amp;lt;/svg&amp;gt;
+ &amp;lt;/div&amp;gt;
+ &amp;lt;div class=&amp;#34;absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent h-10&amp;#34;&amp;gt;&amp;lt;/div&amp;gt;
+ &amp;lt;div class=&amp;#34;absolute bottom-3 left-4&amp;#34;&amp;gt;
+ &amp;lt;h3 class=&amp;#34;text-xl font-bold text-zinc-50&amp;#34;&amp;gt;Steam&amp;lt;/h3&amp;gt;
+ &amp;lt;p class=&amp;#34;text-sm text-zinc-200&amp;#34;&amp;gt;&amp;lt;/p&amp;gt;
+ &amp;lt;/div&amp;gt;
+ &amp;lt;/div&amp;gt;
+ &amp;lt;div class=&amp;#34;p-4 bg-zinc-50 dark:bg-zinc-900 flex-grow flex flex-col min-h-0&amp;#34;&amp;gt;
+ &amp;lt;p class=&amp;#34;text-sm text-zinc-600 dark:text-zinc-400 mb-4 line-clamp-2 overflow-x-hidden flex-shrink-0&amp;#34;&amp;gt;&amp;#34;Pay. Don&amp;#39;t play.&amp;#34; Steam 是畅玩游戏、讨论游戏、创造游戏的快乐所在。&amp;lt;/p&amp;gt;
+ &amp;lt;div class=&amp;#34;flex w-full justify-between items-center gap-2&amp;#34;&amp;gt;
+ &amp;lt;div class=&amp;#34;flex-1 text-center&amp;#34;&amp;gt;
+ &amp;lt;div class=&amp;#34;text-xs text-zinc-500 dark:text-zinc-500&amp;#34;&amp;gt;游戏库&amp;lt;/div&amp;gt;
+ &amp;lt;div class=&amp;#34;font-semibold text-zinc-700 dark:text-zinc-300&amp;#34;&amp;gt;&amp;lt;span&amp;gt;{{ $steamGameCount }}&amp;lt;/span&amp;gt;&amp;lt;/div&amp;gt;
+ &amp;lt;/div&amp;gt;
+ &amp;lt;div class=&amp;#34;flex-2 text-center&amp;#34;&amp;gt;
+ &amp;lt;a href=&amp;#34;{{ $steamUrl }}&amp;#34; target=&amp;#34;_blank&amp;#34; rel=&amp;#34;noopener noreferrer&amp;#34; class=&amp;#34;text-zinc-700 dark:text-zinc-300 border border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-700 focus:ring-4 focus:outline-hidden focus:ring-zinc-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center cursor-pointer no-underline transition-colors duration-200&amp;#34;&amp;gt;
+ View Details
+ &amp;lt;svg class=&amp;#34;rtl:rotate-180 w-3.5 h-3.5 ms-2&amp;#34; aria-hidden=&amp;#34;true&amp;#34; xmlns=&amp;#34;http://www.w3.org/2000/svg&amp;#34; fill=&amp;#34;currentColor&amp;#34; viewBox=&amp;#34;0 0 14 10&amp;#34;&amp;gt;
+ &amp;lt;path stroke=&amp;#34;currentColor&amp;#34; stroke-linecap=&amp;#34;round&amp;#34; stroke-linejoin=&amp;#34;round&amp;#34; stroke-width=&amp;#34;2&amp;#34; d=&amp;#34;M1 5h12m0 0L9 1m4 4L9 9&amp;#34;/&amp;gt;
+ &amp;lt;/svg&amp;gt;
+ &amp;lt;/a&amp;gt;
+ &amp;lt;/div&amp;gt;
+ &amp;lt;/div&amp;gt;
+ &amp;lt;/div&amp;gt;
+ &amp;lt;/div&amp;gt;
+ &amp;lt;/div&amp;gt;
+
+ &amp;lt;h3 id=&amp;#34;按年份统计 - 文章数&amp;#34; class=&amp;#34;headerLink mt-0&amp;#34;&amp;gt;&amp;lt;a href=&amp;#34;#按年份统计 - 文章数&amp;#34; class=&amp;#34;header-mark&amp;#34; title=&amp;#34;header-mark&amp;#34;&amp;gt;&amp;lt;/a&amp;gt;按年份统计 - 文章数&amp;lt;/h3&amp;gt;
+
+ &amp;lt;div class=&amp;#34;bar-chart mb-24&amp;#34;&amp;gt;
+ {{ $currentYear := now.Year }}
+ {{ $maxCount := 0 }}
+ {{ range $year := (seq 2006 $currentYear) }}
+ {{ $yearData := where $stats &amp;#34;year&amp;#34; (string $year) }}
+ {{ $count := len $yearData }}
+ {{ if gt $count $maxCount }}
+ {{ $maxCount = $count }}
+ {{ end }}
+ {{ end }}
+
+ {{ range $year := (seq 2006 $currentYear) }}
+ {{ $yearData := where $stats &amp;#34;year&amp;#34; (string $year) }}
+ {{ $count := len $yearData }}
+ {{ $countPercentage := 0 }}
+ {{ if ne $count 0 }}
+ {{/* 懒得修复 CSS 在这里保证最大值为 100% */}}
+ {{ $countPercentage = div (mul (float $count) 100) $maxCount }}
+ {{ end }}
+ &amp;lt;div class=&amp;#34;item&amp;#34; style=&amp;#34;--val: {{ $countPercentage}}&amp;#34;&amp;gt;
+ &amp;lt;div class=&amp;#34;label text-xs w-[2ch] md:w-8 text-clip overflow-hidden whitespace-nowrap -indent-4 md:indent-0&amp;#34;&amp;gt;{{ $year }}&amp;lt;/div&amp;gt;
+ &amp;lt;div class=&amp;#34;value&amp;#34;&amp;gt;{{ $count }}&amp;lt;/div&amp;gt;
+ &amp;lt;/div&amp;gt;
+ {{ end }}
+ &amp;lt;/div&amp;gt;
+
+ &amp;lt;h3 id=&amp;#34;按分类统计 - 文章数&amp;#34; class=&amp;#34;headerLink mt-0&amp;#34;&amp;gt;&amp;lt;a href=&amp;#34;#按分类统计 - 文章数&amp;#34; class=&amp;#34;header-mark&amp;#34; title=&amp;#34;header-mark&amp;#34;&amp;gt;&amp;lt;/a&amp;gt;按分类统计 - 文章数&amp;lt;/h3&amp;gt;
+
+ &amp;lt;div class=&amp;#34;category flex items-center flex-col lg:flex-row gap-8 mx-auto max-w-full mb-24&amp;#34;&amp;gt;
+ &amp;lt;div class=&amp;#34;w-full lg:w-[70%] flex justify-center&amp;#34;&amp;gt;
+ &amp;lt;svg id=&amp;#34;cate-pie-chart&amp;#34; class=&amp;#34;w-full max-w-xl&amp;#34; viewBox=&amp;#34;0 0 400 400&amp;#34; style=&amp;#34;height: auto; aspect-ratio: 1;&amp;#34;&amp;gt;&amp;lt;/svg&amp;gt;
+ &amp;lt;/div&amp;gt;
+ &amp;lt;div class=&amp;#34;w-full lg:w-[30%] labels&amp;#34;&amp;gt;
+ &amp;lt;h3 class=&amp;#34;mb-6&amp;#34;&amp;gt;分类统计&amp;lt;/h3&amp;gt;
+ &amp;lt;ul class=&amp;#34;space-y-2&amp;#34;&amp;gt;
+ {{ $colors := slice &amp;#34;#f97316&amp;#34; &amp;#34;#06b6d4&amp;#34; &amp;#34;#f43f5e&amp;#34; &amp;#34;#2563eb&amp;#34; &amp;#34;#8b5cf6&amp;#34; &amp;#34;#10b981&amp;#34; &amp;#34;#f59e0b&amp;#34; &amp;#34;#ec4899&amp;#34; &amp;#34;#3b82f6&amp;#34; &amp;#34;#ef4444&amp;#34; &amp;#34;#14b8a6&amp;#34; &amp;#34;#a855f7&amp;#34; &amp;#34;#f97316&amp;#34; &amp;#34;#06b6d4&amp;#34; &amp;#34;#f43f5e&amp;#34; &amp;#34;#2563eb&amp;#34; &amp;#34;#8b5cf6&amp;#34; &amp;#34;#10b981&amp;#34; &amp;#34;#f59e0b&amp;#34; &amp;#34;#ec4899&amp;#34; }}
+ {{ $cateCounter := 0 }}
+ {{ range $category, $pages := .Site.Taxonomies.categories }}
+ {{ $cateCounter = add $cateCounter 1 }}
+ {{ $cateCount := len $pages }}
+ {{ $catePercentage := div (mul (float $cateCount) 100) $articleCount }}
+ {{ $color := index $colors (sub $cateCounter 1) }}
+ &amp;lt;li id=&amp;#34;legend-{{ sub $cateCounter 1 }}&amp;#34; class=&amp;#34;flex items-center gap-2 py-1 px-2 rounded transition-all duration-200 cursor-pointer hover:bg-zinc-100 dark:hover:bg-zinc-700&amp;#34; data-percentage=&amp;#39;{{ printf &amp;#34;%.2f&amp;#34; $catePercentage }}&amp;#39;&amp;gt;
+ &amp;lt;span class=&amp;#34;w-4 h-4 rounded-full flex-shrink-0&amp;#34; style=&amp;#34;background-color: {{ $color }}&amp;#34;&amp;gt;&amp;lt;/span&amp;gt;
+ &amp;lt;span class=&amp;#34;flex-1&amp;#34;&amp;gt;{{ $category }}: {{ $cateCount }} 篇&amp;lt;/span&amp;gt;
+ &amp;lt;span class=&amp;#34;text-sm text-zinc-500 dark:text-zinc-400&amp;#34;&amp;gt;({{ printf &amp;#34;%.1f&amp;#34; $catePercentage }}%)&amp;lt;/span&amp;gt;
+ &amp;lt;/li&amp;gt;
+ {{ end }}
+ &amp;lt;/ul&amp;gt;
+ &amp;lt;/div&amp;gt;
+ &amp;lt;/div&amp;gt;
+
+ &amp;lt;h3 id=&amp;#34;标签云&amp;#34; class=&amp;#34;headerLink mt-0&amp;#34;&amp;gt;&amp;lt;a href=&amp;#34;#标签云&amp;#34; class=&amp;#34;header-mark no-underline&amp;#34; title=&amp;#34;header-mark&amp;#34;&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;a href=&amp;#34;/tags/&amp;#34; class=&amp;#34;no-underline hover:underline&amp;#34;&amp;gt;标签云&amp;lt;/a&amp;gt;&amp;lt;/h3&amp;gt;
+
+ &amp;lt;div class=&amp;#34;tag-cloud-tags&amp;#34;&amp;gt;
+ {{- range $.Site.Taxonomies.tags.ByCount -}}
+ &amp;lt;a href=&amp;#34;{{ .Page.RelPermalink }}&amp;#34;&amp;gt;&amp;lt;div class=&amp;#34;tags-shields&amp;#34;&amp;gt;&amp;lt;div class=&amp;#34;tags-shields-before&amp;#34;&amp;gt;{{ .Page.Title }}&amp;lt;/div&amp;gt;&amp;lt;div class=&amp;#34;tags-shields-after tags-count-{{ .Count }}&amp;#34;&amp;gt;{{ .Count }}&amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/a&amp;gt;
+ {{- end -}}
+ &amp;lt;/div&amp;gt;
+
+ 
+ &amp;lt;/div&amp;gt;
+
+ &amp;lt;/div&amp;gt;
+
+ &amp;lt;script type=&amp;#34;text/javascript&amp;#34;&amp;gt;
+ // Whois Creation Date: 2006-01-02 15:04:05 Monday
+ const now = new Date();
+ const onlineStartDate = new Date(&amp;#34;2006-01-02 15:04:05&amp;#34;); // 2010-03-26T14:41:14Z
+ const diffTime = Math.abs(now - onlineStartDate);
+ const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+ const years = Math.floor(diffDays / 365);
+
+ const diffDaysLocale = diffDays.toLocaleString();
+
+ document.getElementById(&amp;#39;stats_blog_online_year&amp;#39;).innerHTML = `${diffDaysLocale}天 &amp;lt;span class=&amp;#34;text-xs&amp;#34;&amp;gt;(${years}yrs)&amp;lt;/span&amp;gt;`;
+ &amp;lt;/script&amp;gt;
+
+ &amp;lt;script type=&amp;#34;text/javascript&amp;#34;&amp;gt;
+ // 计算相对时间的函数
+ function getRelativeTime(dateString) {
+ const rtf = new Intl.RelativeTimeFormat(&amp;#39;zh-CN&amp;#39;, { numeric: &amp;#34;auto&amp;#34;, style: &amp;#39;short&amp;#39; });
+ const now = new Date();
+ const date = new Date(dateString);
+
+ // 检查日期是否有效
+ if (isNaN(date.getTime())) {
+ return dateString;
+ }
+
+ const diff = now - date;
+
+ const seconds = Math.floor(diff / 1000);
+ const minutes = Math.floor(seconds / 60);
+ const hours = Math.floor(minutes / 60);
+ const days = Math.floor(hours / 24);
+ const months = Math.floor(days / 30);
+ const years2 = Math.floor(days / 365);
+
+ // 获取原始格式化的相对时间（如 &amp;#34;3 天前&amp;#34;）
+ let formattedTime;
+ if (years2 &amp;gt; 0) {
+ formattedTime = rtf.format(-years2, &amp;#39;year&amp;#39;);
+ } else if (months &amp;gt; 0) {
+ formattedTime = rtf.format(-months, &amp;#39;month&amp;#39;);
+ } else if (days &amp;gt; 0) {
+ formattedTime = rtf.format(-days, &amp;#39;day&amp;#39;);
+ } else if (hours &amp;gt; 0) {
+ formattedTime = rtf.format(-hours, &amp;#39;hour&amp;#39;);
+ } else if (minutes &amp;gt; 0) {
+ formattedTime = rtf.format(-minutes, &amp;#39;minute&amp;#39;);
+ } else {
+ formattedTime = rtf.format(-seconds, &amp;#39;second&amp;#39;);
+ }
+
+ return formattedTime.replace(/(\d&amp;#43;)([^\d]&amp;#43;)/, &amp;#39;$1 $2&amp;#39;);
+ };
+ &amp;lt;/script&amp;gt;
+
+ &amp;lt;script type=&amp;#34;text/javascript&amp;#34;&amp;gt;
+ // Donut Chart
+ let cateData = [
+ {{ range $category, $pages := .Site.Taxonomies.categories }}
+ {name: &amp;#34;{{ $category }}&amp;#34;, value: {{ len $pages }}},
+ {{ end }}
+ ];
+
+ let total = 0;
+ cateData.forEach(item =&amp;gt; {
+ total &amp;#43;= item.value;
+ });
+
+ const data = {
+ total: total,
+ category: cateData
+ };
+
+ const colors = [
+ &amp;#39;#f97316&amp;#39;,
+ &amp;#39;#06b6d4&amp;#39;,
+ &amp;#39;#f43f5e&amp;#39;,
+ &amp;#39;#2563eb&amp;#39;,
+ &amp;#39;#8b5cf6&amp;#39;,
+ &amp;#39;#10b981&amp;#39;,
+ &amp;#39;#f59e0b&amp;#39;,
+ &amp;#39;#ec4899&amp;#39;,
+ &amp;#39;#3b82f6&amp;#39;,
+ &amp;#39;#ef4444&amp;#39;,
+ &amp;#39;#14b8a6&amp;#39;,
+ &amp;#39;#a855f7&amp;#39;,
+ &amp;#39;#f97316&amp;#39;,
+ &amp;#39;#06b6d4&amp;#39;,
+ &amp;#39;#f43f5e&amp;#39;,
+ &amp;#39;#2563eb&amp;#39;,
+ &amp;#39;#8b5cf6&amp;#39;,
+ &amp;#39;#10b981&amp;#39;,
+ &amp;#39;#f59e0b&amp;#39;,
+ &amp;#39;#ec4899&amp;#39;,
+ ];
+
+ const svg = document.getElementById(&amp;#39;cate-pie-chart&amp;#39;);
+ if (svg) {
+ const centerX = 200;
+ const centerY = 200;
+ const radius = 160;
+ const innerRadius = 80;
+
+ let totalValue = 0;
+ let currentAngle = -Math.PI / 2;
+
+ data.category.forEach(item =&amp;gt; {
+ totalValue &amp;#43;= item.value;
+ });
+
+ data.category.forEach((item, index) =&amp;gt; {
+ const sliceAngle = (item.value / totalValue) * 2 * Math.PI;
+ const percentage = (item.value / totalValue) * 100;
+ const largeArcFlag = sliceAngle &amp;gt; Math.PI ? 1 : 0;
+
+ const startX = centerX &amp;#43; Math.cos(currentAngle) * radius;
+ const startY = centerY &amp;#43; Math.sin(currentAngle) * radius;
+ const endX = centerX &amp;#43; Math.cos(currentAngle &amp;#43; sliceAngle) * radius;
+ const endY = centerY &amp;#43; Math.sin(currentAngle &amp;#43; sliceAngle) * radius;
+
+ const innerStartX = centerX &amp;#43; Math.cos(currentAngle) * innerRadius;
+ const innerStartY = centerY &amp;#43; Math.sin(currentAngle) * innerRadius;
+ const innerEndX = centerX &amp;#43; Math.cos(currentAngle &amp;#43; sliceAngle) * innerRadius;
+ const innerEndY = centerY &amp;#43; Math.sin(currentAngle &amp;#43; sliceAngle) * innerRadius;
+
+ const pathData = `M ${startX} ${startY} A ${radius} ${radius} 0 ${largeArcFlag} 1 ${endX} ${endY} L ${innerEndX} ${innerEndY} A ${innerRadius} ${innerRadius} 0 ${largeArcFlag} 0 ${innerStartX} ${innerStartY} Z`;
+
+ const path = document.createElementNS(&amp;#39;http://www.w3.org/2000/svg&amp;#39;, &amp;#39;path&amp;#39;);
+ const sliceColor = colors[index % colors.length];
+ path.setAttribute(&amp;#39;d&amp;#39;, pathData);
+ path.setAttribute(&amp;#39;fill&amp;#39;, sliceColor);
+ path.setAttribute(&amp;#39;stroke&amp;#39;, &amp;#39;white&amp;#39;);
+ path.setAttribute(&amp;#39;stroke-width&amp;#39;, &amp;#39;2&amp;#39;);
+ path.setAttribute(&amp;#39;class&amp;#39;, &amp;#39;donut-slice&amp;#39;);
+ path.setAttribute(&amp;#39;data-name&amp;#39;, item.name);
+ path.setAttribute(&amp;#39;data-value&amp;#39;, item.value);
+ path.setAttribute(&amp;#39;data-color&amp;#39;, sliceColor);
+ path.style.transition = &amp;#39;opacity 0.3s ease&amp;#39;;
+ path.style.cursor = &amp;#39;pointer&amp;#39;;
+ svg.appendChild(path);
+
+ // 占比大于3%的分类，在环形图上显示名称
+ if (percentage &amp;gt; 3) {
+ const textAngle = currentAngle &amp;#43; sliceAngle / 2;
+ const textRadius = (radius &amp;#43; innerRadius) / 2;
+ const textX = centerX &amp;#43; Math.cos(textAngle) * textRadius;
+ const textY = centerY &amp;#43; Math.sin(textAngle) * textRadius;
+
+ const text = document.createElementNS(&amp;#39;http://www.w3.org/2000/svg&amp;#39;, &amp;#39;text&amp;#39;);
+ text.setAttribute(&amp;#39;x&amp;#39;, textX);
+ text.setAttribute(&amp;#39;y&amp;#39;, textY);
+ text.setAttribute(&amp;#39;fill&amp;#39;, &amp;#39;white&amp;#39;);
+ text.setAttribute(&amp;#39;font-size&amp;#39;, &amp;#39;13&amp;#39;);
+ text.setAttribute(&amp;#39;text-anchor&amp;#39;, &amp;#39;middle&amp;#39;);
+ text.setAttribute(&amp;#39;dominant-baseline&amp;#39;, &amp;#39;middle&amp;#39;);
+ text.style.fontWeight = &amp;#39;600&amp;#39;;
+ text.style.textShadow = &amp;#39;1px 1px 2px rgba(0,0,0,0.3)&amp;#39;;
+ text.style.pointerEvents = &amp;#39;none&amp;#39;;
+ text.classList.add(&amp;#39;donut-label&amp;#39;);
+ text.textContent = item.name;
+ svg.appendChild(text);
+ }
+
+ path.addEventListener(&amp;#39;mouseenter&amp;#39;, function() {
+ document.querySelectorAll(&amp;#39;.donut-slice&amp;#39;).forEach(p =&amp;gt; {
+ if (p !== this) {
+ p.style.opacity = &amp;#39;0.3&amp;#39;;
+ }
+ });
+ const legendItem = document.getElementById(`legend-${index}`);
+ if (legendItem) {
+ legendItem.style.backgroundColor = sliceColor;
+ legendItem.style.color = &amp;#39;white&amp;#39;;
+ legendItem.style.fontWeight = &amp;#39;bold&amp;#39;;
+ }
+ });
+
+ path.addEventListener(&amp;#39;mouseleave&amp;#39;, function() {
+ document.querySelectorAll(&amp;#39;.donut-slice&amp;#39;).forEach(p =&amp;gt; {
+ p.style.opacity = &amp;#39;1&amp;#39;;
+ });
+ const legendItem = document.getElementById(`legend-${index}`);
+ if (legendItem) {
+ legendItem.style.backgroundColor = &amp;#39;transparent&amp;#39;;
+ legendItem.style.color = &amp;#39;&amp;#39;;
+ legendItem.style.fontWeight = &amp;#39;normal&amp;#39;;
+ }
+ });
+
+ currentAngle &amp;#43;= sliceAngle;
+ });
+
+ const totalText = document.createElementNS(&amp;#39;http://www.w3.org/2000/svg&amp;#39;, &amp;#39;text&amp;#39;);
+ totalText.setAttribute(&amp;#39;x&amp;#39;, centerX);
+ totalText.setAttribute(&amp;#39;y&amp;#39;, centerY - 10);
+ totalText.setAttribute(&amp;#39;fill&amp;#39;, &amp;#39;#1f2937&amp;#39;);
+ totalText.setAttribute(&amp;#39;font-size&amp;#39;, &amp;#39;28&amp;#39;);
+ totalText.setAttribute(&amp;#39;text-anchor&amp;#39;, &amp;#39;middle&amp;#39;);
+ totalText.setAttribute(&amp;#39;font-weight&amp;#39;, &amp;#39;bold&amp;#39;);
+ totalText.textContent = totalValue;
+ totalText.classList.add(&amp;#39;dark-mode-text&amp;#39;);
+
+ const labelText = document.createElementNS(&amp;#39;http://www.w3.org/2000/svg&amp;#39;, &amp;#39;text&amp;#39;);
+ labelText.setAttribute(&amp;#39;x&amp;#39;, centerX);
+ labelText.setAttribute(&amp;#39;y&amp;#39;, centerY &amp;#43; 20);
+ labelText.setAttribute(&amp;#39;fill&amp;#39;, &amp;#39;#6b7280&amp;#39;);
+ labelText.setAttribute(&amp;#39;font-size&amp;#39;, &amp;#39;14&amp;#39;);
+ labelText.setAttribute(&amp;#39;text-anchor&amp;#39;, &amp;#39;middle&amp;#39;);
+ labelText.textContent = &amp;#39;篇&amp;#39;;
+ labelText.classList.add(&amp;#39;dark-mode-text-secondary&amp;#39;);
+
+ svg.appendChild(totalText);
+ svg.appendChild(labelText);
+
+ const updateDarkModeText = () =&amp;gt; {
+ const isDark = document.documentElement.getAttribute(&amp;#39;data-theme&amp;#39;) === &amp;#39;dark&amp;#39;;
+ totalText.setAttribute(&amp;#39;fill&amp;#39;, isDark ? &amp;#39;#f9fafb&amp;#39; : &amp;#39;#1f2937&amp;#39;);
+ labelText.setAttribute(&amp;#39;fill&amp;#39;, isDark ? &amp;#39;#9ca3af&amp;#39; : &amp;#39;#6b7280&amp;#39;);
+ };
+
+ const observer = new MutationObserver(updateDarkModeText);
+ observer.observe(document.documentElement, { attributes: true, attributeFilter: [&amp;#39;data-theme&amp;#39;] });
+ updateDarkModeText();
+ }
+ &amp;lt;/script&amp;gt;
+
+ &amp;lt;script&amp;gt;
+ // 页面加载完成后执行
+ document.addEventListener(&amp;#39;DOMContentLoaded&amp;#39;, function() {
+ // Github Card Last Commit
+ const lastCommitDateElement = document.getElementById(&amp;#34;last-commit-date&amp;#34;);
+ // const totalPlayedTimeElement = document.getElementById(&amp;#34;total-played-time&amp;#34;);
+ if (lastCommitDateElement) {
+ const commitDate = lastCommitDateElement.getAttribute(&amp;#34;data-date&amp;#34;);
+ lastCommitDateElement.textContent = getRelativeTime(commitDate);
+ }
+ // totalPlayedTimeElement.textContent = getRelativeTime(commitDate);
+
+ // createHeatmap 函数如果存在则调用
+ if (typeof createHeatmap === &amp;#39;function&amp;#39;) {
+ createHeatmap();
+ }
+
+ });
+ &amp;lt;/script&amp;gt;
+ &amp;lt;/div&amp;gt;
+&amp;lt;/article&amp;gt;
+{{- end -}}&lt;/code&gt;&lt;/pre&gt;&lt;h3 class="heading-element" id="创建css文件"&gt;&lt;span&gt;创建css文件&lt;/span&gt;
+ &lt;a href="#%e5%88%9b%e5%bb%bacss%e6%96%87%e4%bb%b6" class="heading-mark"&gt;
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
+ &lt;/a&gt;
+&lt;/h3&gt;&lt;p&gt;在博客根目录下创建&lt;code&gt;content/stats/stats.css&lt;/code&gt;文件，内容如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;@charset &amp;#34;UTF-8&amp;#34;;
+
+@media(max-width: 730px) {
+ :root {
+ --ypb-bodyMargin:20px
+ }
+}
+
+.headerLink a {
+ color: unset!important
+}
+
+.article-content div ul {
+ margin-top: -.5rem
+}
+
+.tag-cloud-tags {
+ margin: 10px 0
+}
+
+.tag-cloud-tags a {
+ display: inline-block;
+ position: relative;
+ margin: 5px 10px;
+ word-wrap: break-word;
+ overflow-wrap: break-word;
+ -webkit-transition: all ease-out .3s;
+ -moz-transition: all ease-out .3s;
+ -o-transition: all ease-out .3s;
+ transition: all ease-out .3s;
+ text-decoration: none
+}
+
+.tags-shields {
+ display: flex;
+ height: 20px;
+ line-height: 20px;
+ overflow: hidden;
+ align-items: center;
+ border-radius: 4px
+}
+
+.tags-shields-before {
+ font-size: 12px;
+ padding: 0 4px 0 6px;
+ background-color: #595959;
+ color: #fff;
+ display: inline-block;
+ vertical-align: middle
+}
+
+.tags-shields-after {
+ font-size: 10px;
+ padding: 0 6px 0 4px;
+ background-color: #0274b5;
+ color: #fff;
+ display: inline-block;
+ vertical-align: middle
+}
+
+.tags-count-1 {
+ background-color: #0274b5
+}
+
+.tags-count-2 {
+ background-color: #3b8dbf
+}
+
+.tags-count-3 {
+ background-color: #8ab802
+}
+
+.tags-count-4 {
+ background-color: green
+}
+
+.tags-count-5 {
+ background-color: #dab226
+}
+
+.tags-count-6 {
+ background-color: #e77334
+}
+
+.tags-count-7 {
+ background-color: #cc5640
+}
+
+.tags-count-8 {
+ background-color: #e6adb7
+}
+
+.tags-count-9 {
+ background-color: #740174
+}
+
+.tags-count-10,.tags-count-11,.tags-count-12,.tags-count-13,.tags-count-14,.tags-count-15,.tags-count-16,.tags-count-17,.tags-count-18,.tags-count-19 {
+ background-color: orange
+}
+
+.tags-count-20,.tags-count-21,.tags-count-22,.tags-count-23,.tags-count-24,.tags-count-25,.tags-count-26,.tags-count-27,.tags-count-28,.tags-count-29 {
+ background-color: #ff4500
+}
+
+.tags-count-30,.tags-count-31,.tags-count-32,.tags-count-33,.tags-count-34,.tags-count-35,.tags-count-36,.tags-count-37,.tags-count-38,.tags-count-39,.tags-count-40,.tags-count-41,.tags-count-42,.tags-count-43,.tags-count-44,.tags-count-45,.tags-count-46,.tags-count-47,.tags-count-48,.tags-count-49,.tags-count-50 {
+ background-color: red
+}
+
+.bar-chart {
+ height: 20rem;
+ display: grid;
+ grid-auto-flow: column;
+ gap: 2%;
+ align-items: end;
+ padding-inline:2%;padding-block:1.5rem;position: relative;
+ isolation: isolate
+}
+
+.bar-chart::after {
+ content: &amp;#34;&amp;#34;;
+ position: absolute;
+ inset: 1.5rem 0;
+ z-index: -1;
+ background-image: repeating-linear-gradient(to top,transparent 0 calc(calc(100%/10) - 1px),currentcolor 0 calc(100%/10));
+ box-shadow: 0 1px currentcolor;
+ opacity: .125
+}
+
+.bar-chart&amp;gt;.item {
+ height: calc(1% * var(--val));
+ width: 100%;
+ background-color: #2563eb;
+ position: relative;
+ animation: item-height 1s ease forwards
+}
+
+@keyframes item-height {
+ from {
+ height: 0
+ }
+}
+
+.bar-chart&amp;gt;.item&amp;gt;* {
+ position: absolute;
+ text-align: center
+}
+
+.bar-chart&amp;gt;.item&amp;gt;.label {
+ inset: 100% 0 auto 0
+}
+
+.bar-chart&amp;gt;.item&amp;gt;.value {
+ inset: auto 0 100% 0
+}
+
+.stats-cards a {
+ font-weight: 600
+}
+
+/* Dark Theme Adaptation */
+[data-theme=&amp;#39;dark&amp;#39;] .bar-chart::after {
+ opacity: .25;
+ color: #71717a
+}
+
+[data-theme=&amp;#39;dark&amp;#39;] .bar-chart&amp;gt;.item {
+ background-color: #3b82f6
+}
+
+[data-theme=&amp;#39;dark&amp;#39;] .tag-cloud-tags a:hover {
+ filter: brightness(1.2)
+}
+
+/* Stat cards icon styles */
+.stats-icon-bg {
+ background: linear-gradient(to bottom right, #dbeafe, #dbeafe)
+}
+
+.stats-icon-color {
+ color: #2563eb
+}
+
+[data-theme=&amp;#39;dark&amp;#39;] .stats-icon-bg {
+ background: linear-gradient(to bottom right, #1e3a8a, #1e40af) !important
+}
+
+[data-theme=&amp;#39;dark&amp;#39;] .stats-icon-color {
+ color: #60a5fa !important
+}
+
+/* Override Tailwind bg-zinc-50 and bg-zinc-100 */
+.grid.grid-cols-2 &amp;gt; div {
+ background-color: #fafafa !important
+}
+
+[data-theme=&amp;#39;dark&amp;#39;] .grid.grid-cols-2 &amp;gt; div {
+ background-color: #1c2128 !important
+}
+
+/* Dark theme border optimization - reduce border width for better dark mode appearance */
+[data-theme=&amp;#39;dark&amp;#39;] .border {
+ border-width: 0.5px !important;
+ border-color: #374151 !important;
+}
+
+/* Specific optimization for stat cards in dark theme */
+[data-theme=&amp;#39;dark&amp;#39;] .grid.grid-cols-2 &amp;gt; div,
+[data-theme=&amp;#39;dark&amp;#39;] .grid.md\:grid-cols-4 &amp;gt; div {
+ border-color: #374151 !important;
+ border-width: 0.5px !important;
+}
+
+/* Fix for GitHub/Steam/Analytics cards in dark theme */
+[data-theme=&amp;#39;dark&amp;#39;] .stats-cards .bg-zinc-50 {
+ background-color: #111827 !important;
+}
+
+[data-theme=&amp;#39;dark&amp;#39;] .stats-cards .bg-zinc-100 {
+ background-color: #1f2937 !important;
+}
+
+/* Ensure text colors are properly adjusted for dark theme */
+[data-theme=&amp;#39;dark&amp;#39;] .text-zinc-600 {
+ color: #d1d5db !important;
+}
+
+[data-theme=&amp;#39;dark&amp;#39;] .text-zinc-700 {
+ color: #e5e7eb !important;
+}
+
+[data-theme=&amp;#39;dark&amp;#39;] .text-zinc-900 {
+ color: #f9fafb !important;
+}
+
+/* Fix for specific text elements in cards */
+[data-theme=&amp;#39;dark&amp;#39;] .stats-cards .text-zinc-500 {
+ color: #9ca3af !important;
+}
+
+/* Donut chart legend styles */
+.category .labels ul {
+ list-style: none;
+ padding: 0;
+ margin: 0;
+}
+
+.category .labels li {
+ transition: all 0.2s ease;
+}
+
+.category .labels li:hover {
+ transform: translateX(4px);
+}
+
+/* Responsive layout for category section */
+@media (max-width: 1024px) {
+ .category {
+ flex-direction: column;
+ }
+ .category .labels {
+ width: 100% !important;
+ order: 2;
+ }
+ .category &amp;gt; div:first-child {
+ width: 100% !important;
+ order: 1;
+ }
+}&lt;/code&gt;&lt;/pre&gt;&lt;h3 class="heading-element" id="创建md文件"&gt;&lt;span&gt;创建md文件&lt;/span&gt;
+ &lt;a href="#%e5%88%9b%e5%bb%bamd%e6%96%87%e4%bb%b6" class="heading-mark"&gt;
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
+ &lt;/a&gt;
+&lt;/h3&gt;&lt;p&gt;在博客根目录下创建&lt;code&gt;content/stats/index.md&lt;/code&gt;文件，内容如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;---
+title: &amp;#34;博客统计&amp;#34;
+date: 2026-01-24T15:22:51&amp;#43;08:00
+layout: stats
+---
+your content goes here.&lt;/code&gt;&lt;/pre&gt;&lt;h2 class="heading-element" id="参考"&gt;&lt;span&gt;参考&lt;/span&gt;
+ &lt;a href="#%e5%8f%82%e8%80%83" class="heading-mark"&gt;
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
+ &lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;[1] 主要参考 &lt;a href="https://www.eallion.com/blog-heatmap/" target="_blank" rel="external nofollow noopener noreferrer"&gt;https://www.eallion.com/blog-heatmap/&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;，感谢 eallion 的无私分享！&lt;/p&gt;</description></item><item><title>js的魔法特效</title><link>https://geekswg.js.cool/posts/2026/js-magic/</link><pubDate>Mon, 19 Jan 2026 18:51:00 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2026/js-magic/</guid><category domain="https://geekswg.js.cool/categories/dev/">开发</category><description>&lt;p&gt;记录一些神奇且实用的JavaScript特效，源码来自互联网，部分经过修改和优化。可以直接在博客中使用，无需引入其他库。主要使用javascript和canvas特性实现。&lt;/p&gt;
 &lt;h2 class="heading-element" id="游动的小鱼"&gt;&lt;span&gt;游动的小鱼&lt;/span&gt;
  &lt;a href="#%e6%b8%b8%e5%8a%a8%e7%9a%84%e5%b0%8f%e9%b1%bc" class="heading-mark"&gt;
  &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
@@ -2214,114 +3137,4 @@ Content for chapter one.&lt;/code&gt;&lt;/pre&gt;&lt;div class="details admoniti
  &lt;a href="#%e6%80%bb%e7%bb%93" class="heading-mark"&gt;
  &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
  &lt;/a&gt;
-&lt;/h2&gt;&lt;p&gt;飞牛NAS作为一款新兴的国产NAS系统，以其免费、易用和高兼容性的特点，为DIY NAS用户提供了一个不错的选择。安装过程简单，界面友好，功能全面，无论是新手还是有一定经验的用户，都能快速上手并享受到NAS带来的便利。虽然在某些高级功能上还有待完善，但官方积极的更新和社区的支持，让人对其未来充满期待。&lt;/p&gt;</description></item><item><title>Hugo添加Pjax功能支持</title><link>https://geekswg.js.cool/posts/2024/hugo-pjax-support/</link><pubDate>Wed, 28 Feb 2024 18:38:31 +0800</pubDate><author>geekswg@qq.com (geekswg)</author><guid>https://geekswg.js.cool/posts/2024/hugo-pjax-support/</guid><category domain="https://geekswg.js.cool/categories/theme/">theme</category><description>&lt;img src="https://geekswg.js.cool/posts/2024/hugo-pjax-support/cover.webp" alt="featured image" referrerpolicy="no-referrer"&gt;&lt;p&gt;&lt;div class="details admonition note open"&gt;
- &lt;div class="details-summary admonition-title"&gt;&lt;i class="icon fa-fw fa-solid fa-pencil-alt" aria-hidden="true"&gt;&lt;/i&gt;注意&lt;i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;&lt;div class="details-content"&gt;
- &lt;div class="admonition-content"&gt;Hugo是一个使用Go语言构建的静态网站生成器，它的速度非常快，并且具有强大的主题支持和灵活的定制选项。通过Hugo，你可以轻松地构建和管理博客网站，并且添加PJAX功能也非常简单。&lt;/div&gt;
- &lt;/div&gt;
-&lt;/div&gt;
-当你希望你的博客网站加载更快、更平滑，同时又想要保持简洁的用户体验时，&lt;code&gt;PJAX&lt;/code&gt;（PushState + Ajax）就是一个很好的选择。Hugo是一个快速、灵活的静态网站生成器，它提供了添加PJAX功能的简便方法。在这篇博客中，我将向你介绍如何使用Hugo为你的博客网站添加PJAX功能。&lt;/p&gt;
-&lt;h2 class="heading-element" id="什么是pjax"&gt;&lt;span&gt;什么是PJAX？&lt;/span&gt;
- &lt;a href="#%e4%bb%80%e4%b9%88%e6%98%afpjax" class="heading-mark"&gt;
- &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
- &lt;/a&gt;
-&lt;/h2&gt;&lt;p&gt;PJAX是一种通过&lt;code&gt;Ajax&lt;/code&gt;和HTML5 History API来实现无刷新页面加载的技术。当用户点击链接时，PJAX会使用Ajax从服务器加载页面的一部分，然后使用History API来更新浏览器的URL，使其看起来像是完整加载了一个新页面。这种方式可以显著提高网站的加载速度，并提升用户体验。
-&lt;code&gt;Pjax&lt;/code&gt; = &lt;code&gt;Ajax&lt;/code&gt; + &lt;code&gt;pushState&lt;/code&gt;。当用户进行超链请求时，Pjax 会拦截请求，然后触发 Ajax 请求和 pushState。其中，Ajax 使你的页面局部刷新，pushState 用于修改 URL 而不跳转页面，从而实现不跳转页面局部刷新的功能。&lt;/p&gt;
-&lt;h2 class="heading-element" id="pjax在hugo中的使用"&gt;&lt;span&gt;PJAX在Hugo中的使用&lt;/span&gt;
- &lt;a href="#pjax%e5%9c%a8hugo%e4%b8%ad%e7%9a%84%e4%bd%bf%e7%94%a8" class="heading-mark"&gt;
- &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
- &lt;/a&gt;
-&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;PJAX实现有两大版本，一种是基于&lt;code&gt;JavaScript&lt;/code&gt;的版本，另一种是基于&lt;code&gt;jQuery&lt;/code&gt;的版本。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://github.com/MoOx/pjax" target="_blank" rel="external nofollow noopener noreferrer"&gt;MoOx/pjax&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt; 基于&lt;code&gt;JavaScript&lt;/code&gt;的版本，推荐使用！&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/defunkt/jquery-pjax" target="_blank" rel="external nofollow noopener noreferrer"&gt;defunkt/jquery-pjax&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;、&lt;a href="https://github.com/welefen/pjax" target="_blank" rel="external nofollow noopener noreferrer"&gt;welefen/pjax&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;。依赖&lt;code&gt;jQuery&lt;/code&gt;，不推荐使用。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 class="heading-element" id="安装pjax"&gt;&lt;span&gt;安装PJAX&lt;/span&gt;
- &lt;a href="#%e5%ae%89%e8%a3%85pjax" class="heading-mark"&gt;
- &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
- &lt;/a&gt;
-&lt;/h3&gt;&lt;p&gt;本文以 &lt;a href="https://github.com/MoOx/pjax" target="_blank" rel="external nofollow noopener noreferrer"&gt;MoOx/pjax&lt;i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt; 为例，介绍如何在Hugo中添加PJAX功能。
-首先，在你的Hugo项目中安装&lt;code&gt;pjax&lt;/code&gt;，使用cdn方式安装：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;script src=&amp;#34;https://cdn.jsdelivr.net/npm/pjax/pjax.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;h3 class="heading-element" id="配置pjax页面demo"&gt;&lt;span&gt;配置PJAX页面demo&lt;/span&gt;
- &lt;a href="#%e9%85%8d%e7%bd%aepjax%e9%a1%b5%e9%9d%a2demo" class="heading-mark"&gt;
- &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
- &lt;/a&gt;
-&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;!DOCTYPE html&amp;gt;
-&amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt;
- &amp;lt;head&amp;gt;
- &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34; /&amp;gt;
- &amp;lt;title&amp;gt;Liuyib&amp;#39;s Blog&amp;lt;/title&amp;gt;
- &amp;lt;meta name=&amp;#34;description&amp;#34; content=&amp;#34;Liuyib&amp;#39;s Blog&amp;#34; /&amp;gt;
- &amp;lt;/head&amp;gt;
- &amp;lt;body&amp;gt;
- &amp;lt;header id=&amp;#34;header&amp;#34; class=&amp;#34;header&amp;#34;&amp;gt;
- 顶部栏...
- &amp;lt;/header&amp;gt;
- &amp;lt;main id=&amp;#34;main&amp;#34; class=&amp;#34;main&amp;#34;&amp;gt;
- 主体部分...
- &amp;lt;/main&amp;gt;
- &amp;lt;footer id=&amp;#34;footer&amp;#34; class=&amp;#34;footer&amp;#34;&amp;gt;
- 底部栏...
- &amp;lt;/footer&amp;gt;
- &amp;lt;/body&amp;gt;
-&amp;lt;/html&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;每次切换页面时，title 会随之改变，header 和 footer 一般不变，而 main 是网站的主体部分，也会改变。因此，我们可以这样来使用 Pjax：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;var pjax = new Pjax({
- // 这里填写页面中改变的部分（和 CSS 选择器用法一样）
- selectors: [&amp;#34;head title&amp;#34;, &amp;#34;#main&amp;#34;],
-});&lt;/code&gt;&lt;/pre&gt;&lt;h3 class="heading-element" id="重载js"&gt;&lt;span&gt;重载JS&lt;/span&gt;
- &lt;a href="#%e9%87%8d%e8%bd%bdjs" class="heading-mark"&gt;
- &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
- &lt;/a&gt;
-&lt;/h3&gt;&lt;p&gt;如果页面中引入了JS文件，那么切换页面时，这些JS文件也会被重新加载。因此，我们需要在切换页面时，重新加载这些JS文件。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;script&amp;gt;
- var pjax = new Pjax({
- // 这里填写页面中改变的部分（和 CSS 选择器用法一样）
- selectors: [&amp;#34;head title&amp;#34;,&amp;#34;.desktop .animate__faster&amp;#34;, &amp;#34;.container&amp;#34;],
- });
-
- // Pjax 开始时执行的函数
-document.addEventListener(&amp;#34;pjax:send&amp;#34;, function () {
- console.log(&amp;#34;pjax:send&amp;#34;);
-});
-
-// Pjax 完成之后执行的函数
-document.addEventListener(&amp;#34;pjax:complete&amp;#34;, function () {
- console.log(&amp;#34;pjax:complete&amp;#34;);
-
- pjax_reload();
-});
-
-function pjax_reload() {
- pjax_js_reload(&amp;#34;/js/theme.min.js&amp;#34;);
- initCustomALink();
-}
-
-function pjax_js_reload(js_url, callback) {
- var bp = document.createElement(&amp;#39;script&amp;#39;);
- var curProtocol = window.location.protocol.split(&amp;#39;:&amp;#39;)[0];
- bp.src = js_url;
- var s = document.getElementsByTagName(&amp;#39;script&amp;#39;)[0];
- s.parentNode.insertBefore(bp, s);
-}
-
-&amp;lt;/script&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;h2 class="heading-element" id="pjax使用的注意事项"&gt;&lt;span&gt;PJAX使用的注意事项&lt;/span&gt;
- &lt;a href="#pjax%e4%bd%bf%e7%94%a8%e7%9a%84%e6%b3%a8%e6%84%8f%e4%ba%8b%e9%a1%b9" class="heading-mark"&gt;
- &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
- &lt;/a&gt;
-&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;注意整个页面的划分和布局，PAJX 只能加载页面中改变的部分，不能加载整个页面，一般的静态的部分不需要重复加载。&lt;/li&gt;
-&lt;li&gt;注意页面中的 JS 文件，切换页面时，需要重新加载 JS 文件，否则可能出现页面不完整和功能缺失的情况，需要在&lt;code&gt;pjax:complete&lt;/code&gt;事件中重载JS。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 class="heading-element" id="pjax的使用场景"&gt;&lt;span&gt;PJAX的使用场景&lt;/span&gt;
- &lt;a href="#pjax%e7%9a%84%e4%bd%bf%e7%94%a8%e5%9c%ba%e6%99%af" class="heading-mark"&gt;
- &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
- &lt;/a&gt;
-&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;在网站运行过程，需要频繁切换页面时。&lt;/li&gt;
-&lt;li&gt;需要加载大量静态资源时。&lt;/li&gt;
-&lt;li&gt;需要加载大量动态资源时。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;例如：网站页面贴边的音乐播放器，我在切换页面时，不需要重新加载音乐播放器，只需要重新加载页面中改变的部分即可。&lt;/p&gt;
-&lt;/blockquote&gt;</description></item></channel></rss>
+&lt;/h2&gt;&lt;p&gt;飞牛NAS作为一款新兴的国产NAS系统，以其免费、易用和高兼容性的特点，为DIY NAS用户提供了一个不错的选择。安装过程简单，界面友好，功能全面，无论是新手还是有一定经验的用户，都能快速上手并享受到NAS带来的便利。虽然在某些高级功能上还有待完善，但官方积极的更新和社区的支持，让人对其未来充满期待。&lt;/p&gt;</description></item></channel></rss>

@@ -6,7 +6,11 @@
 |免费加速站|预览地址|
 |:-|:-|
 |主站1|[https://geekswg.js.cool](https://geekswg.js.cool)|
-|主站2|[https://geekswg.top](https://geekswg.top)|
+|主站2|[https://blog.342901.xyz](https://blog.342901.xyz)|
+|备用1|[https://geekswg.de5.net/](https://geekswg.de5.net/)|
+|备用1|[https://blog.geekswg.cc.cd/](https://blog.geekswg.cc.cd/)|
+|备用2|[https://geekswg.dpdns.org/](https://geekswg.dpdns.org/)|
+|GithubPages|[https://geekswg.github.io](https://geekswg.github.io) | 
 |Netlify|[https://geekswg.netlify.app](https://geekswg.netlify.app)|
 |CloudFlare|[https://geekswg.pages.dev](https://geekswg.pages.dev)|
 |Hexo-Blog|[https://geekswg-hexo.netlify.app](https://geekswg-hexo.netlify.app)|
