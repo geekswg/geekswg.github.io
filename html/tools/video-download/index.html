@@ -1,0 +1,1154 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>视频解析工具 - 无水印下载</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 800px;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            color: white;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 14px;
+        }
+
+        .content {
+            padding: 30px;
+        }
+
+        .platform-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .platform-tab {
+            flex: 1;
+            min-width: 120px;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            background: white;
+            cursor: pointer;
+            text-align: center;
+            transition: all 0.3s ease;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .platform-tab:hover {
+            border-color: #667eea;
+            background: #f5f5ff;
+        }
+
+        .platform-tab.active {
+            border-color: #667eea;
+            background: #667eea;
+            color: white;
+        }
+
+        .platform-tab .icon {
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+
+        .input-group input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .input-group input::placeholder {
+            color: #999;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
+
+        .btn-primary:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .result-container {
+            margin-top: 30px;
+            display: none;
+        }
+
+        .result-container.show {
+            display: block;
+        }
+
+        .result-info {
+            background: #f5f5ff;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .result-info h3 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .info-item {
+            display: flex;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        .info-item label {
+            width: 80px;
+            color: #666;
+            font-weight: 500;
+        }
+
+        .info-item span {
+            flex: 1;
+            color: #333;
+            word-break: break-all;
+        }
+
+        .preview-container {
+            background: #000;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .preview-container video {
+            width: 100%;
+            display: block;
+        }
+
+        .preview-placeholder {
+            padding: 100px 20px;
+            text-align: center;
+            color: #666;
+        }
+
+        .download-section {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .download-btn {
+            flex: 1;
+            min-width: 150px;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .download-btn.primary {
+            background: #667eea;
+            color: white;
+        }
+
+        .download-btn.primary:hover {
+            background: #5568d3;
+        }
+
+        .download-btn.secondary {
+            background: #48bb78;
+            color: white;
+        }
+
+        .download-btn.secondary:hover {
+            background: #38a169;
+        }
+
+        .download-btn.tertiary {
+            background: #e5e7eb;
+            color: #374151;
+        }
+
+        .download-btn.tertiary:hover {
+            background: #d1d5db;
+        }
+
+        .error-message {
+            background: #fff5f5;
+            border: 2px solid #fc8181;
+            color: #c53030;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+            display: none;
+        }
+
+        .error-message.show {
+            display: block;
+        }
+
+        .error-message strong {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 16px;
+        }
+
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .loading.show {
+            display: block;
+        }
+
+        .loading-spinner {
+            width: 50px;
+            height: 50px;
+            border: 4px solid #e0e0e0;
+            border-top-color: #667eea;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+            margin: 0 auto 20px;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .loading p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .tips {
+            background: #fff7ed;
+            border-left: 4px solid #ed8936;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+            font-size: 13px;
+            color: #666;
+        }
+
+        .tips h4 {
+            color: #ed8936;
+            margin-bottom: 8px;
+        }
+
+        .tips ul {
+            margin-left: 20px;
+        }
+
+        .tips li {
+            margin-bottom: 5px;
+        }
+
+        @media (max-width: 600px) {
+            .platform-tabs {
+                flex-direction: column;
+            }
+
+            .platform-tab {
+                min-width: auto;
+            }
+
+            .download-section {
+                flex-direction: column;
+            }
+
+            .download-btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎬 视频解析工具</h1>
+            <p>支持抖音、快手、B站无水印解析下载</p>
+        </div>
+
+        <div class="content">
+            <div class="platform-tabs">
+                <div class="platform-tab active" data-platform="douyin">
+                    <div class="icon">🎵</div>
+                    <div>抖音</div>
+                </div>
+                <div class="platform-tab" data-platform="kuaishou">
+                    <div class="icon">⚡</div>
+                    <div>快手</div>
+                </div>
+                <div class="platform-tab" data-platform="bilibili">
+                    <div class="icon">📺</div>
+                    <div>B站</div>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="video-url">视频链接</label>
+                <input type="text" id="video-url" placeholder="请粘贴视频分享链接...">
+            </div>
+
+            <div class="input-group">
+                <label for="api-select">选择API解析接口</label>
+                <select id="api-select" style="width: 100%; padding: 12px; border: 2px solid #e0e0e0; border-radius: 10px; font-size: 14px; background: white; cursor: pointer;">
+                    <option value="api1">远梦API (mmp.cc)</option>
+                    <option value="custom">✏️ 自定义API</option>
+                </select>
+            </div>
+
+            <div class="input-group" id="custom-api-group" style="display: none;">
+                <label for="custom-api">自定义API地址</label>
+                <input type="text" id="custom-api" placeholder="输入API地址，如：https://api.example.com/api?url=">
+                <div style="margin-top: 5px; font-size: 12px; color: #666;">
+                    💡 提示：自定义API需要支持JSONP（callback参数）或CORS，返回格式为JSON
+                </div>
+            </div>
+
+            <div style="margin-top: 10px; margin-bottom: 20px; font-size: 12px; color: #666;">
+                <span id="api-status" style="color: #10b981;">● API状态：就绪</span>
+                <button id="test-apis-btn" style="margin-left: 10px; padding: 5px 10px; border: 1px solid #667eea; background: white; color: #667eea; border-radius: 5px; cursor: pointer; font-size: 12px;">测试API</button>
+            </div>
+
+            <button class="btn btn-primary" id="parse-btn">开始解析</button>
+
+            <div class="loading" id="loading">
+                <div class="loading-spinner"></div>
+                <p>正在解析视频，请稍候...</p>
+            </div>
+
+            <div class="error-message" id="error-message">
+                <strong>错误提示</strong>
+                <p id="error-text"></p>
+                <div id="error-details" style="margin-top: 10px; font-size: 12px;"></div>
+            </div>
+
+            <div class="result-container" id="result-container">
+                <div class="result-info">
+                    <h3>📋 视频信息</h3>
+                    <div class="info-item">
+                        <label>标题：</label>
+                        <span id="video-title">-</span>
+                    </div>
+                    <div class="info-item">
+                        <label>作者：</label>
+                        <span id="video-author">-</span>
+                    </div>
+                    <div class="info-item">
+                        <label>时长：</label>
+                        <span id="video-duration">-</span>
+                    </div>
+                </div>
+
+                <div class="preview-container" id="video-preview"></div>
+
+                <div class="download-section">
+                    <button class="download-btn primary" id="download-hd">
+                        <span>📥</span> 高清下载
+                    </button>
+                    <button class="download-btn secondary" id="download-sd">
+                        <span>📥</span> 标清下载
+                    </button>
+                    <button class="download-btn tertiary" id="preview-video">
+                        <span>🎬</span> 新窗口预览
+                    </button>
+                    <button class="download-btn tertiary" id="view-original">
+                        <span>👀</span> 查看原视频
+                    </button>
+                </div>
+            </div>
+
+            <div class="tips">
+                <h4>💡 使用提示</h4>
+                <ul>
+                    <li>复制视频分享链接后粘贴到输入框中</li>
+                    <li>抖音链接示例：https://v.douyin.com/xxx/</li>
+                    <li>快手链接示例：https://www.kuaishou.com/short-video/xxx</li>
+                    <li>B站链接示例：https://www.bilibili.com/video/BVxxx</li>
+                    <li>解析成功后可在线预览，点击按钮即可下载无水印视频</li>
+                </ul>
+                
+                <h4>🔧 API说明</h4>
+                <ul>
+                    <li><strong>远梦API：</strong>使用 mmp.cc 免费API接口</li>
+                    <li><strong>支持平台：</strong>抖音、快手、B站等多个平台</li>
+                    <li><strong>返回格式：</strong>JSON格式，包含视频URL、标题、作者等信息</li>
+                    <li><strong>跨域处理：</strong>同时支持CORS和JSONP两种方式</li>
+                    <li><strong>自定义API：</strong>如需使用其他API，可输入自定义地址（需支持JSONP或CORS）</li>
+                </ul>
+
+                <h4>📋 API信息</h4>
+                <div style="background: #f8f9fa; padding: 10px; border-radius: 8px; margin-top: 8px;">
+                    <p style="margin: 5px 0;"><strong>API (mmp.cc):</strong> api.mmp.cc/api/Jiexi</p>
+                    <p style="margin: 5px 0; color: #666; font-size: 12px;">💡 稳定可靠的免费视频解析API</p>
+                </div>
+
+                <h4>🔧 如果解析失败，可以尝试</h4>
+                <ul>
+                    <li><strong>切换API：</strong>尝试使用自定义API</li>
+                    <li><strong>抖音：</strong>访问 <a href="https://www.douyin.com" target="_blank" style="color: #667eea;">抖音官网</a> 或使用专业下载工具</li>
+                    <li><strong>快手：</strong>访问 <a href="https://www.kuaishou.com" target="_blank" style="color: #667eea;">快手官网</a> 或使用专业下载工具</li>
+                    <li><strong>B站：</strong>访问 <a href="https://www.bilibili.com" target="_blank" style="color: #667eea;">B站官网</a> 使用官方下载功能</li>
+                    <li><strong>其他方案：</strong>尝试 <a href="https://www.bilibili.com/video/BV1..." target="_blank" style="color: #667eea;">bilibili-evolved</a> 浏览器插件</li>
+                </ul>
+                <h4>⚠️ 注意事项</h4>
+                <ul>
+                    <li>API接口可能失效，请定期更新</li>
+                    <li>部分视频可能因版权原因无法下载</li>
+                    <li>请尊重创作者版权，仅供个人学习使用</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 平台选择
+        const platformTabs = document.querySelectorAll('.platform-tab');
+        let currentPlatform = 'douyin';
+
+        // 统一的内置API列表，测试和解析共用
+        const builtInApis = [
+            {
+                name: '远梦API (mmp.cc)',
+                url: 'https://api.mmp.cc/api/Jiexi?url=',
+                type: 'json'
+            }
+        ];
+
+        platformTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                platformTabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                currentPlatform = tab.dataset.platform;
+                updatePlaceholder();
+            });
+        });
+
+        function updatePlaceholder() {
+            const input = document.getElementById('video-url');
+            const placeholders = {
+                douyin: '请粘贴抖音视频分享链接，如：https://v.douyin.com/xxx/',
+                kuaishou: '请粘贴快手视频链接，如：https://www.kuaishou.com/short-video/xxx',
+                bilibili: '请粘贴B站视频链接，如：https://www.bilibili.com/video/BVxxx'
+            };
+            input.placeholder = placeholders[currentPlatform];
+        }
+
+        // API选择处理
+        const apiSelect = document.getElementById('api-select');
+        const customApiGroup = document.getElementById('custom-api-group');
+
+        apiSelect.addEventListener('change', function() {
+            if (this.value === 'custom') {
+                customApiGroup.style.display = 'block';
+            } else {
+                customApiGroup.style.display = 'none';
+            }
+        });
+
+        // 保存自定义API到本地存储
+        const customApiInput = document.getElementById('custom-api');
+        customApiInput.value = localStorage.getItem('customApi') || '';
+
+        customApiInput.addEventListener('input', function() {
+            localStorage.setItem('customApi', this.value);
+        });
+
+        // 测试API按钮
+        const testApisBtn = document.getElementById('test-apis-btn');
+        testApisBtn.addEventListener('click', async function() {
+            testApisBtn.disabled = true;
+            testApisBtn.textContent = '测试中...';
+
+            hideError();
+            const testUrl = 'https://v.douyin.com/ZedjlY4D5YQ/';
+            let results = [];
+
+            for (let i = 0; i < builtInApis.length; i++) {
+                const api = builtInApis[i];
+                try {
+                    updateApiStatus(`正在测试 ${api.name}...`, '#667eea');
+                    const startTime = Date.now();
+
+                    const result = await fetchWithJSONP(api.url + encodeURIComponent(testUrl), api.type);
+                    const duration = Date.now() - startTime;
+
+                    if (result && (result.code === 200 || result.code === 0 || result.status === 'success')) {
+                        results.push({
+                            name: api.name,
+                            status: '✓ 可用',
+                            color: '#10b981',
+                            duration: `${duration}ms`
+                        });
+                    } else {
+                        results.push({
+                            name: api.name,
+                            status: '✗ 失败',
+                            color: '#ef4444',
+                            duration: `${duration}ms`
+                        });
+                    }
+                } catch (e) {
+                    results.push({
+                        name: api.name,
+                        status: '✗ 错误',
+                        color: '#ef4444',
+                        error: e.message
+                    });
+                }
+            }
+
+            // 显示测试结果
+            const errorDetails = document.getElementById('error-details');
+            errorDetails.innerHTML = `
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 8px; margin-top: 10px;">
+                    <p style="color: #667eea;"><strong>🧪 API测试结果</strong></p>
+                    ${results.map(r => `
+                        <p style="margin: 5px 0; color: ${r.color};">
+                            ${r.status} <strong>${r.name}</strong>
+                            ${r.duration ? `(${r.duration})` : ''}
+                            ${r.error ? ` - ${r.error}` : ''}
+                        </p>
+                    `).join('')}
+                    <p style="margin-top: 10px; color: #666; font-size: 12px;">
+                        💡 测试完成，可以开始使用
+                    </p>
+                </div>
+            `;
+            errorMessage.classList.add('show');
+            updateApiStatus('测试完成', '#667eea');
+
+            testApisBtn.disabled = false;
+            testApisBtn.textContent = '测试API可用性';
+        });
+
+        // 解析按钮
+        const parseBtn = document.getElementById('parse-btn');
+        const loading = document.getElementById('loading');
+        const resultContainer = document.getElementById('result-container');
+        const errorMessage = document.getElementById('error-message');
+        const videoPreview = document.getElementById('video-preview');
+        const viewOriginalBtn = document.getElementById('view-original');
+        const previewVideoBtn = document.getElementById('preview-video');
+        let currentVideoUrl = ''; // 保存当前视频URL
+        let currentVideoInfo = null; // 保存当前视频信息
+
+        parseBtn.addEventListener('click', parseVideo);
+
+        // 支持回车键触发
+        document.getElementById('video-url').addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                parseVideo();
+            }
+        });
+
+        async function parseVideo() {
+            const url = document.getElementById('video-url').value.trim();
+
+            if (!url) {
+                showError('请输入视频链接');
+                return;
+            }
+
+            if (!isValidUrl(url)) {
+                showError('请输入有效的视频链接');
+                return;
+            }
+
+            currentVideoUrl = url;
+            viewOriginalBtn.disabled = true;
+
+            hideError();
+            resultContainer.classList.remove('show');
+            loading.classList.add('show');
+            parseBtn.disabled = true;
+
+            try {
+                updateApiStatus('正在请求API...', '#667eea');
+                const result = await fetchVideoInfo(url);
+                currentVideoInfo = result; // 保存当前视频信息
+                displayResult(result);
+            } catch (error) {
+                updateApiStatus('解析失败', '#ef4444');
+                showError(error.message || '解析失败，请检查链接是否正确');
+            } finally {
+                loading.classList.remove('show');
+                parseBtn.disabled = false;
+            }
+        }
+
+        function isValidUrl(string) {
+            try {
+                new URL(string);
+                return true;
+            } catch (_) {
+                return false;
+            }
+        }
+
+        async function fetchVideoInfo(url) {
+            // 检测视频平台
+            let platform = detectPlatform(url);
+
+            // 获取用户选择的API
+            const selectedApi = apiSelect.value;
+
+            let apisToTry = [];
+
+            // 根据用户选择确定要尝试的API
+            if (selectedApi === 'custom') {
+                const customApiUrl = customApiInput.value.trim();
+                if (!customApiUrl) {
+                    throw new Error('请输入自定义API地址');
+                }
+                apisToTry = [{
+                    name: '自定义API',
+                    url: customApiUrl,
+                    type: 'json'
+                }];
+            } else if (selectedApi === 'auto') {
+                // 自动模式，依次尝试所有API
+                apisToTry = builtInApis;
+            } else {
+                // 选择特定API
+                const apiIndex = parseInt(selectedApi.replace('api', '')) - 1;
+                if (builtInApis[apiIndex]) {
+                    apisToTry = [builtInApis[apiIndex]];
+                }
+            }
+
+            // 尝试每个API - 远梦API使用JSONP方式
+            for (const api of apisToTry) {
+                try {
+                    console.log(`尝试${api.name}:`, api.url);
+                    updateApiStatus(`正在尝试 ${api.name}...`, '#f59e0b');
+
+                    const apiUrl = api.url + encodeURIComponent(url);
+                    const result = await fetchWithJSONP(apiUrl, api.type);
+
+                    console.log(`${api.name}返回:`, result);
+
+                    if (result && (result.code === 200 || result.code === 0 || result.status === 'success' || result.url || result.data)) {
+                        console.log(`${api.name}成功:`, result);
+                        updateApiStatus(`✓ ${api.name} 成功`, '#10b981');
+                        return normalizeResult(result, url, platform);
+                    } else if (result) {
+                        console.log(`${api.name}返回异常:`, result);
+                        throw new Error(`API返回错误: code=${result.code}`);
+                    }
+                } catch (e) {
+                    console.log(`${api.name}失败:`, e);
+                    updateApiStatus(`✗ ${api.name} 失败`, '#ef4444');
+                    // 如果不是自动模式，直接抛出错误
+                    if (selectedApi !== 'auto' && !selectedApi.startsWith('api')) {
+                        throw new Error(`${api.name} 解析失败: ${e.message}`);
+                    }
+                    continue;
+                }
+            }
+
+            // 如果所有API都失败，提供iframe嵌入方案
+            console.log('所有API失败，尝试iframe方案');
+            updateApiStatus('API全部失败，使用iframe方案', '#f59e0b');
+            return {
+                title: '视频预览',
+                author: '无法获取',
+                duration: '-',
+                url: url,
+                cover: '',
+                useIframe: true,
+                originalUrl: url,
+                platform
+            };
+        }
+
+        function updateApiStatus(status, color) {
+            const apiStatus = document.getElementById('api-status');
+            apiStatus.textContent = `● ${status}`;
+            apiStatus.style.color = color;
+        }
+
+        // 使用多种方式获取数据（先尝试fetch，再尝试JSONP）
+        function fetchWithJSONP(url, type) {
+            return new Promise((resolve, reject) => {
+                // 方法1: 直接fetch（支持CORS的API）
+                fetch(url, {
+                    method: 'GET',
+                    headers: { 'Accept': 'application/json' },
+                    mode: 'cors',
+                    credentials: 'omit'
+                })
+                .then(response => {
+                    if (response.ok) {
+                        return response.text();
+                    }
+                    throw new Error('HTTP ' + response.status);
+                })
+                .then(text => {
+                    try {
+                        const data = JSON.parse(text);
+                        console.log('Fetch成功:', data);
+                        resolve(data);
+                    } catch (e) {
+                        console.log('JSON解析失败，尝试代理');
+                        return fetchViaProxy(url);
+                    }
+                })
+                .catch(err => {
+                    console.log('Fetch失败，尝试代理:', err);
+                    return fetchViaProxy(url);
+                })
+                .then(resolve)
+                .catch(reject);
+            });
+        }
+
+        // 通过AllOrigins代理规避CORS，仍然返回JSON文本
+        function fetchViaProxy(url) {
+            const proxyUrl = 'https://api.allorigins.win/raw?url=' + encodeURIComponent(url);
+            return fetch(proxyUrl)
+                .then(res => {
+                    if (!res.ok) throw new Error('Proxy HTTP ' + res.status);
+                    return res.text();
+                })
+                .then(text => {
+                    try {
+                        return JSON.parse(text);
+                    } catch (e) {
+                        console.log('代理JSON解析失败，尝试JSONP');
+                        return fetchWithJSONPMode(url);
+                    }
+                })
+                .catch(err => {
+                    console.log('代理失败，尝试JSONP:', err);
+                    return fetchWithJSONPMode(url);
+                });
+        }
+
+        // 纯JSONP方式（备用）
+        function fetchWithJSONPMode(url) {
+            return new Promise((resolve, reject) => {
+                // 创建一个唯一的回调函数名
+                const callbackName = 'jsonp_callback_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+
+                // 创建script标签
+                const script = document.createElement('script');
+                script.src = url.includes('?') ? url + '&callback=' + callbackName : url + '?callback=' + callbackName;
+                script.async = true;
+
+                // 设置全局回调函数
+                window[callbackName] = function(data) {
+                    console.log('JSONP成功:', data);
+                    // 清理
+                    delete window[callbackName];
+                    if (script.parentNode) {
+                        document.body.removeChild(script);
+                    }
+                    resolve(data);
+                };
+
+                // 设置超时
+                const timeout = setTimeout(() => {
+                    console.log('请求超时');
+                    delete window[callbackName];
+                    if (script.parentNode) {
+                        document.body.removeChild(script);
+                    }
+                    reject(new Error('请求超时'));
+                }, 8000);
+
+                script.onerror = function() {
+                    console.log('Script加载失败');
+                    clearTimeout(timeout);
+                    delete window[callbackName];
+                    if (script.parentNode) {
+                        document.body.removeChild(script);
+                    }
+                    reject(new Error('加载失败'));
+                };
+
+                script.onload = function() {
+                    // 如果回调没有在300ms内被调用，说明可能不支持JSONP
+                    setTimeout(() => {
+                        if (window[callbackName]) {
+                            clearTimeout(timeout);
+                            delete window[callbackName];
+                            if (script.parentNode) {
+                                document.body.removeChild(script);
+                            }
+                            reject(new Error('API不支持JSONP'));
+                        }
+                    }, 300);
+                };
+
+                document.body.appendChild(script);
+            });
+        }
+
+        function detectPlatform(url) {
+            if (url.includes('douyin.com') || url.includes('v.douyin.com')) {
+                return 'douyin';
+            } else if (url.includes('kuaishou.com')) {
+                return 'kuaishou';
+            } else if (url.includes('bilibili.com') || url.includes('b23.tv')) {
+                return 'bilibili';
+            }
+            return 'douyin';
+        }
+
+        function normalizeResult(data, originalUrl, platform) {
+            console.log('开始规范化数据:', data);
+
+            // 处理不同API返回的格式
+            let result = {
+                title: '未获取到标题',
+                author: '未知作者',
+                duration: '-',
+                url: '',
+                urlHQ: '',
+                cover: '',
+                useIframe: false,
+                originalUrl: originalUrl,
+                platform
+            };
+
+            // 兼容多种API返回格式
+            let apiData = data.data || data;
+
+            // 检查API返回状态码（有些API用code，有些用status）
+            if (data.code !== undefined && data.code !== 200 && data.code !== 0) {
+                // 某些API返回msg作为错误信息
+                if (data.msg || data.message) {
+                    throw new Error(data.msg || data.message);
+                }
+                throw new Error(`API返回错误码: ${data.code}`);
+            }
+
+            if (data.status !== undefined && data.status !== 'success' && data.status !== 200) {
+                throw new Error(`API返回状态: ${data.status}`);
+            }
+
+            // 提取视频信息（兼容多种字段名）
+            result.title = apiData.desc || apiData.title || apiData.text || apiData.content || result.title;
+            result.author = apiData.nickname || apiData.author || apiData.user || apiData.uploader || result.author;
+            result.url = apiData.video_url || apiData.url || apiData.play_addr || apiData.href || result.url;
+            result.urlHQ = apiData.video_url_HQ || apiData.hd_url || apiData.url_hq || apiData.play_addr_h264_br || result.url;
+            result.cover = apiData.cover || apiData.pic || apiData.thumbnail || apiData.avatar || apiData.poster || apiData.dynamic_cover || result.cover;
+
+            // 针对抖音等平台补齐播放参数，降低防盗链导致的无法播放
+            result.url = enhancePlaybackUrl(result.url, platform);
+            result.urlHQ = enhancePlaybackUrl(result.urlHQ, platform);
+
+            console.log('规范化后的结果:', result);
+
+            // 如果没有视频URL，使用iframe方案
+            if (!result.url) {
+                result.useIframe = true;
+                return result;
+            }
+
+            return result;
+        }
+
+        // 为易防盗链的平台补齐播放参数
+        function enhancePlaybackUrl(url, platform) {
+            if (!url) return url;
+            try {
+                const u = new URL(url);
+                if (platform === 'douyin') {
+                    u.searchParams.set('is_play_url', '1');
+                    u.searchParams.set('line', u.searchParams.get('line') || '0');
+                    if (!u.searchParams.get('ratio')) {
+                        u.searchParams.set('ratio', '720p');
+                    }
+                    if (!u.searchParams.get('media_type')) {
+                        u.searchParams.set('media_type', '4');
+                    }
+                }
+                return u.toString();
+            } catch (e) {
+                return url;
+            }
+        }
+
+        function displayResult(result) {
+            document.getElementById('video-title').textContent = result.title;
+            document.getElementById('video-author').textContent = result.author;
+            document.getElementById('video-duration').textContent = result.duration;
+
+            // 清空之前的视频内容
+            videoPreview.innerHTML = '';
+
+            if (result.useIframe) {
+                // 使用iframe方式预览，直接使用video_url
+                const iframe = document.createElement('iframe');
+                iframe.src = result.url || result.video_url;
+                iframe.style.width = '100%';
+                iframe.style.height = '100%';
+                iframe.style.minHeight = '400px';
+                iframe.style.border = 'none';
+                iframe.setAttribute('allowfullscreen', '');
+                iframe.setAttribute('allow', 'autoplay; fullscreen');
+                videoPreview.appendChild(iframe);
+                
+                // 禁用下载按钮
+                document.getElementById('download-hd').disabled = true;
+                document.getElementById('download-sd').disabled = true;
+                document.getElementById('download-hd').textContent = '🔒 无法下载';
+                document.getElementById('download-sd').textContent = '🔒 无法下载';
+
+                // 仍可查看原视频
+                viewOriginalBtn.disabled = false;
+                viewOriginalBtn.onclick = () => openOriginalVideo(result.originalUrl || currentVideoUrl);
+
+                // 禁用预览按钮（iframe模式）
+                previewVideoBtn.disabled = true;
+                previewVideoBtn.textContent = '🔒 无法预览';
+            } else if (result.url) {
+                // 使用video标签预览（优先使用高清版本），并添加出错降级
+                const video = document.createElement('video');
+                const sources = [result.urlHQ, result.url].filter(Boolean);
+                let sourceIndex = 0;
+                video.src = sources[sourceIndex];
+                video.controls = true;
+                video.playsInline = true;
+                video.preload = 'metadata';
+                video.style.width = '100%';
+                video.style.height = 'auto';
+                if (result.cover) {
+                    video.poster = result.cover;
+                }
+
+                // 如果播放失败，尝试下一条源；都失败则提示并打开原视频
+                video.addEventListener('error', () => {
+                    if (sourceIndex + 1 < sources.length) {
+                        sourceIndex += 1;
+                        video.src = sources[sourceIndex];
+                        video.load();
+                    } else {
+                        showError('视频播放失败，可能被防盗链，已为你保留原视频链接');
+                    }
+                });
+
+                videoPreview.appendChild(video);
+                
+                // 设置下载按钮
+                const downloadHd = document.getElementById('download-hd');
+                const downloadSd = document.getElementById('download-sd');
+                
+                // 如果有高清版本，使用高清；否则使用标清
+                const hasHQ = !!result.urlHQ;
+                downloadHd.innerHTML = '<span>📥</span> 高清下载';
+                downloadSd.innerHTML = '<span>📥</span> 标清下载';
+                
+                downloadHd.disabled = false;
+                downloadSd.disabled = false;
+                
+                // 高清下载
+                downloadHd.onclick = () => {
+                    const url = result.urlHQ || result.url;
+                    downloadVideo(url, result.title, 'hd');
+                };
+                
+                // 标清下载
+                downloadSd.onclick = () => {
+                    downloadVideo(result.url, result.title, 'sd');
+                };
+
+                // 原视频按钮启用
+                viewOriginalBtn.disabled = false;
+                viewOriginalBtn.onclick = () => openOriginalVideo(result.originalUrl || currentVideoUrl);
+
+                // 新窗口预览按钮启用
+                previewVideoBtn.disabled = false;
+                previewVideoBtn.innerHTML = '<span>🎬</span> 新窗口预览';
+                previewVideoBtn.onclick = () => openVideoPreview(result);
+            }
+
+            resultContainer.classList.add('show');
+        }
+
+        function openOriginalVideo(url) {
+            if (!url) {
+                showError('未找到原视频链接');
+                return;
+            }
+            window.open(url, '_blank');
+        }
+
+        function openVideoPreview(result) {
+            if (!result || !result.url) {
+                showError('未找到视频地址');
+                return;
+            }
+            window.open(result.url, '_blank');
+        }
+
+        function downloadVideo(url, title, quality) {
+            // 清理文件名中的特殊字符
+            const safeTitle = title.replace(/[^\w\s\u4e00-\u9fa5]/gi, '_').substring(0, 50);
+            const fileName = `${safeTitle}_${quality}.mp4`;
+            
+            // 检查是否是iframe模式的URL
+            if (url.includes('douyin.com') || url.includes('kuaishou.com') || url.includes('bilibili.com')) {
+                // iframe模式，在新窗口打开
+                window.open(url, '_blank');
+                return;
+            }
+            
+            // 方法1: 尝试使用fetch下载（适用于支持CORS的链接）
+            if (url.startsWith('http')) {
+                try {
+                    // 创建下载链接
+                    const link = document.createElement('a');
+                    link.href = url;
+                    link.download = fileName;
+                    link.target = '_blank';
+                    link.style.display = 'none';
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                } catch (e) {
+                    // 如果直接下载失败，在新窗口打开
+                    console.log('直接下载失败，尝试新窗口打开:', e);
+                    window.open(url, '_blank');
+                }
+            } else {
+                // 新窗口打开
+                window.open(url, '_blank');
+            }
+        }
+
+        function showError(message) {
+            const errorText = document.getElementById('error-text');
+            const errorDetails = document.getElementById('error-details');
+
+            errorText.textContent = message;
+
+            // 根据错误类型提供具体的解决建议
+            if (message.includes('解析失败') || message.includes('未能获取')) {
+                errorDetails.innerHTML = `
+                    <p style="margin-top: 8px;"><strong>💡 推荐解决方案：</strong></p>
+                    <p style="margin: 5px 0;">1. <strong>抖音：</strong>使用 <a href="https://www.douyin.com" target="_blank" style="color: #667eea;">抖音官网</a> 或安装"猫抓"浏览器插件</p>
+                    <p style="margin: 5px 0;">2. <strong>快手：</strong>使用 <a href="https://www.kuaishou.com" target="_blank" style="color: #667eea;">快手官网</a> 或专业下载工具</p>
+                    <p style="margin: 5px 0;">3. <strong>B站：</strong>使用 <a href="https://www.bilibili.com" target="_blank" style="color: #667eea;">B站官网</a> 安装"Bilibili Evolved"插件</p>
+                    <p style="margin: 5px 0;">4. <strong>通用方案：</strong>使用 <a href="https://www.bilibili.com" target="_blank" style="color: #667eea;">IDM下载器</a> 或 <a href="https://www.4kdownload.com/" target="_blank" style="color: #667eea;">4K Video Downloader</a></p>
+                    <p style="margin: 5px 0;">5. <strong>在线工具：</strong>搜索"视频解析下载"可找到多个在线工具</p>
+                `;
+            } else if (message.includes('超时')) {
+                errorDetails.innerHTML = `
+                    <p style="margin-top: 8px;"><strong>⏰ 请求超时，可能原因：</strong></p>
+                    <p style="margin: 5px 0;">1. 网络连接不稳定，请检查网络</p>
+                    <p style="margin: 5px 0;">2. API服务器响应过慢</p>
+                    <p style="margin: 5px 0;">3. 防火墙阻止了请求</p>
+                `;
+            } else if (message.includes('视频播放失败') || message.includes('防盗链')) {
+                errorDetails.innerHTML = `
+                    <p style="margin-top: 8px;"><strong>🔧 播放失败解决方案：</strong></p>
+                    <p style="margin: 5px 0;">1. <strong>查看原视频：</strong>点击下方"查看原视频"按钮在原平台观看</p>
+                    <p style="margin: 5px 0;">2. <strong>尝试下载：</strong>点击"高清下载"或"标清下载"按钮尝试直接下载视频</p>
+                    <p style="margin: 5px 0;">3. <strong>防盗链限制：</strong>部分视频可能因防盗链导致无法在线播放，但通常可以下载</p>
+                    <p style="margin: 5px 0;">4. <strong>刷新重试：</strong>刷新页面后重新解析视频</p>
+                `;
+            } else {
+                errorDetails.innerHTML = `
+                    <p style="margin-top: 8px;"><strong>🔧 其他解决方案：</strong></p>
+                    <p style="margin: 5px 0;">1. 确认视频链接是否正确且可访问</p>
+                    <p style="margin: 5px 0;">2. 尝试刷新页面后重新解析</p>
+                    <p style="margin: 5px 0;">3. 使用浏览器开发者工具查看详细错误</p>
+                `;
+            }
+
+            errorMessage.classList.add('show');
+        }
+
+        function hideError() {
+            errorMessage.classList.remove('show');
+        }
+
+        // 初始化
+        updatePlaceholder();
+    </script>
+
+</body>
+</html>

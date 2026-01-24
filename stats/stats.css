@@ -236,3 +236,35 @@
 [data-theme='dark'] .stats-cards .text-zinc-500 {
     color: #9ca3af !important;
 }
+
+/* Donut chart legend styles */
+.category .labels ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.category .labels li {
+    transition: all 0.2s ease;
+}
+
+.category .labels li:hover {
+    transform: translateX(4px);
+}
+
+/* Responsive layout for category section */
+@media (max-width: 1024px) {
+    .category {
+        flex-direction: column;
+    }
+
+    .category .labels {
+        width: 100% !important;
+        order: 2;
+    }
+
+    .category > div:first-child {
+        width: 100% !important;
+        order: 1;
+    }
+}
