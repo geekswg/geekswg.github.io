@@ -59,24 +59,21 @@ article.dlogs .header .single-subtitle {
 
 /* DLog 列表容器 - 瀑布流布局容器 */
 .dlogs-list {
-  position: relative;
-  margin-bottom: 2rem;
   width: 100%;
+  margin-bottom: 2rem;
+  column-width: 280px;
+  column-gap: 16px;
   min-height: 200px;
 }
 
-/* 初始隐藏卡片，防止布局前的闪烁 */
 .dlogs-list .dlog-item {
-  position: absolute;
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-/* 布局完成后显示 */
-.dlogs-list .dlog-item[data-layout-complete="true"] {
-  visibility: visible;
+  display: inline-block;
+  width: 100%;
+  margin: 0 0 16px;
+  break-inside: avoid;
+  position: relative;
   opacity: 1;
+  visibility: visible;
 }
 
 /* DLog 项目样式 - 瀑布流卡片 */
@@ -92,6 +89,7 @@ article.dlogs .header .single-subtitle {
   backdrop-filter: blur(10px);
   text-decoration: none;
   color: inherit;
+  position: relative;
 }
 
 /* 链接卡片悬停效果 */
@@ -964,9 +962,11 @@ article.dlogs .header .single-subtitle {
 }
 
 .dlog-item .dlog-pics img {
+  display: block;
   width: 100%;
-  height: 100%;
-  object-fit: fill;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
   border-radius: 12px;
   transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   cursor: url(/cursor/zoom-in.cur), zoom-in;
@@ -1167,8 +1167,9 @@ article.dlogs .header .single-subtitle {
 
   .dlog-item .dlog-pics img {
     width: 100%;
-    height: 100%;
-    object-fit: fill;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
   }
 
 
@@ -1208,8 +1209,9 @@ article.dlogs .header .single-subtitle {
 
   .dlog-item .dlog-pics img {
     width: 100%;
-    height: 100%;
-    object-fit: fill;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
   }
 
 
@@ -1402,18 +1404,25 @@ article.dlogs .header .single-subtitle {
 /* 分页导航样式 */
 .dlog-pagination {
   margin: 2rem 0;
-  padding: 1.5rem;
+  padding: 1rem 1.25rem;
   background: var(--dlog-bg-color);
   border-radius: 12px;
   border: 1px solid var(--dlog-border-color);
   box-shadow: var(--dlog-shadow);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .dlog-pagination .pagination-info {
-  text-align: center;
+  text-align: left;
   color: #7f8c8d;
   font-size: 0.85rem;
-  margin-bottom: 1rem;
+  margin: 0;
+  flex: 1 1 auto;
+  min-width: 200px;
 }
 
 [data-theme='dark'] .dlog-pagination .pagination-info {
@@ -1422,9 +1431,9 @@ article.dlogs .header .single-subtitle {
 
 .dlog-pagination .pagination-controls {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.4rem;
   flex-wrap: wrap;
 }
 
@@ -1479,6 +1488,7 @@ article.dlogs .header .single-subtitle {
 .pagination-pages {
   display: flex;
   gap: 0.3rem;
+  flex-wrap: wrap;
 }
 
 /* 分页跳转下拉框 */
@@ -1503,10 +1513,19 @@ article.dlogs .header .single-subtitle {
 /* 分页响应式样式 */
 @media (max-width: 480px) {
   .dlog-pagination {
-    padding: 1rem;
+    padding: 0.85rem 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .pagination-info {
+    width: 100%;
+    text-align: left;
   }
   
   .pagination-controls {
+    width: 100%;
+    justify-content: flex-start;
     gap: 0.3rem;
   }
   
