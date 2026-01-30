@@ -1290,29 +1290,32 @@ article.dlogs .header .single-subtitle {
   background: linear-gradient(135deg, var(--dlog-primary-color), var(--dlog-secondary-color));
   color: white;
   text-align: center;
-  padding: 4px;
-  font-size: 0.8rem;
-  font-weight: 600;
+  padding: 1px;
+  font-size: 0.7rem;
+  font-weight: 500;
   transform: translateY(100%);
   transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
               opacity 0.3s ease,
               background 0.3s ease;
-  border-radius: 0 0 16px 16px;
+  border-radius: 0 0 12px 12px;
   z-index: 10;
   opacity: 0;
   backdrop-filter: blur(10px);
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: 6px;
   cursor: pointer;
+  min-height: 20px;
+  height: 20px;
+  line-height: 1;
 }
 
 /* 箭头指示器 */
 .dlog-item .dlog-link-indicator .link-arrow {
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: bold;
-  transform: translateX(-5px);
+  transform: translateX(-3px);
   transition: transform 0.3s ease;
 }
 
@@ -1369,15 +1372,21 @@ article.dlogs .header .single-subtitle {
 /* 响应式调整 */
 @media (max-width: 768px) {
   .dlog-item .dlog-link-indicator {
-    font-size: 0.75rem;
-    padding: 6px;
+    font-size: 0.65rem;
+    padding: 1px;
+    min-height: 18px;
+    height: 18px;
+    gap: 5px;
   }
 }
 
 @media (max-width: 480px) {
   .dlog-item .dlog-link-indicator {
-    font-size: 0.7rem;
-    padding: 5px;
+    font-size: 0.6rem;
+    padding: 1px;
+    min-height: 16px;
+    height: 16px;
+    gap: 4px;
   }
 }
 .dlog-item:nth-child(7) { animation-delay: 0.4s; }
@@ -1678,4 +1687,54 @@ article.dlogs .header .single-title {
 .dlog-item::before,
 .dlog-item::after {
   will-change: transform, opacity, box-shadow;
+}
+
+/* ==============================
+   iframe 嵌入样式
+   ============================== */
+
+.dlog-item .dlog-iframe-container {
+  margin: 0.4rem 0;
+  border-radius: 12px;
+  overflow: hidden;
+  background: transparent;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--dlog-border-color);
+  transition: all 0.3s ease;
+}
+
+.dlog-item .dlog-iframe-container:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.dlog-item .dlog-iframe-container iframe {
+  display: block;
+  width: 100%;
+  border: none;
+}
+
+/* 暗色主题 */
+[data-theme='dark'] .dlog-item .dlog-iframe-container {
+  background: rgba(30, 41, 59, 0.95);
+  border-color: #4a5568;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme='dark'] .dlog-item .dlog-iframe-container:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .dlog-item .dlog-iframe-container {
+    margin: 0.35rem 0;
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dlog-item .dlog-iframe-container {
+    margin: 0.3rem 0;
+    border-radius: 8px;
+  }
 }
