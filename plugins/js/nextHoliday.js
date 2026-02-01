@@ -549,7 +549,7 @@
         
         html += '</div>'; // timeline
         html += '</div>'; // right
-        html += '<div style="display:block"><br/><a href="/html/lunar/Calendar.html" target="_blank">查看日历 》</a></div>';
+        html += '<div style="display:block"><a href="/html/lunar/Calendar.html" target="_blank">查看日历 》</a></div>';
         html += '</div>'; // card
 
         container.innerHTML = html;
