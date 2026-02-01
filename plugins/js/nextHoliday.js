@@ -19,37 +19,43 @@
             }
 
             .nh-left {
-                min-width: 100px;
+                min-width: 90px;
                 padding: 2px;
                 border-radius: 8px;
                 text-align: center;
                 flex-shrink: 0;
+                border: none;
             }
 
             .nh-title {
                 font-size: 0.8rem;
                 color: #666;
+                margin-bottom: 1px;
             }
 
             .nh-name {
                 font-size: 24px;
                 font-weight: 700;
-                margin-top: 4px;
+                margin-top: 1px;
+                margin-bottom: 1px;
             }
 
             .nh-days {
                 font-size: 32px;
-                margin-top: 4px;
+                line-height: 32px;
+                margin-top: 1px;
+                margin-bottom: 1px;
             }
 
             .nh-date {
                 font-size: 11px;
-                margin-top: 4px;
+                margin-top: 1px;
+                margin-bottom: 1px;
             }
 
             .nh-lunar {
                 font-size: 11px;
-                margin-top: 2px;
+                margin-top: 1px;
             }
 
             .nh-right {
@@ -75,6 +81,37 @@
                 align-items: center;
             }
 
+            .nh-item-today .nh-item-header,
+            .nh-item-week .nh-item-header,
+            .nh-item-month .nh-item-header,
+            .nh-item-year .nh-item-header {
+                display: none;
+            }
+
+            .nh-item-today,
+            .nh-item-week,
+            .nh-item-month,
+            .nh-item-year {
+                display: flex !important;
+                flex-direction: row !important;
+                align-items: center;
+                gap: 2px;
+            }
+
+            .nh-item-today .nh-label,
+            .nh-item-week .nh-label,
+            .nh-item-month .nh-label,
+            .nh-item-year .nh-label {
+                min-width: 20px;
+            }
+
+            .nh-item-today .nh-progress,
+            .nh-item-week .nh-progress,
+            .nh-item-month .nh-progress,
+            .nh-item-year .nh-progress {
+                flex: 1;
+            }
+
             .nh-label {
                 font-size: 11px;
                 color: #888;
@@ -87,7 +124,6 @@
             }
 
             .nh-badge-today {
-                background: #eef6ff;
                 color: #2b6ef6;
             }
 
@@ -113,10 +149,23 @@
 
             .nh-progress-bar {
                 vertical-align: middle;
+                width: 100%;
+            }
+
+            .nh-progress-bar text {
+                fill: #333;
+            }
+
+            [data-theme="dark"] .nh-progress-bar text {
+                fill: #e0e0e0;
             }
 
             .nh-progress-bg {
                 fill: #eee;
+            }
+
+            [data-theme="dark"] .nh-progress-bg {
+                fill: #2d3748;
             }
 
             .nh-fill-today {
@@ -133,6 +182,22 @@
 
             .nh-fill-year {
                 fill: #db2777;
+            }
+
+            [data-theme="dark"] .nh-fill-today {
+                fill: #5dade2;
+            }
+
+            [data-theme="dark"] .nh-fill-week {
+                fill: #3498db;
+            }
+
+            [data-theme="dark"] .nh-fill-month {
+                fill: #9b59b6;
+            }
+
+            [data-theme="dark"] .nh-fill-year {
+                fill: #e74c3c;
             }
 
             /* 暗色主题 */
@@ -157,11 +222,11 @@
             }
 
             [data-theme="dark"] .nh-date {
-                color: #777;
+                color: #aaa;
             }
 
             [data-theme="dark"] .nh-lunar {
-                color: #888;
+                color: #bbb;
             }
 
             [data-theme="dark"] .nh-label {
@@ -169,7 +234,6 @@
             }
 
             [data-theme="dark"] .nh-badge-today {
-                background: rgba(93, 173, 226, 0.15);
                 color: #5dade2;
             }
 
@@ -262,16 +326,42 @@
         var d = fromSolar;
         var max = maxDays || SEARCH_DAYS;
         var i = 0;
+        var foundHolidays = [];
+        
         while (i < max) {
             try {
                 var ymd = d.toYmd();
                 if (typeof HolidayUtil !== 'undefined' && HolidayUtil && typeof HolidayUtil.getHoliday === 'function') {
                     try {
                         var h = HolidayUtil.getHoliday(ymd);
-                        if (h && !h.isWork()) {
-                            var nm = h.getName();
-                            if (isChineseName(nm)) {
-                                return { solar: d, name: nm };
+                        if (h && isChineseName(h.getName())) {
+                            var holidayName = h.getName();
+                            var targetDate = null;
+                            // 尝试获取节日的主要日期（target）
+                            if (typeof h.getTarget === 'function') {
+                                targetDate = h.getTarget();
+                            }
+                            // 检查是否已经记录过这个节日
+                            var found = false;
+                            for (var j = 0; j < foundHolidays.length; j++) {
+                                if (foundHolidays[j].name === holidayName) {
+                                    found = true;
+                                    break;
+                                }
+                            }
+                            if (!found) {
+                                var targetSolar = null;
+                                if (targetDate) {
+                                    var parts = targetDate.split('-');
+                                    if (parts.length === 3) {
+                                        targetSolar = Solar.fromDate(new Date(parts[0], parts[1] - 1, parts[2]));
+                                    }
+                                }
+                                foundHolidays.push({
+                                    name: holidayName,
+                                    targetSolar: targetSolar || d,
+                                    searchSolar: d
+                                });
                             }
                         }
                     } catch (e) {}
@@ -279,6 +369,16 @@
             } catch (e) {}
             d = d.next(1);
             i++;
+        }
+        
+        // 找到第一个目标日期大于今天的节日
+        var todayStr = fromSolar.toYmd();
+        for (var j = 0; j < foundHolidays.length; j++) {
+            var holiday = foundHolidays[j];
+            var holidayTargetStr = holiday.targetSolar.toYmd();
+            if (holidayTargetStr > todayStr) {
+                return { solar: holiday.targetSolar, name: holiday.name };
+            }
         }
         return null;
     }
@@ -340,15 +440,60 @@
         var percentMonth = Math.min(100, Math.max(0, ((dayOfMonth - 1) + (now.getHours() + now.getMinutes()/60)/24) / daysInMonth * 100));
         var percentYear = Math.min(100, Math.max(0, ((dayOfYear - 1) + (now.getHours() + now.getMinutes()/60)/24) / daysInYear * 100));
 
-        function svgBar(percent, w, h, fillClass) {
-            var width = w || 80;
+        function svgBar(percent, w, h, fillClass, text) {
+            var width = w || 120;
             var height = h || 8;
+            var svgHeight = text ? 28 : height;
+            var fontSize = text ? 14 : 8;
             var p = Math.max(0, Math.min(100, Math.round(percent)));
             var filled = Math.round(width * p / 100);
-            return '<svg width="' + width + '" height="' + height + '" viewBox="0 0 ' + width + ' ' + height + '" xmlns="http://www.w3.org/2000/svg" class="nh-progress-bar">'
+
+            // 定义渐变色
+            var gradientId = 'grad-' + Math.random().toString(36).substr(2, 9);
+            var gradientStart = '#a8c0ff';
+            var gradientEnd = '#3f2b96';
+            if (fillClass === 'nh-fill-today') {
+                gradientStart = '#a1c4fd';
+                gradientEnd = '#c2e9fb';
+            } else if (fillClass === 'nh-fill-week') {
+                gradientStart = '#89f7fe';
+                gradientEnd = '#66a6ff';
+            } else if (fillClass === 'nh-fill-month') {
+                gradientStart = '#a8edea';
+                gradientEnd = '#fed6e3';
+            } else if (fillClass === 'nh-fill-year') {
+                gradientStart = '#ff9a9e';
+                gradientEnd = '#fecfef';
+            }
+
+            // 检测当前主题
+            var isDark = document.documentElement.getAttribute('data-theme') === 'dark' ||
+                         document.body.getAttribute('data-theme') === 'dark';
+            var textColor = isDark ? '#e0e0e0' : '#333333';
+
+            // 根据文字位置决定颜色
+            // 文字靠右显示，如果文字位置在填充区域则用白色，否则使用 CSS 样式
+            var textX = width - 30; // 文字中心位置估算
+            var textFillStyle = '';
+            if (textX <= filled) {
+                // 文字在填充区域（渐变色），强制使用白色
+                textFillStyle = ' fill="#ffffff" style="fill: #ffffff !important;"';
+            }
+
+            var svg = '<svg width="100%" height="' + svgHeight + '" viewBox="0 0 ' + width + ' ' + svgHeight + '" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" class="nh-progress-bar">'
+                + '<defs>'
+                + '<linearGradient id="' + gradientId + '" x1="0%" y1="0%" x2="100%" y2="0%">'
+                + '<stop offset="0%" style="stop-color:' + gradientStart + ';stop-opacity:1" />'
+                + '<stop offset="100%" style="stop-color:' + gradientEnd + ';stop-opacity:1" />'
+                + '</linearGradient>'
+                + '</defs>'
                 + '<rect x="0" y="0" width="' + width + '" height="' + height + '" rx="4" ry="4" class="nh-progress-bg" />'
-                + '<rect x="0" y="0" width="' + filled + '" height="' + height + '" rx="4" ry="4" class="' + (fillClass || 'nh-fill-today') + '" />'
-                + '</svg>';
+                + '<rect x="0" y="0" width="' + filled + '" height="' + height + '" rx="4" ry="4" fill="url(#' + gradientId + ')" />';
+            if (text) {
+                svg += '<text x="' + (width - 5) + '" y="' + (height / 2 + 6) + '" text-anchor="end" font-size="' + fontSize + '"' + textFillStyle + '>' + text + '</text>';
+            }
+            svg += '</svg>';
+            return svg;
         }
 
         // 构建 HTML（移除所有内联样式，使用 CSS 类）
@@ -386,40 +531,25 @@
         html += '<div class="nh-right">';
         html += '<div class="nh-timeline">';
         html += '<div class="nh-item nh-item-today">';
-        html += '<div class="nh-item-header">';
-        html += '<span class="nh-label">今日</span>';
-        html += '<span class="nh-badge nh-badge-today">还剩 ' + hoursRemain + ' 小时</span>';
-        html += '</div>';
-        html += '<div class="nh-progress">' + svgBar(percentToday, 120, 8, 'nh-fill-today') + '</div>';
+        html += '<div class="nh-progress">' + svgBar(percentToday, null, 20, 'nh-fill-today', '今日剩 ' + hoursRemain + '小时') + '</div>';
         html += '</div>';
 
         html += '<div class="nh-item nh-item-week">';
-        html += '<div class="nh-item-header">';
-        html += '<span class="nh-label">本周</span>';
-        html += '<span class="nh-badge nh-badge-week">还剩 ' + daysRemainWeek + ' 天</span>';
-        html += '</div>';
-        html += '<div class="nh-progress">' + svgBar(percentWeek, 120, 8, 'nh-fill-week') + '</div>';
+        html += '<div class="nh-progress">' + svgBar(percentWeek, null, 20, 'nh-fill-week', '本周剩 ' + daysRemainWeek + '天') + '</div>';
         html += '</div>';
 
         html += '<div class="nh-item nh-item-month">';
-        html += '<div class="nh-item-header">';
-        html += '<span class="nh-label">本月</span>';
-        html += '<span class="nh-badge nh-badge-month">还剩 ' + daysRemainMonth + ' 天</span>';
-        html += '</div>';
-        html += '<div class="nh-progress">' + svgBar(percentMonth, 120, 8, 'nh-fill-month') + '</div>';
+        html += '<div class="nh-progress">' + svgBar(percentMonth, null, 20, 'nh-fill-month', '本月剩 ' + daysRemainMonth + '天') + '</div>';
         html += '</div>';
 
         html += '<di class="nh-item nh-item-year">';
-        html += '<div class="nh-item-header">';
-        html += '<span class="nh-label">本年</span>';
-        html += '<span class="nh-badge nh-badge-year">还剩 ' + daysRemainYear + ' 天</span>';
-        html += '</div>';
-        html += '<div class="nh-progress">' + svgBar(percentYear, 120, 8, 'nh-fill-year') + '</div>';
-        html += '<a href="/html/lunar/Calendar.html" target="_blank">查看日历</a>';
+        html += '<div class="nh-progress">' + svgBar(percentYear, null, 20, 'nh-fill-year', '本年剩' + daysRemainYear + '天') + '</div>';
         html += '<div>';
 
+        
         html += '</div>'; // timeline
         html += '</div>'; // right
+        html += '<div style="display:block"><br/><a href="/html/lunar/Calendar.html" target="_blank">查看日历 》</a></div>';
         html += '</div>'; // card
 
         container.innerHTML = html;
