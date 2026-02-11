@@ -465,13 +465,13 @@ const RENDERER = {
 
  &amp;amp;lt;script type=&amp;amp;#34;text/javascript&amp;amp;#34;&amp;amp;gt;
  // Whois Creation Date: 2006-01-02 15:04:05 Monday
- const now = new Date();
- const onlineStartDate = new Date(&amp;amp;#34;2006-01-02 15:04:05&amp;amp;#34;); // 2010-03-26T14:41:14Z
- const diffTime = Math.abs(now - onlineStartDate);
- const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
- const years = Math.floor(diffDays / 365);
+ now = new Date();
+ onlineStartDate = new Date(&amp;amp;#34;2006-01-02 15:04:05&amp;amp;#34;); // 2010-03-26T14:41:14Z
+ diffTime = Math.abs(now - onlineStartDate);
+ diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+ years = Math.floor(diffDays / 365);
 
- const diffDaysLocale = diffDays.toLocaleString();
+ diffDaysLocale = diffDays.toLocaleString();
 
  document.getElementById(&amp;amp;#39;stats_blog_online_year&amp;amp;#39;).innerHTML = `${diffDaysLocale}天 &amp;amp;lt;span class=&amp;amp;#34;text-xs&amp;amp;#34;&amp;amp;gt;(${years}yrs)&amp;amp;lt;/span&amp;amp;gt;`;
  &amp;amp;lt;/script&amp;amp;gt;
@@ -480,7 +480,7 @@ const RENDERER = {
  // 计算相对时间的函数
  function getRelativeTime(dateString) {
  const rtf = new Intl.RelativeTimeFormat(&amp;amp;#39;zh-CN&amp;amp;#39;, { numeric: &amp;amp;#34;auto&amp;amp;#34;, style: &amp;amp;#39;short&amp;amp;#39; });
- const now = new Date();
+ now = new Date();
  const date = new Date(dateString);
 
  // 检查日期是否有效
@@ -519,23 +519,23 @@ const RENDERER = {
 
  &amp;amp;lt;script type=&amp;amp;#34;text/javascript&amp;amp;#34;&amp;amp;gt;
  // Donut Chart
- let cateData = [
+ cateData = [
  {{ range $category, $pages := .Site.Taxonomies.categories }}
  {name: &amp;amp;#34;{{ $category }}&amp;amp;#34;, value: {{ len $pages }}},
  {{ end }}
  ];
 
- let total = 0;
+ total = 0;
  cateData.forEach(item =&amp;amp;gt; {
  total &amp;#43;= item.value;
  });
 
- const data = {
+ data = {
  total: total,
  category: cateData
  };
 
- const colors = [
+ colors = [
  &amp;amp;#39;#f97316&amp;amp;#39;,
  &amp;amp;#39;#06b6d4&amp;amp;#39;,
  &amp;amp;#39;#f43f5e&amp;amp;#39;,
@@ -558,7 +558,7 @@ const RENDERER = {
  &amp;amp;#39;#ec4899&amp;amp;#39;,
  ];
 
- const svg = document.getElementById(&amp;amp;#39;cate-pie-chart&amp;amp;#39;);
+ svg = document.getElementById(&amp;amp;#39;cate-pie-chart&amp;amp;#39;);
  if (svg) {
  const centerX = 200;
  const centerY = 200;
@@ -573,24 +573,24 @@ const RENDERER = {
  });
 
  data.category.forEach((item, index) =&amp;amp;gt; {
- const sliceAngle = (item.value / totalValue) * 2 * Math.PI;
- const percentage = (item.value / totalValue) * 100;
- const largeArcFlag = sliceAngle &amp;amp;gt; Math.PI ? 1 : 0;
+ sliceAngle = (item.value / totalValue) * 2 * Math.PI;
+ percentage = (item.value / totalValue) * 100;
+ largeArcFlag = sliceAngle &amp;amp;gt; Math.PI ? 1 : 0;
 
- const startX = centerX &amp;#43; Math.cos(currentAngle) * radius;
- const startY = centerY &amp;#43; Math.sin(currentAngle) * radius;
- const endX = centerX &amp;#43; Math.cos(currentAngle &amp;#43; sliceAngle) * radius;
- const endY = centerY &amp;#43; Math.sin(currentAngle &amp;#43; sliceAngle) * radius;
+ startX = centerX &amp;#43; Math.cos(currentAngle) * radius;
+ startY = centerY &amp;#43; Math.sin(currentAngle) * radius;
+ endX = centerX &amp;#43; Math.cos(currentAngle &amp;#43; sliceAngle) * radius;
+ endY = centerY &amp;#43; Math.sin(currentAngle &amp;#43; sliceAngle) * radius;
 
- const innerStartX = centerX &amp;#43; Math.cos(currentAngle) * innerRadius;
- const innerStartY = centerY &amp;#43; Math.sin(currentAngle) * innerRadius;
- const innerEndX = centerX &amp;#43; Math.cos(currentAngle &amp;#43; sliceAngle) * innerRadius;
- const innerEndY = centerY &amp;#43; Math.sin(currentAngle &amp;#43; sliceAngle) * innerRadius;
+ innerStartX = centerX &amp;#43; Math.cos(currentAngle) * innerRadius;
+ innerStartY = centerY &amp;#43; Math.sin(currentAngle) * innerRadius;
+ innerEndX = centerX &amp;#43; Math.cos(currentAngle &amp;#43; sliceAngle) * innerRadius;
+ innerEndY = centerY &amp;#43; Math.sin(currentAngle &amp;#43; sliceAngle) * innerRadius;
 
- const pathData = `M ${startX} ${startY} A ${radius} ${radius} 0 ${largeArcFlag} 1 ${endX} ${endY} L ${innerEndX} ${innerEndY} A ${innerRadius} ${innerRadius} 0 ${largeArcFlag} 0 ${innerStartX} ${innerStartY} Z`;
+ pathData = `M ${startX} ${startY} A ${radius} ${radius} 0 ${largeArcFlag} 1 ${endX} ${endY} L ${innerEndX} ${innerEndY} A ${innerRadius} ${innerRadius} 0 ${largeArcFlag} 0 ${innerStartX} ${innerStartY} Z`;
 
- const path = document.createElementNS(&amp;amp;#39;http://www.w3.org/2000/svg&amp;amp;#39;, &amp;amp;#39;path&amp;amp;#39;);
- const sliceColor = colors[index % colors.length];
+ path = document.createElementNS(&amp;amp;#39;http://www.w3.org/2000/svg&amp;amp;#39;, &amp;amp;#39;path&amp;amp;#39;);
+ sliceColor = colors[index % colors.length];
  path.setAttribute(&amp;amp;#39;d&amp;amp;#39;, pathData);
  path.setAttribute(&amp;amp;#39;fill&amp;amp;#39;, sliceColor);
  path.setAttribute(&amp;amp;#39;stroke&amp;amp;#39;, &amp;amp;#39;white&amp;amp;#39;);
@@ -605,10 +605,10 @@ const RENDERER = {
 
  // 占比大于3%的分类，在环形图上显示名称
  if (percentage &amp;amp;gt; 3) {
- const textAngle = currentAngle &amp;#43; sliceAngle / 2;
- const textRadius = (radius &amp;#43; innerRadius) / 2;
- const textX = centerX &amp;#43; Math.cos(textAngle) * textRadius;
- const textY = centerY &amp;#43; Math.sin(textAngle) * textRadius;
+ textAngle = currentAngle &amp;#43; sliceAngle / 2;
+ textRadius = (radius &amp;#43; innerRadius) / 2;
+ textX = centerX &amp;#43; Math.cos(textAngle) * textRadius;
+ textY = centerY &amp;#43; Math.sin(textAngle) * textRadius;
 
  const text = document.createElementNS(&amp;amp;#39;http://www.w3.org/2000/svg&amp;amp;#39;, &amp;amp;#39;text&amp;amp;#39;);
  text.setAttribute(&amp;amp;#39;x&amp;amp;#39;, textX);
@@ -631,7 +631,7 @@ const RENDERER = {
  p.style.opacity = &amp;amp;#39;0.3&amp;amp;#39;;
  }
  });
- const legendItem = document.getElementById(`legend-${index}`);
+ legendItem = document.getElementById(`legend-${index}`);
  if (legendItem) {
  legendItem.style.backgroundColor = sliceColor;
  legendItem.style.color = &amp;amp;#39;white&amp;amp;#39;;
@@ -643,7 +643,7 @@ const RENDERER = {
  document.querySelectorAll(&amp;amp;#39;.donut-slice&amp;amp;#39;).forEach(p =&amp;amp;gt; {
  p.style.opacity = &amp;amp;#39;1&amp;amp;#39;;
  });
- const legendItem = document.getElementById(`legend-${index}`);
+ legendItem = document.getElementById(`legend-${index}`);
  if (legendItem) {
  legendItem.style.backgroundColor = &amp;amp;#39;transparent&amp;amp;#39;;
  legendItem.style.color = &amp;amp;#39;&amp;amp;#39;;
@@ -654,7 +654,7 @@ const RENDERER = {
  currentAngle &amp;#43;= sliceAngle;
  });
 
- const totalText = document.createElementNS(&amp;amp;#39;http://www.w3.org/2000/svg&amp;amp;#39;, &amp;amp;#39;text&amp;amp;#39;);
+ totalText = document.createElementNS(&amp;amp;#39;http://www.w3.org/2000/svg&amp;amp;#39;, &amp;amp;#39;text&amp;amp;#39;);
  totalText.setAttribute(&amp;amp;#39;x&amp;amp;#39;, centerX);
  totalText.setAttribute(&amp;amp;#39;y&amp;amp;#39;, centerY - 10);
  totalText.setAttribute(&amp;amp;#39;fill&amp;amp;#39;, &amp;amp;#39;#1f2937&amp;amp;#39;);
@@ -664,7 +664,7 @@ const RENDERER = {
  totalText.textContent = totalValue;
  totalText.classList.add(&amp;amp;#39;dark-mode-text&amp;amp;#39;);
 
- const labelText = document.createElementNS(&amp;amp;#39;http://www.w3.org/2000/svg&amp;amp;#39;, &amp;amp;#39;text&amp;amp;#39;);
+ labelText = document.createElementNS(&amp;amp;#39;http://www.w3.org/2000/svg&amp;amp;#39;, &amp;amp;#39;text&amp;amp;#39;);
  labelText.setAttribute(&amp;amp;#39;x&amp;amp;#39;, centerX);
  labelText.setAttribute(&amp;amp;#39;y&amp;amp;#39;, centerY &amp;#43; 20);
  labelText.setAttribute(&amp;amp;#39;fill&amp;amp;#39;, &amp;amp;#39;#6b7280&amp;amp;#39;);
@@ -676,7 +676,7 @@ const RENDERER = {
  svg.appendChild(totalText);
  svg.appendChild(labelText);
 
- const updateDarkModeText = () =&amp;amp;gt; {
+ updateDarkModeText = () =&amp;amp;gt; {
  const isDark = document.documentElement.getAttribute(&amp;amp;#39;data-theme&amp;amp;#39;) === &amp;amp;#39;dark&amp;amp;#39;;
  totalText.setAttribute(&amp;amp;#39;fill&amp;amp;#39;, isDark ? &amp;amp;#39;#f9fafb&amp;amp;#39; : &amp;amp;#39;#1f2937&amp;amp;#39;);
  labelText.setAttribute(&amp;amp;#39;fill&amp;amp;#39;, isDark ? &amp;amp;#39;#9ca3af&amp;amp;#39; : &amp;amp;#39;#6b7280&amp;amp;#39;);
