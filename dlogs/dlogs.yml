@@ -7,6 +7,9 @@ dlogs:
     showPrevNext: true
   list:
     - type: life
+      txt: 欲买桂花同载酒，终不似、少年游。 
+      time: 乙巳蛇年 腊月廿四
+    - type: tech
       txt: 用小艺生成了一个AI播客，感觉现在的AI技术真是越来越强大了，播客内容总结的也很不错，声音很自然，大家可以听一听~
       time: 2026-01-30 18:42
       audio:
