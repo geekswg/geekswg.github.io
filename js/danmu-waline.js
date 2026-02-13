@@ -20,7 +20,7 @@
 		rowHeight: 36,
 		padding: 6,
 		randomColor: true,
-		colorList: ["#ffffff", "#ffd166", "#ef476f", "#06d6a0", "#118ab2"],
+		colorList: ["#ff6b6b", "#4ecdc4", "#45b7d1", "#96ceb4", "#feca57", "#ff9ff3", "#54a0ff"],
 		showNick: true,
 		showAvatar: true,
 		showLike: true,
@@ -106,7 +106,7 @@
 		var style = document.createElement("style");
 		style.type = "text/css";
 		style.textContent =
-			".danmu-waline{position:relative;overflow:hidden;user-select:none;}" +
+			".danmu-waline{position:fixed;left:0;top:80px;width:100vw;overflow:hidden;user-select:none;overflow-x:hidden;}" +
 			".danmu-waline-item{position:absolute;white-space:nowrap;will-change:transform;pointer-events:auto;display:flex;align-items:center;min-width:fit-content;}" +
 			".danmu-waline-avatar{width:20px;height:20px;border-radius:50%;margin-right:4px;flex-shrink:0;object-fit:cover;display:block;}" +
 			".danmu-waline-content{display:flex;flex-direction:row;align-items:center;flex-shrink:0;}" +
@@ -114,7 +114,7 @@
 			".danmu-waline-text{font-size:16px;}" +
 			".danmu-waline-like{font-size:14px;color:#ef476f;margin-left:2px;}" +
 			".danmu-waline-paused .danmu-waline-item{animation-play-state:paused !important;}" +
-			".danmu-waline-reload{position:absolute;bottom:10px;left:50%;transform:translateX(-50%);padding:6px 12px;background:rgba(0,0,0,0.5);color:#fff;border:none;border-radius:4px;cursor:pointer;font-size:12px;transition:opacity 0.3s;z-index:100;}" +
+			".danmu-waline-reload{position:absolute;bottom:54%;left:50%;transform:translateX(-50%);padding:6px 12px;background:rgba(0,0,0,0.5);color:#fff;border:none;border-radius:4px;cursor:pointer;font-size:12px;transition:opacity 0.3s;z-index:100;}" +
 			".danmu-waline-reload:hover{background:rgba(0,0,0,0.7);}";
 		document.head.appendChild(style);
 		return style;
@@ -224,6 +224,11 @@ function fetchRecentComments(options) {
 			}
 		}
 
+		// 初始化行项跟踪对象
+		if (!this.rowItems) {
+			this.rowItems = {};
+		}
+
 		var reloadBtn = document.createElement("button");
 		reloadBtn.className = "danmu-waline-reload";
 		reloadBtn.textContent = "↻ 重新加载";
@@ -274,6 +279,7 @@ function fetchRecentComments(options) {
 		this.stop();
 		this.clearItems();
 		this.rowCounts = {};
+		this.rowItems = {};
 		this.rowIndex = 0;
 		this.running = true;
 		return this.loadComments()
@@ -318,21 +324,39 @@ function fetchRecentComments(options) {
 			maxRows = Math.max(1, Math.floor(availableHeight / itemHeight));
 		}
 
+		// 初始化行项信息
+		if (!this.rowItems) {
+			this.rowItems = {};
+			for (var i = 0; i < maxRows; i++) {
+				this.rowItems[i] = [];
+			}
+		}
+
+		// 清理已完成的动画项
+		var now = Date.now();
+		for (var row in this.rowItems) {
+			if (this.rowItems.hasOwnProperty(row)) {
+				this.rowItems[row] = this.rowItems[row].filter(function (item) {
+					return now < item.endTime;
+				});
+			}
+		}
+
+		// 找到项目最少的行，如果有多个则随机选择
 		var candidates = [];
-		var minRowCount = Infinity;
+		var minItemCount = Infinity;
 		for (var i = 0; i < maxRows; i++) {
-			var count = this.rowCounts[i] || 0;
-			if (count < minRowCount) {
-				minRowCount = count;
+			var itemCount = (this.rowItems[i] || []).length;
+			if (itemCount < minItemCount) {
+				minItemCount = itemCount;
 				candidates = [i];
-			} else if (count === minRowCount) {
+			} else if (itemCount === minItemCount) {
 				candidates.push(i);
 			}
 		}
 
 		var selectedRow = candidates[Math.floor(Math.random() * candidates.length)];
 		this.rowIndex += 1;
-		this.rowCounts[selectedRow] = minRowCount + 1;
 		return selectedRow * this.options.rowHeight + topPadding;
 	};
 
@@ -413,13 +437,31 @@ function fetchRecentComments(options) {
 		node.style.animation = keyframeName + " " + duration + "s linear 0s 1 forwards";
 		var rowIndex = Math.floor((rowTop - this.options.padding * 2) / this.options.rowHeight);
 		node.dataset.rowIndex = rowIndex;
+
+		// 记录弹幕项的信息，用于检测重叠
+		var itemInfo = {
+			startTime: Date.now(),
+			endTime: Date.now() + duration * 1000,
+			duration: duration,
+			textWidth: textWidth,
+			containerWidth: containerWidth
+		};
+
+		if (!this.rowItems[rowIndex]) {
+			this.rowItems[rowIndex] = [];
+		}
+		this.rowItems[rowIndex].push(itemInfo);
+
 		var self = this;
 		node.addEventListener("animationend", function () {
 			if (node.parentNode) {
 				node.parentNode.removeChild(node);
-				var r = parseInt(node.dataset.rowIndex, 10);
-				if (!isNaN(r) && self.rowCounts[r] > 0) {
-					self.rowCounts[r] = self.rowCounts[r] - 1;
+				// 从行项信息中移除已完成的项
+				if (self.rowItems[rowIndex]) {
+					var idx = self.rowItems[rowIndex].indexOf(itemInfo);
+					if (idx !== -1) {
+						self.rowItems[rowIndex].splice(idx, 1);
+					}
 				}
 			}
 		});
@@ -436,6 +478,7 @@ function fetchRecentComments(options) {
 	DanmuWaline.prototype.start = function () {
 		var self = this;
 		if (!this.initContainer()) return this;
+		this.rowItems = {};
 		this.running = true;
 		tryWalineCommentCount(this.options.serverURL);
 
@@ -482,6 +525,7 @@ function fetchRecentComments(options) {
 			}
 		}
 		this.rowCounts = {};
+		this.rowItems = {};
 		this.queue = [];
 		this.source = [];
 	};

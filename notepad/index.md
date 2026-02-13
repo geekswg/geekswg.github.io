@@ -11,8 +11,7 @@
 
 
 <!-- 留言弹幕功能 -->
-<div id="danmu" style="width: 100vw; margin-left: calc(-50vw + 50%); position: relative;">
-</div>
+<div id="danmu"></div>
 <script src="/js/danmu-waline.js"></script>
 <script>
   window.DanmuWaline.init({
