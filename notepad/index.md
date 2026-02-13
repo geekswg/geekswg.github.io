@@ -9,17 +9,26 @@
 <small>*关于 [FixIt 主题](https://github.com/hugo-fixit/FixIt) 的问题，请移步 [FixIt 官网](https://fixit.lruihao.cn) 相关文章哦～*</small>
 {{< /admonition >}}
 
-<!-- 
-{{< details "来自 [网易云歌单](https://music.163.com/#/playlist?id=2414158210)" true >}}
-{{< music server="netease" type="playlist" id="2414158210" loop="all" list-folded=false autoplay=true volume="0.5" >}} 
-{{< /details >}}
 
-{{< random-comment >}}  
--->
-
-{{< mmt-netease mid="2414158210" autoplay=true >}}
-tip: 👆 点击上面随机播放音乐☝️
-
+<!-- 留言弹幕功能 -->
+<div id="danmu" style="width: 100vw; margin-left: calc(-50vw + 50%); position: relative;">
+</div>
+<script src="/js/danmu-waline.js"></script>
+<script>
+  window.DanmuWaline.init({
+    containerId: "danmu",
+    serverURL: "https://waline.342901.xyz/",
+    count: 80,
+    intervalMs: 700,
+    minSpeed: 90,
+    maxSpeed: 150,
+    fontSize: 16,
+    opacity: 0.9,
+    maxRows: 10,
+    loop: true,
+    pauseOnHover: true
+  });
+</script>
 
 ---
 
