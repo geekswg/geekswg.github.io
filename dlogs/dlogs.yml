@@ -24,7 +24,7 @@ dlogs:
         src: audio/ai-Podcast.mp4
         name: 如何高效展示代码片段-小艺AI播客.mp4
       imgs:
-        src: imgs/26-ai-Podcast.webp
+        - src: imgs/26-ai-Podcast.webp
       # iframe:
       #   src: https://xiaoyi.huawei.com/s/pod/c8ed0f001c
       #   width: 100%
