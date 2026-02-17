@@ -6,7 +6,10 @@ dlogs:
     showFirstLast: true
     showPrevNext: true
   list:
-    
+    - type: life
+      sub: 辞旧迎新
+      txt: 辞暮尔尔，朝朝新岁。愿心藏皎月，行拥长风，所念皆星河，所行化坦途。
+      time: 丙午马年 正月初一
     - type: life
       txt: 自己组装了一台海景房，作为自己的新年礼物。 
       time: 乙巳蛇年 腊月廿六
