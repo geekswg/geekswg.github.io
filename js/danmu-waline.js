@@ -106,16 +106,16 @@
 		var style = document.createElement("style");
 		style.type = "text/css";
 		style.textContent =
-			".danmu-waline{position:fixed;left:0;top:80px;width:100vw;overflow:hidden;user-select:none;overflow-x:hidden;}" +
-			".danmu-waline-item{position:absolute;white-space:nowrap;will-change:transform;pointer-events:auto;display:flex;align-items:center;min-width:fit-content;}" +
+			".danmu-waline{position:fixed;left:0;top:80px;width:100vw;overflow:hidden;user-select:none;overflow-x:hidden;z-index:-1;pointer-events:none;}" +
+			".danmu-waline-item{position:absolute;white-space:nowrap;will-change:transform;pointer-events:none;display:flex;align-items:center;min-width:fit-content;}" +
 			".danmu-waline-avatar{width:20px;height:20px;border-radius:50%;margin-right:4px;flex-shrink:0;object-fit:cover;display:block;}" +
 			".danmu-waline-content{display:flex;flex-direction:row;align-items:center;flex-shrink:0;}" +
 			".danmu-waline-nick{font-weight:bold;font-size:14px;margin-right:2px;}" +
 			".danmu-waline-text{font-size:16px;}" +
 			".danmu-waline-like{font-size:14px;color:#ef476f;margin-left:2px;}" +
 			".danmu-waline-paused .danmu-waline-item{animation-play-state:paused !important;}" +
-			".danmu-waline-reload{position:absolute;bottom:54%;left:50%;transform:translateX(-50%);padding:6px 12px;background:rgba(0,0,0,0.5);color:#fff;border:none;border-radius:4px;cursor:pointer;font-size:12px;transition:opacity 0.3s;z-index:100;}" +
-			".danmu-waline-reload:hover{background:rgba(0,0,0,0.7);}";
+			".danmu-waline-toggle{position:absolute;bottom:54%;left:50%;transform:translateX(-50%);padding:6px 12px;background:rgba(0,0,0,0.5);color:#fff;border:none;border-radius:4px;cursor:pointer;font-size:12px;transition:opacity 0.3s;pointer-events:auto;z-index:9999;}" +
+			".danmu-waline-toggle:hover{background:rgba(0,0,0,0.7);}";
 		document.head.appendChild(style);
 		return style;
 	}
@@ -205,6 +205,7 @@ function fetchRecentComments(options) {
 		this.rowCounts = {};
 		this.timer = null;
 		this.refreshTimer = null;
+		this.toggleBtn = null;
 		this.running = false;
 		this.instanceId = Math.random().toString(36).slice(2);
 	}
@@ -229,15 +230,26 @@ function fetchRecentComments(options) {
 			this.rowItems = {};
 		}
 
-		var reloadBtn = document.createElement("button");
-		reloadBtn.className = "danmu-waline-reload";
-		reloadBtn.textContent = "↻ 重新加载";
-		reloadBtn.title = "重新加载弹幕";
+		var toggleBtn = document.createElement("button");
+		toggleBtn.className = "danmu-waline-toggle";
+		toggleBtn.textContent = "■ 关闭弹幕";
+		toggleBtn.title = "关闭弹幕";
+		this.toggleBtn = toggleBtn;
 		var self = this;
-		reloadBtn.addEventListener("click", function () {
-			self.reload();
+		toggleBtn.addEventListener("click", function () {
+			if (self.running) {
+				self.destroy();
+				self.container.classList.add("danmu-waline-paused");
+				toggleBtn.textContent = "▶ 开启弹幕";
+				toggleBtn.title = "开启弹幕";
+			} else {
+				self.container.classList.remove("danmu-waline-paused");
+				self.start();
+				toggleBtn.textContent = "■ 关闭弹幕";
+				toggleBtn.title = "关闭弹幕";
+			}
 		});
-		this.container.appendChild(reloadBtn);
+		this.container.appendChild(toggleBtn);
 
 		if (this.options.pauseOnHover) {
 			var container = this.container;

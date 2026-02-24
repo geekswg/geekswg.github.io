@@ -33,9 +33,7 @@
 {{< /typeit >}}
 -->
 
-<!-- metingJs 音乐插件 
-{{< music auto="https://y.qq.com/n/yqq/playlist/8138088068.html" fixed=false list-folded=true autoplay=true volume="0.5" order="random" loop="all"  >}}
--->
+
 <!-- 
 > typeit 示例
 
@@ -44,8 +42,7 @@
 这一个带有基于 [TypeIt](https://typeitjs.com/) 的 **打字动画** 的 *段落* ...
 {{</* /typeit */>}}
 ```
-
-{{< music auto="https://y.qq.com/n/yqq/playlist/8138088068.html" fixed=true list-folded=false autoplay=true volume="0.2" >}} -->
+-->
 
 <!-- {{< music url="/music/Take-Me-To-Your-Heart.mp3"  name="Take-Me-To-Your-Heart" artist="Michael Learns To Rock" cover="/logo.png" volume="0.2" autoplay=true loop=all fixed=true >}} -->
 

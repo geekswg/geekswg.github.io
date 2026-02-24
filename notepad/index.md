@@ -9,6 +9,8 @@
 <small>*关于 [FixIt 主题](https://github.com/hugo-fixit/FixIt) 的问题，请移步 [FixIt 官网](https://fixit.lruihao.cn) 相关文章哦～*</small>
 {{< /admonition >}}
 
+<!-- metingJs 音乐插件 -->
+{{< music auto="https://y.qq.com/n/yqq/playlist/8138088068.html" fixed=false list-folded=true autoplay=true volume="0.5" order="random" loop="all"  >}}
 
 <!-- 留言弹幕功能 -->
 <div id="danmu"></div>
