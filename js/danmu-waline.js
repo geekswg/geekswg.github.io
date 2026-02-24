@@ -106,8 +106,8 @@
 		var style = document.createElement("style");
 		style.type = "text/css";
 		style.textContent =
-			".danmu-waline{position:fixed;left:0;top:80px;width:100vw;overflow:hidden;user-select:none;overflow-x:hidden;z-index:-1;pointer-events:none;}" +
-			".danmu-waline-item{position:absolute;white-space:nowrap;will-change:transform;pointer-events:none;display:flex;align-items:center;min-width:fit-content;}" +
+			".danmu-waline{position:fixed;left:0;top:80px;width:100vw;overflow:hidden;user-select:none;overflow-x:hidden;z-index:1;pointer-events:none;}" +
+			".danmu-waline-item{position:absolute;white-space:nowrap;will-change:transform;pointer-events:auto;display:flex;align-items:center;min-width:fit-content;}" +
 			".danmu-waline-avatar{width:20px;height:20px;border-radius:50%;margin-right:4px;flex-shrink:0;object-fit:cover;display:block;}" +
 			".danmu-waline-content{display:flex;flex-direction:row;align-items:center;flex-shrink:0;}" +
 			".danmu-waline-nick{font-weight:bold;font-size:14px;margin-right:2px;}" +
