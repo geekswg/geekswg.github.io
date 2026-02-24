@@ -114,7 +114,7 @@
 			".danmu-waline-text{font-size:16px;}" +
 			".danmu-waline-like{font-size:14px;color:#ef476f;margin-left:2px;}" +
 			".danmu-waline-paused .danmu-waline-item{animation-play-state:paused !important;}" +
-			".danmu-waline-toggle{position:absolute;bottom:54%;left:50%;transform:translateX(-50%);padding:6px 12px;background:rgba(0,0,0,0.5);color:#fff;border:none;border-radius:4px;cursor:pointer;font-size:12px;transition:opacity 0.3s;pointer-events:auto;z-index:9999;}" +
+			".danmu-waline-toggle{position:absolute;top:0;left:50%;transform:translateX(-50%);padding:6px 12px;background:rgba(0,0,0,0.5);color:#fff;border:none;border-radius:4px;cursor:pointer;font-size:12px;transition:opacity 0.3s;pointer-events:auto;z-index:9999;}" +
 			".danmu-waline-toggle:hover{background:rgba(0,0,0,0.7);}";
 		document.head.appendChild(style);
 		return style;
@@ -219,10 +219,8 @@ function fetchRecentComments(options) {
 		if (this.options.containerHeight && this.options.containerHeight > 0) {
 			this.container.style.height = this.options.containerHeight + "px";
 		} else {
-			if (this.container.clientHeight < this.options.rowHeight) {
-				var rows = this.options.maxRows && this.options.maxRows > 0 ? this.options.maxRows : 6;
-				this.container.style.minHeight = rows * this.options.rowHeight + this.options.padding * 2 + "px";
-			}
+			var rows = this.options.maxRows && this.options.maxRows > 0 ? this.options.maxRows : 6;
+			this.container.style.minHeight = rows * this.options.rowHeight + this.options.padding * 2 + "px";
 		}
 
 		// 初始化行项跟踪对象
@@ -244,7 +242,22 @@ function fetchRecentComments(options) {
 				toggleBtn.title = "开启弹幕";
 			} else {
 				self.container.classList.remove("danmu-waline-paused");
-				self.start();
+				self.rowItems = {};
+				self.running = true;
+				self.loadComments().then(function () {
+					if (self.source.length > 0) {
+						self.spawnItem({ text: self.source.length + " 条弹幕加载中", nick: "", avatar: "", like: 0 }, true);
+					}
+					self.tick();
+					self.timer = setInterval(function () {
+						self.tick();
+					}, self.options.intervalMs);
+					if (self.options.refreshMs > 0) {
+						self.refreshTimer = setInterval(function () {
+							self.loadComments();
+						}, self.options.refreshMs);
+					}
+				});
 				toggleBtn.textContent = "■ 关闭弹幕";
 				toggleBtn.title = "关闭弹幕";
 			}
@@ -277,6 +290,7 @@ function fetchRecentComments(options) {
 		var self = this;
 		return fetchRecentComments(this.options).then(function (list) {
 				var safeList = list || [];
+				console.log("[DanmuWaline] Loaded comments:", safeList.length);
 				self.source = safeList;
 				self.queue = safeList.slice();
 				return safeList;
@@ -372,16 +386,25 @@ function fetchRecentComments(options) {
 		return selectedRow * this.options.rowHeight + topPadding;
 	};
 
-	DanmuWaline.prototype.spawnItem = function (item) {
+	DanmuWaline.prototype.spawnItem = function (item, isFirst) {
 		if (!item || !this.container) return;
-		if (!item.text) return;
+		if (!item.text) {
+			console.log("[DanmuWaline] Item has no text:", item);
+			return;
+		}
 
+		console.log("[DanmuWaline] Creating node for:", item.text);
 		var node = document.createElement("div");
 		node.className = "danmu-waline-item";
 		var rowTop = this.getRowTop();
 		node.style.top = rowTop + "px";
 		node.style.fontSize = this.options.fontSize + "px";
 		node.style.opacity = String(this.options.opacity);
+
+		if (isFirst) {
+			node.style.fontWeight = "bold";
+			node.style.color = "#ff0000";
+		}
 
 		if (this.options.showAvatar && item.avatar) {
 			var avatar = document.createElement("img");
@@ -483,7 +506,11 @@ function fetchRecentComments(options) {
 		if (!this.running) return;
 		if (!this.container || this.container.clientWidth === 0) return;
 		var item = this.pickNext();
-		if (!item) return;
+		if (!item) {
+			console.log("[DanmuWaline] No item to spawn, queue length:", this.queue.length);
+			return;
+		}
+		console.log("[DanmuWaline] Spawning item:", item);
 		this.spawnItem(item);
 	};
 
@@ -495,6 +522,9 @@ function fetchRecentComments(options) {
 		tryWalineCommentCount(this.options.serverURL);
 
 		this.loadComments().then(function () {
+			if (self.source.length > 0) {
+				self.spawnItem({ text: self.source.length + " 条弹幕加载中", nick: "", avatar: "", like: 0 }, true);
+			}
 			self.tick();
 			self.timer = setInterval(function () {
 				self.tick();
