@@ -7,10 +7,12 @@
 
 在front-matter中添加author-statement字段，值为你想要展示的声明内容。
 
-```yaml
+```yaml{name="author-statement.md"}
+---
 author-statement:
   type: CUSTOM # 声明类型，
   content: "AI共创，Github Copilot实现代码生成"
+---
 ```
 
 作者声明类型有以下几种：
@@ -29,7 +31,7 @@ author-statement:
 
 创建作者声明html模板，路径为layouts/partials/custom/author-statement.html，内容如下：
 
-```fromfile
+```fromfile{name="author-statement.html"}
 file: layouts/partials/custom/author-statement.html
 ```
 
