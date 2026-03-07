@@ -27,15 +27,11 @@ let styleInitialized = false;
         styleInitialized = true;
       }
     },
-    divHtml:'<div id="summary-wrapper"><div id="title"><span id="summary-post" class="name"><span class="icon-robot">🤖</span><span class="text">文章摘要 </span><span class="icon-up"></span> </span><span id="ai-logo" class="logo">QwenGPT</span></div><div id="post-ai-result" class="post-ai-result"><span id="post-ai-result-text" class="text"><span id="result-loading">加载中...</span></span></div><div id="meta"><span class="tip">此内容根据文章生成，并经过人工审核，仅用于文章内容的解释与总结</span> <a class="report" href="mailto:admin@hesiy.cn" id="aiReport">投诉</a></div></div>',
+    divHtml:'<div id="summary-wrapper"><div id="title"><span id="summary-post" class="name"><span class="icon-robot">🤖</span><span class="text">文章摘要 </span><span class="icon-up"></span> </span><span id="ai-logo" class="logo">$aiGPTName</span></div><div id="post-ai-result" class="post-ai-result"><span id="post-ai-result-text" class="text"><span id="result-loading">加载中...</span></span></div><div id="meta"><span class="tip">此内容根据文章生成，并经过人工审核，仅用于文章内容的解释与总结</span> <a class="report" href="mailto:admin@hesiy.cn" id="aiReport">投诉</a></div></div>',
     initDiv:(aiConfig)=>{
       ele = document.querySelector(aiConfig.aiSelector);
-      ele.insertAdjacentHTML('beforebegin',AISmmary.divHtml);
-      // if(ele){
-      //   ele.insertAdjacentHTML('afterbegin',AISmmary.divHtml);
-      // }else{
-      //   console.log('Element not found.');
-      // }
+      divHtml = AISmmary.divHtml.replace('$aiGPTName', aiConfig.aiGPTName);
+      ele.insertAdjacentHTML('beforebegin',AISmmary.divHtml.replace('$aiGPTName', aiConfig.aiGPTName));
     },
     fetchAIData:(aiConfig)=>{
       aiSmmaryData(aiConfig);
@@ -75,6 +71,7 @@ let styleInitialized = false;
       aiConfig.reportUrl = aiConfig.reportUrl || "mailto:geekswg@qq.cn?subject=文章摘要投诉&body=投诉网址：="+location.href;
       aiConfig.enableAIPathRegex = aiConfig.enableAIPathRegex||/\/posts\//; //正则表达式
       aiConfig.aiGPTDesc = aiConfig.aiGPTDesc || '我是一个使用通义千问AI模型的AI摘要助手，可以帮助您快速生成文章摘要，提高阅读体验。';
+      aiConfig.aiGPTName = aiConfig.aiGPTName || 'AI-Agent';
       if (!aiConfig.enableAIPathRegex.test(location.pathname)) {
         return;
       }else if(!document.querySelector(aiConfig.aiSelector)){

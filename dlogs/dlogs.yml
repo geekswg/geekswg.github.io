@@ -6,6 +6,10 @@ dlogs:
     showFirstLast: true
     showPrevNext: true
   list:
+    - type: tech
+      sub: 激活win10及以上系统
+      txt: "irm https://get.activated.win | iex "
+      time: 2026-03-07 11:42
     - type: life
       sub: 辞旧迎新
       txt: 辞暮尔尔，朝朝新岁。愿心藏皎月，行拥长风，所念皆星河，所行化坦途。
