@@ -98,7 +98,11 @@ class LinkPreview {
         color: #666;
         text-decoration: none;
         font-size: 16px;
+        line-height: 16px;
       }
+      .lp-close {
+         font-size: 24px;
+       }
       .lp-btn:hover { background: #eee; }
       .lp-content {
         flex: 1;
@@ -304,6 +308,8 @@ if (typeof module !== 'undefined' && module.exports) {
     previewSelector: 'body',
     customCss: {
       'article': 'width:100% !important; max-width:100% !important; padding:0; margin:0;',
+      '.code-header':'top:-14px !important;',
+      '.breadcrumb-container':'width:100% !important;top:0 !important; ',
     },
     hideSelector: 'header,aside,footer',
     delay: 500,
