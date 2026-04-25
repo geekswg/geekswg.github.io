@@ -25,6 +25,12 @@ class LinkPreview {
     this.createStyles();
     document.addEventListener('mouseover', this.handleMouseOver.bind(this));
     document.addEventListener('mousemove', this.checkMousePosition.bind(this), { passive: true });
+    document.addEventListener('touchstart', this.handleTouchStart.bind(this), { passive: true });
+    document.addEventListener('click', this.handleLinkActivation.bind(this), true);
+    document.addEventListener('touchend', this.handleLinkActivation.bind(this), { passive: true, capture: true });
+    document.addEventListener('pjax:send', this.handlePageTransition.bind(this));
+    window.addEventListener('pagehide', this.handlePageTransition.bind(this));
+    document.addEventListener('visibilitychange', this.handleVisibilityChange.bind(this));
   }
 
   createStyles() {
@@ -153,6 +159,11 @@ class LinkPreview {
   }
 
   handleMouseOver(e) {
+    // Ignore links rendered inside the preview panel to avoid recursive previewing.
+    if (this.container && this.container.contains(e.target)) {
+      return;
+    }
+
     const link = e.target.closest(this.options.selector);
     clearTimeout(this.hideTimer);
     if (!link) return;
@@ -174,6 +185,39 @@ class LinkPreview {
     } else {
       clearTimeout(this.hideTimer);
       this.hideTimer = setTimeout(() => this.hidePreview(), this.options.hideDelay || 500);
+    }
+  }
+
+  handleTouchStart(e) {
+    if (!this.container || this.container.style.display === 'none') return;
+
+    const target = e.target;
+    const isInContainer = this.container.contains(target);
+    const link = target.closest(this.options.selector);
+
+    if (isInContainer || link) {
+      clearTimeout(this.hideTimer);
+      return;
+    }
+
+    clearTimeout(this.hideTimer);
+    this.hideTimer = setTimeout(() => this.hidePreview(), this.options.hideDelay || 500);
+  }
+
+  handleLinkActivation(e) {
+    if (!this.container || this.container.style.display === 'none') return;
+    if (!e.target.closest('a[href]')) return;
+    this.hidePreview(true);
+  }
+
+  handlePageTransition() {
+    this.hidePreview(true);
+    this.clearTimers();
+  }
+
+  handleVisibilityChange() {
+    if (document.visibilityState === 'hidden') {
+      this.handlePageTransition();
     }
   }
 
@@ -278,8 +322,15 @@ class LinkPreview {
     }
   }
 
-  hidePreview() {
+  hidePreview(immediate = false) {
     if (this.container) {
+      if (immediate) {
+        this.container.classList.add('lp-hidden');
+        this.container.classList.remove('lp-visible');
+        this.container.style.display = 'none';
+        return;
+      }
+
       this.container.classList.add('lp-hidden');
       this.container.classList.remove('lp-visible');
       setTimeout(() => {
@@ -313,7 +364,7 @@ if (typeof module !== 'undefined' && module.exports) {
     },
     hideSelector: 'header,aside,footer',
     delay: 500,
-    hideDelay: 500,
+    hideDelay: 100,
     width: 360,
     height: 280
   });
